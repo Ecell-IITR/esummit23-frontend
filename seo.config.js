@@ -26,11 +26,12 @@ const defaultSEOConfig = {
     {
       name: 'keywords',
       content:
-        "startup india ,e summit,e summit 23,e summit 2023, esummit, esummit 23 ,esummit 2023, e-summit, e-summit 23,e-summit 2023, ecell, entrepreneurship global summit, esummit iit, esummit iitr, esummit iit roorkee, e summit 2023 ,iitr startup ,iit roorkee ,entrepreneur fest ,conference ,conclave ,speaker events",
+        'startup india ,e summit,e summit 23,e summit 2023, esummit, esummit 23 ,esummit 2023, e-summit, e-summit 23,e-summit 2023, ecell, entrepreneurship global summit, esummit iit, esummit iitr, esummit iit roorkee, e summit 2023 ,iitr startup ,iit roorkee ,entrepreneur fest ,conference ,conclave ,speaker events',
     },
-    {name:"google-site-verification",
-    content: "FQHsZrx4X62phcVvSuVBGSFfqsuv-iXAvShh7fh681A"
-  },
+    {
+      name: 'google-site-verification',
+      content: 'FQHsZrx4X62phcVvSuVBGSFfqsuv-iXAvShh7fh681A',
+    },
 
     {
       name: 'hashtags',
