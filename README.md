@@ -38,4 +38,4 @@ yarn lint
 ```bash 
 classname="navbarInnerContainer"
 ``` 
-
+#### while raising a pr write fix and then issue no assigned to you in desc of the PR also put aby 3rd year as a reviwer
