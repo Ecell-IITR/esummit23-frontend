@@ -38,4 +38,9 @@ yarn lint
 ```bash 
 classname="navbarInnerContainer"
 ``` 
+
+### PR and merge
+
 #### while raising a pr write fix and then issue no assigned to you in desc of the PR also put aby 3rd year as a reviwer
+
+#### do not merge the code unless approved
