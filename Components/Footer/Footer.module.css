@@ -1,0 +1,220 @@
+.Parent{
+    background-color: yellow;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    gap: 10rem;
+    justify-content: space-between;
+    padding: .8rem;
+
+}
+.headings{
+    color: black;
+    font-weight: bold;
+    font-size:1.2rem;
+}
+.footerLeft{
+    background-color: #FAF4EC;
+    width: 39.5rem;
+    height: 20rem;
+    flex: .9;
+    border: 1px solid black;
+}
+
+.footerRight{
+    background-color: #FAF4EC;
+    width: 39.5rem;
+    height: 20rem;
+    flex: .9;
+    border: 1px solid black;
+
+   
+        
+}
+.logo{
+    width: 39.5;
+    height: 9rem;
+    border: 1px solid black;
+    display: flex;
+    flex-direction:row;
+    padding: .8rem;
+    gap: .5rem;
+    
+}
+
+.ecellLogo{
+    border: 1px solid black;
+    width: 13rem;
+}
+
+.esummitLogo{
+    border: 1px solid black;
+    width: 22rem;
+}
+
+.contactLeft{
+    width: 39.5;
+    height: 5.5rem;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: .8rem;
+}
+.email{
+    border:1px solid black;
+    height: 4rem;
+    width: 18rem;
+
+}
+
+.phone{
+    border:1px solid black;
+    height: 4rem;
+    width: 13rem;
+}
+
+
+
+.address{
+    width: 39.5;
+    height: 5.5rem;
+    border: 1px solid black;
+    padding: 0.8rem;
+}
+.name{
+    width: 39.5;
+    height: 4.5rem;
+    border: 1px solid black;
+    padding: .8rem;
+}
+.nameInput{
+    border: 1px solid black;
+    background-color: white;
+    width: 30rem;
+    height: 3rem;
+    border-radius: .5rem;
+    display: flex;
+    color:#828282 ;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+    
+
+}
+.contactRight{
+    width: 39.5;
+    height: 4.5rem;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:.8rem;
+}
+.emailId{
+    border: 1px solid black;
+    width: 18rem;
+    height: 3rem;
+    background-color: white;
+    border-radius: .5rem;
+    display: flex;
+    color:#828282 ;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+    
+
+}
+
+.type{
+    border: 1px solid black;
+    width: 10rem;
+    height:3rem;
+    background-color: white;
+    border-radius: .5rem;
+    display: flex;
+    color:#828282 ;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+    
+
+}
+.message{
+    width: 39.5;
+    height: 4.5rem;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:.8rem;
+}
+
+.writeMessage{
+    border: 1px solid black;
+    width: 20rem;
+    height: 3rem;
+    background-color: white;
+    border-radius: .5rem;
+    display: flex;
+    color:#828282 ;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+    
+}
+
+.button{
+    border: 1px solid black;
+    width: 7rem;
+    height: 3rem;
+    background-color: #633A26;
+    border-radius: .5rem;
+    display: flex;
+    color:white ;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+
+.socialHandles{
+    width: 39.5;
+    height: 6.4rem;
+    border: 1px solid black;
+    padding: .8rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.4rem;
+    justify-content: space-between;
+
+}
+.about{
+    height: 4rem;
+    border: 1px solid black;
+    width: 12rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+.iconInstagram{
+    height: 4rem;
+    width: 4rem;
+    border: 1px solid black;
+}
+.iconFacebook{
+    height: 4rem;
+    width: 4rem;
+    border: 1px solid black;
+}
+.iconTwitter{
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid black;
+}
+.iconLinkedin{
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid black;
+}
