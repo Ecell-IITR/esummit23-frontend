@@ -1,68 +1,93 @@
 import styles from './Footer.module.css'
-
+import Formsaa from './Form'
 
 function Footer() {
   return (
     <div>
 
-
  <div className={styles.Parent}>
       
     <div className={styles.footerLeft}>
-         <div className={styles.logo}>
-            <div className={styles.esummitLogo}>
-            </div>
-            <div className={styles.ecellLogo}>
-            </div>
-         </div>
-         <div className={styles.contactLeft}>
-            <div className={styles.email}>
-            <div className={styles.headings}>Email:</div>esummitiitr@gmail.com
-            </div>
-            <div className={styles.phone}>
-                    <div className={styles.headings}>Phone no :</div>
-                    <div>Sarvesh-1234567890</div>
-                    <div>Shashank-1234567890</div>
-            </div>
-         </div>
-         <div className={styles.address}>
-         <div className={styles.headings}>Our Address :</div>
-         <div>E cell office, SAC, IIT Roorkee, Roorkee, Uttrakhand-2XXXXX</div>
-         </div>
+      <div className={styles.logoNew}>
+        <div className={styles.summitLogoAndName}>
+          <div className={styles.esummitLogo}><img src="vector.png" className={styles.image}></img></div>
+          <div className={styles.collegeName}>
+            <div className={styles.nameOfCollege}><img src="motto.png" className={styles.motto}></img></div>
+            
+          </div>
+        </div>
+      <div className={styles.ecellLogo}><img src="cellLogo.png" className={styles.cellLogo}></img></div>
 
+
+
+    
+      </div>
+      <div className={styles.description}>E-Summit being the flagship event of ECell, is held annually brings together the academic community, venture capitalists, new age entrepreneurs and all those passionate about entrepreneurship to common grounds
+      </div>
+      <div className={styles.handlesNewUp}>Follow us at</div>
+      
+        <div className={styles.handlesNew}> 
+            <div className={styles.iconFacebook}><img src="facebook.png" className={styles.icon}></img></div>
+            <div className={styles.iconInstagram}><img src="twitter.png" className={styles.icon}></img></div>
+            <div className={styles.iconLinkedin}><img src="instagram.png" className={styles.icon}></img></div>
+            <div className={styles.iconTwitter}><img src="linkedin.png" className={styles.icon}></img></div>
+            <div className={styles.iconYoutube}><img src="youtube.png" className={styles.icon}></img></div>
+      
+    
+        </div>
+
+    </div>
+
+    <div className={styles.footerMiddle}>
+         <div className={styles.address}>
+         Address
+         </div>
+         <div className={styles.text}>  E-cell Office, SAC Building</div>
+         <div className={styles.text}>IIT Roorkee</div>
+         <div className={styles.text}>Roorkee, Uttrakhand - 247667</div>
+         <br></br>
+        
+         <div className={styles.email}>E-mail</div><div className={styles.text}>esummitiitr@gmail.com</div>
+         <br></br>
+         
+         <div className={styles.contactNo}> Phone No.</div>
+         <div className={styles.text}>Pratyush: +91 9799042645</div>
+         <div className={styles.text}>Shashank: +91 9102100531</div>
+         
+         
+         
+
+     
     </div>
     <div className={styles.footerRight}>
-        <div className={styles.name}>
-        <div className={styles.nameInput}>Name</div>
-        </div>
-        <div className={styles.contactRight}>
-            <div className={styles.emailId}>Email Id
-            </div>
-            <div className={styles.type}>Type
-            </div>
+    <div className={styles.formsParent}>Contact Us<Formsaa/></div>
+      
+       
 
 
-        </div>
-        <div className={styles.message}>
-            <div className={styles.writeMessage}>
-            Write Your Message
-            </div>
-            <div className={styles.button}>
-            Submit
-            </div>
-        
-        </div>
-        <div className={styles.socialHandles}>
-            <div className={styles.about}><a href="www.google.com">About the team</a></div>
-            <div className={styles.iconFacebook}></div>
-            <div className={styles.iconInstagram}></div>
-            <div className={styles.iconLinkedin}></div>
-            <div className={styles.iconTwitter}></div>
-        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
       
       
-      </div>
+ </div>
 </div>
 
 
@@ -73,3 +98,38 @@ function Footer() {
 }
 
 export default Footer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// <div className={styles.summitYear}>E-SUMMIT'23</div>
+//             <div className={styles.motto}>ds</div>
+//             <div className={styles.countryName}><img src="BHARAT.png" className={styles.Bharat}></img></div>
+
+// <div className={styles.contactUs}>Contact Us</div>
+// <div className={styles.name}><input type="text"></input></div>
+// <div className={styles.emailAddress}></div>
+// <div className={styles.phoneNoAndQuery}>
+//   <div className={styles.phoneNo}></div>
+//   <div className={styles.query}></div>
+
+// </div>
+// <div className={styles.message}></div>
+// <div className={styles.button}></div>
