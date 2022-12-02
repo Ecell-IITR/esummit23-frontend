@@ -10,13 +10,13 @@ function Footer() {
     <div className={styles.footerLeft}>
       <div className={styles.logoNew}>
         <div className={styles.summitLogoAndName}>
-          <div className={styles.esummitLogo}><img src="vector.png" className={styles.image}></img></div>
+          <div className={styles.esummitLogo}><img src="vector.webp" className={styles.image}></img></div>
           <div className={styles.collegeName}>
-            <div className={styles.nameOfCollege}><img src="motto.png" className={styles.motto}></img></div>
+            <div className={styles.nameOfCollege}><img src="motto.webp" className={styles.motto}></img></div>
             
           </div>
         </div>
-      <div className={styles.ecellLogo}><img src="cellLogo.png" className={styles.cellLogo}></img></div>
+      <div className={styles.ecellLogo}><img src="cellLogo.webp" className={styles.cellLogo}></img></div>
 
 
 
@@ -27,11 +27,11 @@ function Footer() {
       <div className={styles.handlesNewUp}>Follow us at</div>
       
         <div className={styles.handlesNew}> 
-            <div className={styles.iconFacebook}><img src="facebook.png" className={styles.icon}></img></div>
-            <div className={styles.iconInstagram}><img src="twitter.png" className={styles.icon}></img></div>
-            <div className={styles.iconLinkedin}><img src="instagram.png" className={styles.icon}></img></div>
-            <div className={styles.iconTwitter}><img src="linkedin.png" className={styles.icon}></img></div>
-            <div className={styles.iconYoutube}><img src="youtube.png" className={styles.icon}></img></div>
+            <div className={styles.iconFacebook}><img src="facebook.webp" className={styles.icon}></img></div>
+            <div className={styles.iconInstagram}><img src="twitter.webp" className={styles.icon}></img></div>
+            <div className={styles.iconLinkedin}><img src="instagram.webp" className={styles.icon}></img></div>
+            <div className={styles.iconTwitter}><img src="linkedin.webp" className={styles.icon}></img></div>
+            <div className={styles.iconYoutube}><img src="youtube.webp" className={styles.icon}></img></div>
       
     
         </div>

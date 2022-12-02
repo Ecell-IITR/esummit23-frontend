@@ -6,7 +6,7 @@
     height: 100%;
     gap: 10rem;
     justify-content: space-between;
-    padding: .8rem;
+    padding: 3rem;
 
 }
 
@@ -259,7 +259,7 @@
 
 .icon{
     margin-top: -1rem;
-    width: 80%;
+    width: 70%;
     height: 80%;
 }
 
@@ -340,4 +340,81 @@
     margin-top: -.6rem;
     border: 1px solid white;
     background-color: #311C00;
+}
+
+@media screen and (max-width: 1300px)
+{
+
+.logoNew{
+    width: 17rem;
+}
+
+}
+@media screen and (max-width: 1160px)
+{
+
+.text{
+    font-size: small;
+}
+
+}
+
+@media screen and (max-width: 1138px)
+{
+
+.description{
+    font-size: small;
+}
+
+}
+
+@media screen and (max-width: 964px)
+{
+
+.Parent{
+    flex-direction: column;
+    gap: 0rem;
+    padding: 0rem;
+    align-items: center;
+}
+
+.footerMiddle{
+    background-color: #311C00;
+    width: 30%;
+    height: 15rem;
+    padding: .4rem;
+    margin-top: -1.5rem;
+    margin-bottom: 1.5rem;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+}
+
+
+@media screen and (max-width: 855px)
+{
+
+.logoNew{
+    width: 15rem;
+}
+
+}
+
+
+@media screen and (max-width: 762px)
+{
+
+.description{
+    font-size: .8rem;
+
+}
+
+.message{
+    margin-top: -.5rem;
+}
+
+.footerLeft{
+    gap:.2rem;
+}
 }
