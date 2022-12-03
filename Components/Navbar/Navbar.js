@@ -14,7 +14,7 @@ function NavScrollExample() {
             style={{ maxHeight: '100px'}}
             navbarScroll
           > 
-            <a className='listBox' href="#action1">Home</a>
+            <a className={styles.listBox} href="#action1">Home</a>
             <a href="#action2">Events</a>
             <a href="#action3">Speakers</a>
             <a href="#action4">Sponsors</a>
