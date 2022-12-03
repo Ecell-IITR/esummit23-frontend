@@ -1,5 +1,6 @@
 // import styles from './Footer.module.css'
 import Formsaa from './Form';
+import Image from 'next/image' 
 
 function Footer() {
   return (
@@ -9,16 +10,18 @@ function Footer() {
           <div className='logoNew_footer'>
             <div className='summitLogoAndName_footer'>
               <div className='esummitLogo_footer'>
-                <img src='vector.webp' className='image_footer'></img>
+              <a href="https://www.esummit.in/"><Image src="/vector.webp" height="100%" width="100%"></Image></a>
               </div>
               <div className='collegeName_footer'>
                 <div className='nameOfCollege_footer'>
-                  <img src='motto.webp' className='motto_footer'></img>
+                <div className='motto_footer'>
+                <a href="https://www.esummit.in/"><Image src="/motto.webp" height="55%" width="100%"></Image></a>
+                  </div>
                 </div>
               </div>
             </div>
             <div className='ecellLogo_footer'>
-              <img src='cellLogo.webp' className='cellLogo_footer'></img>
+            <a href="https://www.ecelliitr.org/"><Image src='/cellLogo.webp'  width="100%" height="50%"></Image></a>
             </div>
           </div>
           <div className='description_footer'>
@@ -31,19 +34,19 @@ function Footer() {
 
           <div className='handlesNew_footer'>
             <div className='iconFacebook_footer'>
-              <img src='facebook.webp' className='icon_footer'></img>
+              <a href="https://www.facebook.com/ecelliitr/?mibextid=ZbWKwL"><Image src='/facebook.webp' className='icon_footer' height="100%" width="100%"></Image></a>
             </div>
             <div className='iconInstagram_footer'>
-              <img src='twitter.webp' className='icon_footer'></img>
+              <a href="https://twitter.com/ecell_iitr?t=hkalTs12wcOXd0Gj4-YCug&s=09"><Image src='/twitter.webp' className='icon_footer' height="100%" width="100%"></Image></a>
             </div>
             <div className='iconLinkedin_footer'>
-              <img src='instagram.webp' className='icon_footer'></img>
+              <a href="https://instagram.com/ecelliitr?igshid=ZDdkNTZiNTM="><Image src='/instagram.webp' className='icon_footer' height="100%" width="100%"></Image></a>
             </div>
             <div className='iconTwitter_footer'>
-              <img src='linkedin.webp' className='icon_footer'></img>
+              <a href="https://www.linkedin.com/company/ecelliitr/"><Image src='/linkedin.webp' className='icon_footer' height="100%" width="100%"></Image></a>
             </div>
             <div className='iconYoutube_footer'>
-              <img src='youtube.webp' className='icon_footer'></img>
+              <a href="https://www.youtube.com/@e-celliitroorkee6035"><Image src='/youtube.webp' className='icon_footer' height="100%" width="100%"></Image></a>
             </div>
           </div>
         </div>
@@ -56,7 +59,7 @@ function Footer() {
           <br></br>
 
           <div className='email_footer'>E-mail</div>
-          <div className='text_footer'>esummitiitr@gmail.com</div>
+          <div className='text_footer'><a href="mailto:esummitiitr@gmail.com" style={{color:"white", textDecoration:"none"}} >esummitiitr@gmail.com</a></div>
           <br></br>
 
           <div className='contactNo_footer'> Phone No.</div>
@@ -75,18 +78,3 @@ function Footer() {
 }
 
 export default Footer;
-
-// <div className="summitYear">E-SUMMIT'23</div>
-//             <div className="motto}>ds</div>
-//             <div className="countryName}><img src="BHARAT.png" className="Bharat}></img></div>
-
-// <div className="contactUs}>Contact Us</div>
-// <div className="name}><input type="text"></input></div>
-// <div className="emailAddress}></div>
-// <div className="phoneNoAndQuery}>
-//   <div className="phoneNo}></div>
-//   <div className="query}></div>
-
-// </div>
-// <div className="message}></div>
-// <div className="button}></div>
