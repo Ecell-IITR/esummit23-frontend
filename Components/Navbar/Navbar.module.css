@@ -1,0 +1,70 @@
+.parent{
+    background: #121212;
+    display: flex;
+    justify-content: space-between;
+    height: 73px;
+}
+
+.esummitLogo{
+    /* border: 1px solid black; */
+    width: 25%;
+    display: flex;
+    margin-left:70px;
+}
+
+.image{
+    display: flex;
+    justify-content: center;
+    height: 90%;
+    padding: .2rem;
+    margin-left: -.2rem;
+}
+
+.button{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 25px;
+gap: 10px;
+border-radius: 4px;
+background-color:#121212;
+border:2px solid white;
+font-family: 'Nunito Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 22px;
+display: flex;
+align-items: flex-end;
+color: #FFFFFF;
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.button:hover{
+    background: #FFFFFF;
+    color:#121212;
+}
+.log-In{
+    font-family: 'Nunito Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 22px;
+align-items:center;
+display: flex;
+align-items: flex-end;
+color:white;
+}
+
+.log-In:hover{
+    text-decoration-line: underline;
+    color: #FFD754;
+}
+
+.div a{
+color:white !important;
+text-decoration: none;
+}
