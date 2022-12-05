@@ -80,12 +80,11 @@ ul a.active {
 .navbarActive{
     color: #FFD754 !important;  
     text-decoration:underline;
+    cursor: pointer;
 }
 .navbarListBox{
     color:white;
     text-decoration: none;
+    cursor: pointer;
+    
 }
-// .navbarListBox:hover {
-//     color: #FFD754;  
-//     text-decoration:underline;
-// }

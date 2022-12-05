@@ -14,7 +14,7 @@ function NavScrollExample() {
       case '/':
         setActive('home');
         break;
-        case '/events':
+        case '#action2':
           setActive('events');
           break;
         case '/speakers':
@@ -42,7 +42,7 @@ function NavScrollExample() {
         <Navbar.Toggle aria-controls='navbarScroll' />
         <Navbar.Collapse id='navbarScroll'>
           <ul
-            className='mze-auto my-2 my-lg-0 navbarText d-flex gap-4 navbarUl'
+            className='mze-auto my-2 my-lg-0 navbarText d-flex flex-row gap-4 navbarUl'
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
@@ -61,7 +61,7 @@ function NavScrollExample() {
         </li>
             
             <li>
-            <Link href='/' passHref>
+            <Link href='#action2' passHref>
             <div
               className={
                 'events' == active ? 'navbarActive' : 'navbarListBox'
@@ -71,52 +71,52 @@ function NavScrollExample() {
            
             </div>
             </Link>
-            {' '}
+           
         </li>
           
         <li>
+          <Link href='#action3'>
             <div
               className={
                 'speakers' == active ? 'navbarActive' : 'navbarListBox'
               }
             >
-            <Link href='#action3'>
               Speakers
-            </Link>
             </div>
+            </Link>
         </li>
         <li>
+          <Link href='#action4'>
             <div
               className={
                 'sponsors' == active ? 'navbarActive' : 'navbarListBox'
               }
             >
-            <Link href='#action4'>
              Sponsors
-            </Link>
             </div>
+            </Link>
         </li>
         <li>
+          <Link href='#action5'>
             <div
               className={
                 'merchandice' == active ? 'navbarActive' : 'navbarListBox'
               }
             >
-            <Link href='#action5'>
              Merchandice
-            </Link>
             </div>
+            </Link>
         </li>
         <li>
+          <Link href='#action6'>
             <div
               className={
                 'about' == active ? 'navbarActive' : 'navbarListBox'
               }
             >
-            <Link href='#action5'>
              About
-            </Link>
             </div>
+            </Link>
         </li>
           </ul>
           </Navbar.Collapse>
