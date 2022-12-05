@@ -1,35 +1,136 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
-import styles from './Navbar.module.css'
+import React, { useState, useEffect} from 'react';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+
 
 function NavScrollExample() {
+  const [active, setActive] = useState("");
+
+  const router = useRouter();
+  useEffect(() => {
+    switch (router.asPath) {
+      case '/':
+        setActive('home');
+        break;
+        case '/events':
+          setActive('events');
+          break;
+        case '/speakers':
+          setActive('speakers');
+          break;
+      case '/comingSoonSponsors':
+        setActive('sponsors');
+        break;
+        case '/Merchandice':
+          setActive('merchandice');
+          break;
+      case '/about':
+        setActive('About');
+        break;
+      default:
+        setActive('');
+    }
+  });
   return (
-    <Navbar className={styles.parent}>
+    <Navbar className="navbarParent">
       <Container fluid>
-      <div className={styles.esummitLogo}><img src="esummitLogo.svg" className={styles.image}></img></div>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <div
-            className="me-auto my-2 my-lg-0 navbarText d-flex gap-4"
-            style={{ maxHeight: '100px'}}
+        <div className="navbarEsummitLogo">
+          <img src='esummitLogo.svg' className="navbarImage"/>
+        </div>
+        <Navbar.Toggle aria-controls='navbarScroll' />
+        <Navbar.Collapse id='navbarScroll'>
+          <ul
+            className='mze-auto my-2 my-lg-0 navbarText d-flex gap-4 navbarUl'
+            style={{ maxHeight: '100px' }}
             navbarScroll
-          > 
-            <a className={styles.listBox} href="#action1">Home</a>
-            <a href="#action2">Events</a>
-            <a href="#action3">Speakers</a>
-            <a href="#action4">Sponsors</a>
-            <a href="#action5">Merchandice</a>
-            <a href="#action6">Sponsors</a>
-            <a href="#action7">About</a>
+          >
+            <li>
+            <div
+              className={
+                'home' == active ? 'yellow' : 'white'
+              }
+            >
+            <a href='/' passhref>
+              Home
+            </a>
             </div>
-          <div className='d-flex align-items-center me-5' style={{gap:"36px",}}>
-            <a href="#action8"><span className='log-In'>Log in</span></a>
-            <button className={styles.button}>Register</button>
+            
+        </li>
+            
+            <li>
+            <div
+              className={
+                'events' == active ? 'navbarActive' : 'navbarListBox'
+              }
+            >
+            <Link href='#action2' passhref>
+              Events
+            </Link>
             </div>
-        </Navbar.Collapse>
+            {' '}
+        </li>
+          
+        <li>
+            <div
+              className={
+                'speakers' == active ? 'navbarActive' : 'navbarListBox'
+              }
+            >
+            <Link href='#action3'>
+              Speakers
+            </Link>
+            </div>
+        </li>
+        <li>
+            <div
+              className={
+                'sponsors' == active ? 'navbarActive' : 'navbarListBox'
+              }
+            >
+            <Link href='#action4'>
+             Sponsors
+            </Link>
+            </div>
+        </li>
+        <li>
+            <div
+              className={
+                'merchandice' == active ? 'navbarActive' : 'navbarListBox'
+              }
+            >
+            <Link href='#action5'>
+             Merchandice
+            </Link>
+            </div>
+        </li>
+        <li>
+            <div
+              className={
+                'about' == active ? 'navbarActive' : 'navbarListBox'
+              }
+            >
+            <Link href='#action5'>
+             About
+            </Link>
+            </div>
+        </li>
+          </ul>
+          </Navbar.Collapse>
+          <div
+            className='d-flex align-items-center me-5'
+            style={{ gap: '36px' }}
+          >
+            <a href='#action8' className="navbarLogIn">
+              <span className="navbarLogIn">Log in</span>
+            </a>
+            <button className="navbarButton">Register</button>
+          </div>
       </Container>
     </Navbar>
+  
   );
-}
+};
 
 export default NavScrollExample;

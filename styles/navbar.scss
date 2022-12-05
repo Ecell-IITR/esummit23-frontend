@@ -1,18 +1,18 @@
-.parent{
+.navbarParent{
     background: #121212;
     display: flex;
     justify-content: space-between;
     height: 73px;
 }
 
-.esummitLogo{
+.navbarEsummitLogo{
     /* border: 1px solid black; */
     width: 25%;
     display: flex;
     margin-left:70px;
 }
 
-.image{
+.navbarImage{
     display: flex;
     justify-content: center;
     height: 90%;
@@ -20,7 +20,7 @@
     margin-left: -.2rem;
 }
 
-.button{
+.navbarButton{
     display: flex;
 flex-direction: row;
 justify-content: center;
@@ -43,11 +43,11 @@ order: 0;
 flex-grow: 0;
 }
 
-.button:hover{
+.navbarButton:hover{
     background: #FFFFFF;
     color:#121212;
 }
-.logIn{
+.navbarLogIn{
     font-family: 'Nunito Sans';
 font-style: normal;
 font-weight: 400;
@@ -60,30 +60,35 @@ color:white;
 text-decoration-line: none;
 }
 
-.logIn:hover{
+.navbarLogIn:hover{
     text-decoration-line: underline;
     color: #FFD754;
 }
 
-.listBox{
+
+.navbarUl{
+    list-style: none;
+    list-style-type:none;
+}
+
+ul a.active {
+    color: #FFD754;  
+    text-decoration:underline;
+}
+
+div a{
+    color:yellow;
+}
+
+.navbarActive{
+    color: #FFD754 !important;  
+    text-decoration:underline;
+}
+.navbarListBox{
     color:white;
     text-decoration: none;
 }
-
-.ul{
-    list-style: none;
-}
-
-ul li.active {
-    color: #FFD754;  
-    text-decoration:underline;
-}
-
-.active{
-    color: #FFD754;  
-    text-decoration:underline;
-}
-.listBox:hover {
-    color: #FFD754;  
-    text-decoration:underline;
-}
+// .navbarListBox:hover {
+//     color: #FFD754;  
+//     text-decoration:underline;
+// }
