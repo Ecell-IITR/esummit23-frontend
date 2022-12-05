@@ -47,28 +47,30 @@ function NavScrollExample() {
             navbarScroll
           >
             <li>
+            <Link href='/' passHref>
             <div
               className={
-                'home' == active ? 'yellow' : 'white'
+                'home' == active ? 'navbarActive' : 'navbarListBox'
               }
             >
-            <a href='/' passhref>
-              Home
-            </a>
-            </div>
             
+              Home
+            
+            </div>
+            </Link>
         </li>
             
             <li>
+            <Link href='/' passHref>
             <div
               className={
                 'events' == active ? 'navbarActive' : 'navbarListBox'
-              }
-            >
-            <Link href='#action2' passhref>
+              }>
+   
               Events
-            </Link>
+           
             </div>
+            </Link>
             {' '}
         </li>
           
