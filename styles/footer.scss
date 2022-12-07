@@ -321,9 +321,11 @@
 }
 
 .button_footer {
+
   margin-top: -0.6rem;
-  border: 1px solid white;
-  background-color: #311c00;
+  border: 1px solid white !important;
+  background-color: #311c00 !important ;
+
 }
 
 @media screen and (max-width: 1300px) {

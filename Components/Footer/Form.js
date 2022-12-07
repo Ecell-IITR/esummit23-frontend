@@ -1,53 +1,132 @@
 import { Form } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
-import styles from './Footer.module.css';
+import FetchApi from '../../utils/FetchAPI';
+import { FOOTER_QUERY_API } from '../../utils/APIs';
+import { toast } from 'react-toastify';
+import React, { useState } from 'react';
 
 
 const Forms = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [contact, setContact] = useState(null);
+  const [message, setMessage] = useState('');
+  const [query, setQuery] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const data = {
+      "name":name,
+      "email":email,
+      "phone_number":contact,
+      "message":message,
+
+    };
+
+    
+    FetchApi('post', FOOTER_QUERY_API, data, null)
+      .then((res) => {
+        toast.success('Query Submitted !');
+        setName('');
+        setEmail('');
+        setMessage('');
+        setQuery();
+        setContact(null);
+      })
+      .catch((err) => {
+        toast.error('Query Unsuccessful!');
+        console.log(err);
+        // const errors = err.response.data;
+        // for (let value of Object.values(errors)) {
+        //   toast.error('Error !', value[0]);
+        // }
+        // this.setState({
+        //   name: '',
+        //   email: '',
+        //   message: '',
+        //   contact: null,
+        //   query: '',
+        // });
+      });
+  };
+
+
   return (
     <>
       <Form>
-        <div className={styles.name_footer}>
+        <div className="name_footer">
           <Form.Group className='mb-3' controlId='formBasicPassword'>
             <Form.Control
               style={{ backgroundColor: '#311C00', color: 'white' }}
               placeholder='Enter your full name'
+              type='text'
+              name='name'
+              value={name}
+              autoCorrect='off'
+              autoComplete='off'
+              autoCapitalize='off'
+              spellCheck='false'
+              onChange={(event) => setName(event.target.value)}
+              required
             />
           </Form.Group>
         </div>
 
-        <div className={styles.emailAddress_footer}>
+        <div className="emailAddress_footer">
           <Form.Group className='mb-3' controlId='formBasicEmail'>
             <Form.Control
               type='email'
               style={{ backgroundColor: '#311C00', color: 'white' }}
               placeholder='Enter your E-mail address'
-              background-color='black'
+              name='email'
+              value={email}
+              autoCorrect='off'
+              autoComplete='off'
+              autoCapitalize='off'
+              spellCheck='false'
+              onChange={(event) => setEmail(event.target.value)}
+              required
             />
           </Form.Group>
         </div>
 
-        <div className={styles.phoneNoAndQuery_footer}>
-          <div className={styles.phoneNo_footer}>
+        <div className="phoneNoAndQuery_footer">
+          <div className="phoneNo_footer">
             <Form.Group className='mb-3' controlId='formBasicPassword'>
               <Form.Control
                 style={{ backgroundColor: '#311C00', color: 'white' }}
                 type='phoneNo'
                 placeholder='Phone No'
+                name='contact'
+                value={contact}
+                autoCorrect='off'
+                autoComplete='off'
+                autoCapitalize='off'
+                spellCheck='false'
+                onChange={(event) => setContact(event.target.value)}
+                required
               />
             </Form.Group>
           </div>
-          <div className={styles.query_footer}>
+          <div className="query_footer">
             <Form.Group className='mb-3' controlId='formBasicPassword'>
               <Form.Control
                 style={{ backgroundColor: '#311C00', color: 'white' }}
                 placeholder='Query Details'
+                name='query'
+                value={query}
+                autoCorrect='off'
+                autoComplete='off'
+                autoCapitalize='off'
+                spellCheck='false'
+                onChange={(event) => setQuery(event.target.value)}
+                required
               />
             </Form.Group>
           </div>
         </div>
 
-        <div className={styles.message_footer}>
+        <div className="message_footer">
           <Form.Group className='mb-3' controlId='formBasicPassword'>
             <Form.Control
               style={{
@@ -56,14 +135,24 @@ const Forms = () => {
                 height: '90px',
               }}
               placeholder='Type your message here'
+              name='message'
+              value={message}
+              rows='5'
+              autoCorrect='off'
+              autoComplete='off'
+              autoCapitalize='off'
+              spellCheck='false'
+              onChange={(event) => setMessage(event.target.value)}
+              required
             />
           </Form.Group>
         </div>
 
         <Button
-          variant='primary'
+          onClick={handleSubmit}
+          // variant='primary'
           type='submit'
-          className={styles.button_footer}
+          className="button_footer"
         >
           Submit
         </Button>

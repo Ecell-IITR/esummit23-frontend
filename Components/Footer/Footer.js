@@ -2,7 +2,9 @@
 import Formsaa from './Form';
 import Image from 'next/image' 
 
+
 function Footer() {
+
   return (
     <div>
       <div className='Parent_footer'>
