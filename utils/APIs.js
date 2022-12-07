@@ -20,7 +20,7 @@ export const Register_API = `${API_URL}/auth/register/`;
 export const Login_API = `${API_URL}/auth/login/`;
 export const Submission_API = `${API_URL}/cap/verify/submission`;
 export const CA_PROFILE_RANK_API = `${API_URL}/cap/rank`;
-export const FOOTER_QUERY_API = `${API_URL}/utilities/contact-form/`;
+export const FOOTER_QUERY_API = `${API_URL}/user/querry`;
 export const EVENT_API = (eventSlug) => `${API_URL}/events/${eventSlug}`;
 export const DASHBOARD_EVENT_API = `${API_URL}/dash/eventdashboard/all`;
 export const SPEAKERS_API = `${API_URL}/events/speakers`;
