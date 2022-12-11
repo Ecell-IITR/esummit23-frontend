@@ -1,0 +1,77 @@
+.ideaThon-bg{
+ background: rgba(18, 16, 14, 1);
+ height:47vw;
+ display: flex;
+ flex-direction: row;
+}
+
+.ideaThon-main{
+  height:46.4vw;
+  overflow-y: hidden;
+}
+
+.ideaBox1{
+  width:45%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left:130px;
+}
+
+.ideaBox2{
+  display: flex;
+  align-items:center ;
+  height:85%
+}
+
+.idea-Text1{
+  font-family: 'Lexend';
+font-style: normal;
+font-weight: 600;
+font-size: 44px;
+line-height: 110%;
+display: flex;
+align-items: flex-end;
+color: #FFFFFF;
+}
+
+.idea-Text2{
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+  color: #FFFAF0;
+  width:65%;
+}
+
+.idea-Button{
+  display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 18px 40px;
+gap: 8px;
+background: #BA6D39;
+border-radius: 100px;
+}
+
+.iBT{
+  font-family: 'lexend';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 24px;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 1px;
+color: #FFFFFF;
+flex: none;
+order: 0;
+flex-grow: 0;
+}
