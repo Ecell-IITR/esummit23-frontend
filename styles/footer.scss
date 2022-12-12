@@ -8,9 +8,12 @@
   justify-content: space-between;
   padding: 3rem;
 
- 
 }
 
+
+.headings{
+  font-weight: 800 !important;
+}
 .text_footer {
   color: white;
   font-weight: lighter;
@@ -376,6 +379,7 @@
     height: 24rem;
     margin-top: -17rem;
     z-index: 1;
+    margin-left: .5rem;
   }
   .formsParent_footer{
     width: 100%;
@@ -436,12 +440,49 @@
   .addressBelow_footer{
     margin-left: 1rem;
     width: 20rem;
+    margin-top: .4rem;
   }
   .text_help_phone{
     width: 20rem;
-    margin-top: 1rem;
+    margin-top: rem;
   }
  
+  .text_help_address{
+    margin-top: .3rem;
+    width: 15rem;
+    margin-top: -.3rem;
+  }
+
+  .text_help_contactUs{
+    margin-top: -1rem;
+
+  }
+
+
+  .text_help_form{
+    margin-top: .8rem;
+  }
+  .email_footer{
+    margin-top: -1rem;
+  }
+
+  .iconFacebook_footer{
+    width: 2rem;
+  }
+
+  .iconInstagram_footer{
+    width: 2rem;
+  }
+  .iconTwitter_footer{
+    width: 2rem;
+  }
+  .iconLinkedin_footer{
+    width: 2rem;
+  }
+  .iconYoutube_footer{
+    width: 2rem;
+  }
+
 
 }
 

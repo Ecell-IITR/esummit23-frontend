@@ -32,7 +32,7 @@ function Footer() {
             entrepreneurs and all those passionate about entrepreneurship to
             common grounds
           </div>
-          <div className='handlesNewUp_footer'>Follow us at</div>
+          <div className='handlesNewUp_footer headings'>Follow us at</div>
 
           <div className='handlesNew_footer'>
             <div className='iconFacebook_footer'>
@@ -55,8 +55,8 @@ function Footer() {
 
         <div className='footerMiddle_footer'>
         <div className='addressUp_footer'>
-          <div className='address_footer'>Address</div>
-          <div className='text_help'>
+          <div className='address_footer headings'>Address</div>
+          <div className='text_help_address'>
           <div className='text_footer'> E-cell Office, SAC Building</div>
           <div className='text_footer'>IIT Roorkee</div>
           <div className='text_footer'>Roorkee, Uttrakhand - 247667</div>
@@ -65,13 +65,13 @@ function Footer() {
         </div>
         <div className='addressMiddle_footer'>
         <div className='text_help'>
-          <div className='email_footer'>E-mail</div>
+          <div className='email_footer headings'>E-mail</div>
           <div className='text_footer'><a href="mailto:esummitiitr@gmail.com" style={{color:"white", textDecoration:"none"}} >esummitiitr@gmail.com</a></div>
         </div>
           <br></br>
         </div>
         <div className='addressBelow_footer'>
-          <div className='contactNo_footer'> Phone No.</div>
+          <div className='contactNo_footer headings'> Phone No.</div>
           <div className='text_help_phone'>
           <div className='text_footer'>Pratyush: +91 9799042645</div>
           <div className='text_footer'>Shashank: +91 9102100531</div>
@@ -79,9 +79,13 @@ function Footer() {
         </div>
         </div>
         <div className='footerRight_footer'>
-          <div className='formsParent_footer'>
+          <div className='formsParent_footer headings'>
+          <div className='text_help_contactUs'>
             Contact Us
-            <Formsaa />
+            </div>
+            <div className='text_help_form'>
+            <Formsaa/>
+            </div>
           </div>
         </div>
       </div>
