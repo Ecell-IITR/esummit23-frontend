@@ -17,7 +17,7 @@ function Footer() {
               <div className='collegeName_footer'>
                 <div className='nameOfCollege_footer'>
                 <div className='motto_footer'>
-                <a href="https://www.esummit.in/"><Image src="/motto.webp" height="55%" width="110%"></Image></a>
+                <a href="https://www.esummit.in/"><Image src="/motto.webp" height="53%" width="130%"></Image></a>
                   </div>
                 </div>
               </div>
@@ -54,19 +54,29 @@ function Footer() {
         </div>
 
         <div className='footerMiddle_footer'>
+        <div className='addressUp_footer'>
           <div className='address_footer'>Address</div>
+          <div className='text_help'>
           <div className='text_footer'> E-cell Office, SAC Building</div>
           <div className='text_footer'>IIT Roorkee</div>
           <div className='text_footer'>Roorkee, Uttrakhand - 247667</div>
+          </div>
           <br></br>
-
+        </div>
+        <div className='addressMiddle_footer'>
+        <div className='text_help'>
           <div className='email_footer'>E-mail</div>
           <div className='text_footer'><a href="mailto:esummitiitr@gmail.com" style={{color:"white", textDecoration:"none"}} >esummitiitr@gmail.com</a></div>
+        </div>
           <br></br>
-
+        </div>
+        <div className='addressBelow_footer'>
           <div className='contactNo_footer'> Phone No.</div>
+          <div className='text_help_phone'>
           <div className='text_footer'>Pratyush: +91 9799042645</div>
           <div className='text_footer'>Shashank: +91 9102100531</div>
+          </div>
+        </div>
         </div>
         <div className='footerRight_footer'>
           <div className='formsParent_footer'>

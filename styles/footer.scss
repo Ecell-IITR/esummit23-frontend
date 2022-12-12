@@ -7,6 +7,8 @@
   gap: 10rem;
   justify-content: space-between;
   padding: 3rem;
+
+ 
 }
 
 .text_footer {
@@ -19,7 +21,7 @@
   width: 20%;
   height: 20rem;
   /* flex: .9; */
-  /* border: 1px solid black; */
+
 }
 .footerLeft_footer {
   background-color: #311c00;
@@ -117,7 +119,7 @@
 //   border: 1px solid black;
   height: 90%;
   padding: .2rem; 
-    width:38%;
+  width:38%;
   display: flex;
 }
 .esummitLogo_footer2 {
@@ -328,91 +330,132 @@
 
 }
 
-@media screen and (max-width: 1300px) {
-  .logoNew_footer {
-    width: 17rem;
-  }
-}
-@media screen and (max-width: 1160px) {
-  .text_footer {
-    font-size: small;
+@media screen and (min-width:1648px)
+{
+  .esummitLogo_footer{
+    width: 4rem;
   }
 }
 
-@media screen and (max-width: 1138px) {
-  .description_footer {
-    font-size: small;
+
+@media screen and (max-width:1648px)
+{
+  .esummitLogo_footer{
+    width: 4rem;
   }
 }
 
-@media screen and (max-width: 964px) {
-  .Parent_footer {
+
+
+@media screen and (max-width:1234px)
+{
+  .Parent_footer{
     flex-direction: column;
-    gap: 0rem;
-    padding: 0rem;
+    justify-content: center;
     align-items: center;
-  }
-
-  .footerMiddle_footer {
-    background-color: #311c00;
-    width: 30%;
-    height: 15rem;
-    padding: 0.4rem;
-    margin-top: -1.5rem;
-    margin-bottom: 1.5rem;
-    /* justify-content: center;
-    align-items: center; */
-  }
-}
-
-@media screen and (max-width: 855px) {
-  .logoNew_footer {
-    width: 15rem;
-  }
-}
-
-@media screen and (max-width: 762px) {
-  .description_footer {
-    font-size: 0.8rem;
-  }
-  .icon_footer {
-    width: 70%;
-    height: 60%;
-  }
-
-  .message_footer {
-    margin-top: -0.5rem;
-  }
-
-  .footerLeft_footer {
-    gap: 0.2rem;
-  }
-}
-
-@media screen and (max-width: 714px) {
-    .handlesNewUp_footer {
-        margin-top: .5rem;
-      }
-      .handlesNew_footer {
-        margin-top: -.5rem;
-      }
-  }
-
-  @media screen and (max-width: 670px) {
-    .description_footer{
-        margin-top: -1.3rem;
-    }
-  }
-
-
-  @media screen and (min-width: 1300px) {
-    .esummitLogo_footer{
-        // height: 15rem;
-        width: 3.5rem;
-    }
-    .ecellLogo_footer{
-        width: 5rem;
-
-    }
     
   }
+
+  .footerMiddle_footer{
+    position: relative;
+    display: flex;
+    // flex-wrap: wrap;
+    width: 30rem;
+    gap:1rem;
+    // border: 2px solid black;
+  }
+
+
+  .footerLeft_footer{
+    // border: 1px solid black;
+    width: 30rem;
+    
+  }
+  .footerRight_footer{
+    width: 30rem;
+    height: 24rem;
+    margin-top: -17rem;
+    z-index: 1;
+  }
+  .formsParent_footer{
+    width: 100%;
+  }
+
+  
+  .esummitLogo_footer{
+    display: none;
+  }
+
+  .ecellLogo_footer{
+    margin-left: 2rem;
+  }
+
+  .motto_footer{
+    width: 10rem;
+    margin-left: -4rem;
+
+  }
+
+  .footerMiddle_footer{
+    margin-top: -17rem;
+    margin-left: -6rem;
+  }
+
+
+  .handlesNewUp_footer{
+    margin-top: 33.5rem;
+    height: 10rem;
+    z-index: 2;
+  }
+
+
+  .handlesNew_footer{
+    margin-top: -0.8rem;
+    margin-left: -.4rem;
+    z-index: 2;
+  }
+
+  .text_help{
+    margin-top: 1rem;
+    width: 15rem;
+  }
+  .addressBelow_footer{
+    margin-left: -10rem;
+    // border: 2px solid red;
+  }
+
+  .addressUp_footer{
+    margin-left: 3.6rem;
+  }
+
+  .addressMiddle_footer{
+    margin-top: 8rem;
+    margin-left: -16rem;
+  }
+
+  .addressBelow_footer{
+    margin-left: 1rem;
+    width: 20rem;
+  }
+  .text_help_phone{
+    width: 20rem;
+    margin-top: 1rem;
+  }
+ 
+
+}
+
+
+
+@media screen and (max-width:741px)
+{
+  .Parent_footer{
+    width: 30rem;
+    height: 60rem;
+    margin-left: 5rem;
+  }
+  .vsc-initialized{
+    padding: 1rem;
+    background-color:#311c00;
+  }
+}
