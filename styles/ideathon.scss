@@ -1,5 +1,5 @@
 .ideaThon-bg{
- background: rgba(18, 16, 14, 1);
+//  background: rgba(18, 16, 14, 1);
  height:47vw;
  display: flex;
  flex-direction: row;
@@ -8,45 +8,44 @@
 .ideaThon-main{
   height:46.4vw;
   overflow-y: hidden;
+  background-image: url("/eventsbg.svg");
+  object-fit: cover;
 }
 
 .ideaBox1{
   width:45%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: flex-start;
   flex-direction: column;
   padding-left:130px;
+  gap:35px;
 }
 
-.ideaBox2{
-  display: flex;
-  align-items:center ;
-  height:85%
-}
 
 .idea-Text1{
-  font-family: 'Lexend';
+  font-family: 'Lexend',sans-serif;
 font-style: normal;
-font-weight: 600;
-font-size: 44px;
+font-weight: 700;
+font-size: 32px;
 line-height: 110%;
 display: flex;
 align-items: flex-end;
-color: #FFFFFF;
+color: #F2f2f2;
 }
 
 .idea-Text2{
-  font-family: 'Nunito Sans';
+  font-family: 'Nunito Sans',sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 26px;
+  line-height: 150%;
   display: flex;
   align-items: center;
-  letter-spacing: 0.02em;
-  color: #FFFAF0;
+  letter-spacing: 0.04em;
+  color: #F2f2f2;
   width:65%;
+  opacity: 0.8;
 }
 
 .idea-Button{
@@ -54,17 +53,17 @@ color: #FFFFFF;
 flex-direction: row;
 justify-content: center;
 align-items: center;
-padding: 18px 40px;
+padding: 12px 40px;
 gap: 8px;
 background: #BA6D39;
 border-radius: 100px;
 }
 
 .iBT{
-  font-family: 'lexend';
+  font-family: 'lexend',sans-serif;
 font-style: normal;
 font-weight: 600;
-font-size: 18px;
+font-size: 17px;
 line-height: 24px;
 display: flex;
 align-items: center;

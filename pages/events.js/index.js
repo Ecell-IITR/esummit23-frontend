@@ -12,8 +12,7 @@ export default function Events({posts}) {
       <h1>Events</h1>
       {posts.map((post,id) => {
         return (
-          <>
-          
+          <>      
             <h2> {post.event_name}</h2>
             <p>{post.card_description}</p>
             </>
