@@ -1,8 +1,4 @@
-import React, { useCallback } from 'react'
-import Navbar from "../Navbar/Navbar"
-import axios from 'axios';
-import {useState, useEffect} from 'react';
-import { ALL_EVENTS_API } from '../../utils/APIs';
+import React from 'react'
 
 
 

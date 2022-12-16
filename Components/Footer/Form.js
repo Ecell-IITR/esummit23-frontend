@@ -2,7 +2,7 @@ import { Form } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import FetchApi from '../../utils/FetchAPI';
 import { FOOTER_QUERY_API } from '../../utils/APIs';
-import { toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
 import React, { useState } from 'react';
 
 
