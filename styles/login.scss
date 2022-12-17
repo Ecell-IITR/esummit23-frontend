@@ -130,52 +130,52 @@ input:focus {
   text-align: center;
   letter-spacing: 1px;
   color: #ffffff;
+  cursor: pointer;
 }
-.LoginFormLeftShowPassword{
+.LoginFormLeftShowPassword {
   margin-bottom: -35px;
   margin-left: -24px;
 }
 @media screen and (max-width: 1000px) {
-  .LoginFormLeft{
+  .LoginFormLeft {
     width: 60vw;
   }
-  .LoginFormLeftInput{
-    width:300px
+  .LoginFormLeftInput {
+    width: 300px;
   }
-  .loginOrLine{
-    width:85px
+  .loginOrLine {
+    width: 85px;
   }
 }
 @media screen and (max-width: 600px) {
-  .LoginContainer{
+  .LoginContainer {
     margin-bottom: 0;
   }
-  .LoginForm{
+  .LoginForm {
     margin-top: -50vh;
   }
-  .LoginFormLeft{
+  .LoginFormLeft {
     width: 100vw;
   }
-  .LoginFormLeftTitle{
+  .LoginFormLeftTitle {
     margin-top: 26.5vh;
   }
-  .LoginFormLeftSubTitle{
-    background-color: #12100E;
+  .LoginFormLeftSubTitle {
+    background-color: #12100e;
   }
-  .LoginFormBlack{
-    background-color: #12100E;
+  .LoginFormBlack {
+    background-color: #12100e;
     width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-
   }
-  .LoginButton{
+  .LoginButton {
     margin-bottom: 20px;
   }
 }
-@media screen and (max-height: 800px) and (max-width: 600px) {
-  .LoginFormLeftTitle{
+@media screen and (min-height: 800px) and (max-width: 600px) {
+  .LoginFormLeftTitle {
     margin-top: 29vh;
   }
 }

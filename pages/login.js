@@ -3,24 +3,54 @@ import { useMobile, useUpdateMobile } from '../utils/MobileContext';
 import Image from 'next/image';
 import { LOGIN_API } from '../utils/APIs';
 import FetchApi from '../utils/fetchAPI';
-
+import { Authenticate } from '../utils';
 function Login() {
   const setMobile = useUpdateMobile();
   const [email, setemail] = useState();
   const [Password, setPassword] = useState('');
   const [ShowPassword, setShowPassword] = useState(false);
-  function submmit() {
-    FetchApi(
-      'POST',
-      LOGIN_API,
-      {
-        esummit_id: Password,
-        password: email,
-      },
-      null
-    ).then((res) => {
-      console.log(res);
-    });
+
+  const [pass_error, setpass_error] = useState('');
+
+  const [pass_error_bool, setpass_error_bool] = useState(false);
+
+  const passValidate = () => {
+    setTimeout(function () {
+      if (Password.length < 1) {
+        setpass_error_bool(true);
+        setpass_error('Password should be more than 8 letters');
+      } else {
+        setpass_error_bool(false);
+        setpass_error('');
+      }
+    }, 1000);
+  };
+
+  function submit() {
+    if (!pass_error_bool) {
+      FetchApi(
+        'POST',
+        LOGIN_API,
+        {
+          esummit_id: email,
+          password: Password,
+        },
+        null
+      )
+        .then((res) => {
+          console.log(res);
+          if (res.data.role) {
+            localStorage.setItem('userRoleType', res.data.role);
+          }
+          Authenticate(res.data.n, res.data.at);
+        })
+        .catch((res) => {
+          alert('Credentials are wrong');
+        });
+    }
+    else{
+      alert(pass_error)
+    }
   }
   useEffect(() => {
     setMobile();
@@ -126,19 +156,27 @@ function Login() {
                     ? 'LoginFormLeftInput'
                     : 'LoginFormLeftInput inputGold'
                 }
-                onChange={(e) => setemail(e.target.value)}
+                onChange={(e) => {
+                  setemail(e.target.value);
+                }}
                 type='text'
                 value={email}
                 placeholder='Esummit id'
               />
               <div style={{ display: 'flex', alignItems: 'center' }}>
                 <input
+                  style={
+                    pass_error_bool ? { borderBottom: '1px solid red' } : {}
+                  }
                   className={
                     Password == ''
                       ? 'LoginFormLeftInput'
                       : 'LoginFormLeftInput inputGold'
                   }
-                  onChange={(e) => setPassword(e.target.value)}
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                    passValidate();
+                  }}
                   type={ShowPassword ? 'text' : 'Password'}
                   value={Password}
                   placeholder='Passsword'
