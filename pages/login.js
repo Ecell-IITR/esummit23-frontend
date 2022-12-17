@@ -97,7 +97,10 @@ function Login() {
                       ? 'LoginFormLeftInput'
                       : 'LoginFormLeftInput inputGold'
                   }
-                  onChange={(e) => setPassword(e.target.value)}
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                    passValidate();
+                  }}
                   type={ShowPassword ? 'text' : 'Password'}
                   value={Password}
                   placeholder='Passsword'
