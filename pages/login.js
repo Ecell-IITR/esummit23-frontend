@@ -16,7 +16,7 @@ function Login() {
 
   const passValidate = () => {
     setTimeout(function () {
-      if (Password.length < 1) {
+      if (Password.length < 7) {
         setpass_error_bool(true);
         setpass_error('Password should be more than 8 letters');
       } else {
