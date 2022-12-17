@@ -1,4 +1,4 @@
-import { data } from 'autoprefixer';
+
 import axios from 'axios';
 
 const FetchApi = (method, url, params, TokenValue) => {

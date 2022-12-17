@@ -1,5 +1,5 @@
 .LoginContainer {
-  margin-bottom: 800px;
+  margin-bottom: 100px;
 }
 .LoginForm {
   position: relative;
@@ -120,7 +120,6 @@ input:focus {
   margin-top: 44px;
   width: 211px;
   height: 48px;
-
   background: #ba6d39;
   border-radius: 100px;
   font-family: 'Lexend';
@@ -128,10 +127,8 @@ input:focus {
   font-weight: 600;
   font-size: 18px;
   line-height: 24px;
-
   text-align: center;
   letter-spacing: 1px;
-
   color: #ffffff;
 }
 .LoginFormLeftShowPassword{
@@ -147,5 +144,38 @@ input:focus {
   }
   .loginOrLine{
     width:85px
+  }
+}
+@media screen and (max-width: 600px) {
+  .LoginContainer{
+    margin-bottom: 0;
+  }
+  .LoginForm{
+    margin-top: -50vh;
+  }
+  .LoginFormLeft{
+    width: 100vw;
+  }
+  .LoginFormLeftTitle{
+    margin-top: 26.5vh;
+  }
+  .LoginFormLeftSubTitle{
+    background-color: #12100E;
+  }
+  .LoginFormBlack{
+    background-color: #12100E;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .LoginButton{
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-height: 800px) {
+  .LoginFormLeftTitle{
+    margin-top: 29vh;
   }
 }
