@@ -1,0 +1,139 @@
+
+  .event{
+    background: linear-gradient(#12100E,#331C00);
+  }
+ 
+
+  .box h1{
+    width: 95%;
+    font-size: 22px;
+    text-align: center;
+    margin: 16px;
+    padding: 16px;
+    height: 10rem;
+   }
+
+   .box{
+    background-color: #BA6D39;
+   }
+   .box .crts{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: center;
+  margin-left: 150px;
+   }
+   .box .crts .crt{
+    display: flex;
+    height: 56px;
+    width: 352px;
+    margin-bottom: 50px;
+   }
+   .box .crts .crt-img{
+    width: 56px;
+   }
+   .box .crts .crt-img .img{
+    background-color: #F7F8FF;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    text-align: center;
+   }
+   .box .crts .crt-img .img svg{
+    margin-top: 50%;
+    transform: translateY(-50%);
+   }
+   .box .crts .crt-disc{
+    padding-left: 18px;
+    width: calc(100% - 56px);
+   }
+   .box .crts .crt-disc h2{
+    height: 24px;
+    font-size: 18px;
+   }
+   .box .crts .crt-disc p{
+    font-size: 12px;
+   }
+
+
+.parentIS{
+  padding: 4rem;
+  background: linear-gradient(180deg, #2c2117 0%, #301A08 100%);;
+width: 100%;
+height: 60rem;
+}
+.coordinatorHeadingIS{
+  font-size: 3rem;
+  font-weight: bolder;
+  font-family: 'Nunito Sans';
+  border: 1px solid white;
+  color: #E8DBB9;
+  background:none;
+  height: 10%;
+}
+
+.coordinatorDetailIS{
+  border: 1px solid white;
+  color:white;
+  background-color: none;
+  height: 40%;
+  
+}
+
+.registerIS{
+  border: 1px solid white;
+  color: white;
+  background-color: none;
+  height: 50%;
+}
+
+
+.A{
+  background-color: red;
+  display: flex;
+  flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: center;
+  flex-direction:column;
+  padding: 3rem;
+}
+.C{
+  background-color: brown;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  @media screen and (max-width: 600px){
+//    .box .crts .crt{
+//     margin-bottom: 15px;
+//   }
+
+  @media screen and (max-width:685px)
+  {
+    .parentIS{
+      width: 50rem;
+
+    }
+    .event{
+      width: 50rem;
+    }
+  }
+
+ 
+   

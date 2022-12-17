@@ -1,5 +1,8 @@
+
+
+
 .Parent_footer {
-  background-color: #311c00;
+  background-color: #301B09;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -327,6 +330,8 @@
   background-color: rgb(73, 63, 63);
 }
 
+
+
 .form-control_footer {
   background-color: red;
 }
@@ -521,6 +526,9 @@
   .marginCopyright{
     display: flex;
     justify-content: center;
+
+  
+  margin-left: 1rem;
   }
 }
 
@@ -528,11 +536,6 @@
 
 @media screen and (max-width:741px)
 {
-  .vsc-initialized{
-    margin-left: 3rem;
-    padding: .5rem;
-    background-color:#311c00;
-  }
   .line{
     margin-top: -4rem;
     margin-left: 7rem;
@@ -542,11 +545,6 @@
 
 @media screen and (max-width:500px)
 {
-  .vsc-initialized{
-    margin-left: 13rem;
-    padding: .5rem;
-    background-color:#311c00;
-  }
   .line{
     width: 30rem;
     margin-left: -9rem !important;
@@ -561,3 +559,23 @@
   }
 }
 
+@media screen and (max-width:480px)
+{
+  .Parent_footer{
+    width: 31rem;
+
+  }
+}
+
+@media screen and (max-width:685px)
+{
+  .Parent_footer{
+    width:50rem; 
+
+  }
+
+  .marginCopyright{
+    margin-left: 0rem;
+    width: 50rem;
+  }
+}
