@@ -6,6 +6,7 @@ function Login() {
   const setMobile = useUpdateMobile();
   const [email, setemail] = useState();
   const [Password, setPassword] = useState('');
+  const [ShowPassword, setShowPassword] = useState(false);
   useEffect(() => {
     setMobile();
   }, []);
@@ -38,18 +39,25 @@ function Login() {
                 value={email}
                 placeholder='Esummit id'
               />
-
-              <input
-                className={
-                  Password == ''
-                    ? 'LoginFormLeftInput'
-                    : 'LoginFormLeftInput inputGold'
-                }
-                onChange={(e) => setPassword(e.target.value)}
-                type='Password'
-                value={Password}
-                placeholder='Passsword'
-              />
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <input
+                  className={
+                    Password == ''
+                      ? 'LoginFormLeftInput'
+                      : 'LoginFormLeftInput inputGold'
+                  }
+                  onChange={(e) => setPassword(e.target.value)}
+                  type={ShowPassword ? 'text' : 'Password'}
+                  value={Password}
+                  placeholder='Passsword'
+                />
+                <div
+                  className='LoginFormLeftShowPassword'
+                  onClick={() => setShowPassword(!ShowPassword)}
+                >
+                  <Image width='20' height='20' src='/Showpassword.webp' />
+                </div>
+              </div>
               <div className='loginOrContainer'>
                 <div className='loginOrLine'></div>
                 <div className='loginOrText'>OR</div>
