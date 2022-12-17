@@ -514,7 +514,7 @@
   .copyRight{
     font-family: 'Nunito Sans';
     color:white;
-    margin-left: -9rem;
+    margin-left: -4rem;
     margin-top: -1rem;
     opacity: 70%;
   }
@@ -522,6 +522,7 @@
     display: flex;
     justify-content: center;
   }
+
 }
 
 
@@ -549,13 +550,14 @@
 {
 
   .Parent_footer{
-    width: 50rem;
+    width: 55rem;
   }
   .marginCopyright{
     width: 50rem;
   }
   .line{
-    width: 50rem;
+    width: 30rem;
+    margin-left: 13rem;
   }
 }
  
