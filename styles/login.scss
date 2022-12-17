@@ -138,3 +138,14 @@ input:focus {
   margin-bottom: -35px;
   margin-left: -24px;
 }
+@media screen and (max-width: 1000px) {
+  .LoginFormLeft{
+    width: 60vw;
+  }
+  .LoginFormLeftInput{
+    width:300px
+  }
+  .loginOrLine{
+    width:85px
+  }
+}

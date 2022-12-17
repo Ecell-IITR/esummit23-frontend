@@ -1,12 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import { useMobile, useUpdateMobile } from '../utils/MobileContext';
 import Image from 'next/image';
+import { LOGIN_API } from '../utils/APIs';
+import FetchApi from '../utils/fetchAPI';
+
+
 
 function Login() {
   const setMobile = useUpdateMobile();
   const [email, setemail] = useState();
   const [Password, setPassword] = useState('');
   const [ShowPassword, setShowPassword] = useState(false);
+  function submmit() {
+    FetchApi('POST', LOGIN_API, {
+      "esummit_id":Password,
+      "password":email   
+  },null).then((res) => {
+      console.log(res);
+    });
+
+  }
   useEffect(() => {
     setMobile();
   }, []);
@@ -69,7 +82,7 @@ function Login() {
                   Register
                 </div>
               </div>
-              <div className='LoginButton'>Login</div>
+              <div className='LoginButton' onClick={()=>{submit()}}>Login</div>
             </div>
             <div className='LoginFormRight'></div>
           </div>
