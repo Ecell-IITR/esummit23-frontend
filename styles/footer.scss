@@ -536,28 +536,28 @@
 
 @media screen and (max-width:741px)
 {
-  .line{
-    margin-top: -4rem;
-    margin-left: 7rem;
-    width: 30rem;
-  }
+  // .line{
+  //   margin-top: -4rem;
+  //   margin-left: 7rem;
+  //   width: 30rem;
+  // }
 }
 
-@media screen and (max-width:500px)
-{
-  .line{
-    width: 30rem;
-    margin-left: -9rem !important;
-  }
+// @media screen and (max-width:500px)
+// {
+//   .line{
+//     width: 30rem;
+//     margin-left: -9rem !important;
+//   }
 
-}
-@media screen and (max-width:600px)
-{
-  .line{
-    width: 30rem;
-    margin-left: 2rem;
-  }
-}
+// }
+// @media screen and (max-width:600px)
+// {
+//   .line{
+//     width: 30rem;
+//     margin-left: 2rem;
+//   }
+// }
 
 @media screen and (max-width:480px)
 {
@@ -576,6 +576,10 @@
 
   .marginCopyright{
     margin-left: 0rem;
+    width: 50rem;
+  }
+
+  .line{
     width: 50rem;
   }
 }
