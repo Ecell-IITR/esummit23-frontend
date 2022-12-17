@@ -62,22 +62,34 @@
   background: linear-gradient(180deg, #2c2117 0%, #301A08 100%);;
 width: 100%;
 height: 60rem;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
 .coordinatorHeadingIS{
   font-size: 3rem;
   font-weight: bolder;
   font-family: 'Nunito Sans';
-  border: 1px solid white;
+  // border: 1px solid white;
   color: #E8DBB9;
   background:none;
   height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
 }
 
 .coordinatorDetailIS{
   border: 1px solid white;
   color:white;
   background-color: none;
-  height: 40%;
+  height: 35%;
+  display: flex;
+  flex-direction: row;
+  gap: 1%;
+  justify-content: center;
+  width: 100%;
   
 }
 
@@ -90,30 +102,90 @@ height: 60rem;
 
 
 .A{
-  background-color: red;
-  display: flex;
-  flex-wrap: wrap;
-    justify-content: space-between;
-    justify-content: center;
-  flex-direction:column;
+  width: 45rem;
+  background:none;
   padding: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 .C{
-  background-color: brown;
   display: flex;
   flex-direction: column;
+  background-color: #F3EDD8;
+  width: 60%;
+  height: 75%;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+ justify-content: center;
+ 
+
+}
+
+.B{
+  border-radius: 1.5rem;
+  height: 100%;
+  width: 30%;
+  background:none;
+  border: 1px solid white;
 }
 
 
 
+.nameISCoordinator{
+  
+  height: 40%;
+  display: flex;  
+  align-items: center;
+  font-family:'Nunito Sans';
+  font-weight: 700;
+  padding:1rem;
+  font-size: 1.8rem;
+  color: #2A1809;
+
+
+}
+.mailISCoordinator{
+  height:15%;
+  padding:1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: .5rem;
+  color: #2A1809;
+
+
+}
+.contactISCordinator{
+  
+  height: 15%;
+  padding:1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: .5rem;
+  color: #2A1809;
+
+}
 
 
 
+.inbox{
+ 
+  height: 1.5rem;
+  width: 15%;
 
 
-
-
-
+}
+.mailId{
+ 
+  height: 1.5rem;
+  width: 80%;
+  text-align: start;
+  font-family:'Nunito Sans';
+  opacity: 90%;
+}
 
 
 
@@ -133,6 +205,33 @@ height: 60rem;
     .event{
       width: 50rem;
     }
+    .B{
+      width: 1rem;
+    }
+  }
+
+ 
+  @media screen and (max-width:1235px)
+  {
+    .coordinatorDetailIS{
+      flex-direction: column;
+      align-items: center;
+      height: 30rem;
+    
+    }
+
+    .A{
+      padding: 0.5rem;
+  
+    }
+
+    .C{
+      width: 50%;
+    }
+    .B{
+      width: 20%;
+    }
+
   }
 
  

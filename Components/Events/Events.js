@@ -1,4 +1,4 @@
-
+import Image from 'next/image' 
 import Certificates from "./Certificates";
 import Coordinator from './Coordinator'
 
@@ -47,11 +47,17 @@ function Events() {
       {Coordinator.map((curr,index)=>{
       return(
       <div className="A" key={index}>
-          <div className="B"></div>
+          <div className="B">fsvsmf</div>
           <div className="C">
-              <div className="nameISCoordinator">PranavARYA</div>
-              <div className="mailISCoordinator">djnewnwewe</div>
-              <div className="contactISCordinator">CDC</div>
+              <div className="nameISCoordinator">{curr.name}</div>
+              <div className="mailISCoordinator">
+              <div className="inbox"><Image src="/inbox.webp" height="25%" width="30%"></Image></div>
+              <div className="mailId"><a href={"mailTo:"+curr.mailId} style={{color:"#2A1809", textDecoration:"none"}} >{curr.mailId}</a></div>
+              </div>
+              <div className="contactISCordinator">
+              <div className="inbox"><Image src="/phone.webp" height="25%" width="30%"></Image></div>
+              <div className="mailId">{curr.phone}</div>
+              </div>
           
           </div>
        </div>
