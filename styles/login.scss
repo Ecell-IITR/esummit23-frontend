@@ -174,7 +174,7 @@ input:focus {
     margin-bottom: 20px;
   }
 }
-@media screen and (max-height: 800px) {
+@media screen and (max-height: 800px) and (max-width: 600px) {
   .LoginFormLeftTitle{
     margin-top: 29vh;
   }
