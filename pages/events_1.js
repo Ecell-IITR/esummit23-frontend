@@ -1,5 +1,5 @@
 import React from 'react'
-
+import FetchApi from '../utils/FetchAPI';
 
 
 export default function Ideathon({data}) {
@@ -31,14 +31,19 @@ export default function Ideathon({data}) {
 
 
 
-export async function getStaticProps() {
-  const res = await fetch("http://127.0.0.1:8000/events/Ideastorm");
-  const data = await res?.json()
-  console.log(data)
-  console.log(res)
-  return {
-    props: {
-      data,
-    },
-  }
-}
+// export async function getStaticProps() {
+//   const res = await fetch("http://127.0.0.1:8000/events/Ideastorm");
+//   const data = await res?.json()
+//   console.log(data)
+//   console.log(res)
+//   return {
+//     props: {
+//       data,
+//     },
+//   }
+// }
+
+FetchApi('get',"http://127.0.0.1:8000/events/Ideastorm", null,null)
+.then((res)=>{
+    console.log(res)
+})
