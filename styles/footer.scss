@@ -526,38 +526,36 @@
 
 
 
-@media screen and (max-width:741px)
+// @media screen and (max-width:741px)
+// {
+//   .line{
+//     margin-top: -4rem;
+//     margin-left: 7rem;
+//     width: 30rem;
+//   }
+// }
+
+// @media screen and (max-width:500px)
+// {
+//   .line{
+//     width: 30rem;
+//     margin-left: -9rem !important;
+//   }
+
+// }
+ 
+
+@media screen and (max-width:685px)
 {
-  .vsc-initialized{
-    margin-left: 3rem;
-    padding: .5rem;
-    background-color:#311c00;
+
+  .Parent_footer{
+    width: 50rem;
+  }
+  .marginCopyright{
+    width: 50rem;
   }
   .line{
-    margin-top: -4rem;
-    margin-left: 7rem;
-    width: 30rem;
+    width: 50rem;
   }
 }
-
-@media screen and (max-width:500px)
-{
-  .vsc-initialized{
-    margin-left: 13rem;
-    padding: .5rem;
-    background-color:#311c00;
-  }
-  .line{
-    width: 30rem;
-    margin-left: -9rem !important;
-  }
-
-}
-@media screen and (max-width:600px)
-{
-  .line{
-    width: 30rem;
-    margin-left: 2rem;
-  }
-}
-
+ 
