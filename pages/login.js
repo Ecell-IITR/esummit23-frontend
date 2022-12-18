@@ -112,17 +112,12 @@ function Login() {
                   <Image width='20' height='20' src='/Showpassword.webp' />
                 </div>
               </div>
-              <div className='loginOrContainer'>
+              {/* <div className='loginOrContainer'>
                 <div className='loginOrLine'></div>
                 <div className='loginOrText'>OR</div>
                 <div className='loginOrLine'></div>
-              </div>
-              <div className='loginRegisterContainer'>
-                <div className='loginRegisterText'>New to Esummit?</div>
-                <div className='loginRegisterText loginRegisterTextBold'>
-                  Register
-                </div>
-              </div>
+              </div> */}
+              
 
               <div
                 className='LoginButton'
@@ -131,6 +126,12 @@ function Login() {
                 }}
               >
                 Login
+              </div>
+              <div className='loginRegisterContainer'>
+                <div className='loginRegisterText'>New to Esummit?</div>
+                <div className='loginRegisterText loginRegisterTextBold'>
+                  Register
+                </div>
               </div>
             </div>
           </div>
@@ -191,17 +192,12 @@ function Login() {
                   <Image width='20' height='20' src='/Showpassword.webp' />
                 </div>
               </div>
-              <div className='loginOrContainer'>
+              {/* <div className='loginOrContainer'>
                 <div className='loginOrLine'></div>
                 <div className='loginOrText'>OR</div>
                 <div className='loginOrLine'></div>
-              </div>
-              <div className='loginRegisterContainer'>
-                <div className='loginRegisterText'>New to Esummit?</div>
-                <div className='loginRegisterText loginRegisterTextBold'>
-                  Register
-                </div>
-              </div>
+              </div> */}
+              
               <div
                 className='LoginButton'
                 onClick={() => {
@@ -210,10 +206,17 @@ function Login() {
               >
                 Login
               </div>
+              <div className='loginRegisterContainer'>
+                <div className='loginRegisterText'>New to Esummit?</div>
+                <div className='loginRegisterText loginRegisterTextBold'>
+                  Register
+                </div>
+              </div>
             </div>
             <div className='LoginFormRight'></div>
           </div>
         </div>
+        
       </>
     );
   }

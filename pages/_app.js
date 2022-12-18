@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <MobileProvider>
-        <Component {...pageProps} /> <Footer />
+        <Component {...pageProps} /> 
       </MobileProvider>
     </>
   );
