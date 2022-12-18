@@ -3,8 +3,10 @@ import Footer from  '../Components/Footer/Footer'
 import { useMobile, useUpdateMobile } from '../utils/MobileContext';
 import {Navbar} from  '../Components/Navbar/Navbar'
 import {mobNavbar} from  '../Components/Navbar/mobileHeader'
+import React, { useEffect } from 'react';
 
-export default function Header() {
+
+export default function Home() {
   const setMobile = useUpdateMobile();
   useEffect(() => {
     setMobile();
