@@ -1,5 +1,5 @@
 .LoginContainer {
-  margin-bottom: 100px;
+  margin-bottom: px;
 }
 .LoginForm {
   position: relative;
@@ -83,6 +83,7 @@ input:focus {
   color: #828282;
 }
 .loginRegisterContainer {
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -171,6 +172,10 @@ input:focus {
     align-items: center;
   }
   .LoginButton {
+    margin-bottom: 20px;
+  }
+  .loginRegisterContainer{
+    margin-top: 5px;
     margin-bottom: 20px;
   }
 }
