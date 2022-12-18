@@ -1,13 +1,14 @@
 .navbarParent{
     background: #121212;
-    display: flex;
-    justify-content: space-between;
+    display: flex !important;
+    justify-content: space-between !important;
     height: 73px;
+    align-items: center !important;
 }
 
 .navbarEsummitLogo{
     /* border: 1px solid black; */
-    width: 25%;
+    // width: 25%;
     display: flex;
     margin-left:70px;
 }
@@ -27,12 +28,12 @@ justify-content: center;
 align-items: center;
 padding: 8px 25px;
 gap: 10px;
-border-radius: 4px;
+border: 1.05px solid #FFFFFF;
+border-radius: 25px;
 background-color:#121212;
-border:2px solid white;
 font-family: 'Nunito Sans';
 font-style: normal;
-font-weight: 700;
+font-weight: 600;
 font-size: 16px;
 line-height: 22px;
 display: flex;
@@ -69,6 +70,14 @@ text-decoration-line: none;
 .navbarUl{
     list-style: none;
     list-style-type:none;
+    display: flex;
+    gap:35px;
+    align-items: center;
+    margin:0;
+}
+
+.navBut{
+    margin-right: 30px;
 }
 
 ul a.active {
@@ -78,9 +87,11 @@ ul a.active {
 
 
 .navbarActive{
-    color: #FFD754 !important;  
-    text-decoration:underline;
+    color: #D4B984 !important;  
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .navbarListBox{
     color:white;
@@ -88,3 +99,10 @@ ul a.active {
     cursor: pointer;
     
 }
+.circle {
+    display: flex;
+    width: 5px;
+    height: 5px;
+    background-color: #D4B984;
+    border-radius: 50%;
+  }

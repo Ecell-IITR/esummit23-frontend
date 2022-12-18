@@ -14,20 +14,20 @@ function NavScrollExample() {
       case '/':
         setActive('home');
         break;
-        case '#action2':
+        case '/events':
           setActive('events');
           break;
         case '/speakers':
           setActive('speakers');
           break;
-      case '/comingSoonSponsors':
+      case '/sponsors':
         setActive('sponsors');
         break;
-        case '/Merchandice':
+        case '/merchandice':
           setActive('merchandice');
           break;
       case '/about':
-        setActive('About');
+        setActive('about');
         break;
       default:
         setActive('');
@@ -35,14 +35,13 @@ function NavScrollExample() {
   });
   return (
     <Navbar className="navbarParent">
-      <Container fluid>
+      {/* <Container fluid> */}
         <div className="navbarEsummitLogo">
           <img src='esummitLogo.svg' className="navbarImage"/>
         </div>
-        <Navbar.Toggle aria-controls='navbarScroll' />
-        <Navbar.Collapse id='navbarScroll'>
+        {/* <Navbar.Toggle aria-controls='navbarScroll' /> */}
           <ul
-            className='mze-auto my-2 my-lg-0 navbarText d-flex flex-row gap-4 navbarUl'
+            className='navbarUl'
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
@@ -55,81 +54,95 @@ function NavScrollExample() {
             >
             
               Home
-            
+            <div className={
+                'home' == active ? 'circle' : ''
+              }/>
             </div>
+            
             </Link>
         </li>
             
             <li>
-            <Link href='#action2' passHref>
+            <Link href='/events' passHref>
             <div
               className={
                 'events' == active ? 'navbarActive' : 'navbarListBox'
               }>
    
               Events
-           
+              <div className={
+                'events' == active ? 'circle' : ''
+              }/>
             </div>
             </Link>
            
         </li>
           
         <li>
-          <Link href='#action3'>
+          <Link href='/speakers'>
             <div
               className={
                 'speakers' == active ? 'navbarActive' : 'navbarListBox'
               }
             >
               Speakers
+              <div className={
+                'speakers' == active ? 'circle' : ''
+              }/>
             </div>
             </Link>
         </li>
         <li>
-          <Link href='#action4'>
+          <Link href='/sponsors'>
             <div
               className={
                 'sponsors' == active ? 'navbarActive' : 'navbarListBox'
               }
             >
              Sponsors
+             <div className={
+                'sponsors' == active ? 'circle' : ''
+              }/>
             </div>
             </Link>
         </li>
         <li>
-          <Link href='#action5'>
+          <Link href='/merchandice'>
             <div
               className={
                 'merchandice' == active ? 'navbarActive' : 'navbarListBox'
               }
             >
              Merchandice
+             <div className={
+                'merchandice' == active ? 'circle' : ''
+              }/>
             </div>
             </Link>
         </li>
         <li>
-          <Link href='#action6'>
+          <Link href='/about'>
             <div
               className={
                 'about' == active ? 'navbarActive' : 'navbarListBox'
               }
             >
              About
+             <div className={
+                'about' == active ? 'circle' : ''
+              }/>
             </div>
             </Link>
         </li>
           </ul>
-          </Navbar.Collapse>
+          
           <div
-            className='d-flex align-items-center me-5'
+            className='d-flex align-items-center justify-content-center navBut'
             style={{ gap: '36px' }}
           >
-            <a href='#action8' className="navbarLogIn">
-              <span className="navbarLogIn">Log in</span>
-            </a>
-            <button className="navbarButton">Register</button>
+            <button className="navbarButton">Login / Register</button>
           </div>
-      </Container>
+      {/* </Container> */}
     </Navbar>
   
   );
