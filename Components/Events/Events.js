@@ -40,6 +40,51 @@ function Events() {
        
       </div>
 
+      <div className='CardContainer'>
+
+      <div className='sponsCardContainer'>
+      <div className='CardBox1'>
+
+      </div>
+      
+      <div className='CardContent'>
+      <div className='sponsorImage'><Image src="/sponsor.webp" height="60rem"  width="700rem" ></Image></div>
+      <div className="gfg"><Image src="/gfg.webp" width="240rem" height="180rem" ></Image></div>
+          
+      </div>
+      
+      <div className='CardBox2'>
+
+      </div>
+
+      </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div className="parentIS">
 <div className="coordinatorHeadingIS">Event Coordinators</div>
 <div className="coordinatorDetailIS">

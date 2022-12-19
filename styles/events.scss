@@ -20,9 +20,8 @@
     width: 80%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     justify-content: center;
-  margin-left: 150px;
+  margin-left: 90px;
    }
    .box .crts .crt{
     display: flex;
@@ -318,8 +317,134 @@ align-items: center;
     .A{
       padding: rem;
     }
+
+   
+
+
   }
 
+
+
+
+  //sponsor card
+
+
+  .CardBox1{
+    height:15.75rem;
+    width:5rem;
+    background-color: #98613B;
+    border-radius: 12px 0px 0px 12px;
+}
+
+.CardBox2{
+    height:15.75rem;
+    width:5rem;
+    background-color: #98613B;
+    border-radius: 0px 12px 12px 0px;
+
+}
+.CardContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    background: linear-gradient(180deg, #1e150d 0%, #2b2118 100%);
+    height: 32rem;
+
+
+   
+}
+.CardContent{
+    width: 80%;
+height:23.9375rem;
+background-color: #F3EDD8;
+box-shadow: 0px -35px 12px 12px rgba(46, 25, 8, 0.1), 0px 0px 15px 10px rgba(46, 25, 8, 0.05);
+border-radius: 12px;
+gap:43px;
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: flex-start;
+padding-top: 10px;
+padding: 2rem;
+}
+
+.sponsorImage{
+  // border: 1px solid black;
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gfg{
+  // border: 1px solid black;
+  width: 40%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.CText1{
+    font-family: 'Lexend';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 110%;
+display: flex;
+align-items: center;
+color: #98613B;
+flex: none;
+order: 1;
+flex-grow: 0;
+gap:24px;
+}
+
+.CardText{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 74px;
+}
+
+.CardLine{
+    width:1830px;
+}
+
+.SponsData{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+    gap:20px;
+}
+
+.SponsName{
+    font-size: 24px;
+    color: #43A047;
+    font-weight: 600;
+}
+
+.sponsCardContainer{
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+ 
+}
+
+@media only screen and (max-width:1190px) {
+    .CardContainer{
+        padding: 0px 24px;
+    }    
+}
+@media only screen and (max-width:700px) {
+    .CardLine{
+        width:80px;
+    }
+}
+//sponsorcard end
 
   @media screen and (max-width:1235px)
   {
@@ -376,5 +501,17 @@ align-items: center;
       width: 55rem;
     }
     
+  
+  }
+  
+
+  @media screen and (max-width:685px)
+  {
+    
+    
+    .CardContainer{
+      width: 55rem;
+    }
+  
   }
   
