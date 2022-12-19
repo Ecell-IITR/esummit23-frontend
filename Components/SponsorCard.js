@@ -19,7 +19,6 @@ const SponsorCard = () => {
               <div className='SponsLogo'>
                 <img src="sponlogo.svg" alt="noimg"/>
               </div>
-              <div className='SponsName'>GeeksForGeeks</div>
             </div>
         </div>
         <div className='CardBox2'>
