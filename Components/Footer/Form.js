@@ -64,7 +64,7 @@ const Forms = () => {
   // .then((res) => {
 
 
-  //   console.log(res['data']['1']['colourCategory']);
+  //   console.log(res['data']['1']['colourid']);
 
 
 

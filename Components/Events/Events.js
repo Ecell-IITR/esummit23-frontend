@@ -47,7 +47,7 @@ function Events() {
       {Coordinator.map((curr,index)=>{
       return(
       <div className="A" key={index}>
-          <div className="B">fsvsmf</div>
+          <div className="B"><Image className='imageCordinator' src="/pranavArya.webp" height="240px" width="210px"></Image></div>
           <div className="C">
               <div className="nameISCoordinator">{curr.name}</div>
               <div className="mailISCoordinator">
@@ -67,15 +67,20 @@ function Events() {
 
 
   </div>
-  <div className="registerIS">ff</div>
-
-
+  <div className="registerIS">
+  <div className='registerBack'>
+      <div className='registerFront'>
+          <div className='boldRegisterQuestion'>Haven't registered yet? </div>
+          <div className='lightRegisterQuestion'> Get flat 10% off on pre-registration</div>
+          <div className='registerButton'> <button className='button'>REGISTER NOW!</button></div>
+      </div>
+  </div>
   </div>
 
 
 
 
-
+</div>
 
 
 

@@ -61,7 +61,7 @@
   padding: 4rem;
   background: linear-gradient(180deg, #2c2117 0%, #301A08 100%);;
 width: 100%;
-height: 60rem;
+height: 65rem;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -75,13 +75,15 @@ align-items: center;
   color: #E8DBB9;
   background:none;
   height: 10%;
-  width: 100%;
+  width: 80%;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  // justify-content: center;
+
 }
 
 .coordinatorDetailIS{
-  border: 1px solid white;
+  // border: 1px solid white;
   color:white;
   background-color: none;
   height: 35%;
@@ -94,10 +96,15 @@ align-items: center;
 }
 
 .registerIS{
-  border: 1px solid white;
+  // border: 1px solid white;
   color: white;
   background-color: none;
-  height: 50%;
+  height: 40%;
+  width: 100%;
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -109,16 +116,19 @@ align-items: center;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  height: 20rem;
+
 }
 .C{
   display: flex;
   flex-direction: column;
   background-color: #F3EDD8;
-  width: 60%;
-  height: 75%;
+  width: 55%;
+  height: 65%;
   border-top-right-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
  justify-content: center;
+ margin-left: -1.45rem;
  
 
 }
@@ -126,9 +136,9 @@ align-items: center;
 .B{
   border-radius: 1.5rem;
   height: 100%;
-  width: 30%;
+  width: 12rem;
   background:none;
-  border: 1px solid white;
+  // border: 1px solid white;
 }
 
 
@@ -169,9 +179,90 @@ align-items: center;
 
 }
 
+.registerBack{
+  background-color: #98613B;
+  width :70%;
+  height: 80%;
+  border-radius:1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registerFront{
+  background-color: #F3EDD8;
+ 
+  height: 160%;
+  width: 80%;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.boldRegisterQuestion{
+  // border: 1px solid black;
+  height: 25%;
+  width: 80%;
+  font-family: 'Nunito Sans';
+  color: #2F1908;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+
+}
+
+
+.lightRegisterQuestion{
+  // border: 1px solid black;
+  height: 15%;
+  width: 80%;
+  font-family: 'Nunito Sans';
+  color: #2F1908;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  opacity: 80%;
+}
+
+.registerButton{
+  // border: 1px solid black;
+  height: 25%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+ 
+}
+.button{
+  width: 13rem;
+  height: 65%;
+  border-radius: 2rem;
+  background-color: #BA6D39;
+  font-size:1rem;
+  color: white;
+  border: 2px solid #BA6D39;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 .inbox{
+
  
   height: 1.5rem;
   width: 15%;
@@ -186,7 +277,7 @@ align-items: center;
   font-family:'Nunito Sans';
   opacity: 90%;
 }
-
+ 
 
 
 
@@ -199,40 +290,91 @@ align-items: center;
   @media screen and (max-width:685px)
   {
     .parentIS{
-      width: 50rem;
+      width: 55rem;
+      height: 80rem;
 
     }
-    .event{
-      width: 50rem;
+    .C{
+      height: 12rem;
+    
     }
     .B{
-      width: 1rem;
+      margin-top: -2rem;
+    }
+    .event{
+      width: 55rem;
+    }
+    .B{
+      width: 15rem;
+      height: 15rem;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+
+    }
+    .coordinatorDetailIS{
+      height: 1rem;
+    }
+    .A{
+      padding: rem;
     }
   }
 
- 
+
   @media screen and (max-width:1235px)
   {
     .coordinatorDetailIS{
       flex-direction: column;
       align-items: center;
-      height: 30rem;
+      height: 40rem;
     
     }
 
     .A{
-      padding: 0.5rem;
+      
+      height: 70%;
   
     }
 
     .C{
       width: 50%;
+      height: 8rem;
+      margin-top: -2rem;
     }
-    .B{
-      width: 20%;
-    }
+    
 
   }
 
  
-   
+
+     @media screen and (max-width:1235px)
+  {
+    .registerFront{
+      height: 15rem;
+      width: 33rem;
+    }
+    .registerBack{
+      height: 10rem;
+      width: 42rem;
+    }
+    .coordinatorHeadingIS{
+      width: 35rem;
+    }
+    .A{
+      padding: .1rem;
+    }
+
+  }
+
+
+  @media screen and (max-width:966px)
+  {
+    .registerBack{
+      width: 43rem;
+    }
+    .registerIS{
+      width: 55rem;
+    }
+    
+  }
+  
