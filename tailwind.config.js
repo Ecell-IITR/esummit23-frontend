@@ -7,6 +7,9 @@ module.exports = {
       colors: {
         primary: '#dbbb89',
       },
+      backgroundImage: {
+        'my': "url('../public/images/my.jpg')",
+      },
     },
     backgroundColor: (theme) => ({
       ...theme('colors'),

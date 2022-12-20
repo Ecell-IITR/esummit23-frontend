@@ -1,0 +1,366 @@
+.container{
+  background: linear-gradient(180deg, #12100E 0%, #301A08 100%);
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap:2rem;
+
+}
+
+.helpAboutContainer
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.aboutbox{
+  width: 100%;
+}
+.aboutContainer{
+width: 90%;
+height: 20rem;
+display: flex;
+flex-direction: column;
+padding: 3.5rem;
+}
+.aboutHeading{
+  color: #E8DBB9;
+  font-family: 'Nunito Sans';
+  font-weight: 700;
+height: 1.5rem;
+width: 100%;
+font-size: 2rem;
+}
+.aboutEvent{
+  font-family: 'Nunito Sans';
+  text-align: justify;
+  height: 135px;
+  width:100%;
+margin-top: 83px;
+}
+.secondcontainer{
+  // margin-left: 220px;
+  display: flex;
+
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 2rem;
+  margin-left: 2rem;
+}
+
+.arrows{
+  margin-top: .4rem;
+  width: 17rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: .1rem;
+}
+.helpArrow{
+  width: 9rem;
+}
+.rulecontainer{
+  padding: 2rem;
+  // background-color: green;
+  width: 100%;
+
+}
+.firstarrow,.secondarrow, .thirdarrow{
+  width: 100%;
+border-radius: 6px;
+padding: 12px 32px 12px 32px;
+background-color: #98613B;
+
+}
+.firstarrow{
+  margin-top: -.1rem;
+  width: 100%;
+  height: 4.2rem;
+  font-size:1.75rem;
+}
+
+.verticalLine{
+  background-color:#9B9996;
+  width: .5rem;
+
+}
+.helpVerticalLine{
+  width: 50%;
+  height: 19%;
+  display: flex;
+  justify-content: center;
+}
+.roundnamecontent{
+  // background-color: yellow;
+  // border: 1px solid red;
+  width: 75%;
+margin-left: -9rem;
+border-radius: 12px;
+padding-top: 4px;
+background: #F3EDD8;
+border-radius: 12px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+} 
+.triangle-right {
+	border-top: 33px solid transparent;
+	border-left: 50px solid #98613B;
+	border-bottom: 33px solid transparent;
+  
+}
+.rulecontainer, .criteriacontainer{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Nunito Sans';
+  height: 25rem;
+  width: 90%;
+
+
+}
+
+.criteria{
+  opacity: 80%;
+}
+.rulecontainer{
+  margin-top: 2rem;
+}
+.criteriacontainer{
+  margin-top: -6rem;
+}
+.helpSecondContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.helpRuleContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+.ruleheading, .criteriaheading{
+  display: flex;
+  align-items: center;
+  font-family: 'Nunito Sans';
+  width: 100%;
+font-size: 1.5rem;
+font-weight: 500;
+line-height: 26px;
+height: 15%;
+margin-left: 2rem;
+}
+.criteriacontainer{
+  padding: 2rem;
+  
+}
+
+.rulebox{
+  Font: Nunito Sans
+} 
+.rules{
+  opacity: 80%;
+  width: 100%;
+}
+.rulesMentioned{
+  height: 10%;
+  width: 100%;
+  // background-color:yellow;
+
+}
+
+.helpRules{
+  height: 100%;
+  width: 100%;
+}
+.perksbox{
+  height: 251px;
+  width: 100%;
+margin-top: 59px;
+padding: 18px 156px 64px 156px;
+background: #98613B;
+} 
+.perksheading{
+  height: 35px;
+  width: 100%;
+size: 32px;
+margin-left: 500px;
+
+}
+.pstmt{
+  font-size: 12px;
+}
+.perksflex{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 60px;
+}
+.backgroundbox{
+  height: 316px;
+  width: 100%;
+  margin-left: 213px;
+  margin-top: 90px;
+  border-radius: 12px;
+  background-color: #98613B;
+  
+}
+.simg{
+  height: 160.35000610351562px;
+  width: 100%;
+margin-left: 3.349609375px;
+margin-top: 43.548828125px;
+}
+
+
+.triangleDate{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  height: 30%;
+
+}
+.listIdeathon{
+  font-size: 0.875rem;
+  width: 90%;
+  height: 45%;
+  background-color: #F3EDD8;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: .5rem;
+  opacity: 70%;
+}
+.dateIdeathon{
+  font-size: 1.125rem;
+  font-style: 'Nunito Sans';
+  height: 25%;
+  background-color: #F3EDD8;
+  width: 80%;
+  font-weight: 500;
+  color :black;
+}
+.descriptionIdeathon{
+  width: 90%;
+  background-color: #F3EDD8;
+  color: black;
+  font-size: 0.875rem;
+  opacity: 70%;
+}
+.conclusionIdeathon{
+  color: black;
+  width: 90%;
+  height: 20%;
+  background-color: #F3EDD8;
+  font-size: 0.875rem;
+  opacity: 70%;
+}
+
+
+@media screen and (max-width:657px)
+{
+.aboutContainer{
+  height: 35rem;
+}
+}
+
+@media screen and (max-width:700px)
+{
+.arrows{
+  width: 60%;
+}
+.helpVerticalLine{
+  width: 40%;
+}
+}
+@media screen and (max-width:600px)
+{
+.arrows{
+  width: 90%;
+}
+.helpVerticalLine{
+  width: 35%;
+}
+}
+
+@media screen and (max-width:480px)
+{
+.arrows{
+  width:130%;
+}
+
+}
+
+
+@media screen and (max-width:1004px)
+{
+.helpArrow{
+  width:8rem;
+}
+}
+
+
+@media screen and (max-width:426px)
+{
+.aboutHeading{
+  font-size: 1.5rem;
+  height:3%;
+}
+}
+@media screen and (max-width:350px)
+{
+.aboutHeading{
+  font-size: 1.3rem;
+  
+}
+}
+
+@media screen and (max-width:504px)
+{
+.secondcontainer{
+  margin-top: -2rem;
+}
+.rulecontainer{
+  height: 35rem;
+ 
+}
+}
+
+@media screen and (max-width:910px)
+{
+.triangle-right{
+  margin-top: .45rem;
+}
+
+}
+@media screen and (max-width:1327px)
+{
+.firstarrow{
+  margin-top: -.1rem;
+  height: 4rem;
+}
+
+}
+@media screen and (max-width:907px)
+{
+.firstarrow{
+  margin-top: .3rem;
+  height: 4rem;
+}
+
+}
+
+@media screen and (max-width:476px)
+{
+.dateIdeathon{
+  font-size: .9rem;
+}
+
+}
