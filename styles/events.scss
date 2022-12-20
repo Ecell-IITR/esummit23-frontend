@@ -267,7 +267,7 @@ margin-top: 43.548828125px;
 @media screen and (max-width:657px)
 {
 .aboutContainer{
-  height: 35rem;
+  height:25rem;
 }
 }
 
@@ -279,6 +279,33 @@ margin-top: 43.548828125px;
 .helpVerticalLine{
   width: 40%;
 }
+}
+
+@media screen and (max-width:500px)
+{
+  .aboutContainer{
+    height:30rem;
+  }
+}
+@media screen and (max-width:400px)
+{
+  .aboutContainer{
+    height:35rem;
+  }
+  .firstarrow{
+    font-size: 1.3rem;
+  }
+  .descriptionIdeathon{
+    margin-top: 1rem;
+  }
+
+}
+
+@media screen and (max-width:353px)
+{
+  .firstarrow{
+    font-size: 1rem;
+  }
 }
 @media screen and (max-width:600px)
 {
