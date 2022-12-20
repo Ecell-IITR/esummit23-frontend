@@ -27,11 +27,9 @@ const Ideathon=[
 
 
    const  events =[
-    { para: "The ​Ideastorm is the annual case building competition organized by ​Entrepreneurship Cell, IIT Roorkee ​in its flagship event, the ​E-Summit"
+    { para: "The ​Ideastorm is the annual case building competition organized by ​Entrepreneurship Cell, IIT Roorkee ​in its flagship event, the ​E-Summit.The Ideastorm has been spearheading this drive of the E-Cell, by providing a platform for the students to get excellent professional guidance from our experienced and distinguished ​Startup Mentors. The students then get the chance to present their business plan in front of ​Angel Investors ​and ​Industry Leaders"
    },
-   {  
-      para: " The Ideastorm has been spearheading this drive of the E-Cell, by providing a platform for the students to get excellent professional guidance from our experienced and distinguished ​Startup Mentors. The students then get the chance to present their business plan in front of ​Angel Investors ​and ​Industry Leaders"
-    },]
+   ]
     const rules = [
       {rule:'Each team consists of 2 or 4 members, who need not belong to the same organization.'
      },
