@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 
 
-function NavScrollExample() {
+function NavDesktop() {
   const [active, setActive] = useState("");
 
   const router = useRouter();
@@ -148,4 +148,4 @@ function NavScrollExample() {
   );
 };
 
-export default NavScrollExample;
+export default NavDesktop;
