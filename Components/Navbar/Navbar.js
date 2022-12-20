@@ -135,13 +135,13 @@ function NavScrollExample() {
             </Link>
         </li>
           </ul>
-          
           <div
             className='d-flex align-items-center justify-content-center navBut'
             style={{ gap: '36px' }}
           >
             <button className="navbarButton">Login / Register</button>
           </div>
+          
       {/* </Container> */}
     </Navbar>
   

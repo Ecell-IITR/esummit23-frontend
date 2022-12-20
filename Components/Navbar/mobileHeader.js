@@ -26,7 +26,7 @@ export const HeaderMobile = () => {
       </div>
       <Link href='/' className='image' passHref>
         <img
-          src='/Esummitlogofinal.webp'
+          src='esummitLogo.svg'
           alt='navbar-logo'
           className='navbar-logo-mobile'
         />
@@ -34,34 +34,34 @@ export const HeaderMobile = () => {
       <ul className='mobilenavMenu-subcontent1'>
         <li className='mobilenavMenu-items'>
           <Link href='/' passHref>
-            <div className='mobilenavMenu-links'>HOME</div>
+            <div className='mobilenavMenu-links'>Home</div>
           </Link>
         </li>
         {
           <li className='mobilenavMenu-items'>
             <Link href='/team' passHref>
-              <div className='mobilenavMenu-links'>TEAM</div>
+              <div className='mobilenavMenu-links'>Events</div>
             </Link>
           </li>
         }
         <li className='mobilenavMenu-items'>
           <Link href='/events' passHref>
-            <div className='mobilenavMenu-links'>EVENTS</div>
+            <div className='mobilenavMenu-links'>Speakers</div>
           </Link>
         </li>
         <li className='mobilenavMenu-items'>
           <Link href='/speakers' passHref>
-            <div className='mobilenavMenu-links'>SPEAKERS</div>
+            <div className='mobilenavMenu-links'>Sponsors</div>
           </Link>
         </li>
         <li className='mobilenavMenu-items'>
           <Link href='/sponsors' passHref>
-            <div className='mobilenavMenu-links'>SPONSORS</div>
+            <div className='mobilenavMenu-links'>Merchandice</div>
           </Link>
         </li>
         <li className='mobilenavMenu-items'>
           <Link href='/#faq' passHref>
-            <div className='mobilenavMenu-links'>FAQ</div>
+            <div className='mobilenavMenu-links'>About</div>
           </Link>
         </li>
         {isCA && (
@@ -126,13 +126,13 @@ export const HeaderMobile = () => {
             <li className='mobilenavMenu-items'>
               <Link href='/login' passHref>
                 <div className='mobilenavMenu-links mobilenavMenu-ca-tag'>
-                  Login
+                  Login/Register
                 </div>
               </Link>
             </li>
             <li className='mobilenavMenu-items'>
               <Link href='/register' passHref>
-                <div className='mobilenavMenu-links'>Register</div>
+                <div className='mobilenavMenu-links'></div>
               </Link>
             </li>
           </>
