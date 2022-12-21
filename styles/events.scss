@@ -169,8 +169,24 @@ margin-left: 2rem;
   height: 10%;
   width: 100%;
   // background-color:yellow;
+  display: flex;
+  flex-direction: row;
+  gap: .3rem;
+  margin-left: -1rem;
 
 }
+.bullets
+{
+  width: 2rem;
+  height: 2rem;
+  // background-color: red;
+}
+.writtenRules{
+  width: 90%;
+  height: 100%;
+  // background-color: green;
+}
+
 
 .helpRules{
   height: 100%;
@@ -322,7 +338,16 @@ margin-top: 43.548828125px;
 .arrows{
   width:130%;
 }
+.criteriacontainer{
+  height: 40rem;
+}
+}
 
+@media screen and (max-width:346px)
+{
+.helpRuleContainer{
+  height: 40rem;
+}
 }
 
 

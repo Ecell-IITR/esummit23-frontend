@@ -1,3 +1,4 @@
+import Image from "next/image"
 
 export function Events () {
 
@@ -192,7 +193,10 @@ const Ideathon=[
               <div key={index} className="rulebox">
               <ul>
               <div className="helpRules">
-               <li className="rulesMentioned">  {rule.rule} </li>
+               <div className="rulesMentioned">
+                  <div className="bullets"><Image src="/images/bulletEvents.webp" height="25rem" width="25rem"></Image></div>
+                  <div className="writtenRules">{rule.rule} </div>
+                 </div>
                </div>
                </ul>
               </div>
@@ -210,7 +214,10 @@ const Ideathon=[
               return(
               <div key={index} className="criteriabox">
               <ul>
-               <li>  {criteria.criteria} </li>
+              <div className="rulesMentioned">
+                <div className="bullets"><Image src="/images/bulletEvents.webp" height="25rem" width="25rem"></Image></div>
+                <div className="writtenRules">{criteria.criteria} </div>
+                </div>
                </ul>
               </div>
                );})}
