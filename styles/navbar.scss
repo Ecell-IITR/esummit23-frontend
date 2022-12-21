@@ -1,0 +1,114 @@
+.navbarParent{
+    background: #121212;
+    display: flex !important;
+    justify-content: space-between !important;
+    height: 73px;
+    align-items: center !important;
+}
+
+.navbarEsummitLogo{
+    /* border: 1px solid black; */
+    // width: 25%;
+    display: flex;
+    margin-left:70px;
+}
+
+.navbarImage{
+    display: flex;
+    justify-content: center;
+    height: 90%;
+    padding: .2rem;
+    margin-left: -.2rem;
+}
+
+.navbarButton{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 25px;
+gap: 10px;
+border: 1.05px solid #FFFFFF;
+border-radius: 25px;
+background-color:#121212;
+font-family: 'Nunito Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 22px;
+display: flex;
+align-items: flex-end;
+color: #FFFFFF;
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.navbarButton:hover{
+    background: #FFFFFF;
+    color:#121212;
+}
+.navbarLogIn{
+    font-family: 'Nunito Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 22px;
+align-items:center;
+display: flex;
+align-items: flex-end;
+color:white;
+text-decoration-line: none;
+}
+
+.navbarLogIn:hover{
+    text-decoration-line: underline;
+    color: #FFD754;
+}
+
+
+.navbarUl{
+    list-style: none;
+    list-style-type:none;
+    display: flex;
+    gap:35px;
+    align-items: center;
+    margin:0;
+}
+
+.navBut{
+    margin-right: 30px;
+}
+
+ul a.active {
+    color: #FFD754;  
+    text-decoration:underline;
+}
+
+
+.navbarActive{
+    color: #D4B984 !important;  
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navbarListBox{
+    color:white;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+.circle {
+    display: flex;
+    width: 5px;
+    height: 5px;
+    background-color: #D4B984;
+    border-radius: 50%;
+  }
+@media screen and (max-width: 950px) {
+  .navbarEsummitLogo {
+    margin-left: 35px;
+  }
+    
+}
