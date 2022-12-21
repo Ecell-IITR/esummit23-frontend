@@ -1,13 +1,12 @@
 .ideaThon-bg{
 //  background: rgba(18, 16, 14, 1);
- height:47vw;
+ height:46vw;
  display: flex;
  flex-direction: row;
 }
 
 .ideaThon-main{
   height:46.4vw;
-  overflow-y: hidden;
   background-image: url("/eventsbg.svg");
   object-fit: cover;
 }
@@ -72,5 +71,45 @@ letter-spacing: 1px;
 color: #FFFFFF;
 flex: none;
 order: 0;
+flex-grow: 0;
+}
+
+.yellowBox{
+  display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+align-items: center;
+padding: 24px 153px;
+gap: 150px;
+background: #98613B;
+}
+
+.boxHead1{
+  font-family: 'Lexend',sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+display: flex;
+align-items: center;
+letter-spacing: -0.75px;
+color: #FFFFFF;
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.boxContent1{
+  font-family: 'Lexend',sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 24px;
+display: flex;
+align-items: center;
+letter-spacing: 1px;
+color: #FFFFFF;
+flex: none;
+order: 1;
 flex-grow: 0;
 }

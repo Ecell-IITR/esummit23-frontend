@@ -11,8 +11,8 @@ export default function Home() {
     <>
     {/* <Navbar/> */}
     {/* <Footer/> */}
-    <SponsorCard/>
-     {/* <Ideathon/> */}
+    {/* <SponsorCard/> */}
+     <Ideathon/>
 
     </>
   )
