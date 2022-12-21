@@ -1,4 +1,4 @@
-// import styles from './Footer.module.css'
+
 import Formsaa from './Form';
 import Image from 'next/image' 
 
@@ -17,7 +17,7 @@ function Footer() {
               <div className='collegeName_footer'>
                 <div className='nameOfCollege_footer'>
                 <div className='motto_footer'>
-                <a href="https://www.esummit.in/"><Image src="/motto.webp" height="55%" width="110%"></Image></a>
+                <a href="https://www.esummit.in/"><Image src="/motto.webp" height="53%" width="130%"></Image></a>
                   </div>
                 </div>
               </div>
@@ -32,7 +32,7 @@ function Footer() {
             entrepreneurs and all those passionate about entrepreneurship to
             common grounds
           </div>
-          <div className='handlesNewUp_footer'>Follow us at</div>
+          <div className='handlesNewUp_footer headings'>Follow us at</div>
 
           <div className='handlesNew_footer'>
             <div className='iconFacebook_footer'>
@@ -54,28 +54,57 @@ function Footer() {
         </div>
 
         <div className='footerMiddle_footer'>
-          <div className='address_footer'>Address</div>
+        <div className='addressUp_footer'>
+          <div className='address_footer headings'><b>Address</b></div>
+          <div className='text_help_address'>
           <div className='text_footer'> E-cell Office, SAC Building</div>
           <div className='text_footer'>IIT Roorkee</div>
           <div className='text_footer'>Roorkee, Uttrakhand - 247667</div>
+          </div>
           <br></br>
-
-          <div className='email_footer'>E-mail</div>
+        </div>
+        <div className='addressMiddle_footer'>
+        <div className='text_help'>
+          <div className='email_footer headings'>E-mail</div>
           <div className='text_footer'><a href="mailto:esummitiitr@gmail.com" style={{color:"white", textDecoration:"none"}} >esummitiitr@gmail.com</a></div>
+        </div>
           <br></br>
-
-          <div className='contactNo_footer'> Phone No.</div>
+        </div>
+        <div className='addressBelow_footer'>
+          <div className='contactNo_footer headings'> Phone No.</div>
+          <div className='text_help_phone'>
           <div className='text_footer'>Pratyush: +91 9799042645</div>
           <div className='text_footer'>Shashank: +91 9102100531</div>
-        </div>
-        <div className='footerRight_footer'>
-          <div className='formsParent_footer'>
-            Contact Us
-            <Formsaa />
           </div>
         </div>
+        </div>
+        <div className='footerRight_footer'>
+          <div className='formsParent_footer headings'>
+          <div className='text_help_contactUs'>
+            Contact Us
+            </div>
+            <div className='text_help_form'>
+            <Formsaa/>
+            </div>
+          </div>
+        </div>
+        </div>
+
+
+
+
+
+      <div className='line'>
+      <hr></hr>
       </div>
+      <div className='marginCopyright'>
+      <div className='copyRight'> © 2022, E-cell IIT Roorkee, All rights reserved</div>
+      </div>
+        <br></br>
+        <br></br>
+        <br></br>
     </div>
+
   );
 }
 
