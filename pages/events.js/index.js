@@ -5,6 +5,11 @@ import React, { useState, useEffect } from 'react';
 export default function Events({posts}) {
 
   console.log(posts)
+  FetchApi('post', url, null, null)
+      .then((res) => {
+        // do action with res
+      })
+
   
 
   return (
