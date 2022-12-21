@@ -106,20 +106,7 @@ function NavDesktop() {
             </div>
             </Link>
         </li>
-        <li>
-          <Link href='/merchandice'>
-            <div
-              className={
-                'merchandice' == active ? 'navbarActive' : 'navbarListBox'
-              }
-            >
-             Merchandice
-             <div className={
-                'merchandice' == active ? 'circle' : ''
-              }/>
-            </div>
-            </Link>
-        </li>
+        
         <li>
           <Link href='/about'>
             <div
