@@ -5,11 +5,13 @@ function Dashboard() {
     const arr=[{
         name:'Ideastorm',
         desc: "Annual B-Plan competition which witnesses more than 500 entries from over the country",
-        image:"Ideastorm.webp"
+        image:"/Ideastorm.webp",
+        isRegistered:1
     },{
-        name:'Ideastorm',
+        name:'Pthon',
         desc: "Annual B-Plan competition which witnesses more than 500 entries from over the country",
-        image:"Ideastorm.webp"
+        image:"/Ideastorm.webp",
+        isRegistered:0
     }]
   return (
     <div className='dashboardContainer'>
@@ -19,7 +21,10 @@ function Dashboard() {
           <div></div>
         </div>
         <div className='dashboardEventRegisteredContainer'>
-            <Register img="/Ideastorm.webp"/>
+            {arr.map((item)=>{ 
+                return <Register isRegistered={item.isRegistered} img={item.image} name={item.name} desc={item.desc}/>
+            })}
+            
         </div>
       </div>
     </div>
