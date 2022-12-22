@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 // import Navbar from "../Navbar/Navbar"
 // import axios from 'axios';
 // import {useState, useEffect} from 'react';
@@ -23,9 +23,7 @@ export default function Ideathon({ data }) {
           <div className='ideaBox1'>
             <div className='idea-Text1'>IDEASTORM</div>
             <div className='idea-Text2'>
-              Brainstorm your way through of mind-boggling problem statements
-              based on real-world dilemmas to ideate, innovate and present a
-              creative, practical and sustainable solution.
+            The ​Ideastorm is the annual case-building 
             </div>
             <button className='idea-Button'>
               <span className='iBT'>APPLY NOW</span>
