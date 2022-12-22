@@ -29,10 +29,11 @@
   display: flex;
   flex-direction: row;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 .dashboardEventContainer {
   border-top: 1px solid #dcd1ad;
-  
+
   margin-bottom: 2rem;
 }
 .dashboardEventHeader {
@@ -44,4 +45,45 @@
   letter-spacing: 1px;
   color: #dcd1ad;
   margin-bottom: 28px;
+  margin-top: 2rem;
+}
+.dashboardRegisterButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 192px;
+  height: 40px;
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #ffffff;
+  background: #ba6d39;
+  border-radius: 100px;
+}
+.dashboardRegisterBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 12rem;
+  height: 100%;
+  background-color: #301a08;
+}
+@media screen and (max-width: 500px) {
+  .dashboardEventCardsContainer {
+    justify-content:center
+  }
+ 
+  .dashboardRegisterBox {
+    width: 100%;
+  }
 }

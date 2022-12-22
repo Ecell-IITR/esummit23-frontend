@@ -42,13 +42,17 @@ function Dashboard() {
             <div className='dashboardEventHeader'>Events Available</div>
           <div className='dashboardEventCardsContainer'>
             {arr.map((item) => {
-              return (
+              return (<>
+              <div className='dashboardRegisterBox'>
                 <Register
                   isRegistered={item.isRegistered}
                   img={item.image}
                   name={item.name}
                   desc={item.desc}
                 />
+                <div className='dashboardRegisterButton' >Register</div>
+                </div>
+                </>
               );
             })}
           </div>
