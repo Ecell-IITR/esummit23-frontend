@@ -1,29 +1,47 @@
-.dashboardContainer{
-    height: 100vh;
-    width: 100%;
-    background-color: #301A08;
-    display: flex;
-    justify-content: center;
+.dashboardContainer {
+  height: 100%;
+  width: 100%;
+  background-color: #301a08;
+  display: flex;
+  justify-content: center;
 }
-.dashboardSubContainer{
-    height: 100%;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    
+.dashboardSubContainer {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.dashboardContainerHeader {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboardLine {
+  width: 100%;
+  height: 1px;
+  background-color: #f2f2f2;
+}
 
+.dashboardEventCardsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
 }
-.dashboardContainerHeader{
-    width: 100%;
-    height: 40%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    
+.dashboardEventContainer {
+  border-top: 1px solid #dcd1ad;
+  
+  margin-bottom: 2rem;
 }
-.dashboardLine{
-    width: 100%;
-    height: 1px;
-    background-color: #F2F2F2;
+.dashboardEventHeader {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  color: #dcd1ad;
+  margin-bottom: 28px;
 }

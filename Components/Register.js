@@ -5,7 +5,7 @@ function Register({img,name,desc,isRegistered=0}) {
   return (
     <>
       <div className='containerRegister'>
-        <div className='photoRegister'><Image src={img} width="200%" height="100%" /></div>
+        <div className='photoRegister'><img className='photoRegister' style={{height:"100%"}} src={img} /></div>
 
         <div
           style={
