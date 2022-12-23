@@ -1,61 +1,102 @@
+//PERKS OF PARTICIPATING
+.event{
+  width: 100%;
+  // background: linear-gradient(#12100E,#331C00);
+}
+// .section{
+//   display: flex;
+//   flex-wrap: wrap;
+//   align-items: center;
+//   justify-content: center;
+//   flex-direction: column;
+//  position: absolute;
+//  height: 251px;
+//  left: 0px;
+//  top: 1559px;
 
-  .event{
-    background: linear-gradient(#12100E,#331C00);
+// }
+.container{
+  height: 15rem !important;
+}
+.heading{
+  height: 5% !important;
+}
+.certificates{
+  height:90% !important;
+}
+
+.container .heading{
+  width: 95%;
+  font-size: 32px;
+  text-align: center;
+  padding: 40px;
+  font-weight: 700;
+ }
+
+ .container{
+  width: 100% !important;
+  background-color: #BA6D39;
+ }
+ .container .certificates{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  align-content: center;
+  margin-left: 150px;
+  margin-top: 4rem;
+
+ }
+ .container .certificates .certificate{
+  display: flex;
+  height: 56px;
+  width: 200px;
+  margin-bottom: 50px;
+ }
+ .container .certificates .certificateImage{
+  width: 56px;
+ }
+ .container .certificates .certificateImage .img{
+  background-color: #F7F8FF;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  text-align: center;
+  margin-top: -1rem;
+ }
+ .container .certificates .certificateImage .img svg{
+  margin-top: 50%;
+  transform: translateY(-50%);
+ }
+ .container .certificates .certificateDescription{
+  padding-left: 18px;
+  width: calc(100% - 56px);
+ }
+ .container .certificates .certificateDescription h2{
+  height: 24px;
+  font-size: 18px;
+ }
+ .container .certificates .certificateDescription p{
+  font-size: 12px;
+ }
+
+ @media only screen and (max-width: 600px){
+ .container .certificates .certificate{
+  margin-bottom: 15px;
+}
+}
+
+
+@media screen and (min-width:600px)
+{
+  .container{
+    width: rem;
   }
- 
-
-  .box h1{
-    width: 95%;
-    font-size: 22px;
-    text-align: center;
-    margin: 16px;
-    padding: 16px;
-    height: 10rem;
-   }
-
-   .box{
-    background-color: #BA6D39;
-   }
-   .box .crts{
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  margin-left: 90px;
-   }
-   .box .crts .crt{
-    display: flex;
-    height: 56px;
-    width: 352px;
-    margin-bottom: 50px;
-   }
-   .box .crts .crt-img{
-    width: 56px;
-   }
-   .box .crts .crt-img .img{
-    background-color: #F7F8FF;
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-    text-align: center;
-   }
-   .box .crts .crt-img .img svg{
-    margin-top: 50%;
-    transform: translateY(-50%);
-   }
-   .box .crts .crt-disc{
-    padding-left: 18px;
-    width: calc(100% - 56px);
-   }
-   .box .crts .crt-disc h2{
-    height: 24px;
-    font-size: 18px;
-   }
-   .box .crts .crt-disc p{
-    font-size: 12px;
-   }
+}
 
 
+
+//EVENT COORDINATOR
 .parentIS{
   padding: 4rem;
   background: linear-gradient(180deg, #2c2117 0%, #301A08 100%);;
@@ -249,21 +290,8 @@ align-items: center;
   border: 2px solid #BA6D39;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 .inbox{
 
- 
   height: 1.5rem;
   width: 15%;
 
@@ -280,12 +308,6 @@ align-items: center;
  
 
 
-
-
-//  @media screen and (max-width: 600px){
-//    .box .crts .crt{
-//     margin-bottom: 15px;
-//   }
 
   @media screen and (max-width:685px)
   {
@@ -323,40 +345,38 @@ align-items: center;
 
 
   }
+  
+
+//SPONSOR CARD
 
 
-
-
-  //sponsor card
-
-
-  .CardBox1{
-    height:15.75rem;
-    width:5rem;
-    background-color: #98613B;
-    border-radius: 12px 0px 0px 12px;
+.CardBox1{
+  height:15.75rem;
+  width:5rem;
+  background-color: #98613B;
+  border-radius: 12px 0px 0px 12px;
 }
 
 .CardBox2{
-    height:15.75rem;
-    width:5rem;
-    background-color: #98613B;
-    border-radius: 0px 12px 12px 0px;
+  height:15.75rem;
+  width:5rem;
+  background-color: #98613B;
+  border-radius: 0px 12px 12px 0px;
 
 }
 .CardContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width:100%;
-    background: linear-gradient(180deg, #1e150d 0%, #2b2118 100%);
-    height: 32rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  background: linear-gradient(180deg, #1e150d 0%, #2b2118 100%);
+  height: 32rem;
 
 
-   
+ 
 }
 .CardContent{
-    width: 80%;
+  width: 80%;
 height:23.9375rem;
 background-color: #F3EDD8;
 box-shadow: 0px -35px 12px 12px rgba(46, 25, 8, 0.1), 0px 0px 15px 10px rgba(46, 25, 8, 0.05);
@@ -371,23 +391,23 @@ padding: 2rem;
 }
 
 .sponsorImage{
-  // border: 1px solid black;
-  width: 100%;
-  height: 15%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+// border: 1px solid black;
+width: 100%;
+height: 15%;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 .gfg{
-  // border: 1px solid black;
-  width: 40%;
-  height: 60%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+// border: 1px solid black;
+width: 40%;
+height: 60%;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 .CText1{
-    font-family: 'Lexend';
+  font-family: 'Lexend';
 font-style: normal;
 font-weight: 700;
 font-size: 32px;
@@ -402,50 +422,64 @@ gap:24px;
 }
 
 .CardText{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: 74px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 74px;
 }
 
 .CardLine{
-    width:1830px;
+  width:1830px;
 }
 
 .SponsData{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center ;
-    gap:20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center ;
+  gap:20px;
 }
 
 .SponsName{
-    font-size: 24px;
-    color: #43A047;
-    font-weight: 600;
+  font-size: 24px;
+  color: #43A047;
+  font-weight: 600;
 }
 
 .sponsCardContainer{
- 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
- 
+
+display: flex;
+justify-content: center;
+align-items: center;
+width: 80%;
+
 }
 
 @media only screen and (max-width:1190px) {
-    .CardContainer{
-        padding: 0px 24px;
-    }    
+  .CardContainer{
+      padding: 0px 24px;
+  }    
 }
 @media only screen and (max-width:700px) {
-    .CardLine{
-        width:80px;
-    }
+  .CardLine{
+      width:80px;
+  }
 }
-//sponsorcard end
+
+@media screen and (max-width:685px)
+{
+.CardContainer{
+  width: 55rem;
+}
+
+}
+
+//SPONSOR CARD END
+
+//EVENT COORDINATOR END
+
+
+
 
   @media screen and (max-width:1235px)
   {
@@ -506,13 +540,434 @@ gap:24px;
   }
   
 
-  @media screen and (max-width:685px)
+
+
+
+
+  .containerEvents{
+    background: linear-gradient(180deg, #12100E 0%, #301A08 100%);
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+  
+  }
+  
+  .helpAboutContainer
   {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .aboutbox{
+    width: 100%;
+  }
+  .aboutContainer{
+  width: 90%;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  padding: 3.5rem;
+  }
+  .aboutHeading{
+    color: #E8DBB9;
+    font-family: 'Nunito Sans';
+    font-weight: 700;
+  height: 1.5rem;
+  width: 100%;
+  font-size: 2rem;
+  }
+  .aboutEvent{
+    font-family: 'Nunito Sans';
+    text-align: justify;
+    height: 135px;
+    width:100%;
+  margin-top: 83px;
+  }
+  .secondcontainer{
+   margin-top: -4rem;
+    display: flex;
+  
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 2rem;
+    margin-left: 2rem;
+  }
+  
+  .arrows{
+    margin-top: .4rem;
+    width: 17rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: .1rem;
+  }
+  .helpArrow{
+    width: 9rem;
+  }
+  .rulecontainer{
+    padding: 2rem;
+    // background-color: green;
+    width: 100%;
+  
+  }
+  .firstarrow,.secondarrow, .thirdarrow{
+    width: 100%;
+  border-radius: 6px;
+  padding: 12px 32px 12px 32px;
+  background-color: #98613B;
+  
+  }
+  .firstarrow{
+    margin-top: -.1rem;
+    width: 100%;
+    height: 4.2rem;
+    font-size:1.75rem;
+  }
+  
+  .verticalLine{
+    background-color:#9B9996;
+    width: .5rem;
+  
+  }
+  .helpVerticalLine{
+    width: 50%;
+    height: 19%;
+    display: flex;
+    justify-content: center;
+  }
+  .roundnamecontent{
+    // background-color: yellow;
+    // border: 1px solid red;
+    width: 75%;
+  margin-left: -9rem;
+  border-radius: 12px;
+  padding-top: 4px;
+  background: #F3EDD8;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  } 
+  .triangle-right {
+    border-top: 33px solid transparent;
+    border-left: 50px solid #98613B;
+    border-bottom: 33px solid transparent;
     
+  }
+  .rulecontainer, .criteriacontainer{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Nunito Sans';
+    height: 25rem;
+    width: 90%;
+  
+  
+  }
+  
+  .criteria{
+    opacity: 80%;
+  }
+  .rulecontainer{
+    margin-top: 2rem;
+  }
+  .criteriacontainer{
+    margin-top: -6rem;
+  }
+  .helpSecondContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .helpRuleContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
+  .ruleheading, .criteriaheading{
+    display: flex;
+    align-items: center;
+    font-family: 'Nunito Sans';
+    width: 100%;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 26px;
+  height: 15%;
+  margin-left: 2rem;
+  }
+  .criteriacontainer{
+    padding: 2rem;
     
-    .CardContainer{
-      width: 55rem;
+  }
+  
+  .rulebox{
+    Font: Nunito Sans
+  } 
+  .rules{
+    opacity: 80%;
+    width: 100%;
+  }
+  .rulesMentioned{
+    height: 10%;
+    width: 100%;
+    // background-color:yellow;
+    display: flex;
+    flex-direction: row;
+    gap: .3rem;
+    margin-left: -1rem;
+  
+  }
+  .bullets
+  {
+    width: 2rem;
+    height: 2rem;
+    // background-color: red;
+  }
+  .writtenRules{
+    width: 90%;
+    height: 100%;
+    // background-color: green;
+  }
+  
+  
+  .helpRules{
+    height: 100%;
+    width: 100%;
+  }
+  .perksbox{
+    height: 251px;
+    width: 100%;
+  margin-top: 59px;
+  padding: 18px 156px 64px 156px;
+  background: #98613B;
+  } 
+  .perksheading{
+    height: 35px;
+    width: 100%;
+  size: 32px;
+  margin-left: 500px;
+  
+  }
+  .pstmt{
+    font-size: 12px;
+  }
+  .perksflex{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 60px;
+  }
+  .backgroundbox{
+    height: 316px;
+    width: 100%;
+    margin-left: 213px;
+    margin-top: 90px;
+    border-radius: 12px;
+    background-color: #98613B;
+    
+  }
+  .simg{
+    height: 160.35000610351562px;
+    width: 100%;
+  margin-left: 3.349609375px;
+  margin-top: 43.548828125px;
+  }
+  
+  
+  .triangleDate{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: 30%;
+  
+  }
+  .listIdeathon{
+    font-size: 0.875rem;
+    width: 90%;
+    height: 45%;
+    background-color: #F3EDD8;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .5rem;
+    opacity: 70%;
+  }
+  .dateIdeathon{
+    font-size: 1.125rem;
+    font-style: 'Nunito Sans';
+    height: 25%;
+    background-color: #F3EDD8;
+    width: 80%;
+    font-weight: 500;
+    color :black;
+  }
+  .descriptionIdeathon{
+    width: 90%;
+    background-color: #F3EDD8;
+    color: black;
+    font-size: 0.875rem;
+    opacity: 70%;
+  }
+  .conclusionIdeathon{
+    color: black;
+    width: 90%;
+    height: 20%;
+    background-color: #F3EDD8;
+    font-size: 0.875rem;
+    opacity: 70%;
+  }
+  
+  
+  @media screen and (max-width:657px)
+  {
+  .aboutContainer{
+    height:25rem;
+  }
+  }
+  
+  @media screen and (max-width:700px)
+  {
+  .arrows{
+    width: 40%;
+  }
+  .helpVerticalLine{
+    width: 40%;
+  }
+  }
+  
+  @media screen and (max-width:500px)
+  {
+    .aboutContainer{
+      height:30rem;
+    }
+  }
+  @media screen and (max-width:400px)
+  {
+    .aboutContainer{
+      height:35rem;
+    }
+    .firstarrow{
+      font-size: 1.3rem;
+    }
+    .descriptionIdeathon{
+      margin-top: 1rem;
     }
   
   }
   
+  @media screen and (max-width:353px)
+  {
+    .firstarrow{
+      font-size: 1rem;
+    }
+  }
+  @media screen and (max-width:600px)
+  {
+  .arrows{
+    width: 40%;
+  }
+  .helpVerticalLine{
+    width: 35%;
+  }
+  }
+  
+  @media screen and (max-width:480px)
+  {
+  .arrows{
+    width:40%;
+  }
+  .criteriacontainer{
+    height: 40rem;
+  }
+  }
+  
+  @media screen and (max-width:346px)
+  {
+  .helpRuleContainer{
+    height: 40rem;
+  }
+  }
+  
+  
+  @media screen and (max-width:1004px)
+  {
+  .helpArrow{
+    width:8rem;
+  }
+  }
+  
+  
+  @media screen and (max-width:426px)
+  {
+  .aboutHeading{
+    font-size: 1.5rem;
+    height:3%;
+  }
+  }
+  @media screen and (max-width:350px)
+  {
+  .aboutHeading{
+    font-size: 1.3rem;
+    
+  }
+  }
+  
+  @media screen and (max-width:504px)
+  {
+  .secondcontainer{
+    margin-top: -2rem;
+  }
+  .rulecontainer{
+    height: 35rem;
+   
+  }
+  }
+  
+  @media screen and (max-width:910px)
+  {
+  .triangle-right{
+    margin-top: .45rem;
+  }
+  
+  }
+  @media screen and (max-width:1327px)
+  {
+  .firstarrow{
+    margin-top: -.1rem;
+    height: 4rem;
+  }
+  
+  }
+  @media screen and (max-width:907px)
+  {
+  .firstarrow{
+    margin-top: .3rem;
+    height: 4rem;
+  }
+  
+  }
+  
+  @media screen and (max-width:476px)
+  {
+  .dateIdeathon{
+    font-size: .9rem;
+  }
+  
+  }
+
+   
+  @media screen and (max-width:881px)
+  {
+  .containerEvents{
+    width: 55rem;
+  }
+  
+  }
