@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 
 
-function NavScrollExample() {
+function NavDesktop() {
   const [active, setActive] = useState("");
 
   const router = useRouter();
@@ -15,19 +15,19 @@ function NavScrollExample() {
         setActive('home');
         break;
         case '/events':
-          setActive('eve');
+          setActive('events');
           break;
         case '/speakers':
           setActive('speakers');
           break;
-      case '/comingSoonSponsors':
+      case '/sponsors':
         setActive('sponsors');
         break;
-        case '/Merchandice':
+        case '/merchandice':
           setActive('merchandice');
           break;
       case '/about':
-        setActive('About');
+        setActive('about');
         break;
       default:
         setActive('');
@@ -35,16 +35,13 @@ function NavScrollExample() {
   });
   return (
     <Navbar className="navbarParent">
-      <Container fluid>
-        <div className='navbarContainer'>
+      {/* <Container fluid> */}
         <div className="navbarEsummitLogo">
-          <img src='esummitLogo.svg' className="navbarImage"/>
+          <img src='summitLogo.png' className="navbarImage"/>
         </div>
         {/* <Navbar.Toggle aria-controls='navbarScroll' /> */}
-        {/* <Navbar.Collapse id='navbarScroll'> */}
-        <div>
           <ul
-            className='mze-auto my-2 my-lg-0 navbarText d-flex flex-row gap-4 navbarUl'
+            className='navbarUl'
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
@@ -57,86 +54,85 @@ function NavScrollExample() {
             >
             
               Home
-            
+            <div className={
+                'home' == active ? 'circle' : ''
+              }/>
             </div>
+            
             </Link>
         </li>
             
             <li>
-            <Link href='/#action2' passHref>
+            <Link href='/events' passHref>
             <div
               className={
-                'eve' == active ? 'navbarActive' : 'navbarListBox'
+                'events' == active ? 'navbarActive' : 'navbarListBox'
               }>
    
               Events
-           
+              <div className={
+                'events' == active ? 'circle' : ''
+              }/>
             </div>
             </Link>
            
         </li>
           
         <li>
-          <Link href='#action3'>
+          <Link href='/speakers'>
             <div
               className={
                 'speakers' == active ? 'navbarActive' : 'navbarListBox'
               }
             >
               Speakers
+              <div className={
+                'speakers' == active ? 'circle' : ''
+              }/>
             </div>
             </Link>
         </li>
         <li>
-          <Link href='#action4'>
+          <Link href='/sponsors'>
             <div
               className={
                 'sponsors' == active ? 'navbarActive' : 'navbarListBox'
               }
             >
              Sponsors
+             <div className={
+                'sponsors' == active ? 'circle' : ''
+              }/>
             </div>
             </Link>
         </li>
+        
         <li>
-          <Link href='#action5'>
-            <div
-              className={
-                'merchandice' == active ? 'navbarActive' : 'navbarListBox'
-              }
-            >
-             Merchandice
-            </div>
-            </Link>
-        </li>
-        <li>
-          <Link href='#action6'>
+          <Link href='/about'>
             <div
               className={
                 'about' == active ? 'navbarActive' : 'navbarListBox'
               }
             >
              About
+             <div className={
+                'about' == active ? 'circle' : ''
+              }/>
             </div>
             </Link>
         </li>
           </ul>
-          </div>
-          {/* </Navbar.Collapse> */}
           <div
-            className='d-flex align-items-center flex-row'
+            className='d-flex align-items-center justify-content-center navBut'
             style={{ gap: '36px' }}
           >
-            <a href='#action8' className="navbarLogIn">
-              <span className="navbarLogIn">Log in</span>
-            </a>
-            <button className="navbarButton">Register</button>
+            <button  className="navbarButton">Login / Register</button>
           </div>
-          </div>
-      </Container>
+          
+      {/* </Container> */}
     </Navbar>
   
   );
 };
 
-export default NavScrollExample;
+export default NavDesktop;

@@ -1,0 +1,518 @@
+
+  .event{
+    background: linear-gradient(#12100E,#331C00);
+  }
+ 
+
+  .box h1{
+    width: 95%;
+    font-size: 22px;
+    text-align: center;
+    margin: 16px;
+    padding: 16px;
+    height: 10rem;
+   }
+
+   .box{
+    background-color: #BA6D39;
+   }
+   .box .crts{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  margin-left: 90px;
+   }
+   .box .crts .crt{
+    display: flex;
+    height: 56px;
+    width: 352px;
+    margin-bottom: 50px;
+   }
+   .box .crts .crt-img{
+    width: 56px;
+   }
+   .box .crts .crt-img .img{
+    background-color: #F7F8FF;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    text-align: center;
+   }
+   .box .crts .crt-img .img svg{
+    margin-top: 50%;
+    transform: translateY(-50%);
+   }
+   .box .crts .crt-disc{
+    padding-left: 18px;
+    width: calc(100% - 56px);
+   }
+   .box .crts .crt-disc h2{
+    height: 24px;
+    font-size: 18px;
+   }
+   .box .crts .crt-disc p{
+    font-size: 12px;
+   }
+
+
+.parentIS{
+  padding: 4rem;
+  background: linear-gradient(180deg, #2c2117 0%, #301A08 100%);;
+width: 100%;
+height: 65rem;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.coordinatorHeadingIS{
+  font-size: 2rem;
+  font-weight: bolder;
+  font-family: 'Nunito Sans';
+  // border: 1px solid white;
+  color: #E8DBB9;
+  background:none;
+  height: 10%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+
+}
+
+.coordinatorDetailIS{
+  // border: 1px solid white;
+  color:white;
+  background-color: none;
+  height: 35%;
+  display: flex;
+  flex-direction: row;
+  gap: 1%;
+  justify-content: center;
+  width: 100%;
+  
+}
+
+.registerIS{
+  // border: 1px solid white;
+  color: white;
+  background-color: none;
+  height: 40%;
+  width: 100%;
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.A{
+  width: 45rem;
+  background:none;
+  padding: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 20rem;
+
+}
+.C{
+  display: flex;
+  flex-direction: column;
+  background-color: #F3EDD8;
+  width: 55%;
+  height: 65%;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+ justify-content: center;
+ margin-left: -1.45rem;
+ 
+
+}
+
+.B{
+  border-radius: 1.5rem;
+  height: 100%;
+  width: 12rem;
+  background:none;
+  // border: 1px solid white;
+}
+
+
+
+.nameISCoordinator{
+  
+  height: 40%;
+  display: flex;  
+  align-items: center;
+  font-family:'Nunito Sans';
+  font-weight: 700;
+  padding:1rem;
+  font-size: 1.5rem;
+  color: #2A1809;
+
+
+}
+.mailISCoordinator{
+  height:15%;
+  padding:1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: .5rem;
+  color: #2A1809;
+
+
+}
+.contactISCordinator{
+  
+  height: 15%;
+  padding:1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: .5rem;
+  color: #2A1809;
+
+}
+
+.registerBack{
+  background-color: #98613B;
+  width :70%;
+  height: 80%;
+  border-radius:1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registerFront{
+  background-color: #F3EDD8;
+ 
+  height: 160%;
+  width: 80%;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.boldRegisterQuestion{
+  // border: 1px solid black;
+  height: 25%;
+  width: 80%;
+  font-family: 'Nunito Sans';
+  color: #2F1908;
+  font-size: 1.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+
+}
+
+
+.lightRegisterQuestion{
+  // border: 1px solid black;
+  font-size: 1.1rem;
+  height: 15%;
+  width: 80%;
+  font-family: 'Nunito Sans';
+  color: #2F1908;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  opacity: 80%;
+}
+
+.registerButton{
+  // border: 1px solid black;
+  height: 25%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+ 
+}
+.button{
+  width: 13rem;
+  height: 65%;
+  border-radius: 2rem;
+  background-color: #BA6D39;
+  font-size:1rem;
+  color: white;
+  border: 2px solid #BA6D39;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.inbox{
+
+ 
+  height: 1.5rem;
+  width: 15%;
+
+
+}
+.mailId{
+ 
+  height: 1.5rem;
+  width: 80%;
+  text-align: start;
+  font-family:'Nunito Sans';
+  opacity: 90%;
+}
+ 
+
+
+
+
+//  @media screen and (max-width: 600px){
+//    .box .crts .crt{
+//     margin-bottom: 15px;
+//   }
+
+  @media screen and (max-width:685px)
+  {
+    .parentIS{
+      width: 55rem;
+      height: 80rem;
+
+    }
+    .C{
+      height: 12rem;
+    
+    }
+    .B{
+      margin-top: -2rem;
+    }
+    .event{
+      width: 55rem;
+    }
+    .B{
+      width: 15rem;
+      height: 15rem;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+
+    }
+    .coordinatorDetailIS{
+      height: 1rem;
+    }
+    .A{
+      padding: rem;
+    }
+
+   
+
+
+  }
+
+
+
+
+  //sponsor card
+
+
+  .CardBox1{
+    height:15.75rem;
+    width:5rem;
+    background-color: #98613B;
+    border-radius: 12px 0px 0px 12px;
+}
+
+.CardBox2{
+    height:15.75rem;
+    width:5rem;
+    background-color: #98613B;
+    border-radius: 0px 12px 12px 0px;
+
+}
+.CardContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    background: linear-gradient(180deg, #1e150d 0%, #2b2118 100%);
+    height: 32rem;
+
+
+   
+}
+.CardContent{
+    width: 80%;
+height:23.9375rem;
+background-color: #F3EDD8;
+box-shadow: 0px -35px 12px 12px rgba(46, 25, 8, 0.1), 0px 0px 15px 10px rgba(46, 25, 8, 0.05);
+border-radius: 12px;
+gap:43px;
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: flex-start;
+padding-top: 10px;
+padding: 2rem;
+}
+
+.sponsorImage{
+  // border: 1px solid black;
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gfg{
+  // border: 1px solid black;
+  width: 40%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.CText1{
+    font-family: 'Lexend';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 110%;
+display: flex;
+align-items: center;
+color: #98613B;
+flex: none;
+order: 1;
+flex-grow: 0;
+gap:24px;
+}
+
+.CardText{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 74px;
+}
+
+.CardLine{
+    width:1830px;
+}
+
+.SponsData{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+    gap:20px;
+}
+
+.SponsName{
+    font-size: 24px;
+    color: #43A047;
+    font-weight: 600;
+}
+
+.sponsCardContainer{
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+ 
+}
+
+@media only screen and (max-width:1190px) {
+    .CardContainer{
+        padding: 0px 24px;
+    }    
+}
+@media only screen and (max-width:700px) {
+    .CardLine{
+        width:80px;
+    }
+}
+//sponsorcard end
+
+  @media screen and (max-width:1235px)
+  {
+    .coordinatorDetailIS{
+      flex-direction: column;
+      align-items: center;
+      height: 40rem;
+    
+    }
+
+    .A{
+      
+      height: 70%;
+  
+    }
+
+    .C{
+      width: 50%;
+      height: 8rem;
+      margin-top: -2rem;
+    }
+    
+
+  }
+
+ 
+
+     @media screen and (max-width:1235px)
+  {
+    .registerFront{
+      height: 15rem;
+      width: 33rem;
+    }
+    .registerBack{
+      height: 10rem;
+      width: 42rem;
+    }
+    .coordinatorHeadingIS{
+      width: 35rem;
+    }
+    .A{
+      padding: .1rem;
+    }
+
+  }
+
+
+  @media screen and (max-width:966px)
+  {
+    .registerBack{
+      width: 43rem;
+    }
+    .registerIS{
+      width: 55rem;
+    }
+    
+  
+  }
+  
+
+  @media screen and (max-width:685px)
+  {
+    
+    
+    .CardContainer{
+      width: 55rem;
+    }
+  
+  }
+  

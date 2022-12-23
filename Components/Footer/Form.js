@@ -2,8 +2,10 @@ import { Form } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import FetchApi from '../../utils/FetchAPI';
 import { FOOTER_QUERY_API } from '../../utils/APIs';
-// import { toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import React, { useState } from 'react';
+import { data } from 'autoprefixer';
+
 
 
 const Forms = () => {
@@ -23,7 +25,6 @@ const Forms = () => {
 
     };
 
-    
     FetchApi('post', FOOTER_QUERY_API, data, null)
       .then((res) => {
         toast.success('Query Submitted !');
@@ -49,6 +50,40 @@ const Forms = () => {
         // });
       });
   };
+
+
+
+
+
+
+
+
+
+
+
+  // FetchApi('get','http://127.0.0.1:8000/design/colors/',null,null)
+  // .then((res) => {
+
+
+  //   console.log(res['data']['1']['colourid']);
+
+
+
+  //   })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   return (
@@ -130,7 +165,7 @@ const Forms = () => {
           <Form.Group className='mb-3' controlId='formBasicPassword'>
             <Form.Control
               style={{
-                backgroundColor: '#311C00',
+                backgroundColor: '#2F1A09',
                 color: 'white',
                 height: '90px',
               }}
