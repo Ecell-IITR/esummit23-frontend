@@ -4,9 +4,23 @@
   position: relative;
  
 }
+.mobRegisterContainer {
+  width: 100vw;
+  position: relative;
+ 
+}
 .RegisterHere{
   position: relative;
   margin-top: -90vh;
+  display: flex;
+  flex-direction: row;
+
+}
+
+
+.RegisterHereMob{
+  position: relative;
+  margin-top: -93vh;
   display: flex;
   flex-direction: row;
 
