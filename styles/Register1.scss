@@ -164,6 +164,21 @@ line-height: 110%;
 
   input{
     margin: 8px;
+    width: 384px;
+    height: 20px;
+    padding: 12px, 16px, 12px, 16px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #828282;
+  }
+ 
+}
+.mobRequiredDetails {
+  display: flex;
+  flex-direction: column;
+
+  input{
+    margin: 8px;
     width: 255px;
     height: 20px;
     padding: 12px, 16px, 12px, 16px;

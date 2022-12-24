@@ -2,7 +2,7 @@ import '../styles/globals.css';
 import '../styles/index.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Registration from './Register'
-import Sident from './Register1/SelectIdentity'
+import Sident from './Register1/ProfessionalsRegistration'
 import Login from './login'
 import Footer from '../Components/Footer/Footer';
 import Navbar from '../Components/Navbar';
@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
         <Sident/>
         {/* <Registration/> */}
         {/* <Login/> */}
-        <Component {...pageProps}/> 
+        {/* <Component {...pageProps}/>  */}
       </MobileProvider>
     </>
   );

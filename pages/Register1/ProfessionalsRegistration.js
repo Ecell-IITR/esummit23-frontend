@@ -34,7 +34,7 @@ const ProfessionalsRegistration = () => {
     </div>
     <h1 className="CreateAccount"> Personal Details</h1>
     <h3 className='CreateAccountsubTitle'>Please fill all the required fields.</h3>
-    <div className="RequiredDetails">
+    <div className="mobRequiredDetails">
         <input type="text" name="" id="" placeholder='Organisation Name' />
         <input type="text" name="" id="" placeholder='Industry(You work in)' />
         <input type="text" name="" id="" placeholder='State'/>

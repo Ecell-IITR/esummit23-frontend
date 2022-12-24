@@ -33,7 +33,7 @@ const IITRStudentRegister = () => {
     </div>
     <h1 className="CreateAccount"> Personal Details</h1>
     <h3 className='CreateAccountsubTitle'>Please fill all the required fields.</h3>
-    <div className="RequiredDetails">
+    <div className="mobRequiredDetails">
         <input type="text" name="" id="" placeholder='Branch Name' />
         <input type="number" name="" id="" placeholder='Current Year' />
         <input type="text" name="" id="" placeholder='State'/>
