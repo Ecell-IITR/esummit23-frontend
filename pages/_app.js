@@ -2,6 +2,7 @@ import '../styles/globals.css';
 import '../styles/index.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Registration from './Register'
+import Sident from './Register1/SelectIdentity'
 import Login from './login'
 import Footer from '../Components/Footer/Footer';
 import Navbar from '../Components/Navbar';
@@ -11,9 +12,10 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <MobileProvider>
-        <Registration/>
+        <Sident/>
+        {/* <Registration/> */}
         {/* <Login/> */}
-        <Component {...pageProps} /> 
+        <Component {...pageProps}/> 
       </MobileProvider>
     </>
   );

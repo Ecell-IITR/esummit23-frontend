@@ -1,7 +1,7 @@
 .RegisterContainer {
-  height: 100vh;
   width: 100vw;
   position: relative;
+  height: 100vh;
  
 }
 .mobRegisterContainer {
@@ -14,9 +14,11 @@
   margin-top: -90vh;
   display: flex;
   flex-direction: row;
-
 }
 
+.eSummitLogo{
+  margin-right: 15px;
+}
 
 .RegisterHereMob{
   position: relative;
@@ -40,12 +42,22 @@
   color: #dcd1ad;
  margin-top: 10px;
 }
+.mobCreateAccount {
+  font-family: 'Lexend',sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 35.2px;
+  color: #dcd1ad;
+ margin-top: 10px;
+}
 .CreateAccountsubTitle {
   font-family: Nunito Sans;
   font-size: 16px;
   font-weight: 400px;
   line-height: 20.8px;
   color: #bdbdbd;
+  margin-bottom: 52px;
 }
 .FormInputs {
   display: flex;
@@ -99,6 +111,7 @@
 .RegisterIdentity {
 display: flex;
 flex-direction: column;
+gap:30px;
 div {
   border: 1px transparent solid;
   padding: 20px,64px;
@@ -118,7 +131,30 @@ line-height: 110%;
 }
 
 }
-#RegisterIITRStudent{
+.mobRegisterIdentity {
+display: flex;
+flex-direction: column;
+gap:20px;
+div {
+  border: 1px transparent solid;
+  padding: 20px,64px;
+}
+
+
+}
+.mRIbutton {
+height: 62px;
+width:280px;
+background-color: #BA6D39;
+border-radius: 34px;
+font-family: lexend,sans-serif;
+font-weight: 700;
+color: white;
+letter-spacing: 1px;
+line-height: 110%;
+
+}
+.mRIbutton:hover{
   background-color: #DCD1AD;
   color: #12100E;
 }
@@ -154,7 +190,4 @@ line-height: 110%;
       width:100vw;
     }
 
-    .RegisterIdentity button{
-      width:280px;
-    }
 }

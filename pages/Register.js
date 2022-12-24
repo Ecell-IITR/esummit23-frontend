@@ -4,8 +4,8 @@ import { useMobile, useUpdateMobile } from '../utils/MobileContext';
 import LINK from 'next/link';
 
 const Register = () => {
-  const setMobile = useUpdateMobile();
   const [Email, setEmail] = useState(' ');
+  const setMobile = useUpdateMobile();
   useEffect(() => {
     setMobile();
   }, []);
