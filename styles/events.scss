@@ -16,7 +16,10 @@
 
 // }
 .container{
-  height: 15rem !important;
+  height: 15rem;
+  max-width: 100% !important;
+  width: 100% !important;
+  background-color: #BA6D39;
 }
 .heading{
   height: 5% !important;
@@ -25,7 +28,7 @@
   height:90% !important;
 }
 
-.container .heading{
+ .heading{
   width: 95%;
   font-size: 32px;
   text-align: center;
@@ -33,30 +36,27 @@
   font-weight: 700;
  }
 
- .container{
-  width: 100% !important;
-  background-color: #BA6D39;
- }
- .container .certificates{
-  width: 80%;
+
+ .certificates{
+  width: 100%;
   display: flex;
   justify-content: space-between;
   justify-content: center;
   align-content: center;
-  margin-left: 150px;
+  // margin-left: 150px;
   margin-top: 4rem;
 
  }
- .container .certificates .certificate{
+  .certificates .certificate{
   display: flex;
   height: 56px;
   width: 200px;
   margin-bottom: 50px;
  }
- .container .certificates .certificateImage{
+ .certificates .certificateImage{
   width: 56px;
  }
- .container .certificates .certificateImage .img{
+ .certificates .certificateImage .img{
   background-color: #F7F8FF;
   height: 100%;
   width: 100%;
@@ -64,37 +64,27 @@
   text-align: center;
   margin-top: -1rem;
  }
- .container .certificates .certificateImage .img svg{
+ .certificates .certificateImage .img svg{
   margin-top: 50%;
   transform: translateY(-50%);
  }
- .container .certificates .certificateDescription{
+ .certificates .certificateDescription{
   padding-left: 18px;
-  width: calc(100% - 56px);
+  // width: calc(100% - 56px);
  }
- .container .certificates .certificateDescription h2{
+ .certificates .certificateDescription h2{
   height: 24px;
   font-size: 18px;
  }
- .container .certificates .certificateDescription p{
+.certificates .certificateDescription p{
   font-size: 12px;
  }
 
  @media only screen and (max-width: 600px){
- .container .certificates .certificate{
+  .certificates .certificate{
   margin-bottom: 15px;
 }
 }
-
-
-@media screen and (min-width:600px)
-{
-  .container{
-    width: rem;
-  }
-}
-
-
 
 //EVENT COORDINATOR
 .parentIS{
@@ -470,6 +460,14 @@ width: 80%;
 {
 .CardContainer{
   width: 55rem;
+}
+.container{
+  width:55rem !important;
+  max-width: none !important;
+  height:none !important;
+}
+.certificates{
+  flex-direction: column;
 }
 
 }
@@ -936,6 +934,9 @@ width: 80%;
   .triangle-right{
     margin-top: .45rem;
   }
+  .containerEvents{
+    width: 55rem;
+  }
   
   }
   @media screen and (max-width:1327px)
@@ -964,10 +965,10 @@ width: 80%;
   }
 
    
-  @media screen and (max-width:881px)
-  {
-  .containerEvents{
-    width: 55rem;
-  }
+  // @media screen and (max-width:881px)
+  // {
+  // .containerEvents{
+  //   width: 55rem;
+  // }
   
-  }
+  // }
