@@ -164,7 +164,7 @@ line-height: 110%;
 
   input{
     margin: 8px;
-    width: 384px;
+    width: 255px;
     height: 20px;
     padding: 12px, 16px, 12px, 16px;
     background-color: transparent;
@@ -177,6 +177,14 @@ line-height: 110%;
   width: 267px;
   height: 48px;
   background-color: #BA6D39;
+  border-radius: 100px;
+
+}
+.CreateAccountButton:hover {
+  width: 267px;
+  height: 48px;
+  background-color: #DCD1AD;
+  color: #12100E;
   border-radius: 100px;
 
 }

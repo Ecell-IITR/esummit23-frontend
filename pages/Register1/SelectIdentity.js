@@ -37,10 +37,10 @@ const SelectIdentity = () => {
     <h3 className='CreateAccountsubTitle'>Please select appropriate option.</h3>
     <div className='mobRegisterIdentity'>
 
-    <Link href='IITRStudentRegister'><button className='mRIbutton'>As an IITR student</button></Link>
-    <Link href='NonIITRStudent'><button className='mRIbutton'> As a Non-IITR student</button></Link>
-    <Link href='CampusAmbassador'><button className='mRIbutton'>As a Campus Ambassador</button></Link>   
-    <Link href='ProfessionalsRegistration'><button className='mRIbutton'>As a Professional</button></Link>
+    <Link href='/IITRStudentRegister'><button className='mRIbutton'>As an IITR student</button></Link>
+    <Link href='/NonIITRStudent'><button className='mRIbutton'> As a Non-IITR student</button></Link>
+    <Link href='/CampusAmbassador'><button className='mRIbutton'>As a Campus Ambassador</button></Link>   
+    <Link href='/ProfessionalsRegistration'><button className='mRIbutton'>As a Professional</button></Link>
        </div>
        
        
