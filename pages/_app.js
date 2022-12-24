@@ -9,17 +9,16 @@ import EventsIdeathon from '../Components/EventsPage/Timeline';
 import MobileProvider from '../utils/MobileContext';
 
 function MyApp({ Component, pageProps }) {
-  return <>
-       
-  <MobileProvider>
-            <Component {...pageProps}/>
-            <EventsIdeathon/>
-            <Events/>
-            <Footer/>
-
+  return (
+    <>
+      <MobileProvider>
+        <Component {...pageProps} />
+        <EventsIdeathon />
+        <Events />
+        <Footer />
       </MobileProvider>
-
-          </>;
+    </>
+  );
 }
 
 export default MyApp;

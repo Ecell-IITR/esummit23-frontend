@@ -61,7 +61,7 @@ export function EventsIdeathon() {
       <div className='helpAboutContainer'>
         <div className='aboutContainer'>
           <div className='aboutHeading'>
-            <h3 style={{fontWeight: "700"}}>About Ideastorm</h3>
+            <h3 style={{ fontWeight: '700' }}>About Ideastorm</h3>
           </div>
 
           <div className='aboutEvent'>

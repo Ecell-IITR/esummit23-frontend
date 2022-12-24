@@ -503,11 +503,11 @@
 }
 .aboutHeading {
   color: #e8dbb9;
-  font-family: 'Lexend'!important;
-  font-weight: 700!important;
+  font-family: 'Lexend' !important;
+  font-weight: 700 !important;
   font-style: normal;
   width: 100%;
-  font-size: 2rem!important;
+  font-size: 2rem !important;
 }
 .aboutEvent {
   font-family: 'Nunito Sans';
@@ -626,21 +626,20 @@
   height: 15%;
   margin-left: 2rem;
 }
-.ruleheading{
+.ruleheading {
   font-family: 'Lexend';
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 110%;
   /* or 26px */
-  
+
   display: flex;
   align-items: center;
-  
+
   /* Grey */
-  
-  color: #F2F2F2;
-  
+
+  color: #f2f2f2;
 }
 .criteriacontainer {
   padding: 2rem;
@@ -676,15 +675,15 @@
   font-size: 18px;
   line-height: 150%;
   /* identical to box height, or 27px */
-  
+
   display: flex;
   align-items: center;
   letter-spacing: 0.04em;
-  
+
   /* White */
-  
-  color: #FFFFFF;
-  
+
+  color: #ffffff;
+
   opacity: 0.8;
   // background-color: green;
 }
