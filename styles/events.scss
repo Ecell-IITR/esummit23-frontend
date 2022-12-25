@@ -411,19 +411,8 @@
   .CardLine {
     width: 80px;
   }
-}
-
-@media screen and (max-width: 685px) {
-  .CardContainer {
-    width: 55rem;
-  }
-  .container {
-    width: 55rem !important;
-    max-width: none !important;
-    height: none !important;
-  }
-  .certificates {
-    flex-direction: column;
+  .aboutEvent {
+    margin-top: 4px !important;
   }
 }
 
@@ -514,7 +503,7 @@
   text-align: justify;
   height: 135px;
   width: 100%;
-  margin-top: 48px;
+  margin-top: 12px;
 }
 .secondcontainer {
   margin-top: -4rem;
@@ -839,13 +828,13 @@
     height: 25rem;
     padding: 0;
   }
-  .rulecontainer{
+  .rulecontainer {
     padding: 0;
   }
-  .rulesMentioned{
+  .rulesMentioned {
     gap: 0;
   }
-  .criteriacontainer{
+  .criteriacontainer {
     padding: 0;
     margin: 0;
   }

@@ -5,7 +5,16 @@ import Coordinator from './Coordinator';
 function Events() {
   return (
     <>
-      <div className='container events'>
+      <div
+        className='container events'
+        style={{
+          width: '100vw',
+          display: 'flex',
+          flexDirection: 'column',
+          height: '120%',
+          alignItems: 'center',
+        }}
+      >
         <div
           style={{
             fontFamily: 'Lexend',
@@ -14,13 +23,14 @@ function Events() {
             fontSize: '32px',
             lineHeight: '110%',
             color: '#FFFFFF',
+            paddingTop: '2rem',
+            textAlign: 'center',
           }}
-          className='heading'
         >
           {' '}
           Perks of Participating
         </div>
-        <div className='certificates'>
+        <div style={{ paddingTop: '2rem' }} className='certificates'>
           {Certificates.map((curr, index) => {
             return (
               <div className='certificate' key={index}>
@@ -45,8 +55,18 @@ function Events() {
                   </div>
                 </div>
                 <div className='certificateDescription'>
-                  <h2>{curr.heading}</h2>
-                  <p>{curr.description}</p>
+                  <h4
+                    style={{
+                      fontFamily: 'Lexend',
+                      fontStyle: 'normal',
+                      fontWeight: '600',
+                      fontSize: '18px',
+                      lineHeight: '24px',
+                      color: "#FFFFFF",
+                    }}
+                  >
+                    {curr.heading}
+                  </h4>
                 </div>
               </div>
             );
