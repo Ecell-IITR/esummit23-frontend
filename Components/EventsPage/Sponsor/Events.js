@@ -6,13 +6,20 @@ function Events() {
   return (
     <>
       <div className='container events'>
-        <div style={{fontFamily: 'Lexend',
-fontStyle: "normal",
-fontWeight: "700",
-fontSize: "32px",
-lineHeight: "110%",
-color: "#FFFFFF"
-}} className='heading'> Perks of Participating</div>
+        <div
+          style={{
+            fontFamily: 'Lexend',
+            fontStyle: 'normal',
+            fontWeight: '700',
+            fontSize: '32px',
+            lineHeight: '110%',
+            color: '#FFFFFF',
+          }}
+          className='heading'
+        >
+          {' '}
+          Perks of Participating
+        </div>
         <div className='certificates'>
           {Certificates.map((curr, index) => {
             return (
