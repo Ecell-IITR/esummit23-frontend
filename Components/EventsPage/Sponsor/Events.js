@@ -95,7 +95,7 @@ function Events() {
         <div className='coordinatorDetailIS'>
           {Coordinator.map((curr, index) => {
             return (
-              <div className='A' key={index}>
+              <div className='A' >
                 <div className='B'>
                   <Image
                     className='imageCordinator'
@@ -130,7 +130,7 @@ function Events() {
             );
           })}
         </div>
-        <div className='registerIS'>
+        {/* <div className='registerIS'>
           <div className='registerBack'>
             <div className='registerFront'>
               <div className='boldRegisterQuestion'>
@@ -146,7 +146,7 @@ function Events() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
