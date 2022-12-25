@@ -479,7 +479,7 @@
   background: linear-gradient(180deg, #12100e 0%, #301a08 100%);
   color: white;
   width: 100%;
-  height: 100%;
+  height: 110%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -519,16 +519,13 @@
 .secondcontainer {
   margin-top: -4rem;
   display: flex;
-  width: 100%;
-
-  // justify-content: space-evenly;
 
   margin-left: 1rem;
 }
 
 .arrows {
   margin-top: 0.4rem;
-  width: 14rem;
+  width: 11rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -690,7 +687,7 @@
   display: flex;
   flex-direction: row;
   gap: 0.3rem;
-  margin-left: -1rem;
+  margin-left: 1rem;
 }
 .bullets {
   width: 2rem;
@@ -715,7 +712,6 @@
 
   color: #ffffff;
 
-  opacity: 0.8;
   // background-color: green;
 }
 
@@ -841,6 +837,17 @@
 @media screen and (max-width: 657px) {
   .aboutContainer {
     height: 25rem;
+    padding: 0;
+  }
+  .rulecontainer{
+    padding: 0;
+  }
+  .rulesMentioned{
+    gap: 0;
+  }
+  .criteriacontainer{
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -889,7 +896,7 @@
     width: 40%;
   }
   .criteriacontainer {
-    height: 40rem;
+    height: 100%;
   }
 }
 

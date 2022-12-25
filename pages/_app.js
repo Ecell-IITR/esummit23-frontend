@@ -14,8 +14,8 @@ function MyApp({ Component, pageProps }) {
       <MobileProvider>
         <Component {...pageProps} />
         <EventsIdeathon />
-        <Events />
-        <Footer />
+        {/* <Events />
+        <Footer /> */}
       </MobileProvider>
     </>
   );

@@ -154,9 +154,9 @@ export function EventsIdeathon() {
                       <div className='rulesMentioned'>
                         <div className='bullets'>
                           <Image
-                            src='/images/bulletEvents.webp'
-                            height='25rem'
-                            width='25rem'
+                            src='/bulletEvents.webp'
+                            height='16'
+                            width='16'
                           ></Image>
                         </div>
                         <div className='writtenRules'>{rule.rule} </div>
@@ -180,9 +180,9 @@ export function EventsIdeathon() {
                     <div className='rulesMentioned'>
                       <div className='bullets'>
                         <Image
-                          src='/images/bulletEvents.webp'
-                          height='25rem'
-                          width='25rem'
+                          src='/bulletEvents.webp'
+                          height='16'
+                          width='16'
                         ></Image>
                       </div>
                       <div className='writtenRules'>{criteria.criteria} </div>
