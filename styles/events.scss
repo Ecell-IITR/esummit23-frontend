@@ -3,18 +3,7 @@
   width: 100%;
   // background: linear-gradient(#12100E,#331C00);
 }
-// .section{
-//   display: flex;
-//   flex-wrap: wrap;
-//   align-items: center;
-//   justify-content: center;
-//   flex-direction: column;
-//  position: absolute;
-//  height: 251px;
-//  left: 0px;
-//  top: 1559px;
 
-// }
 .container {
   height: 15rem;
   max-width: 100% !important;
@@ -623,6 +612,7 @@
 
 .criteria {
   opacity: 80%;
+  padding-top: 2rem;
 }
 .rulecontainer {
   margin-top: 2rem;
@@ -676,6 +666,7 @@
 .rules {
   opacity: 80%;
   width: 100%;
+  padding-top: 2rem;
 }
 .rulesMentioned {
   height: 10%;
