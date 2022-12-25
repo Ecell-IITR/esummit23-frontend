@@ -13,7 +13,7 @@ function Login() {
   const [pass_error, setpass_error] = useState('');
 
   const [pass_error_bool, setpass_error_bool] = useState(false);
-
+  const [Role, setRole] = useState('');
   const passValidate = () => {
     setTimeout(function () {
       if (Password.length < 7) {
@@ -41,9 +41,22 @@ function Login() {
           console.log(res);
           if (res.data.role) {
             localStorage.setItem('userRoleType', res.data.role);
+            if(localStorage.getItem('userRoleType'))
+            {
+              if(localStorage.getItem('userRoleType')==='ca')
+              setRole('ca');
+              if(localStorage.getItem('userRoleType')==='student')
+              setRole('student');
+              if(localStorage.getItem('userRoleType')==='professor')
+              setRole('professor');
+              if(localStorage.getItem('userRoleType')==='startup')
+              setRole('startup');
+              console.log(Role);
+
+            }
           }
           Authenticate(res.data.n, res.data.at);
-        })
+        })    
         .catch((res) => {
           alert('Credentials are wrong');
         });
