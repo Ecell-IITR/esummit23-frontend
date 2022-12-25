@@ -125,15 +125,12 @@
 }
 
 .A {
-
   background: none;
   width: 40%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  
-
 }
 .C {
   display: flex;
@@ -163,8 +160,8 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 110%;
-  
-  color: #2A1809;
+
+  color: #2a1809;
   font-weight: 700;
   padding: 1rem;
   font-size: 1.5rem;
@@ -215,9 +212,18 @@
   // border: 1px solid black;
   height: 25%;
   width: 80%;
-  font-family: 'Nunito Sans';
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 110%;
+  /* identical to box height, or 31px */
+
+  display: flex;
+  align-items: flex-end;
+
   color: #2f1908;
-  font-size: 1.75rem;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -292,7 +298,6 @@
   .coordinatorDetailIS {
     height: 1rem;
   }
- 
 }
 
 //SPONSOR CARD
@@ -401,7 +406,7 @@
   .CardContainer {
     padding: 0px 24px;
   }
-  .A{
+  .A {
     width: auto;
   }
 }
@@ -412,10 +417,10 @@
   .aboutEvent {
     margin-top: 16px !important;
   }
-  .parentIS{
+  .parentIS {
     padding: 1rem;
   }
-  .coordinatorHeadingIS{
+  .coordinatorHeadingIS {
     font-size: 24px;
   }
 }
@@ -426,14 +431,11 @@
 
 @media screen and (max-width: 1235px) {
   .coordinatorDetailIS {
-  
     align-items: center;
     height: 40rem;
   }
 
-
   .C {
-    
     height: 8rem;
     margin-top: -2rem;
   }
@@ -448,17 +450,32 @@
     height: 10rem;
     width: 42rem;
   }
-
-
 }
 
-@media screen and (max-width: 966px) {
+@media screen and (max-width: 960px) {
   .registerBack {
-    width: 43rem;
+    width: 70vw;
   }
   .registerIS {
-    width: 55rem;
+    width: 10vw;
   }
+  .boldRegisterQuestion {
+    font-size: 20px;
+    line-height: 110%;
+  }
+  .lightRegisterQuestion {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .registerBack {
+    width: 85vw;
+  }
+  .registerIS {
+    width: 10vw;
+  }
+  
 }
 
 .containerEvents {
@@ -886,18 +903,16 @@
   .criteriacontainer {
     height: 100%;
   }
-  .B{
+  .B {
     width: 12rem;
     height: auto;
-
   }
   .nameISCoordinator {
     font-size: 1rem;
   }
-  .mailId{
+  .mailId {
     font-size: 0.8rem;
   }
-
 }
 
 @media screen and (max-width: 346px) {
@@ -933,11 +948,8 @@
   }
 }
 
-
-
 @media screen and (max-width: 476px) {
   .dateIdeathon {
     font-size: 0.9rem;
   }
 }
-

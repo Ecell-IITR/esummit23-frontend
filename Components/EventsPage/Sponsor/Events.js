@@ -130,7 +130,7 @@ function Events() {
             );
           })}
         </div>
-        {/* <div className='registerIS'>
+        <div className='registerIS'>
           <div className='registerBack'>
             <div className='registerFront'>
               <div className='boldRegisterQuestion'>
@@ -146,7 +146,7 @@ function Events() {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
     </>
   );
