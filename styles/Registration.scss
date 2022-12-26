@@ -1,0 +1,111 @@
+.RegisterationContainer {
+    height: 120vh;
+    width: 100vw;
+    position: relative;
+}
+.RegisterHere {
+    display: flex;
+    flex-direction: row;
+   position: relative;
+   margin-top: -90vh;
+}
+.RegisterLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+}
+.RegisterLogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.registrationTitle {
+    font-family: 'Lexend';
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 35.2px;
+    color: #dcd1ad;
+   margin-top: 10px;
+}
+.registrationsubTitle{
+    font-family: Nunito Sans;
+    font-size: 16px;
+    font-weight: 400px;
+    line-height: 20.8px;
+    color: #bdbdbd;
+}
+.formInput {
+    display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  background-color: transparent;
+  Input {
+    width: 384px;
+    background-color:  transparent;
+    border: none;
+    border-bottom: 1px white solid;
+    margin: 10px;
+    }
+}
+.SelectGender {
+    color: #dcd1ad;
+    display: flex;
+    flex-direction: column;
+   margin-top: 10px;
+}
+.selectOneOption{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    color: #dcd1ad;
+    cursor: pointer;
+
+
+    input[type="radio"] {
+      width: 10px;
+      height: 10px;
+      border: 1px solid white;
+      border-radius: 50%;
+      margin-right: 5px;
+    }
+}
+.nextButton{
+    width: 267px;
+    height: 48px;
+    background-color: #BA6D39;
+    border-radius: 100px;
+    padding: 12px, 72px, 12px, 72px;
+    font-weight: 600;
+    font-family: Lexend;
+    font-size: 18px;
+    color: #FFFFFF
+}
+.identityButton {
+    display: flex;
+    flex-direction: column;
+    button{
+        color: #FFFFFF;
+        font-style: normal;
+       font-family: 'Lexend';
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 22px;
+        
+    width: 448px;
+    height: 62px;
+    border-radius: 32px;
+    padding: 20px,64px;
+    margin: 10px;
+    background-color: #BA6D39;
+}
+}
+.createAccount{
+width: 267px;
+height: 48px;
+border-radius: 100px;
+margin: 8px;
+padding: 12px,72px;
+background-color: #BA6D39;
+color: #FFFFFF;
+}
