@@ -2,8 +2,15 @@ import { ALL_EVENTS_API } from '../../utils/APIs';
 import FetchApi from '../../utils/fetchAPI';
 import React, { useState, useEffect } from 'react';
 
-export default function Events({ posts }) {
-  console.log(posts);
+export default function Events({posts}) {
+
+  console.log(posts)
+  FetchApi('post', url, null, null)
+      .then((res) => {
+        // do action with res
+      })
+
+  
 
   return (
     <div>

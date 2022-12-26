@@ -29,7 +29,7 @@ const MobileProvider = ({ children }) => {
   const [isStyleMobile, setIsStyleMobile] = useState('');
 
   const setMobile = () => {
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < 800) {
       setIsMobile(true);
       // console.log("I am mobile !");
       setIsStyleMobile('mobile');
