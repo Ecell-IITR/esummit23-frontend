@@ -349,7 +349,7 @@
 }
 .gfg {
   // border: 1px solid black;
-  width: 40%;
+  width: 55%;
   height: 60%;
   display: flex;
   justify-content: center;
@@ -951,5 +951,26 @@
 @media screen and (max-width: 476px) {
   .dateIdeathon {
     font-size: 0.9rem;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .gfg{
+    width: 100%;
+  }
+  .CardContent{
+    height: auto;
+    width: auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  .CardBox2 {
+    width: 0;
+    height: 0;
+  }
+  .CardBox1 {
+    width: 0;
+    height: 0;
   }
 }
