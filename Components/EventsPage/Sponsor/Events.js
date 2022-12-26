@@ -79,7 +79,7 @@ function Events() {
 
           <div className='CardContent'>
             <div className='sponsorImage'>
-              <Image src='/sponsor.webp' height='60rem' width='700rem'></Image>
+              <Image src='/Sponsor.webp' height='60rem' width='700rem'></Image>
             </div>
             <div className='gfg'>
               <Image src='/gfg.webp' width='240rem' height='180rem'></Image>
