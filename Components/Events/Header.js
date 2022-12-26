@@ -2,7 +2,7 @@ import React from 'react';
 
 import event from './Eventstype';
 
-export default function Ideathon({ data }) {
+export default function Header({ data }) {
   // const [data, setdata] = useState([]);
   console.log(data);
   // setdata(data);
