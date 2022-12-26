@@ -1,7 +1,6 @@
-const details=[
-    {
-        name:"Mary Marlo",
-        esummitId:"1234567"
-    }
-
-]
+const details = [
+  {
+    name: 'Mary Marlo',
+    esummitId: '1234567',
+  },
+];

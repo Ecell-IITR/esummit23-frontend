@@ -13,10 +13,10 @@ import config from '../config';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
 function MyApp({ Component, pageProps }) {
   return (
     <>
+
     <AuthContext.Provider value={{ user: isAuthenticated() }}>
       <MobileProvider>
         <DefaultSeo {...defaultSEOConfig} />
@@ -40,6 +40,7 @@ function MyApp({ Component, pageProps }) {
     </AuthContext.Provider>
     </>
   );
+
 
 }
 

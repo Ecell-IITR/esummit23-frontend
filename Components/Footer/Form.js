@@ -6,8 +6,6 @@ import { toast } from 'react-toastify';
 import React, { useState } from 'react';
 import { data } from 'autoprefixer';
 
-
-
 const Forms = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -18,11 +16,10 @@ const Forms = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
-      "name":name,
-      "email":email,
-      "phone_number":contact,
-      "message":message,
-
+      name: name,
+      email: email,
+      phone_number: contact,
+      message: message,
     };
 
     FetchApi('post', FOOTER_QUERY_API, data, null)
@@ -51,45 +48,17 @@ const Forms = () => {
       });
   };
 
-
-
-
-
-
-
-
-
-
-
   // FetchApi('get','http://127.0.0.1:8000/design/colors/',null,null)
   // .then((res) => {
 
-
   //   console.log(res['data']['1']['colourid']);
 
-
-
   //   })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   return (
     <>
       <Form>
-        <div className="name_footer">
+        <div className='name_footer'>
           <Form.Group className='mb-3' controlId='formBasicPassword'>
             <Form.Control
               style={{ backgroundColor: '#311C00', color: 'white' }}
@@ -107,7 +76,7 @@ const Forms = () => {
           </Form.Group>
         </div>
 
-        <div className="emailAddress_footer">
+        <div className='emailAddress_footer'>
           <Form.Group className='mb-3' controlId='formBasicEmail'>
             <Form.Control
               type='email'
@@ -125,8 +94,8 @@ const Forms = () => {
           </Form.Group>
         </div>
 
-        <div className="phoneNoAndQuery_footer">
-          <div className="phoneNo_footer">
+        <div className='phoneNoAndQuery_footer'>
+          <div className='phoneNo_footer'>
             <Form.Group className='mb-3' controlId='formBasicPassword'>
               <Form.Control
                 style={{ backgroundColor: '#311C00', color: 'white' }}
@@ -143,7 +112,7 @@ const Forms = () => {
               />
             </Form.Group>
           </div>
-          <div className="query_footer">
+          <div className='query_footer'>
             <Form.Group className='mb-3' controlId='formBasicPassword'>
               <Form.Control
                 style={{ backgroundColor: '#311C00', color: 'white' }}
@@ -161,7 +130,7 @@ const Forms = () => {
           </div>
         </div>
 
-        <div className="message_footer">
+        <div className='message_footer'>
           <Form.Group className='mb-3' controlId='formBasicPassword'>
             <Form.Control
               style={{
@@ -187,7 +156,7 @@ const Forms = () => {
           onClick={handleSubmit}
           // variant='primary'
           type='submit'
-          className="button_footer"
+          className='button_footer'
         >
           Submit
         </Button>

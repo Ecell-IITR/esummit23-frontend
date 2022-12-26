@@ -1,8 +1,5 @@
-
-
-
 .Parent_footer {
-  background-color: #301B09;
+  background-color: #301b09;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -10,32 +7,29 @@
   gap: 10rem;
   justify-content: space-between;
   padding: 3rem;
-
 }
 
-.line{
+.line {
   margin-left: 3rem;
 
   color: white;
   margin-top: -4rem;
-
 }
-.copyRight{
+.copyRight {
   font-family: 'Nunito Sans';
-  color:white;
-  margin-top: -.8rem;
+  color: white;
+  margin-top: -0.8rem;
   opacity: 70%;
   margin-left: 3.7rem;
 }
 
-.headings{
+.headings {
   font-family: 'Nunito Sans';
   font-size: 1.2rem;
-
 }
 .text_footer {
   opacity: 70%;
-  font-family:'Nunito Sans';
+  font-family: 'Nunito Sans';
   color: white;
 }
 
@@ -44,7 +38,6 @@
   width: 20%;
   height: 20rem;
   /* flex: .9; */
-
 }
 .footerLeft_footer {
   background-color: #311c00;
@@ -126,8 +119,6 @@
   font-family: Nunito Sans;
 }
 
-
-
 .cellLogo_footer {
   width: 1%;
   height: 5%;
@@ -140,17 +131,17 @@
   flex-direction: row;
 }
 .esummitLogo_footer {
-//   border: 1px solid black;
+  //   border: 1px solid black;
   height: 90%;
-  padding: .2rem; 
-  width:38%;
+  padding: 0.2rem;
+  width: 38%;
   display: flex;
 }
 .esummitLogo_footer2 {
-    /* border: 1px solid black; */
-    width: 25%;
-    display: flex;
-  }
+  /* border: 1px solid black; */
+  width: 25%;
+  display: flex;
+}
 
 .collegeName_footer {
   /* border: 1px solid black; */
@@ -174,7 +165,7 @@
 .motto_footer {
   display: flex;
   width: 90%;
-  height:85%;
+  height: 85%;
 }
 
 .countryName_footer {
@@ -232,38 +223,38 @@
 }
 
 .iconInstagram_footer {
-    margin-top: -.5rem;
-    display: flex;
-    height: 1.6rem;
-    width: 9%;
+  margin-top: -0.5rem;
+  display: flex;
+  height: 1.6rem;
+  width: 9%;
   /* border: 1px solid black; */
 }
 .iconFacebook_footer {
-  margin-top: -.5rem;
+  margin-top: -0.5rem;
   display: flex;
   height: 1.6rem;
   width: 9%;
   /* border: 1px solid black; */
 }
 .iconTwitter_footer {
-    margin-top: -.5rem;
-    display: flex;
-    height: 1.6rem;
-    width: 9%;
+  margin-top: -0.5rem;
+  display: flex;
+  height: 1.6rem;
+  width: 9%;
   /* border: 1px solid black; */
 }
 .iconYoutube_footer {
-    margin-top: -.5rem;
-    display: flex;
-    height: 1.6rem;
-    width: 9%;
+  margin-top: -0.5rem;
+  display: flex;
+  height: 1.6rem;
+  width: 9%;
   /* border: 1px solid black; */
 }
 .iconLinkedin_footer {
-    margin-top: -.5rem;
-    display: flex;
-    height: 1.6rem;
-    width: 9%;
+  margin-top: -0.5rem;
+  display: flex;
+  height: 1.6rem;
+  width: 9%;
   /* border: 1px solid black; */
 }
 .middleBottom_footer {
@@ -330,8 +321,6 @@
   background-color: rgb(73, 63, 63);
 }
 
-
-
 .form-control_footer {
   background-color: red;
 }
@@ -349,193 +338,169 @@
 }
 
 .button_footer {
-
   margin-top: -0.6rem;
   border: 1px solid white !important;
   background-color: #311c00 !important ;
-
 }
 
-@media screen and (min-width:1648px)
-{
-  .esummitLogo_footer{
+@media screen and (min-width: 1648px) {
+  .esummitLogo_footer {
     width: 4rem;
   }
 }
 
-
-@media screen and (max-width:1648px)
-{
-  .esummitLogo_footer{
+@media screen and (max-width: 1648px) {
+  .esummitLogo_footer {
     width: 4rem;
   }
 }
 
-
-
-@media screen and (max-width:1234px)
-{
-  .Parent_footer{
+@media screen and (max-width: 1234px) {
+  .Parent_footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 65rem;
-    
   }
-  .footerMiddle_footer{
+  .footerMiddle_footer {
     position: relative;
     display: flex;
     // flex-wrap: wrap;
     width: 30rem;
-    gap:1rem;
+    gap: 1rem;
     // border: 2px solid black;
-    
-  
   }
 
-
-  .footerLeft_footer{
+  .footerLeft_footer {
     // border: 1px solid black;
     width: 30rem;
-    
   }
-  .footerRight_footer{
+  .footerRight_footer {
     width: 30rem;
     height: 24rem;
     margin-top: -17rem;
     z-index: 1;
-    margin-left: .5rem;
+    margin-left: 0.5rem;
   }
-  .formsParent_footer{
+  .formsParent_footer {
     width: 100%;
   }
 
-  
-  .esummitLogo_footer{
+  .esummitLogo_footer {
     display: none;
   }
 
-  .ecellLogo_footer{
+  .ecellLogo_footer {
     margin-left: 2rem;
   }
 
-  .motto_footer{
+  .motto_footer {
     width: 10rem;
     margin-left: -4rem;
-
   }
 
-  .footerMiddle_footer{
+  .footerMiddle_footer {
     margin-top: -17rem;
     margin-left: -6rem;
   }
 
-
-  .handlesNewUp_footer{
+  .handlesNewUp_footer {
     margin-top: 33.5rem;
     height: 10rem;
     z-index: 2;
   }
 
-
-  .handlesNew_footer{
+  .handlesNew_footer {
     margin-top: -0.8rem;
-    margin-left: -.4rem;
+    margin-left: -0.4rem;
     z-index: 2;
   }
 
-  .text_help{
+  .text_help {
     margin-top: 1rem;
     width: 15rem;
     font-family: 'Nunito Sans', sans-serif;
   }
-  .addressBelow_footer{
+  .addressBelow_footer {
     margin-left: -10rem;
     // border: 2px solid red;
   }
 
-  .addressUp_footer{
+  .addressUp_footer {
     margin-left: 3.6rem;
   }
 
-  .addressMiddle_footer{
+  .addressMiddle_footer {
     margin-top: 8rem;
     margin-left: -16rem;
   }
 
-  .addressBelow_footer{
+  .addressBelow_footer {
     margin-left: 1rem;
     width: 20rem;
-    margin-top: .4rem;
+    margin-top: 0.4rem;
   }
-  .text_help_phone{
-    
+  .text_help_phone {
     width: 20rem;
-    margin-top: .3rem;
+    margin-top: 0.3rem;
     margin-left: -1.3rem;
   }
- 
-  .text_help_address{
-    
+
+  .text_help_address {
     width: 15rem;
     margin-top: 0rem;
   }
 
-  .text_help_contactUs{
-    margin-top: -1rem;
-
-  }
-.contactNo_footer{
-  margin-left: -1.3rem;
-}
-.copyRight{
-  margin-top: 1rem;
-  margin-left: 5.5rem;
-}
-  .text_help_form{
-    margin-top: .8rem;
-  }
-  .email_footer{
+  .text_help_contactUs {
     margin-top: -1rem;
   }
-
-  .iconFacebook_footer{
-    width: 2rem;
+  .contactNo_footer {
+    margin-left: -1.3rem;
+  }
+  .copyRight {
+    margin-top: 1rem;
+    margin-left: 5.5rem;
+  }
+  .text_help_form {
+    margin-top: 0.8rem;
+  }
+  .email_footer {
+    margin-top: -1rem;
   }
 
-  .iconInstagram_footer{
-    width: 2rem;
-  }
-  .iconTwitter_footer{
-    width: 2rem;
-  }
-  .iconLinkedin_footer{
-    width: 2rem;
-  }
-  .iconYoutube_footer{
+  .iconFacebook_footer {
     width: 2rem;
   }
 
-  .copyRight{
+  .iconInstagram_footer {
+    width: 2rem;
+  }
+  .iconTwitter_footer {
+    width: 2rem;
+  }
+  .iconLinkedin_footer {
+    width: 2rem;
+  }
+  .iconYoutube_footer {
+    width: 2rem;
+  }
+
+  .copyRight {
     font-family: 'Nunito Sans';
-    color:white;
+    color: white;
     margin-left: -9rem;
     margin-top: -1rem;
     opacity: 70%;
   }
-  .marginCopyright{
+  .marginCopyright {
     display: flex;
     justify-content: center;
 
-  
-  margin-left: 1rem;
+    margin-left: 1rem;
   }
 }
 
-
-
-@media screen and (max-width:741px)
-{
+@media screen and (max-width: 741px) {
   // .line{
   //   margin-top: -4rem;
   //   margin-left: 7rem;
@@ -559,27 +524,23 @@
 //   }
 // }
 
-@media screen and (max-width:480px)
-{
-  .Parent_footer{
+@media screen and (max-width: 480px) {
+  .Parent_footer {
     width: 31rem;
-
   }
 }
 
-@media screen and (max-width:685px)
-{
-  .Parent_footer{
-    width:55rem; 
-
+@media screen and (max-width: 685px) {
+  .Parent_footer {
+    width: 55rem;
   }
 
-  .marginCopyright{
+  .marginCopyright {
     margin-left: 0rem;
     width: 50rem;
   }
 
-  .line{
+  .line {
     width: 50rem;
   }
 }
