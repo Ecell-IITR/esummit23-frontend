@@ -2,9 +2,9 @@ import React from 'react';
 
 import event from './Eventstype';
 
-export default function Header({ data }) {
+export default function Header(props) {
   // const [data, setdata] = useState([]);
-  console.log(data);
+  console.log(props);
   // setdata(data);
 
   return (
@@ -15,9 +15,9 @@ export default function Header({ data }) {
           className='ideaThon-bg'
         >
           <div className='ideaBox1'>
-            <div className='idea-Text1'>IDEASTORM</div>
+            <div className='idea-Text1'>{props.name}</div>
             <div className='idea-Text2'>
-              The ​Ideastorm is the annual case-building
+             {props.tagline}
             </div>
             <button className='idea-Button'>
               <span className='iBT'>APPLY NOW</span>
@@ -31,15 +31,15 @@ export default function Header({ data }) {
               <div className='yellowBox' key={index}>
                 <div className='yBox1'>
                   <div className='boxHead1'>Event Type</div>
-                  <div className='boxContent1'>{curr.EventType}</div>
+                  <div className='boxContent1'>{props.type}</div>
                 </div>
                 <div className='yBox2'>
                   <div className='boxHead1'>Registration Starts</div>
-                  <div className='boxContent1'>{curr.Registration_Starts}</div>
+                  <div className='boxContent1'>{props.start}</div>
                 </div>
                 <div className='yBox3'>
                   <div className='boxHead1'>Registration Ends</div>
-                  <div className='boxContent1'>{curr.Registration_Ends}</div>
+                  <div className='boxContent1'>{props.end}</div>
                 </div>
               </div>
             );
