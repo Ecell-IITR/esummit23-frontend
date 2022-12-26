@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export function EventsIdeathon() {
+export function EventsIdeathon(props) {
   const Ideathon = [
     { date: '12 December 2022' },
     {
@@ -61,19 +61,17 @@ export function EventsIdeathon() {
       <div className='helpAboutContainer'>
         <div className='aboutContainer'>
           <div className='aboutHeading'>
-            <h3 style={{ fontWeight: '700' }}>About Ideastorm</h3>
+            <h3 style={{ fontWeight: '700' }}>About {props.name}</h3>
           </div>
 
           <div className='aboutEvent'>
-            {events.map((event, index) => {
-              return (
-                <div key={index} className='aboutbox'>
-                  {event.para}
-                  <br></br>
-                  <br></br>
-                </div>
-              );
-            })}
+            <div
+              className='aboutbox'
+              dangerouslySetInnerHTML={{ __html: props?.desc }}
+            ></div>
+
+            <br></br>
+            <br></br>
           </div>
         </div>
       </div>
@@ -98,47 +96,15 @@ export function EventsIdeathon() {
           </div>
 
           <div className='roundnamecontent'>
-            <div className='triangleDate'>
-              <div class='triangle-right'></div>
+            <div className='triangleDate' dangerouslySetInnerHTML={{ __html: props?.round[0].tasks}}>
+              
 
-              <div className='dateIdeathon'>
-                {Ideathon.map((Ideathon, index) => {
-                  return (
-                    <div key={index} className='aboutbox'>
-                      {Ideathon.date}
-                    </div>
-                  );
-                })}
-              </div>
+              
             </div>
-            <div className='descriptionIdeathon'>
-              {Ideathon.map((Ideathon, index) => {
-                return (
-                  <div key={index} className='aboutbox'>
-                    {Ideathon.description}
-                  </div>
-                );
-              })}
-            </div>
-            <div className='listIdeathon'>
-              {Ideathon.map((Ideathon, index) => {
-                return (
-                  <div key={index} className='aboutbox'>
-                    {Ideathon.summary}
-                  </div>
-                );
-              })}
-            </div>
+            
+            
 
-            <div className='conclusionIdeathon'>
-              {Ideathon.map((Ideathon, index) => {
-                return (
-                  <div key={index} className='aboutbox'>
-                    {Ideathon.conclusion}
-                  </div>
-                );
-              })}
-            </div>
+            
           </div>
         </div>
       </div>
@@ -146,7 +112,7 @@ export function EventsIdeathon() {
         <div className='rulecontainer'>
           <div className='ruleheading'>Rules and Regulation</div>
           <div className='rules'>
-            {rules.map((rule, index) => {
+            {props.rules.map((rule, index) => {
               return (
                 <div key={index} className='rulebox'>
                   <ul>
@@ -173,7 +139,7 @@ export function EventsIdeathon() {
         <div className='criteriacontainer'>
           <div className='criteriaheading'>Eligibility Criteria</div>
           <div className='criteria'>
-            {criteria.map((criteria, index) => {
+            {props.eligiblity.map((criteria, index) => {
               return (
                 <div key={index} className='criteriabox'>
                   <ul>
@@ -185,7 +151,7 @@ export function EventsIdeathon() {
                           width='16'
                         ></Image>
                       </div>
-                      <div className='writtenRules'>{criteria.criteria} </div>
+                      <div className='writtenRules'>{criteria.rule} </div>
                     </div>
                   </ul>
                 </div>

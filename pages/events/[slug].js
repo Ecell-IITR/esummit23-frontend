@@ -2,6 +2,7 @@ import React from 'react';
 import { EVENT_API } from '../../utils/APIs';
 import { useRouter } from 'next/router';
 import Header from '../../Components/Events/Header';
+import Timline from '../../Components/EventsPage/Timeline';
 export default function EventsDetails({ details }) {
   const router = useRouter();
 
@@ -14,6 +15,13 @@ export default function EventsDetails({ details }) {
         type={details.Type}
         start={details.registraion_start_date}
         end={details.registraion_end_date}
+      />
+      <Timline
+        name={details.event_name}
+        desc={details.description}
+        rules={details.event_rules}
+        eligiblity={details.event_eligibility}
+        round={details.event_rounds}
       />
     </>
   );
