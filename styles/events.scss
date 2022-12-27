@@ -562,7 +562,7 @@
 }
 .firstarrow {
   border-radius: 6px 0px 0px 6px;
-
+  clip-path: polygon(0 0, 80% 0%, 100% 50%, 80% 100%, 0 100%);
   background-color: #98613b;
   margin-top: -0.1rem;
   width: 100%;
