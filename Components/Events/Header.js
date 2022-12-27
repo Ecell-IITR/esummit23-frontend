@@ -5,7 +5,7 @@ export default function Header(props) {
     <>
       <div className='ideaThon-main'>
         <div
-          style={{ backgroundImage: "url('/Login.png')" }}
+          style={{ backgroundImage: `url(${props.card})`   }}
           className='ideaThon-bg'
         >
           <div className='ideaBox1'>
