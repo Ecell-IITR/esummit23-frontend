@@ -96,15 +96,10 @@ export function EventsIdeathon(props) {
           </div>
 
           <div className='roundnamecontent'>
-            <div className='triangleDate' dangerouslySetInnerHTML={{ __html: props?.round[0].tasks}}>
-              
-
-              
-            </div>
-            
-            
-
-            
+            <div
+              className='triangleDate'
+              dangerouslySetInnerHTML={{ __html: props?.round[0].tasks }}
+            ></div>
           </div>
         </div>
       </div>
