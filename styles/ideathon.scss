@@ -58,9 +58,6 @@
   background: #ba6d39;
   border-radius: 100px;
   border: none;
-}
-
-.iBT {
   font-family: 'lexend', sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -76,6 +73,10 @@
   flex-grow: 0;
 }
 
+.idea-Button:hover{
+  background: #DCD1AD;
+  color:#12100E;
+}
 .yellowBox {
   display: flex;
   flex-direction: row;
