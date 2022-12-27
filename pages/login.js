@@ -29,7 +29,7 @@ function Login() {
   };
 
   function submit() {
-    router.push('/dashboard')
+    
     if (!pass_error_bool) {
       FetchApi(
         'POST',
@@ -46,6 +46,7 @@ function Login() {
             localStorage.setItem('userRoleType', res.data.role);
           }
           Authenticate(res.data.n, res.data.at);
+          router.push('/dashboard')
         })
         .catch((res) => {
           alert('Credentials are wrong');
@@ -58,7 +59,6 @@ function Login() {
   useEffect(() => {
     setMobile();
   }, []);
-  console.log(useMobile());
   if (useMobile().isMobile) {
     return (
       <div className='LoginContainer'>
