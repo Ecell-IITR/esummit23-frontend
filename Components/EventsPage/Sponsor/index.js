@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Certificates from './Certificates';
 import Coordinator from './Coordinator';
 
-function Events() {
+function Events(props) {
   return (
     <>
       <div
@@ -31,7 +31,7 @@ function Events() {
           Perks of Participating
         </div>
         <div style={{ paddingTop: '2rem' }} className='certificates'>
-          {Certificates.map((curr, index) => {
+          {props.perks.map((curr, index) => {
             return (
               <div className='certificate' key={index}>
                 <div className='certificateImage'>
@@ -62,7 +62,7 @@ function Events() {
                       fontWeight: '600',
                       fontSize: '18px',
                       lineHeight: '24px',
-                      color: "#FFFFFF",
+                      color: '#FFFFFF',
                     }}
                   >
                     {curr.heading}
@@ -81,9 +81,13 @@ function Events() {
             <div className='sponsorImage'>
               <Image src='/Sponsor.webp' height='60rem' width='700rem'></Image>
             </div>
-            <div className='gfg'>
-              <Image src='/gfg.webp' width='240rem' height='180rem'></Image>
-            </div>
+            {props.partners.map((curr, index) => {
+              return (
+                <div className='gfg'>
+                  <Image src='/gfg.webp' width='240rem' height='180rem'></Image>
+                </div>
+              );
+            })}
           </div>
 
           <div className='CardBox2'></div>
@@ -93,13 +97,14 @@ function Events() {
       <div className='parentIS'>
         <div className='coordinatorHeadingIS'>Event Coordinators</div>
         <div className='coordinatorDetailIS'>
-          {Coordinator.map((curr, index) => {
+          {props.Coordinator.map((curr, index) => {
             return (
-              <div className='A' >
+              <div className='A'>
                 <div className='B'>
+                  {console.log(curr?.image)}
                   <Image
                     className='imageCordinator'
-                    src='/pranavArya.webp'
+                    src={curr.image}
                     height='240px'
                     width='210px'
                   ></Image>
@@ -112,10 +117,10 @@ function Events() {
                     </div>
                     <div className='mailId'>
                       <a
-                        href={'mailTo:' + curr.mailId}
+                        href={'mailTo:' + curr.email}
                         style={{ color: '#2A1809', textDecoration: 'none' }}
                       >
-                        {curr.mailId}
+                        {curr.email}
                       </a>
                     </div>
                   </div>
@@ -123,7 +128,7 @@ function Events() {
                     <div className='inbox'>
                       <Image src='/phone.webp' height='25%' width='30%'></Image>
                     </div>
-                    <div className='mailId'>{curr.phone}</div>
+                    <div className='mailId'>{curr.phone_number}</div>
                   </div>
                 </div>
               </div>
