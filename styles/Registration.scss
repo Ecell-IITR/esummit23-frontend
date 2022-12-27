@@ -1,196 +1,226 @@
 .RegisterationContainer {
-    height: 120vh;
-    width: 100vw;
-    position: relative;
+  height: 120vh;
+  width: 100vw;
+  position: relative;
 }
 .RegisterHere {
-    display: flex;
-    flex-direction: row;
-   position: relative;
-   margin-top: -90vh;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-top: -90vh;
 }
 .RegisterLeft {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50vw;
 }
 .RegisterLogo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .registrationTitle {
-    font-family: 'Lexend';
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 35.2px;
-    color: #dcd1ad;
-   margin-top: 10px;
+  font-family: 'Lexend';
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 35.2px;
+  color: #dcd1ad;
+  margin-top: 10px;
 }
-.registrationsubTitle{
-    font-family: Nunito Sans;
-    font-size: 16px;
-    font-weight: 400px;
-    line-height: 20.8px;
-    color: #bdbdbd;
+.registrationsubTitle {
+  font-family: Nunito Sans;
+  font-size: 16px;
+  font-weight: 400px;
+  line-height: 20.8px;
+  color: #bdbdbd;
 }
 .formInput {
-    display: flex;
+  display: flex;
   flex-direction: column;
   margin-top: 10px;
   background-color: transparent;
   Input {
     width: 384px;
-    background-color:  transparent;
+    background-color: transparent;
     border: none;
     border-bottom: 1px white solid;
     margin: 10px;
-    }
+  }
 }
 .SelectGender {
-    color: #dcd1ad;
-    display: flex;
-    flex-direction: column;
-   margin-top: 10px;
+  color: #dcd1ad;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
 }
-.selectOneOption{
-    display: flex;
-    flex-direction: row;
-    margin: 10px;
-    color: #dcd1ad;
-    cursor: pointer;
+.selectOneOption {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  color: #dcd1ad;
+  cursor: pointer;
 
-
-    input[type="radio"] {
-      width: 10px;
-      height: 10px;
-      border: 1px solid white;
-      border-radius: 50%;
-      margin-right: 5px;
-    }
+  input[type='radio'] {
+    width: 10px;
+    height: 10px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
 }
-.nextButton{
-    width: 267px;
-    height: 48px;
-    background-color: #BA6D39;
-    border-radius: 100px;
-    padding: 12px, 72px, 12px, 72px;
-    font-weight: 600;
-    font-family: Lexend;
-    font-size: 18px;
-    color: #FFFFFF
+.nextButton {
+  width: 267px;
+  height: 48px;
+  background-color: #ba6d39;
+  border-radius: 100px;
+  padding: 12px, 72px, 12px, 72px;
+  font-weight: 600;
+  font-family: Lexend;
+  font-size: 18px;
+  color: #ffffff;
 }
 .identityButton {
-    display: flex;
-    flex-direction: column;
-    button{
-        color: #FFFFFF;
-        font-style: normal;
-       font-family: 'Lexend';
-        font-weight: 700;
-        font-size: 15px;
-        line-height: 22px;
-        
+  display: flex;
+  flex-direction: column;
+  button {
+    color: #ffffff;
+    font-style: normal;
+    font-family: 'Lexend';
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 22px;
+
     width: 448px;
     height: 62px;
     border-radius: 32px;
-    padding: 20px,64px;
+    padding: 20px, 64px;
     margin: 10px;
-    background-color: #BA6D39;
+    background-color: #ba6d39;
+  }
 }
-}
-.createAccount{
-width: 267px;
-height: 48px;
-border-radius: 100px;
-margin: 8px;
-padding: 12px,72px;
-background-color: #BA6D39;
-color: #FFFFFF;
+.createAccount {
+  width: 267px;
+  height: 48px;
+  border-radius: 100px;
+  margin: 8px;
+  padding: 12px, 72px;
+  background-color: #ba6d39;
+  color: #ffffff;
 }
 .mobRegisterContainer {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
   background-color: black;
 }
-.mobRegisterHere{
-     height: 100vh;
-    position: relative;
-   margin-top: -60vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.mobRegisterHere {
+  height: 100vh;
+  position: relative;
+  margin-top: -60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.summitLogo{
-    width: 100vw;
-    height: 307px;
-    display: flex;
+.summitLogo {
+  width: 100vw;
+  height: 307px;
+  display: flex;
 }
 .mobRegisterForm {
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+}
+.mobRegisterTitle {
+  color: #dcd1ad;
+  font-size: 28px;
+  font-weight: 600;
+  font-family: 'Lexend';
+}
+.mobRegisterSubTitle {
+  color: #bdbdbd;
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+}
+.mobRegisterForm {
+  input {
+    width: 320px;
+    border: none;
+    border-bottom: 1px solid #828282;
+    height: 44px;
+    margin: 5px;
+    background-color: transparent;
+  }
+}
+.genderInput {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #bdbdbd;
+  input {
+    height: 15px;
+    width: 15px;
+    font-family: 'Nunito Sans';
+    margin: 20px;
+  }
+}
+
+.mobRegisterForm {
+  button {
+    width: 320px;
+    height: 60px;
+    border-radius: 32px;
+    background-color: #ba6d39;
+    color: #ffffff;
+    font-family: 'Lexend';
+    margin-top: 24px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 110%;
+    letter-spacing: 1px;
+  }
+}
+
+button:hover {
+  background-color: #dcd1ad;
+  color: #12100e;
+}
+.mobRegisterFormMore {
     display: flex;
     flex-direction: column;
     align-items: center;
-   margin-top: 110px;
-}
- .mobRegisterTitle{
-    color: #DCD1AD;
-    font-size: 28px;
-    font-weight: 600;
-    font-family: 'Lexend';
- }   
- .mobRegisterSubTitle{
-    color: #BDBDBD;
-    font-family: 'Nunito Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
- }
- .mobRegisterForm {
-    input{
-        width: 320px;
-        border: none;
-        border-bottom: 1px solid #828282;
-        height: 44px;
-        margin: 6px;
-        background-color: transparent;
-    }
- }
-.genderInput {
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 20px;
-color: #BDBDBD;
+    margin-top: 80px;
+  }
+.mobRegisterFormMore {
     input {
-        height: 15px;
-        width: 15px;
-        font-family: 'Nunito Sans';
-        margin: 20px;
+      width: 320px;
+      border: none;
+      border-bottom: 1px solid #828282;
+      height: 40px;
+      margin: 5px;
+      background-color: transparent;
     }
-}
-
-.mobRegisterForm  {
+  }
+  .mobRegisterFormMore {
     button {
-        width: 320px;
-        height: 60px;
-        border-radius: 32px;
-        background-color: #BA6D39;
-        color: #FFFFFF;
-        font-family: 'Lexend';
-        margin-top: 24px;
-font-style: normal;
-font-weight: 700;
-font-size: 18px;
-line-height: 110%;
-letter-spacing: 1px;
+      width: 320px;
+      height: 60px;
+      border-radius: 32px;
+      background-color: #ba6d39;
+      color: #ffffff;
+      font-family: 'Lexend';
+      margin-top: 24px;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 110%;
+      letter-spacing: 1px;
     }
-}
-
-    button:hover {
-background-color: #DCD1AD;
-color: #12100E;
-    }
+  }
