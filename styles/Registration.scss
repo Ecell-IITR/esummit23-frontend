@@ -173,3 +173,24 @@ color: #BDBDBD;
     }
 }
 
+.mobRegisterForm  {
+    button {
+        width: 320px;
+        height: 60px;
+        border-radius: 32px;
+        background-color: #BA6D39;
+        color: #FFFFFF;
+        font-family: 'Lexend';
+        margin-top: 24px;
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 110%;
+letter-spacing: 1px;
+    }
+}
+
+    button:hover {
+background-color: #DCD1AD;
+color: #12100E;
+    }
