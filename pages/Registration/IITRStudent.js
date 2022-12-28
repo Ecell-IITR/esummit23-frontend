@@ -49,7 +49,7 @@ const IITRStudent = () => {
               width: '100vw',
             }}
           >
-            <Image src='/loginMob.webp' layout='fill' />
+            <Image src='/LoginMobile.png' layout='fill' />
           </div>
 
           <div className='RegisterHere'>

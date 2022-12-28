@@ -57,6 +57,12 @@ input:focus {
   border-bottom: 2px solid #dcd1ad;
   color: #dcd1ad;
 }
+input:not(:focus) {
+  
+  color: #bdbdbd;
+}
+
+
 .loginOrContainer {
   display: flex;
   flex-direction: row;

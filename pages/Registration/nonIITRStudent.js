@@ -49,7 +49,7 @@ const nonIITRStudent = () => {
         height: '100vh', width: '100vw'
       }}>
         <Image
-        src='/loginMob.webp'
+        src='/LoginMobile.png'
         layout='fill'
         />
       </div>

@@ -3,23 +3,27 @@
   width: 100vw;
   position: relative;
 }
+
 .RegisterHere {
   display: flex;
   flex-direction: row;
   position: relative;
   margin-top: -90vh;
 }
+
 .RegisterLeft {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 50vw;
 }
+
 .RegisterLogo {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .registrationTitle {
   font-family: 'Lexend';
   font-weight: 700;
@@ -28,6 +32,7 @@
   color: #dcd1ad;
   margin-top: 10px;
 }
+
 .registrationsubTitle {
   font-family: Nunito Sans;
   font-size: 16px;
@@ -35,11 +40,13 @@
   line-height: 20.8px;
   color: #bdbdbd;
 }
+
 .formInput {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
   background-color: transparent;
+
   Input {
     width: 384px;
     background-color: transparent;
@@ -48,12 +55,14 @@
     margin: 10px;
   }
 }
+
 .SelectGender {
   color: #dcd1ad;
   display: flex;
   flex-direction: column;
   margin-top: 10px;
 }
+
 .selectOneOption {
   display: flex;
   flex-direction: row;
@@ -69,6 +78,7 @@
     margin-right: 5px;
   }
 }
+
 .nextButton {
   width: 267px;
   height: 48px;
@@ -80,9 +90,11 @@
   font-size: 18px;
   color: #ffffff;
 }
+
 .identityButton {
   display: flex;
   flex-direction: column;
+
   button {
     color: #ffffff;
     font-style: normal;
@@ -99,6 +111,7 @@
     background-color: #ba6d39;
   }
 }
+
 .createAccount {
   width: 267px;
   height: 48px;
@@ -108,6 +121,7 @@
   background-color: #ba6d39;
   color: #ffffff;
 }
+
 .mobRegisterContainer {
   height: 100vh;
   width: 100vw;
@@ -115,6 +129,7 @@
   flex-direction: column;
   background-color: black;
 }
+
 .mobRegisterHere {
   height: 100vh;
   position: relative;
@@ -123,23 +138,27 @@
   flex-direction: column;
   align-items: center;
 }
+
 .summitLogo {
   width: 100vw;
   height: 307px;
   display: flex;
 }
+
 .mobRegisterForm {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 80px;
 }
+
 .mobRegisterTitle {
   color: #dcd1ad;
   font-size: 28px;
   font-weight: 600;
   font-family: 'Lexend';
 }
+
 .mobRegisterSubTitle {
   color: #bdbdbd;
   font-family: 'Nunito Sans';
@@ -147,6 +166,7 @@
   font-weight: 400;
   font-size: 14px;
 }
+
 .mobRegisterForm {
   input {
     width: 320px;
@@ -157,12 +177,14 @@
     background-color: transparent;
   }
 }
+
 .genderInput {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   color: #bdbdbd;
+
   input {
     height: 15px;
     width: 15px;
@@ -192,35 +214,39 @@ button:hover {
   background-color: #dcd1ad;
   color: #12100e;
 }
+
 .mobRegisterFormMore {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 80px;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+}
+
+
 .mobRegisterFormMore {
-    input {
-      width: 320px;
-      border: none;
-      border-bottom: 1px solid #828282;
-      height: 40px;
-      margin: 5px;
-      background-color: transparent;
-    }
+  input {
+    width: 320px;
+    border: none;
+    border-bottom: 1px solid #828282;
+    height: 40px;
+    margin: 5px;
+    background-color: transparent;
   }
-  .mobRegisterFormMore {
-    button {
-      width: 320px;
-      height: 60px;
-      border-radius: 32px;
-      background-color: #ba6d39;
-      color: #ffffff;
-      font-family: 'Lexend';
-      margin-top: 24px;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 110%;
-      letter-spacing: 1px;
-    }
+}
+
+.mobRegisterFormMore {
+  button {
+    width: 320px;
+    height: 60px;
+    border-radius: 32px;
+    background-color: #ba6d39;
+    color: #ffffff;
+    font-family: 'Lexend';
+    margin-top: 24px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 110%;
+    letter-spacing: 1px;
   }
+}
