@@ -6,6 +6,7 @@ import FetchApi from '../../utils/fetchAPI';
 import { useMobile, useUpdateMobile } from '../../utils/MobileContext';
 import Identity from '../../Components/register/Identity';
 import CampusAmbassader from '../../Components/register/CampusAmbassader';
+import IITRStudent from '../../Components/register/IITRStudent'; 
 const Registration = () => {
   const [Fullname, setFullname] = useState('');
   const [Email, setEmail] = useState('');
@@ -287,6 +288,17 @@ const Registration = () => {
           />
         </>
       );
+    else if (UserType == 'stuIITR')
+    return (
+      <>
+        <IITRStudent
+          name={Fullname}
+          email={Email}
+          contact={Contact}
+          Gender={Gender}
+        />
+      </>
+    );
   }
 };
 export default Registration;

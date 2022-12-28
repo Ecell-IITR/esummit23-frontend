@@ -7,12 +7,13 @@ import { Authenticate } from '../../utils';
 import { useRouter } from 'next/router';
 const CampusAmbassader = ({ name, email, contact, Gender }) => {
   const [Institute, setInstitute] = useState('');
-  const [Degree, setDegree] = useState('');
+  const [Branch, setBranch] = useState('');
   const [State, setState] = useState('');
   const [Year, setYear] = useState('');
   const [City, setCity] = useState('');
   const [password, setpassword] = useState('');
   const [Confirmpassword, setConfirmpassword] = useState('');
+  const [Degree, setDegree] = useState('');
   const setMobile = useUpdateMobile();
   const router = useRouter();
   const Submit = () => {
@@ -41,8 +42,9 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
               router.push('/dashboard');
             }
           })
-          .catch((err) => {alert('Registered UnSuccessfully');});
-        
+          .catch((err) => {
+            alert('Registered UnSuccessfully');
+          });
       } else {
         alert('password doesnot match');
       }
@@ -54,7 +56,92 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
     setMobile();
   }, []);
   if (useMobile().isMobile) {
-    return <div></div>;
+    return (
+      <>
+        <div className='mobRegisterContainer'>
+          <div
+            style={{
+              width: '100vw',
+              height: '60vh',
+              backgroundImage: 'url(/loginMobile.png)',
+              backgroundSize: '100vw 60vh',
+            }}
+          >
+            {/* <Image width='100%' height='40' src='/loginMobile.png' /> */}
+          </div>
+          <div className='mobRegisterHere'>
+            <div className='summitLogo'>
+              <div
+                style={{
+                  width: '200px',
+                  height: '100px',
+                  margin: 'auto',
+                  position: 'relative',
+                }}
+              >
+                <Image width='294' height='77' src='/summitLogo.png' />
+              </div>
+            </div>
+            <div className='mobRegisterFormMore'>
+              <h1 className='mobRegisterTitle'> Personal Details</h1>
+              <h3 className='mobRegisterSubTitle'>
+                Please fill all the required fields.
+              </h3>
+
+              <input
+                styl={{ margintop: '36px' }}
+                type='text'
+                placeholder='Institute Name'
+                value={Institute}
+                onChange={(e) => setInstitute(e.target.value)}
+              />
+              <input
+                type='text'
+                placeholder='Branch'
+                value={Branch}
+                onChange={(e) => setBranch(e.target.value)}
+              />
+              <input
+                type='number'
+                placeholder='Current Year'
+                value={Year}
+                onChange={(e) => setYear(e.target.value)}
+              />
+              <input
+                type='text'
+                placeholder='State'
+                value={State}
+                onChange={(e) => setState(e.target.value)}
+              />
+              <input
+                type='text'
+                placeholder='City'
+                value={City}
+                onChange={(e) => setCity(e.target.value)}
+              />
+              <input
+                type='password'
+                placeholder='Set password'
+                value={password}
+                onChange={(e) => setpassword(e.target.value)}
+              />
+              <input
+                type='password'
+                placeholder='Confirm Password'
+                value={Confirmpassword}
+                onChange={(e) => setConfirmpassword(e.target.value)}
+              />
+
+              <button type='submit' onClick={Submit}>
+                Create Account
+              </button>
+            </div>
+
+            <div className='RegisterRight'></div>
+          </div>
+        </div>
+      </>
+    );
   } else {
     return (
       <>
@@ -87,43 +174,43 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
                     type='text'
                     value={Institute}
                     placeholder='Institute Name'
-                    onChange={(e) => setInstitute(e.target.value)}
+                    onChange={(e) => setInstitute()}
                   />
                   <input
                     type='text'
                     value={Degree}
-                    placeholder='Branch'
-                    onChange={(e) => setDegree(e.target.value)}
+                    placeholder='Degree'
+                    onChange={(e) => setDegree()}
                   />
                   <input
-                    type='text'
+                    type='number'
                     value={Year}
                     placeholder='Current Year'
-                    onChange={(e) => setYear(e.target.value)}
+                    onChange={(e) => setYear()}
                   />
                   <input
                     type='text'
                     value={State}
                     placeholder='State'
-                    onChange={(e) => setState(e.target.value)}
+                    onChange={(e) => setState()}
                   />
                   <input
                     type='text'
                     value={City}
                     placeholder='City'
-                    onChange={(e) => setCity(e.target.value)}
+                    onChange={(e) => setCity()}
                   />
                   <input
                     type='password'
                     value={password}
                     placeholder='Set Password'
-                    onChange={(e) => setpassword(e.target.value)}
+                    onChange={(e) => setpassword()}
                   />
                   <input
                     type='password'
                     value={Confirmpassword}
                     placeholder='Confirm Password'
-                    onChange={(e) => setConfirmpassword(e.target.value)}
+                    onChange={(e) => setConfirmpassword()}
                   />
                 </div>
                 <button

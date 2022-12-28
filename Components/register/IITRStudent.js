@@ -3,8 +3,9 @@ import Image from 'next/image';
 import { REGISTER_API } from '../../utils/APIs';
 import FetchApi from '../../utils/fetchAPI';
 import { useMobile, useUpdateMobile } from '../../utils/MobileContext';
-
-const IITRStudent = () => {
+import { Authenticate } from '../../utils';
+import { useRouter } from 'next/router';
+const IITRStudent = ({ name, email, contact, Gender }) => {
   const [Branch, setBranch] = useState('');
   const [Year, setYear] = useState('');
   const [State, setState] = useState('');
@@ -12,17 +13,35 @@ const IITRStudent = () => {
   const [password, setpassword] = useState('');
   const [Confirmpassword, setConfirmpassword] = useState('');
   const setMobile = useUpdateMobile();
-
+  const router = useRouter();
   const Submit = () => {
-    if (password.length > 7) {
+    if (password?.length > 7) {
       if (password === Confirmpassword) {
         FetchApi('POST', REGISTER_API, {
-          branch: Branch,
-          year: Year,
-          city: City,
-          state: State,
-          password: password,
-        });
+          UserType: 'stu',
+          user: {
+            full_name: name,
+            email: email,
+            phone_number: contact,
+            collage: "IIT Roorkee",
+            branch: Branch,
+            year: Year,
+            city: City,
+            state: State,
+            password: password,
+          },
+        })
+          .then((res) => {
+            if (res.status === 201) {
+              
+              Authenticate(res?.data?.name, res?.data?.at);
+              router.push('/dashboard');
+            }
+          })
+          .catch((err) => {
+            console.log(err);
+            alert('Registered UnSuccessfully');
+          });
       } else {
         alert('password doesnot match');
       }
@@ -30,7 +49,6 @@ const IITRStudent = () => {
       alert('password should have 8 or more characters');
     }
   };
-
   useEffect(() => {
     setMobile();
   }, []);
