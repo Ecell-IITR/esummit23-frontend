@@ -3,9 +3,12 @@ import Navbar from 'react-bootstrap/Navbar';
 import React, { useState, useEffect} from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { getUserRoleType } from '../../utils';
 
 
 function NavDesktop() {
+
+  const roleType=getUserRoleType();
   const [active, setActive] = useState("");
 
   const router = useRouter();
@@ -33,6 +36,20 @@ function NavDesktop() {
         setActive('');
     }
   });
+
+
+
+const changeUser =()=>
+{
+alert("smart");
+}
+
+
+
+
+
+
+
   return (
     <Navbar className="navbarParent">
       {/* <Container fluid> */}
@@ -123,10 +140,23 @@ function NavDesktop() {
         </li>
           </ul>
           <div
+          
             className='d-flex align-items-center justify-content-center navBut'
             style={{ gap: '36px' }}
           >
-            <button  className="navbarButton">Login / Register</button>
+
+            <Link href={roleType ? "/dashboard":"/login"}>
+
+            
+            {roleType=='stu' ? <div className='updateRole' style={{color:"white"}}>student</div>:
+            roleType=='ca'? <div className='updateRole' style={{color:"white"}}>Campus Ambassador</div>:
+            roleType=='startup'? <div className='updateRole' style={{color:"white"}}>StartUp</div>:
+            roleType=='prof'? <div className='updateRole' style={{color:"white"}}>Professor</div>:
+            <button className="navbarButton">Login/Register</button>
+            }
+            
+            </Link>
+
           </div>
           
       {/* </Container> */}
