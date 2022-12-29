@@ -5,7 +5,7 @@ import { useMobile, useUpdateMobile } from '../../utils/MobileContext';
 import React, { useState, useEffect } from 'react';
 import { Authenticate } from '../../utils';
 import { useRouter } from 'next/router';
-const NonIITRStudent = ({ name, email, contact, Gender }) => {
+const NonIITRStudent = ({ name, email, contact, Gender,RefferalCode }) => {
   const [Institute, setInstitute] = useState('');
   const [Degree, setDegree] = useState('');
   const [Year, setYear] = useState('');
@@ -22,6 +22,7 @@ const NonIITRStudent = ({ name, email, contact, Gender }) => {
       if (password === Confirmpassword) {
         FetchApi('POST', REGISTER_API, {
           UserType: 'stu',
+          referred_by: RefferalCode,
           user: {
             full_name: name,
             email: email,

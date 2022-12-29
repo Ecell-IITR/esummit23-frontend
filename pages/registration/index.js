@@ -14,17 +14,8 @@ const Registration = () => {
   const [Email, setEmail] = useState('');
   const [Contact, setContact] = useState('');
   const [Gender, setGender] = useState('Female');
-  const [Branch, setBranch] = useState('');
-  const [Year, setYear] = useState('');
-  const [State, setState] = useState('');
-  const [City, setCity] = useState('');
-  const [password, setpassword] = useState('');
-  const [Confirmpassword, setConfirmpassword] = useState('');
-  const [Institute, setInstitute] = useState('');
-  const [Degree, setDegree] = useState('');
-  const [Organisation, setOrganisation] = useState('');
-  const [Indusrty, setIndusrty] = useState('');
   const [RenderId, setRenderId] = useState(0);
+  const [RefferalCode, setRefferalCode] = useState("");
   const [UserType, setUserType] = useState('');
 
   const setMobile = useUpdateMobile();
@@ -93,6 +84,13 @@ const Registration = () => {
                       style={{ margin: '10px' }}
                       value={Contact}
                       onChange={(e) => setContact(e.target.value)}
+                    />
+                    <input
+                      type='text'
+                      placeholder='Reffreal code'
+                      style={{ margin: '10px' }}
+                      value={RefferalCode}
+                      onChange={(e) => setRefferalCode(e.target.value)}
                     />
                   </div>
 
@@ -195,7 +193,15 @@ const Registration = () => {
                       value={Contact}
                       onChange={(e) => setContact(e.target.value)}
                     />
+                    <input
+                      type='text'
+                      placeholder='Reffreal code'
+                      style={{ margin: '10px' }}
+                      value={RefferalCode}
+                      onChange={(e) => setRefferalCode(e.target.value)}
+                    />
                   </div>
+                  
                   <div className='SelectGender'>
                     <div>Gender</div>
                     <div className='selectOneOption'>
@@ -298,6 +304,7 @@ const Registration = () => {
           email={Email}
           contact={Contact}
           Gender={Gender}
+          RefferalCode={RefferalCode}
         />
       </>
     );
@@ -309,6 +316,7 @@ const Registration = () => {
           email={Email}
           contact={Contact}
           Gender={Gender}
+          RefferalCode={RefferalCode}
         />
       </>
     );
@@ -320,6 +328,7 @@ const Registration = () => {
           email={Email}
           contact={Contact}
           Gender={Gender}
+          RefferalCode={RefferalCode}
         />
       </>
     );

@@ -80,9 +80,7 @@ function Login() {
               </h3>
               <input
                 className={
-                  email == ''
-                    ? 'LoginFormLeftInput'
-                    : 'LoginFormLeftInput inputGold'
+                  email == '' ? 'LoginFormLeftInput' : 'LoginFormLeftInput inputGold'
                 }
                 onChange={(e) => setemail(e.target.value)}
                 type='text'

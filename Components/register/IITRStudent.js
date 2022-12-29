@@ -5,7 +5,7 @@ import FetchApi from '../../utils/fetchAPI';
 import { useMobile, useUpdateMobile } from '../../utils/MobileContext';
 import { Authenticate } from '../../utils';
 import { useRouter } from 'next/router';
-const IITRStudent = ({ name, email, contact, Gender }) => {
+const IITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
   const [Branch, setBranch] = useState('');
   const [Year, setYear] = useState('');
   const [State, setState] = useState('');
@@ -21,6 +21,7 @@ const IITRStudent = ({ name, email, contact, Gender }) => {
       if (password === Confirmpassword) {
         FetchApi('POST', REGISTER_API, {
           UserType: 'stu',
+          referred_by: RefferalCode,
           user: {
             full_name: name,
             email: email,
@@ -215,7 +216,15 @@ const IITRStudent = ({ name, email, contact, Gender }) => {
                       style={{ marginTop: '-20px' }}
                       onClick={() => setShowPassword(!ShowPassword)}
                     >
-                      <Image width='20' height='20' src={ShowPassword? '/Hidepassword.webp' :'/Showpassword.webp'} />
+                      <Image
+                        width='20'
+                        height='20'
+                        src={
+                          ShowPassword
+                            ? '/Hidepassword.webp'
+                            : '/Showpassword.webp'
+                        }
+                      />
                     </div>
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -237,7 +246,15 @@ const IITRStudent = ({ name, email, contact, Gender }) => {
                       style={{ marginTop: '-20px' }}
                       onClick={() => setShowPassword2(!ShowPassword2)}
                     >
-                      <Image width='20' height='20' src={ShowPassword2? '/Hidepassword.webp' :'/Showpassword.webp'} />
+                      <Image
+                        width='20'
+                        height='20'
+                        src={
+                          ShowPassword2
+                            ? '/Hidepassword.webp'
+                            : '/Showpassword.webp'
+                        }
+                      />
                     </div>
                   </div>
                 </div>
