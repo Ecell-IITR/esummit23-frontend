@@ -7,6 +7,8 @@ import { useMobile, useUpdateMobile } from '../../utils/MobileContext';
 import Identity from '../../Components/register/Identity';
 import CampusAmbassader from '../../Components/register/CampusAmbassader';
 import IITRStudent from '../../Components/register/IITRStudent'; 
+import NonIITRStudent from '../../Components/register/nonIITRStudent'
+import Professional from '../../Components/register/Professional';
 const Registration = () => {
   const [Fullname, setFullname] = useState('');
   const [Email, setEmail] = useState('');
@@ -292,6 +294,28 @@ const Registration = () => {
     return (
       <>
         <IITRStudent
+          name={Fullname}
+          email={Email}
+          contact={Contact}
+          Gender={Gender}
+        />
+      </>
+    );
+    else if (UserType == 'stu')
+    return (
+      <>
+        <NonIITRStudent
+          name={Fullname}
+          email={Email}
+          contact={Contact}
+          Gender={Gender}
+        />
+      </>
+    );
+    else if (UserType == 'proff')
+    return (
+      <>
+        <Professional
           name={Fullname}
           email={Email}
           contact={Contact}

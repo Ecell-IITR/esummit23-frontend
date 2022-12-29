@@ -12,6 +12,8 @@ const IITRStudent = ({ name, email, contact, Gender }) => {
   const [City, setCity] = useState('');
   const [password, setpassword] = useState('');
   const [Confirmpassword, setConfirmpassword] = useState('');
+  const [ShowPassword, setShowPassword] = useState(false);
+  const [ShowPassword2, setShowPassword2] = useState(false);
   const setMobile = useUpdateMobile();
   const router = useRouter();
   const Submit = () => {
@@ -23,7 +25,7 @@ const IITRStudent = ({ name, email, contact, Gender }) => {
             full_name: name,
             email: email,
             phone_number: contact,
-            collage: "IIT Roorkee",
+            collage: 'IIT Roorkee',
             branch: Branch,
             year: Year,
             city: City,
@@ -33,7 +35,6 @@ const IITRStudent = ({ name, email, contact, Gender }) => {
         })
           .then((res) => {
             if (res.status === 201) {
-              
               Authenticate(res?.data?.name, res?.data?.at);
               router.push('/dashboard');
             }
@@ -68,68 +69,67 @@ const IITRStudent = ({ name, email, contact, Gender }) => {
             {/* <Image width='100%' height='40' src='/loginMobile.png' /> */}
           </div>
           <div className='mobRegisterForm'>
-          <div className='mobRegisterHere'>
-            <div className='summitLogo'>
-              <div
-                style={{
-                  width: '200px',
-                  height: '100px',
-                  margin: 'auto',
-                  position: 'relative',
-                }}
-              >
-                <Image width='294' height='77' src='/summitLogo.png' />
+            <div className='mobRegisterHere'>
+              <div className='summitLogo'>
+                <div
+                  style={{
+                    width: '200px',
+                    height: '100px',
+                    margin: 'auto',
+                    position: 'relative',
+                  }}
+                >
+                  <Image width='294' height='77' src='/summitLogo.png' />
+                </div>
               </div>
-            </div>
-            
+
               <h1 className='mobRegisterTitle'> Personal Details</h1>
               <h3 className='mobRegisterSubTitle'>
                 Please fill all the required fields.
               </h3>
-              
-                <input
-                  type='text'
-                  placeholder='Branch Name'
-                  value={Branch}
-                  onChange={(e) => setBranch(e.target.value)}
-                  style={{
-                    marginTop: '36px'
-                  }}
-                />
 
-                <input
-                  type='number'
-                  placeholder='Current Year'
-                  value={Year}
-                  onChange={(e) => setYear(e.target.value)}
-                />
-                <input
-                  type='text'
-                  placeholder='State'
-                  value={State}
-                  onChange={(e) => setState(e.target.value)}
-                />
+              <input
+                type='text'
+                placeholder='Branch Name'
+                value={Branch}
+                onChange={(e) => setBranch(e.target.value)}
+                style={{
+                  marginTop: '36px',
+                }}
+              />
 
-                <input
-                  type='text'
-                  placeholder='City'
-                  value={City}
-                  onChange={(e) => setCity(e.target.value)}
-                />
+              <input
+                type='text'
+                placeholder='Current Year'
+                value={Year}
+                onChange={(e) => setYear(e.target.value)}
+              />
+              <input
+                type='text'
+                placeholder='State'
+                value={State}
+                onChange={(e) => setState(e.target.value)}
+              />
 
-                <input
-                  type='password'
-                  placeholder='Set password'
-                  value={password}
-                  onChange={(e) => setpassword(e.target.value)}
-                />
-                <input
-                  type='password'
-                  placeholder='Confirm Password'
-                  value={Confirmpassword}
-                  onChange={(e) => setConfirmpassword(e.target.value)}
-                />
-             
+              <input
+                type='text'
+                placeholder='City'
+                value={City}
+                onChange={(e) => setCity(e.target.value)}
+              />
+
+              <input
+                type='password'
+                placeholder='Set password'
+                value={password}
+                onChange={(e) => setpassword(e.target.value)}
+              />
+              <input
+                type='password'
+                placeholder='Confirm Password'
+                value={Confirmpassword}
+                onChange={(e) => setConfirmpassword(e.target.value)}
+              />
 
               <button
                 type='submit'
@@ -138,9 +138,8 @@ const IITRStudent = ({ name, email, contact, Gender }) => {
               >
                 Create Account
               </button>
-           
+            </div>
           </div>
-        </div>
         </div>
       </>
     );
@@ -180,7 +179,7 @@ const IITRStudent = ({ name, email, contact, Gender }) => {
                     onChange={(e) => setBranch(e.target.value)}
                   />
                   <input
-                    type='number'
+                    type='text'
                     placeholder='Current Year'
                     value={Year}
                     onChange={(e) => setYear(e.target.value)}
@@ -197,18 +196,50 @@ const IITRStudent = ({ name, email, contact, Gender }) => {
                     value={City}
                     onChange={(e) => setCity(e.target.value)}
                   />
-                  <input
-                    type='password'
-                    placeholder='Set Password'
-                    value={password}
-                    onChange={(e) => setpassword(e.target.value)}
-                  />
-                  <input
-                    type='password'
-                    placeholder='Confirm Password'
-                    value={Confirmpassword}
-                    onChange={(e) => setConfirmpassword(e.target.value)}
-                  />
+                  <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <input
+                      className={
+                        password == ''
+                          ? 'LoginFormLeftInput'
+                          : 'LoginFormLeftInput inputGold'
+                      }
+                      onChange={(e) => {
+                        setpassword(e.target.value);
+                      }}
+                      type={ShowPassword ? 'text' : 'Password'}
+                      value={password}
+                      placeholder='Passsword'
+                    />
+                    <div
+                      className='LoginFormLeftShowPassword'
+                      style={{ marginTop: '-20px' }}
+                      onClick={() => setShowPassword(!ShowPassword)}
+                    >
+                      <Image width='20' height='20' src={ShowPassword? '/Hidepassword.webp' :'/Showpassword.webp'} />
+                    </div>
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <input
+                      className={
+                        password == ''
+                          ? 'LoginFormLeftInput'
+                          : 'LoginFormLeftInput inputGold'
+                      }
+                      onChange={(e) => {
+                        setConfirmpassword(e.target.value);
+                      }}
+                      type={ShowPassword2 ? 'text' : 'Password'}
+                      value={Confirmpassword}
+                      placeholder='Confirm Passsword'
+                    />
+                    <div
+                      className='LoginFormLeftShowPassword'
+                      style={{ marginTop: '-20px' }}
+                      onClick={() => setShowPassword2(!ShowPassword2)}
+                    >
+                      <Image width='20' height='20' src={ShowPassword? '/Hidepassword.webp' :'/Showpassword.webp'} />
+                    </div>
+                  </div>
                 </div>
                 <button
                   type='submit'
