@@ -13,6 +13,8 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
   const [City, setCity] = useState('');
   const [password, setpassword] = useState('');
   const [Confirmpassword, setConfirmpassword] = useState('');
+  const [ShowPassword, setShowPassword] = useState(false);
+  const [ShowPassword2, setShowPassword2] = useState(false);
   const [Degree, setDegree] = useState('');
   const setMobile = useUpdateMobile();
   const router = useRouter();
@@ -102,7 +104,7 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
                 onChange={(e) => setBranch(e.target.value)}
               />
               <input
-                type='number'
+                type='text'
                 placeholder='Current Year'
                 value={Year}
                 onChange={(e) => setYear(e.target.value)}
@@ -119,18 +121,50 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
                 value={City}
                 onChange={(e) => setCity(e.target.value)}
               />
-              <input
-                type='password'
-                placeholder='Set password'
-                value={password}
-                onChange={(e) => setpassword(e.target.value)}
-              />
-              <input
-                type='password'
-                placeholder='Confirm Password'
-                value={Confirmpassword}
-                onChange={(e) => setConfirmpassword(e.target.value)}
-              />
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <input
+                  className={
+                    password == ''
+                      ? 'LoginFormLeftInput'
+                      : 'LoginFormLeftInput inputGold'
+                  }
+                  onChange={(e) => {
+                    setpassword(e.target.value);
+                  }}
+                  type={ShowPassword ? 'text' : 'Password'}
+                  value={password}
+                  placeholder='Passsword'
+                />
+                <div
+                  className='LoginFormLeftShowPassword'
+                  style={{ marginTop: '-20px' }}
+                  onClick={() => setShowPassword(!ShowPassword)}
+                >
+                  <Image width='20' height='20' src={ShowPassword? '/Hidepassword.webp' :'/Showpassword.webp'} />
+                </div>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <input
+                  className={
+                    password == ''
+                      ? 'LoginFormLeftInput'
+                      : 'LoginFormLeftInput inputGold'
+                  }
+                  onChange={(e) => {
+                    setConfirmpassword(e.target.value);
+                  }}
+                  type={ShowPassword2 ? 'text' : 'Password'}
+                  value={Confirmpassword}
+                  placeholder='Confirm Passsword'
+                />
+                <div
+                  className='LoginFormLeftShowPassword'
+                  style={{ marginTop: '-20px' }}
+                  onClick={() => setShowPassword2(!ShowPassword2)}
+                >
+                  <Image width='20' height='20' src={ShowPassword2? '/Hidepassword.webp' :'/Showpassword.webp'} />
+                </div>
+              </div>
 
               <button type='submit' onClick={Submit}>
                 Create Account
@@ -183,7 +217,7 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
                     onChange={(e) => setDegree()}
                   />
                   <input
-                    type='number'
+                    type='text'
                     value={Year}
                     placeholder='Current Year'
                     onChange={(e) => setYear()}
@@ -200,18 +234,50 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
                     placeholder='City'
                     onChange={(e) => setCity()}
                   />
-                  <input
-                    type='password'
-                    value={password}
-                    placeholder='Set Password'
-                    onChange={(e) => setpassword()}
-                  />
-                  <input
-                    type='password'
-                    value={Confirmpassword}
-                    placeholder='Confirm Password'
-                    onChange={(e) => setConfirmpassword()}
-                  />
+                  <div style={{ display: 'flex', alignItems: 'center' }}>
+                <input
+                  className={
+                    password == ''
+                      ? 'LoginFormLeftInput'
+                      : 'LoginFormLeftInput inputGold'
+                  }
+                  onChange={(e) => {
+                    setpassword(e.target.value);
+                  }}
+                  type={ShowPassword ? 'text' : 'Password'}
+                  value={password}
+                  placeholder='Passsword'
+                />
+                <div
+                  className='LoginFormLeftShowPassword'
+                  style={{ marginTop: '-20px' }}
+                  onClick={() => setShowPassword(!ShowPassword)}
+                >
+                  <Image width='20' height='20' src={ShowPassword? '/Hidepassword.webp' :'/Showpassword.webp'} />
+                </div>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <input
+                  className={
+                    password == ''
+                      ? 'LoginFormLeftInput'
+                      : 'LoginFormLeftInput inputGold'
+                  }
+                  onChange={(e) => {
+                    setConfirmpassword(e.target.value);
+                  }}
+                  type={ShowPassword2 ? 'text' : 'Password'}
+                  value={Confirmpassword}
+                  placeholder='Confirm Passsword'
+                />
+                <div
+                  className='LoginFormLeftShowPassword'
+                  style={{ marginTop: '-20px' }}
+                  onClick={() => setShowPassword2(!ShowPassword2)}
+                >
+                  <Image width='20' height='20' src={ShowPassword2? '/Hidepassword.webp' :'/Showpassword.webp'} />
+                </div>
+              </div>
                 </div>
                 <button
                   type='submit'

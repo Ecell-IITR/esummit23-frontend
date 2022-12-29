@@ -101,7 +101,7 @@ const NonIITRStudent = ({ name, email, contact, Gender }) => {
                 onChange={(e) => setDegree(e.target.value)}
               />
               <input
-                type='number'
+                type='text'
                 placeholder='Current Year'
                 value={Year}
                 onChange={(e) => setYear(e.target.value)}
@@ -214,7 +214,7 @@ const NonIITRStudent = ({ name, email, contact, Gender }) => {
                     onChange={(e) => setDegree(e.target.value)}
                   />
                   <input
-                    type='number'
+                    type='text'
                     placeholder='Current Year'
                     value={Year}
                     onChange={(e) => setYear(e.target.value)}

@@ -75,7 +75,7 @@ const IITRStudent = () => {
                    />
 
                   <input
-                    type='number'
+                    type='text'
                     placeholder='Current Year'
                     value={Year}
                     onChange={(e) => setYear(e.target.value)}
@@ -160,7 +160,7 @@ const IITRStudent = () => {
                     onChange={(e) => setBranch(e.target.value)}
                   />
                   <input
-                    type='number'
+                    type='text'
                     placeholder='Current Year'
                     value={Year}
                     onChange={(e) => setYear(e.target.value)}

@@ -82,7 +82,7 @@ const CampusAmbassader = () => {
                 onChange={(e) => setBranch(e.target.value)}
               />
               <input
-                type='number'
+                type='text'
                 placeholder='Current Year'
                 value={Year}
                 onChange={(e) => setYear(e.target.value)}
@@ -163,7 +163,7 @@ const CampusAmbassader = () => {
                     onChange={(e) => setDegree()}
                   />
                   <input
-                    type='number'
+                    type='text'
                     value={Year}
                     placeholder='Current Year'
                     onChange={(e) => setYear()}
