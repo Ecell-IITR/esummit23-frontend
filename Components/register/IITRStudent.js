@@ -237,7 +237,7 @@ const IITRStudent = ({ name, email, contact, Gender }) => {
                       style={{ marginTop: '-20px' }}
                       onClick={() => setShowPassword2(!ShowPassword2)}
                     >
-                      <Image width='20' height='20' src={ShowPassword? '/Hidepassword.webp' :'/Showpassword.webp'} />
+                      <Image width='20' height='20' src={ShowPassword2? '/Hidepassword.webp' :'/Showpassword.webp'} />
                     </div>
                   </div>
                 </div>
