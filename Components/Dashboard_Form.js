@@ -36,12 +36,12 @@ function Dashboard() {
         <div className='otherDetailsMember_GRF'>
           <div className='autoFill_GRF'>
             <div
-            style={index>0?{display:"none"}:{}} 
+            style={index>=0?{display:"none"}:{}} 
             className='select_GRF'>
             <input class="checkbox-custom" type="checkbox"/>
             </div>
             <div className='autoFillDetails_GRF'
-            style={index>0?{display:"none"}:{}} >
+            style={index>=0 ?{display:"none"}:{}} >
               Auto fill if you are the team leader
             </div>
           </div>
