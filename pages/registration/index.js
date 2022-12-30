@@ -6,8 +6,8 @@ import FetchApi from '../../utils/fetchAPI';
 import { useMobile, useUpdateMobile } from '../../utils/MobileContext';
 import Identity from '../../Components/register/Identity';
 import CampusAmbassader from '../../Components/register/CampusAmbassader';
-import IITRStudent from '../../Components/register/IITRStudent'; 
-import NonIITRStudent from '../../Components/register/nonIITRStudent'
+import IITRStudent from '../../Components/register/IITRStudent';
+import NonIITRStudent from '../../Components/register/nonIITRStudent';
 import Professional from '../../Components/register/Professional';
 const Registration = () => {
   const [Fullname, setFullname] = useState('');
@@ -15,7 +15,7 @@ const Registration = () => {
   const [Contact, setContact] = useState('');
   const [Gender, setGender] = useState('Female');
   const [RenderId, setRenderId] = useState(0);
-  const [RefferalCode, setRefferalCode] = useState("");
+  const [RefferalCode, setRefferalCode] = useState('');
   const [UserType, setUserType] = useState('');
 
   const setMobile = useUpdateMobile();
@@ -61,9 +61,11 @@ const Registration = () => {
                   </h3>
                   <div className='FormInputs'>
                     <input
-                     className={
-                      Fullname == '' ? 'LoginFormLeftInput' : 'LoginFormLeftInput inputGold'
-                    }
+                      className={
+                        Fullname == ''
+                          ? 'LoginFormLeftInput'
+                          : 'LoginFormLeftInput inputGold'
+                      }
                       type='text'
                       placeholder='Full Name'
                       style={{ margin: '10px' }}
@@ -74,7 +76,9 @@ const Registration = () => {
                     <input
                       type='email'
                       className={
-                        Email == '' ? 'LoginFormLeftInput' : 'LoginFormLeftInput inputGold'
+                        Email == ''
+                          ? 'LoginFormLeftInput'
+                          : 'LoginFormLeftInput inputGold'
                       }
                       placeholder='Email address'
                       value={Email}
@@ -87,7 +91,9 @@ const Registration = () => {
                     <input
                       type='text'
                       className={
-                        Contact == '' ? 'LoginFormLeftInput' : 'LoginFormLeftInput inputGold'
+                        Contact == ''
+                          ? 'LoginFormLeftInput'
+                          : 'LoginFormLeftInput inputGold'
                       }
                       placeholder='Contact Number'
                       style={{ margin: '10px' }}
@@ -97,7 +103,9 @@ const Registration = () => {
                     <input
                       type='text'
                       className={
-                        RefferalCode == '' ? 'LoginFormLeftInput' : 'LoginFormLeftInput inputGold'
+                        RefferalCode == ''
+                          ? 'LoginFormLeftInput'
+                          : 'LoginFormLeftInput inputGold'
                       }
                       placeholder='Reffreal code'
                       style={{ margin: '10px' }}
@@ -106,51 +114,90 @@ const Registration = () => {
                     />
                   </div>
 
-                  <div>
+                  <div
+                    style={{
+                      background: '#12100e',
+                      width: '100%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      flexDirection: 'column',
+                    }}
+                  >
                     <div className='SelectGender'>Gender</div>
                     <div className='RegisterGender'>
-                      <input
-                        type='radio'
-                        name='SelectGender'
-                        value='Male'
-                        checked={Gender == 'Male'}
-                        onChange={(e) => setGender(e.target.value)}
-                      />
-                      Male
-                      <input
-                        type='radio'
-                        name='SelectGender'
-                        value='Female'
-                        checked={Gender == 'Female'}
-                        onChange={(e) => setGender(e.target.value)}
-                      />
-                      Female
-                      <input
-                        type='radio'
-                        name='SelectGender'
-                        value='Other'
-                        checked={Gender == 'Other'}
-                        onChange={(e) => setGender(e.target.value)}
-                      />
-                      Others
+                      <div>
+                        <input
+                          type='radio'
+                          name='SelectGender'
+                          value='Male'
+                          checked={Gender == 'Male'}
+                          onChange={(e) => setGender(e.target.value)}
+                        />
+                        Male
+                      </div>
+                      <div>
+                        <input
+                          type='radio'
+                          name='SelectGender'
+                          value='Female'
+                          checked={Gender == 'Female'}
+                          onChange={(e) => setGender(e.target.value)}
+                        />
+                        Female
+                      </div>
+                      <div>
+                        <input
+                          type='radio'
+                          name='SelectGender'
+                          value='Other'
+                          checked={Gender == 'Other'}
+                          onChange={(e) => setGender(e.target.value)}
+                        />
+                        Others
+                      </div>
                     </div>
                   </div>
-                  <div>
+                  <div
+                    style={{
+                      background: '#12100e',
+                      width: '100%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      flexDirection: 'column',
+                    }}
+                  >
                     <button
                       onClick={() => {
                         setRenderId(1);
                       }}
                       type='submit'
-                      className='RegisterButton'
+                      className='LoginButton'
                     >
-                      Login
+                      Next
                     </button>
                   </div>
-                  <div className='AlreadyRegistered'>
-                    <div>Already Registered?</div>
-                    <Link href='Identity'>
-                      <div>Login now</div>
-                    </Link>
+                  <div
+                    style={{
+                      background: '#12100e',
+                      width: '100%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      flexDirection: 'column',
+                    }}
+                  >
+                    <div className='AlreadyRegistered'>
+                      <div>Already Registered?</div>
+                      <Link href='login'>
+                        <div
+                          style={{
+                            textDecorationLine: 'underline',
+                            color: '#DCD1AD',
+                          }}
+                        >
+                          Login now
+                        </div>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -213,7 +260,7 @@ const Registration = () => {
                       onChange={(e) => setRefferalCode(e.target.value)}
                     />
                   </div>
-                  
+
                   <div className='SelectGender'>
                     <div>Gender</div>
                     <div className='selectOneOption'>
@@ -309,41 +356,41 @@ const Registration = () => {
         </>
       );
     else if (UserType == 'stuIITR')
-    return (
-      <>
-        <IITRStudent
-          name={Fullname}
-          email={Email}
-          contact={Contact}
-          Gender={Gender}
-          RefferalCode={RefferalCode}
-        />
-      </>
-    );
+      return (
+        <>
+          <IITRStudent
+            name={Fullname}
+            email={Email}
+            contact={Contact}
+            Gender={Gender}
+            RefferalCode={RefferalCode}
+          />
+        </>
+      );
     else if (UserType == 'stu')
-    return (
-      <>
-        <NonIITRStudent
-          name={Fullname}
-          email={Email}
-          contact={Contact}
-          Gender={Gender}
-          RefferalCode={RefferalCode}
-        />
-      </>
-    );
+      return (
+        <>
+          <NonIITRStudent
+            name={Fullname}
+            email={Email}
+            contact={Contact}
+            Gender={Gender}
+            RefferalCode={RefferalCode}
+          />
+        </>
+      );
     else if (UserType == 'proff')
-    return (
-      <>
-        <Professional
-          name={Fullname}
-          email={Email}
-          contact={Contact}
-          Gender={Gender}
-          RefferalCode={RefferalCode}
-        />
-      </>
-    );
+      return (
+        <>
+          <Professional
+            name={Fullname}
+            email={Email}
+            contact={Contact}
+            Gender={Gender}
+            RefferalCode={RefferalCode}
+          />
+        </>
+      );
   }
 };
 export default Registration;

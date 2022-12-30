@@ -257,6 +257,9 @@ button:hover {
   .RegisterHereMob {
     display: flex;
     justify-content: center;
+    position: relative;
+    z-index: 50;
+    margin-top: -90vh;
   }
   .RegisterForm {
     display: flex;
@@ -289,21 +292,45 @@ button:hover {
 
     color: #bdbdbd;
   }
-  .FormInputs{
+  .FormInputs {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .RegisterGender{
+  .RegisterGender {
     max-width: 300px;
     width: 70vw;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    gap:1rem;
+    gap: 1rem;
   }
-  .SelectGender{
+  .SelectGender {
     margin-left: 0px;
+    width: 80vw;
+  }
+  .AlreadyRegistered {
+    height: 14px;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    gap:0.5rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #bdbdbd;
+    margin-bottom: 1rem;
+  }
+  .SummitLogo{
+    margin-bottom: 55vh;
+  }
+  .FormInputs{
+    background-color: #12100e;
+    width: 100vw;
+    margin-top: 5vh;
   }
 }
