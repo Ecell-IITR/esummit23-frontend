@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <MobileProvider>
-      <Navbar/>
+      <Dashboard/>
         <Component {...pageProps} /> 
       </MobileProvider>
     </>
