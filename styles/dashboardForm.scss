@@ -2,7 +2,7 @@
     padding: 4rem;
     background-color: #12100E;
     width:100%;
-    height: 65rem;
+    // height: 65rem;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -82,7 +82,6 @@ gap: 1rem;
 }
 
 .select_GRF{
-    height: 100%;
     width: 1.5rem;
     border: 1px solid white;
 }
@@ -146,7 +145,6 @@ gap: 1rem;
 
 .addSymbol_GRF{
     width:3rem;
-    height: 100%;
     border: 1px solid white;
     border-top-left-radius: 3rem;
     border-bottom-left-radius: 3rem;
@@ -226,5 +224,11 @@ gap: 1rem;
     font-family: 'Nunito Sans';
     border: none;
     font-size: 18px;
+
+}
+
+.checkbox-custom{
+    height: 100%;
+    width: 100%;
 
 }

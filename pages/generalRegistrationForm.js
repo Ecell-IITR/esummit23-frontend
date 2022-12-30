@@ -25,7 +25,7 @@ function Dashboard() {
     </div>
     <div className='addMember_GRF'>
       <div className='addMemberOption_GRF'>
-        <div className='addSymbol_GRF'><Image className='addImage' src="/add.webp" width="22rem" height="9rem"></Image></div>
+        <div className='addSymbol_GRF'></div>
         <div className='afterAddSymbol_GRF'>Add Member</div>
       </div>
     </div>

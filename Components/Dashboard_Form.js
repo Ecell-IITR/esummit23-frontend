@@ -35,8 +35,13 @@ function Dashboard() {
         <div className='memberNumber_GRF'>Member {index+1}</div>
         <div className='otherDetailsMember_GRF'>
           <div className='autoFill_GRF'>
-            <div className='select_GRF'></div>
-            <div className='autoFillDetails_GRF'>
+            <div
+            style={index>0?{display:"none"}:{}} 
+            className='select_GRF'>
+            <input class="checkbox-custom" type="checkbox"/>
+            </div>
+            <div className='autoFillDetails_GRF'
+            style={index>0?{display:"none"}:{}} >
               Auto fill if you are the team leader
             </div>
           </div>
@@ -56,7 +61,7 @@ function Dashboard() {
               
               ></input>
             </div>
-            <div className='commonDetail_GRF mobNo_GRF'>
+            <div className='commonDetail_GRF mobNo_GRF'>r
               <input
                 className='commonInput_GRF'
                 type='text'
@@ -76,10 +81,10 @@ function Dashboard() {
       </div>
         )
       })}
-      
+    
       <div className='addMember_GRF'>
         <div className='addMemberOption_GRF'>
-          <div className='addSymbol_GRF'>
+          <div className='addSymbol_GRF'onClick={addMember} > 
             <Image
               className='addImage'
               src='/add.webp'
