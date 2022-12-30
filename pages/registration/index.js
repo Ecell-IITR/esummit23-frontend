@@ -125,7 +125,16 @@ const Registration = () => {
                   >
                     <div className='SelectGender'>Gender</div>
                     <div className='RegisterGender'>
-                      <div>
+                      <div
+                        style={{
+                          fontFamily: 'Nunito Sans',
+                          fontStyle: 'normal',
+                          fontWeight: '400',
+                          fontSize: '14px',
+                          lineHeight: '20px',
+                          color: '#FFD685',
+                        }}
+                      >
                         <input
                           type='radio'
                           name='SelectGender'
@@ -135,7 +144,14 @@ const Registration = () => {
                         />
                         Male
                       </div>
-                      <div>
+                      <div style={{
+                          fontFamily: 'Nunito Sans',
+                          fontStyle: 'normal',
+                          fontWeight: '400',
+                          fontSize: '14px',
+                          lineHeight: '20px',
+                          color: '#FFD685',
+                        }}>
                         <input
                           type='radio'
                           name='SelectGender'
@@ -145,7 +161,14 @@ const Registration = () => {
                         />
                         Female
                       </div>
-                      <div>
+                      <div style={{
+                          fontFamily: 'Nunito Sans',
+                          fontStyle: 'normal',
+                          fontWeight: '400',
+                          fontSize: '14px',
+                          lineHeight: '20px',
+                          color: '#FFD685',
+                        }}>
                         <input
                           type='radio'
                           name='SelectGender'
@@ -183,11 +206,12 @@ const Registration = () => {
                       display: 'flex',
                       alignItems: 'center',
                       flexDirection: 'column',
+                      paddingBottom: '20rem',
                     }}
                   >
                     <div className='AlreadyRegistered'>
                       <div>Already Registered?</div>
-                      <Link href='login'>
+                      <Link href='/login'>
                         <div
                           style={{
                             textDecorationLine: 'underline',
