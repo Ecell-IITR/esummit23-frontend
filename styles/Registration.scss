@@ -45,10 +45,11 @@
   display: flex;
   flex-direction: column;
   margin-top: 10px;
+  width: 35vw;
   background-color: transparent;
 
   Input {
-    width: 384px;
+    width: 90%;
     background-color: transparent;
     border: none;
     border-bottom: 1px white solid;
@@ -126,8 +127,7 @@
 .mobRegisterContainer {
   height: 100vh;
   width: 100vw;
-  display: flex;
-  flex-direction: column;
+
   background-color: black;
 }
 
@@ -223,7 +223,6 @@ button:hover {
   margin-top: 80px;
 }
 
-
 .mobRegisterFormMore {
   input {
     width: 320px;
@@ -249,5 +248,62 @@ button:hover {
     font-size: 18px;
     line-height: 110%;
     letter-spacing: 1px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .RegisterLeft {
+    width: 80vw;
+  }
+  .RegisterHereMob {
+    display: flex;
+    justify-content: center;
+  }
+  .RegisterForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .CreateAccount {
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.75rem;
+    line-height: 110%;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #dcd1ad;
+  }
+  .CreateAccountsubTitle {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+
+    color: #bdbdbd;
+  }
+  .FormInputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .RegisterGender{
+    max-width: 300px;
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap:1rem;
+  }
+  .SelectGender{
+    margin-left: 0px;
   }
 }

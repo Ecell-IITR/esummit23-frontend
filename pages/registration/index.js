@@ -51,7 +51,7 @@ const Registration = () => {
                 <div className='RegisterForm'>
                   <div
                     className='SummitLogo'
-                    style={{ height: '267px', width: '200px' }}
+                    style={{ height: 'auto', width: '200px' }}
                   >
                     <Image src='/summitLogo.png' height={'77'} width={'294'} />
                   </div>
@@ -61,6 +61,9 @@ const Registration = () => {
                   </h3>
                   <div className='FormInputs'>
                     <input
+                     className={
+                      Fullname == '' ? 'LoginFormLeftInput' : 'LoginFormLeftInput inputGold'
+                    }
                       type='text'
                       placeholder='Full Name'
                       style={{ margin: '10px' }}
@@ -70,6 +73,9 @@ const Registration = () => {
 
                     <input
                       type='email'
+                      className={
+                        Email == '' ? 'LoginFormLeftInput' : 'LoginFormLeftInput inputGold'
+                      }
                       placeholder='Email address'
                       value={Email}
                       onChange={(e) => {
@@ -79,7 +85,10 @@ const Registration = () => {
                     />
 
                     <input
-                      type='tel'
+                      type='text'
+                      className={
+                        Contact == '' ? 'LoginFormLeftInput' : 'LoginFormLeftInput inputGold'
+                      }
                       placeholder='Contact Number'
                       style={{ margin: '10px' }}
                       value={Contact}
@@ -87,6 +96,9 @@ const Registration = () => {
                     />
                     <input
                       type='text'
+                      className={
+                        RefferalCode == '' ? 'LoginFormLeftInput' : 'LoginFormLeftInput inputGold'
+                      }
                       placeholder='Reffreal code'
                       style={{ margin: '10px' }}
                       value={RefferalCode}
