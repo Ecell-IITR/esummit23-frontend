@@ -70,8 +70,8 @@ const IITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
             {/* <Image width='100%' height='40' src='/loginMobile.png' /> */}
           </div>
           <div className='mobRegisterForm'>
-            <div className='mobRegisterHere'>
-              <div className='summitLogo'>
+            <div style={{marginTop:"-60vh"}} className='mobRegisterHere'>
+              <div className='summitLogo' style={{paddingBottom:"20vh"}}>
                 <div
                   style={{
                     width: '200px',
@@ -88,7 +88,7 @@ const IITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
               <h3 className='mobRegisterSubTitle'>
                 Please fill all the required fields.
               </h3>
-
+              <div className='regInputContainer'>
               <input
                 type='text'
                 placeholder='Branch Name'
@@ -139,6 +139,8 @@ const IITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
               >
                 Create Account
               </button>
+
+              </div>
             </div>
           </div>
         </div>
