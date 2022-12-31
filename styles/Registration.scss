@@ -104,7 +104,6 @@
     font-weight: 700;
     font-size: 15px;
     line-height: 22px;
-
     width: 448px;
     height: 62px;
     border-radius: 32px;
@@ -113,7 +112,24 @@
     background-color: #ba6d39;
   }
 }
+.regButton {
+  max-width: 400px;
+  width:80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-style: normal;
+  font-family: 'Lexend';
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
 
+  max-height: 55px;
+  height: 11.5vw;
+  border-radius: 32px;
+  background-color: #ba6d39;
+}
 .createAccount {
   width: 267px;
   height: 48px;
@@ -134,7 +150,7 @@
 .mobRegisterHere {
   height: 100vh;
   position: relative;
-  margin-top: -60vh;
+  margin-top: -70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -142,7 +158,7 @@
 
 .summitLogo {
   width: 100vw;
-  height: 307px;
+
   display: flex;
 }
 
@@ -259,7 +275,7 @@ button:hover {
     justify-content: center;
     position: relative;
     z-index: 50;
-    margin-top: -90vh;
+    margin-top: -70vh;
   }
   .RegisterForm {
     display: flex;

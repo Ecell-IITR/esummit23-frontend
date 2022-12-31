@@ -14,7 +14,7 @@ const Registration = () => {
   const [Email, setEmail] = useState('');
   const [Contact, setContact] = useState('');
   const [Gender, setGender] = useState('Female');
-  const [RenderId, setRenderId] = useState(0);
+  const [RenderId, setRenderId] = useState(1);
   const [RefferalCode, setRefferalCode] = useState('');
   const [UserType, setUserType] = useState('');
 
@@ -39,11 +39,11 @@ const Registration = () => {
             <div
               className='ImageComponent'
               style={{
-                height: '100vh',
+                height: '80vh',
                 width: '100vw',
               }}
             >
-              <Image src='/LoginMobile.png' layout='fill' />
+              <Image src='/LoginMobile.png' layout='fill' objectFit="cover"  />
             </div>
 
             <div className='RegisterHereMob'>

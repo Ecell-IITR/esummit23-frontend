@@ -80,7 +80,9 @@ function Login() {
               </h3>
               <input
                 className={
-                  email == '' ? 'LoginFormLeftInput' : 'LoginFormLeftInput inputGold'
+                  email == ''
+                    ? 'LoginFormLeftInput'
+                    : 'LoginFormLeftInput inputGold'
                 }
                 onChange={(e) => setemail(e.target.value)}
                 type='text'
@@ -106,7 +108,13 @@ function Login() {
                   className='LoginFormLeftShowPassword'
                   onClick={() => setShowPassword(!ShowPassword)}
                 >
-                  <Image width='20' height='20' src={ShowPassword? '/Hidepassword.webp' :'/Showpassword.webp'} />
+                  <Image
+                    width='20'
+                    height='20'
+                    src={
+                      ShowPassword ? '/Hidepassword.webp' : '/Showpassword.webp'
+                    }
+                  />
                 </div>
               </div>
               {/* <div className='loginOrContainer'>
@@ -185,7 +193,13 @@ function Login() {
                   className='LoginFormLeftShowPassword'
                   onClick={() => setShowPassword(!ShowPassword)}
                 >
-                  <Image width='20' height='20' src={ShowPassword? '/Hidepassword.webp' :'/Showpassword.webp'}/>
+                  <Image
+                    width='20'
+                    height='20'
+                    src={
+                      ShowPassword ? '/Hidepassword.webp' : '/Showpassword.webp'
+                    }
+                  />
                 </div>
               </div>
               {/* <div className='loginOrContainer'>

@@ -16,55 +16,80 @@ const Identity = ({ setUserType, setRenderId }) => {
           <div
             style={{
               width: '100vw',
-              height: '60vh',
+              height: '80vh',
               backgroundImage: 'url(/loginMobile.png)',
-              backgroundSize: '100vw 60vh',
+              backgroundSize: '100vw 80vh',
             }}
           >
             {/* <Image width='100%' height='40' src='/loginMobile.png' /> */}
           </div>
-          <div className='mobRegisterHere'>
-            <div className='summitLogo'>
+          <div style={{ marginTop: '-70vh' }} className='mobRegisterHere'>
+            <div style={{ justifyContent: 'center' }} className='summitLogo'>
               <div
                 style={{
                   width: '200px',
                   height: '100px',
-                  margin: 'auto',
+                  marginBottom: '20px',
                   position: 'relative',
                 }}
               >
                 <Image width='294' height='77' src='/summitLogo.png' />
               </div>
             </div>
-            <div className='mobRegisterForm'>
+            <div style={{ marginTop: '50vw' }} className='mobRegisterForm'>
               <h1 className='mobRegisterTitle'>Select your Idetity</h1>
               <h3 className='mobRegisterSubTitle'>
                 Please select the appropriate option.
               </h3>
-
-              <button
+              <div
                 style={{
-                  marginTop: '60px',
-                }}
-                onClick={() => {
-                  setUserType('stuIITR');
-                  setRenderId(2);
+                  width: '100vw',
+                  background: '#12100E',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  gap: '1rem',
+                  paddingBottom: '5rem',
+                  paddingTop: '1rem',
                 }}
               >
-                As an IITR Student
-              </button>
-              <button onClick={() => {
-                      setUserType('stu');
-                      setRenderId(2);
-                    }} >As a Non-IITR Student</button>
-              <button onClick={() => {
-                      setUserType('ca');
-                      setRenderId(2);
-                    }}>As a Campus Ambassador</button>
-              <button onClick={() => {
-                      setUserType('proff');
-                      setRenderId(2);
-                    }}>As a Professional</button>
+                <div
+                  className='regButton'
+                  onClick={() => {
+                    setUserType('stuIITR');
+                    setRenderId(2);
+                  }}
+                >
+                  As an IITR Student
+                </div>
+                <div
+                  className='regButton'
+                  onClick={() => {
+                    setUserType('stu');
+                    setRenderId(2);
+                  }}
+                >
+                  As a Non-IITR Student
+                </div>
+                <div
+                  className='regButton'
+                  onClick={() => {
+                    setUserType('ca');
+                    setRenderId(2);
+                  }}
+                >
+                  As a Campus Ambassador
+                </div>
+                <div
+                  className='regButton'
+                  onClick={() => {
+                    setUserType('proff');
+                    setRenderId(2);
+                  }}
+                >
+                  As a Professional
+                </div>
+              </div>{' '}
             </div>
           </div>
         </div>
@@ -97,28 +122,56 @@ const Identity = ({ setUserType, setRenderId }) => {
                 <h3 className='registrationsubTitle'>
                   Please select the appropriate option
                 </h3>
-                <div className='identityButton'>
-                  
-                    <button onClick={() => {
+                <div
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    gap: '1.5rem',
+                    paddingBottom: '5rem',
+                    paddingTop: '1rem',
+                  }}
+                  className='identityButton'
+                >
+                  <div
+                    className='regButton'
+                    onClick={() => {
                       setUserType('stuIITR');
                       setRenderId(2);
-                    }}>As an IITR Student</button>
-                
-                    <button onClick={() => {
+                    }}
+                  >
+                    As an IITR Student
+                  </div>
+
+                  <div
+                    className='regButton'
+                    onClick={() => {
                       setUserType('stu');
                       setRenderId(2);
-                    }}>As a Non-IITR Student</button>
-                 
-                    <button onClick={() => {
+                    }}
+                  >
+                    As a Non-IITR Student
+                  </div>
+
+                  <div
+                    className='regButton'
+                    onClick={() => {
                       setUserType('ca');
                       setRenderId(2);
-                    }}>As a Campus Ambassador</button>
-               
-                    <button onClick={() => {
+                    }}
+                  >
+                    As a Campus Ambassador
+                  </div>
+
+                  <div
+                    className='regButton'
+                    onClick={() => {
                       setUserType('proff');
                       setRenderId(2);
-                    }}>As a Professional</button>
-                
+                    }}
+                  >
+                    As a Professional
+                  </div>
                 </div>
               </div>
             </div>
