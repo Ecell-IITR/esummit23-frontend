@@ -51,9 +51,8 @@ function Login() {
         .catch((res) => {
           alert('Credentials are wrong');
         });
-    }
-    else{
-      alert(pass_error)
+    } else {
+      alert(pass_error);
     }
   }
   useEffect(() => {
@@ -112,7 +111,13 @@ function Login() {
                   className='LoginFormLeftShowPassword'
                   onClick={() => setShowPassword(!ShowPassword)}
                 >
-                  <Image width='20' height='20' src='/Showpassword.webp' />
+                  <Image
+                    width='20'
+                    height='20'
+                    src={
+                      ShowPassword ? '/Hidepassword.webp' : '/Showpassword.webp'
+                    }
+                  />
                 </div>
               </div>
               {/* <div className='loginOrContainer'>
@@ -120,7 +125,6 @@ function Login() {
                 <div className='loginOrText'>OR</div>
                 <div className='loginOrLine'></div>
               </div> */}
-              
 
               <div
                 className='LoginButton'
@@ -193,7 +197,13 @@ function Login() {
                   className='LoginFormLeftShowPassword'
                   onClick={() => setShowPassword(!ShowPassword)}
                 >
-                  <Image width='20' height='20' src='/Showpassword.webp' />
+                  <Image
+                    width='20'
+                    height='20'
+                    src={
+                      ShowPassword ? '/Hidepassword.webp' : '/Showpassword.webp'
+                    }
+                  />
                 </div>
               </div>
               {/* <div className='loginOrContainer'>
@@ -201,7 +211,7 @@ function Login() {
                 <div className='loginOrText'>OR</div>
                 <div className='loginOrLine'></div>
               </div> */}
-              
+
               <div
                 className='LoginButton'
                 onClick={() => {
@@ -220,7 +230,6 @@ function Login() {
             <div className='LoginFormRight'></div>
           </div>
         </div>
-        
       </>
     );
   }
