@@ -5,7 +5,7 @@ import { useMobile, useUpdateMobile } from '../../utils/MobileContext';
 import React, { useState, useEffect } from 'react';
 import { Authenticate } from '../../utils';
 import { useRouter } from 'next/router';
-const Professional = ({ name, email, contact, Gender,RefferalCode }) => {
+const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
   const [Organisation, setOrganisation] = useState('');
   const [Indusrty, setIndusrty] = useState('');
   const [State, setState] = useState('');
@@ -68,7 +68,7 @@ const Professional = ({ name, email, contact, Gender,RefferalCode }) => {
           >
             {/* <Image width='100%' height='40' src='/loginMobile.png' /> */}
           </div>
-          <div className='mobRegisterHere'>
+          <div style={{ marginTop: '-50vh' }} className='mobRegisterHere'>
             <div className='summitLogo'>
               <div
                 style={{
@@ -81,100 +81,108 @@ const Professional = ({ name, email, contact, Gender,RefferalCode }) => {
                 <Image width='294' height='77' src='/summitLogo.png' />
               </div>
             </div>
-            <div className='mobRegisterFormMore'>
+            <div style={{ marginTop: '32vw' }} className='mobRegisterFormMore'>
               <h1 className='mobRegisterTitle'> Personal Details</h1>
               <h3 className='mobRegisterSubTitle'>
                 Please fill all the required fields.
               </h3>
 
-              <input
-                styl={{ margintop: '36px' }}
-                type='text'
-                placeholder='Organisation Name'
-                value={Organisation}
-                onChange={(e) => setOrganisation(e.target.value)}
-              />
-              <input
-                type='text'
-                placeholder='Indusrty Name'
-                value={Indusrty}
-                onChange={(e) => setIndusrty(e.target.value)}
-              />
-
-              <input
-                type='text'
-                placeholder='State'
-                value={State}
-                onChange={(e) => setState(e.target.value)}
-              />
-              <input
-                type='text'
-                placeholder='City'
-                value={City}
-                onChange={(e) => setCity(e.target.value)}
-              />
-              <div style={{ display: 'flex', alignItems: 'center' }}>
+              <div className='regInputContainer'>
                 <input
-                  className={
-                    password == ''
-                      ? 'LoginFormLeftInput'
-                      : 'LoginFormLeftInput inputGold'
-                  }
-                  onChange={(e) => {
-                    setpassword(e.target.value);
-                  }}
-                  type={ShowPassword ? 'text' : 'Password'}
-                  value={password}
-                  placeholder='Passsword'
+                  styl={{ margintop: '36px' }}
+                  type='text'
+                  placeholder='Organisation Name'
+                  value={Organisation}
+                  onChange={(e) => setOrganisation(e.target.value)}
                 />
-                <div
-                  className='LoginFormLeftShowPassword'
-                  style={{ marginTop: '-20px' }}
-                  onClick={() => setShowPassword(!ShowPassword)}
-                >
-                  <Image
-                    width='20'
-                    height='20'
-                    src={
-                      ShowPassword ? '/Hidepassword.webp' : '/Showpassword.webp'
-                    }
-                  />
-                </div>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center' }}>
                 <input
-                  className={
-                    password == ''
-                      ? 'LoginFormLeftInput'
-                      : 'LoginFormLeftInput inputGold'
-                  }
-                  onChange={(e) => {
-                    setConfirmpassword(e.target.value);
-                  }}
-                  type={ShowPassword2 ? 'text' : 'Password'}
-                  value={Confirmpassword}
-                  placeholder='Confirm Passsword'
+                  type='text'
+                  placeholder='Indusrty Name'
+                  value={Indusrty}
+                  onChange={(e) => setIndusrty(e.target.value)}
                 />
-                <div
-                  className='LoginFormLeftShowPassword'
-                  style={{ marginTop: '-20px' }}
-                  onClick={() => setShowPassword2(!ShowPassword2)}
-                >
-                  <Image
-                    width='20'
-                    height='20'
-                    src={
-                      ShowPassword2
-                        ? '/Hidepassword.webp'
-                        : '/Showpassword.webp'
-                    }
-                  />
-                </div>
-              </div>
 
-              <button type='submit' onClick={Submit}>
-                Create Account
-              </button>
+                <input
+                  type='text'
+                  placeholder='State'
+                  value={State}
+                  onChange={(e) => setState(e.target.value)}
+                />
+                <input
+                  type='text'
+                  placeholder='City'
+                  value={City}
+                  onChange={(e) => setCity(e.target.value)}
+                />
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <input
+                    className={
+                      password == ''
+                        ? 'LoginFormLeftInput'
+                        : 'LoginFormLeftInput inputGold'
+                    }
+                    onChange={(e) => {
+                      setpassword(e.target.value);
+                    }}
+                    type={ShowPassword ? 'text' : 'Password'}
+                    value={password}
+                    placeholder='Passsword'
+                  />
+                  <div
+                    className='LoginFormLeftShowPassword'
+                    style={{ marginTop: '-20px' }}
+                    onClick={() => setShowPassword(!ShowPassword)}
+                  >
+                    <Image
+                      width='20'
+                      height='20'
+                      src={
+                        ShowPassword
+                          ? '/Hidepassword.webp'
+                          : '/Showpassword.webp'
+                      }
+                    />
+                  </div>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <input
+                    className={
+                      password == ''
+                        ? 'LoginFormLeftInput'
+                        : 'LoginFormLeftInput inputGold'
+                    }
+                    onChange={(e) => {
+                      setConfirmpassword(e.target.value);
+                    }}
+                    type={ShowPassword2 ? 'text' : 'Password'}
+                    value={Confirmpassword}
+                    placeholder='Confirm Passsword'
+                  />
+                  <div
+                    className='LoginFormLeftShowPassword'
+                    style={{ marginTop: '-20px' }}
+                    onClick={() => setShowPassword2(!ShowPassword2)}
+                  >
+                    <Image
+                      width='20'
+                      height='20'
+                      src={
+                        ShowPassword2
+                          ? '/Hidepassword.webp'
+                          : '/Showpassword.webp'
+                      }
+                    />
+                  </div>
+                </div>
+
+                <button
+                  className='CreateAccountButton'
+                  type='submit'
+                  onClick={Submit}
+                >
+                  Create Account
+                </button>
+              </div>
             </div>
 
             <div className='RegisterRight'></div>
