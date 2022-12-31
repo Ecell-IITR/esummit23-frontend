@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { LOGIN_API } from '../utils/APIs';
 import FetchApi from '../utils/fetchAPI';
 import { Authenticate } from '../utils';
+import { useRouter } from 'next/router'
+
 function Login() {
   const setMobile = useUpdateMobile();
   const [email, setemail] = useState();
@@ -13,7 +15,7 @@ function Login() {
   const [pass_error, setpass_error] = useState('');
 
   const [pass_error_bool, setpass_error_bool] = useState(false);
-
+  const router = useRouter()
   const passValidate = () => {
     setTimeout(function () {
       if (Password.length < 7) {
@@ -27,6 +29,7 @@ function Login() {
   };
 
   function submit() {
+    
     if (!pass_error_bool) {
       FetchApi(
         'POST',
@@ -43,6 +46,7 @@ function Login() {
             localStorage.setItem('userRoleType', res.data.role);
           }
           Authenticate(res.data.n, res.data.at);
+          router.push('/dashboard')
         })
         .catch((res) => {
           alert('Credentials are wrong');
@@ -54,7 +58,6 @@ function Login() {
   useEffect(() => {
     setMobile();
   }, []);
-  console.log(useMobile());
   if (useMobile().isMobile) {
     return (
       <div className='LoginContainer'>
@@ -126,6 +129,7 @@ function Login() {
               <div
                 className='LoginButton'
                 onClick={() => {
+                  router.push('/dashboard')
                   submit();
                 }}
               >
