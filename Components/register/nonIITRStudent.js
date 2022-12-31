@@ -180,7 +180,11 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
                   </div>
                 </div>
 
-                <button className='CreateAccountButton' type='submit' onClick={Submit}>
+                <button
+                  className='CreateAccountButton'
+                  type='submit'
+                  onClick={Submit}
+                >
                   Create Account
                 </button>
               </div>
