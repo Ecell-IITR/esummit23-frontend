@@ -12,6 +12,9 @@ import Script from 'next/script';
 import config from '../config';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import "aos/dist/aos.css";
+
+
 
 function MyApp({ Component, pageProps }) {
   return (

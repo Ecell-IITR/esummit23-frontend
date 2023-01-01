@@ -13,3 +13,14 @@ a {
 * {
   box-sizing: border-box;
 }
+[data-aos="aniRotateDown"] {
+  
+  transform :translateY(-5rem)  rotate(0deg);
+  transition-property: transform, opacity;
+  
+}
+[data-aos="aniRotateDown"].aos-animate {
+  
+  transform: translateY(8rem) rotate(90deg);
+
+}
