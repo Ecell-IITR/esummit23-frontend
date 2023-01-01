@@ -30,7 +30,7 @@ function Login() {
   };
 
   function submit() {
-    if (!pass_error_bool) {
+    if (Password.length > 7) {
       FetchApi(
         'POST',
         LOGIN_API,
@@ -45,7 +45,7 @@ function Login() {
           if (res.data.role) {
             localStorage.setItem('userRoleType', res.data.role);
           }
-          Authenticate(res.data.n, res.data.at);
+          Authenticate(res.data.n,res.data.e_id, res.data.at);
           router.push('/dashboard');
         })
         .catch((res) => {

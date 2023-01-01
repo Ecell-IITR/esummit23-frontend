@@ -34,13 +34,11 @@ export const unAuthenticate = () => {
   //   logSignOut();
 };
 
-export const Authenticate = (user, authToken) => {
+export const Authenticate = (name,id, authToken) => {
   if (typeof window === 'undefined') return null;
-  let userObject = {
-    ...user,
-  };
-  userObject = JSON.stringify(userObject);
-  localStorage.setItem('user', userObject);
+  
+  localStorage.setItem('name', name);
+  localStorage.setItem('id', id);
   localStorage.setItem('authToken', authToken);
   //   logSetUser(user);
   //   logSignIn();
