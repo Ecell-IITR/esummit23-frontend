@@ -14,7 +14,7 @@ const Registration = () => {
   const [Email, setEmail] = useState('');
   const [Contact, setContact] = useState('');
   const [Gender, setGender] = useState('Female');
-  const [RenderId, setRenderId] = useState(1);
+  const [RenderId, setRenderId] = useState(0);
   const [RefferalCode, setRefferalCode] = useState('');
   const [UserType, setUserType] = useState('');
 
