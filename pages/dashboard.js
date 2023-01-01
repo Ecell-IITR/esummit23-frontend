@@ -29,7 +29,7 @@ function Dashboard() {
             {arr.map((item) => {
               return (
                 <Register
-                  isRegistered={item.isRegistered}
+                  IsRegistered={item.isRegistered}
                   img={item.image}
                   name={item.name}
                   desc={item.desc}

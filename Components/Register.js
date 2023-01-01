@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import React from 'react';
 
-function Register() {
-  const [IsRegistered, setIsRegistered] = useState(0);
+function Register({IsRegistered,img,name,desc}) {
   return (
     <>
       <div className='containerRegister'>
-        <div className='photoRegister'></div>
+        <div className='photoRegister'><img src={img} /></div>
 
         <div
           style={
@@ -16,7 +15,7 @@ function Register() {
           }
           className='eventRegister'
         >
-          Ideastorm
+          {name}
         </div>
 
         <div
@@ -26,9 +25,7 @@ function Register() {
               : { backgroundColor: '#F3EDD8' }
           }
           className='descriptionRegister'
-        >
-          Annual B-Plan competition which witnesses more than 500 entries from
-          over the country
+        >{desc}
         </div>
       </div>
     </>
