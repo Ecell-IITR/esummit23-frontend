@@ -5,8 +5,11 @@
   border-radius: 1.5rem;
   display: flex;
   flex-direction: column;
-  
-  
+
+  height: 30rem;
+  width: 20rem;
+  // border: 1px solid black;
+  border-radius: 1.5rem;
 }
 
 .photoRegister {
@@ -41,4 +44,24 @@
   font-weight: 400;
   padding: 1rem;
   padding-top: 0rem;
+
+  font-size: 2.5rem;
+  font-family: 'Nunito Sans';
+  font-weight: 600;
+  padding: 1rem;
+}
+.CreateAccountButton {
+  margin-bottom: 2rem;
+}
+.descriptionRegister {
+  // border: 1px solid black;
+  height: 40%;
+  width: 100%;
+  border-bottom-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  font-size: 1.4rem;
+  font-family: 'Nunito Sans';
+  font-weight: 400;
+  padding: 1rem;
+  opacity: 80%;
 }

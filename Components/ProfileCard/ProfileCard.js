@@ -1,15 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
-function ProfileCard(props) {
+function ProfileCard() {
   return (
     <>
       <div className='containerProfile'>
-        <div className='profileImage'>
-           
-        </div>
+        <div className='profileImage'></div>
         <div className='profileInfo'>
-          <div className='nameProfile'>{props.name}</div>
-          <div className='summitIdProfile'>Esummit ID - {props.esummit_id}</div>
+          <div className='nameProfile'>Mary Marlo</div>
+          <div className='summitIdProfile'>Esummit ID - ES23CAP039</div>
           <div className='viewFullProfile'>
             <div className='hyperlinkProfile'>
               <a href='' style={{ color: '#E5BF75' }}>
@@ -17,11 +15,13 @@ function ProfileCard(props) {
               </a>
             </div>
             <div className='checkmarkProfile'>
-              <Image
-                src='/checkmark.webp'
-                height='100rem'
-                width='100rem'
-              ></Image>
+              <a href=''>
+                <Image
+                  src='/checkmark.webp'
+                  height='100rem'
+                  width='100rem'
+                ></Image>
+              </a>
             </div>
           </div>
         </div>

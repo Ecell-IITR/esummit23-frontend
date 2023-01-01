@@ -1,34 +1,34 @@
 import { useState } from 'react';
 import React from 'react';
-import Image from 'next/image';
-function Register({ img, name, desc, isRegistered = 0 }) {
+
+function Register() {
+  const [IsRegistered, setIsRegistered] = useState(0);
   return (
     <>
       <div className='containerRegister'>
-        <div className='photoRegister'>
-          <img className='photoRegister' style={{ height: '100%' }} src={img} />
-        </div>
+        <div className='photoRegister'></div>
 
         <div
           style={
-            isRegistered == 1
-              ? { backgroundColor: '#BA6D39', color: 'white' }
+            IsRegistered == 1
+              ? { backgroundColor: '#BA6D39' }
               : { backgroundColor: '#F3EDD8' }
           }
           className='eventRegister'
         >
-          {name}
+          Ideastorm
         </div>
 
         <div
           style={
-            isRegistered == 1
-              ? { backgroundColor: '#BA6D39', color: 'white' }
+            IsRegistered == 1
+              ? { backgroundColor: '#BA6D39' }
               : { backgroundColor: '#F3EDD8' }
           }
           className='descriptionRegister'
         >
-          {desc}
+          Annual B-Plan competition which witnesses more than 500 entries from
+          over the country
         </div>
       </div>
     </>
