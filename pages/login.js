@@ -4,7 +4,8 @@ import Image from 'next/image';
 import { LOGIN_API } from '../utils/APIs';
 import FetchApi from '../utils/fetchAPI';
 import { Authenticate } from '../utils';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
+import Link from 'next/Link';
 
 function Login() {
   const setMobile = useUpdateMobile();
@@ -15,7 +16,7 @@ function Login() {
   const [pass_error, setpass_error] = useState('');
 
   const [pass_error_bool, setpass_error_bool] = useState(false);
-  const router = useRouter()
+  const router = useRouter();
   const passValidate = () => {
     setTimeout(function () {
       if (Password.length < 7) {
@@ -29,7 +30,6 @@ function Login() {
   };
 
   function submit() {
-    
     if (!pass_error_bool) {
       FetchApi(
         'POST',
@@ -46,7 +46,7 @@ function Login() {
             localStorage.setItem('userRoleType', res.data.role);
           }
           Authenticate(res.data.n, res.data.at);
-          router.push('/dashboard')
+          router.push('/dashboard');
         })
         .catch((res) => {
           alert('Credentials are wrong');
@@ -129,7 +129,7 @@ function Login() {
               <div
                 className='LoginButton'
                 onClick={() => {
-                  router.push('/dashboard')
+                  router.push('/dashboard');
                   submit();
                 }}
               >
@@ -137,9 +137,11 @@ function Login() {
               </div>
               <div className='loginRegisterContainer'>
                 <div className='loginRegisterText'>New to Esummit?</div>
-                <div className='loginRegisterText loginRegisterTextBold'>
-                  Register
-                </div>
+                <Link href='/register'>
+                  <div className='loginRegisterText loginRegisterTextBold'>
+                    Register
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -222,9 +224,11 @@ function Login() {
               </div>
               <div className='loginRegisterContainer'>
                 <div className='loginRegisterText'>New to Esummit?</div>
-                <div className='loginRegisterText loginRegisterTextBold'>
-                  Register
-                </div>
+                <Link href='/register'>
+                  <div  className='loginRegisterText loginRegisterTextBold'>
+                    Register
+                  </div>
+                </Link>
               </div>
             </div>
             <div className='LoginFormRight'></div>
