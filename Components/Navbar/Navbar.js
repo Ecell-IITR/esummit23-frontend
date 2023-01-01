@@ -4,12 +4,16 @@ import React, { useState, useEffect} from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { getUserRoleType } from '../../utils';
+import Image from 'next/image';
 
 
 function NavDesktop() {
 
   const roleType=getUserRoleType();
+  const [Status, setStatus] = useState(0)
   const [active, setActive] = useState("");
+
+
 
   const router = useRouter();
   useEffect(() => {
@@ -38,16 +42,10 @@ function NavDesktop() {
   });
 
 
-
-const changeUser =()=>
+const status =()=>
 {
-alert("smart");
+setStatus(1);
 }
-
-
-
-
-
 
 
   return (
@@ -145,20 +143,21 @@ alert("smart");
             style={{ gap: '36px' }}
           >
 
+
+           {console.log(roleType)}
             <Link href={roleType ? "/dashboard":"/login"}>
 
             
-            {roleType=='stu' ? <div className='updateRole' style={{color:"white"}}>student</div>:
-            roleType=='ca'? <div className='updateRole' style={{color:"white"}}>Campus Ambassador</div>:
-            roleType=='startup'? <div className='updateRole' style={{color:"white"}}>StartUp</div>:
-            roleType=='prof'? <div className='updateRole' style={{color:"white"}}>Professor</div>:
-            <button className="navbarButton">Login/Register</button>
+            {roleType=='stu' ? <div className='updateRole' style={{color:"#DCD1AD"}}><div className='role'>Student</div><div className='lineBelowRole'><Image src="/lineBelow.webp" height="30rem" width="500rem"></Image></div></div>:
+            roleType=='ca'? <div className='updateRole' style={{color:"#DCD1AD"}}><div className='role'>Campus Ambassador</div><div className='lineBelowRole'><Image src="/lineBelow.webp" height="30rem" width="500rem"></Image></div></div>:
+            roleType=='startup'? <div className='updateRole' style={{color:"#DCD1AD"}}><div className='role'>Startup</div><div className='lineBelowRole'><Image src="/lineBelow.webp" height="30rem" width="500rem"></Image></div></div>:
+            roleType=='prf'? <div className='updateRole' style={{color:"#DCD1AD"}}><div className='role'>Professor</div><div className='lineBelowRole'><Image src="/lineBelow.webp" height="30rem" width="500rem"></Image></div></div>:
+            <button className="navbarButton" onClick={status}>Login/Register</button>
             }
             
             </Link>
 
           </div>
-          
       {/* </Container> */}
     </Navbar>
   
