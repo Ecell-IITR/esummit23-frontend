@@ -10,7 +10,7 @@ function Register({IsRegistered,img,name,desc}) {
         <div
           style={
             IsRegistered == 1
-              ? { backgroundColor: '#BA6D39' }
+              ? { backgroundColor: '#BA6D39' ,color:'white'}
               : { backgroundColor: '#F3EDD8' }
           }
           className='eventRegister'
@@ -21,7 +21,7 @@ function Register({IsRegistered,img,name,desc}) {
         <div
           style={
             IsRegistered == 1
-              ? { backgroundColor: '#BA6D39' }
+            ? { backgroundColor: '#BA6D39' ,color:'white'}
               : { backgroundColor: '#F3EDD8' }
           }
           className='descriptionRegister'
