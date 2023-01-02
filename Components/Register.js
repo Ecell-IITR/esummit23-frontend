@@ -25,7 +25,9 @@ function Register({IsRegistered,img,name,desc}) {
               : { backgroundColor: '#F3EDD8' }
           }
           className='descriptionRegister'
-        >{desc}
+          
+          dangerouslySetInnerHTML={{ __html: desc }}
+        >
         </div>
       </div>
     </>

@@ -19,4 +19,4 @@ export const SPEAKERS_API = `${API_URL}/events/speakers`;
 export const LOGIN_API = `${API_URL}/user/login`;
 export const REGISTER_API = `${API_URL}/user/signup`;
 export const ALL_EVENTS_API = `${API_URL}/events/all`;
-
+export const USER_SERVICES_API = `${API_URL}/user/services`;
