@@ -1,6 +1,7 @@
-import React from 'react';
+import React ,{useEffect,useState} from 'react';
 import ProfileCard from '../components/ProfileCard/ProfileCard';
 import Register from '../components/Register';
+import {getUserDetails} from '../utils';
 function Dashboard() {
   const arr = [
     {
@@ -16,11 +17,24 @@ function Dashboard() {
       isRegistered: 0,
     },
   ];
+
+  const [name, setName] = useState("");
+  const [Id, setId] = useState("");
+  useEffect(() => {
+  
+    const [first, second] = getUserDetails();
+    setName(first);
+    setId(second);
+  }, )
+  
+
+  
+  
   return (
     <div className='dashboardContainer'>
       <div className='dashboardSubContainer'>
         <div className='dashboardContainerHeader'>
-          <ProfileCard name='Pranav Arya' esummit_id='ES23CAP039' />
+          <ProfileCard name={name} esummit_id={Id} />
           <div></div>
         </div>
         <div className='dashboardEventContainer'>

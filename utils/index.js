@@ -25,6 +25,13 @@ export const getUserRoleType = () => {
   return !!(user && token && role) ? role : false;
 };
 
+export const getUserDetails = () => {
+  if (typeof window === 'undefined') return false;
+  const name = localStorage.getItem('name');
+  const id = localStorage.getItem('id');
+  return !!(name && id) ? [name,id] : false;
+}; 
+
 export const unAuthenticate = () => {
   if (typeof window === 'undefined') return null;
   localStorage.removeItem('authToken');
