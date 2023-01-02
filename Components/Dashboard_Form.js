@@ -19,6 +19,63 @@ function Dashboard() {
     setFormFields([...formFields,object])
   };
 
+  const [TeamName, setTeamName] = useState(""); 
+  const [FullName, setFullName] = useState("");
+  const [Email, setEmail] = useState("");
+  const [PhoneNo, setPhoneNo] = useState("");
+  const [Gender, setGender] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const data = { 
+        "users":[
+          {
+              "full_name":FullName,
+              "email":Email,
+              "phone_number":PhoneNo,
+          },
+          {
+            "team_name":TeamName
+          }
+
+
+        ]
+      
+    };
+
+    FetchApi('post', "http://localhost:8000/user/team_signup ", data, null)
+      .then((res) => {
+        toast.success('Query Submitted !');
+        setTeamName('');
+        setFullName('');
+        setEmail('');
+        setPhoneNo('');
+      })
+      .catch((err) => {
+        toast.error('Query Unsuccessful!');
+        console.log(err);
+        // const errors = err.response.data;
+        // for (let value of Object.values(errors)) {
+        //   toast.error('Error !', value[0]);
+        // }
+        // this.setState({
+        //   name: '',
+        //   email: '',
+        //   message: '',
+        //   contact: null,
+        //   query: '',
+        // });
+      });
+  };
+
+
+
+
+
+
+
+
+
   return (
     <div className='container_GRF'>
       <div className='formHeading_GRF'>
@@ -27,7 +84,12 @@ function Dashboard() {
       </div>
 
       <div className='teamName_GRF'>
-        <input className='input' type='text' placeholder='Team Name'></input>
+        <input className='input' 
+        type='text' 
+        name="teamName"
+        placeholder='Team Name'>
+        onChange={(event) => setTeamName(event.target.value)}
+        </input>
       </div>
       {formFields.map((form,index) => {
         return(
@@ -48,24 +110,30 @@ function Dashboard() {
           <div className='detailsOfMembers_GFR'>
             <div className='commonDetail_GRF fullName_GRF'>
               <input
+                name="FullName"
                 className='commonInput_GRF'
                 type='text'
                 placeholder='Full Name'
+                onChange={(event) => setFullName(event.target.value)}
               ></input>
             </div>
             <div className='commonDetail_GRF email_GRF'>
               <input
                 className='commonInput_GRF'
-                type='text'
+                type='email'
+                name="email"
                 placeholder='Email Address'
+                onChange={(event) => setEmail(event.target.value)}
               
               ></input>
             </div>
             <div className='commonDetail_GRF mobNo_GRF'>r
               <input
+                name="phoneNo"
                 className='commonInput_GRF'
-                type='text'
+                type='phoneNo'
                 placeholder='Mobile No'
+                onChange={(event) => setPhoneNo(event.target.value)}
                
               ></input>
             </div>
@@ -74,6 +142,8 @@ function Dashboard() {
                 className='commonInput_GRF'
                 type='text'
                 placeholder='Gender'
+                name='gender'
+                onChange={(event) => setGender(event.target.value)}
               ></input>
             </div>
           </div>
@@ -145,7 +215,7 @@ function Dashboard() {
         </div>
       </div>
 
-      <div className='submitButton'>
+      <div className='submitButton' onClick={handleSubmit}>
         <button className='button_GRF' placeholder='SUBMIT RESPONSE'>
           SUBMIT RESPONSE
         </button>{' '}

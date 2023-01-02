@@ -10,7 +10,6 @@ import Image from 'next/image';
 function NavDesktop() {
 
   const roleType=getUserRoleType();
-  const [Status, setStatus] = useState(0)
   const [active, setActive] = useState("");
 
 
@@ -41,11 +40,6 @@ function NavDesktop() {
     }
   });
 
-
-const status =()=>
-{
-setStatus(1);
-}
 
 
   return (
@@ -143,8 +137,6 @@ setStatus(1);
             style={{ gap: '36px' }}
           >
 
-
-           {console.log(roleType)}
             <Link href={roleType ? "/dashboard":"/login"}>
 
             
@@ -152,13 +144,13 @@ setStatus(1);
             roleType=='ca'? <div className='updateRole' style={{color:"#DCD1AD"}}><div className='role'>Campus Ambassador</div><div className='lineBelowRole'><Image src="/lineBelow.webp" height="30rem" width="500rem"></Image></div></div>:
             roleType=='startup'? <div className='updateRole' style={{color:"#DCD1AD"}}><div className='role'>Startup</div><div className='lineBelowRole'><Image src="/lineBelow.webp" height="30rem" width="500rem"></Image></div></div>:
             roleType=='prf'? <div className='updateRole' style={{color:"#DCD1AD"}}><div className='role'>Professor</div><div className='lineBelowRole'><Image src="/lineBelow.webp" height="30rem" width="500rem"></Image></div></div>:
-            <button className="navbarButton" onClick={status}>Login/Register</button>
+            <button className="navbarButton">Login/Register</button>
             }
             
             </Link>
 
           </div>
-      {/* </Container> */}
+  
     </Navbar>
   
   );
