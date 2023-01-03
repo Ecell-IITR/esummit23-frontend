@@ -141,7 +141,7 @@
 }
 
 .mobRegisterContainer {
-  height: 100vh;
+  // height: 100vh;
   width: 100vw;
   background-color: #12100e;
 }
@@ -152,14 +152,14 @@
   flex-direction: column;
   align-items: center;
   gap:0.3rem;
-  background-color: #12100e;
+  // background-color: #12100e;
   
 }
 
 .mobRegisterHere {
-  height: 100vh;
+  // height: 100vh;
   position: relative;
-  margin-top: -70vh;
+  margin-top: -53vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -195,7 +195,7 @@
 
 .mobRegisterForm {
   input {
-    width: 320px;
+    width: 290px;
     border: none;
     border-bottom: 1px solid #828282;
     height: 44px;
@@ -221,7 +221,7 @@
 
 .mobRegisterForm {
   button {
-    width: 320px;
+    width: 290px;
     height: 60px;
     border-radius: 32px;
     background-color: #ba6d39;

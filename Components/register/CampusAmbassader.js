@@ -76,7 +76,7 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
               <div
                 style={{
                   width: '200px',
-                  height: '100px',
+                  height: '78px',
                   margin: 'auto',
                   position: 'relative',
                 }}

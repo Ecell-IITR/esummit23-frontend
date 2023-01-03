@@ -74,7 +74,7 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
               <div
                 style={{
                   width: '200px',
-                  height: '100px',
+                  height: '78px',
                   margin: 'auto',
                   position: 'relative',
                 }}

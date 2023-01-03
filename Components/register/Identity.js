@@ -29,7 +29,7 @@ const Identity = ({ setUserType, setRenderId }) => {
                 style={{
                   width: '200px',
                   height: '100px',
-                  marginBottom: '20px',
+                  marginBottom: '10px',
                   position: 'relative',
                 }}
               >

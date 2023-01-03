@@ -75,7 +75,7 @@ const IITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
                 <div
                   style={{
                     width: '200px',
-                    height: '100px',
+                    height: '55px',
                     margin: 'auto',
                     position: 'relative',
                   }}
