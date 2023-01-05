@@ -126,6 +126,15 @@ ul a.active {
     cursor: pointer;
     
 }
+
+.navbarContainer{
+    margin: 0px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+}
 .circle {
     display: flex;
     width: 5px;

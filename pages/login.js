@@ -4,10 +4,12 @@ import Image from 'next/image';
 import { LOGIN_API } from '../utils/APIs';
 import FetchApi from '../utils/fetchAPI';
 import { Authenticate } from '../utils';
+
 import Dashboard from '../Components/Dashboard_Form';
 import Router from 'next/router';
 import {useRouter} from 'next/router'
 
+import Link from 'next/Link';
 
 function Login() {
 
@@ -20,8 +22,12 @@ function Login() {
   const [pass_error, setpass_error] = useState('');
 
   const [pass_error_bool, setpass_error_bool] = useState(false);
+
   const [Role, setRole] = useState('');
   const [IsLogin, setIsLogin] = useState()
+
+  const router = useRouter();
+
   const passValidate = () => {
     setTimeout(function () {
       if (Password.length < 7) {
@@ -84,13 +90,14 @@ function Login() {
             
           }
           Authenticate(res.data.n, res.data.at);
-        })    
+          router.push('/dashboard');
+        })
+
         .catch((res) => {
           alert('Credentials are wrong');
         });
-    }
-    else{
-      alert(pass_error)
+    } else {
+      alert(pass_error);
     }
 
     setIsLogin(1);
@@ -110,7 +117,7 @@ function Login() {
   useEffect(() => {
     setMobile();
   }, []);
-  
+
   if (useMobile().isMobile) {
     return (
       <div className='LoginContainer'>
@@ -164,7 +171,13 @@ function Login() {
                   className='LoginFormLeftShowPassword'
                   onClick={() => setShowPassword(!ShowPassword)}
                 >
-                  <Image width='20' height='20' src='/Showpassword.webp' />
+                  <Image
+                    width='20'
+                    height='20'
+                    src={
+                      ShowPassword ? '/Hidepassword.webp' : '/Showpassword.webp'
+                    }
+                  />
                 </div>
               </div>
               {/* <div className='loginOrContainer'>
@@ -172,12 +185,12 @@ function Login() {
                 <div className='loginOrText'>OR</div>
                 <div className='loginOrLine'></div>
               </div> */}
-              
 
               <div
 
                 className='LoginButton'
                 onClick={() => {
+                  router.push('/dashboard');
                   submit();
                 }}
               >
@@ -185,9 +198,11 @@ function Login() {
               </div>
               <div className='loginRegisterContainer'>
                 <div className='loginRegisterText'>New to Esummit?</div>
-                <div className='loginRegisterText loginRegisterTextBold'>
-                  Register
-                </div>
+                <Link href='/register'>
+                  <div className='loginRegisterText loginRegisterTextBold'>
+                    Register
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -245,7 +260,13 @@ function Login() {
                   className='LoginFormLeftShowPassword'
                   onClick={() => setShowPassword(!ShowPassword)}
                 >
-                  <Image width='20' height='20' src='/Showpassword.webp' />
+                  <Image
+                    width='20'
+                    height='20'
+                    src={
+                      ShowPassword ? '/Hidepassword.webp' : '/Showpassword.webp'
+                    }
+                  />
                 </div>
               </div>
               {/* <div className='loginOrContainer'>
@@ -253,7 +274,7 @@ function Login() {
                 <div className='loginOrText'>OR</div>
                 <div className='loginOrLine'></div>
               </div> */}
-              
+
 
               <div
               
@@ -272,9 +293,11 @@ function Login() {
 
               <div className='loginRegisterContainer'>
                 <div className='loginRegisterText'>New to Esummit?</div>
-                <div className='loginRegisterText loginRegisterTextBold'>
-                  Register
-                </div>
+                <Link href='/register'>
+                  <div  className='loginRegisterText loginRegisterTextBold'>
+                    Register
+                  </div>
+                </Link>
               </div>
             </div>
             <div className='LoginFormRight'></div>
@@ -287,7 +310,6 @@ function Login() {
 
 
         </div>
-        
       </>
     );
   }
