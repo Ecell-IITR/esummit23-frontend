@@ -1,26 +1,12 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { toast } from 'react-toastify';
-import { FetchApi } from '../utils/FetchApi';
+import  FetchApi  from '../utils/FetchApi';
+import {TEAM_REGISTER_API } from '../utils/APIs';
+import { getAuthToken } from '../utils';
 
 function Dashboard(props) {
-  const userTemplate = {
-    Full_name: '',
-    Email: '',
-    Mobile_no: '',
-    Gender: '',
-  };
-  const [formFields, setFormFields] = useState([userTemplate]);
-  const addMember = () => {
-    let object = {
-      Full_name: ' ',
-      Email: ' ',
-      Mobile_no: ' ',
-      Gender: ' ',
-    };
 
-    setFormFields([...formFields, object]);
-  };
   const [inputFields, setInputFields] = useState([
     { full_name: '', email: '', phone_number: '' },
   ]);
@@ -48,18 +34,15 @@ function Dashboard(props) {
     };
     console.log(data);
 
-    // FetchApi('post', 'http://localhost:8000/user/team_signup ', data, null)
-    //   .then((res) => {
-    //     toast.success('Query Submitted !');
-    //     setTeamName('');
-    //     setFullName('');
-    //     setEmail('');
-    //     setPhoneNo('');
-    //   })
-    //   .catch((err) => {
-    //     toast.error('Query Unsuccessful!');
-    //     console.log(err);
-    //   });
+    FetchApi('POST', TEAM_REGISTER_API, data, getAuthToken())
+      .then((res) => {
+        toast.success('Query Submitted !');
+        
+      })
+      .catch((err) => {
+        toast.error('Query Unsuccessful!');
+        console.log(err);
+      });
   };
 
   return (
@@ -83,7 +66,6 @@ function Dashboard(props) {
           <div className='detailsMember_GRF' key={index}>
             <div className='memberNumber_GRF'>Member {index + 1}</div>
             <div className='otherDetailsMember_GRF'>
-              
               <div className='detailsOfMembers_GFR'>
                 <div className='commonDetail_GRF fullName_GRF'>
                   <input
@@ -184,7 +166,7 @@ function Dashboard(props) {
       </div>
 
       <div className='submitButton' onClick={handleSubmit}>
-        <button className='button_GRF' placeholder='SUBMIT RESPONSE'>
+        <button className='button_GRF' onClick={handleSubmit} placeholder='SUBMIT RESPONSE'>
           SUBMIT RESPONSE
         </button>{' '}
       </div>
