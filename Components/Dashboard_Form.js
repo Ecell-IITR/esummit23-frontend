@@ -25,10 +25,8 @@ function Dashboard(props) {
     { full_name: '', email: '', phone_number: '' },
   ]);
   const [TeamName, setTeamName] = useState('');
-  const [FullName, setFullName] = useState('');
-  const [Email, setEmail] = useState('');
-  const [PhoneNo, setPhoneNo] = useState('');
-  const [Gender, setGender] = useState('');
+  const [Ans1, setAns1] = useState('');
+  const [Ans2, setAns2] = useState('');
   const handleFormChange = (index, event) => {
     let data = [...inputFields];
     data[index][event.target.name] = event.target.value;
@@ -42,18 +40,13 @@ function Dashboard(props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
-      users: [
-        {
-          full_name: FullName,
-          email: Email,
-          phone_number: PhoneNo,
-        },
-        {
-          team_name: TeamName,
-        },
-      ],
+      no_user: inputFields.length,
+      team_name: TeamName,
+      users: inputFields,
+      event: props.name,
+      submission_text: Ans1 + '<br>' + Ans2,
     };
-    console.log(inputFields);
+    console.log(data);
 
     // FetchApi('post', 'http://localhost:8000/user/team_signup ', data, null)
     //   .then((res) => {
@@ -80,6 +73,7 @@ function Dashboard(props) {
           className='inputForm'
           type='text'
           name='teamName'
+          value={TeamName}
           placeholder='Team Name'
           onChange={(event) => setTeamName(event.target.value)}
         />
@@ -89,27 +83,14 @@ function Dashboard(props) {
           <div className='detailsMember_GRF' key={index}>
             <div className='memberNumber_GRF'>Member {index + 1}</div>
             <div className='otherDetailsMember_GRF'>
-              <div className='autoFill_GRF'>
-                <div
-                  style={index >= 0 ? { display: 'none' } : {}}
-                  className='select_GRF'
-                >
-                  <input class='checkbox-custom' type='checkbox' />
-                </div>
-                <div
-                  className='autoFillDetails_GRF'
-                  style={index >= 0 ? { display: 'none' } : {}}
-                >
-                  Auto fill if you are the team leader
-                </div>
-              </div>
+              
               <div className='detailsOfMembers_GFR'>
                 <div className='commonDetail_GRF fullName_GRF'>
                   <input
                     name='full_name'
                     className='commonInput_GRF'
                     type='text'
-                    placeholder='full_name'
+                    placeholder='full name'
                     value={input.full_name}
                     onChange={(event) => handleFormChange(index, event)}
                   ></input>
@@ -127,7 +108,7 @@ function Dashboard(props) {
                 <div className='commonDetail_GRF mobNo_GRF'>
                   r
                   <input
-                    name='phoneNo'
+                    name='phone_number'
                     className='commonInput_GRF'
                     type='phoneNo'
                     placeholder='Mobile No'
@@ -173,9 +154,11 @@ function Dashboard(props) {
             <div className='questionSmallContainer_GRF'>Q1. {props.Q_1}</div>
             <div className='answerHere_GRF'>
               <input
-                className='commonInput_GRF'
+                className='commonInput_GRF commonInput_GRF2'
                 type='text'
                 placeholder='Answer Here'
+                value={Ans1}
+                onChange={(event) => setAns1(event.target.value)}
               ></input>
             </div>
           </div>
@@ -184,12 +167,14 @@ function Dashboard(props) {
         )}
         {props.noQuestions > 1 ? (
           <div>
-            <div className='questionSmallContainer_GRF'>Q2. {props.Q_2}</div>
+            <div className='questionSmallContainer_GRF '>Q2. {props.Q_2}</div>
             <div className='answerHere_GRF'>
               <input
-                className='commonInput_GRF'
+                className='commonInput_GRF commonInput_GRF2'
                 type='paragraph'
                 placeholder='Answer Here'
+                value={Ans2}
+                onChange={(event) => setAns2(event.target.value)}
               ></input>
             </div>
           </div>
