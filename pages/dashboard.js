@@ -5,20 +5,7 @@ import {getUserDetails, getAuthToken} from '../utils';
 import {USER_SERVICES_API} from '../utils/APIs';
 import FetchApi from '../utils/fetchAPI';
 function Dashboard() {
-  const arr = [
-    {
-      name: 'Ideastorm',
-      desc: 'Annual B-Plan competition which witnesses more than 500 entries from over the country',
-      image: '/Ideastorm.webp',
-      isRegistered: 1,
-    },
-    {
-      name: 'Pthon',
-      desc: 'Annual B-Plan competition which witnesses more than 500 entries from over the country',
-      image: '/Ideastorm.webp',
-      isRegistered: 0,
-    },
-  ];
+  
 
   const [name, setName] = useState("");
   const [Id, setId] = useState("");
