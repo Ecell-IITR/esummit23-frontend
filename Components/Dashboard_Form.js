@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { toast } from 'react-toastify';
 import { FetchApi } from '../utils/FetchApi';
 
-function Dashboard() {
+function Dashboard(props) {
   const userTemplate = {
     Full_name: '',
     Email: '',
@@ -21,13 +21,24 @@ function Dashboard() {
 
     setFormFields([...formFields, object]);
   };
-
+  const [inputFields, setInputFields] = useState([
+    { full_name: '', email: '', phone_number: '' },
+  ]);
   const [TeamName, setTeamName] = useState('');
   const [FullName, setFullName] = useState('');
   const [Email, setEmail] = useState('');
   const [PhoneNo, setPhoneNo] = useState('');
   const [Gender, setGender] = useState('');
+  const handleFormChange = (index, event) => {
+    let data = [...inputFields];
+    data[index][event.target.name] = event.target.value;
+    setInputFields(data);
+  };
+  const addFields = () => {
+    let newfield = { full_name: '', email: '', phone_number: '' };
 
+    setInputFields([...inputFields, newfield]);
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
@@ -42,25 +53,26 @@ function Dashboard() {
         },
       ],
     };
+    console.log(inputFields);
 
-    FetchApi('post', 'http://localhost:8000/user/team_signup ', data, null)
-      .then((res) => {
-        toast.success('Query Submitted !');
-        setTeamName('');
-        setFullName('');
-        setEmail('');
-        setPhoneNo('');
-      })
-      .catch((err) => {
-        toast.error('Query Unsuccessful!');
-        console.log(err);
-      });
+    // FetchApi('post', 'http://localhost:8000/user/team_signup ', data, null)
+    //   .then((res) => {
+    //     toast.success('Query Submitted !');
+    //     setTeamName('');
+    //     setFullName('');
+    //     setEmail('');
+    //     setPhoneNo('');
+    //   })
+    //   .catch((err) => {
+    //     toast.error('Query Unsuccessful!');
+    //     console.log(err);
+    //   });
   };
 
   return (
     <div className='container_GRF'>
       <div className='formHeading_GRF'>
-        Application form - *EVENT NAME ROUND 1
+        Application form - {props.name} ROUND 1
       </div>
 
       <div className='teamName_GRF'>
@@ -72,7 +84,7 @@ function Dashboard() {
           onChange={(event) => setTeamName(event.target.value)}
         />
       </div>
-      {formFields.map((form, index) => {
+      {inputFields.map((input, index) => {
         return (
           <div className='detailsMember_GRF' key={index}>
             <div className='memberNumber_GRF'>Member {index + 1}</div>
@@ -94,11 +106,12 @@ function Dashboard() {
               <div className='detailsOfMembers_GFR'>
                 <div className='commonDetail_GRF fullName_GRF'>
                   <input
-                    name='FullName'
+                    name='full_name'
                     className='commonInput_GRF'
                     type='text'
-                    placeholder='Full Name'
-                    onChange={(event) => setFullName(event.target.value)}
+                    placeholder='full_name'
+                    value={input.full_name}
+                    onChange={(event) => handleFormChange(index, event)}
                   ></input>
                 </div>
                 <div className='commonDetail_GRF email_GRF'>
@@ -106,8 +119,9 @@ function Dashboard() {
                     className='commonInput_GRF'
                     type='email'
                     name='email'
+                    value={input.email}
                     placeholder='Email Address'
-                    onChange={(event) => setEmail(event.target.value)}
+                    onChange={(event) => handleFormChange(index, event)}
                   ></input>
                 </div>
                 <div className='commonDetail_GRF mobNo_GRF'>
@@ -117,18 +131,20 @@ function Dashboard() {
                     className='commonInput_GRF'
                     type='phoneNo'
                     placeholder='Mobile No'
-                    onChange={(event) => setPhoneNo(event.target.value)}
+                    value={input.phone_number}
+                    onChange={(event) => handleFormChange(index, event)}
                   ></input>
                 </div>
-                <div className='commonDetail_GRF gender_GRF'>
+                {/* <div className='commonDetail_GRF gender_GRF'>
                   <input
                     className='commonInput_GRF'
                     type='text'
                     placeholder='Gender'
                     name='gender'
+                    
                     onChange={(event) => setGender(event.target.value)}
                   />
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -137,7 +153,7 @@ function Dashboard() {
 
       <div className='addMember_GRF'>
         <div className='addMemberOption_GRF'>
-          <div className='addSymbol_GRF' onClick={addMember}>
+          <div className='addSymbol_GRF' onClick={addFields}>
             <Image
               className='addImage'
               src='/add.webp'
@@ -145,39 +161,41 @@ function Dashboard() {
               height='9rem'
             ></Image>
           </div>
-          <div className='afterAddSymbol_GRF' onClick={addMember}>
+          <div className='afterAddSymbol_GRF' onClick={addFields}>
             Add Member
           </div>
         </div>
       </div>
 
       <div className='questionBigContainer_GRF'>
-        <div>
-          <div className='questionSmallContainer_GRF'>
-            Q1. Lorem ipsum dolor sit amet consectetur. Ultrices vulputate at at
-            quis ornare. at at quis ornare.
+        {props.noQuestions > 0 ? (
+          <div>
+            <div className='questionSmallContainer_GRF'>Q1. {props.Q_1}</div>
+            <div className='answerHere_GRF'>
+              <input
+                className='commonInput_GRF'
+                type='text'
+                placeholder='Answer Here'
+              ></input>
+            </div>
           </div>
-          <div className='answerHere_GRF'>
-            <input
-              className='commonInput_GRF'
-              type='text'
-              placeholder='Answer Here'
-            ></input>
+        ) : (
+          <></>
+        )}
+        {props.noQuestions > 1 ? (
+          <div>
+            <div className='questionSmallContainer_GRF'>Q2. {props.Q_2}</div>
+            <div className='answerHere_GRF'>
+              <input
+                className='commonInput_GRF'
+                type='paragraph'
+                placeholder='Answer Here'
+              ></input>
+            </div>
           </div>
-        </div>
-        <div>
-          <div className='questionSmallContainer_GRF'>
-            Q2. Lorem ipsum dolor sit amet consectetur. Ultrices vulputate at at
-            quis ornare. at at quis ornare.
-          </div>
-          <div className='answerHere_GRF'>
-            <input
-              className='commonInput_GRF'
-              type='paragraph'
-              placeholder='Answer Here'
-            ></input>
-          </div>
-        </div>
+        ) : (
+          <></>
+        )}
       </div>
 
       <div className='submitButton' onClick={handleSubmit}>
