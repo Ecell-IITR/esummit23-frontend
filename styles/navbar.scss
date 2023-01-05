@@ -1,5 +1,5 @@
 .navbarParent{
-    background: #121212;
+    background: #f9f8f800;
     display: flex !important;
     justify-content: space-between !important;
     height: 73px;
@@ -42,6 +42,7 @@ color: #FFFFFF;
 flex: none;
 order: 0;
 flex-grow: 0;
+margin-top: .5rem;
 }
 
 .navbarButton:hover{
@@ -78,13 +79,39 @@ text-decoration-line: none;
 
 .navBut{
     margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.lineBelowRole{
+  height: .5rem;
+  margin-top: .5rem;
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:white;
+}
+
+.updateRole{
+color: red;
 }
 
 ul a.active {
     color: #FFD754;  
     text-decoration:underline;
 }
+.role
+{
+  // border: 1px solid red;
+  width: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
 
+}
 
 .navbarActive{
     color: #D4B984 !important;  
