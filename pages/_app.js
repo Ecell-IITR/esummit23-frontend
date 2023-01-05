@@ -12,7 +12,7 @@ import Script from 'next/script';
 import config from '../config';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import Leaderboard from '../Components/Leaderboard/Leaderboard';
 function MyApp({ Component, pageProps }) {
   return (
     <>
@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }) {
            `}
         </Script>
    
-        <Component {...pageProps} />
+        <Component {...pageProps} /><Leaderboard/>
   
       </MobileProvider>
     </AuthContext.Provider>
