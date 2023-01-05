@@ -4,10 +4,16 @@ import Image from 'next/image';
 import { LOGIN_API } from '../utils/APIs';
 import FetchApi from '../utils/fetchAPI';
 import { Authenticate } from '../utils';
-import { useRouter } from 'next/router';
+
+import Dashboard from '../Components/Dashboard_Form';
+import Router from 'next/router';
+import {useRouter} from 'next/router'
+
 import Link from 'next/Link';
 
 function Login() {
+
+  const Router= useRouter();
   const setMobile = useUpdateMobile();
   const [email, setemail] = useState();
   const [Password, setPassword] = useState('');
@@ -16,7 +22,12 @@ function Login() {
   const [pass_error, setpass_error] = useState('');
 
   const [pass_error_bool, setpass_error_bool] = useState(false);
+
+  const [Role, setRole] = useState('');
+  const [IsLogin, setIsLogin] = useState()
+
   const router = useRouter();
+
   const passValidate = () => {
     setTimeout(function () {
       if (Password.length < 7) {
@@ -41,23 +52,72 @@ function Login() {
         null
       )
         .then((res) => {
-          console.log(res);
-          if (res.data.role) {
+         
+          if (res.data.role){
+            console.log(res);
             localStorage.setItem('userRoleType', res.data.role);
+
+
+
+            if(localStorage.getItem('userRoleType'))
+            {
+              
+              const roleType=localStorage.getItem('userRoleType');
+            
+              if(roleType=='ca')
+              {                
+              setRole('ca');
+              }
+              if(roleType=='stu')
+              {
+              setRole('student');
+              }
+              if(roleType=='professor')
+              {
+              setRole('professor');
+              }
+              if(roleType=='startup')
+              {
+              setRole('startup');
+              }
+              console.log(Role);
+
+            }
+
+
+
+
+            
           }
           Authenticate(res.data.n,res.data.e_id, res.data.at);
           router.push('/dashboard');
         })
+
         .catch((res) => {
           alert('Credentials are wrong');
         });
     } else {
       alert(pass_error);
     }
+
+    setIsLogin(1);
+    Router.push({
+      pathname:'/dashboard'
+    })
+
+
+    
+
+
+
+
   }
+
+
   useEffect(() => {
     setMobile();
   }, []);
+
   if (useMobile().isMobile) {
     return (
       <div className='LoginContainer'>
@@ -127,6 +187,7 @@ function Login() {
               </div> */}
 
               <div
+
                 className='LoginButton'
                 onClick={() => {
                   router.push('/dashboard');
@@ -214,14 +275,22 @@ function Login() {
                 <div className='loginOrLine'></div>
               </div> */}
 
+
               <div
+              
+              style={  { }    }
+              
                 className='LoginButton'
                 onClick={() => {
+                  
                   submit();
                 }}
               >
                 Login
               </div>
+
+
+
               <div className='loginRegisterContainer'>
                 <div className='loginRegisterText'>New to Esummit?</div>
                 <Link href='/register'>
@@ -233,6 +302,13 @@ function Login() {
             </div>
             <div className='LoginFormRight'></div>
           </div>
+
+
+
+
+
+
+
         </div>
       </>
     );

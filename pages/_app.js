@@ -2,6 +2,7 @@ import '../styles/globals.css';
 import '../styles/index.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MobileProvider from '../utils/MobileContext';
+
 import { AuthContext } from '../utils/auth-context';
 import { isAuthenticated, isLocalHost, unAuthenticate } from '../utils';
 import router, { useRouter } from 'next/router';
@@ -13,12 +14,14 @@ import config from '../config';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
 function MyApp({ Component, pageProps }) {
   return (
     <>
 
     <AuthContext.Provider value={{ user: isAuthenticated() }}>
       <MobileProvider>
+
         <DefaultSeo {...defaultSEOConfig} />
         <ToastContainer />
         <Script
@@ -36,6 +39,7 @@ function MyApp({ Component, pageProps }) {
    
         <Component {...pageProps} />
   
+
       </MobileProvider>
     </AuthContext.Provider>
     </>

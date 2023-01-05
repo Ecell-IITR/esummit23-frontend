@@ -8,7 +8,7 @@ import { useMobile, useUpdateMobile } from '../../utils/MobileContext';
 export default function EventsDetails({ details }) {
   const router = useRouter();
   const setMobile = useUpdateMobile();
-  console.log(details);
+  console.log(router);
 
 
   useEffect(() => {

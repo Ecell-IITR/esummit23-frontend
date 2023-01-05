@@ -4,13 +4,6 @@ import React, { useState, useEffect } from 'react';
 
 export default function Events({posts}) {
 
-  console.log(posts)
-  FetchApi('post', url, null, null)
-      .then((res) => {
-        // do action with res
-      })
-
-  
 
   return (
     <div>
@@ -38,7 +31,7 @@ export async function getStaticProps() {
   const res = await fetch(ALL_EVENTS_API);
 
   const posts = await res?.json();
-  console.log(res);
+  console.log(posts);
   // By returning { props: { posts } }, the Blog component
   // will receive `posts` as a prop at build time
   return {
