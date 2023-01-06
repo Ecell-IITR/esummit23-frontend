@@ -1,6 +1,8 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import { isAuthenticated } from '../../../utils';
+
+import {isAuthenticated} from "../../utils";
+
 
 export default function Header(props) {
   const router = useRouter();
