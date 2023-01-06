@@ -1,21 +1,20 @@
 import { ALL_EVENTS_API } from '../../utils/APIs';
 import FetchApi from '../../utils/fetchAPI';
 import React, { useState, useEffect } from 'react';
-import Image from "next/image";
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { isAuthenticated } from '../../utils';
 
-
 export default function Events({ posts }) {
   const router = useRouter();
-  const rederict=()=>{
-    if(isAuthenticated()){
-      router.push(`/dashboard`)
-    }else{
-      router.push(`/login`)
+  const rederict = () => {
+    if (isAuthenticated()) {
+      router.push(`/dashboard`);
+    } else {
+      router.push(`/login`);
     }
-  }
-  const [width,setWidth]=useState(0)
+  };
+  const [width, setWidth] = useState(0);
 
   useEffect(() => {
     const rotation = window.innerWidth;
@@ -72,14 +71,23 @@ export default function Events({ posts }) {
                   dangerouslySetInnerHTML={{ __html: post?.card_description }}
                 ></div>
 
-                  <a classname='eventPga' href={"/events/"+post?.event_name}>...Read more</a>
+                <a classname='eventPga' href={'/events/' + post?.event_name}>
+                  ...Read more
+                </a>
 
                 {/* ({post.card_description.length>200?post.card_description.slice(0,200):post.card_description}) */}
               </div>
 
-              <div className="eventPgBtnC">
-
-                <button className="eventPgBtn" onClick={()=>{rederict()}}> Apply Now </button>
+              <div className='eventPgBtnC'>
+                <button
+                  className='eventPgBtn'
+                  onClick={() => {
+                    rederict();
+                  }}
+                >
+                  {' '}
+                  Apply Now{' '}
+                </button>
 
                 <Image src='/Vector.png' height='16px' width='21.3px'></Image>
               </div>
