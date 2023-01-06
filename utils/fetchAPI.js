@@ -15,6 +15,7 @@ const FetchApi = (method, url, params, TokenValue) => {
         },
         responseType: 'json',
       })
+     
         .then((res) => resolve(res))
         .catch((err) => reject(err));
     } else {

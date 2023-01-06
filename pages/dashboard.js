@@ -13,29 +13,28 @@ function Dashboard() {
   const [Reg, setReg] = useState([]);
   const [Avail, setAvail] = useState([]);
   const [attempts, setattempts] = useState(0);
-
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
   useEffect(() => {
-    const [first, second] = getUserDetails();
-     
-    setName(first);
+  const [first ,second] = getUserDetails();
+
+    // setName(second[0]);
     setId(second);
-    setAuth(getAuthToken());
-    if (attempts < 10) {
-      FetchApi('GET', USER_SERVICES_API, {}, Auth)
-        .then((res) => {
-          setReg(res.data.opt);
-          setAvail(res.data.rest);
-          setattempts(10);
-        })
-        .catch((err) => {
-          setattempts(attempts + 1);
-        });
-    }
-  });
+    setName(first);
+
+    FetchApi('get', USER_SERVICES_API, null, getAuthToken())
+      .then((res) => {
+        setReg(res.data.opt);
+        setAvail(res.data.rest);
+      })
+      .catch((err) => {
+        setattempts(attempts + 1);
+        console.log(err);
+      });
+  },[]);
 
   return (
     <div className='dashboardContainer'>
@@ -76,7 +75,7 @@ function Dashboard() {
                       <DashboardForm
                         noQuestions={item.no_of_QA}
                         name={item.name}
-                        Q_1={item.question1 }
+                        Q_1={item.question1}
                         Q_2={item.question2}
                       />
                     </Modal>

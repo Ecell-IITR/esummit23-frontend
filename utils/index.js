@@ -10,10 +10,8 @@ export const isAuthenticated = () => {
 
 export const getAuthToken = () => {
   if (typeof window === 'undefined') return false;
-  const userJSON = localStorage.getItem('user');
-  const user = userJSON ? JSON.parse(userJSON) : null;
   const token = localStorage.getItem('authToken');
-  return !!(user && token) ? token : false;
+  return  token ? token : false;
 };
 
 export const getUserRoleType = () => {
