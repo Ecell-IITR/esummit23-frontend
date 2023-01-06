@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import ProfileCard from '../components/ProfileCard/ProfileCard';
-import Register from '../components/Register';
+import ProfileCard from '../Components/ProfileCard/ProfileCard';
+import Register from '../Components/Register';
 import { getUserDetails, getAuthToken } from '../utils';
 import { USER_SERVICES_API } from '../utils/APIs';
 import FetchApi from '../utils/fetchAPI';
@@ -9,14 +9,13 @@ import Modal from 'react-bootstrap/Modal';
 function Dashboard() {
   const [name, setName] = useState('');
   const [Id, setId] = useState('');
-  
+
   const [Reg, setReg] = useState([]);
   const [Avail, setAvail] = useState([]);
   const [attempts, setattempts] = useState(0);
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
-  
 
   useEffect(() => {
     const [first, second] = getUserDetails();

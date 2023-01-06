@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { toast } from 'react-toastify';
-import FetchApi from '../utils/FetchApi';
+import FetchApi from '../utils/fetchApi';
 import { TEAM_REGISTER_API } from '../utils/APIs';
 import { getAuthToken } from '../utils';
 
