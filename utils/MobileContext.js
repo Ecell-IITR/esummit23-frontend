@@ -35,7 +35,7 @@ const MobileProvider = ({ children }) => {
       setIsStyleMobile('mobile');
     } else {
       setIsMobile(false);
-      // console.log("I am not mobile!");
+      console.log('I am not mobile!', window.innerWidth);
       setIsStyleMobile('not-mobile');
     }
   };

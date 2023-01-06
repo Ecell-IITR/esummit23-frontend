@@ -4,9 +4,6 @@ import Image from 'next/image';
 import { LOGIN_API } from '../utils/APIs';
 import FetchApi from '../utils/fetchAPI';
 import { Authenticate } from '../utils';
-
-import Dashboard from '../Components/Dashboard_Form';
-import Router from 'next/router';
 import {useRouter} from 'next/router'
 
 import Link from 'next/Link';
@@ -41,7 +38,7 @@ function Login() {
   };
 
   function submit() {
-    if (!pass_error_bool) {
+    if (Password.length > 7) {
       FetchApi(
         'POST',
         LOGIN_API,
@@ -89,7 +86,7 @@ function Login() {
 
             
           }
-          Authenticate(res.data.n, res.data.at);
+          Authenticate(res.data.n,res.data.e_id, res.data.at);
           router.push('/dashboard');
         })
 

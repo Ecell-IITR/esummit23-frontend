@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { toast } from 'react-toastify';
-import  FetchApi  from '../utils/FetchApi';
-import {TEAM_REGISTER_API } from '../utils/APIs';
+import FetchApi from '../utils/FetchApi';
+import { TEAM_REGISTER_API } from '../utils/APIs';
 import { getAuthToken } from '../utils';
 
 function Dashboard(props) {
-
   const [inputFields, setInputFields] = useState([
     { full_name: '', email: '', phone_number: '' },
   ]);
@@ -37,7 +36,6 @@ function Dashboard(props) {
     FetchApi('POST', TEAM_REGISTER_API, data, getAuthToken())
       .then((res) => {
         toast.success('Query Submitted !');
-        
       })
       .catch((err) => {
         toast.error('Query Unsuccessful!');
@@ -166,7 +164,11 @@ function Dashboard(props) {
       </div>
 
       <div className='submitButton' onClick={handleSubmit}>
-        <button className='button_GRF' onClick={handleSubmit} placeholder='SUBMIT RESPONSE'>
+        <button
+          className='button_GRF'
+          onClick={handleSubmit}
+          placeholder='SUBMIT RESPONSE'
+        >
           SUBMIT RESPONSE
         </button>{' '}
       </div>
