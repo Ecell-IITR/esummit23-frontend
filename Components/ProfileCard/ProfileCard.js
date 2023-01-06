@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+
 function ProfileCard({ name, esummit_id }) {
   return (
     <>
