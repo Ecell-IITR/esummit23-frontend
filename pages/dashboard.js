@@ -19,7 +19,7 @@ function Dashboard() {
   const handleShow = () => setShow(true);
 
   useEffect(() => {
-  const [first ,second] = getUserDetails();
+    const [first, second] = getUserDetails();
 
     // setName(second[0]);
     setId(second);
@@ -34,7 +34,7 @@ function Dashboard() {
         setattempts(attempts + 1);
         console.log(err);
       });
-  },[]);
+  }, []);
 
   return (
     <div className='dashboardContainer'>

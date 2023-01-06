@@ -1,8 +1,6 @@
 import Image from 'next/image';
 
 export function EventsIdeathon(props) {
-  
-
   return (
     <div className='containerEvents'>
       <div className='helpAboutContainer'>

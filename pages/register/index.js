@@ -43,7 +43,7 @@ const Registration = () => {
                 width: '100vw',
               }}
             >
-              <Image src='/LoginMobile.png' layout='fill' objectFit="cover"  />
+              <Image src='/LoginMobile.png' layout='fill' objectFit='cover' />
             </div>
 
             <div className='RegisterHereMob'>
@@ -144,14 +144,16 @@ const Registration = () => {
                         />
                         Male
                       </div>
-                      <div style={{
+                      <div
+                        style={{
                           fontFamily: 'Nunito Sans',
                           fontStyle: 'normal',
                           fontWeight: '400',
                           fontSize: '14px',
                           lineHeight: '20px',
                           color: '#FFD685',
-                        }}>
+                        }}
+                      >
                         <input
                           type='radio'
                           name='SelectGender'
@@ -161,14 +163,16 @@ const Registration = () => {
                         />
                         Female
                       </div>
-                      <div style={{
+                      <div
+                        style={{
                           fontFamily: 'Nunito Sans',
                           fontStyle: 'normal',
                           fontWeight: '400',
                           fontSize: '14px',
                           lineHeight: '20px',
                           color: '#FFD685',
-                        }}>
+                        }}
+                      >
                         <input
                           type='radio'
                           name='SelectGender'

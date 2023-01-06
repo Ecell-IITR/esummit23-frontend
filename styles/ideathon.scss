@@ -4,11 +4,9 @@
   display: flex;
   flex-direction: row;
   background-size: 100vw 100vh;
-
 }
 
 .ideaThon-main {
-
   height: 100vh;
   width: 100vw;
 }
@@ -116,12 +114,10 @@
   order: 1;
   flex-grow: 0;
 }
-@media only screen and (max-width : 1000px) {
+@media only screen and (max-width: 1000px) {
   .ideaBox1 {
     width: 65%;
-
   }
-  
 }
 @media only screen and (max-width: 800px) {
   .ideaThon-main {

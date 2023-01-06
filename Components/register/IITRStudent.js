@@ -70,8 +70,8 @@ const IITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
             {/* <Image width='100%' height='40' src='/loginMobile.png' /> */}
           </div>
           <div className='mobRegisterForm'>
-            <div style={{marginTop:"-60vh"}} className='mobRegisterHere'>
-              <div className='summitLogo' style={{paddingBottom:"20vh"}}>
+            <div style={{ marginTop: '-60vh' }} className='mobRegisterHere'>
+              <div className='summitLogo' style={{ paddingBottom: '20vh' }}>
                 <div
                   style={{
                     width: '200px',
@@ -89,57 +89,56 @@ const IITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
                 Please fill all the required fields.
               </h3>
               <div className='regInputContainer'>
-              <input
-                type='text'
-                placeholder='Branch Name'
-                value={Branch}
-                onChange={(e) => setBranch(e.target.value)}
-                style={{
-                  marginTop: '36px',
-                }}
-              />
+                <input
+                  type='text'
+                  placeholder='Branch Name'
+                  value={Branch}
+                  onChange={(e) => setBranch(e.target.value)}
+                  style={{
+                    marginTop: '36px',
+                  }}
+                />
 
-              <input
-                type='text'
-                placeholder='Current Year'
-                value={Year}
-                onChange={(e) => setYear(e.target.value)}
-              />
-              <input
-                type='text'
-                placeholder='State'
-                value={State}
-                onChange={(e) => setState(e.target.value)}
-              />
+                <input
+                  type='text'
+                  placeholder='Current Year'
+                  value={Year}
+                  onChange={(e) => setYear(e.target.value)}
+                />
+                <input
+                  type='text'
+                  placeholder='State'
+                  value={State}
+                  onChange={(e) => setState(e.target.value)}
+                />
 
-              <input
-                type='text'
-                placeholder='City'
-                value={City}
-                onChange={(e) => setCity(e.target.value)}
-              />
+                <input
+                  type='text'
+                  placeholder='City'
+                  value={City}
+                  onChange={(e) => setCity(e.target.value)}
+                />
 
-              <input
-                type='password'
-                placeholder='Set password'
-                value={password}
-                onChange={(e) => setpassword(e.target.value)}
-              />
-              <input
-                type='password'
-                placeholder='Confirm Password'
-                value={Confirmpassword}
-                onChange={(e) => setConfirmpassword(e.target.value)}
-              />
+                <input
+                  type='password'
+                  placeholder='Set password'
+                  value={password}
+                  onChange={(e) => setpassword(e.target.value)}
+                />
+                <input
+                  type='password'
+                  placeholder='Confirm Password'
+                  value={Confirmpassword}
+                  onChange={(e) => setConfirmpassword(e.target.value)}
+                />
 
-              <button
-                type='submit'
-                className='CreateAccountButton'
-                onClick={Submit}
-              >
-                Create Account
-              </button>
-
+                <button
+                  type='submit'
+                  className='CreateAccountButton'
+                  onClick={Submit}
+                >
+                  Create Account
+                </button>
               </div>
             </div>
           </div>

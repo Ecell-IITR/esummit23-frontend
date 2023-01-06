@@ -11,7 +11,7 @@ export const isAuthenticated = () => {
 export const getAuthToken = () => {
   if (typeof window === 'undefined') return false;
   const token = localStorage.getItem('authToken');
-  return  token ? token : false;
+  return token ? token : false;
 };
 
 export const getUserRoleType = () => {
@@ -27,8 +27,8 @@ export const getUserDetails = () => {
   if (typeof window === 'undefined') return false;
   const name = localStorage.getItem('name');
   const id = localStorage.getItem('id');
-  return !!(name && id ) ? [name,id] : [false,false];
-}; 
+  return !!(name && id) ? [name, id] : [false, false];
+};
 
 export const unAuthenticate = () => {
   if (typeof window === 'undefined') return null;
@@ -39,9 +39,9 @@ export const unAuthenticate = () => {
   //   logSignOut();
 };
 
-export const Authenticate = (name,id, authToken) => {
+export const Authenticate = (name, id, authToken) => {
   if (typeof window === 'undefined') return null;
-  
+
   localStorage.setItem('name', name);
   localStorage.setItem('id', id);
   localStorage.setItem('authToken', authToken);

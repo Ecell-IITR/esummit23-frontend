@@ -231,16 +231,16 @@
   height: 100%;
   width: 100%;
 }
-@media screen and (max-width:"500px") {
-  .detailsOfMembers_GFR{
+@media screen and (max-width: '500px') {
+  .detailsOfMembers_GFR {
     flex-direction: column;
     gap: 1rem;
     align-items: flex-start;
   }
-  .commonInput_GRF{
+  .commonInput_GRF {
     width: 300%;
   }
-  .commonInput_GRF2{
-    width: 100%!important;
+  .commonInput_GRF2 {
+    width: 100% !important;
   }
 }

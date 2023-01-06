@@ -21,4 +21,3 @@ export const TEAM_REGISTER_API = `${API_URL}/user/team_signup`;
 export const REGISTER_API = `${API_URL}/user/signup`;
 export const ALL_EVENTS_API = `${API_URL}/events/all`;
 export const USER_SERVICES_API = `${API_URL}/user/services`;
-

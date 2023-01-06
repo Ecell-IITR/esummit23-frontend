@@ -1,22 +1,22 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import {isAuthenticated} from "../../../utils";
+import { isAuthenticated } from '../../../utils';
 
 export default function Header(props) {
   const router = useRouter();
-  const rederict=()=>{
-    if(isAuthenticated()){
-      router.push(`/dashboard`)
-    }else{
-      router.push(`/login`)
+  const rederict = () => {
+    if (isAuthenticated()) {
+      router.push(`/dashboard`);
+    } else {
+      router.push(`/login`);
     }
-  }
+  };
 
   return (
     <>
       <div className='ideaThon-main'>
         <div
-          style={{ backgroundImage: `url(${props.card})`   }}
+          style={{ backgroundImage: `url(${props.card})` }}
           className='ideaThon-bg'
         >
           <div className='ideaBox1'>
@@ -28,7 +28,7 @@ export default function Header(props) {
           </div>
           <div className='ideaBox2'></div>
         </div>
-        <div style={{minHeight:"20rem"}}>
+        <div style={{ minHeight: '20rem' }}>
           <div className='yellowBox'>
             <div className='yBox1'>
               <div className='boxHead1'>Event Type</div>

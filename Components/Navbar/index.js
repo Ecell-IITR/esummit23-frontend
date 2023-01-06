@@ -1,5 +1,5 @@
-import Head from "./Navbar"
-import HeaderMobile from "./HeaderMobile"
+import Head from './Navbar';
+import HeaderMobile from './HeaderMobile';
 import { useMobile, useUpdateMobile } from '../../utils/MobileContext';
 import React, { useEffect } from 'react';
 

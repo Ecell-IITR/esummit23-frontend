@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { EVENT_API } from '../../utils/APIs';
 import { useRouter } from 'next/router';
 import Header from '../../Components/Events/Header';
@@ -9,7 +9,6 @@ export default function EventsDetails({ details }) {
   const router = useRouter();
   const setMobile = useUpdateMobile();
   console.log(router);
-
 
   useEffect(() => {
     setMobile();
@@ -23,7 +22,9 @@ export default function EventsDetails({ details }) {
         type={details.Type}
         start={details.registraion_start_date}
         end={details.registraion_end_date}
-        card={useMobile().isMobile? details.card_image  :  details.background_image}
+        card={
+          useMobile().isMobile ? details.card_image : details.background_image
+        }
       />
       <Timline
         name={details.event_name}
@@ -32,7 +33,7 @@ export default function EventsDetails({ details }) {
         eligiblity={details.event_eligibility}
         round={details.event_rounds}
       />
-      <Sponsors 
+      <Sponsors
         perks={details.event_perks}
         Coordinator={details.events_coordinators}
         partners={details.event_partners}

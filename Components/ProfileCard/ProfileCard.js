@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-function ProfileCard({name ,esummit_id}) {
+function ProfileCard({ name, esummit_id }) {
   return (
     <>
       <div className='containerProfile'>
@@ -14,7 +14,6 @@ function ProfileCard({name ,esummit_id}) {
                 View full profile
               </a>
             </div>
-            
           </div>
         </div>
       </div>
