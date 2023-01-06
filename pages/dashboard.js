@@ -1,40 +1,42 @@
-import React ,{useEffect,useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import ProfileCard from '../components/ProfileCard/ProfileCard';
 import Register from '../components/Register';
-import {getUserDetails, getAuthToken} from '../utils';
-import {USER_SERVICES_API} from '../utils/APIs';
+import { getUserDetails, getAuthToken } from '../utils';
+import { USER_SERVICES_API } from '../utils/APIs';
 import FetchApi from '../utils/fetchAPI';
+import DashboardForm from '../Components/DashboardForm';
+import Modal from 'react-bootstrap/Modal';
 function Dashboard() {
-  
+  const [name, setName] = useState('');
+  const [Id, setId] = useState('');
+  const [Auth, setAuth] = useState('');
+  const [Reg, setReg] = useState([]);
+  const [Avail, setAvail] = useState([]);
+  const [attempts, setattempts] = useState(0);
 
-  const [name, setName] = useState("");
-  const [Id, setId] = useState("");
-  const [Auth, setAuth] = useState("")
-  const [Reg, setReg] = useState([])
-  const [Avail, setAvail] = useState([])
-  const [attempts, setattempts] = useState(0)
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   useEffect(() => {
-  
     const [first, second] = getUserDetails();
+     
     setName(first);
     setId(second);
     setAuth(getAuthToken());
-    if (attempts<10){
+    if (attempts < 10) {
+      FetchApi('GET', USER_SERVICES_API, {}, Auth)
+        .then((res) => {
+          setReg(res.data.opt);
+          setAvail(res.data.rest);
+          setattempts(10);
+        })
+        .catch((err) => {
+          setattempts(attempts + 1);
+        });
+    }
+  });
 
-      FetchApi("GET",USER_SERVICES_API,{},Auth).then((res)=>{
-          setReg(res.data.opt)
-          setAvail(res.data.rest)
-          setattempts(10)
-
-      })
-      .catch((err)=>{
-        setattempts(attempts+1)
-      })
-}
-  }, )
-
-  
-  
   return (
     <div className='dashboardContainer'>
       <div className='dashboardSubContainer'>
@@ -43,7 +45,7 @@ function Dashboard() {
           <div></div>
         </div>
         <div className='dashboardEventContainer'>
-            <div className='dashboardEventHeader'>Events Registered</div>
+          <div className='dashboardEventHeader'>Events Registered</div>
           <div className='dashboardEventCardsContainer'>
             {Reg.map((item) => {
               return (
@@ -58,19 +60,35 @@ function Dashboard() {
           </div>
         </div>
         <div className='dashboardEventContainer'>
-            <div className='dashboardEventHeader'>Events Available</div>
+          <div className='dashboardEventHeader'>Events Available</div>
           <div className='dashboardEventCardsContainer'>
             {Avail.map((item) => {
-              return (<>
-              <div className='dashboardRegisterBox'>
-                <Register
-                  isRegistered={0}
-                  img={item.img}
-                  name={item.name}
-                  desc={item.desc}
-                />
-                <div className='dashboardRegisterButton' >Register</div>
-                </div>
+              return (
+                <>
+                  <div className='dashboardRegisterBox'>
+                    <Register
+                      isRegistered={0}
+                      img={item.img}
+                      name={item.name}
+                      desc={item.desc}
+                    />
+                    <Modal show={show} onHide={handleClose}>
+                      <DashboardForm
+                        noQuestions={item.no_of_QA}
+                        name={item.name}
+                        Q_1={item.question1 }
+                        Q_2={item.question2}
+                      />
+                    </Modal>
+                    <div
+                      onClick={() => {
+                        setShow(true);
+                      }}
+                      className='dashboardRegisterButton'
+                    >
+                      Register
+                    </div>
+                  </div>
                 </>
               );
             })}
@@ -94,7 +112,7 @@ export default Dashboard;
 //   // will receive `posts` as a prop at build time
 //   return {
 //     props: {
-      
+
 //     },
 //   };
 // }

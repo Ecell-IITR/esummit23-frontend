@@ -29,7 +29,7 @@ export const getUserDetails = () => {
   if (typeof window === 'undefined') return false;
   const name = localStorage.getItem('name');
   const id = localStorage.getItem('id');
-  return !!(name && id ) ? [name,id] : false;
+  return !!(name && id ) ? [name,id] : [false,false];
 }; 
 
 export const unAuthenticate = () => {

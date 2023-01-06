@@ -4,9 +4,6 @@ import Image from 'next/image';
 import { LOGIN_API } from '../utils/APIs';
 import FetchApi from '../utils/fetchAPI';
 import { Authenticate } from '../utils';
-
-import Dashboard from '../Components/Dashboard_Form';
-import Router from 'next/router';
 import {useRouter} from 'next/router'
 
 import Link from 'next/Link';
