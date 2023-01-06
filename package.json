@@ -1,7 +1,9 @@
 {
   "name": "esummit",
   "version": "1.0.0",
+  "description": "Har Har Mahadev",
   "private": true,
+  
   "scripts": {
     "dev": "next dev",
     "build": "next build",
