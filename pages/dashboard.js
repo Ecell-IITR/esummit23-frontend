@@ -9,14 +9,14 @@ import Modal from 'react-bootstrap/Modal';
 function Dashboard() {
   const [name, setName] = useState('');
   const [Id, setId] = useState('');
-  const [Auth, setAuth] = useState('');
+  
   const [Reg, setReg] = useState([]);
   const [Avail, setAvail] = useState([]);
   const [attempts, setattempts] = useState(0);
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  
 
   useEffect(() => {
     const [first, second] = getUserDetails();

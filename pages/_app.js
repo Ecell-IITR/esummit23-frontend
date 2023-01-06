@@ -4,9 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import MobileProvider from '../utils/MobileContext';
 
 import { AuthContext } from '../utils/auth-context';
-import { isAuthenticated, isLocalHost, unAuthenticate } from '../utils';
-import router, { useRouter } from 'next/router';
-import { initializeGA, logPageView } from '../utils/Analytics';
+import { isAuthenticated } from '../utils';
 import { DefaultSeo } from 'next-seo';
 import defaultSEOConfig from '../seo.config';
 import Script from 'next/script';

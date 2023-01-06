@@ -6,21 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "postbuild": "next-sitemap",
-    "start": "next start",
-    "lint": "pre-commit run --all-files",
-    "format": "pretty-quick"
+    "start": "next start"
   },
-  "lint-staged": {
-    "*.{js,jsx,scss,css,md}": [
-      "prettier --write --single-quote",
-      "git add"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
+  
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
