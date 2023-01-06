@@ -1,0 +1,150 @@
+.eventPgHdng {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 10%;
+}
+
+.eventPgCont {
+    height: auto;
+    width:auto;
+    background: linear-gradient(180deg, #12100E 0%, #301A08 100%);
+    color: #F3EDD8;
+}
+
+.eventPgCards {
+    background: #F3EDD8;
+    width: 350px;
+    height: 415px;
+    margin-bottom: 10%;
+}
+
+.eventPgAbout {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    letter-spacing: 0.04em;
+    height: 14rem;
+    color: black;
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+.eventPgFlex {
+    display: flex;
+    // justify-content: space-around;
+    flex-wrap: wrap;
+    column-gap: 20%;
+    justify-content: center;
+    align-items: center;
+
+//    padding-left: 20rem;
+}
+
+.eventPgBtnC {
+    height: 56px;
+    width: 350px;
+    background-color: #BA6D39;
+    padding-left: 4rem;
+    padding-top: 1rem;
+}
+
+.eventPgBtn {
+    border: none;
+    background-color: #BA6D39;
+    color: white;
+    border-radius: 12px;
+    margin-top: -2rem;
+    margin-left: 3rem;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.eventPgBtnC:hover .eventPgBtn {
+    background-color: #DCD1AD;
+}
+
+.eventPgBtnC:hover {
+    background-color: #DCD1AD;
+}
+
+
+// @media screen and (max-width:1250) {
+
+//     .eventPgCards {
+//         padding-left: 10rem;
+//         column-gap: 10%;
+//     }    
+//     .eventPgHdng {
+//         font-size: 30px;
+//         font-weight: 400;
+//         padding-left: 15%;
+//     }
+// }
+
+
+@media screen and (max-width:970px) {
+    
+    .eventPgHdng {
+        font-size: 6vw;
+        font-weight: 500;
+    line-height: 30px;
+    }
+
+    .eventPgCards {
+
+        width: 300px;
+        height: 415px;
+        margin-bottom: 10%;
+    }
+    .eventPgBtnC {
+        width: 300px; 
+    }
+    .eventPgDesc{
+        font-size: 14px;
+    }
+    
+}
+
+@media screen and (max-width:800px) {
+    .eventPgFlex{
+        flex-direction: column;
+
+    }
+}
+@media screen and (max-width:600px) {
+   
+    .eventPgCards {
+        width: 250px;
+        height: 360px;
+       
+    }
+    .eventPgBtnC {
+        width: 250px;
+        margin-top:-5%; 
+    }
+    .eventPgDesc{
+        font-size: 12px;
+    }
+    .eventPgBtn {
+        margin-left: 0rem;
+    }
+    .eventPgFlex{
+        gap: 3rem;
+    }
+    .eventPga{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .eventPgHdng{
+        font-size: 8vw;
+        line-height: 9vw;
+        margin-bottom: 3vw;
+    }
+    .eventPgCards{
+        margin-bottom: 20vw;
+    }
+}
