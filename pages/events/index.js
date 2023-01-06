@@ -68,8 +68,6 @@ export async function getStaticProps() {
   const res = await fetch(ALL_EVENTS_API);
 
   const posts = await res?.json();
-  console.log("I like coding", posts, ALL_EVENTS_API);
-
   return {
     props: {
       posts,
