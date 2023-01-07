@@ -5,9 +5,10 @@ import { useMobile, useUpdateMobile } from '../../utils/MobileContext';
 import React, { useState, useEffect } from 'react';
 import { Authenticate } from '../../utils';
 import { useRouter } from 'next/router';
-const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
-  const [Organisation, setOrganisation] = useState('');
-  const [Indusrty, setIndusrty] = useState('');
+const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
+  const [Institute, setInstitute] = useState('');
+  const [Degree, setDegree] = useState('');
+  const [Year, setYear] = useState('');
   const [State, setState] = useState('');
   const [City, setCity] = useState('');
   const [password, setpassword] = useState('');
@@ -20,7 +21,7 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
     if (password?.length > 7) {
       if (password === Confirmpassword) {
         FetchApi('POST', REGISTER_API, {
-          UserType: 'proff',
+          UserType: 'stu',
           referred_by: RefferalCode,
           user: {
             full_name: name,
@@ -62,11 +63,11 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
             style={{
               width: '100vw',
               height: '60vh',
-              backgroundImage: 'url(/loginMobile.webp)',
+              backgroundImage: 'url(/loginMobile.png)',
               backgroundSize: '100vw 60vh',
             }}
           >
-            {/* <Image width='100%' height='40' src='/loginMobile.webp' /> */}
+            {/* <Image width='100%' height='40' src='/loginMobile.png' /> */}
           </div>
           <div style={{ marginTop: '-50vh' }} className='mobRegisterHere'>
             <div className='summitLogo'>
@@ -86,22 +87,26 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
               <h3 className='mobRegisterSubTitle'>
                 Please fill all the required fields.
               </h3>
-
               <div className='regInputContainer'>
                 <input
                   styl={{ margintop: '36px' }}
                   type='text'
-                  placeholder='Organization Name'
-                  value={Organisation}
-                  onChange={(e) => setOrganisation(e.target.value)}
+                  placeholder='Institute Name'
+                  value={Institute}
+                  onChange={(e) => setInstitute(e.target.value)}
                 />
                 <input
                   type='text'
-                  placeholder='Indusrty Name'
-                  value={Indusrty}
-                  onChange={(e) => setIndusrty(e.target.value)}
+                  placeholder='Degree'
+                  value={Degree}
+                  onChange={(e) => setDegree(e.target.value)}
                 />
-
+                <input
+                  type='text'
+                  placeholder='Current Year'
+                  value={Year}
+                  onChange={(e) => setYear(e.target.value)}
+                />
                 <input
                   type='text'
                   placeholder='State'
@@ -201,7 +206,7 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
               width: '100vw',
             }}
           >
-            <Image src='/login.webp' layout='fill' />
+            <Image src='/login.png' layout='fill' />
           </div>
 
           <div className='RegisterHere'>
@@ -213,34 +218,40 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
                 >
                   <Image src='/summitLogo.png' height={'77'} width={'294'} />
                 </div>
-                <h1 className='registrationTitle'>Personal Details</h1>
+                <h1 className='registrationTitle'>Select Your Identity</h1>
                 <h3 className='registrationsubTitle'>
-                  Please fill all the required fields.
+                  Please select the appropriate option
                 </h3>
                 <div className='formInput'>
                   <input
                     type='text'
-                    value={Organisation}
-                    onChange={(e) => setOrganisation(e.target.value)}
-                    placeholder='Organization Name'
+                    placeholder='Institute Name'
+                    value={Institute}
+                    onChange={(e) => setInstitute(e.target.value)}
                   />
                   <input
                     type='text'
-                    value={Indusrty}
-                    onChange={(e) => setIndusrty(e.target.value)}
-                    placeholder='Industry (You work in) '
+                    placeholder='Degree'
+                    value={Degree}
+                    onChange={(e) => setDegree(e.target.value)}
                   />
                   <input
                     type='text'
+                    placeholder='Current Year'
+                    value={Year}
+                    onChange={(e) => setYear(e.target.value)}
+                  />
+                  <input
+                    type='text'
+                    placeholder='State'
                     value={State}
                     onChange={(e) => setState(e.target.value)}
-                    placeholder='State'
                   />
                   <input
                     type='text'
+                    placeholder='City'
                     value={City}
                     onChange={(e) => setCity(e.target.value)}
-                    placeholder='City'
                   />
                   <div style={{ display: 'flex', alignItems: 'center' }}>
                     <input
@@ -254,7 +265,7 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
                       }}
                       type={ShowPassword ? 'text' : 'Password'}
                       value={password}
-                      placeholder='Passsword'
+                      placeholder='Password'
                     />
                     <div
                       className='LoginFormLeftShowPassword'
@@ -284,7 +295,7 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
                       }}
                       type={ShowPassword2 ? 'text' : 'Password'}
                       value={Confirmpassword}
-                      placeholder='Confirm Passsword'
+                      placeholder='Confirm Password'
                     />
                     <div
                       className='LoginFormLeftShowPassword'
@@ -319,4 +330,4 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
     );
   }
 };
-export default Professional;
+export default NonIITRStudent;
