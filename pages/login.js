@@ -5,7 +5,7 @@ import { LOGIN_API } from '../utils/APIs';
 import FetchApi from '../utils/fetchAPI';
 import { Authenticate } from '../utils';
 import { useRouter } from 'next/router';
-import { Toast } from 'react-notify';
+
 
 
 import Link from 'next/link';
