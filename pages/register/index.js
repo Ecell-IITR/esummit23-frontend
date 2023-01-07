@@ -49,7 +49,7 @@ const Registration = () => {
                 width: '100vw',
               }}
             >
-              <Image src='/LoginMobile.png' layout='fill' objectFit='cover' />
+              <Image src='/loginMobile.webp' layout='fill' objectFit='cover' />
             </div>
 
             <div className='RegisterHereMob'>
@@ -251,7 +251,7 @@ const Registration = () => {
                 width: '100vw',
               }}
             >
-              <Image src='/login.png' layout='fill' />
+              <Image src='/login.webp' layout='fill' />
             </div>
 
             <div className='RegisterHere'>
