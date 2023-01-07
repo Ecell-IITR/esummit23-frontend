@@ -5,6 +5,7 @@ import { useMobile, useUpdateMobile } from '../../utils/MobileContext';
 import React, { useState, useEffect } from 'react';
 import { Authenticate } from '../../utils';
 import { useRouter } from 'next/router';
+import { toast } from 'react-notify';
 const CampusAmbassader = ({ name, email, contact, Gender }) => {
   const [Institute, setInstitute] = useState('');
   const [Branch, setBranch] = useState('');
@@ -45,7 +46,7 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
             }
           })
           .catch((err) => {
-            alert('Registered UnSuccessfully');
+            toast.error('show here error');
           });
       } else {
         alert('password doesnot match');
@@ -91,19 +92,34 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
               </h3>
               <div className='regInputContainer'>
                 <input
-                  styl={{ margintop: '36px' }}
+                className={
+                  Institute == ''
+                    ? 'LoginFormLeftInput'
+                    : 'LoginFormLeftInput inputGold'
+                }
+                  style={{ margintop: '36px' }}
                   type='text'
                   placeholder='Institute Name'
                   value={Institute}
                   onChange={(e) => setInstitute(e.target.value)}
                 />
                 <input
+                className={
+                  Branch == ''
+                    ? 'LoginFormLeftInput'
+                    : 'LoginFormLeftInput inputGold'
+                }
                   type='text'
                   placeholder='Branch'
                   value={Branch}
                   onChange={(e) => setBranch(e.target.value)}
                 />
                 <input
+                className={
+                  Year == ''
+                    ? 'LoginFormLeftInput'
+                    : 'LoginFormLeftInput inputGold'
+                }
                   type='text'
                   placeholder='Current Year'
                   value={Year}
@@ -116,6 +132,11 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
                   onChange={(e) => setState(e.target.value)}
                 />
                 <input
+                className={
+                  City == ''
+                    ? 'LoginFormLeftInput'
+                    : 'LoginFormLeftInput inputGold'
+                }
                   type='text'
                   placeholder='City'
                   value={City}
@@ -133,7 +154,7 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
                     }}
                     type={ShowPassword ? 'text' : 'Password'}
                     value={password}
-                    placeholder='Passsword'
+                    placeholder='Password'
                   />
                   <div
                     className='LoginFormLeftShowPassword'
@@ -163,7 +184,7 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
                     }}
                     type={ShowPassword2 ? 'text' : 'Password'}
                     value={Confirmpassword}
-                    placeholder='Confirm Passsword'
+                    placeholder='Confirm Password'
                   />
                   <div
                     className='LoginFormLeftShowPassword'
@@ -226,30 +247,55 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
                 </h3>
                 <div className='formInput'>
                   <input
+                  className={
+                    Institute == ''
+                      ? 'LoginFormLeftInput'
+                      : 'LoginFormLeftInput inputGold'
+                  }
                     type='text'
                     value={Institute}
                     placeholder='Institute Name'
                     onChange={(e) => setInstitute()}
                   />
                   <input
+                  className={
+                    Degree == ''
+                      ? 'LoginFormLeftInput'
+                      : 'LoginFormLeftInput inputGold'
+                  }
                     type='text'
                     value={Degree}
                     placeholder='Degree'
                     onChange={(e) => setDegree()}
                   />
                   <input
+                  className={
+                   Year == ''
+                      ? 'LoginFormLeftInput'
+                      : 'LoginFormLeftInput inputGold'
+                  }
                     type='text'
                     value={Year}
                     placeholder='Current Year'
                     onChange={(e) => setYear()}
                   />
                   <input
+                  className={
+                    State == ''
+                      ? 'LoginFormLeftInput'
+                      : 'LoginFormLeftInput inputGold'
+                  }
                     type='text'
                     value={State}
                     placeholder='State'
                     onChange={(e) => setState()}
                   />
                   <input
+                  className={
+                    City == ''
+                      ? 'LoginFormLeftInput'
+                      : 'LoginFormLeftInput inputGold'
+                  }
                     type='text'
                     value={City}
                     placeholder='City'
@@ -267,7 +313,7 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
                       }}
                       type={ShowPassword ? 'text' : 'Password'}
                       value={password}
-                      placeholder='Passsword'
+                      placeholder='Password'
                     />
                     <div
                       className='LoginFormLeftShowPassword'
@@ -297,7 +343,7 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
                       }}
                       type={ShowPassword2 ? 'text' : 'Password'}
                       value={Confirmpassword}
-                      placeholder='Confirm Passsword'
+                      placeholder='Confirm Password'
                     />
                     <div
                       className='LoginFormLeftShowPassword'

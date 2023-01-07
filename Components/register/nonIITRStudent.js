@@ -5,10 +5,9 @@ import { useMobile, useUpdateMobile } from '../../utils/MobileContext';
 import React, { useState, useEffect } from 'react';
 import { Authenticate } from '../../utils';
 import { useRouter } from 'next/router';
-const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
-  const [Institute, setInstitute] = useState('');
-  const [Degree, setDegree] = useState('');
-  const [Year, setYear] = useState('');
+const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
+  const [Organisation, setOrganisation] = useState('');
+  const [Indusrty, setIndusrty] = useState('');
   const [State, setState] = useState('');
   const [City, setCity] = useState('');
   const [password, setpassword] = useState('');
@@ -21,7 +20,7 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
     if (password?.length > 7) {
       if (password === Confirmpassword) {
         FetchApi('POST', REGISTER_API, {
-          UserType: 'stu',
+          UserType: 'proff',
           referred_by: RefferalCode,
           user: {
             full_name: name,
@@ -87,26 +86,22 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
               <h3 className='mobRegisterSubTitle'>
                 Please fill all the required fields.
               </h3>
+
               <div className='regInputContainer'>
                 <input
                   styl={{ margintop: '36px' }}
                   type='text'
-                  placeholder='Institute Name'
-                  value={Institute}
-                  onChange={(e) => setInstitute(e.target.value)}
+                  placeholder='Organisation Name'
+                  value={Organisation}
+                  onChange={(e) => setOrganisation(e.target.value)}
                 />
                 <input
                   type='text'
-                  placeholder='Degree'
-                  value={Degree}
-                  onChange={(e) => setDegree(e.target.value)}
+                  placeholder='Indusrty Name'
+                  value={Indusrty}
+                  onChange={(e) => setIndusrty(e.target.value)}
                 />
-                <input
-                  type='text'
-                  placeholder='Current Year'
-                  value={Year}
-                  onChange={(e) => setYear(e.target.value)}
-                />
+
                 <input
                   type='text'
                   placeholder='State'
@@ -131,7 +126,7 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
                     }}
                     type={ShowPassword ? 'text' : 'Password'}
                     value={password}
-                    placeholder='Passsword'
+                    placeholder='Password'
                   />
                   <div
                     className='LoginFormLeftShowPassword'
@@ -161,7 +156,7 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
                     }}
                     type={ShowPassword2 ? 'text' : 'Password'}
                     value={Confirmpassword}
-                    placeholder='Confirm Passsword'
+                    placeholder='Confirm Password'
                   />
                   <div
                     className='LoginFormLeftShowPassword'
@@ -218,40 +213,34 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
                 >
                   <Image src='/summitLogo.png' height={'77'} width={'294'} />
                 </div>
-                <h1 className='registrationTitle'>Select Your Identity</h1>
+                <h1 className='registrationTitle'>Personal Details</h1>
                 <h3 className='registrationsubTitle'>
-                  Please select the appropriate option
+                  Please fill all the required fields.
                 </h3>
                 <div className='formInput'>
                   <input
                     type='text'
-                    placeholder='Institute Name'
-                    value={Institute}
-                    onChange={(e) => setInstitute(e.target.value)}
+                    value={Organisation}
+                    onChange={(e) => setOrganisation(e.target.value)}
+                    placeholder='Organisation Name'
                   />
                   <input
                     type='text'
-                    placeholder='Degree'
-                    value={Degree}
-                    onChange={(e) => setDegree(e.target.value)}
+                    value={Indusrty}
+                    onChange={(e) => setIndusrty(e.target.value)}
+                    placeholder='Industry (You work in) '
                   />
                   <input
                     type='text'
-                    placeholder='Current Year'
-                    value={Year}
-                    onChange={(e) => setYear(e.target.value)}
-                  />
-                  <input
-                    type='text'
-                    placeholder='State'
                     value={State}
                     onChange={(e) => setState(e.target.value)}
+                    placeholder='State'
                   />
                   <input
                     type='text'
-                    placeholder='City'
                     value={City}
                     onChange={(e) => setCity(e.target.value)}
+                    placeholder='City'
                   />
                   <div style={{ display: 'flex', alignItems: 'center' }}>
                     <input
@@ -330,4 +319,4 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
     );
   }
 };
-export default NonIITRStudent;
+export default Professional;

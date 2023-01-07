@@ -126,7 +126,7 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
                     }}
                     type={ShowPassword ? 'text' : 'Password'}
                     value={password}
-                    placeholder='Passsword'
+                    placeholder='Password'
                   />
                   <div
                     className='LoginFormLeftShowPassword'
@@ -156,7 +156,7 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
                     }}
                     type={ShowPassword2 ? 'text' : 'Password'}
                     value={Confirmpassword}
-                    placeholder='Confirm Passsword'
+                    placeholder='Confirm Password'
                   />
                   <div
                     className='LoginFormLeftShowPassword'
@@ -222,7 +222,7 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
                     type='text'
                     value={Organisation}
                     onChange={(e) => setOrganisation(e.target.value)}
-                    placeholder='Organisation Name'
+                    placeholder='Organization Name'
                   />
                   <input
                     type='text'
@@ -254,7 +254,7 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
                       }}
                       type={ShowPassword ? 'text' : 'Password'}
                       value={password}
-                      placeholder='Passsword'
+                      placeholder='Password'
                     />
                     <div
                       className='LoginFormLeftShowPassword'
@@ -284,7 +284,7 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
                       }}
                       type={ShowPassword2 ? 'text' : 'Password'}
                       value={Confirmpassword}
-                      placeholder='Confirm Passsword'
+                      placeholder='Confirm Password'
                     />
                     <div
                       className='LoginFormLeftShowPassword'
