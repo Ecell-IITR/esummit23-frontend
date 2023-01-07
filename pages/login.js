@@ -6,6 +6,8 @@ import FetchApi from '../utils/fetchAPI';
 import { Authenticate } from '../utils';
 import { useRouter } from 'next/router';
 
+
+
 import Link from 'next/link';
 
 function Login() {
@@ -138,7 +140,7 @@ function Login() {
                   }}
                   type={ShowPassword ? 'text' : 'Password'}
                   value={Password}
-                  placeholder='Passsword'
+                  placeholder='Password'
                 />
                 <div
                   className='LoginFormLeftShowPassword'
@@ -226,7 +228,7 @@ function Login() {
                   }}
                   type={ShowPassword ? 'text' : 'Password'}
                   value={Password}
-                  placeholder='Passsword'
+                  placeholder='Password'
                 />
                 <div
                   className='LoginFormLeftShowPassword'

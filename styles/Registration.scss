@@ -60,15 +60,18 @@
 .SelectGender {
   color: #dcd1ad;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin-top: 10px;
   margin-left: -80px;
+  gap: 1rem;
 }
 
 .selectOneOption {
   display: flex;
   flex-direction: row;
   margin: 10px;
+  gap: 1rem;
+  margin-top: 0px;
   color: #dcd1ad;
   cursor: pointer;
 
@@ -88,6 +91,7 @@
   border-radius: 100px;
   padding: 12px, 72px, 12px, 72px;
   font-weight: 600;
+  margin-left: -5vw;
   font-family: Lexend;
   font-size: 18px;
   color: #ffffff;
@@ -114,7 +118,7 @@
 }
 .regButton {
   max-width: 400px;
-  width: 80vw;
+  width:80vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -146,13 +150,14 @@
   background-color: #12100e;
 }
 
-.regInputContainer {
+.regInputContainer{
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.3rem;
+  gap:0.3rem;
   background-color: #12100e;
+  
 }
 
 .mobRegisterHere {
@@ -164,11 +169,13 @@
   align-items: center;
 }
 
+
 .summitLogo {
   width: 100vw;
 
   display: flex;
 }
+
 
 .mobRegisterForm {
   display: flex;
@@ -273,10 +280,17 @@ button:hover {
     line-height: 110%;
     letter-spacing: 1px;
   }
+  .SelectGender{
+    padding-bottom: 30rem;
+  }
 }
 @media screen and (max-width: 800px) {
   .RegisterLeft {
     width: 80vw;
+  }
+  .SelectGender{
+    padding-left: 6vw;
+
   }
   .RegisterHereMob {
     display: flex;
@@ -316,23 +330,36 @@ button:hover {
 
     color: #bdbdbd;
   }
+  .GenderHdng{
+   text-align: center;
+  }
+  
   .FormInputs {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  input[type="radio"] {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+    transform: scale(1.5);
   }
   .RegisterGender {
     max-width: 300px;
     width: 70vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
     gap: 1rem;
+    margin-left: 13vw;
+
   }
-  .SelectGender {
-    margin-left: 0px;
+  .SelectGender { 
     width: 80vw;
+    flex-direction: column;
+    margin: 10px;
+
   }
   .AlreadyRegistered {
     height: 14px;
@@ -341,19 +368,57 @@ button:hover {
     font-weight: 400;
     font-size: 12px;
     line-height: 120%;
-    gap: 0.5rem;
+    gap:0.5rem;
     display: flex;
     align-items: center;
     text-align: center;
     letter-spacing: 0.04em;
     color: #bdbdbd;
+
+    
   }
-  .SummitLogo {
+  .SummitLogo{
     margin-bottom: 55vh;
   }
-  .FormInputs {
+  .nextButton{
+    margin-Left:'0rem';
+  }
+  .FormInputs{
     background-color: #12100e;
     width: 100vw;
     margin-top: 5vh;
+  }
+}
+@media screen and (max-width: 600px) {
+  .RegisterGender {
+    margin-left: 6vw;
+  }
+}
+@media screen and (max-width: 450px) {
+  .RegisterGender {
+    margin-left: 4vw;
+  }
+}
+@media screen and (max-width: 320px) {
+  .RegisterGender {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1110px) {
+  .flex1{
+    font-size: 0.9rem !important ;
+    font-weight: 600  !important;
+   
+  }
+  .selectOneOption{
+    gap: 0.6rem;
+    margin-left: 4vw;
+  }
+  .SelectGender{
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .GenderHdng{
+    text-align: center;
   }
 }

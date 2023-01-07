@@ -63,11 +63,11 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
             style={{
               width: '100vw',
               height: '60vh',
-              backgroundImage: 'url(/loginMobile.webp)',
+              backgroundImage: 'url(/loginMobile.png)',
               backgroundSize: '100vw 60vh',
             }}
           >
-            {/* <Image width='100%' height='40' src='/loginMobile.webp' /> */}
+            {/* <Image width='100%' height='40' src='/loginMobile.png' /> */}
           </div>
           <div style={{ marginTop: '-50vh' }} className='mobRegisterHere'>
             <div className='summitLogo'>
@@ -131,7 +131,7 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
                     }}
                     type={ShowPassword ? 'text' : 'Password'}
                     value={password}
-                    placeholder='Passsword'
+                    placeholder='Password'
                   />
                   <div
                     className='LoginFormLeftShowPassword'
@@ -161,7 +161,7 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
                     }}
                     type={ShowPassword2 ? 'text' : 'Password'}
                     value={Confirmpassword}
-                    placeholder='Confirm Passsword'
+                    placeholder='Confirm Password'
                   />
                   <div
                     className='LoginFormLeftShowPassword'
@@ -206,7 +206,7 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
               width: '100vw',
             }}
           >
-            <Image src='/login.webp' layout='fill' />
+            <Image src='/login.png' layout='fill' />
           </div>
 
           <div className='RegisterHere'>
@@ -265,7 +265,7 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
                       }}
                       type={ShowPassword ? 'text' : 'Password'}
                       value={password}
-                      placeholder='Passsword'
+                      placeholder='Password'
                     />
                     <div
                       className='LoginFormLeftShowPassword'
@@ -295,7 +295,7 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
                       }}
                       type={ShowPassword2 ? 'text' : 'Password'}
                       value={Confirmpassword}
-                      placeholder='Confirm Passsword'
+                      placeholder='Confirm Password'
                     />
                     <div
                       className='LoginFormLeftShowPassword'

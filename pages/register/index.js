@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from 'next/Link';
 import { REGISTER_API } from '../../utils/APIs';
 import FetchApi from '../../utils/fetchAPI';
 import { useMobile, useUpdateMobile } from '../../utils/MobileContext';
@@ -29,14 +29,8 @@ const Registration = () => {
   };
 
   useEffect(() => {
-
     setMobile();
   }, []);
-
-
-
-
-
   if (RenderId == 0) {
     if (useMobile().isMobile) {
       return (
@@ -49,7 +43,10 @@ const Registration = () => {
                 width: '100vw',
               }}
             >
+
+
               <Image src='/loginMobile.webp' layout='fill' objectFit='cover' />
+
             </div>
 
             <div className='RegisterHereMob'>
@@ -107,13 +104,14 @@ const Registration = () => {
                       onChange={(e) => setContact(e.target.value)}
                     />
                     <input
+                    
                       type='text'
                       className={
                         RefferalCode == ''
                           ? 'LoginFormLeftInput'
                           : 'LoginFormLeftInput inputGold'
                       }
-                      placeholder='Reffreal code'
+                      placeholder='Refferal code'
                       style={{ margin: '10px' }}
                       value={RefferalCode}
                       onChange={(e) => setRefferalCode(e.target.value)}
@@ -128,9 +126,10 @@ const Registration = () => {
                       alignItems: 'center',
                       flexDirection: 'column',
                     }}
-                  >
-                    <div className='SelectGender'>Gender</div>
-                    <div className='RegisterGender'>
+                   >
+                    <div className='SelectGender'>
+                    <div className='GenderHdng'style={{ fontSize:'1rem' , fontWeight:'400'}}>Gender</div>
+                     <div className='RegisterGender'>
                       <div
                         style={{
                           fontFamily: 'Nunito Sans',
@@ -139,10 +138,13 @@ const Registration = () => {
                           fontSize: '14px',
                           lineHeight: '20px',
                           color: '#FFD685',
+                         
+
                         }}
                       >
                         <input
                           type='radio'
+                          style={{marginRight:'10px'}}
                           name='SelectGender'
                           value='Male'
                           checked={Gender == 'Male'}
@@ -150,18 +152,19 @@ const Registration = () => {
                         />
                         Male
                       </div>
-                      <div
-                        style={{
+                      <div style={{
                           fontFamily: 'Nunito Sans',
                           fontStyle: 'normal',
                           fontWeight: '400',
                           fontSize: '14px',
                           lineHeight: '20px',
                           color: '#FFD685',
-                        }}
-                      >
+                         
+                        
+                        }}>
                         <input
                           type='radio'
+                          style={{marginRight:'10px'}}
                           name='SelectGender'
                           value='Female'
                           checked={Gender == 'Female'}
@@ -169,18 +172,17 @@ const Registration = () => {
                         />
                         Female
                       </div>
-                      <div
-                        style={{
+                      <div style={{
                           fontFamily: 'Nunito Sans',
                           fontStyle: 'normal',
                           fontWeight: '400',
                           fontSize: '14px',
                           lineHeight: '20px',
-                          color: '#FFD685',
-                        }}
-                      >
+                          color: '#FFD685',                       
+                        }}>
                         <input
                           type='radio'
+                          style={{marginRight:'10px', height: '0.8rem', width:'0.8rem'}}
                           name='SelectGender'
                           value='Other'
                           checked={Gender == 'Other'}
@@ -188,6 +190,7 @@ const Registration = () => {
                         />
                         Others
                       </div>
+                    </div>
                     </div>
                   </div>
                   <div
@@ -197,6 +200,8 @@ const Registration = () => {
                       display: 'flex',
                       alignItems: 'center',
                       flexDirection: 'column',
+                       cursor :"pointer",
+                       marginLeft: '0px'
                     }}
                   >
                     <button
@@ -205,6 +210,7 @@ const Registration = () => {
                       }}
                       type='submit'
                       className='LoginButton'
+                      
                     >
                       Next
                     </button>
@@ -217,6 +223,7 @@ const Registration = () => {
                       alignItems: 'center',
                       flexDirection: 'column',
                       paddingBottom: '20rem',
+                      cursor :"pointer",
                     }}
                   >
                     <div className='AlreadyRegistered'>
@@ -226,6 +233,7 @@ const Registration = () => {
                           style={{
                             textDecorationLine: 'underline',
                             color: '#DCD1AD',
+                            cursor: 'pointer',
                           }}
                         >
                           Login now
@@ -269,26 +277,46 @@ const Registration = () => {
                   </h3>
                   <div className='formInput'>
                     <input
+                    className={
+                      Fullname == ''
+                        ? 'LoginFormLeftInput'
+                        : 'LoginFormLeftInput inputGold'
+                    }
                       type='text'
                       placeholder='Full Name'
                       value={Fullname}
                       onChange={(e) => setFullname(e.target.value)}
                     />
                     <input
+                    className={
+                      Email == ''
+                        ? 'LoginFormLeftInput'
+                        : 'LoginFormLeftInput inputGold'
+                    }
                       type='email'
                       placeholder='Email Address'
                       value={Email}
                       onChange={(e) => setEmail(e.target.value)}
                     />
                     <input
+                    className={
+                      Contact == ''
+                        ? 'LoginFormLeftInput'
+                        : 'LoginFormLeftInput inputGold'
+                    }
                       type='tel'
                       placeholder='Contact Number'
                       value={Contact}
                       onChange={(e) => setContact(e.target.value)}
                     />
                     <input
+                    className={
+                      RefferalCode == ''
+                        ? 'LoginFormLeftInput'
+                        : 'LoginFormLeftInput inputGold'
+                    }
                       type='text'
-                      placeholder='Reffreal code'
+                      placeholder='Refferal code'
                       style={{ margin: '10px' }}
                       value={RefferalCode}
                       onChange={(e) => setRefferalCode(e.target.value)}
@@ -296,11 +324,13 @@ const Registration = () => {
                   </div>
 
                   <div className='SelectGender'>
-                    <div>Gender</div>
+                    <div  className='GenderHdng' style={{fontSize:'1rem', fontWeight:'400'}}>Gender</div>
                     <div className='selectOneOption'>
-                      <div style={{ margin: '10px' }}>
+                      <div className='flex1' style={{ fontSize : '1rem',fontWeight:'400'}}>
                         <input
+                      
                           type='radio'
+                          style={{height: '1rem', width:'1rem'}}
                           name='SelectGender'
                           value='Male'
                           checked={Gender == 'Male'}
@@ -308,9 +338,10 @@ const Registration = () => {
                         />
                         Male
                       </div>
-                      <div style={{ margin: '10px' }}>
+                      <div className='flex1' style={{  fontSize : '1rem',fontWeight:'400'}}>
                         <input
                           type='radio'
+                          style={{height: '1rem', width:'1rem'}}
                           name='SelectGender'
                           value='Female'
                           checked={Gender == 'Female'}
@@ -318,9 +349,10 @@ const Registration = () => {
                         />
                         Female
                       </div>
-                      <div style={{ margin: '10px' }}>
+                      <div className='flex1' style={{fontSize : '1rem',fontWeight:'400' }}>
                         <input
                           type='radio'
+                          style={{height: '1rem', width:'1rem'}}
                           name='SelectGender'
                           value='Other'
                           checked={Gender == 'Other'}
@@ -330,8 +362,9 @@ const Registration = () => {
                       </div>
                     </div>
                   </div>
-
+                  <div>
                   <button
+                   
                     className='nextButton'
                     onClick={() => {
                       setRenderId(1);
@@ -339,14 +372,15 @@ const Registration = () => {
                   >
                     Next
                   </button>
-
-                  <div>
+                  </div>
+                  <div classname='registeredEvent'>
                     <span
                       style={{
-                        marginRight: '10px',
+                       marginLeft :'-4rem',
                         color: '#BDBDBD',
                         fontSize: '16px',
                         fontWeight: '400',
+                      
                       }}
                     >
                       Already Registered?
@@ -357,6 +391,10 @@ const Registration = () => {
                           color: '#BDBDBD',
                           fontSize: '14px',
                           fontWeight: '400',
+                          textDecorationLine: 'underline',
+                            color: '#DCD1AD',
+                            cursor: 'pointer',
+                            marginLeft: '10px'
                         }}
                       >
                         Login Now
