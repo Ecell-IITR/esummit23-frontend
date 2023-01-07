@@ -4,7 +4,6 @@ const nextConfig = {
   images: {
     domains: ['e-cell-server-bucket.s3.amazonaws.com'],
   },
-
 };
 
 module.exports = nextConfig;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import Link from 'next/Link';
+import Link from 'next/link';
 import { REGISTER_API } from '../../utils/APIs';
 import FetchApi from '../../utils/fetchAPI';
 import { useMobile, useUpdateMobile } from '../../utils/MobileContext';
@@ -43,7 +43,7 @@ const Registration = () => {
                 width: '100vw',
               }}
             >
-              <Image src='/LoginMobile.png' layout='fill' objectFit="cover"  />
+              <Image src='/loginMobile.webp' layout='fill' objectFit='cover' />
             </div>
 
             <div className='RegisterHereMob'>
@@ -144,14 +144,16 @@ const Registration = () => {
                         />
                         Male
                       </div>
-                      <div style={{
+                      <div
+                        style={{
                           fontFamily: 'Nunito Sans',
                           fontStyle: 'normal',
                           fontWeight: '400',
                           fontSize: '14px',
                           lineHeight: '20px',
                           color: '#FFD685',
-                        }}>
+                        }}
+                      >
                         <input
                           type='radio'
                           name='SelectGender'
@@ -161,14 +163,16 @@ const Registration = () => {
                         />
                         Female
                       </div>
-                      <div style={{
+                      <div
+                        style={{
                           fontFamily: 'Nunito Sans',
                           fontStyle: 'normal',
                           fontWeight: '400',
                           fontSize: '14px',
                           lineHeight: '20px',
                           color: '#FFD685',
-                        }}>
+                        }}
+                      >
                         <input
                           type='radio'
                           name='SelectGender'
@@ -241,7 +245,7 @@ const Registration = () => {
                 width: '100vw',
               }}
             >
-              <Image src='/login.png' layout='fill' />
+              <Image src='/login.webp' layout='fill' />
             </div>
 
             <div className='RegisterHere'>

@@ -1,8 +1,18 @@
 import Image from 'next/image';
-import Certificates from './Certificates';
-import Coordinator from './Coordinator';
+
+import { useRouter } from 'next/router';
+import { isAuthenticated } from '../../../utils';
 
 function Events(props) {
+  const router = useRouter();
+  const rederict = () => {
+    if (isAuthenticated()) {
+      router.push(`/dashboard`);
+    } else {
+      router.push(`/login`);
+    }
+  };
+
   return (
     <>
       <div
@@ -147,7 +157,9 @@ function Events(props) {
               </div>
               <div className='registerButton'>
                 {' '}
-                <button className='button'>REGISTER NOW!</button>
+                <button onClick={rederict} className='button'>
+                  REGISTER NOW!
+                </button>
               </div>
             </div>
           </div>

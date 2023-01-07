@@ -2,7 +2,7 @@ export let API_URL;
 if (process.env.ENV === 'prod') {
   API_URL = 'https://api.esummit.in';
 } else {
-  API_URL = 'http://localhost:8000'; // Change this to your local API URL
+  API_URL = 'https://api.esummit.in'; // Change this to your local API URL
 }
 
 export let HOST_URL;
@@ -17,6 +17,7 @@ export const EVENT_API = (eventSlug) => `${API_URL}/events/${eventSlug}`;
 export const DASHBOARD_EVENT_API = `${API_URL}/dash/eventdashboard/all`;
 export const SPEAKERS_API = `${API_URL}/events/speakers`;
 export const LOGIN_API = `${API_URL}/user/login`;
+export const TEAM_REGISTER_API = `${API_URL}/user/team_signup`;
 export const REGISTER_API = `${API_URL}/user/signup`;
 export const ALL_EVENTS_API = `${API_URL}/events/all`;
-
+export const USER_SERVICES_API = `${API_URL}/user/services`;

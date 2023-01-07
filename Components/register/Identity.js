@@ -17,11 +17,11 @@ const Identity = ({ setUserType, setRenderId }) => {
             style={{
               width: '100vw',
               height: '80vh',
-              backgroundImage: 'url(/loginMobile.png)',
+              backgroundImage: 'url(/loginMobile.webp)',
               backgroundSize: '100vw 80vh',
             }}
           >
-            {/* <Image width='100%' height='40' src='/loginMobile.png' /> */}
+            {/* <Image width='100%' height='40' src='/loginMobile.webp' /> */}
           </div>
           <div style={{ marginTop: '-70vh' }} className='mobRegisterHere'>
             <div style={{ justifyContent: 'center' }} className='summitLogo'>
@@ -106,7 +106,7 @@ const Identity = ({ setUserType, setRenderId }) => {
               width: '100vw',
             }}
           >
-            <Image src='/login.png' layout='fill' />
+            <Image src='/login.webp' layout='fill' />
           </div>
 
           <div className='RegisterHere'>
