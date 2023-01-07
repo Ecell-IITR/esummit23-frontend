@@ -100,11 +100,11 @@ function Login() {
           style={{
             width: '100vw',
             height: '60vh',
-            backgroundImage: 'url(/loginMobile.png)',
+            backgroundImage: 'url(/loginMobile.webp)',
             backgroundSize: '100vw 60vh',
           }}
         >
-          {/* <Image width='100%' height='40' src='/loginMobile.png' /> */}
+          {/* <Image width='100%' height='40' src='/loginMobile.webp' /> */}
         </div>
         <div className='LoginForm'>
           <div className='LoginFormLeft'>
@@ -188,7 +188,7 @@ function Login() {
       <>
         <div className='LoginContainer'>
           <div style={{ width: '100vw', height: '100vh' }}>
-            <Image layout='fill' src='/login.png' />
+            <Image layout='fill' src='/login.webp' />
           </div>
           <div className='LoginForm'>
             <div className='LoginFormLeft'>

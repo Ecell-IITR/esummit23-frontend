@@ -41,11 +41,8 @@ export default function EventsDetails({ details }) {
     </>
   );
 }
-export async function getServerSideProps({ params, req, res }) {
-  res.setHeader(
-    'Cache-Control',
-    'public, s-maxage=10, stale-while-revalidate=59'
-  );
+export async function getServerSideProps({ params}) {
+
   console.log(params);
   const url = EVENT_API(params.slug);
   console.log(url);

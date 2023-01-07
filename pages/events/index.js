@@ -21,7 +21,7 @@ export default function Events({ posts }) {
     setWidth(rotation);
     console.log(width);
   });
-  console.log(posts);
+  
   return (
     <div className='eventPgCont'>
       <div className='eventPgHdng'>

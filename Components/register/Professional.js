@@ -62,11 +62,11 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
             style={{
               width: '100vw',
               height: '60vh',
-              backgroundImage: 'url(/loginMobile.png)',
+              backgroundImage: 'url(/loginMobile.webp)',
               backgroundSize: '100vw 60vh',
             }}
           >
-            {/* <Image width='100%' height='40' src='/loginMobile.png' /> */}
+            {/* <Image width='100%' height='40' src='/loginMobile.webp' /> */}
           </div>
           <div style={{ marginTop: '-50vh' }} className='mobRegisterHere'>
             <div className='summitLogo'>
@@ -201,7 +201,7 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
               width: '100vw',
             }}
           >
-            <Image src='/login.png' layout='fill' />
+            <Image src='/login.webp' layout='fill' />
           </div>
 
           <div className='RegisterHere'>
