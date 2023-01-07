@@ -19,14 +19,7 @@ function Dashboard() {
   const [isauth, setisauth] = useState(false);
   const handleClose = () => setShow(false);
   const router = useRouter();
-  // const rederict = () => {
-  //   if (isAuthenticated()) {
-  //     setisauth(router.push(`/dashboard`));
-  //     console.log(isauth)
-  //   } else {
-  //     setisauth(router.push(`/login`));
-  //   }
-  // };
+
 
   useEffect(() => {
     const [first, second] = getUserDetails();
@@ -37,7 +30,7 @@ function Dashboard() {
     
         if (isAuthenticated()) {
           setisauth(router.push(`/dashboard`));
-          console.log(isauth)
+      
         } else {
           setisauth(router.push(`/login`));
         }
