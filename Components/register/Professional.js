@@ -91,7 +91,7 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
                 <input
                   styl={{ margintop: '36px' }}
                   type='text'
-                  placeholder='Organisation Name'
+                  placeholder='Organization Name'
                   value={Organisation}
                   onChange={(e) => setOrganisation(e.target.value)}
                 />

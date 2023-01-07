@@ -5,7 +5,6 @@ import { useMobile, useUpdateMobile } from '../../utils/MobileContext';
 import React, { useState, useEffect } from 'react';
 import { Authenticate } from '../../utils';
 import { useRouter } from 'next/router';
-import { toast } from 'react-notify';
 const CampusAmbassader = ({ name, email, contact, Gender }) => {
   const [Institute, setInstitute] = useState('');
   const [Branch, setBranch] = useState('');
@@ -46,7 +45,7 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
             }
           })
           .catch((err) => {
-            toast.error('show here error');
+             alert('registration is unsuccessful')
           });
       } else {
         alert('password doesnot match');
