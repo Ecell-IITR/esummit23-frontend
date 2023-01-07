@@ -6,16 +6,27 @@ import { USER_SERVICES_API } from '../utils/APIs';
 import FetchApi from '../utils/fetchAPI';
 import DashboardForm from '../Components/DashboardForm';
 import Modal from 'react-bootstrap/Modal';
+import { isAuthenticated } from '../utils';
+import { useRouter } from 'next/router';
 function Dashboard() {
   const [name, setName] = useState('');
   const [Id, setId] = useState('');
 
-  const [Reg, setReg] = useState([]);
+ const [Reg, setReg] = useState([]);
   const [Avail, setAvail] = useState([]);
   const [attempts, setattempts] = useState(0);
   const [show, setShow] = useState(false);
-
+  const [isauth, setisauth] = useState(false);
   const handleClose = () => setShow(false);
+  const router = useRouter();
+  // const rederict = () => {
+  //   if (isAuthenticated()) {
+  //     setisauth(router.push(`/dashboard`));
+  //     console.log(isauth)
+  //   } else {
+  //     setisauth(router.push(`/login`));
+  //   }
+  // };
 
   useEffect(() => {
     const [first, second] = getUserDetails();
@@ -23,6 +34,14 @@ function Dashboard() {
     // setName(second[0]);
     setId(second);
     setName(first);
+    
+        if (isAuthenticated()) {
+          setisauth(router.push(`/dashboard`));
+          console.log(isauth)
+        } else {
+          setisauth(router.push(`/login`));
+        }
+    
 
     FetchApi('get', USER_SERVICES_API, null, getAuthToken())
       .then((res) => {
@@ -33,9 +52,10 @@ function Dashboard() {
         setattempts(attempts + 1);
         console.log(err);
       });
+
   }, []);
 
-  return (
+  return ( 
     <div className='dashboardContainer'>
       <div className='dashboardSubContainer'>
         <div className='dashboardContainerHeader'>

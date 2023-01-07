@@ -29,8 +29,14 @@ const Registration = () => {
   };
 
   useEffect(() => {
+
     setMobile();
   }, []);
+
+
+
+
+
   if (RenderId == 0) {
     if (useMobile().isMobile) {
       return (
