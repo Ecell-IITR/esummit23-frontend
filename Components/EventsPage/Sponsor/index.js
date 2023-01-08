@@ -41,7 +41,7 @@ function Events(props) {
           Perks of Participating
         </div>
         <div style={{ paddingTop: '2rem' }} className='certificates'>
-          {props?.perks ? <></> : props?.perks.map((curr, index) => {
+          {props?.perks ? props?.perks.map((curr, index) => {
             return (
               <div className='certificate' key={index}>
                 <div className='certificateImage'>
@@ -61,7 +61,7 @@ function Events(props) {
                           fill='#633A26'
                         />
                       </svg>
-                    )}
+                    )  }
                   </div>
                 </div>
                 <div className='certificateDescription'>
@@ -80,7 +80,7 @@ function Events(props) {
                 </div>
               </div>
             );
-          })}
+          }):<></>}
         </div>
       </div>
       {/* <div className='CardContainer'>
