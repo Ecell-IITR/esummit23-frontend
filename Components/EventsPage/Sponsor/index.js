@@ -41,7 +41,7 @@ function Events(props) {
           Perks of Participating
         </div>
         <div style={{ paddingTop: '2rem' }} className='certificates'>
-          {props.perks.map((curr, index) => {
+          {props?.perks ? <></> : props?.perks.map((curr, index) => {
             return (
               <div className='certificate' key={index}>
                 <div className='certificateImage'>
@@ -83,7 +83,7 @@ function Events(props) {
           })}
         </div>
       </div>
-      <div className='CardContainer'>
+      {/* <div className='CardContainer'>
         <div className='sponsCardContainer'>
           <div className='CardBox1'></div>
 
@@ -102,7 +102,7 @@ function Events(props) {
 
           <div className='CardBox2'></div>
         </div>
-      </div>
+      </div> */}
 
       <div className='parentIS'>
         <div className='coordinatorHeadingIS'>Event Coordinators</div>
@@ -111,10 +111,10 @@ function Events(props) {
             return (
               <div className='A'>
                 <div className='B'>
-                  {console.log(curr?.image)}
+               
                   <Image
                     className='imageCordinator'
-                    src={curr.image}
+                    src={curr?.image ? curr?.image:'' }
                     height='240px'
                     width='210px'
                   ></Image>

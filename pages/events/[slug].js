@@ -36,7 +36,7 @@ export default function EventsDetails({ details }) {
       <Sponsors
         perks={details.event_perks}
         Coordinator={details.events_coordinators}
-        partners={details.event_partners}
+        partners={[]}
       />
     </>
   );
