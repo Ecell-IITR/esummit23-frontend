@@ -126,6 +126,11 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
                 />
                 <input
                   type='text'
+                  className={
+                    State == ''
+                      ? 'LoginFormLeftInput'
+                      : 'LoginFormLeftInput inputGold'
+                  }
                   placeholder='State'
                   value={State}
                   onChange={(e) => setState(e.target.value)}
