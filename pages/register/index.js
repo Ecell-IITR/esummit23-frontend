@@ -118,81 +118,29 @@ const Registration = () => {
                     />
                   </div>
 
-                  <div
-                    style={{
-                      background: '#12100e',
-                      width: '100%',
-                      display: 'flex',
-                      alignItems: 'center',
-                      flexDirection: 'column',
-                    }}
-                   >
-                    <div className='SelectGender'>
-                    <div className='GenderHdng'style={{ fontSize:'1rem' , fontWeight:'400'}}>Gender</div>
-                     <div className='RegisterGender'>
-                      <div
-                        style={{
-                          fontFamily: 'Nunito Sans',
-                          fontStyle: 'normal',
-                          fontWeight: '400',
-                          fontSize: '14px',
-                          lineHeight: '20px',
-                          color: '#FFD685',
-                         
-
-                        }}
-                      >
-                        <input
-                          type='radio'
-                          style={{marginRight:'10px'}}
-                          name='SelectGender'
-                          value='Male'
-                          checked={Gender == 'Male'}
-                          onChange={(e) => setGender(e.target.value)}
-                        />
-                        Male
-                      </div>
-                      <div style={{
-                          fontFamily: 'Nunito Sans',
-                          fontStyle: 'normal',
-                          fontWeight: '400',
-                          fontSize: '14px',
-                          lineHeight: '20px',
-                          color: '#FFD685',
-                         
-                        
-                        }}>
-                        <input
-                          type='radio'
-                          style={{marginRight:'10px'}}
-                          name='SelectGender'
-                          value='Female'
-                          checked={Gender == 'Female'}
-                          onChange={(e) => setGender(e.target.value)}
-                        />
-                        Female
-                      </div>
-                      <div style={{
-                          fontFamily: 'Nunito Sans',
-                          fontStyle: 'normal',
-                          fontWeight: '400',
-                          fontSize: '14px',
-                          lineHeight: '20px',
-                          color: '#FFD685',                       
-                        }}>
-                        <input
-                          type='radio'
-                          style={{marginRight:'10px', height: '0.8rem', width:'0.8rem'}}
-                          name='SelectGender'
-                          value='Other'
-                          checked={Gender == 'Other'}
-                          onChange={(e) => setGender(e.target.value)}
-                        />
-                        Others
-                      </div>
-                    </div>
-                    </div>
+                 <div className='gender'>
+                    <div className='GenderHdng'style={{ fontSize:'1rem' , fontWeight:'400'}}>
+                    <input
+                    
+                      type='text'
+                      className={
+                        RefferalCode == ''
+                          ? 'LoginFormLeftInput'
+                          : 'LoginFormLeftInput inputGold'
+                      }
+                      style={{color:'#828282'}}
+                      placeholder='Gender'
+                     
+                      value='Gender'
+                      onChange={(e) => setRefferalCode(e.Gender.value)}                    
+                    
+                    />
+                    
+                   </div>
                   </div>
+                  
+                     
+                       
                   <div
                     style={{
                       background: '#12100e',
