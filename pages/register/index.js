@@ -157,12 +157,12 @@ const Registration = () => {
 
                     }),input: (baseStyles, state) => ({
                       ...baseStyles,
-                      color: '#828282',
+                      color: ' #dcd1ad',
 
                     }),
                     singleValue: (baseStyles, state) => ({
                       ...baseStyles,
-                      color: '#828282',
+                      color: '#FFD700',
 
                     }),
                     menu: (baseStyles, state) => ({
@@ -327,7 +327,7 @@ const Registration = () => {
                     }),
                     singleValue: (baseStyles, state) => ({
                       ...baseStyles,
-                      color: '#828282',
+                      color: ' #dcd1ad',
 
                     }),
                     menu: (baseStyles, state) => ({
