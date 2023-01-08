@@ -38,7 +38,7 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
         })
           .then((res) => {
             if (res.status === 201) {
-              Authenticate(res?.data?.name, res?.data?.at);
+              Authenticate(res.data.n, res.data.e_id, res.data.at);
               router.push('/dashboard');
             }
           })

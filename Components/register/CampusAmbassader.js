@@ -41,12 +41,12 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
               if (res.data.role) {
                 localStorage.setItem('userRoleType', res.data.role);
               }
-              Authenticate(res.data.n, res.data.at);
+              Authenticate(res.data.n, res.data.e_id, res.data.at);
               router.push('/dashboard');
             }
           })
           .catch((err) => {
-             alert('registration is unsuccessful')
+            alert('registration is unsuccessful');
           });
       } else {
         alert('password doesnot match');
@@ -92,11 +92,11 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
               </h3>
               <div className='regInputContainer'>
                 <input
-                className={
-                  Institute == ''
-                    ? 'LoginFormLeftInput'
-                    : 'LoginFormLeftInput inputGold'
-                }
+                  className={
+                    Institute == ''
+                      ? 'LoginFormLeftInput'
+                      : 'LoginFormLeftInput inputGold'
+                  }
                   style={{ margintop: '36px' }}
                   type='text'
                   placeholder='Institute Name'
@@ -104,22 +104,22 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
                   onChange={(e) => setInstitute(e.target.value)}
                 />
                 <input
-                className={
-                  Branch == ''
-                    ? 'LoginFormLeftInput'
-                    : 'LoginFormLeftInput inputGold'
-                }
+                  className={
+                    Branch == ''
+                      ? 'LoginFormLeftInput'
+                      : 'LoginFormLeftInput inputGold'
+                  }
                   type='text'
                   placeholder='Branch'
                   value={Branch}
                   onChange={(e) => setBranch(e.target.value)}
                 />
                 <input
-                className={
-                  Year == ''
-                    ? 'LoginFormLeftInput'
-                    : 'LoginFormLeftInput inputGold'
-                }
+                  className={
+                    Year == ''
+                      ? 'LoginFormLeftInput'
+                      : 'LoginFormLeftInput inputGold'
+                  }
                   type='text'
                   placeholder='Current Year'
                   value={Year}
@@ -137,11 +137,11 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
                   onChange={(e) => setState(e.target.value)}
                 />
                 <input
-                className={
-                  City == ''
-                    ? 'LoginFormLeftInput'
-                    : 'LoginFormLeftInput inputGold'
-                }
+                  className={
+                    City == ''
+                      ? 'LoginFormLeftInput'
+                      : 'LoginFormLeftInput inputGold'
+                  }
                   type='text'
                   placeholder='City'
                   value={City}
@@ -252,55 +252,55 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
                 </h3>
                 <div className='formInput'>
                   <input
-                  className={
-                    Institute == ''
-                      ? 'LoginFormLeftInput'
-                      : 'LoginFormLeftInput inputGold'
-                  }
+                    className={
+                      Institute == ''
+                        ? 'LoginFormLeftInput'
+                        : 'LoginFormLeftInput inputGold'
+                    }
                     type='text'
                     value={Institute}
                     placeholder='Institute Name'
                     onChange={(e) => setInstitute(e.target.value)}
                   />
                   <input
-                  className={
-                    Degree == ''
-                      ? 'LoginFormLeftInput'
-                      : 'LoginFormLeftInput inputGold'
-                  }
+                    className={
+                      Degree == ''
+                        ? 'LoginFormLeftInput'
+                        : 'LoginFormLeftInput inputGold'
+                    }
                     type='text'
                     value={Degree}
                     placeholder='Degree'
                     onChange={(e) => setDegree(e.target.value)}
                   />
                   <input
-                  className={
-                   Year == ''
-                      ? 'LoginFormLeftInput'
-                      : 'LoginFormLeftInput inputGold'
-                  }
+                    className={
+                      Year == ''
+                        ? 'LoginFormLeftInput'
+                        : 'LoginFormLeftInput inputGold'
+                    }
                     type='text'
                     value={Year}
                     placeholder='Current Year'
                     onChange={(e) => setYear(e.target.value)}
                   />
                   <input
-                  className={
-                    State == ''
-                      ? 'LoginFormLeftInput'
-                      : 'LoginFormLeftInput inputGold'
-                  }
+                    className={
+                      State == ''
+                        ? 'LoginFormLeftInput'
+                        : 'LoginFormLeftInput inputGold'
+                    }
                     type='text'
                     value={State}
                     placeholder='State'
                     onChange={(e) => setState(e.target.value)}
                   />
                   <input
-                  className={
-                    City == ''
-                      ? 'LoginFormLeftInput'
-                      : 'LoginFormLeftInput inputGold'
-                  }
+                    className={
+                      City == ''
+                        ? 'LoginFormLeftInput'
+                        : 'LoginFormLeftInput inputGold'
+                    }
                     type='text'
                     value={City}
                     placeholder='City'
