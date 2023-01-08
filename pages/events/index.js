@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 import { isAuthenticated } from '../../utils';
 
 export default function Events({ posts }) {
+  console.log(posts);
   const router = useRouter();
   const rederict = () => {
     if (isAuthenticated()) {
