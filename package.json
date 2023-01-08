@@ -32,6 +32,7 @@
     "react-visibility-sensor": "^5.1.1",
     "sass": "^1.43.5",
     "scss": "^0.2.4",
+    "select": "^1.1.2",
     "string-strip-html": "^9.1.4"
   },
   "devDependencies": {

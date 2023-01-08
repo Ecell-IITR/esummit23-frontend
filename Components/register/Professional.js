@@ -24,6 +24,7 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
           referred_by: RefferalCode,
           user: {
             full_name: name,
+            gender: Gender.label,
             email: email,
             phone_number: contact,
             collage: Degree,

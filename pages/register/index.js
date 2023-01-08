@@ -9,6 +9,7 @@ import CampusAmbassader from '../../Components/register/CampusAmbassader';
 import IITRStudent from '../../Components/register/IITRStudent';
 import NonIITRStudent from '../../Components/register/nonIITRStudent';
 import Professional from '../../Components/register/Professional';
+import Select from 'react-select';
 const Registration = () => {
   const [Fullname, setFullname] = useState('');
   const [Email, setEmail] = useState('');
@@ -17,7 +18,7 @@ const Registration = () => {
   const [RenderId, setRenderId] = useState(0);
   const [RefferalCode, setRefferalCode] = useState('');
   const [UserType, setUserType] = useState('');
-
+  const [selectedOption, setSelectedOption] = useState(null);
   const setMobile = useUpdateMobile();
 
   const handleSubmit = (e) => {
@@ -30,8 +31,23 @@ const Registration = () => {
 
   useEffect(() => {
     setMobile();
+    
   }, []);
   if (RenderId == 0) {
+    const data =[
+      { value:'1',
+        label: 'Male'},
+      { value:'2',
+        label : 'Female'},
+      { value:'3',
+        label : 'Others'}
+        
+    ]
+    const handleChange = e => {
+      setGender(e);
+    }
+   
+   
     if (useMobile().isMobile) {
       return (
         <>
@@ -116,26 +132,57 @@ const Registration = () => {
                       value={RefferalCode}
                       onChange={(e) => setRefferalCode(e.target.value)}
                     />
-                  </div>
+                  
 
-                 <div className='gender'>
+                    <div className='gender'>
                     <div className='GenderHdng'style={{ fontSize:'1rem' , fontWeight:'400'}}>
-                    <input
+                    <Select
+                    className='GenderStyling'
+                    styles={{control: (baseStyles, state) => ({
+                      ...baseStyles,
+                      backgroundColor: state.isFocused ? ' #12100e' :' #12100e',
+                      width:  '19rem',
+                      borderTop:'0px',
+                      borderLeft: '0px',
+                      borderRight: '0px',
+                      borderColor: state.isSelected ? '#12100e' :'#828282',
+                      color: '#828282 !important',
+                    }),option: (baseStyles, state) => ({
+                      ...baseStyles,
+                      backgroundColor: state.isFocused ? ' #12100e' :' #12100e',
+                      width:  '19rem',
+                      backgroundColor:'  #dcd1ad',
+                      paddingLeft:'2rem',
+                      color:'#828282',
+
+                    }),input: (baseStyles, state) => ({
+                      ...baseStyles,
+                      color: '#828282',
+
+                    }),
+                    singleValue: (baseStyles, state) => ({
+                      ...baseStyles,
+                      color: '#828282',
+
+                    }),
+                    menu: (baseStyles, state) => ({
+                      ...baseStyles,
+                      backgroundColor: state.isFocused ? ' #12100e' :' #12100e',
+                      width:  '20rem',
+                      fontFamily: 'Nunito Sans',
+                      fontWeight:'400',
+                      
+               
+                    }),
+                   
+                   }}
+                    placeholder="Gender"
+                    value={Gender} 
+                    options={data}
+                    onChange={handleChange}
+                   />
                     
-                      type='text'
-                      className={
-                        RefferalCode == ''
-                          ? 'LoginFormLeftInput'
-                          : 'LoginFormLeftInput inputGold'
-                      }
-                      style={{color:'#828282'}}
-                      placeholder='Gender'
-                     
-                      value='Gender'
-                      onChange={(e) => setRefferalCode(e.Gender.value)}                    
-                    
-                    />
-                    
+                   </div>
                    </div>
                   </div>
                   
@@ -257,6 +304,48 @@ const Registration = () => {
                       value={Contact}
                       onChange={(e) => setContact(e.target.value)}
                     />
+                    <div className='gender'>
+                    <div className='GenderHdng'style={{ fontSize:'1rem' , fontWeight:'400'}}>
+                    <Select
+                    styles={{control: (baseStyles, state) => ({
+                      ...baseStyles,
+                      backgroundColor: ' #12100e',
+                      width:  '32vw',
+                      marginTop:'0.5rem',
+                      marginLeft:"0.5rem",
+                      borderTop:'0px',
+                      borderLeft: '0px',
+                      borderRight: '0px',
+                      color: ' #828282',
+                    }),option: (baseStyles, state) => ({
+                      ...baseStyles,
+                      backgroundColor: state.isFocused ? ' #12100e' :' #12100e',
+                      backgroundColor:'  #dcd1ad',
+                      width:  '30rem',
+                      color: 'black',
+
+                    }),
+                    singleValue: (baseStyles, state) => ({
+                      ...baseStyles,
+                      color: '#828282',
+
+                    }),
+                    menu: (baseStyles, state) => ({
+                      ...baseStyles,
+                      backgroundColor: state.isFocused ? ' #12100e' :' #12100e',
+                      width:  '30rem',
+                      fontFamily: 'Nunito Sans',
+                      fontWeight:'400',
+               
+                    }),
+                   
+                   }}
+                    placeholder="Gender"
+                    value={Gender} 
+                    options={data}
+                    onChange={handleChange}
+                   />
+                   </div>
                     <input
                     className={
                       RefferalCode == ''
@@ -269,46 +358,11 @@ const Registration = () => {
                       value={RefferalCode}
                       onChange={(e) => setRefferalCode(e.target.value)}
                     />
-                  </div>
+                  
 
-                  <div className='SelectGender'>
-                    <div  className='GenderHdng' style={{fontSize:'1rem', fontWeight:'400'}}>Gender</div>
-                    <div className='selectOneOption'>
-                      <div className='flex1' style={{ fontSize : '1rem',fontWeight:'400'}}>
-                        <input
-                      
-                          type='radio'
-                          style={{height: '1rem', width:'1rem'}}
-                          name='SelectGender'
-                          value='Male'
-                          checked={Gender == 'Male'}
-                          onChange={(e) => setGender(e.target.value)}
-                        />
-                        Male
-                      </div>
-                      <div className='flex1' style={{  fontSize : '1rem',fontWeight:'400'}}>
-                        <input
-                          type='radio'
-                          style={{height: '1rem', width:'1rem'}}
-                          name='SelectGender'
-                          value='Female'
-                          checked={Gender == 'Female'}
-                          onChange={(e) => setGender(e.target.value)}
-                        />
-                        Female
-                      </div>
-                      <div className='flex1' style={{fontSize : '1rem',fontWeight:'400' }}>
-                        <input
-                          type='radio'
-                          style={{height: '1rem', width:'1rem'}}
-                          name='SelectGender'
-                          value='Other'
-                          checked={Gender == 'Other'}
-                          onChange={(e) => setGender(e.target.value)}
-                        />
-                        Others
-                      </div>
-                    </div>
+                  
+                    
+                   </div>
                   </div>
                   <div>
                   <button

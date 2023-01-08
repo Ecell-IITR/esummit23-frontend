@@ -2,10 +2,8 @@
 
 export const isAuthenticated = () => {
   if (typeof window === 'undefined') return false;
-  const userJSON = localStorage.getItem('user');
-  const user = userJSON ? JSON.parse(userJSON) : null;
   const token = localStorage.getItem('authToken');
-  return !!(user && token) ? { user } : false;
+  return token ?  true  : false;
 };
 
 export const getAuthToken = () => {

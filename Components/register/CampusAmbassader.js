@@ -25,6 +25,7 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
           UserType: 'ca',
           user: {
             full_name: name,
+            gender: Gender.label,
             email: email,
             phone_number: contact,
             collage: Institute,

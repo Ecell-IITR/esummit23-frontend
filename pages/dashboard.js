@@ -29,10 +29,10 @@ function Dashboard() {
     setName(first);
     
         if (isAuthenticated()) {
-          setisauth(router.push(`/dashboard`));
+          router.push(`/dashboard`);
       
         } else {
-          setisauth(router.push(`/login`));
+          router.push(`/login`);
         }
     
 

@@ -295,14 +295,21 @@ button:hover {
     padding-left: 6vw;
 
   }
-  .gender{
-    width: 100vw;
-  }
- 
-
+  // .gender{
+  //   width: 100vw;
+  // }
+  Select{
+    background-color: #12100e;
+    color: #828282;
+    width: 19rem;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px
+   }
  
   .GenderHdng{
-    padding-left: 25vw;
+    
+    padding-top: 1rem;
   }
   .RegisterHereMob {
     display: flex;
@@ -396,6 +403,7 @@ button:hover {
     margin-Left:'0rem';
   }
   .FormInputs{
+    
     background-color: #12100e;
     width: 100vw;
     margin-top: 5vh;
