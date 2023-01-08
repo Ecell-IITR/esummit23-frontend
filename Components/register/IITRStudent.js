@@ -24,6 +24,7 @@ const IITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
           referred_by: RefferalCode,
           user: {
             full_name: name,
+            gender: Gender.label,
             email: email,
             phone_number: contact,
             collage: 'IIT Roorkee',
@@ -36,7 +37,7 @@ const IITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
         })
           .then((res) => {
             if (res.status === 201) {
-              Authenticate(res?.data?.name, res?.data?.at);
+              Authenticate(res.data.n, res.data.e_id, res.data.at);
               router.push('/dashboard');
             }
           })
@@ -70,8 +71,8 @@ const IITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
             {/* <Image width='100%' height='40' src='/loginMobile.webp' /> */}
           </div>
           <div className='mobRegisterForm'>
-            <div style={{marginTop:"-60vh"}} className='mobRegisterHere'>
-              <div className='summitLogo' style={{paddingBottom:"20vh"}}>
+            <div style={{ marginTop: '-60vh' }} className='mobRegisterHere'>
+              <div className='summitLogo' style={{ paddingBottom: '20vh' }}>
                 <div
                   style={{
                     width: '200px',
@@ -89,87 +90,86 @@ const IITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
                 Please fill all the required fields.
               </h3>
               <div className='regInputContainer'>
-              <input
-              className={
-                Branch == ''
-                  ? 'LoginFormLeftInput'
-                  : 'LoginFormLeftInput inputGold'
-              }
-                type='text'
-                placeholder='Branch Name'
-                value={Branch}
-                onChange={(e) => setBranch(e.target.value)}
-                style={{
-                  marginTop: '36px',
-                }}
-              />
+                <input
+                  className={
+                    Branch == ''
+                      ? 'LoginFormLeftInput'
+                      : 'LoginFormLeftInput inputGold'
+                  }
+                  type='text'
+                  placeholder='Branch Name'
+                  value={Branch}
+                  onChange={(e) => setBranch(e.target.value)}
+                  style={{
+                    marginTop: '36px',
+                  }}
+                />
 
-              <input
-              className={
-                Year == ''
-                  ? 'LoginFormLeftInput'
-                  : 'LoginFormLeftInput inputGold'
-              }
-                type='text'
-                placeholder='Current Year'
-                value={Year}
-                onChange={(e) => setYear(e.target.value)}
-              />
-              <input
-              className={
-                State == ''
-                  ? 'LoginFormLeftInput'
-                  : 'LoginFormLeftInput inputGold'
-              }
-                type='text'
-                placeholder='State'
-                value={State}
-                onChange={(e) => setState(e.target.value)}
-              />
+                <input
+                  className={
+                    Year == ''
+                      ? 'LoginFormLeftInput'
+                      : 'LoginFormLeftInput inputGold'
+                  }
+                  type='text'
+                  placeholder='Current Year'
+                  value={Year}
+                  onChange={(e) => setYear(e.target.value)}
+                />
+                <input
+                  className={
+                    State == ''
+                      ? 'LoginFormLeftInput'
+                      : 'LoginFormLeftInput inputGold'
+                  }
+                  type='text'
+                  placeholder='State'
+                  value={State}
+                  onChange={(e) => setState(e.target.value)}
+                />
 
-              <input
-              className={
-               City == ''
-                  ? 'LoginFormLeftInput'
-                  : 'LoginFormLeftInput inputGold'
-              }
-                type='text'
-                placeholder='City'
-                value={City}
-                onChange={(e) => setCity(e.target.value)}
-              />
+                <input
+                  className={
+                    City == ''
+                      ? 'LoginFormLeftInput'
+                      : 'LoginFormLeftInput inputGold'
+                  }
+                  type='text'
+                  placeholder='City'
+                  value={City}
+                  onChange={(e) => setCity(e.target.value)}
+                />
 
-              <input
-              className={
-                password == ''
-                  ? 'LoginFormLeftInput'
-                  : 'LoginFormLeftInput inputGold'
-              }
-                type='password'
-                placeholder='Set password'
-                value={password}
-                onChange={(e) => setpassword(e.target.value)}
-              />
-              <input
-              className={
-                password == ''
-                  ? 'LoginFormLeftInput'
-                  : 'LoginFormLeftInput inputGold'
-              }
-                type='password'
-                placeholder='Confirm Password'
-                value={Confirmpassword}
-                onChange={(e) => setConfirmpassword(e.target.value)}
-              />
+                <input
+                  className={
+                    password == ''
+                      ? 'LoginFormLeftInput'
+                      : 'LoginFormLeftInput inputGold'
+                  }
+                  type='password'
+                  placeholder='Set password'
+                  value={password}
+                  onChange={(e) => setpassword(e.target.value)}
+                />
+                <input
+                  className={
+                    password == ''
+                      ? 'LoginFormLeftInput'
+                      : 'LoginFormLeftInput inputGold'
+                  }
+                  type='password'
+                  placeholder='Confirm Password'
+                  value={Confirmpassword}
+                  onChange={(e) => setConfirmpassword(e.target.value)}
+                />
 
-              <button
-                type='submit'
-                className='CreateAccountButton'
-                onClick={Submit}
-              >
-                Create Account
-              </button>
-
+                <button
+                  type='submit'
+                  className='CreateAccountButton'
+                  onClick={Submit}
+                >
+                  Create Account
+                </button>
               </div>
             </div>
           </div>
@@ -206,44 +206,44 @@ const IITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
 
                 <div className='formInput'>
                   <input
-                  className={
-                    Branch == ''
-                      ? 'LoginFormLeftInput'
-                      : 'LoginFormLeftInput inputGold'
-                  }
+                    className={
+                      Branch == ''
+                        ? 'LoginFormLeftInput'
+                        : 'LoginFormLeftInput inputGold'
+                    }
                     type='text'
                     placeholder='Branch'
                     value={Branch}
                     onChange={(e) => setBranch(e.target.value)}
                   />
                   <input
-                  className={
-                    Year == ''
-                      ? 'LoginFormLeftInput'
-                      : 'LoginFormLeftInput inputGold'
-                  }
+                    className={
+                      Year == ''
+                        ? 'LoginFormLeftInput'
+                        : 'LoginFormLeftInput inputGold'
+                    }
                     type='text'
                     placeholder='Current Year'
                     value={Year}
                     onChange={(e) => setYear(e.target.value)}
                   />
                   <input
-                  className={
-                    State == ''
-                      ? 'LoginFormLeftInput'
-                      : 'LoginFormLeftInput inputGold'
-                  }
+                    className={
+                      State == ''
+                        ? 'LoginFormLeftInput'
+                        : 'LoginFormLeftInput inputGold'
+                    }
                     type='text'
                     placeholder='State'
                     value={State}
                     onChange={(e) => setState(e.target.value)}
                   />
                   <input
-                  className={
-                    City == ''
-                      ? 'LoginFormLeftInput'
-                      : 'LoginFormLeftInput inputGold'
-                  }
+                    className={
+                      City == ''
+                        ? 'LoginFormLeftInput'
+                        : 'LoginFormLeftInput inputGold'
+                    }
                     type='text'
                     placeholder='City'
                     value={City}
@@ -251,7 +251,6 @@ const IITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
                   />
                   <div style={{ display: 'flex', alignItems: 'center' }}>
                     <input
-                    
                       className={
                         password == ''
                           ? 'LoginFormLeftInput'
