@@ -162,7 +162,7 @@ const Registration = () => {
                     }),
                     singleValue: (baseStyles, state) => ({
                       ...baseStyles,
-                      color: '#FFD700',
+                      color: '#dcd1ad',
 
                     }),
                     menu: (baseStyles, state) => ({
