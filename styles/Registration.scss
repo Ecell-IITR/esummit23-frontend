@@ -149,6 +149,9 @@
   width: 100vw;
   background-color: #12100e;
 }
+.GenderHdng{
+  background-color: #12100e;
+}
 
 .regInputContainer{
   width: 100vw;
@@ -292,6 +295,15 @@ button:hover {
     padding-left: 6vw;
 
   }
+  .gender{
+    width: 100vw;
+  }
+ 
+
+ 
+  .GenderHdng{
+    padding-left: 25vw;
+  }
   .RegisterHereMob {
     display: flex;
     justify-content: center;
@@ -331,7 +343,7 @@ button:hover {
     color: #bdbdbd;
   }
   .GenderHdng{
-   text-align: center;
+   text-align: start;
   }
   
   .FormInputs {
@@ -418,7 +430,5 @@ button:hover {
     flex-direction: column;
     margin-bottom: 10px;
   }
-  .GenderHdng{
-    text-align: center;
-  }
+ 
 }

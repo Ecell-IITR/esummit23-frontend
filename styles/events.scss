@@ -546,7 +546,8 @@ color: #FFFFFF!important;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-left: 0.1rem;
+  // margin-left: 0.1rem;
+
 }
 .helpArrow {
   display: flex;
@@ -589,6 +590,9 @@ color: #FFFFFF!important;
   display: flex;
   align-items: center;
   color: #ffffff;
+ 
+  padding-right: 2rem;
+  
 }
 
 .secondarrow,
@@ -872,6 +876,11 @@ color: #FFFFFF!important;
   .aboutContainer {
     height: 30rem;
   }
+  .arrows{
+    visibility: hidden;
+    display: none;
+   }
+ 
 }
 @media screen and (max-width: 400px) {
   .aboutContainer {
@@ -879,7 +888,9 @@ color: #FFFFFF!important;
   }
   .firstarrow {
     font-size: 1.3rem;
+    text-align: center;
   }
+ 
   .descriptionIdeathon {
     margin-top: 1rem;
   }
@@ -888,6 +899,7 @@ color: #FFFFFF!important;
 @media screen and (max-width: 353px) {
   .firstarrow {
     font-size: 1rem;
+    text-align: center;
   }
 }
 // @media screen and (max-width: 600px) {
