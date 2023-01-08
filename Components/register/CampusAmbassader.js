@@ -254,7 +254,7 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
                     type='text'
                     value={Institute}
                     placeholder='Institute Name'
-                    onChange={(e) => setInstitute()}
+                    onChange={(e) => setInstitute(e.target.value)}
                   />
                   <input
                   className={
@@ -265,7 +265,7 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
                     type='text'
                     value={Degree}
                     placeholder='Degree'
-                    onChange={(e) => setDegree()}
+                    onChange={(e) => setDegree(e.target.value)}
                   />
                   <input
                   className={
@@ -276,7 +276,7 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
                     type='text'
                     value={Year}
                     placeholder='Current Year'
-                    onChange={(e) => setYear()}
+                    onChange={(e) => setYear(e.target.value)}
                   />
                   <input
                   className={
@@ -287,7 +287,7 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
                     type='text'
                     value={State}
                     placeholder='State'
-                    onChange={(e) => setState()}
+                    onChange={(e) => setState(e.target.value)}
                   />
                   <input
                   className={
@@ -298,7 +298,7 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
                     type='text'
                     value={City}
                     placeholder='City'
-                    onChange={(e) => setCity()}
+                    onChange={(e) => setCity(e.target.value)}
                   />
                   <div style={{ display: 'flex', alignItems: 'center' }}>
                     <input
