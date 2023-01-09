@@ -131,7 +131,7 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
                   />
                   <div
                     className='LoginFormLeftShowPassword'
-                    style={{ marginTop: '-20px' }}
+                    style={{ marginTop: '-28px' }}
                     onClick={() => setShowPassword(!ShowPassword)}
                   >
                     <Image
@@ -161,7 +161,7 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
                   />
                   <div
                     className='LoginFormLeftShowPassword'
-                    style={{ marginTop: '-20px' }}
+                    style={{ marginTop: '-28px' }}
                     onClick={() => setShowPassword2(!ShowPassword2)}
                   >
                     <Image
@@ -259,7 +259,7 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
                     />
                     <div
                       className='LoginFormLeftShowPassword'
-                      style={{ marginTop: '-20px' }}
+                      style={{ marginTop: '-28px' }}
                       onClick={() => setShowPassword(!ShowPassword)}
                     >
                       <Image
@@ -289,7 +289,7 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
                     />
                     <div
                       className='LoginFormLeftShowPassword'
-                      style={{ marginTop: '-20px' }}
+                      style={{ marginTop: '-28px' }}
                       onClick={() => setShowPassword2(!ShowPassword2)}
                     >
                       <Image
