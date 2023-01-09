@@ -354,7 +354,7 @@ const Registration = () => {
                     }
                       type='text'
                       placeholder='Refferal code'
-                      style={{ margin: '10px' }}
+                      style={{ margin: '11px',marginTop:'20px' }}
                       value={RefferalCode}
                       onChange={(e) => setRefferalCode(e.target.value)}
                     />
