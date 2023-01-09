@@ -1,6 +1,6 @@
 .containerRegister {
-  height: 16.5rem;
-  width: 12rem;
+  height: 17.5rem;
+  width: 13rem;
   // border: 1px solid black;
   border-radius: 1.5rem;
   display: flex;
@@ -17,6 +17,10 @@
   height: 7.5rem;
   width: 100%;
   overflow: hidden;
+}
+.photoRegisterImg{
+  height: 7.5rem;
+  width: 100%;
 }
 .eventRegister {
   // border: 1px solid black;
@@ -38,6 +42,7 @@
   // border: 1px solid black;
   height: 40%;
   width: 100%;
+  overflow: scroll;
   border-bottom-right-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;
   font-size: 0.75rem;
