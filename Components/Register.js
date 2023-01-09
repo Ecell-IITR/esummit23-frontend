@@ -6,7 +6,7 @@ function Register({ IsRegistered, img, name, desc }) {
     <>
       <div className='containerRegister'>
         <div className='photoRegister'>
-          <img src={img} />
+          <img className='photoRegisterImg' src={img} />
         </div>
 
         <div
