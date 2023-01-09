@@ -10,6 +10,7 @@ import IITRStudent from '../../Components/register/IITRStudent';
 import NonIITRStudent from '../../Components/register/nonIITRStudent';
 import Professional from '../../Components/register/Professional';
 import Select from 'react-select';
+import Navbar from '../../components/Navbar';
 const Registration = () => {
   const [Fullname, setFullname] = useState('');
   const [Email, setEmail] = useState('');
@@ -52,6 +53,7 @@ const Registration = () => {
       return (
         <>
           <div className='mobRegisterContainer'>
+          
             <div
               className='ImageComponent'
               style={{
@@ -247,6 +249,7 @@ const Registration = () => {
       return (
         <>
           <div className='RegisterationContainer'>
+          
             <div
               className='ImageComponent'
               style={{
