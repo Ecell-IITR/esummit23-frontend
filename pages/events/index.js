@@ -73,7 +73,7 @@ export default function Events({ posts }) {
                 ></div>
 
                 <a classname='eventPga' href={'/events/' + post?.event_name}>
-                  ...Read more
+                  Read more
                 </a>
 
                 {/* ({post.card_description.length>200?post.card_description.slice(0,200):post.card_description}) */}
