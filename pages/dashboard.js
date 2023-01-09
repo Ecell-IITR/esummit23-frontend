@@ -83,7 +83,7 @@ function Dashboard() {
                       name={item.name}
                       desc={item.desc}
                     />
-                    <Modal show={show} onHide={handleClose}>
+                    <Modal contentClassName="my-modal" show={show} onHide={handleClose}>
                       <DashboardForm
                         noQuestions={item.no_of_QA}
                         name={item.name}

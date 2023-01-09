@@ -5,6 +5,15 @@
   display: flex;
   justify-content: center;
 }
+.my-modal {
+  width: 90vw!important;
+
+} 
+.modal-dialog{
+  width: 90vw!important;
+  margin-left: 0!important;
+  margin-right: 0!important;
+}
 .dashboardSubContainer {
   height: 100%;
   width: 80%;
