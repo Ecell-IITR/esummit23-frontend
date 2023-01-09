@@ -145,7 +145,7 @@ const Identity = ({ setUserType, setRenderId }) => {
                       setRenderId(2);
                     }}
                   >
-                    As an IITR Student
+                    AS AN IITR STUDENT
                   </div>
 
                   <div
@@ -156,7 +156,7 @@ const Identity = ({ setUserType, setRenderId }) => {
                       setRenderId(2);
                     }}
                   >
-                    As a Non-IITR Student
+                    AS A NON-IITR STUDENT
                   </div>
 
                   <div
@@ -167,7 +167,7 @@ const Identity = ({ setUserType, setRenderId }) => {
                       setRenderId(2);
                     }}
                   >
-                    As a Campus Ambassador
+                    AS A CAMPUS AMBASSADOR
                   </div>
 
                   <div
@@ -178,7 +178,7 @@ const Identity = ({ setUserType, setRenderId }) => {
                       setRenderId(2);
                     }}
                   >
-                    As a Professional
+                    AS A PROFESSIONAL
                   </div>
                 </div>
               </div>
