@@ -76,7 +76,20 @@ function Events(props) {
                     }}
                   >
                     {curr.heading}
+                    {console.log(curr?.description)}
                   </h4>
+                  <div  style={{
+                      fontFamily: 'Lexend',
+                      fontStyle: 'normal',
+                      fontWeight: '400',
+                      fontSize: '16px',
+                      lineHeight: '24px',
+                      color: '#FFFFFF',
+                    }}
+                   
+                  > {curr.description}
+                  </div>
+               
                 </div>
               </div>
             );
