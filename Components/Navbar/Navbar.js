@@ -113,7 +113,12 @@ function NavDesktop() {
           {isAuthenticated ?
 
             <button 
-            onClick={unAuthenticate()}
+            onClick={()=>{
+              unAuthenticate();
+              router.push("/login")
+
+            }}
+            
             className='navbarButton'>Login/Register</button>
             :
             <button className='navbarButton'>Logout</button>
