@@ -112,6 +112,7 @@ function NavDesktop() {
           <button
             onClick={() => {
               unAuthenticate();
+              router.push('/login');
             }}
             className='navbarButton'
           >
