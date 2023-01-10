@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { isAuthenticated } from '../../utils';
-import Navbar from '../../components/Navbar';
+import Navbar from '../../Components/Navbar';
 export default function Events({ posts }) {
   console.log(posts);
   const router = useRouter();
