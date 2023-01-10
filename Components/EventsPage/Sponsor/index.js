@@ -156,7 +156,7 @@ function Events(props) {
               </div>
               <div className='registerButton'>
                 {' '}
-                <button onClick={rederict} className='button'>
+                <button onClick={rederict} className='button' style={{ fontStyle:' Lexend', fontWeight: '600'}}>
                   REGISTER NOW!
                 </button>
               </div>
