@@ -6,6 +6,7 @@ import React, { useState, useEffect } from 'react';
 import { Authenticate } from '../../utils';
 import { useRouter } from 'next/router';
 import Select from 'react-select';
+import { toast } from "react-toastify";
 const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
   const [Organisation, setOrganisation] = useState('');
   const [Indusrty, setIndusrty] = useState('');
@@ -16,9 +17,32 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
   const [Confirmpassword, setConfirmpassword] = useState('');
   const [ShowPassword, setShowPassword] = useState(false);
   const [ShowPassword2, setShowPassword2] = useState(false);
+  const [Degree, setDegree] = useState('');
+  
   const setMobile = useUpdateMobile();
   const router = useRouter();
   const Submit = () => {
+    if(Organisation==='')
+    { toast.warning('Please enter Organization name');
+     }
+  
+    else if(Indusrty===''){
+      toast.warning('Please enter Industry name');
+   
+    }
+    else if(State===""){
+           toast.warning('Please enter State');
+          
+    }
+    else if(City===""){
+      toast.warning('Please enter City');
+     
+       }  
+    else if(password===""){
+     toast.warning('Please enter Password');
+      
+         } 
+   else {
     if (password?.length > 7) {
       if (password === Confirmpassword) {
         FetchApi('POST', REGISTER_API, {
@@ -29,30 +53,27 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
             gender: Gender.label,
             email: email,
             phone_number: contact,
-            collage: Degree,
-            branch: Branch,
-            year: Year,
             city: City,
             state: State.label,
             password: password,
           },
         })
-          .then((res) => {
+          .then((res) => { console.log(res);
             if (res.status === 201) {
               Authenticate(res.data.n, res.data.e_id, res.data.at);
               router.push('/dashboard');
             }
           })
           .catch((err) => {
-            console.log(err);
-            alert('Registered UnSuccessfully');
+            toast(err.response.data.error);
+          
           });
       } else {
-        alert('password doesnot match');
+        toast('password doesnot match');
       }
     } else {
-      alert('password should have 8 or more characters');
-    }
+      toast('password should have 8 or more characters');
+    }}
   };
   useEffect(() => {
     setMobile();
@@ -217,13 +238,23 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
 
                 <div className='regInputContainer'>
                   <input
-                    styl={{ margintop: '36px' }}
+                  className={
+                    Organisation == ''
+                      ? 'LoginFormLeftInput'
+                      : 'LoginFormLeftInput inputGold'
+                  }
+                    styles={{ margintop: '36px' }}
                     type='text'
                     placeholder='Organization Name'
                     value={Organisation}
                     onChange={(e) => setOrganisation(e.target.value)}
                   />
                   <input
+                  className={
+                    Indusrty== ''
+                      ? 'LoginFormLeftInput'
+                      : 'LoginFormLeftInput inputGold'
+                  }
                     type='text'
                     placeholder='Indusrty Name'
                     value={Indusrty}
@@ -281,6 +312,11 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
                       onChange={handleChange}
                     />
                   <input
+                  className={
+                   City== ''
+                      ? 'LoginFormLeftInput'
+                      : 'LoginFormLeftInput inputGold'
+                  }
                     type='text'
                     placeholder='City'
                     value={City}
@@ -288,6 +324,7 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
                   />
                   <div style={{ display: 'flex', alignItems: 'center' }}>
                     <input
+                    
                       className={
                         password == ''
                           ? 'LoginFormLeftInput'
@@ -391,23 +428,28 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
                   </h3>
                   <div className='formInput'>
                     <input
+                    className={
+                     Organisation == ''
+                        ? 'LoginFormLeftInput'
+                        : 'LoginFormLeftInput inputGold'
+                    }
                       type='text'
                       value={Organisation}
                       onChange={(e) => setOrganisation(e.target.value)}
                       placeholder='Organization Name'
                     />
                     <input
+                    className={
+                      Indusrty == ''
+                         ? 'LoginFormLeftInput'
+                         : 'LoginFormLeftInput inputGold'
+                     }                  
                       type='text'
                       value={Indusrty}
                       onChange={(e) => setIndusrty(e.target.value)}
                       placeholder='Industry (You work in) '
                     />
-                    {/* <input
-                    type='text'
-                    value={State}
-                    onChange={(e) => setState(e.target.value)}
-                    placeholder='State'
-                  /> */}
+                   
                     <Select
                       styles={{
                         control: (baseStyles, state) => ({
@@ -451,6 +493,11 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
                       onChange={handleChange}
                     />
                     <input
+                    className={
+                      City == ''
+                         ? 'LoginFormLeftInput'
+                         : 'LoginFormLeftInput inputGold'
+                     }   
                       type='text'
                       value={City}
                       onChange={(e) => setCity(e.target.value)}

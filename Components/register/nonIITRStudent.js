@@ -6,6 +6,7 @@ import React, { useState, useEffect } from 'react';
 import { Authenticate } from '../../utils';
 import { useRouter } from 'next/router';
 import Select from 'react-select';
+import { toast } from "react-toastify";
 const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
   const [Institute, setInstitute] = useState('');
   const [Degree, setDegree] = useState('');
@@ -19,7 +20,31 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
   const [ShowPassword2, setShowPassword2] = useState(false);
   const setMobile = useUpdateMobile();
   const router = useRouter();
+  const [Branch,setBranch] = useState('');
   const Submit = () => {
+    if(Institute==='')
+    { toast.warning('Please enter Institute Name');
+     }
+    else if(Degree===''){
+      toast.warning('Please enter Degree ');
+    }
+    else if(Year===''){
+      toast.warning('Please enter Year');
+   
+    }
+    else if(State===""){
+           toast.warning('Please enter State');
+          
+    }
+    else if(City===""){
+      toast.warning('Please enter City');
+     
+       }  
+    else if(password===""){
+     toast.warning('Please enter Password');
+      
+         } 
+   else {
     if (password?.length > 7) {
       if (password === Confirmpassword) {
         FetchApi('POST', REGISTER_API, {
@@ -46,14 +71,14 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
           })
           .catch((err) => {
             console.log(err);
-            alert('Registered UnSuccessfull');
+            toast(err.response.data.error);
           });
       } else {
-        alert('password doesnot match');
+        toast('password doesnot match');
       }
     } else {
-      alert('password should have 8 or more characters');
-    }
+      toast('password should have 8 or more characters');
+    }}
   };
   useEffect(() => {
     setMobile();
