@@ -76,6 +76,12 @@
   color: #ffffff;
   background: #ba6d39;
   border-radius: 100px;
+  cursor: pointer;
+}
+.dashboardRegisterButton:hover{
+   background-color:#DCD1AD;
+   color: #12100E;
+
 }
 .dashboardRegisterBox {
   display: flex;

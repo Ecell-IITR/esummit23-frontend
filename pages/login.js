@@ -3,7 +3,7 @@ import { useMobile, useUpdateMobile } from '../utils/MobileContext';
 import Image from 'next/image';
 import { LOGIN_API } from '../utils/APIs';
 import FetchApi from '../utils/fetchAPI';
-import { Authenticate } from '../utils';
+import { Authenticate,isAuthenticated  } from '../utils';
 import { useRouter } from 'next/router';
 
 
@@ -37,6 +37,7 @@ function Login() {
       }
     }, 1000);
   };
+  
 
   function submit() {
     if (Password.length > 7) {
@@ -91,6 +92,9 @@ function Login() {
 
   useEffect(() => {
     setMobile();
+    if (isAuthenticated()) {
+      router.push(`/dashboard`);
+    }
   }, []);
 
   if (useMobile().isMobile) {

@@ -5,13 +5,14 @@ import FetchApi from '../utils/fetchAPI';
 import { TEAM_REGISTER_API } from '../utils/APIs';
 import { getAuthToken } from '../utils';
 
+
+
 function Dashboard(props) {
-  const [inputFields, setInputFields] = useState([
-    { full_name: '', email: '', phone_number: '' },
-  ]);
+  const [inputFields, setInputFields] = useState([]);
   const [TeamName, setTeamName] = useState('');
   const [Ans1, setAns1] = useState('');
   const [Ans2, setAns2] = useState('');
+  const [Email,setEmail] = useState('');
   const handleFormChange = (index, event) => {
     let data = [...inputFields];
     data[index][event.target.name] = event.target.value;
@@ -22,8 +23,55 @@ function Dashboard(props) {
 
     setInputFields([...inputFields, newfield]);
   };
+  const removeFields = (index) => {
+    let data = [...inputFields];
+    data.splice(index, 1);
+    setInputFields(data);
+  };
+
+  const emailRegex = /\S+@\S+\.\S+/;
+  const mobileRegex = /^[0][1-9]\d{9}$|^[1-9]\d{9}$/;
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if(TeamName==""){
+      toast.error('please enter valid Team Name!')
+      return;
+    }
+    for(const [i,inputField] of inputFields.entries()){
+      console.log(i,inputField.full_name)
+      if(inputField.full_name==""){
+       toast.error('please enter valid name!')
+       return;
+      }
+ }
+ for(const [i,inputField] of inputFields.entries()){
+  if(!inputField.email.match(emailRegex)){
+     toast.error('please enter valid email!')
+     return;
+  }
+ }
+ for(const [i,inputField] of inputFields.entries()){
+  if(!inputField.phone_number.match(mobileRegex)){
+     toast.error('please enter valid mobile number!')
+     return;
+  }
+ }
+ if(props.noQuestions==1){
+       if(Ans1==""){
+        toast.error('please enter an answer')
+        return;
+       }
+ }else if(props.noQuestions==2){
+  if(Ans1==""){
+    toast.error('please enter an answer')
+    return;
+   }
+   if(Ans2==""){
+    toast.error('please enter an answer')
+    return;
+   }
+ }
+
     const data = {
       no_user: inputFields.length,
       team_name: TeamName,
@@ -42,7 +90,6 @@ function Dashboard(props) {
         console.log(err);
       });
   };
-
   return (
     <div className='container_GRF'>
       <div className='formHeading_GRF'>
@@ -82,11 +129,13 @@ function Dashboard(props) {
                     name='email'
                     value={input.email}
                     placeholder='Email Address'
-                    onChange={(event) => handleFormChange(index, event)}
+                    onChange={(event) =>{
+                       handleFormChange(index, event);
+                       setEmail(event.target.value);
+                    }}
                   ></input>
                 </div>
                 <div className='commonDetail_GRF mobNo_GRF'>
-                  r
                   <input
                     name='phone_number'
                     className='commonInput_GRF'
@@ -94,8 +143,9 @@ function Dashboard(props) {
                     placeholder='Mobile No'
                     value={input.phone_number}
                     onChange={(event) => handleFormChange(index, event)}
-                  ></input>
+                  />
                 </div>
+                <img src="/Delete.png" onClick={()=>{removeFields(index)}} />
                 {/* <div className='commonDetail_GRF gender_GRF'>
                   <input
                     className='commonInput_GRF'
@@ -111,23 +161,24 @@ function Dashboard(props) {
           </div>
         );
       })}
-
-      <div className='addMember_GRF'>
-        <div className='addMemberOption_GRF'>
-          <div className='addSymbol_GRF' onClick={addFields}>
-            <Image
-              className='addImage'
-              src='/add.webp'
-              width='22rem'
-              height='9rem'
-            ></Image>
-          </div>
-          <div className='afterAddSymbol_GRF' onClick={addFields}>
-            Add Member
+      <div style={{width:"20rem"}}>
+        <div className='addMember_GRF'>
+          <div className='addMemberOption_GRF'>
+            <div className='addSymbol_GRF' onClick={addFields}>
+              <Image
+                className='addImage'
+                src='/add.webp'
+                width='22rem'
+                height='9rem'
+              ></Image>
+            </div>
+            <div className='afterAddSymbol_GRF' onClick={addFields}>
+              Add Member
+            </div>
           </div>
         </div>
+        
       </div>
-
       <div className='questionBigContainer_GRF'>
         {props.noQuestions > 0 ? (
           <div>
