@@ -6,9 +6,7 @@ import { TEAM_REGISTER_API } from '../utils/APIs';
 import { getAuthToken } from '../utils';
 
 function Dashboard(props) {
-  const [inputFields, setInputFields] = useState([
-    { full_name: '', email: '', phone_number: '' },
-  ]);
+  const [inputFields, setInputFields] = useState([]);
   const [TeamName, setTeamName] = useState('');
   const [Ans1, setAns1] = useState('');
   const [Ans2, setAns2] = useState('');
@@ -22,6 +20,12 @@ function Dashboard(props) {
 
     setInputFields([...inputFields, newfield]);
   };
+  const removeFields = (index) => {
+    let data = [...inputFields];
+    data.splice(index, 1);
+    setInputFields(data);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
@@ -86,7 +90,6 @@ function Dashboard(props) {
                   ></input>
                 </div>
                 <div className='commonDetail_GRF mobNo_GRF'>
-                  r
                   <input
                     name='phone_number'
                     className='commonInput_GRF'
@@ -94,8 +97,9 @@ function Dashboard(props) {
                     placeholder='Mobile No'
                     value={input.phone_number}
                     onChange={(event) => handleFormChange(index, event)}
-                  ></input>
+                  />
                 </div>
+                <img src="/Delete.png" onClick={()=>{removeFields(index)}} />
                 {/* <div className='commonDetail_GRF gender_GRF'>
                   <input
                     className='commonInput_GRF'
@@ -111,23 +115,24 @@ function Dashboard(props) {
           </div>
         );
       })}
-
-      <div className='addMember_GRF'>
-        <div className='addMemberOption_GRF'>
-          <div className='addSymbol_GRF' onClick={addFields}>
-            <Image
-              className='addImage'
-              src='/add.webp'
-              width='22rem'
-              height='9rem'
-            ></Image>
-          </div>
-          <div className='afterAddSymbol_GRF' onClick={addFields}>
-            Add Member
+      <div style={{width:"20rem"}}>
+        <div className='addMember_GRF'>
+          <div className='addMemberOption_GRF'>
+            <div className='addSymbol_GRF' onClick={addFields}>
+              <Image
+                className='addImage'
+                src='/add.webp'
+                width='22rem'
+                height='9rem'
+              ></Image>
+            </div>
+            <div className='afterAddSymbol_GRF' onClick={addFields}>
+              Add Member
+            </div>
           </div>
         </div>
+        
       </div>
-
       <div className='questionBigContainer_GRF'>
         {props.noQuestions > 0 ? (
           <div>
