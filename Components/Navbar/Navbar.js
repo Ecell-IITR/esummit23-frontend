@@ -1,12 +1,12 @@
-import Container from 'react-bootstrap/Container';
+
 import Navbar from 'react-bootstrap/Navbar';
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { getUserRoleType } from '../../utils';
-import Image from 'next/image';
-import {unAuthenticate} from "../../utils"
-import {isAuthenticated} from "../../utils"
+
+import { unAuthenticate } from '../../utils';
+import { isAuthenticated } from '../../utils';
 
 function NavDesktop() {
   const roleType = getUserRoleType();
@@ -108,23 +108,25 @@ function NavDesktop() {
         className='d-flex align-items-center justify-content-center navBut'
         style={{ gap: '36px' }}
       >
-       (
-
-          {isAuthenticated ?
-
-            <button 
-            onClick={()=>{
+        {isAuthenticated() ? (
+          <button
+            onClick={() => {
               unAuthenticate();
-              router.push("/login")
-
             }}
-            
-            className='navbarButton'>Login/Register</button>
-            :
-            <button className='navbarButton'>Logout</button>
-          }
-        )
-       
+            className='navbarButton'
+          >
+            Logout
+          </button>
+        ) : (
+          <button
+            onClick={() => {
+              router.push('/login');
+            }}
+            className='navbarButton'
+          >
+            Login/Register
+          </button>
+        )}
       </div>
     </Navbar>
   );

@@ -42,7 +42,8 @@ export const Authenticate = (name, id, authToken) => {
 
   localStorage.setItem('name', name);
   localStorage.setItem('id', id);
-  localStorage.setItem('authToken', authToken);
+  
+  
   //   logSetUser(user);
   //   logSignIn();
 };
