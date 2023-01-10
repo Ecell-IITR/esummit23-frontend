@@ -250,49 +250,58 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
                     value={Year}
                     onChange={(e) => setYear(e.target.value)}
                   />
+                  
                   <Select
                     styles={{
                       control: (baseStyles, state) => ({
                         ...baseStyles,
-                        backgroundColor: ' #12100e',
-                        width: '32vw',
-                        marginTop: '0.5rem',
-                        marginLeft: '0.5rem',
+                        backgroundColor: state.isFocused
+                          ? ' #12100e'
+                          : ' #12100e',
+                        width: '20rem',
                         borderTop: '0px',
                         borderLeft: '0px',
                         borderRight: '0px',
-                        color: ' #828282',
-                        marginBottom: '0.5rem',
+                        borderColor: state.isSelected ? '#12100e' : '#828282',
+                        color: '#828282 !important',
                       }),
                       option: (baseStyles, state) => ({
                         ...baseStyles,
                         backgroundColor: state.isFocused
                           ? ' #12100e'
                           : ' #12100e',
+                        width: '20rem',
                         backgroundColor: '  #dcd1ad',
-                        width: '30rem',
-                        color: 'black',
+                        paddingLeft: '1rem',
+                        color: '#828282',
+                      }),
+                      input: (baseStyles, state) => ({
+                        ...baseStyles,
+                        color: ' #dcd1ad',
                       }),
                       singleValue: (baseStyles, state) => ({
                         ...baseStyles,
-                        color: ' #dcd1ad',
+                        color: '#dcd1ad',
+                      }),
+                      valueContainer: (baseStyles, state) => ({...baseStyles,
+                      padding:0,
                       }),
                       menu: (baseStyles, state) => ({
                         ...baseStyles,
                         backgroundColor: state.isFocused
                           ? ' #12100e'
                           : ' #12100e',
-                        width: '30rem',
+                        width: '20rem',
                         fontFamily: 'Nunito Sans',
                         fontWeight: '400',
                       }),
                     }}
+
                     placeholder='State'
                     value={State}
                     options={StateData}
                     onChange={handleChange}
                   />
-
                   <input
                     className={
                       City == ''

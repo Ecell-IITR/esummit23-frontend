@@ -32,28 +32,21 @@ const Registration = () => {
 
   useEffect(() => {
     setMobile();
-    
   }, []);
   if (RenderId == 0) {
-    const data =[
-      { value:'1',
-        label: 'Male'},
-      { value:'2',
-        label : 'Female'},
-      { value:'3',
-        label : 'Others'}
-        
-    ]
-    const handleChange = e => {
+    const data = [
+      { value: '1', label: 'Male' },
+      { value: '2', label: 'Female' },
+      { value: '3', label: 'Others' },
+    ];
+    const handleChange = (e) => {
       setGender(e);
-    }
-   
-   
+    };
+
     if (useMobile().isMobile) {
       return (
         <>
           <div className='mobRegisterContainer'>
-          
             <div
               className='ImageComponent'
               style={{
@@ -61,10 +54,7 @@ const Registration = () => {
                 width: '100vw',
               }}
             >
-
-
               <Image src='/loginMobile.webp' layout='fill' objectFit='cover' />
-
             </div>
 
             <div className='RegisterHereMob'>
@@ -122,7 +112,6 @@ const Registration = () => {
                       onChange={(e) => setContact(e.target.value)}
                     />
                     <input
-                    
                       type='text'
                       className={
                         RefferalCode == ''
@@ -134,62 +123,66 @@ const Registration = () => {
                       value={RefferalCode}
                       onChange={(e) => setRefferalCode(e.target.value)}
                     />
-                  
 
                     <div className='gender'>
-                    <div className='GenderHdng'style={{ fontSize:'1rem' , fontWeight:'400'}}>
-                    <Select
-                    className='GenderStyling'
-                    styles={{control: (baseStyles, state) => ({
-                      ...baseStyles,
-                      backgroundColor: state.isFocused ? ' #12100e' :' #12100e',
-                      width:  '19rem',
-                      borderTop:'0px',
-                      borderLeft: '0px',
-                      borderRight: '0px',
-                      borderColor: state.isSelected ? '#12100e' :'#828282',
-                      color: '#828282 !important',
-                    }),option: (baseStyles, state) => ({
-                      ...baseStyles,
-                      backgroundColor: state.isFocused ? ' #12100e' :' #12100e',
-                      width:  '19rem',
-                      backgroundColor:'  #dcd1ad',
-                      paddingLeft:'2rem',
-                      color:'#828282',
-
-                    }),input: (baseStyles, state) => ({
-                      ...baseStyles,
-                      color: ' #dcd1ad',
-
-                    }),
-                    singleValue: (baseStyles, state) => ({
-                      ...baseStyles,
-                      color: '#dcd1ad',
-
-                    }),
-                    menu: (baseStyles, state) => ({
-                      ...baseStyles,
-                      backgroundColor: state.isFocused ? ' #12100e' :' #12100e',
-                      width:  '20rem',
-                      fontFamily: 'Nunito Sans',
-                      fontWeight:'400',
-                      
-               
-                    }),
-                   
-                   }}
-                    placeholder="Gender"
-                    value={Gender} 
-                    options={data}
-                    onChange={handleChange}
-                   />
-                    
-                   </div>
-                   </div>
+                      <div
+                        className='GenderHdng'
+                        style={{ fontSize: '1rem', fontWeight: '400' }}
+                      >
+                        <Select
+                          className='GenderStyling'
+                          styles={{
+                            control: (baseStyles, state) => ({
+                              ...baseStyles,
+                              backgroundColor: state.isFocused
+                                ? ' #12100e'
+                                : ' #12100e',
+                              width: '19rem',
+                              borderTop: '0px',
+                              borderLeft: '0px',
+                              borderRight: '0px',
+                              borderColor: state.isSelected
+                                ? '#12100e'
+                                : '#828282',
+                              color: '#828282 !important',
+                            }),
+                            option: (baseStyles, state) => ({
+                              ...baseStyles,
+                              backgroundColor: state.isFocused
+                                ? ' #12100e'
+                                : ' #12100e',
+                              width: '19rem',
+                              backgroundColor: '  #dcd1ad',
+                              paddingLeft: '2rem',
+                              color: '#828282',
+                            }),
+                            input: (baseStyles, state) => ({
+                              ...baseStyles,
+                              color: ' #dcd1ad',
+                            }),
+                            singleValue: (baseStyles, state) => ({
+                              ...baseStyles,
+                              color: '#dcd1ad',
+                            }),
+                            menu: (baseStyles, state) => ({
+                              ...baseStyles,
+                              backgroundColor: state.isFocused
+                                ? ' #12100e'
+                                : ' #12100e',
+                              width: '20rem',
+                              fontFamily: 'Nunito Sans',
+                              fontWeight: '400',
+                            }),
+                          }}
+                          placeholder='Gender'
+                          value={Gender}
+                          options={data}
+                          onChange={handleChange}
+                        />
+                      </div>
+                    </div>
                   </div>
-                  
-                     
-                       
+
                   <div
                     style={{
                       background: '#12100e',
@@ -197,8 +190,8 @@ const Registration = () => {
                       display: 'flex',
                       alignItems: 'center',
                       flexDirection: 'column',
-                       cursor :"pointer",
-                       marginLeft: '0px'
+                      cursor: 'pointer',
+                      marginLeft: '0px',
                     }}
                   >
                     <button
@@ -207,7 +200,6 @@ const Registration = () => {
                       }}
                       type='submit'
                       className='LoginButton'
-                      
                     >
                       Next
                     </button>
@@ -220,7 +212,7 @@ const Registration = () => {
                       alignItems: 'center',
                       flexDirection: 'column',
                       paddingBottom: '20rem',
-                      cursor :"pointer",
+                      cursor: 'pointer',
                     }}
                   >
                     <div className='AlreadyRegistered'>
@@ -249,7 +241,6 @@ const Registration = () => {
       return (
         <>
           <div className='RegisterationContainer'>
-          
             <div
               className='ImageComponent'
               style={{
@@ -275,117 +266,116 @@ const Registration = () => {
                   </h3>
                   <div className='formInput'>
                     <input
-                    className={
-                      Fullname == ''
-                        ? 'LoginFormLeftInput'
-                        : 'LoginFormLeftInput inputGold'
-                    }
+                      className={
+                        Fullname == ''
+                          ? 'LoginFormLeftInput'
+                          : 'LoginFormLeftInput inputGold'
+                      }
                       type='text'
                       placeholder='Full Name'
                       value={Fullname}
                       onChange={(e) => setFullname(e.target.value)}
                     />
                     <input
-                    className={
-                      Email == ''
-                        ? 'LoginFormLeftInput'
-                        : 'LoginFormLeftInput inputGold'
-                    }
+                      className={
+                        Email == ''
+                          ? 'LoginFormLeftInput'
+                          : 'LoginFormLeftInput inputGold'
+                      }
                       type='email'
                       placeholder='Email Address'
                       value={Email}
                       onChange={(e) => setEmail(e.target.value)}
                     />
                     <input
-                    className={
-                      Contact == ''
-                        ? 'LoginFormLeftInput'
-                        : 'LoginFormLeftInput inputGold'
-                    }
+                      className={
+                        Contact == ''
+                          ? 'LoginFormLeftInput'
+                          : 'LoginFormLeftInput inputGold'
+                      }
                       type='tel'
                       placeholder='Contact Number'
                       value={Contact}
                       onChange={(e) => setContact(e.target.value)}
                     />
                     <div className='gender'>
-                    <div className='GenderHdng'style={{ fontSize:'1rem' , fontWeight:'400'}}>
-                    <Select
-                    styles={{control: (baseStyles, state) => ({
-                      ...baseStyles,
-                      backgroundColor: ' #12100e',
-                      width:  '32vw',
-                      marginTop:'0.5rem',
-                      marginLeft:"0.5rem",
-                      borderTop:'0px',
-                      borderLeft: '0px',
-                      borderRight: '0px',
-                      color: ' #828282',
-                    }),option: (baseStyles, state) => ({
-                      ...baseStyles,
-                      backgroundColor: state.isFocused ? ' #12100e' :' #12100e',
-                      backgroundColor:'  #dcd1ad',
-                      width:  '30rem',
-                      color: 'black',
-
-                    }),
-                    singleValue: (baseStyles, state) => ({
-                      ...baseStyles,
-                      color: ' #dcd1ad',
-
-                    }),
-                    menu: (baseStyles, state) => ({
-                      ...baseStyles,
-                      backgroundColor: state.isFocused ? ' #12100e' :' #12100e',
-                      width:  '30rem',
-                      fontFamily: 'Nunito Sans',
-                      fontWeight:'400',
-               
-                    }),
-                   
-                   }}
-                    placeholder="Gender"
-                    value={Gender} 
-                    options={data}
-                    onChange={handleChange}
-                   />
-                   </div>
-                    <input
-                    className={
-                      RefferalCode == ''
-                        ? 'LoginFormLeftInput'
-                        : 'LoginFormLeftInput inputGold'
-                    }
-                      type='text'
-                      placeholder='Refferal code'
-                      style={{ margin: '11px',marginTop:'20px' }}
-                      value={RefferalCode}
-                      onChange={(e) => setRefferalCode(e.target.value)}
-                    />
-                  
-
-                  
-                    
-                   </div>
+                      <div
+                        className='GenderHdng'
+                        style={{ fontSize: '1rem', fontWeight: '400' }}
+                      >
+                        <Select
+                          styles={{
+                            control: (baseStyles, state) => ({
+                              ...baseStyles,
+                              backgroundColor: ' #12100e',
+                              width: '32vw',
+                              marginTop: '0.5rem',
+                              marginLeft: '0.5rem',
+                              borderTop: '0px',
+                              borderLeft: '0px',
+                              borderRight: '0px',
+                              color: ' #828282',
+                            }),
+                            option: (baseStyles, state) => ({
+                              ...baseStyles,
+                              backgroundColor: state.isFocused
+                                ? ' #12100e'
+                                : ' #12100e',
+                              backgroundColor: '  #dcd1ad',
+                              width: '30rem',
+                              color: 'black',
+                            }),
+                            singleValue: (baseStyles, state) => ({
+                              ...baseStyles,
+                              color: ' #dcd1ad',
+                            }),
+                            menu: (baseStyles, state) => ({
+                              ...baseStyles,
+                              backgroundColor: state.isFocused
+                                ? ' #12100e'
+                                : ' #12100e',
+                              width: '30rem',
+                              fontFamily: 'Nunito Sans',
+                              fontWeight: '400',
+                            }),
+                          }}
+                          placeholder='Gender'
+                          value={Gender}
+                          options={data}
+                          onChange={handleChange}
+                        />
+                      </div>
+                      <input
+                        className={
+                          RefferalCode == ''
+                            ? 'LoginFormLeftInput'
+                            : 'LoginFormLeftInput inputGold'
+                        }
+                        type='text'
+                        placeholder='Refferal code'
+                        style={{ margin: '11px', marginTop: '20px' }}
+                        value={RefferalCode}
+                        onChange={(e) => setRefferalCode(e.target.value)}
+                      />
+                    </div>
                   </div>
                   <div>
-                  <button
-                   
-                    className='nextButton'
-                    onClick={() => {
-                      setRenderId(1);
-                    }}
-                  >
-                    Next
-                  </button>
+                    <button
+                      className='nextButton'
+                      onClick={() => {
+                        setRenderId(1);
+                      }}
+                    >
+                      Next
+                    </button>
                   </div>
                   <div classname='registeredEvent'>
                     <span
                       style={{
-                       marginLeft :'-4rem',
+                        marginLeft: '-4rem',
                         color: '#BDBDBD',
                         fontSize: '16px',
                         fontWeight: '400',
-                      
                       }}
                     >
                       Already Registered?
@@ -397,9 +387,9 @@ const Registration = () => {
                           fontSize: '14px',
                           fontWeight: '400',
                           textDecorationLine: 'underline',
-                            color: '#DCD1AD',
-                            cursor: 'pointer',
-                            marginLeft: '10px'
+                          color: '#DCD1AD',
+                          cursor: 'pointer',
+                          marginLeft: '10px',
                         }}
                       >
                         Login Now
