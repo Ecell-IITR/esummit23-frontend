@@ -13,9 +13,6 @@ function Dashboard(props) {
   const [Ans1, setAns1] = useState('');
   const [Ans2, setAns2] = useState('');
   const [Email,setEmail] = useState('');
-  const [isValid, setIsValid] = useState(false);
-  const [message, setMessage] = useState('');
-
   const handleFormChange = (index, event) => {
     let data = [...inputFields];
     data[index][event.target.name] = event.target.value;
