@@ -74,7 +74,7 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
             }
           })
           .catch((err) => {
-            toast('registration is unsuccessful');
+            toast(err.response.data.error);
           });
       } else {
        toast('password doesnot match');
