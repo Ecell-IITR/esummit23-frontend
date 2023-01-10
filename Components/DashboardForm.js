@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import FetchApi from '../utils/fetchAPI';
 import { TEAM_REGISTER_API } from '../utils/APIs';
 import { getAuthToken } from '../utils';
-import validator from 'validator';
+
 
 
 function Dashboard(props) {
