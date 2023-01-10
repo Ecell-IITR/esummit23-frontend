@@ -5,11 +5,14 @@ import FetchApi from '../utils/fetchAPI';
 import { TEAM_REGISTER_API } from '../utils/APIs';
 import { getAuthToken } from '../utils';
 
+
+
 function Dashboard(props) {
   const [inputFields, setInputFields] = useState([]);
   const [TeamName, setTeamName] = useState('');
   const [Ans1, setAns1] = useState('');
   const [Ans2, setAns2] = useState('');
+  const [Email,setEmail] = useState('');
   const handleFormChange = (index, event) => {
     let data = [...inputFields];
     data[index][event.target.name] = event.target.value;
@@ -26,8 +29,49 @@ function Dashboard(props) {
     setInputFields(data);
   };
 
+  const emailRegex = /\S+@\S+\.\S+/;
+  const mobileRegex = /^[0][1-9]\d{9}$|^[1-9]\d{9}$/;
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if(TeamName==""){
+      toast.error('please enter valid Team Name!')
+      return;
+    }
+    for(const [i,inputField] of inputFields.entries()){
+      console.log(i,inputField.full_name)
+      if(inputField.full_name==""){
+       toast.error('please enter valid name!')
+       return;
+      }
+ }
+ for(const [i,inputField] of inputFields.entries()){
+  if(!inputField.email.match(emailRegex)){
+     toast.error('please enter valid email!')
+     return;
+  }
+ }
+ for(const [i,inputField] of inputFields.entries()){
+  if(!inputField.phone_number.match(mobileRegex)){
+     toast.error('please enter valid mobile number!')
+     return;
+  }
+ }
+ if(props.noQuestions==1){
+       if(Ans1==""){
+        toast.error('please enter an answer')
+        return;
+       }
+ }else if(props.noQuestions==2){
+  if(Ans1==""){
+    toast.error('please enter an answer')
+    return;
+   }
+   if(Ans2==""){
+    toast.error('please enter an answer')
+    return;
+   }
+ }
+
     const data = {
       no_user: inputFields.length,
       team_name: TeamName,
@@ -46,7 +90,6 @@ function Dashboard(props) {
         console.log(err);
       });
   };
-
   return (
     <div className='container_GRF'>
       <div className='formHeading_GRF'>
@@ -86,7 +129,10 @@ function Dashboard(props) {
                     name='email'
                     value={input.email}
                     placeholder='Email Address'
-                    onChange={(event) => handleFormChange(index, event)}
+                    onChange={(event) =>{
+                       handleFormChange(index, event);
+                       setEmail(event.target.value);
+                    }}
                   ></input>
                 </div>
                 <div className='commonDetail_GRF mobNo_GRF'>
