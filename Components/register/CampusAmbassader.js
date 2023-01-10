@@ -34,7 +34,7 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
             branch: Degree,
             year: Year,
             city: City,
-            state: State,
+            state: State.label,
             password: password,
           },
         })

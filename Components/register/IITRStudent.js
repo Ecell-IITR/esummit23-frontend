@@ -33,7 +33,7 @@ const IITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
             branch: Branch,
             year: Year,
             city: City,
-            state: State,
+            state: State.label,
             password: password,
           },
         })
