@@ -2,8 +2,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState, useEffect, useContext } from 'react';
 import { AuthContext } from '../../utils/auth-context';
-import { getUserRoleType } from '../../utils';
-
+import { isAuthenticated,unAuthenticate } from '../../utils';
 export const HeaderMobile = () => {
   const [isCA, setIsCA] = useState(false);
   const router = useRouter();
@@ -111,31 +110,25 @@ export const HeaderMobile = () => {
             </li> */}
           </>
         )}
-        {user ? (
-          <>
-            {/* <li className='mobilenavMenu-items'>
-              <Link href='/logout' passHref>
-                <div className='mobilenavMenu-links mobilenavMenu-ca-tag'>
-                  Logout
-                </div>
-              </Link>
-            </li> */}
-          </>
+        {isAuthenticated() ? (
+          <button
+            onClick={() => {
+              unAuthenticate();
+              router.push('/login');
+            }}
+            className='navbarButton'
+          >
+            Logout
+          </button>
         ) : (
-          <>
-            <li className='mobilenavMenu-items'>
-              <Link href='/login' passHref>
-                <div className='mobilenavMenu-links mobilenavMenu-ca-tag'>
-                  Login/Register
-                </div>
-              </Link>
-            </li>
-            <li className='mobilenavMenu-items'>
-              <Link href='/register' passHref>
-                <div className='mobilenavMenu-links'></div>
-              </Link>
-            </li>
-          </>
+          <button
+            onClick={() => {
+              router.push('/login');
+            }}
+            className='navbarButton'
+          >
+            Login/Register
+          </button>
         )}
       </ul>
     </div>
