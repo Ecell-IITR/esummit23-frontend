@@ -54,25 +54,14 @@ function Login() {
             console.log(res);
             localStorage.setItem('userRoleType', res.data.role);
 
-            if (localStorage.getItem('userRoleType')) {
-              const roleType = localStorage.getItem('userRoleType');
-
-              if (roleType == 'ca') {
-                setRole('ca');
-              }
-              if (roleType == 'stu') {
-                setRole('student');
-              }
-              if (roleType == 'professor') {
-                setRole('professor');
-              }
-              if (roleType == 'startup') {
-                setRole('startup');
-              }
-              console.log(Role);
-            }
           }
-          Authenticate(res.data.n, res.data.e_id, res.data.at);
+          Authenticate(res.data?.n, res.data?.e_id, res.data?.at);
+
+
+
+
+
+
           router.push('/dashboard');
         })
 
@@ -91,9 +80,9 @@ function Login() {
 
   useEffect(() => {
     setMobile();
-    if (isAuthenticated()) {
-      router.push(`/dashboard`);
-    }
+    // if (isAuthenticated()) {
+    //   router.push(`/dashboard`);
+    // }
   }, []);
 
   if (useMobile().isMobile) {
