@@ -63,6 +63,7 @@ export function EventsIdeathon(props) {
                             src='/bulletEvents.webp'
                             height='16'
                             width='16'
+                            
                           ></Image>
                         </div>
                         <div className='writtenRules'>{rule.rule} </div>
