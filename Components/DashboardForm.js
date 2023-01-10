@@ -30,7 +30,7 @@ function Dashboard(props) {
   };
 
   const emailRegex = /\S+@\S+\.\S+/;
-  const mobileRegex = /^(\+\d{1,3}[- ]?)?\d{10}$/;
+  const mobileRegex = /^[0][1-9]\d{9}$|^[1-9]\d{9}$/;
   const handleSubmit = async (e) => {
     e.preventDefault();
     if(TeamName==""){
