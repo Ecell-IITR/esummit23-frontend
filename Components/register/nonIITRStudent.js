@@ -46,7 +46,7 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
           })
           .catch((err) => {
             console.log(err);
-            alert('Registered UnSuccessfully');
+            alert('Registered UnSuccessfull');
           });
       } else {
         alert('password doesnot match');
@@ -215,30 +215,87 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
               <div className='regInputContainer'>
                 <input
                   styl={{ margintop: '36px' }}
+                  className={
+                    Institute == ''
+                      ? 'LoginFormLeftInput'
+                      : 'LoginFormLeftInput inputGold'
+                  }
                   type='text'
                   placeholder='Institute Name'
                   value={Institute}
                   onChange={(e) => setInstitute(e.target.value)}
                 />
                 <input
+                className={
+                  Degree == ''
+                    ? 'LoginFormLeftInput'
+                    : 'LoginFormLeftInput inputGold'
+                }
                   type='text'
                   placeholder='Degree'
                   value={Degree}
                   onChange={(e) => setDegree(e.target.value)}
                 />
                 <input
+                className={
+                  Year == ''
+                    ? 'LoginFormLeftInput'
+                    : 'LoginFormLeftInput inputGold'
+                }
                   type='text'
                   placeholder='Current Year'
                   value={Year}
                   onChange={(e) => setYear(e.target.value)}
                 />
+                <Select
+                    styles={{control: (baseStyles, state) => ({
+                      ...baseStyles,
+                      backgroundColor: ' #12100e',
+                      width:  '32vw',
+                      marginTop:'0.5rem',
+                      marginLeft:"0.5rem",
+                      borderTop:'0px',
+                      borderLeft: '0px',
+                      borderRight: '0px',
+                      color: ' #828282',
+                      marginBottom:'0.5rem'
+                    }),option: (baseStyles, state) => ({
+                      ...baseStyles,
+                      backgroundColor: state.isFocused ? ' #12100e' :' #12100e',
+                      backgroundColor:'  #dcd1ad',
+                      width:  '30rem',
+                      color: 'black',
+
+                    }),
+                    singleValue: (baseStyles, state) => ({
+                      ...baseStyles,
+                      color: ' #dcd1ad',
+
+                    }),
+                    menu: (baseStyles, state) => ({
+                      ...baseStyles,
+                      backgroundColor: state.isFocused ? ' #12100e' :' #12100e',
+                      width:  '30rem',
+                      fontFamily: 'Nunito Sans',
+                      fontWeight:'400',
+               
+                    }),
+                   
+                   }}
+                    placeholder="State"
+                    value={State} 
+                    options={StateData}
+                    onChange={handleChange}
+                   />
+
+
+
                 <input
-                  type='text'
-                  placeholder='State'
-                  value={State}
-                  onChange={(e) => setState(e.target.value)}
-                />
-                <input
+                className={
+                  City == ''
+                    ? 'LoginFormLeftInput'
+                    : 'LoginFormLeftInput inputGold'
+                }
                   type='text'
                   placeholder='City'
                   value={City}
@@ -349,18 +406,33 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
                 </h3>
                 <div className='formInput1'>
                   <input
+                    className={
+                      Institute == ''
+                        ? 'LoginFormLeftInput'
+                        : 'LoginFormLeftInput inputGold'
+                    }
                     type='text'
                     placeholder='Institute Name'
                     value={Institute}
                     onChange={(e) => setInstitute(e.target.value)}
                   />
                   <input
+                  className={
+                    Degree == ''
+                      ? 'LoginFormLeftInput'
+                      : 'LoginFormLeftInput inputGold'
+                  }
                     type='text'
                     placeholder='Degree'
                     value={Degree}
                     onChange={(e) => setDegree(e.target.value)}
                   />
                   <input
+                  className={
+                    Year == ''
+                      ? 'LoginFormLeftInput'
+                      : 'LoginFormLeftInput inputGold'
+                  }
                     type='text'
                     placeholder='Current Year'
                     value={Year}
@@ -413,6 +485,11 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
                     onChange={handleChange}
                    />
                   <input
+                  className={
+                    City == ''
+                      ? 'LoginFormLeftInput'
+                      : 'LoginFormLeftInput inputGold'
+                  }
                     type='text'
                     placeholder='City'
                     value={City}
