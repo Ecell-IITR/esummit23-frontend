@@ -10,7 +10,8 @@ import IITRStudent from '../../Components/register/IITRStudent';
 import NonIITRStudent from '../../Components/register/nonIITRStudent';
 import Professional from '../../Components/register/Professional';
 import Select from 'react-select';
-
+import { isAuthenticated  } from '../../utils';
+import { useRouter } from 'next/router';
 const Registration = () => {
   const [Fullname, setFullname] = useState('');
   const [Email, setEmail] = useState('');
@@ -21,16 +22,13 @@ const Registration = () => {
   const [UserType, setUserType] = useState('');
   const [selectedOption, setSelectedOption] = useState(null);
   const setMobile = useUpdateMobile();
+  const router = useRouter();
 
-  const handleSubmit = (e) => {
-    FetchApi('POST', REGISTER_API, {
-      full_name: Fullname,
-      email: Email,
-      phone_number: Contact,
-    });
-  };
 
   useEffect(() => {
+    if (isAuthenticated()) {
+      router.push(`/dashboard`);
+    }
     setMobile();
   }, []);
   if (RenderId == 0) {
