@@ -20,11 +20,14 @@ export default function Home() {
   return (
     <>
    
-
+<div className='parentAnimation' style={{backgroundColor:"linear-gradient(180deg, #12100E 11%, rgba(46, 40, 34, 0.75) 120.26%)"}}>
 <AnimationUp/>
 <Animation/>
+<div className='helpPage'>
 
+</div>
 
+</div>
 
 
     {/*

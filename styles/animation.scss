@@ -1,12 +1,48 @@
+.parentAnimation{
+  background:linear-gradient(180deg, #12100E 11%, rgba(46, 40, 34, 0.75) 120.26%);
+}
+
+
 .containerAnimationDown{
-background:linear-gradient(180deg, #12100E 11%, rgba(46, 40, 34, 0.75) 120.26%);
+background:none;
   width:100% ;
-  height: 61rem;
-  border: 1px solid black;
+  height: 35rem;
+  // border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: containerAnimationDown-animate 2s;
+  animation-fill-mode: forwards;
+  margin-top: -40%;
+}
+
+.coinsUp{
+  // border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  height: 1rem;
+
+}
+.coinsDown{
+  width: 55rem;
+  // border: 1px solid yellow;
+  height: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+@keyframes containerAnimationDown-animate{
+  0%{
+    transform: translateY(0%);
+  }
+  100%{
+    transform: translateY(-40%);
+    
+  }
+
 }
 
 .upAnimationDown{
@@ -15,7 +51,7 @@ background:linear-gradient(180deg, #12100E 11%, rgba(46, 40, 34, 0.75) 120.26%);
     height: 11.3rem;
     font-size:6.1rem;
     font-family:'Lexend';
-    border:1px solid black;
+    // border:1px solid black;
     display: flex;
     justify-content:center;
     align-items: flex-end;
@@ -28,33 +64,44 @@ background:linear-gradient(180deg, #12100E 11%, rgba(46, 40, 34, 0.75) 120.26%);
     align-items: center;
     width: 80%;
     height: 8rem;
-    border:1px solid black;
+    // border:1px solid black;
 
 }
 
 .coin1{
-    height: 12rem;
+    height: 8rem;
     width: 9.5rem;
     border: 1px solid white;
-    opacity: 0.3;
-    transition: 1s;
-transform: matrix(0.97, 0.24, -0.24, 0.97, 0, 0);
+    transition: 2s;
+    // transform: matrix(0.91, -0.41, 0.4, 0.91, 0, 0);
 }
-.example1{
-    transform: skewX(45deg);
-  opacity: 0;
-  transition-property: transform, opacity;
-  &.aos-animate {
-    transform: skewX(0);
-    opacity: 1;
+.coin1{
+  animation: coin1-load 3s;
+  animation-fill-mode: forwards;
+}
+@keyframes coin1-load{
+  100%{
+    transform: rotate(250deg);
   }
-
 }
+
+
+
 .coin2{
     height: 9.5rem;
     width: 9.8rem;
     border: 1px solid white;
-    transform: matrix(0.91, -0.41, 0.4, 0.91, 0, 0);
+    animation: coin2-animate 2.5s;
+    animation-fill-mode: forwards;
+    
+}
+
+@keyframes coin2-animate{
+100%{
+  transform: rotate(-300deg);
+  margin-top:15rem;
+  
+}
 }
 
 .coin3{
@@ -63,32 +110,114 @@ transform: matrix(0.97, 0.24, -0.24, 0.97, 0, 0);
     height: 11rem;
     width: 36rem;
     border: 1px solid white;
-    transform: rotate(-65deg);
+    
+    animation: coin3-load 2s;
+  animation-fill-mode: forwards;
 }
+@keyframes coin3-load{
+  100%{
+    transform: rotate(-65deg);
+  }
+}
+
 
 .coin4{
     height: 9rem;
     width: 9rem;
     border: 1px solid white;
+    animation: coin4-load 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes coin4-load{
+  100%{
+    transform: rotate(220.34deg);
+  }
 }
 
 .coin5{
     height: 10rem;
     width: 10rem;
     border: 1px solid white;
-    transform: rotate(-17.62deg);
+    animation: coin5-load 2s;
+    animation-fill-mode: forwards;
+    margin-right: -9rem;
+    margin-left: 6rem;
+    
+}
+@keyframes coin5-load{
+  100%{
+    transform: rotate(320.34deg);
+    margin-top: 10rem;
+  }
+}
+
+.helpPage{
+  background-color: red;
+  height: 80rem;
+}
+
+.coin6{
+  height: 9.5rem;
+  width: 9.8rem;
+  border: 1px solid white;
+  animation: coin6-animate 2.5s;
+  animation-fill-mode: forwards;
+  
+  
+}
+
+@keyframes coin6-animate{
+100%{
+transform: rotate(-300deg);
+margin-top:35rem;
+
+}
+}
+
+.coin7{
+  height: 9.5rem;
+  width: 9.8rem;
+  border: 1px solid white;
+  animation: coin7-animate 2.5s;
+  animation-fill-mode: forwards;
+  margin-left: -5rem;
+  
+}
+
+@keyframes coin7-animate{
+100%{
+transform: rotate(-280deg);
+margin-top:27rem;
+margin-right: 6.5rem;
+
+}
 }
 
 .coinContainerAnimation{
-    background:linear-gradient(180deg, #12100E 11%, rgba(46, 40, 34, 0.75) 120.26%);
+
   width:100% ;
   height: 61rem;
-  border: 1px solid black;
+  // border: 1px solid black;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   align-items: flex-start;
-  gap: 8rem;
+  align-items: center;
+  gap: 6rem;
+  animation: coinContainerAnimation-animate 2s ;
 
 }
+
+@keyframes coinContainerAnimation-animate
+{
+  0%{
+    transform: translateY(-100%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+
+
+
 
