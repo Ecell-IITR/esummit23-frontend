@@ -10,12 +10,14 @@ import IITRStudent from '../../Components/register/IITRStudent';
 import NonIITRStudent from '../../Components/register/nonIITRStudent';
 import Professional from '../../Components/register/Professional';
 import Select from 'react-select';
+import { data } from 'jquery';
+import { toast } from "react-toastify";
 
 const Registration = () => {
   const [Fullname, setFullname] = useState('');
   const [Email, setEmail] = useState('');
   const [Contact, setContact] = useState('');
-  const [Gender, setGender] = useState('Female');
+  const [Gender, setGender] = useState('');
   const [RenderId, setRenderId] = useState(0);
   const [RefferalCode, setRefferalCode] = useState('');
   const [UserType, setUserType] = useState('');
@@ -29,10 +31,45 @@ const Registration = () => {
       phone_number: Contact,
     });
   };
+ 
+  function validatePhoneNumber(str) {
+    var re =/^\d+$/.test(str);
+     return (re)
+  }
+
+
+  const Submit = () => {
+    
+      if(Email==='')
+        { toast.warning('Please enter Email');
+          setRenderId(0);
+        }
+       else if(Fullname===''){
+        toast.warning('Please enter Full Name');
+        setRenderId(0);
+          } 
+        else if(Gender===''){
+          toast.warning('Please enter Gender');
+        setRenderId(0);
+        }
+        else if(Contact===""){
+               toast.warning('Please enter Contact details');
+               setRenderId(0);
+        }
+        else if (!(validatePhoneNumber(Contact)&& Contact.length===10)){
+          toast.warning('Please enter 10 digit mobile no.');
+          setRenderId(0);
+        }
+      else{
+         setRenderId(1);
+        }
+       
+  }
 
   useEffect(() => {
     setMobile();
-    
+  
+
   }, []);
   if (RenderId == 0) {
     const data =[
@@ -44,10 +81,12 @@ const Registration = () => {
         label : 'Others'}
         
     ]
+
     const handleChange = e => {
       setGender(e);
     }
-   
+     
+    
    
     if (useMobile().isMobile) {
       return (
@@ -139,6 +178,7 @@ const Registration = () => {
                     <div className='gender'>
                     <div className='GenderHdng'style={{ fontSize:'1rem' , fontWeight:'400'}}>
                     <Select
+                   
                     className='GenderStyling'
                     styles={{control: (baseStyles, state) => ({
                       ...baseStyles,
@@ -155,7 +195,7 @@ const Registration = () => {
                       width:  '19rem',
                       backgroundColor:'  #dcd1ad',
                       paddingLeft:'2rem',
-                      color:'#828282',
+                      color:'black',
 
                     }),input: (baseStyles, state) => ({
                       ...baseStyles,
@@ -166,6 +206,7 @@ const Registration = () => {
                       ...baseStyles,
                       color: '#dcd1ad',
 
+
                     }),
                     menu: (baseStyles, state) => ({
                       ...baseStyles,
@@ -173,14 +214,17 @@ const Registration = () => {
                       width:  '20rem',
                       fontFamily: 'Nunito Sans',
                       fontWeight:'400',
+                    
                       
                
                     }),
                    
                    }}
+                  
                     placeholder="Gender"
                     value={Gender} 
                     options={data}
+                  
                     onChange={handleChange}
                    />
                     
@@ -200,15 +244,17 @@ const Registration = () => {
                        cursor :"pointer",
                        marginLeft: '0px'
                     }}
-                  >
+                   >
+                   
                     <button
                       onClick={() => {
-                        setRenderId(1);
+                        Submit();
                       }}
                       type='submit'
                       className='LoginButton'
                       
                     >
+
                       Next
                     </button>
                   </div>
@@ -368,12 +414,11 @@ const Registration = () => {
                    </div>
                   </div>
                   <div>
+                  
                   <button
                    
                     className='nextButton'
-                    onClick={() => {
-                      setRenderId(1);
-                    }}
+                    onClick={Submit}
                   >
                     Next
                   </button>

@@ -6,6 +6,7 @@ import React, { useState, useEffect } from 'react';
 import { Authenticate } from '../../utils';
 import { useRouter } from 'next/router';
 import Select from 'react-select';
+import { toast } from "react-toastify";
 const CampusAmbassader = ({ name, email, contact, Gender }) => {
   const [Institute, setInstitute] = useState('');
   const [Branch, setBranch] = useState('');
@@ -20,7 +21,32 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
   const [Degree, setDegree] = useState('');
   const setMobile = useUpdateMobile();
   const router = useRouter();
+  
+    
+   
+     
   const Submit = () => {
+    if(Institute==='')
+    { toast.warning('Please enter Institute Name');
+     }
+  
+    else if(Year===''){
+      toast.warning('Please enter Year');
+   
+    }
+    else if(State===""){
+           toast.warning('Please enter State');
+          
+    }
+    else if(City===""){
+      toast.warning('Please enter City');
+     
+       }  
+    else if(password===""){
+     toast.warning('Please enter Password');
+      
+         } 
+   else{ 
     if (password?.length > 7) {
       if (password === Confirmpassword) {
         FetchApi('POST', REGISTER_API, {
@@ -48,14 +74,14 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
             }
           })
           .catch((err) => {
-            alert('registration is unsuccessful');
+            toast('registration is unsuccessful');
           });
       } else {
-        alert('password doesnot match');
+       toast('password doesnot match');
       }
-    } else {
-      alert('password should have 8 or more characters');
-    }
+     }  else {
+      toast('password should have 8 or more characters');
+    } }
   };
   useEffect(() => {
     setMobile();
