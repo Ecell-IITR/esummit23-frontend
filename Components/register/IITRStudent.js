@@ -16,6 +16,7 @@ const IITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
   const [Confirmpassword, setConfirmpassword] = useState('');
   const [ShowPassword, setShowPassword] = useState(false);
   const [ShowPassword2, setShowPassword2] = useState(false);
+  const [EnrollomentNo, setEnrollomentNo] = useState('');
   const setMobile = useUpdateMobile();
   const router = useRouter();
   const Submit = () => {
@@ -35,6 +36,7 @@ const IITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
             city: City,
             state: State.label,
             password: password,
+            enrollment_no: EnrollomentNo,
           },
         })
           .then((res) => {
@@ -57,280 +59,163 @@ const IITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
   useEffect(() => {
     setMobile();
   }, []);
-  if (RenderId == 0){
-const StateData= [
-  {
-    value: 1,
-    label:'Andhra Pradesh'
-  },
-  {
-    value: 2,
-    label:'Arunachal Pradesh'
-  },
-  {
-    value: 3,
-    label:'Assam'
-  },
-  {
-    value: 4,
-    label:'Bihar'
-  },
-  {
-    value: 5,
-    label:'Chhattisgarh'
-  },
-  {
-    value: 6,
-    label:'Goa'
-  },
-  {
-    value: 7,
-    label:'Gujarat'
-  },
-  {
-    value: 8,
-    label:'Haryana'
-  },
-  {
-    value: 9,
-    label:'Himachal Pradesh'
-  },
-  {
-    value: 10,
-    label:'Jharkhand'
-  },
-  {
-    value: 11,
-    label:'Karnataka'
-  },
-  {
-    value: 12,
-    label:'Kerala'
-  },
-  {
-    value: 13,
-    label:'Madhya Pradesh'
-  },
-  {
-    value: 14,
-    label:'Maharashtra'
-  },
-  {
-    value: 15,
-    label:'Manipur'
-  },
-  {
-    value: 16,
-    label:'Meghalaya'
-  },
-  {
-    value: 17,
-    label:'Mizoram'
-  },
-  {
-    value: 18,
-    label:'Nagaland'
-  },
-  {
-    value: 19,
-    label:'Odisha'
-  },
-  {
-    value: 20,
-    label:'Puducherry'
-  },
-  {
-    value: 21,
-    label:'Punjab'
-  },
-  {
-    value: 22,
-    label:'Rajasthan'
-  },
-  {
-    value: 23,
-    label:'Sikkim'
-  },
-  {
-    value: 24,
-    label:'Tamil Nadu'
-  },
-  {
-    value: 25,
-    label:'Telangana'
-  },
-  {
-    value: 26,
-    label:'Tripura'
-  },
-  {
-    value: 27,
-    label:'Uttar Pradesh'
-  },
-  {
-    value: 28,
-    label:'Uttarakhand'
-  },
-  {
-    value: 29,
-    label:'West Bengal'
-  }
-]
-const handleChange = e => {
-  setState(e);
-}
-  
+  if (RenderId == 0) {
+    const StateData = [
+      {
+        value: 1,
+        label: 'Andhra Pradesh',
+      },
+      {
+        value: 2,
+        label: 'Arunachal Pradesh',
+      },
+      {
+        value: 3,
+        label: 'Assam',
+      },
+      {
+        value: 4,
+        label: 'Bihar',
+      },
+      {
+        value: 5,
+        label: 'Chhattisgarh',
+      },
+      {
+        value: 6,
+        label: 'Goa',
+      },
+      {
+        value: 7,
+        label: 'Gujarat',
+      },
+      {
+        value: 8,
+        label: 'Haryana',
+      },
+      {
+        value: 9,
+        label: 'Himachal Pradesh',
+      },
+      {
+        value: 10,
+        label: 'Jharkhand',
+      },
+      {
+        value: 11,
+        label: 'Karnataka',
+      },
+      {
+        value: 12,
+        label: 'Kerala',
+      },
+      {
+        value: 13,
+        label: 'Madhya Pradesh',
+      },
+      {
+        value: 14,
+        label: 'Maharashtra',
+      },
+      {
+        value: 15,
+        label: 'Manipur',
+      },
+      {
+        value: 16,
+        label: 'Meghalaya',
+      },
+      {
+        value: 17,
+        label: 'Mizoram',
+      },
+      {
+        value: 18,
+        label: 'Nagaland',
+      },
+      {
+        value: 19,
+        label: 'Odisha',
+      },
+      {
+        value: 20,
+        label: 'Puducherry',
+      },
+      {
+        value: 21,
+        label: 'Punjab',
+      },
+      {
+        value: 22,
+        label: 'Rajasthan',
+      },
+      {
+        value: 23,
+        label: 'Sikkim',
+      },
+      {
+        value: 24,
+        label: 'Tamil Nadu',
+      },
+      {
+        value: 25,
+        label: 'Telangana',
+      },
+      {
+        value: 26,
+        label: 'Tripura',
+      },
+      {
+        value: 27,
+        label: 'Uttar Pradesh',
+      },
+      {
+        value: 28,
+        label: 'Uttarakhand',
+      },
+      {
+        value: 29,
+        label: 'West Bengal',
+      },
+    ];
+    const handleChange = (e) => {
+      setState(e);
+    };
 
-
-  if (useMobile().isMobile) {
-    return (
-      <>
-        <div className='mobRegisterContainer'>
-          <div
-            style={{
-              width: '100vw',
-              height: '60vh',
-              backgroundImage: 'url(/loginMobile.webp)',
-              backgroundSize: '100vw 60vh',
-            }}
-          >
-            {/* <Image width='100%' height='40' src='/loginMobile.webp' /> */}
-          </div>
-          <div className='mobRegisterForm'>
-            <div style={{ marginTop: '-60vh' }} className='mobRegisterHere'>
-              <div className='summitLogo' style={{ paddingBottom: '20vh' }}>
-                <div
-                  style={{
-                    width: '200px',
-                    height: '100px',
-                    margin: 'auto',
-                    position: 'relative',
-                  }}
-                >
-                  <Image width='294' height='77' src='/summitLogo.png' />
-                </div>
-              </div>
-
-              <h1 className='mobRegisterTitle'> Personal Details</h1>
-              <h3 className='mobRegisterSubTitle'>
-                Please fill all the required fields.
-              </h3>
-              <div className='regInputContainer'>
-                <input
-                  className={
-                    Branch == ''
-                      ? 'LoginFormLeftInput'
-                      : 'LoginFormLeftInput inputGold'
-                  }
-                  type='text'
-                  placeholder='Branch Name'
-                  value={Branch}
-                  onChange={(e) => setBranch(e.target.value)}
-                  style={{
-                    marginTop: '36px',
-                  }}
-                />
-
-                <input
-                  className={
-                    Year == ''
-                      ? 'LoginFormLeftInput'
-                      : 'LoginFormLeftInput inputGold'
-                  }
-                  type='text'
-                  placeholder='Current Year'
-                  value={Year}
-                  onChange={(e) => setYear(e.target.value)}
-                />
-                <input
-                  className={
-                    State == ''
-                      ? 'LoginFormLeftInput'
-                      : 'LoginFormLeftInput inputGold'
-                  }
-                  type='text'
-                  placeholder='State'
-                  value={State}
-                  onChange={(e) => setState(e.target.value)}
-                />
-
-                <input
-                  className={
-                    City == ''
-                      ? 'LoginFormLeftInput'
-                      : 'LoginFormLeftInput inputGold'
-                  }
-                  type='text'
-                  placeholder='City'
-                  value={City}
-                  onChange={(e) => setCity(e.target.value)}
-                />
-
-                <input
-                  className={
-                    password == ''
-                      ? 'LoginFormLeftInput'
-                      : 'LoginFormLeftInput inputGold'
-                  }
-                  type='password'
-                  placeholder='Set password'
-                  value={password}
-                  onChange={(e) => setpassword(e.target.value)}
-                />
-                <input
-                  className={
-                    password == ''
-                      ? 'LoginFormLeftInput'
-                      : 'LoginFormLeftInput inputGold'
-                  }
-                  type='password'
-                  placeholder='Confirm Password'
-                  value={Confirmpassword}
-                  onChange={(e) => setConfirmpassword(e.target.value)}
-                />
-
-                <button
-                  type='submit'
-                  className='CreateAccountButton'
-                  onClick={Submit}
-                >
-                  Create Account
-                </button>
-              </div>
+    if (useMobile().isMobile) {
+      return (
+        <>
+          <div className='mobRegisterContainer'>
+            <div
+              style={{
+                width: '100vw',
+                height: '60vh',
+                backgroundImage: 'url(/loginMobile.webp)',
+                backgroundSize: '100vw 60vh',
+              }}
+            >
+              {/* <Image width='100%' height='40' src='/loginMobile.webp' /> */}
             </div>
-          </div>
-        </div>
-      </>
-    );
-  } else {
-    return (
-      <>
-        <div className='RegisterationContainer'>
-          <div
-            className='ImageComponent'
-            style={{
-              height: '100vh',
-              width: '100vw',
-            }}
-          >
-            <Image src='/login.webp' layout='fill' />
-          </div>
-
-          <div className='RegisterHere'>
-            <div className='RegisterLeft'>
-              <div className='RegisterLogo'>
-                <div
-                  className='SummitLogo'
-                  style={{ height: '100px', width: '200px' }}
-                >
-                  <Image src='/summitLogo.png' height={'77'} width={'294'} />
+            <div className='mobRegisterForm'>
+              <div style={{ marginTop: '-60vh' }} className='mobRegisterHere'>
+                <div className='summitLogo' style={{ paddingBottom: '20vh' }}>
+                  <div
+                    style={{
+                      width: '200px',
+                      height: '100px',
+                      margin: 'auto',
+                      position: 'relative',
+                    }}
+                  >
+                    <Image width='294' height='77' src='/summitLogo.png' />
+                  </div>
                 </div>
-                <h1 className='registrationTitle'>Personal Details</h1>
-                <h3 className='registrationsubTitle'>
+
+                <h1 className='mobRegisterTitle'> Personal Details</h1>
+                <h3 className='mobRegisterSubTitle'>
                   Please fill all the required fields.
                 </h3>
-
-                <div className='formInput'>
+                <div className='regInputContainer'>
                   <input
                     className={
                       Branch == ''
@@ -338,10 +223,26 @@ const handleChange = e => {
                         : 'LoginFormLeftInput inputGold'
                     }
                     type='text'
-                    placeholder='Branch'
+                    placeholder='Branch Name'
                     value={Branch}
                     onChange={(e) => setBranch(e.target.value)}
+                    style={{
+                      marginTop: '36px',
+                    }}
                   />
+
+                  <input
+                    className={
+                      EnrollomentNo == ''
+                        ? 'LoginFormLeftInput'
+                        : 'LoginFormLeftInput inputGold'
+                    }
+                    type='text'
+                    placeholder='Enrolloment No'
+                    value={EnrollomentNo}
+                    onChange={(e) => setEnrollomentNo(e.target.value)}
+                  />
+
                   <input
                     className={
                       Year == ''
@@ -353,63 +254,50 @@ const handleChange = e => {
                     value={Year}
                     onChange={(e) => setYear(e.target.value)}
                   />
-                  {/* <input
-                    className={
-                      State == ''
-                        ? 'LoginFormLeftInput'
-                        : 'LoginFormLeftInput inputGold'
-                    }
-                    type='text'
-                    placeholder='State'
-                    value={}
-                    onChange={(e) => setState(e.target.value)}
-                  /> */}
+
                   <Select
-                  // className={
-                  //   State == ''
-                  //     ? 'LoginFormLeftInput'
-                  //     : 'LoginFormLeftInput inputGold'
-                  // }
-                    styles={{control: (baseStyles, state) => ({
-                      ...baseStyles,
-                      backgroundColor: ' #12100e',
-                      width:  '32vw',
-                      marginTop:'0.5rem',
-                      marginLeft:"0.5rem",
-                      borderTop:'0px',
-                      borderLeft: '0px',
-                      borderRight: '0px',
-                      color: ' #828282',
-                      marginBottom:'0.5rem'
-
-                    }),option: (baseStyles, state) => ({
-                      ...baseStyles,
-                      backgroundColor: state.isFocused ? ' #12100e' :' #12100e',
-                      backgroundColor:'  #dcd1ad',
-                      width:  '30rem',
-                      color: 'black',
-
-                    }),
-                    singleValue: (baseStyles, state) => ({
-                      ...baseStyles,
-                      color: ' #dcd1ad',
-
-                    }),
-                    menu: (baseStyles, state) => ({
-                      ...baseStyles,
-                      backgroundColor: state.isFocused ? ' #12100e' :' #12100e',
-                      width:  '30rem',
-                      fontFamily: 'Nunito Sans',
-                      fontWeight:'400',
-               
-                    }),
-                   
-                   }}
-                    placeholder="State"
-                    value={State} 
+                    styles={{
+                      control: (baseStyles, state) => ({
+                        ...baseStyles,
+                        backgroundColor: ' #12100e',
+                        width: '32vw',
+                        marginTop: '0.5rem',
+                        marginLeft: '0.5rem',
+                        borderTop: '0px',
+                        borderLeft: '0px',
+                        borderRight: '0px',
+                        color: ' #828282',
+                        marginBottom: '0.5rem',
+                      }),
+                      option: (baseStyles, state) => ({
+                        ...baseStyles,
+                        backgroundColor: state.isFocused
+                          ? ' #12100e'
+                          : ' #12100e',
+                        backgroundColor: '  #dcd1ad',
+                        width: '30rem',
+                        color: 'black',
+                      }),
+                      singleValue: (baseStyles, state) => ({
+                        ...baseStyles,
+                        color: ' #dcd1ad',
+                      }),
+                      menu: (baseStyles, state) => ({
+                        ...baseStyles,
+                        backgroundColor: state.isFocused
+                          ? ' #12100e'
+                          : ' #12100e',
+                        width: '30rem',
+                        fontFamily: 'Nunito Sans',
+                        fontWeight: '400',
+                      }),
+                    }}
+                    placeholder='State'
+                    value={State}
                     options={StateData}
                     onChange={handleChange}
-                   />
+                  />
+
                   <input
                     className={
                       City == ''
@@ -421,82 +309,235 @@ const handleChange = e => {
                     value={City}
                     onChange={(e) => setCity(e.target.value)}
                   />
-                  <div style={{ display: 'flex', alignItems: 'center' }}>
-                    <input
-                      className={
-                        password == ''
-                          ? 'LoginFormLeftInput'
-                          : 'LoginFormLeftInput inputGold'
-                      }
-                      onChange={(e) => {
-                        setpassword(e.target.value);
-                      }}
-                      type={ShowPassword ? 'text' : 'Password'}
-                      value={password}
-                      placeholder='Password'
-                    />
-                    <div
-                      className='LoginFormLeftShowPassword'
-                      style={{ marginTop: '-20px' }}
-                      onClick={() => setShowPassword(!ShowPassword)}
-                    >
-                      <Image
-                        width='20'
-                        height='20'
-                        src={
-                          ShowPassword
-                            ? '/Hidepassword.webp'
-                            : '/Showpassword.webp'
-                        }
-                      />
-                    </div>
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center' }}>
-                    <input
-                      className={
-                        password == ''
-                          ? 'LoginFormLeftInput'
-                          : 'LoginFormLeftInput inputGold'
-                      }
-                      onChange={(e) => {
-                        setConfirmpassword(e.target.value);
-                      }}
-                      type={ShowPassword2 ? 'text' : 'Password'}
-                      value={Confirmpassword}
-                      placeholder='Confirm Password'
-                    />
-                    <div
-                      className='LoginFormLeftShowPassword'
-                      style={{ marginTop: '-20px' }}
-                      onClick={() => setShowPassword2(!ShowPassword2)}
-                    >
-                      <Image
-                        width='20'
-                        height='20'
-                        src={
-                          ShowPassword2
-                            ? '/Hidepassword.webp'
-                            : '/Showpassword.webp'
-                        }
-                      />
-                    </div>
-                  </div>
+
+                  <input
+                    className={
+                      password == ''
+                        ? 'LoginFormLeftInput'
+                        : 'LoginFormLeftInput inputGold'
+                    }
+                    type='password'
+                    placeholder='Set password'
+                    value={password}
+                    onChange={(e) => setpassword(e.target.value)}
+                  />
+                  <input
+                    className={
+                      password == ''
+                        ? 'LoginFormLeftInput'
+                        : 'LoginFormLeftInput inputGold'
+                    }
+                    type='password'
+                    placeholder='Confirm Password'
+                    value={Confirmpassword}
+                    onChange={(e) => setConfirmpassword(e.target.value)}
+                  />
+
+                  <button
+                    type='submit'
+                    className='CreateAccountButton'
+                    onClick={Submit}
+                  >
+                    Create Account
+                  </button>
                 </div>
-                <button
-                  type='submit'
-                  className='createAccount'
-                  onClick={Submit}
-                >
-                  Create Account
-                </button>
               </div>
             </div>
-            <div className='RegisterRight'></div>
           </div>
-        </div>
-      </>
-    );
+        </>
+      );
+    } else {
+      return (
+        <>
+          <div className='RegisterationContainer'>
+            <div
+              className='ImageComponent'
+              style={{
+                height: '100vh',
+                width: '100vw',
+              }}
+            >
+              <Image src='/login.webp' layout='fill' />
+            </div>
+
+            <div className='RegisterHere'>
+              <div className='RegisterLeft'>
+                <div className='RegisterLogo'>
+                  <div
+                    className='SummitLogo'
+                    style={{ height: '100px', width: '200px' }}
+                  >
+                    <Image src='/summitLogo.png' height={'77'} width={'294'} />
+                  </div>
+                  <h1 className='registrationTitle'>Personal Details</h1>
+                  <h3 className='registrationsubTitle'>
+                    Please fill all the required fields.
+                  </h3>
+
+                  <div className='formInput'>
+                    <input
+                      className={
+                        Branch == ''
+                          ? 'LoginFormLeftInput'
+                          : 'LoginFormLeftInput inputGold'
+                      }
+                      type='text'
+                      placeholder='Branch'
+                      value={Branch}
+                      onChange={(e) => setBranch(e.target.value)}
+                    />
+                    <input
+                      className={
+                        EnrollomentNo == ''
+                          ? 'LoginFormLeftInput'
+                          : 'LoginFormLeftInput inputGold'
+                      }
+                      type='text'
+                      placeholder='Enrolloment No'
+                      value={EnrollomentNo}
+                      onChange={(e) => setEnrollomentNo(e.target.value)}
+                    />
+                    <input
+                      className={
+                        Year == ''
+                          ? 'LoginFormLeftInput'
+                          : 'LoginFormLeftInput inputGold'
+                      }
+                      type='text'
+                      placeholder='Current Year'
+                      value={Year}
+                      onChange={(e) => setYear(e.target.value)}
+                    />
+
+                    <Select
+                      styles={{
+                        control: (baseStyles, state) => ({
+                          ...baseStyles,
+                          backgroundColor: ' #12100e',
+                          width: '32vw',
+                          marginTop: '0.5rem',
+                          marginLeft: '0.5rem',
+                          borderTop: '0px',
+                          borderLeft: '0px',
+                          borderRight: '0px',
+                          color: ' #828282',
+                          marginBottom: '0.5rem',
+                        }),
+                        option: (baseStyles, state) => ({
+                          ...baseStyles,
+                          backgroundColor: state.isFocused
+                            ? ' #12100e'
+                            : ' #12100e',
+                          backgroundColor: '  #dcd1ad',
+                          width: '30rem',
+                          color: 'black',
+                        }),
+                        singleValue: (baseStyles, state) => ({
+                          ...baseStyles,
+                          color: ' #dcd1ad',
+                        }),
+                        menu: (baseStyles, state) => ({
+                          ...baseStyles,
+                          backgroundColor: state.isFocused
+                            ? ' #12100e'
+                            : ' #12100e',
+                          width: '30rem',
+                          fontFamily: 'Nunito Sans',
+                          fontWeight: '400',
+                        }),
+                      }}
+                      placeholder='State'
+                      value={State}
+                      options={StateData}
+                      onChange={handleChange}
+                    />
+                    <input
+                      className={
+                        City == ''
+                          ? 'LoginFormLeftInput'
+                          : 'LoginFormLeftInput inputGold'
+                      }
+                      type='text'
+                      placeholder='City'
+                      value={City}
+                      onChange={(e) => setCity(e.target.value)}
+                    />
+                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                      <input
+                        className={
+                          password == ''
+                            ? 'LoginFormLeftInput'
+                            : 'LoginFormLeftInput inputGold'
+                        }
+                        onChange={(e) => {
+                          setpassword(e.target.value);
+                        }}
+                        type={ShowPassword ? 'text' : 'Password'}
+                        value={password}
+                        placeholder='Password'
+                      />
+                      <div
+                        className='LoginFormLeftShowPassword'
+                        style={{ marginTop: '-20px' }}
+                        onClick={() => setShowPassword(!ShowPassword)}
+                      >
+                        <Image
+                          width='20'
+                          height='20'
+                          src={
+                            ShowPassword
+                              ? '/Hidepassword.webp'
+                              : '/Showpassword.webp'
+                          }
+                        />
+                      </div>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                      <input
+                        className={
+                          password == ''
+                            ? 'LoginFormLeftInput'
+                            : 'LoginFormLeftInput inputGold'
+                        }
+                        onChange={(e) => {
+                          setConfirmpassword(e.target.value);
+                        }}
+                        type={ShowPassword2 ? 'text' : 'Password'}
+                        value={Confirmpassword}
+                        placeholder='Confirm Password'
+                      />
+                      <div
+                        className='LoginFormLeftShowPassword'
+                        style={{ marginTop: '-20px' }}
+                        onClick={() => setShowPassword2(!ShowPassword2)}
+                      >
+                        <Image
+                          width='20'
+                          height='20'
+                          src={
+                            ShowPassword2
+                              ? '/Hidepassword.webp'
+                              : '/Showpassword.webp'
+                          }
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    type='submit'
+                    className='createAccount'
+                    onClick={Submit}
+                  >
+                    Create Account
+                  </button>
+                </div>
+              </div>
+              <div className='RegisterRight'></div>
+            </div>
+          </div>
+        </>
+      );
+    }
   }
-}
 };
 export default IITRStudent;
