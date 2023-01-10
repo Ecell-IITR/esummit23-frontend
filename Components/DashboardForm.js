@@ -37,40 +37,40 @@ function Dashboard(props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if(TeamName==""){
-      toast.error('plz enter valid Team Name!')
+      toast.error('please enter valid Team Name!')
       return;
     }
     for(const [i,inputField] of inputFields.entries()){
       console.log(i,inputField.full_name)
       if(inputField.full_name==""){
-       toast.error('plz enter valid name!')
+       toast.error('please enter valid name!')
        return;
       }
  }
  for(const [i,inputField] of inputFields.entries()){
   if(!inputField.email.match(emailRegex)){
-     toast.error('plz enter valid email!')
+     toast.error('please enter valid email!')
      return;
   }
  }
  for(const [i,inputField] of inputFields.entries()){
   if(!inputField.phone_number.match(mobileRegex)){
-     toast.error('plz enter valid mobile number!')
+     toast.error('please enter valid mobile number!')
      return;
   }
  }
  if(props.noQuestions==1){
        if(Ans1==""){
-        toast.error('plz enter an answer')
+        toast.error('please enter an answer')
         return;
        }
  }else if(props.noQuestions==2){
   if(Ans1==""){
-    toast.error('plz enter an answer')
+    toast.error('please enter an answer')
     return;
    }
    if(Ans2==""){
-    toast.error('plz enter an answer')
+    toast.error('please enter an answer')
     return;
    }
  }
