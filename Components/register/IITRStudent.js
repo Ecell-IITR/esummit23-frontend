@@ -6,6 +6,7 @@ import { useMobile, useUpdateMobile } from '../../utils/MobileContext';
 import { Authenticate } from '../../utils';
 import { useRouter } from 'next/router';
 import Select from 'react-select';
+import { toast } from "react-toastify";
 const IITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
   const [Branch, setBranch] = useState('');
   const [Year, setYear] = useState('');
@@ -20,6 +21,30 @@ const IITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
   const setMobile = useUpdateMobile();
   const router = useRouter();
   const Submit = () => {
+    if(Branch==='')
+    { toast.warning('Please enter Branch Name');
+     }
+   else if(EnrollomentNo==='')
+    { toast.warning('Please enter Enrollment Number');
+     }
+  
+    else if(Year===''){
+      toast.warning('Please enter Year');
+   
+    }
+    else if(State===""){
+           toast.warning('Please enter State');
+          
+    }
+    else if(City===""){
+      toast.warning('Please enter City');
+     
+       }  
+    else if(password===""){
+     toast.warning('Please enter Password');
+      
+         } 
+   else {
     if (password?.length > 7) {
       if (password === Confirmpassword) {
         FetchApi('POST', REGISTER_API, {
@@ -47,14 +72,14 @@ const IITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
           })
           .catch((err) => {
             console.log(err);
-            alert('Registered UnSuccessfully');
+            toast(err.response.data.error);
           });
       } else {
-        alert('password doesnot match');
+        toast('password doesnot match');
       }
-    } else {
-      alert('password should have 8 or more characters');
-    }
+     } else {
+      toast('password should have 8 or more characters');
+    }}
   };
   useEffect(() => {
     setMobile();
@@ -238,7 +263,7 @@ const IITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
                         : 'LoginFormLeftInput inputGold'
                     }
                     type='text'
-                    placeholder='Enrolloment No'
+                    placeholder='Enrollment No'
                     value={EnrollomentNo}
                     onChange={(e) => setEnrollomentNo(e.target.value)}
                   />
@@ -401,7 +426,7 @@ const IITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
                           : 'LoginFormLeftInput inputGold'
                       }
                       type='text'
-                      placeholder='Enrolloment No'
+                      placeholder='Enrollment No'
                       value={EnrollomentNo}
                       onChange={(e) => setEnrollomentNo(e.target.value)}
                     />

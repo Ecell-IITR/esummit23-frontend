@@ -10,13 +10,16 @@ import IITRStudent from '../../Components/register/IITRStudent';
 import NonIITRStudent from '../../Components/register/nonIITRStudent';
 import Professional from '../../Components/register/Professional';
 import Select from 'react-select';
+
+import { data } from 'jquery';
+import { toast } from "react-toastify";
 import { isAuthenticated  } from '../../utils';
 import { useRouter } from 'next/router';
 const Registration = () => {
   const [Fullname, setFullname] = useState('');
   const [Email, setEmail] = useState('');
   const [Contact, setContact] = useState('');
-  const [Gender, setGender] = useState('Female');
+  const [Gender, setGender] = useState('');
   const [RenderId, setRenderId] = useState(0);
   const [RefferalCode, setRefferalCode] = useState('');
   const [UserType, setUserType] = useState('');
@@ -24,12 +27,54 @@ const Registration = () => {
   const setMobile = useUpdateMobile();
   const router = useRouter();
 
+  const handleSubmit = (e) => {
+    FetchApi('POST', REGISTER_API, {
+      full_name: Fullname,
+      email: Email,
+      phone_number: Contact,
+    });
+  };
+ 
+  function validatePhoneNumber(str) {
+    var re =/^\d+$/.test(str);
+     return (re)
+  }
+
+
+  const Submit = () => {
+    
+      if(Email==='')
+        { toast.warning('Please enter Email');
+          setRenderId(0);
+        }
+       else if(Fullname===''){
+        toast.warning('Please enter Full Name');
+        setRenderId(0);
+          } 
+        else if(Gender===''){
+          toast.warning('Please enter Gender');
+        setRenderId(0);
+        }
+        else if(Contact===""){
+               toast.warning('Please enter Contact details');
+               setRenderId(0);
+        }
+        else if (!(validatePhoneNumber(Contact)&& Contact.length===10)){
+          toast.warning('Please enter 10 digit mobile no.');
+          setRenderId(0);
+        }
+      else{
+         setRenderId(1);
+        }
+       
+  }
 
   useEffect(() => {
     if (isAuthenticated()) {
       router.push(`/dashboard`);
     }
     setMobile();
+
   }, []);
   if (RenderId == 0) {
     const data = [
@@ -40,6 +85,7 @@ const Registration = () => {
     const handleChange = (e) => {
       setGender(e);
     };
+
 
     if (useMobile().isMobile) {
       return (
@@ -123,62 +169,62 @@ const Registration = () => {
                     />
 
                     <div className='gender'>
-                      <div
-                        className='GenderHdng'
-                        style={{ fontSize: '1rem', fontWeight: '400' }}
-                      >
-                        <Select
-                          className='GenderStyling'
-                          styles={{
-                            control: (baseStyles, state) => ({
-                              ...baseStyles,
-                              backgroundColor: state.isFocused
-                                ? ' #12100e'
-                                : ' #12100e',
-                              width: '19rem',
-                              borderTop: '0px',
-                              borderLeft: '0px',
-                              borderRight: '0px',
-                              borderColor: state.isSelected
-                                ? '#12100e'
-                                : '#828282',
-                              color: '#828282 !important',
-                            }),
-                            option: (baseStyles, state) => ({
-                              ...baseStyles,
-                              backgroundColor: state.isFocused
-                                ? ' #12100e'
-                                : ' #12100e',
-                              width: '19rem',
-                              backgroundColor: '  #dcd1ad',
-                              paddingLeft: '2rem',
-                              color: '#828282',
-                            }),
-                            input: (baseStyles, state) => ({
-                              ...baseStyles,
-                              color: ' #dcd1ad',
-                            }),
-                            singleValue: (baseStyles, state) => ({
-                              ...baseStyles,
-                              color: '#dcd1ad',
-                            }),
-                            menu: (baseStyles, state) => ({
-                              ...baseStyles,
-                              backgroundColor: state.isFocused
-                                ? ' #12100e'
-                                : ' #12100e',
-                              width: '20rem',
-                              fontFamily: 'Nunito Sans',
-                              fontWeight: '400',
-                            }),
-                          }}
-                          placeholder='Gender'
-                          value={Gender}
-                          options={data}
-                          onChange={handleChange}
-                        />
-                      </div>
-                    </div>
+
+                    <div className='GenderHdng'style={{ fontSize:'1rem' , fontWeight:'400'}}>
+                    <Select
+                   
+                    className='GenderStyling'
+                    styles={{control: (baseStyles, state) => ({
+                      ...baseStyles,
+                      backgroundColor: state.isFocused ? ' #12100e' :' #12100e',
+                      width:  '19rem',
+                      borderTop:'0px',
+                      borderLeft: '0px',
+                      borderRight: '0px',
+                      borderColor: state.isSelected ? '#12100e' :'#828282',
+                      color: '#828282 !important',
+                    }),option: (baseStyles, state) => ({
+                      ...baseStyles,
+                      backgroundColor: state.isFocused ? ' #12100e' :' #12100e',
+                      width:  '19rem',
+                      backgroundColor:'  #dcd1ad',
+                      paddingLeft:'2rem',
+                      color:'black',
+
+                    }),input: (baseStyles, state) => ({
+                      ...baseStyles,
+                      color: ' #dcd1ad',
+
+                    }),
+                    singleValue: (baseStyles, state) => ({
+                      ...baseStyles,
+                      color: '#dcd1ad',
+
+
+                    }),
+                    menu: (baseStyles, state) => ({
+                      ...baseStyles,
+                      backgroundColor: state.isFocused ? ' #12100e' :' #12100e',
+                      width:  '20rem',
+                      fontFamily: 'Nunito Sans',
+                      fontWeight:'400',
+                    
+                      
+               
+                    }),
+                   
+                   }}
+                  
+                    placeholder="Gender"
+                    value={Gender} 
+                    options={data}
+                  
+                    onChange={handleChange}
+                   />
+                    
+                   </div>
+                   </div>
+
                   </div>
 
                   <div
@@ -191,14 +237,16 @@ const Registration = () => {
                       cursor: 'pointer',
                       marginLeft: '0px',
                     }}
-                  >
+                   >
+                   
                     <button
                       onClick={() => {
-                        setRenderId(1);
+                        Submit();
                       }}
                       type='submit'
                       className='LoginButton'
                     >
+
                       Next
                     </button>
                   </div>
@@ -358,14 +406,16 @@ const Registration = () => {
                     </div>
                   </div>
                   <div>
-                    <button
-                      className='nextButton'
-                      onClick={() => {
-                        setRenderId(1);
-                      }}
-                    >
-                      Next
-                    </button>
+
+                  
+                  <button
+                   
+                    className='nextButton'
+                    onClick={Submit}
+                  >
+                    Next
+                  </button>
+
                   </div>
                   <div classname='registeredEvent'>
                     <span
