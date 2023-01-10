@@ -35,10 +35,10 @@ function Dashboard(props) {
 
     FetchApi('POST', TEAM_REGISTER_API, data, getAuthToken())
       .then((res) => {
-        toast.success('Query Submitted !');
+        toast.success('Team Registered!');
       })
       .catch((err) => {
-        toast.error('Query Unsuccessful!');
+        toast.error('Please check the details!');
         console.log(err);
       });
   };
