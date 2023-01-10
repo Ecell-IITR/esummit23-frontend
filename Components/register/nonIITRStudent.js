@@ -260,7 +260,7 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
                   />
                   <div
                     className='LoginFormLeftShowPassword'
-                    style={{ marginTop: '-20px' }}
+                    style={{ marginTop: '-28px' }}
                     onClick={() => setShowPassword(!ShowPassword)}
                   >
                     <Image
@@ -290,7 +290,7 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
                   />
                   <div
                     className='LoginFormLeftShowPassword'
-                    style={{ marginTop: '-20px' }}
+                    style={{ marginTop: '-28px' }}
                     onClick={() => setShowPassword2(!ShowPassword2)}
                   >
                     <Image
@@ -347,7 +347,7 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
                 <h3 className='registrationsubTitle'>
                   Please select the appropriate option
                 </h3>
-                <div className='formInput'>
+                <div className='formInput1'>
                   <input
                     type='text'
                     placeholder='Institute Name'
@@ -434,7 +434,7 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
                     />
                     <div
                       className='LoginFormLeftShowPassword'
-                      style={{ marginTop: '-20px' }}
+                      style={{ marginTop: '-28px' }}
                       onClick={() => setShowPassword(!ShowPassword)}
                     >
                       <Image
@@ -464,7 +464,7 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
                     />
                     <div
                       className='LoginFormLeftShowPassword'
-                      style={{ marginTop: '-20px' }}
+                      style={{ marginTop: '-28px' }}
                       onClick={() => setShowPassword2(!ShowPassword2)}
                     >
                       <Image
