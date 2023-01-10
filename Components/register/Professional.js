@@ -5,10 +5,12 @@ import { useMobile, useUpdateMobile } from '../../utils/MobileContext';
 import React, { useState, useEffect } from 'react';
 import { Authenticate } from '../../utils';
 import { useRouter } from 'next/router';
+import Select from 'react-select';
 const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
   const [Organisation, setOrganisation] = useState('');
   const [Indusrty, setIndusrty] = useState('');
   const [State, setState] = useState('');
+  const [RenderId, setRenderId] = useState(0);
   const [City, setCity] = useState('');
   const [password, setpassword] = useState('');
   const [Confirmpassword, setConfirmpassword] = useState('');
@@ -31,7 +33,7 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
             branch: Branch,
             year: Year,
             city: City,
-            state: State,
+            state: State.label,
             password: password,
           },
         })
@@ -55,6 +57,128 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
   useEffect(() => {
     setMobile();
   }, []);
+  if (RenderId == 0){
+    const StateData= [
+      {
+        value: 1,
+        label:'Andhra Pradesh'
+      },
+      {
+        value: 2,
+        label:'Arunachal Pradesh'
+      },
+      {
+        value: 3,
+        label:'Assam'
+      },
+      {
+        value: 4,
+        label:'Bihar'
+      },
+      {
+        value: 5,
+        label:'Chhattisgarh'
+      },
+      {
+        value: 6,
+        label:'Goa'
+      },
+      {
+        value: 7,
+        label:'Gujarat'
+      },
+      {
+        value: 8,
+        label:'Haryana'
+      },
+      {
+        value: 9,
+        label:'Himachal Pradesh'
+      },
+      {
+        value: 10,
+        label:'Jharkhand'
+      },
+      {
+        value: 11,
+        label:'Karnataka'
+      },
+      {
+        value: 12,
+        label:'Kerala'
+      },
+      {
+        value: 13,
+        label:'Madhya Pradesh'
+      },
+      {
+        value: 14,
+        label:'Maharashtra'
+      },
+      {
+        value: 15,
+        label:'Manipur'
+      },
+      {
+        value: 16,
+        label:'Meghalaya'
+      },
+      {
+        value: 17,
+        label:'Mizoram'
+      },
+      {
+        value: 18,
+        label:'Nagaland'
+      },
+      {
+        value: 19,
+        label:'Odisha'
+      },
+      {
+        value: 20,
+        label:'Puducherry'
+      },
+      {
+        value: 21,
+        label:'Punjab'
+      },
+      {
+        value: 22,
+        label:'Rajasthan'
+      },
+      {
+        value: 23,
+        label:'Sikkim'
+      },
+      {
+        value: 24,
+        label:'Tamil Nadu'
+      },
+      {
+        value: 25,
+        label:'Telangana'
+      },
+      {
+        value: 26,
+        label:'Tripura'
+      },
+      {
+        value: 27,
+        label:'Uttar Pradesh'
+      },
+      {
+        value: 28,
+        label:'Uttarakhand'
+      },
+      {
+        value: 29,
+        label:'West Bengal'
+      }
+    ]
+    const handleChange = e => {
+      setState(e);
+    }
   if (useMobile().isMobile) {
     return (
       <>
@@ -231,12 +355,52 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
                     onChange={(e) => setIndusrty(e.target.value)}
                     placeholder='Industry (You work in) '
                   />
-                  <input
+                  {/* <input
                     type='text'
                     value={State}
                     onChange={(e) => setState(e.target.value)}
                     placeholder='State'
-                  />
+                  /> */}
+                  <Select
+                    styles={{control: (baseStyles, state) => ({
+                      ...baseStyles,
+                      backgroundColor: ' #12100e',
+                      width:  '32vw',
+                      marginTop:'0.5rem',
+                      marginLeft:"0.5rem",
+                      borderTop:'0px',
+                      borderLeft: '0px',
+                      borderRight: '0px',
+                      color: ' #828282',
+                      marginBottom:'0.5rem'
+                    }),option: (baseStyles, state) => ({
+                      ...baseStyles,
+                      backgroundColor: state.isFocused ? ' #12100e' :' #12100e',
+                      backgroundColor:'  #dcd1ad',
+                      width:  '30rem',
+                      color: 'black',
+
+                    }),
+                    singleValue: (baseStyles, state) => ({
+                      ...baseStyles,
+                      color: ' #dcd1ad',
+
+                    }),
+                    menu: (baseStyles, state) => ({
+                      ...baseStyles,
+                      backgroundColor: state.isFocused ? ' #12100e' :' #12100e',
+                      width:  '30rem',
+                      fontFamily: 'Nunito Sans',
+                      fontWeight:'400',
+               
+                    }),
+                   
+                   }}
+                    placeholder="State"
+                    value={State} 
+                    options={StateData}
+                    onChange={handleChange}
+                   />
                   <input
                     type='text'
                     value={City}
@@ -319,5 +483,6 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
       </>
     );
   }
+}
 };
 export default Professional;

@@ -1,5 +1,5 @@
 .RegisterationContainer {
-  height: 120vh;
+ 
   width: 100vw;
   position: relative;
 }
@@ -110,6 +110,8 @@
   font-family: Lexend;
   font-size: 18px;
   color: #ffffff;
+  margin-top: 48px;
+  margin-bottom: 24px;
 }
 
 .identityButton {
@@ -149,6 +151,11 @@
   border-radius: 32px;
   background-color: #ba6d39;
 }
+.regButton:hover {
+  background-color: #DCD1AD;
+  color: #12100E;
+}
+
 .createAccount {
   width: 267px;
   height: 48px;
@@ -157,6 +164,7 @@
   padding: 12px 72px;
   background-color: #ba6d39;
   color: #ffffff;
+  margin: 48px 0px 86px 0px;
 }
 
 .mobRegisterContainer {
@@ -415,6 +423,7 @@ button:hover {
     margin-bottom: 55vh;
   }
   .nextButton{
+   
     margin-Left:'0rem';
   }
   .FormInputs{
