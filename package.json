@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Har Har Mahadev",
   "private": true,
-  
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -26,12 +25,14 @@
     "react-dom": "^17.0.2",
     "react-ga4": "^1.4.1",
     "react-lottie": "^1.2.3",
+    "react-notify": "^3.0.0",
     "react-select": "^5.2.1",
     "react-share": "^4.4.0",
     "react-toastify": "^8.1.0",
     "react-visibility-sensor": "^5.1.1",
     "sass": "^1.43.5",
     "scss": "^0.2.4",
+    "select": "^1.1.2",
     "string-strip-html": "^9.1.4"
   },
   "devDependencies": {
@@ -53,7 +54,6 @@
   },
   "author": "pranav <pranav_a@ece.iitr.ac.in>",
   "license": "MIT",
-  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
   "bugs": {
     "url": "https://github.com/Ecell-IITR/Esummit22-frontend/issues"
   },

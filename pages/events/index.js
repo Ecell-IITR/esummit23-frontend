@@ -4,8 +4,9 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { isAuthenticated } from '../../utils';
-
+import Navbar from '../../Components/Navbar';
 export default function Events({ posts }) {
+  console.log(posts);
   const router = useRouter();
   const rederict = () => {
     if (isAuthenticated()) {
@@ -21,9 +22,10 @@ export default function Events({ posts }) {
     setWidth(rotation);
     console.log(width);
   });
-  console.log(posts);
+  
   return (
     <div className='eventPgCont'>
+      <Navbar />
       <div className='eventPgHdng'>
         Events{' '}
         {width < 450 ? (
@@ -72,7 +74,7 @@ export default function Events({ posts }) {
                 ></div>
 
                 <a classname='eventPga' href={'/events/' + post?.event_name}>
-                  ...Read more
+                  Read more
                 </a>
 
                 {/* ({post.card_description.length>200?post.card_description.slice(0,200):post.card_description}) */}

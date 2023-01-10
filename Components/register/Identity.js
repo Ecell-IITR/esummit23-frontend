@@ -17,11 +17,11 @@ const Identity = ({ setUserType, setRenderId }) => {
             style={{
               width: '100vw',
               height: '80vh',
-              backgroundImage: 'url(/loginMobile.png)',
+              backgroundImage: 'url(/loginMobile.webp)',
               backgroundSize: '100vw 80vh',
             }}
           >
-            {/* <Image width='100%' height='40' src='/loginMobile.png' /> */}
+            {/* <Image width='100%' height='40' src='/loginMobile.webp' /> */}
           </div>
           <div style={{ marginTop: '-70vh' }} className='mobRegisterHere'>
             <div style={{ justifyContent: 'center' }} className='summitLogo'>
@@ -37,7 +37,7 @@ const Identity = ({ setUserType, setRenderId }) => {
               </div>
             </div>
             <div style={{ marginTop: '50vw' }} className='mobRegisterForm'>
-              <h1 className='mobRegisterTitle'>Select your Idetity</h1>
+              <h1 className='mobRegisterTitle'>Select your Identity</h1>
               <h3 className='mobRegisterSubTitle'>
                 Please select the appropriate option.
               </h3>
@@ -55,6 +55,7 @@ const Identity = ({ setUserType, setRenderId }) => {
               >
                 <div
                   className='regButton'
+                  style={{cursor: 'pointer'}}
                   onClick={() => {
                     setUserType('stuIITR');
                     setRenderId(2);
@@ -64,6 +65,7 @@ const Identity = ({ setUserType, setRenderId }) => {
                 </div>
                 <div
                   className='regButton'
+                  style={{cursor: 'pointer'}}
                   onClick={() => {
                     setUserType('stu');
                     setRenderId(2);
@@ -73,6 +75,7 @@ const Identity = ({ setUserType, setRenderId }) => {
                 </div>
                 <div
                   className='regButton'
+                  style={{cursor: 'pointer'}}
                   onClick={() => {
                     setUserType('ca');
                     setRenderId(2);
@@ -82,6 +85,7 @@ const Identity = ({ setUserType, setRenderId }) => {
                 </div>
                 <div
                   className='regButton'
+                  style={{cursor: 'pointer'}}
                   onClick={() => {
                     setUserType('proff');
                     setRenderId(2);
@@ -106,7 +110,7 @@ const Identity = ({ setUserType, setRenderId }) => {
               width: '100vw',
             }}
           >
-            <Image src='/login.png' layout='fill' />
+            <Image src='/login.webp' layout='fill' />
           </div>
 
           <div className='RegisterHere'>
@@ -135,42 +139,46 @@ const Identity = ({ setUserType, setRenderId }) => {
                 >
                   <div
                     className='regButton'
+                    style={{cursor: 'pointer'}}
                     onClick={() => {
                       setUserType('stuIITR');
                       setRenderId(2);
                     }}
                   >
-                    As an IITR Student
+                    AS AN IITR STUDENT
                   </div>
 
                   <div
                     className='regButton'
+                    style={{cursor: 'pointer'}}
                     onClick={() => {
                       setUserType('stu');
                       setRenderId(2);
                     }}
                   >
-                    As a Non-IITR Student
+                    AS A NON-IITR STUDENT
                   </div>
 
                   <div
                     className='regButton'
+                    style={{cursor: 'pointer'}}
                     onClick={() => {
                       setUserType('ca');
                       setRenderId(2);
                     }}
                   >
-                    As a Campus Ambassador
+                    AS A CAMPUS AMBASSADOR
                   </div>
 
                   <div
                     className='regButton'
+                    style={{cursor: 'pointer'}}
                     onClick={() => {
                       setUserType('proff');
                       setRenderId(2);
                     }}
                   >
-                    As a Professional
+                    AS A PROFESSIONAL
                   </div>
                 </div>
               </div>
