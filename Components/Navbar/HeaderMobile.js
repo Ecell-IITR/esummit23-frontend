@@ -43,7 +43,7 @@ export const HeaderMobile = () => {
         </li>
         {
           <li className='mobilenavMenu-items'>
-            <Link href='/team' passHref>
+            <Link href='/events' passHref>
               <div className='mobilenavMenu-links'>Events</div>
             </Link>
           </li>
@@ -66,7 +66,7 @@ export const HeaderMobile = () => {
         </li> */}
 
 
-        
+
         {/* {isCA && (
           <>
             <li className='mobilenavMenu-items'>

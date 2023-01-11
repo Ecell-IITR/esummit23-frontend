@@ -202,7 +202,7 @@ ul a.active {
   padding-left: 10px;
   padding-bottom: 1.8vh;
   margin-top: 82px;
-  opacity: 0.9;
+  opacity: 1;
   transform-origin: 0% 0%;
   transform: translate(0, -160%);
   transition: transform 0.5s cubic-bezier(0.89, -0.63, 0, 1.75);
@@ -249,8 +249,11 @@ ul a.active {
   .Hamburger-container {
     cursor: pointer;
   }
+  .navbarButton{
+    padding: 4px 25px;
+  }
 .LottieContainer{
-  height: 85vh;
+  margin-top: 42.5vh;
   display: flex;
   justify-content: center;
   align-items: center;
