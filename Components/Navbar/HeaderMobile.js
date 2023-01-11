@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState, useEffect, useContext } from 'react';
 import { AuthContext } from '../../utils/auth-context';
-import { isAuthenticated,unAuthenticate } from '../../utils';
+import { isAuthenticated, unAuthenticate } from '../../utils';
 export const HeaderMobile = () => {
   const [isCA, setIsCA] = useState(false);
   const router = useRouter();
@@ -127,7 +127,7 @@ export const HeaderMobile = () => {
             }}
             className='navbarButton'
           >
-            Login/Register
+            Login / Register
           </button>
         )}
       </ul>

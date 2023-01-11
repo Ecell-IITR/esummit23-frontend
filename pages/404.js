@@ -1,4 +1,3 @@
-
 import Navbar from '../Components/Navbar';
 import React from 'react';
 import Lottie from 'react-lottie';
@@ -11,11 +10,9 @@ export default function Home() {
   };
 
   return (
-    < >
+    <div onClick={() => null}>
       <Navbar />
-      <div style={{marginTop:"4rem"}}>
       <Lottie options={defaultOptions} />
-      </div>
-    </>
+    </div>
   );
 }

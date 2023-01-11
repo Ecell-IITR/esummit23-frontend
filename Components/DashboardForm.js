@@ -20,8 +20,12 @@ function Dashboard(props) {
   };
   const addFields = () => {
     let newfield = { full_name: '', email: '', phone_number: '' };
-
+    if(inputFields.length<4){
     setInputFields([...inputFields, newfield]);
+    }
+    else{
+      toast.error('only 5 members allowed')
+    }
   };
   const removeFields = (index) => {
     let data = [...inputFields];
@@ -93,7 +97,7 @@ function Dashboard(props) {
   return (
     <div className='container_GRF'>
       <div className='formHeading_GRF'>
-        Application form - {props.name} ROUND 1
+        Application Form - {props.name.toUpperCase()} Round 1
       </div>
 
       <div className='teamName_GRF'>
@@ -106,6 +110,7 @@ function Dashboard(props) {
           onChange={(event) => setTeamName(event.target.value)}
         />
       </div>
+      <div className='formHeading_GRF'> Add rest of your teammates</div>
       {inputFields.map((input, index) => {
         return (
           <div className='detailsMember_GRF' key={index}>
@@ -117,7 +122,7 @@ function Dashboard(props) {
                     name='full_name'
                     className='commonInput_GRF'
                     type='text'
-                    placeholder='full name'
+                    placeholder='Full Name'
                     value={input.full_name}
                     onChange={(event) => handleFormChange(index, event)}
                   ></input>
@@ -140,7 +145,7 @@ function Dashboard(props) {
                     name='phone_number'
                     className='commonInput_GRF'
                     type='phoneNo'
-                    placeholder='Mobile No'
+                    placeholder='Mobile No.'
                     value={input.phone_number}
                     onChange={(event) => handleFormChange(index, event)}
                   />
@@ -161,7 +166,8 @@ function Dashboard(props) {
           </div>
         );
       })}
-      <div style={{width:"20rem"}}>
+      <div style={{width:"20rem",cursor: "pointer"
+}}>
         <div className='addMember_GRF'>
           <div className='addMemberOption_GRF'>
             <div className='addSymbol_GRF' onClick={addFields}>

@@ -162,7 +162,7 @@ const Registration = () => {
                           ? 'LoginFormLeftInput'
                           : 'LoginFormLeftInput inputGold'
                       }
-                      placeholder='Refferal code'
+                      placeholder='Referral Code (Optional)'
                       style={{ margin: '10px' }}
                       value={RefferalCode}
                       onChange={(e) => setRefferalCode(e.target.value)}
@@ -398,7 +398,7 @@ const Registration = () => {
                             : 'LoginFormLeftInput inputGold'
                         }
                         type='text'
-                        placeholder='Refferal code'
+                        placeholder='Refferal Code (Optional)'
                         style={{ margin: '11px', marginTop: '20px' }}
                         value={RefferalCode}
                         onChange={(e) => setRefferalCode(e.target.value)}

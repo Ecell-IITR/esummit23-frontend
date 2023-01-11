@@ -129,7 +129,7 @@ function Login() {
                 onChange={(e) => setemail(e.target.value)}
                 type='text'
                 value={email}
-                placeholder='Esummit id'
+                placeholder='E-Summit ID'
               />
               <div style={{ display: 'flex', alignItems: 'center' }}>
                 <input
@@ -175,10 +175,10 @@ function Login() {
                 Login
               </div>
               <div className='loginRegisterContainer'>
-                <div className='loginRegisterText'>New to Esummit?</div>
+                <div className='loginRegisterText'>New to E-Summit ?</div>
                 <Link href='/register'>
                   <div className='loginRegisterText loginRegisterTextBold'>
-                    Register
+                    Register Here
                   </div>
                 </Link>
               </div>
@@ -214,7 +214,7 @@ function Login() {
                 }}
                 type='text'
                 value={email}
-                placeholder='Esummit id'
+                placeholder='E-Summit ID'
               />
               <div style={{ display: 'flex', alignItems: 'center' }}>
                 <input
@@ -264,10 +264,10 @@ function Login() {
               </div>
 
               <div className='loginRegisterContainer'>
-                <div className='loginRegisterText'>New to Esummit?</div>
+                <div className='loginRegisterText'>New to E-Summit ?</div>
                 <Link href='/register'>
                   <div className='loginRegisterText loginRegisterTextBold'>
-                    Register
+                    Register Here
                   </div>
                 </Link>
               </div>

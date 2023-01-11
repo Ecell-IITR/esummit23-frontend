@@ -41,7 +41,7 @@ function NavDesktop() {
     <Navbar className='navbarParent'>
       {/* <Container fluid> */}
       <div className='navbarEsummitLogo'>
-        <img src='summitLogo.png' className='navbarImage' />
+       <img src='summitLogo.png' className='navbarImage' /> 
       </div>
       {/* <Navbar.Toggle aria-controls='navbarScroll' /> */}
       <ul className='navbarUl' style={{ maxHeight: '100px' }} navbarScroll>
@@ -124,7 +124,7 @@ function NavDesktop() {
             }}
             className='navbarButton'
           >
-            Login/Register
+            Login / Register
           </button>
         )}
       </div>
