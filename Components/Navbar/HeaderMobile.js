@@ -5,6 +5,7 @@ import { AuthContext } from '../../utils/auth-context';
 import { isAuthenticated, unAuthenticate } from '../../utils';
 export const HeaderMobile = () => {
   const [isCA, setIsCA] = useState(false);
+  const [Checked, setChecked] = useState(true);
   const router = useRouter();
   const { user } = useContext(AuthContext);
 
@@ -16,13 +17,17 @@ export const HeaderMobile = () => {
   }, []);
   return (
     <div className='mobile-navbar-majorcontainer'>
-      <input type='checkbox' />
-
-      <div className='Hamburger'>
+      <div
+        className='Hamburger'
+        onClick={() => {
+          setChecked(!Checked);
+        }}
+      >
         <div className='bar1'></div>
         <div className='bar2'></div>
         <div className='bar3'></div>
       </div>
+      <input checked={Checked} type='checkbox' />
       <Link href='/' className='image' passHref>
         <img
           src='summitLogo.png'

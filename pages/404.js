@@ -6,7 +6,7 @@ export default function Home() {
   const defaultOptions = {
     loop: true,
     autoplay: true,
-    path: '/LA.json',
+    path: '/coming.json',
   };
 
   return (
