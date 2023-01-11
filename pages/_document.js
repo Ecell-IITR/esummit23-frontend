@@ -12,6 +12,8 @@ class MyDocument extends Document {
         <Head>
           <link rel='preconnect' href='https://fonts.googleapis.com' />
           <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin />
+          <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
+           
           <link
             href='https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap'
             rel='stylesheet'
@@ -37,6 +39,7 @@ class MyDocument extends Document {
           />
         </Head>
         <body>
+        <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
           <Main />
           <NextScript />
         </body>

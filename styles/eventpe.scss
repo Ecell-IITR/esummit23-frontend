@@ -25,10 +25,13 @@
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   letter-spacing: 0.04em;
-  height: 14rem;
+  height: 12.3rem;
   color: black;
   text-align: center;
   padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .eventPgFlex {
@@ -69,6 +72,13 @@
   background-color: #dcd1ad;
 }
 
+.eventPgCards:hover{ 
+.eventcimg img{
+  width:100%;
+    transition: .4s all ease-in-out;
+  transform: scale(1.2);
+}
+}
 
 
 @media screen and (max-width: 970px) {

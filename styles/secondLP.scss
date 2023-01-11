@@ -1,0 +1,96 @@
+.secondLandingPage{
+    width:100vw;
+   
+}
+
+.wheel{
+    margin-bottom: 190px;
+}
+
+.secondLandingPagewheel{
+    margin-top: -121vh;
+    width: 773px;
+    margin-left: -24rem;
+    mix-blend-mode: overlay;
+}
+.secondLandingPageBox{
+    margin-top:-80vh;
+    margin-left:12vw;
+    display: flex;
+    flex-direction: column;
+    gap:48px;
+
+}
+.secondLandingPageHead{
+font-family: 'Lexend';
+font-style: normal;
+font-weight: 600;
+font-size: 44px;
+line-height: 110%;
+display: flex;
+align-items: center;
+color: #DCD1AD;
+}
+
+.secondLandingPageDescription{
+    font-family: 'Nunito Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 150%;
+letter-spacing: 0.04em;
+color: #E9F0F4;
+width:780px;
+}
+
+.secondLandingPageButton{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px 40px;
+gap: 8px;
+background: #BA6D39;
+border-radius: 100px;
+color:white;
+width: 208px;
+height: 48px;
+z-index: 1;
+cursor: pointer;
+span{
+    font-family: 'Lexend';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+}
+}
+
+.secondLandingPageButton:hover{
+    background-color: #DCD1AD;
+    color:#12100E;
+}
+
+.secondLandingPageImg{
+    img{
+    mix-blend-mode: overlay;
+    }
+
+}
+
+[data-aos="rotate-c"] {
+    transform: rotate(-90deg);
+    transition-property: transform;
+}
+[data-aos="rotate-c"].aos-animate {
+transform:rotate(0deg);
+}
+// [data-aos="straight"] {
+//     transform: translateX(-30rem);
+//     transition-property: transform;
+// }
+
+// [data-aos="straight"].aos-animate {
+// transform: translateX(10rem);
+// }
+
+

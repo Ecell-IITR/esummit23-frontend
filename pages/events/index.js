@@ -52,7 +52,7 @@ export default function Events({ posts }) {
               <div className='eventcimg'>
                 <Image
                   src='/Rectangle 118.png'
-                  height='199px'
+                  height='220px'
                   width='376px'
                 ></Image>
               </div>
@@ -71,6 +71,7 @@ export default function Events({ posts }) {
                 <div
                   className='eventPgDesc'
                   dangerouslySetInnerHTML={{ __html: post?.card_description }}
+                  style={{textAlign:"initial",lineHeight:"19px"}}
                 ></div>
 
                 <a classname='eventPga' href={'/events/' + post?.event_name}>
