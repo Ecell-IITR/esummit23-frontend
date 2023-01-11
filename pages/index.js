@@ -12,8 +12,9 @@ export default function Home() {
   return (
     <>
       <Navbar />
-
-      <Lottie options={defaultOptions} />
+      <div className='LottieContainer'>
+        <Lottie options={defaultOptions} />
+      </div>
     </>
   );
 }

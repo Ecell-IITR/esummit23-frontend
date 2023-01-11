@@ -213,7 +213,7 @@ ul a.active {
 }
 
 .mobilenavMenu-subcontent1 {
-  background: inherit;
+  background: black;
   z-index: 99;
   cursor: pointer;
   list-style: none;
@@ -225,6 +225,7 @@ ul a.active {
   background: inherit;
   opacity: 1;
   margin-top: 1.2rem;
+  z-index: 20;
 }
 .mobilenavMenu-ca-tag {
   font-size: 1.3rem;
@@ -248,7 +249,12 @@ ul a.active {
   .Hamburger-container {
     cursor: pointer;
   }
-
+.LottieContainer{
+  height: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
   .bar1,
   .bar3 {
     width: 35px;

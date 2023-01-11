@@ -5,7 +5,7 @@ import { AuthContext } from '../../utils/auth-context';
 import { isAuthenticated, unAuthenticate } from '../../utils';
 export const HeaderMobile = () => {
   const [isCA, setIsCA] = useState(false);
-  const [Checked, setChecked] = useState(true);
+  const [Checked, setChecked] = useState(false);
   const router = useRouter();
   const { user } = useContext(AuthContext);
 
@@ -58,16 +58,15 @@ export const HeaderMobile = () => {
             <div className='mobilenavMenu-links'>Sponsors</div>
           </Link>
         </li>
-        <li className='mobilenavMenu-items'>
-          <Link href='/sponsors' passHref>
-            <div className='mobilenavMenu-links'>Merchandice</div>
-          </Link>
-        </li>
-        <li className='mobilenavMenu-items'>
+    
+        {/* <li className='mobilenavMenu-items'>
           <Link href='/#faq' passHref>
             <div className='mobilenavMenu-links'>About</div>
           </Link>
-        </li>
+        </li> */}
+
+
+        
         {/* {isCA && (
           <>
             <li className='mobilenavMenu-items'>

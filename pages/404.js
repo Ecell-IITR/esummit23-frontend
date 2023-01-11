@@ -10,9 +10,11 @@ export default function Home() {
   };
 
   return (
-    <div onClick={() => null}>
+    <>
       <Navbar />
-      <Lottie options={defaultOptions} />
-    </div>
+      <div className='LottieContainer'>
+        <Lottie options={defaultOptions} />
+      </div>
+    </>
   );
 }
