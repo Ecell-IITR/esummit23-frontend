@@ -27,13 +27,7 @@ const Registration = () => {
   const setMobile = useUpdateMobile();
   const router = useRouter();
 
-  const handleSubmit = (e) => {
-    FetchApi('POST', REGISTER_API, {
-      full_name: Fullname,
-      email: Email,
-      phone_number: Contact,
-    });
-  };
+  
  
   function validatePhoneNumber(str) {
     var re =/^\d+$/.test(str);

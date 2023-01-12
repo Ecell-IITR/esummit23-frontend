@@ -17,7 +17,6 @@ function Dashboard() {
   const [Avail, setAvail] = useState([]);
   const [attempts, setattempts] = useState(0);
   const [show, setShow] = useState(false);
-  const [isauth, setisauth] = useState(false);
   const handleClose = () => setShow(false);
   const router = useRouter();
 

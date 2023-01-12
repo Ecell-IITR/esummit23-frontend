@@ -5,7 +5,7 @@ import { LOGIN_API } from '../utils/APIs';
 import FetchApi from '../utils/fetchAPI';
 import { Authenticate,isAuthenticated  } from '../utils';
 import { useRouter } from 'next/router';
-
+import ForgotPassword from '../Components/ForgotPassword';
 
 
 import Link from 'next/link';
@@ -16,14 +16,12 @@ function Login() {
   const [email, setemail] = useState();
   const [Password, setPassword] = useState('');
   const [ShowPassword, setShowPassword] = useState(false);
-
   const [pass_error, setpass_error] = useState('');
-
   const [pass_error_bool, setpass_error_bool] = useState(false);
-
   const [Role, setRole] = useState('');
   const [IsLogin, setIsLogin] = useState();
-
+  const [show, setShow] = useState(true);
+  const handleClose = () => setShow(false);
   const router = useRouter();
 
   const passValidate = () => {
@@ -100,6 +98,9 @@ function Login() {
   if (useMobile().isMobile) {
     return (
       <div className='LoginContainer'>
+       
+
+
         <div
           style={{
             width: '100vw',
@@ -191,6 +192,9 @@ function Login() {
     return (
       <>
         <div className='LoginContainer'>
+        <ForgotPassword          
+        show={show}
+        onHide={handleClose} />
           <div style={{ width: '100vw', height: '100vh' }}>
             <Image layout='fill' src='/login.webp' />
           </div>
