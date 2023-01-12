@@ -220,7 +220,7 @@ function Dashboard(props) {
         )}
       </div>
 
-      <div className='submitButton' onClick={handleSubmit}>
+      <div className='submitButton' >
         <button
           className='button_GRF'
           onClick={handleSubmit}
