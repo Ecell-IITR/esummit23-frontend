@@ -88,6 +88,8 @@ function Dashboard(props) {
     FetchApi('POST', TEAM_REGISTER_API, data, getAuthToken())
       .then((res) => {
         toast.success('Team Registered!');
+        props.handleClose()
+
       })
       .catch((err) => {
         toast.error('Please check the details!');

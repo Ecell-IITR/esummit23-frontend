@@ -88,6 +88,7 @@ function Dashboard() {
                         onHide={handleClose}
                       >
                         <DashboardForm
+                          handleClose={handleClose}
                           noQuestions={item.no_of_QA}
                           name={item.name}
                           Q_1={item.question1}
