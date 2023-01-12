@@ -23,9 +23,12 @@ export default function Header(props) {
           <div className='ideaBox1'>
             <div className='idea-Text1'>{props.name}</div>
             <div className='idea-Text2'>{props.tagline}</div>
+            <div className='idea-text3'>
             <button onClick={rederict} className='idea-Button'>
-              <span className='iBT'>APPLY NOW</span>
+              <span className='iBT'>REGISTER NOW</span>
             </button>
+            </div>
+
           </div>
           <div className='ideaBox2'></div>
         </div>

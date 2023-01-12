@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { toast } from 'react-toastify';
 
 export function EventsIdeathon(props) {
   return (
@@ -29,14 +30,14 @@ export function EventsIdeathon(props) {
               <div className='verticalLine'></div>
             </div>
             <div className='helpArrow'>
-              <div className='secondarrow'>Round 2</div>
+              <div className='secondarrow' onClick={()=>{toast.error("Event not created yet,Please check later")}}>Round 2</div>
             </div>
             <div className='helpVerticalLine'>
               <div className='verticalLine'></div>
             </div>
             <div className='vl1'></div>
             <div className='helpArrow'>
-              <div className='thirdarrow'>Round 3</div>
+              <div className='thirdarrow' onClick={()=>{toast.error("Event not created yet,Please check later")}}>Round 3</div>
             </div>
           </div>
 

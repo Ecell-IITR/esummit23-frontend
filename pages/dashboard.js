@@ -46,8 +46,11 @@ function Dashboard() {
   }, []);
 
   return (
+
+    <>
+
     <div style={{minHeight:"100vh",minWidth:"100vw",background:"#301a08",height:"auto",width:"auto"}}>
-      <Navbar/>
+    <Navbar/>
       <div className='dashboardContainer'>
         <div className='dashboardSubContainer'>
           <div className='dashboardContainerHeader'>
@@ -111,6 +114,7 @@ function Dashboard() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

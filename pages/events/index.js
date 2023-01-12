@@ -88,7 +88,7 @@ export default function Events({ posts }) {
                   }}
                 >
                   {' '}
-                  Apply Now{' '}
+                  Register Now{' '}
                 </button>
 
                 <Image src='/Vector.png' height='16px' width='21.3px'></Image>

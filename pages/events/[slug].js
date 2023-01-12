@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import Header from '../../Components/Events/Header';
 import Timline from '../../Components/EventsPage/Timeline';
 import Sponsors from '../../Components/EventsPage/Sponsor';
+import Navbar from '../../Components/Navbar';
 import { useMobile, useUpdateMobile } from '../../utils/MobileContext';
 export default function EventsDetails({ details }) {
   const router = useRouter();
@@ -26,6 +27,8 @@ export default function EventsDetails({ details }) {
           useMobile().isMobile ? details.card_image : details.background_image
         }
       />
+      
+      
       <Timline
         name={details.event_name}
         desc={details.description}
@@ -38,6 +41,7 @@ export default function EventsDetails({ details }) {
         Coordinator={details.events_coordinators}
         partners={[]}
       />
+      
     </>
   );
 }

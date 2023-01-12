@@ -1,14 +1,14 @@
 .ideaThon-bg {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   display: flex;
   flex-direction: row;
-  background-size: 100vw 100vh;
+  margin-bottom: 4rem;
+  // background-size: 100vw 100vh;
 }
 
 .ideaThon-main {
   height: 100vh;
-  width: 100vw;
 }
 
 .ideaBox1 {
@@ -19,50 +19,65 @@
   flex-direction: column;
   padding-left: 130px;
   gap: 35px;
+  margin-left: 3rem;
 }
 
 .idea-Text1 {
   font-family: 'Lexend', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 32px;
+  font-size:3rem;
   line-height: 110%;
   display: flex;
   align-items: flex-end;
   color: #f2f2f2;
+  width: 65%;
 }
 
 .idea-Text2 {
   font-family: 'Nunito Sans', sans-serif;
   font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
+  font-weight: 380;
+  font-size: 1.6rem;
   line-height: 150%;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   letter-spacing: 0.04em;
   color: #f2f2f2;
-  width: 65%;
+  width: 100%;
   opacity: 0.8;
+  letter-spacing: .1rem;
+  margin-top: -1.25rem;
 }
-
+.idea-text3{
+  width: 65%;
+}
 .idea-Button {
+  margin-top: .2rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 12px 40px;
+  padding: 16px 32px;
   gap: 8px;
   background: #ba6d39;
   border-radius: 100px;
   border: none;
+  width: 20rem;
+  
+  
+}
+
+.idea-Button:hover > .iBT{
+  color: black;
 }
 
 .iBT {
   font-family: 'lexend', sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 17px;
+  font-size:22px;
   line-height: 24px;
   display: flex;
   align-items: center;
@@ -83,6 +98,7 @@
   gap: 10px;
   background: #98613b;
   min-height: 6rem;
+  margin-top: -10rem;
 }
 
 .boxHead1 {
@@ -124,14 +140,15 @@
     background-repeat: no-repeat;
   }
   .ideaBox1 {
-    padding: 0;
+    display: flex;
+    justify-content: center;
+// background-color: red;
   }
   .ideaThon-bg {
-    background-image: url('/bgmob.webp');
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    // justify-content: center;
   }
   .idea-Text1 {
     font-family: 'Lexend', sans-serif;
@@ -140,18 +157,23 @@
     font-size: 32px;
     line-height: 110%;
     display: flex;
+    justify-content: flex-start;
     align-items: flex-end;
     color: #f2f2f2;
+
+  }
+  .idea-Text2 {
+  width: 70%;
+
   }
 
   .ideaBox1 {
     display: flex;
-    justify-content: center;
     flex-direction: column;
     gap: 35px;
     align-items: center;
     padding-left: 0;
-    width: 100%;
+    width: 50%;
     margin-top: 20rem;
   }
   .yBox1 {
@@ -172,5 +194,30 @@
    
   .yellowBox{
    padding-left: 15px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+   
+  .ideaBox1{
+    margin-top: 20rem;
+    width: 18rem;
+  }
+  .idea-Text1{
+    font-size:2rem;
+  }
+
+  .idea-Text2{
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
+
+  .idea-Button{
+    width: 11rem;
+    height: 2.5rem;
+    margin-top: -.2rem;
+  }
+  .iBT{
+    font-size: .9rem;
   }
 }
