@@ -12,7 +12,7 @@ import config from '../config';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 // import Dash from "../Components/DashboardForm"
-// import Slp from "../Components/2ndLandingPage/SecondLandingPage" ;
+import Slp from "../Components/2ndLandingPage/SecondLandingPage" ;
 function MyApp({ Component, pageProps }) {
   return (
     <>
@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }) {
           </Script>
 
           <Component {...pageProps} />
-          {/* <Slp/> */}
+          <Slp/>
 
         </MobileProvider>
       </AuthContext.Provider>

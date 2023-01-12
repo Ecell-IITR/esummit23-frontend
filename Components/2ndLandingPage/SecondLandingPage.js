@@ -11,7 +11,7 @@ const SecondLandingPage = () => {
   return (
     <div>
       <div className='secondLandingPage'>
-        <img src='secondLP.webp' />
+        <img src='secondLP.webp' width="100%" />
         <div
           className='secondLandingPageImg'
           data-aos-anchor-placement='top-center'
