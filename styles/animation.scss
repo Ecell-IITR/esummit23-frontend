@@ -16,13 +16,33 @@ background:none;
   animation-fill-mode: forwards;
   margin-top: -40%;
 }
-
+.coins{
+  height: 100%;
+  width: 90%;
+}
+.seal{
+  height: 100%;
+  width: 100%;
+  opacity: 30%;
+  margin-top: 10rem;
+ 
+}
+.coinTiltedDesign{
+  height: 65%;
+  width: 55%;
+}
 .coinsUp{
   // border: 1px solid red;
   display: flex;
   flex-direction: row;
   height: 1rem;
+  display: flex;
+  gap: 5rem;
 
+}
+.coin10{
+  height: 75%;
+  width: 70%;
 }
 .coinsDown{
   width: 55rem;
@@ -50,6 +70,7 @@ background:none;
     width: 80%;
     height: 11.3rem;
     font-size:6.1rem;
+    font-weight: 800;
     font-family:'Lexend';
     // border:1px solid black;
     display: flex;
@@ -71,8 +92,9 @@ background:none;
 .coin1{
     height: 8rem;
     width: 9.5rem;
-    border: 1px solid white;
+    // border: 1px solid white;
     transition: 2s;
+    opacity: 30%;
     // transform: matrix(0.91, -0.41, 0.4, 0.91, 0, 0);
 }
 .coin1{
@@ -82,15 +104,25 @@ background:none;
 @keyframes coin1-load{
   100%{
     transform: rotate(250deg);
+    -webkit-filter: blur(3px);
   }
 }
 
 
-
+.coin1paisa{
+  
+  height: 70%;
+  width: 70%;
+}
+.coin175year{
+  height: 85%;
+  width: 85%;
+}
 .coin2{
     height: 9.5rem;
     width: 9.8rem;
-    border: 1px solid white;
+    margin-right: -25rem;
+    // border: 1px solid white;
     animation: coin2-animate 2.5s;
     animation-fill-mode: forwards;
     
@@ -99,7 +131,8 @@ background:none;
 @keyframes coin2-animate{
 100%{
   transform: rotate(-300deg);
-  margin-top:15rem;
+  margin-top:18rem;
+  z-index: 1;
   
 }
 }
@@ -109,7 +142,7 @@ background:none;
     top: 721.25px;
     height: 11rem;
     width: 36rem;
-    border: 1px solid white;
+    // border: 1px solid white;
     
     animation: coin3-load 2s;
   animation-fill-mode: forwards;
@@ -124,7 +157,8 @@ background:none;
 .coin4{
     height: 9rem;
     width: 9rem;
-    border: 1px solid white;
+    opacity: 40%;
+    // border: 1px solid white;
     animation: coin4-load 2s;
     animation-fill-mode: forwards;
 }
@@ -132,23 +166,27 @@ background:none;
 @keyframes coin4-load{
   100%{
     transform: rotate(220.34deg);
+    margin-top: -3.5rem;
+    -webkit-filter: blur(1.8px);
   }
 }
 
 .coin5{
     height: 10rem;
     width: 10rem;
-    border: 1px solid white;
+    // border: 1px solid white;
     animation: coin5-load 2s;
     animation-fill-mode: forwards;
     margin-right: -9rem;
     margin-left: 6rem;
+    opacity: 70%;
     
 }
 @keyframes coin5-load{
   100%{
     transform: rotate(320.34deg);
     margin-top: 10rem;
+    -webkit-filter: blur(1px);
   }
 }
 
@@ -160,7 +198,8 @@ background:none;
 .coin6{
   height: 9.5rem;
   width: 9.8rem;
-  border: 1px solid white;
+  opacity: 20%;
+  // border: 1px solid white;
   animation: coin6-animate 2.5s;
   animation-fill-mode: forwards;
   
@@ -171,6 +210,7 @@ background:none;
 100%{
 transform: rotate(-300deg);
 margin-top:35rem;
+-webkit-filter: blur(4px);
 
 }
 }
@@ -178,7 +218,7 @@ margin-top:35rem;
 .coin7{
   height: 9.5rem;
   width: 9.8rem;
-  border: 1px solid white;
+  // border: 1px solid white;
   animation: coin7-animate 2.5s;
   animation-fill-mode: forwards;
   margin-left: -5rem;
@@ -187,9 +227,10 @@ margin-top:35rem;
 
 @keyframes coin7-animate{
 100%{
-transform: rotate(-280deg);
+transform: rotate(-360deg);
 margin-top:27rem;
 margin-right: 6.5rem;
+z-index: 1;
 
 }
 }
