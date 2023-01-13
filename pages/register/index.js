@@ -11,6 +11,7 @@ import NonIITRStudent from '../../Components/register/nonIITRStudent';
 import Professional from '../../Components/register/Professional';
 import Select from 'react-select';
 
+
 import { data } from 'jquery';
 import { toast } from "react-toastify";
 import { isAuthenticated  } from '../../utils';
@@ -23,9 +24,13 @@ const Registration = () => {
   const [RenderId, setRenderId] = useState(0);
   const [RefferalCode, setRefferalCode] = useState('');
   const [UserType, setUserType] = useState('');
+  const [finishStatus, setfinishStatus] = useState(false);
+
   const [selectedOption, setSelectedOption] = useState(null);
   const setMobile = useUpdateMobile();
   const router = useRouter();
+ 
+  
 
   
  
@@ -60,8 +65,38 @@ const Registration = () => {
       else{
          setRenderId(1);
         }
-       
+       }
+const onBackButtonEvent = (e) => {
+  e.preventDefault();
+  if (!finishStatus) {
+          setfinishStatus(false)
+         
+          if (RenderId==1) {
+            setfinishStatus(false)
+            setRenderId(0)
+            console.log(0)
+        }
+         if (RenderId==2) {
+          setfinishStatus(false)
+          setRenderId(1)
+          console.log(1)
+      }
+    } 
+else {
+          window.history.pushState(null, null, window.location.pathname);
+          setfinishStatus(false)
+          console.log('false')
+      }
   }
+useEffect(() => {
+  window.history.pushState(RenderId, null, window.location.pathname);
+  window.addEventListener('popstate', onBackButtonEvent);
+  return () => {
+    window.removeEventListener('popstate', onBackButtonEvent);  
+      
+    };
+  });
+
 
   useEffect(() => {
     if (isAuthenticated()) {
@@ -70,6 +105,7 @@ const Registration = () => {
     setMobile();
 
   }, []);
+
   if (RenderId == 0) {
     const data = [
       { value: '1', label: 'Male' },
@@ -400,9 +436,7 @@ const Registration = () => {
                     </div>
                   </div>
                   <div>
-
-                  
-                  <button
+                     <button
                    
                     className='nextButton'
                     onClick={Submit}
