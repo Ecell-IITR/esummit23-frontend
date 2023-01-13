@@ -22,3 +22,4 @@ export const REGISTER_API = `${API_URL}/user/signup`;
 export const ALL_EVENTS_API = `${API_URL}/events/all`;
 export const USER_SERVICES_API = `${API_URL}/user/services`;
 export const OTP_API = `${API_URL}/user/otp`;
+export const VERIFY_API = `${API_URL}/user/verify`;

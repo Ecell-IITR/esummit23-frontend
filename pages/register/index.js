@@ -30,7 +30,7 @@ const Registration = () => {
   
  
   function validatePhoneNumber(str) {
-    var re =/^\d+$/.test(str);
+    let re =/^\d+$/.test(str);
      return (re)
   }
 

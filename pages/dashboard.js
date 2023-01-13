@@ -40,7 +40,7 @@ function Dashboard() {
       })
       .catch((err) => {
         setattempts(attempts + 1);
-        console.log(err);
+        
       });
   }, []);
 

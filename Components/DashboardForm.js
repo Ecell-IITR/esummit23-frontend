@@ -42,7 +42,7 @@ function Dashboard(props) {
       return;
     }
     for(const [i,inputField] of inputFields.entries()){
-      console.log(i,inputField.full_name)
+   
       if(inputField.full_name==""){
        toast.error('please enter valid name!')
        return;
@@ -83,7 +83,7 @@ function Dashboard(props) {
       event: props.name,
       submission_text: Ans1 + '<br>' + Ans2,
     };
-    console.log(data);
+  
 
     FetchApi('POST', TEAM_REGISTER_API, data, getAuthToken())
       .then((res) => {
@@ -93,7 +93,7 @@ function Dashboard(props) {
       })
       .catch((err) => {
         toast.error('Please check the details!');
-        console.log(err);
+   
       });
   };
   return (

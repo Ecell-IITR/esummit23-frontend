@@ -45,7 +45,7 @@ function Events(props) {
             return (
               <div className='certificate' key={index}>
                 <div className='certificateImage'>
-                {console.log(curr)}
+      
                   <div className='img'>
                     {curr.image !== '' ? (
                       <img  src={curr.image} /> 
@@ -70,7 +70,6 @@ function Events(props) {
                    
                   >
                     {curr.heading}
-                    {console.log(curr?.description)}
                   </h4>
                   <div  
                    > {curr.description}
