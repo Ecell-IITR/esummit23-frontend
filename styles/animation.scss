@@ -5,7 +5,7 @@
 
 .containerAnimationDown{
 background:none;
-  width:100% ;
+width: 100%;
   height: 35rem;
   // border: 1px solid black;
   display: flex;
@@ -221,7 +221,7 @@ margin-top:35rem;
   // border: 1px solid white;
   animation: coin7-animate 2.5s;
   animation-fill-mode: forwards;
-  margin-left: -5rem;
+  // margin-left: 5rem;
   
 }
 
@@ -233,6 +233,15 @@ margin-right: 6.5rem;
 z-index: 1;
 
 }
+80%{
+  transform: rotate(-360deg);
+  margin-top:27.5rem;
+  margin-right: 6.5rem;
+  z-index: 1;
+  
+  }
+  
+
 }
 
 .coinContainerAnimation{
