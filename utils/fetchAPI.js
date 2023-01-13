@@ -17,6 +17,7 @@ const FetchApi = (method, url, params, TokenValue) => {
         .then((res) => resolve(res))
         .catch((err) => reject(err));
     } else {
+
       axios({
         method: method,
         url: url,

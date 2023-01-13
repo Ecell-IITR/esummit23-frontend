@@ -8,6 +8,5 @@ export default function Navbar() {
   useEffect(() => {
     setMobile();
   }, []);
-  console.log(useMobile());
   return <>{useMobile()?.isMobile ? <HeaderMobile /> : <Head />}</>;
 }
