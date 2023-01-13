@@ -4,7 +4,8 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { getUserRoleType } from '../../utils';
-import Image from 'next/image';
+import { isAuthenticated,unAuthenticate } from '../../utils';
+
 
 function NavDesktop() {
   const roleType = getUserRoleType();
@@ -40,7 +41,7 @@ function NavDesktop() {
     <Navbar className='navbarParent'>
       {/* <Container fluid> */}
       <div className='navbarEsummitLogo'>
-        <img src='summitLogo.png' className='navbarImage' />
+       <img src='summitLogo.png' className='navbarImage' /> 
       </div>
       {/* <Navbar.Toggle aria-controls='navbarScroll' /> */}
       <ul className='navbarUl' style={{ maxHeight: '100px' }} navbarScroll>
@@ -106,55 +107,26 @@ function NavDesktop() {
         className='d-flex align-items-center justify-content-center navBut'
         style={{ gap: '36px' }}
       >
-        <Link href={roleType ? '/dashboard' : '/login'}>
-          {roleType == 'stu' ? (
-            <div className='updateRole' style={{ color: '#DCD1AD' }}>
-              <div className='role'>Student</div>
-              <div className='lineBelowRole'>
-                <Image
-                  src='/lineBelow.webp'
-                  height='30rem'
-                  width='500rem'
-                ></Image>
-              </div>
-            </div>
-          ) : roleType == 'ca' ? (
-            <div className='updateRole' style={{ color: '#DCD1AD' }}>
-              <div className='role'>Campus Ambassador</div>
-              <div className='lineBelowRole'>
-                <Image
-                  src='/lineBelow.webp'
-                  height='30rem'
-                  width='500rem'
-                ></Image>
-              </div>
-            </div>
-          ) : roleType == 'startup' ? (
-            <div className='updateRole' style={{ color: '#DCD1AD' }}>
-              <div className='role'>Startup</div>
-              <div className='lineBelowRole'>
-                <Image
-                  src='/lineBelow.webp'
-                  height='30rem'
-                  width='500rem'
-                ></Image>
-              </div>
-            </div>
-          ) : roleType == 'prf' ? (
-            <div className='updateRole' style={{ color: '#DCD1AD' }}>
-              <div className='role'>Professor</div>
-              <div className='lineBelowRole'>
-                <Image
-                  src='/lineBelow.webp'
-                  height='30rem'
-                  width='500rem'
-                ></Image>
-              </div>
-            </div>
-          ) : (
-            <button className='navbarButton'>Login/Register</button>
-          )}
-        </Link>
+        {isAuthenticated() ? (
+          <button
+            onClick={() => {
+              unAuthenticate();
+              router.push('/login');
+            }}
+            className='navbarButton'
+          >
+            Logout
+          </button>
+        ) : (
+          <button
+            onClick={() => {
+              router.push('/login');
+            }}
+            className='navbarButton'
+          >
+            Login / Register
+          </button>
+        )}
       </div>
     </Navbar>
   );

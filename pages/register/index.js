@@ -11,49 +11,80 @@ import NonIITRStudent from '../../Components/register/nonIITRStudent';
 import Professional from '../../Components/register/Professional';
 import Select from 'react-select';
 
+import { data } from 'jquery';
+import { toast } from "react-toastify";
+import { isAuthenticated  } from '../../utils';
+import { useRouter } from 'next/router';
 const Registration = () => {
   const [Fullname, setFullname] = useState('');
   const [Email, setEmail] = useState('');
   const [Contact, setContact] = useState('');
-  const [Gender, setGender] = useState('Female');
+  const [Gender, setGender] = useState('');
   const [RenderId, setRenderId] = useState(0);
   const [RefferalCode, setRefferalCode] = useState('');
   const [UserType, setUserType] = useState('');
   const [selectedOption, setSelectedOption] = useState(null);
   const setMobile = useUpdateMobile();
+  const router = useRouter();
 
-  const handleSubmit = (e) => {
-    FetchApi('POST', REGISTER_API, {
-      full_name: Fullname,
-      email: Email,
-      phone_number: Contact,
-    });
-  };
+  
+ 
+  function validatePhoneNumber(str) {
+    let re =/^\d+$/.test(str);
+     return (re)
+  }
+
+
+  const Submit = () => {
+    
+      if(Email==='')
+        { toast.warning('Please enter Email');
+          setRenderId(0);
+        }
+       else if(Fullname===''){
+        toast.warning('Please enter Full Name');
+        setRenderId(0);
+          } 
+        else if(Gender===''){
+          toast.warning('Please enter Gender');
+        setRenderId(0);
+        }
+        else if(Contact===""){
+               toast.warning('Please enter Contact details');
+               setRenderId(0);
+        }
+        else if (!(validatePhoneNumber(Contact)&& Contact.length===10)){
+          toast.warning('Please enter 10 digit mobile no.');
+          setRenderId(0);
+        }
+      else{
+         setRenderId(1);
+        }
+       
+  }
 
   useEffect(() => {
+    if (isAuthenticated()) {
+      router.push(`/dashboard`);
+    }
     setMobile();
-    
+
   }, []);
   if (RenderId == 0) {
-    const data =[
-      { value:'1',
-        label: 'Male'},
-      { value:'2',
-        label : 'Female'},
-      { value:'3',
-        label : 'Others'}
-        
-    ]
-    const handleChange = e => {
+    const data = [
+      { value: '1', label: 'Male' },
+      { value: '2', label: 'Female' },
+      { value: '3', label: 'Others' },
+    ];
+    const handleChange = (e) => {
       setGender(e);
-    }
-   
-   
+    };
+
+
     if (useMobile().isMobile) {
       return (
         <>
           <div className='mobRegisterContainer'>
-          
             <div
               className='ImageComponent'
               style={{
@@ -61,10 +92,7 @@ const Registration = () => {
                 width: '100vw',
               }}
             >
-
-
               <Image src='/loginMobile.webp' layout='fill' objectFit='cover' />
-
             </div>
 
             <div className='RegisterHereMob'>
@@ -122,23 +150,23 @@ const Registration = () => {
                       onChange={(e) => setContact(e.target.value)}
                     />
                     <input
-                    
                       type='text'
                       className={
                         RefferalCode == ''
                           ? 'LoginFormLeftInput'
                           : 'LoginFormLeftInput inputGold'
                       }
-                      placeholder='Refferal code'
+                      placeholder='Referral Code (Optional)'
                       style={{ margin: '10px' }}
                       value={RefferalCode}
                       onChange={(e) => setRefferalCode(e.target.value)}
                     />
-                  
 
                     <div className='gender'>
+
                     <div className='GenderHdng'style={{ fontSize:'1rem' , fontWeight:'400'}}>
                     <Select
+                   
                     className='GenderStyling'
                     styles={{control: (baseStyles, state) => ({
                       ...baseStyles,
@@ -155,7 +183,7 @@ const Registration = () => {
                       width:  '19rem',
                       backgroundColor:'  #dcd1ad',
                       paddingLeft:'2rem',
-                      color:'#828282',
+                      color:'black',
 
                     }),input: (baseStyles, state) => ({
                       ...baseStyles,
@@ -166,6 +194,7 @@ const Registration = () => {
                       ...baseStyles,
                       color: '#dcd1ad',
 
+
                     }),
                     menu: (baseStyles, state) => ({
                       ...baseStyles,
@@ -173,23 +202,25 @@ const Registration = () => {
                       width:  '20rem',
                       fontFamily: 'Nunito Sans',
                       fontWeight:'400',
+                    
                       
                
                     }),
                    
                    }}
+                  
                     placeholder="Gender"
                     value={Gender} 
                     options={data}
+                  
                     onChange={handleChange}
                    />
                     
                    </div>
                    </div>
+
                   </div>
-                  
-                     
-                       
+
                   <div
                     style={{
                       background: '#12100e',
@@ -197,18 +228,19 @@ const Registration = () => {
                       display: 'flex',
                       alignItems: 'center',
                       flexDirection: 'column',
-                       cursor :"pointer",
-                       marginLeft: '0px'
+                      cursor: 'pointer',
+                      marginLeft: '0px',
                     }}
-                  >
+                   >
+                   
                     <button
                       onClick={() => {
-                        setRenderId(1);
+                        Submit();
                       }}
                       type='submit'
                       className='LoginButton'
-                      
                     >
+
                       Next
                     </button>
                   </div>
@@ -220,7 +252,7 @@ const Registration = () => {
                       alignItems: 'center',
                       flexDirection: 'column',
                       paddingBottom: '20rem',
-                      cursor :"pointer",
+                      cursor: 'pointer',
                     }}
                   >
                     <div className='AlreadyRegistered'>
@@ -249,7 +281,6 @@ const Registration = () => {
       return (
         <>
           <div className='RegisterationContainer'>
-          
             <div
               className='ImageComponent'
               style={{
@@ -275,117 +306,118 @@ const Registration = () => {
                   </h3>
                   <div className='formInput'>
                     <input
-                    className={
-                      Fullname == ''
-                        ? 'LoginFormLeftInput'
-                        : 'LoginFormLeftInput inputGold'
-                    }
+                      className={
+                        Fullname == ''
+                          ? 'LoginFormLeftInput'
+                          : 'LoginFormLeftInput inputGold'
+                      }
                       type='text'
                       placeholder='Full Name'
                       value={Fullname}
                       onChange={(e) => setFullname(e.target.value)}
                     />
                     <input
-                    className={
-                      Email == ''
-                        ? 'LoginFormLeftInput'
-                        : 'LoginFormLeftInput inputGold'
-                    }
+                      className={
+                        Email == ''
+                          ? 'LoginFormLeftInput'
+                          : 'LoginFormLeftInput inputGold'
+                      }
                       type='email'
                       placeholder='Email Address'
                       value={Email}
                       onChange={(e) => setEmail(e.target.value)}
                     />
                     <input
-                    className={
-                      Contact == ''
-                        ? 'LoginFormLeftInput'
-                        : 'LoginFormLeftInput inputGold'
-                    }
+                      className={
+                        Contact == ''
+                          ? 'LoginFormLeftInput'
+                          : 'LoginFormLeftInput inputGold'
+                      }
                       type='tel'
                       placeholder='Contact Number'
                       value={Contact}
                       onChange={(e) => setContact(e.target.value)}
                     />
                     <div className='gender'>
-                    <div className='GenderHdng'style={{ fontSize:'1rem' , fontWeight:'400'}}>
-                    <Select
-                    styles={{control: (baseStyles, state) => ({
-                      ...baseStyles,
-                      backgroundColor: ' #12100e',
-                      width:  '32vw',
-                      marginTop:'0.5rem',
-                      marginLeft:"0.5rem",
-                      borderTop:'0px',
-                      borderLeft: '0px',
-                      borderRight: '0px',
-                      color: ' #828282',
-                    }),option: (baseStyles, state) => ({
-                      ...baseStyles,
-                      backgroundColor: state.isFocused ? ' #12100e' :' #12100e',
-                      backgroundColor:'  #dcd1ad',
-                      width:  '30rem',
-                      color: 'black',
-
-                    }),
-                    singleValue: (baseStyles, state) => ({
-                      ...baseStyles,
-                      color: ' #dcd1ad',
-
-                    }),
-                    menu: (baseStyles, state) => ({
-                      ...baseStyles,
-                      backgroundColor: state.isFocused ? ' #12100e' :' #12100e',
-                      width:  '30rem',
-                      fontFamily: 'Nunito Sans',
-                      fontWeight:'400',
-               
-                    }),
-                   
-                   }}
-                    placeholder="Gender"
-                    value={Gender} 
-                    options={data}
-                    onChange={handleChange}
-                   />
-                   </div>
-                    <input
-                    className={
-                      RefferalCode == ''
-                        ? 'LoginFormLeftInput'
-                        : 'LoginFormLeftInput inputGold'
-                    }
-                      type='text'
-                      placeholder='Refferal code'
-                      style={{ margin: '11px',marginTop:'20px' }}
-                      value={RefferalCode}
-                      onChange={(e) => setRefferalCode(e.target.value)}
-                    />
-                  
-
-                  
-                    
-                   </div>
+                      <div
+                        className='GenderHdng'
+                        style={{ fontSize: '1rem', fontWeight: '400' }}
+                      >
+                        <Select
+                          styles={{
+                            control: (baseStyles, state) => ({
+                              ...baseStyles,
+                              backgroundColor: ' #12100e',
+                              width: '32vw',
+                              marginTop: '0.5rem',
+                              marginLeft: '0.5rem',
+                              borderTop: '0px',
+                              borderLeft: '0px',
+                              borderRight: '0px',
+                              color: ' #828282',
+                            }),
+                            option: (baseStyles, state) => ({
+                              ...baseStyles,
+                              backgroundColor: state.isFocused
+                                ? ' #12100e'
+                                : ' #12100e',
+                              backgroundColor: '  #dcd1ad',
+                              width: '30rem',
+                              color: 'black',
+                            }),
+                            singleValue: (baseStyles, state) => ({
+                              ...baseStyles,
+                              color: ' #dcd1ad',
+                            }),
+                            menu: (baseStyles, state) => ({
+                              ...baseStyles,
+                              backgroundColor: state.isFocused
+                                ? ' #12100e'
+                                : ' #12100e',
+                              width: '30rem',
+                              fontFamily: 'Nunito Sans',
+                              fontWeight: '400',
+                            }),
+                          }}
+                          placeholder='Gender'
+                          value={Gender}
+                          options={data}
+                          onChange={handleChange}
+                        />
+                      </div>
+                      <input
+                        className={
+                          RefferalCode == ''
+                            ? 'LoginFormLeftInput'
+                            : 'LoginFormLeftInput inputGold'
+                        }
+                        type='text'
+                        placeholder='Refferal Code (Optional)'
+                        style={{ margin: '11px', marginTop: '20px' }}
+                        value={RefferalCode}
+                        onChange={(e) => setRefferalCode(e.target.value)}
+                      />
+                    </div>
                   </div>
                   <div>
+
+                  
                   <button
                    
                     className='nextButton'
-                    onClick={() => {
-                      setRenderId(1);
-                    }}
+                    onClick={Submit}
                   >
                     Next
                   </button>
+
                   </div>
                   <div classname='registeredEvent'>
                     <span
                       style={{
-                       marginLeft :'-4rem',
+                        marginLeft: '-4rem',
                         color: '#BDBDBD',
                         fontSize: '16px',
                         fontWeight: '400',
-                      
                       }}
                     >
                       Already Registered?
@@ -397,9 +429,9 @@ const Registration = () => {
                           fontSize: '14px',
                           fontWeight: '400',
                           textDecorationLine: 'underline',
-                            color: '#DCD1AD',
-                            cursor: 'pointer',
-                            marginLeft: '10px'
+                          color: '#DCD1AD',
+                          cursor: 'pointer',
+                          marginLeft: '10px',
                         }}
                       >
                         Login Now

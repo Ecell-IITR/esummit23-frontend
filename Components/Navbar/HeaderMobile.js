@@ -2,10 +2,10 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState, useEffect, useContext } from 'react';
 import { AuthContext } from '../../utils/auth-context';
-import { getUserRoleType } from '../../utils';
-
+import { isAuthenticated, unAuthenticate } from '../../utils';
 export const HeaderMobile = () => {
   const [isCA, setIsCA] = useState(false);
+  const [Checked, setChecked] = useState(false);
   const router = useRouter();
   const { user } = useContext(AuthContext);
 
@@ -17,13 +17,17 @@ export const HeaderMobile = () => {
   }, []);
   return (
     <div className='mobile-navbar-majorcontainer'>
-      <input type='checkbox' />
-
-      <div className='Hamburger'>
+      <div
+        className='Hamburger'
+        onClick={() => {
+          setChecked(!Checked);
+        }}
+      >
         <div className='bar1'></div>
         <div className='bar2'></div>
         <div className='bar3'></div>
       </div>
+      <input checked={Checked} type='checkbox' />
       <Link href='/' className='image' passHref>
         <img
           src='summitLogo.png'
@@ -39,7 +43,7 @@ export const HeaderMobile = () => {
         </li>
         {
           <li className='mobilenavMenu-items'>
-            <Link href='/team' passHref>
+            <Link href='/events' passHref>
               <div className='mobilenavMenu-links'>Events</div>
             </Link>
           </li>
@@ -54,16 +58,15 @@ export const HeaderMobile = () => {
             <div className='mobilenavMenu-links'>Sponsors</div>
           </Link>
         </li>
-        <li className='mobilenavMenu-items'>
-          <Link href='/sponsors' passHref>
-            <div className='mobilenavMenu-links'>Merchandice</div>
-          </Link>
-        </li>
-        <li className='mobilenavMenu-items'>
+    
+        {/* <li className='mobilenavMenu-items'>
           <Link href='/#faq' passHref>
             <div className='mobilenavMenu-links'>About</div>
           </Link>
-        </li>
+        </li> */}
+
+
+
         {/* {isCA && (
           <>
             <li className='mobilenavMenu-items'>
@@ -111,31 +114,25 @@ export const HeaderMobile = () => {
             </li> */}
           </>
         )}
-        {user ? (
-          <>
-            {/* <li className='mobilenavMenu-items'>
-              <Link href='/logout' passHref>
-                <div className='mobilenavMenu-links mobilenavMenu-ca-tag'>
-                  Logout
-                </div>
-              </Link>
-            </li> */}
-          </>
+        {isAuthenticated() ? (
+          <button
+            onClick={() => {
+              unAuthenticate();
+              router.push('/login');
+            }}
+            className='navbarButton'
+          >
+            Logout
+          </button>
         ) : (
-          <>
-            <li className='mobilenavMenu-items'>
-              <Link href='/login' passHref>
-                <div className='mobilenavMenu-links mobilenavMenu-ca-tag'>
-                  Login/Register
-                </div>
-              </Link>
-            </li>
-            <li className='mobilenavMenu-items'>
-              <Link href='/register' passHref>
-                <div className='mobilenavMenu-links'></div>
-              </Link>
-            </li>
-          </>
+          <button
+            onClick={() => {
+              router.push('/login');
+            }}
+            className='navbarButton'
+          >
+            Login / Register
+          </button>
         )}
       </ul>
     </div>

@@ -3,10 +3,9 @@ import { useMobile, useUpdateMobile } from '../utils/MobileContext';
 import Image from 'next/image';
 import { LOGIN_API } from '../utils/APIs';
 import FetchApi from '../utils/fetchAPI';
-import { Authenticate } from '../utils';
+import { Authenticate, isAuthenticated } from '../utils';
 import { useRouter } from 'next/router';
-
-
+import ForgotPassword from '../Components/ForgotPassword';
 
 import Link from 'next/link';
 
@@ -16,14 +15,12 @@ function Login() {
   const [email, setemail] = useState();
   const [Password, setPassword] = useState('');
   const [ShowPassword, setShowPassword] = useState(false);
-
   const [pass_error, setpass_error] = useState('');
-
   const [pass_error_bool, setpass_error_bool] = useState(false);
-
   const [Role, setRole] = useState('');
   const [IsLogin, setIsLogin] = useState();
-
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
   const router = useRouter();
 
   const passValidate = () => {
@@ -51,7 +48,6 @@ function Login() {
       )
         .then((res) => {
           if (res.data.role) {
-            console.log(res);
             localStorage.setItem('userRoleType', res.data.role);
 
             if (localStorage.getItem('userRoleType')) {
@@ -69,7 +65,7 @@ function Login() {
               if (roleType == 'startup') {
                 setRole('startup');
               }
-              console.log(Role);
+          
             }
           }
           Authenticate(res.data.n, res.data.e_id, res.data.at);
@@ -91,11 +87,15 @@ function Login() {
 
   useEffect(() => {
     setMobile();
+    if (isAuthenticated()) {
+      router.push(`/dashboard`);
+    }
   }, []);
 
   if (useMobile().isMobile) {
     return (
       <div className='LoginContainer'>
+         <ForgotPassword show={show} onHide={handleClose} />
         <div
           style={{
             width: '100vw',
@@ -125,7 +125,7 @@ function Login() {
                 onChange={(e) => setemail(e.target.value)}
                 type='text'
                 value={email}
-                placeholder='Esummit id'
+                placeholder='E-Summit ID'
               />
               <div style={{ display: 'flex', alignItems: 'center' }}>
                 <input
@@ -155,6 +155,26 @@ function Login() {
                   />
                 </div>
               </div>
+              <div
+              onClick={() => {setShow(true)}}
+              className='LoginFormLeftForgotPassword'
+                style={{
+                  fontFamily: 'Nunito Sans',
+                  fontSyle: 'normal',
+                  fontWeight: '400',
+                  fontSize: '14px',
+                  linHeight: '24px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  textDecorationLine: 'underline',
+                  color: '#DCD1AD',
+                  opacity: '0.7',
+                  textAlign: 'left',
+                  cursor: 'pointer',
+                }}
+              >
+                Forgot Password
+              </div>
               {/* <div className='loginOrContainer'>
                 <div className='loginOrLine'></div>
                 <div className='loginOrText'>OR</div>
@@ -171,22 +191,24 @@ function Login() {
                 Login
               </div>
               <div className='loginRegisterContainer'>
-                <div className='loginRegisterText'>New to Esummit?</div>
+                <div className='loginRegisterText'>New to E-Summit ?</div>
                 <Link href='/register'>
                   <div className='loginRegisterText loginRegisterTextBold'>
-                    Register
+                    Register Here
                   </div>
                 </Link>
               </div>
             </div>
           </div>
         </div>
+        <div style={{background: "#12100e",height:"20rem"}}></div>
       </div>
     );
   } else {
     return (
       <>
         <div className='LoginContainer'>
+          <ForgotPassword show={show} onHide={handleClose} />
           <div style={{ width: '100vw', height: '100vh' }}>
             <Image layout='fill' src='/login.webp' />
           </div>
@@ -210,7 +232,7 @@ function Login() {
                 }}
                 type='text'
                 value={email}
-                placeholder='Esummit id'
+                placeholder='E-Summit ID'
               />
               <div style={{ display: 'flex', alignItems: 'center' }}>
                 <input
@@ -243,6 +265,26 @@ function Login() {
                   />
                 </div>
               </div>
+              <div
+              onClick={() => {setShow(true)}}
+              className='LoginFormLeftForgotPassword'
+                style={{
+                  fontFamily: 'Nunito Sans',
+                  fontSyle: 'normal',
+                  fontWeight: '400',
+                  fontSize: '14px',
+                  linHeight: '24px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  textDecorationLine: 'underline',
+                  color: '#DCD1AD',
+                  opacity: '0.7',
+                  textAlign: 'left',
+                  cursor: 'pointer',
+                }}
+              >
+                Forgot Password
+              </div>
               {/* <div className='loginOrContainer'>
                 <div className='loginOrLine'></div>
                 <div className='loginOrText'>OR</div>
@@ -260,10 +302,10 @@ function Login() {
               </div>
 
               <div className='loginRegisterContainer'>
-                <div className='loginRegisterText'>New to Esummit?</div>
+                <div className='loginRegisterText'>New to E-Summit ?</div>
                 <Link href='/register'>
                   <div className='loginRegisterText loginRegisterTextBold'>
-                    Register
+                    Register Here
                   </div>
                 </Link>
               </div>

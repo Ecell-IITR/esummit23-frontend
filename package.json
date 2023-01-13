@@ -26,6 +26,7 @@
     "react-ga4": "^1.4.1",
     "react-lottie": "^1.2.3",
     "react-notify": "^3.0.0",
+    "react-otp-input": "^2.4.0",
     "react-select": "^5.2.1",
     "react-share": "^4.4.0",
     "react-toastify": "^8.1.0",
@@ -33,7 +34,8 @@
     "sass": "^1.43.5",
     "scss": "^0.2.4",
     "select": "^1.1.2",
-    "string-strip-html": "^9.1.4"
+    "string-strip-html": "^9.1.4",
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.0",
