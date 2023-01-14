@@ -41,6 +41,7 @@ function Dashboard(props) {
       toast.error('please enter valid Team Name!')
       return;
     }
+    if (inputFields.length  > 0) {
     for(const [i,inputField] of inputFields.entries()){
    
       if(inputField.full_name==""){
@@ -59,7 +60,7 @@ function Dashboard(props) {
      toast.error('please enter valid mobile number!')
      return;
   }
- }
+ }}
  if(props.noQuestions==1){
        if(Ans1==""){
         toast.error('please enter an answer')
