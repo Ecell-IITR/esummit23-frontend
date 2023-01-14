@@ -1,21 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
-// import AOS from 'aos';
-// import "aos/dist/aos.css";
 function AnimationUp() {
 
-const firstLandingPage=()=>{
-useEffect(() => {
-  AOS.init({
-    duration:220
-  });
-  AOS.refresh(
-    // {
-    //   duration:220
-    // }
-  );
-},[]);
-}
 
   return (
     <>

@@ -5,10 +5,9 @@ function Animation() {
   return (
     <div>
       
-
 <div className='containerAnimationDown'>
 <div className='upAnimationDown'>E-SUMMIT'23</div>
-<div className='middleAnimationDown'><Image src="/landingMotto.webp" height="100rem" width="640rem"></Image></div>
+<div className='middleAnimationDown'><Image src="/landingMotto.webp" height="140vw" width="950vw"></Image></div>
 
 
 </div>

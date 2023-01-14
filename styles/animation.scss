@@ -12,7 +12,8 @@ width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: containerAnimationDown-animate 2s;
+  animation: containerAnimationDown-animate 1.6s ease-in;
+  transition-timing-function: cubic-bezier(100, 100, 300, 1);
   animation-fill-mode: forwards;
   margin-top: -40%;
 }
@@ -57,11 +58,17 @@ width: 100%;
 
 @keyframes containerAnimationDown-animate{
   0%{
-    transform: translateY(0%);
+    transform: translateY(20%);
+
   }
   100%{
     transform: translateY(-40%);
+    // margin-top: -40%;
     
+  }
+  80%{
+    transform: translateY(-43%);
+
   }
 
 }
@@ -70,7 +77,7 @@ width: 100%;
     color: white;
     width: 80%;
     height: 11.3rem;
-    font-size:6.1rem;
+    font-size:10vw;
     font-weight: 800;
     font-family:'Lexend';
     // border:1px solid black;
@@ -86,6 +93,7 @@ width: 100%;
     align-items: center;
     width: 80%;
     height: 8rem;
+  margin-top: -1.5rem;
     // border:1px solid black;
 
 }
@@ -99,13 +107,17 @@ width: 100%;
     // transform: matrix(0.91, -0.41, 0.4, 0.91, 0, 0);
 }
 .coin1{
-  animation: coin1-load 3s;
+  animation: coin1-load 1.7s;
   animation-fill-mode: forwards;
 }
 @keyframes coin1-load{
   100%{
     transform: rotate(250deg);
     -webkit-filter: blur(3px);
+    margin-top: 0rem;
+  }
+  90%{
+    margin-top: 2rem;
   }
  
 }
@@ -123,44 +135,50 @@ width: 100%;
 .coin2{
     height: 9.5rem;
     width: 9.8rem;
-    margin-right: -25rem;
+    margin-right: -13rem;
     // border: 1px solid white;
-    animation: coin2-animate 2.5s;
+    animation: coin2-animate 1.7s;
     animation-fill-mode: forwards;
-    z-index:2;
+    z-index: 5;
     
 }
+
 
 @keyframes coin2-animate{
 100%{
   transform: rotate(-300deg);
-  margin-top:10rem;
-  z-index: 2;
+  margin-right: -5rem;
+  margin-top:14.7rem;
+  z-index: 1;
+
 }
 
   90%{
-    transform: rotate(-300deg);
-    margin-top:11rem;
-    z-index: 2;
+    // transform: rotate(-300deg);
+    margin-top:16rem;
+    z-index: 5;
     }
   
 }
 
 .coin3{
     margin-top: 25rem;
-    margin-left: 10rem;
-    top: 721.25px;
-    height: 11rem;
+    margin-left: -12rem;
+    height: 10rem;
     width: 36rem;
     // border: 1px solid white;
     
-    animation: coin3-load 2s;
+    animation: coin3-load 1.7s;
   animation-fill-mode: forwards;
 }
 @keyframes coin3-load{
   100%{
     transform: rotate(-65deg);
+    margin-top: 23rem;
   }
+  90%{
+    margin-top:24rem ;
+    }
 }
 
 
@@ -169,7 +187,7 @@ width: 100%;
     width: 9rem;
     opacity: 40%;
     // border: 1px solid white;
-    animation: coin4-load 2s;
+    animation: coin4-load 1.7s;
     animation-fill-mode: forwards;
 }
 
@@ -179,13 +197,16 @@ width: 100%;
     margin-top: -3.5rem;
     -webkit-filter: blur(1.8px);
   }
+  90%{
+    margin-top: -2.5rem;
+  }
 }
 
 .coin5{
     height: 10rem;
     width: 10rem;
     // border: 1px solid white;
-    animation: coin5-load 2s;
+    animation: coin5-load 1.7s;
     animation-fill-mode: forwards;
     // margin-right: -19rem;
     // margin-left:-4rem;
@@ -196,7 +217,11 @@ width: 100%;
   100%{
     transform: rotate(320.34deg);
     margin-top: 10rem;
+    margin-right: -6rem;
     -webkit-filter: blur(1px);
+  }
+  90%{
+    margin-top: 11rem;
   }
 }
 
@@ -210,7 +235,7 @@ width: 100%;
   width: 9.8rem;
   opacity: 20%;
   // border: 1px solid white;
-  animation: coin6-animate 2.5s;
+  animation: coin6-animate 1.7s;
   animation-fill-mode: forwards;
   
   
@@ -223,13 +248,16 @@ margin-top:35rem;
 -webkit-filter: blur(4px);
 
 }
+90%{
+  margin-top: 36rem;
+}
 }
 
 .coin7{
   height: 9.5rem;
   width: 9.8rem;
   // border: 1px solid white;
-  animation: coin7-animate 2.5s;
+  animation: coin7-animate 1.7s;
   animation-fill-mode: forwards;
   // margin-left: 5rem;
   
@@ -238,14 +266,14 @@ margin-top:35rem;
 @keyframes coin7-animate{
 90%{
 transform: rotate(-360deg);
-margin-top:33rem;
-margin-right: 6.5rem;
+margin-top:27rem;
+margin-right: -5rem;
 z-index: 1;
 }
 100%{
   transform: rotate(-360deg);
-  margin-top:32rem;
-  margin-right: 6.5rem;
+  margin-top:26rem;
+  margin-right: -5rem;
   z-index: 1;
   }
   
@@ -262,7 +290,7 @@ z-index: 1;
   align-items: flex-start;
   align-items: center;
   gap: 6rem;
-  animation: coinContainerAnimation-animate 2s ;
+  animation: coinContainerAnimation-animate 1.7s ;
 
 }
 
@@ -279,3 +307,4 @@ z-index: 1;
 
 
 
+//for mobile view all css is written below

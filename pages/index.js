@@ -4,10 +4,10 @@ import styles from '../styles/Home.module.css';
 // import AOS from 'aos';
 // import "aos/dist/aos.css";
 import React,{useEffect} from 'react';
+import Animation from '../Components/Animation';
 
-
-import Animation from '../Components/Animation/AnimationDown';
-import AnimationUp from '../Components/Animation/AnimationUp';
+// import Animation from '../Components/Animation/AnimationDesktop/AnimationDown';
+// import AnimationUp from '../Components/Animation/AnimationDesktop/AnimationUp';
 // import Lottie from 'react-lottie';
 
 export default function Home() {
@@ -19,7 +19,8 @@ export default function Home() {
 
   return (
     <>
-   
+    <Animation/>
+   {/* 
 <div className='parentAnimation' style={{backgroundColor:"linear-gradient(180deg, #12100E 11%, rgba(46, 40, 34, 0.75) 120.26%)"}}>
 <AnimationUp/>
 <Animation/>
@@ -28,7 +29,7 @@ export default function Home() {
 </div>
 
 </div>
-
+*/}
 
     {/*
     <div onClick={() => null}>
