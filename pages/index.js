@@ -1,7 +1,6 @@
 import Navbar from '../Components/Navbar';
 import React from 'react';
 import Lottie from 'react-lottie';
-import Leaderboard from '../Components/Leaderboard';
 
 export default function Home() {
   const defaultOptions = {
@@ -14,7 +13,7 @@ export default function Home() {
     <>
       <Navbar />
       <div className='LottieContainer'>
-        <Leaderboard />
+        <Lottie options={defaultOptions} />
       </div>
     </>
   );
