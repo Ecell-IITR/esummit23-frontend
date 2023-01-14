@@ -7,24 +7,26 @@ const SecondLandingPage = () => {
   useEffect(() => {
     AOS.init();
     AOS.refresh();
-  }, []);
-  return (
-    <div>
+
+   }, []);
+return(
+  <>
+   <div>
       <div className='secondLandingPage'>
         <img src='secondLP.webp' width="100%" />
         <div
           className='secondLandingPageImg'
-          data-aos-anchor-placement='top-center'
+          data-aos-anchor-placement='center-center'
           data-aos='fade-right'
           data-aos-duration='850'
           
-          style={{ mixBlendMode: 'overlay' }}
+          style={{ mixBlendMode: 'overlay',zIndex:"1" }}
         >
           <img
             src='wheel.webp'
             data-aos='rotate-c'
             data-aos-duration='850'
-            data-aos-anchor-placement='center-top'
+            data-aos-anchor-placement='center-center'
             data-aos-offset='50'
             // data-aos-easing='ease-in-sine'
             className='secondLandingPagewheel'
@@ -51,7 +53,8 @@ const SecondLandingPage = () => {
         })}
       </div>
     </div>
-  );
-};
+  </>
+)
+}
 
 export default SecondLandingPage;
