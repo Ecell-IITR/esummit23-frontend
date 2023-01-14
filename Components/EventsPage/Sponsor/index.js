@@ -1,8 +1,18 @@
 import Image from 'next/image';
-import Certificates from './Certificates';
-import Coordinator from './Coordinator';
+
+import { useRouter } from 'next/router';
+import { isAuthenticated } from '../../../utils';
 
 function Events(props) {
+  const router = useRouter();
+  const rederict = () => {
+    if (isAuthenticated()) {
+      router.push(`/dashboard`);
+    } else {
+      router.push(`/login`);
+    }
+  };
+
   return (
     <>
       <div
@@ -31,13 +41,14 @@ function Events(props) {
           Perks of Participating
         </div>
         <div style={{ paddingTop: '2rem' }} className='certificates'>
-          {props.perks.map((curr, index) => {
+          {props?.perks ? props?.perks.map((curr, index) => {
             return (
               <div className='certificate' key={index}>
                 <div className='certificateImage'>
+      
                   <div className='img'>
-                    {curr.img !== '' ? (
-                      curr.img
+                    {curr.image !== '' ? (
+                      <img  src={curr.image} /> 
                     ) : (
                       <svg
                         width='20'
@@ -51,29 +62,26 @@ function Events(props) {
                           fill='#633A26'
                         />
                       </svg>
-                    )}
+                    )  }
                   </div>
                 </div>
                 <div className='certificateDescription'>
                   <h4
-                    style={{
-                      fontFamily: 'Lexend',
-                      fontStyle: 'normal',
-                      fontWeight: '600',
-                      fontSize: '18px',
-                      lineHeight: '24px',
-                      color: '#FFFFFF',
-                    }}
+                   
                   >
                     {curr.heading}
                   </h4>
+                  <div  
+                   > {curr.description}
+                  </div>
+               
                 </div>
               </div>
             );
-          })}
+          }):<></>}
         </div>
       </div>
-      <div className='CardContainer'>
+      {/* <div className='CardContainer'>
         <div className='sponsCardContainer'>
           <div className='CardBox1'></div>
 
@@ -92,7 +100,7 @@ function Events(props) {
 
           <div className='CardBox2'></div>
         </div>
-      </div>
+      </div> */}
 
       <div className='parentIS'>
         <div className='coordinatorHeadingIS'>Event Coordinators</div>
@@ -101,15 +109,15 @@ function Events(props) {
             return (
               <div className='A'>
                 <div className='B'>
-                  {console.log(curr?.image)}
-                  <Image
+               
+                  <img
                     className='imageCordinator'
-                    src={curr.image}
-                    height='240px'
-                    width='210px'
-                  ></Image>
-                </div>
-                <div className='C'>
+                    src={curr?.image ? curr?.image:'' }
+                    height='150px'
+                    width='160px'
+                  />
+                 </div>
+                 <div className='C'>
                   <div className='nameISCoordinator'>{curr.name}</div>
                   <div className='mailISCoordinator'>
                     <div className='inbox'>
@@ -143,11 +151,13 @@ function Events(props) {
               </div>
               <div className='lightRegisterQuestion'>
                 {' '}
-                Get flat 10% off on pre-registration
+                Register soon to get additional benefits 
               </div>
               <div className='registerButton'>
                 {' '}
-                <button className='button'>REGISTER NOW!</button>
+                <button onClick={rederict} className='button' style={{ fontStyle:' Lexend', fontWeight: '600'}}>
+                  REGISTER NOW!
+                </button>
               </div>
             </div>
           </div>

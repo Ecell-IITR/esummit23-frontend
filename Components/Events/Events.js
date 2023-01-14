@@ -72,6 +72,7 @@ function Events() {
                     src='/pranavArya.webp'
                     height='240px'
                     width='210px'
+                    maxWidth='240px'
                   ></Image>
                 </div>
                 <div className='C'>

@@ -31,11 +31,10 @@ const MobileProvider = ({ children }) => {
   const setMobile = () => {
     if (window.innerWidth < 800) {
       setIsMobile(true);
-      // console.log("I am mobile !");
+   
       setIsStyleMobile('mobile');
     } else {
       setIsMobile(false);
-      // console.log("I am not mobile!");
       setIsStyleMobile('not-mobile');
     }
   };

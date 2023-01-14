@@ -1,12 +1,15 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { getUserRoleType } from '../../utils';
+import { isAuthenticated,unAuthenticate } from '../../utils';
 
 
 function NavDesktop() {
-  const [active, setActive] = useState("");
+  const roleType = getUserRoleType();
+  const [active, setActive] = useState('');
 
   const router = useRouter();
   useEffect(() => {
@@ -14,18 +17,18 @@ function NavDesktop() {
       case '/':
         setActive('home');
         break;
-        case '/events':
-          setActive('events');
-          break;
-        case '/speakers':
-          setActive('speakers');
-          break;
+      case '/events':
+        setActive('events');
+        break;
+      case '/speakers':
+        setActive('speakers');
+        break;
       case '/sponsors':
         setActive('sponsors');
         break;
-        case '/merchandice':
-          setActive('merchandice');
-          break;
+      case '/merchandice':
+        setActive('merchandice');
+        break;
       case '/about':
         setActive('about');
         break;
@@ -33,51 +36,37 @@ function NavDesktop() {
         setActive('');
     }
   });
+
   return (
-    <Navbar className="navbarParent">
+    <Navbar className='navbarParent'>
       {/* <Container fluid> */}
-        <div className="navbarEsummitLogo">
-          <img src='summitLogo.png' className="navbarImage"/>
-        </div>
-        {/* <Navbar.Toggle aria-controls='navbarScroll' /> */}
-          <ul
-            className='navbarUl'
-            style={{ maxHeight: '100px' }}
-            navbarScroll
-          >
-            <li>
-            <Link href='/' passHref>
+      <div className='navbarEsummitLogo'>
+       <img src='summitLogo.png' className='navbarImage' /> 
+      </div>
+      {/* <Navbar.Toggle aria-controls='navbarScroll' /> */}
+      <ul className='navbarUl' style={{ maxHeight: '100px' }} navbarScroll>
+        <li>
+          <Link href='/' passHref>
             <div
-              className={
-                'home' == active ? 'navbarActive' : 'navbarListBox'
-              }
+              className={'home' == active ? 'navbarActive' : 'navbarListBox'}
             >
-            
               Home
-            <div className={
-                'home' == active ? 'circle' : ''
-              }/>
+              <div className={'home' == active ? 'circle' : ''} />
             </div>
-            
-            </Link>
+          </Link>
         </li>
-            
-            <li>
-            <Link href='/events' passHref>
+
+        <li>
+          <Link href='/events' passHref>
             <div
-              className={
-                'events' == active ? 'navbarActive' : 'navbarListBox'
-              }>
-   
+              className={'events' == active ? 'navbarActive' : 'navbarListBox'}
+            >
               Events
-              <div className={
-                'events' == active ? 'circle' : ''
-              }/>
+              <div className={'events' == active ? 'circle' : ''} />
             </div>
-            </Link>
-           
+          </Link>
         </li>
-          
+
         <li>
           <Link href='/speakers'>
             <div
@@ -86,11 +75,9 @@ function NavDesktop() {
               }
             >
               Speakers
-              <div className={
-                'speakers' == active ? 'circle' : ''
-              }/>
+              <div className={'speakers' == active ? 'circle' : ''} />
             </div>
-            </Link>
+          </Link>
         </li>
         <li>
           <Link href='/sponsors'>
@@ -99,40 +86,50 @@ function NavDesktop() {
                 'sponsors' == active ? 'navbarActive' : 'navbarListBox'
               }
             >
-             Sponsors
-             <div className={
-                'sponsors' == active ? 'circle' : ''
-              }/>
+              Sponsors
+              <div className={'sponsors' == active ? 'circle' : ''} />
             </div>
-            </Link>
+          </Link>
         </li>
-        
+
         <li>
           <Link href='/about'>
             <div
-              className={
-                'about' == active ? 'navbarActive' : 'navbarListBox'
-              }
+              className={'about' == active ? 'navbarActive' : 'navbarListBox'}
             >
-             About
-             <div className={
-                'about' == active ? 'circle' : ''
-              }/>
+              About
+              <div className={'about' == active ? 'circle' : ''} />
             </div>
-            </Link>
+          </Link>
         </li>
-          </ul>
-          <div
-            className='d-flex align-items-center justify-content-center navBut'
-            style={{ gap: '36px' }}
+      </ul>
+      <div
+        className='d-flex align-items-center justify-content-center navBut'
+        style={{ gap: '36px' }}
+      >
+        {isAuthenticated() ? (
+          <button
+            onClick={() => {
+              unAuthenticate();
+              router.push('/login');
+            }}
+            className='navbarButton'
           >
-            <button  className="navbarButton">Login / Register</button>
-          </div>
-          
-      {/* </Container> */}
+            Logout
+          </button>
+        ) : (
+          <button
+            onClick={() => {
+              router.push('/login');
+            }}
+            className='navbarButton'
+          >
+            Login / Register
+          </button>
+        )}
+      </div>
     </Navbar>
-  
   );
-};
+}
 
 export default NavDesktop;

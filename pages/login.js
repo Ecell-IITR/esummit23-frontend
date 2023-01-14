@@ -3,20 +3,26 @@ import { useMobile, useUpdateMobile } from '../utils/MobileContext';
 import Image from 'next/image';
 import { LOGIN_API } from '../utils/APIs';
 import FetchApi from '../utils/fetchAPI';
-import { Authenticate } from '../utils';
+import { Authenticate, isAuthenticated } from '../utils';
 import { useRouter } from 'next/router';
-import Link from 'next/Link';
+import ForgotPassword from '../Components/ForgotPassword';
+
+import Link from 'next/link';
 
 function Login() {
+  const Router = useRouter();
   const setMobile = useUpdateMobile();
   const [email, setemail] = useState();
   const [Password, setPassword] = useState('');
   const [ShowPassword, setShowPassword] = useState(false);
-
   const [pass_error, setpass_error] = useState('');
-
   const [pass_error_bool, setpass_error_bool] = useState(false);
+  const [Role, setRole] = useState('');
+  const [IsLogin, setIsLogin] = useState();
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
   const router = useRouter();
+
   const passValidate = () => {
     setTimeout(function () {
       if (Password.length < 7) {
@@ -30,7 +36,7 @@ function Login() {
   };
 
   function submit() {
-    if (!pass_error_bool) {
+    if (Password.length > 7) {
       FetchApi(
         'POST',
         LOGIN_API,
@@ -41,35 +47,64 @@ function Login() {
         null
       )
         .then((res) => {
-          console.log(res);
           if (res.data.role) {
             localStorage.setItem('userRoleType', res.data.role);
+
+            if (localStorage.getItem('userRoleType')) {
+              const roleType = localStorage.getItem('userRoleType');
+
+              if (roleType == 'ca') {
+                setRole('ca');
+              }
+              if (roleType == 'stu') {
+                setRole('student');
+              }
+              if (roleType == 'professor') {
+                setRole('professor');
+              }
+              if (roleType == 'startup') {
+                setRole('startup');
+              }
+          
+            }
           }
-          Authenticate(res.data.n, res.data.at);
+          Authenticate(res.data.n, res.data.e_id, res.data.at);
           router.push('/dashboard');
         })
+
         .catch((res) => {
           alert('Credentials are wrong');
         });
     } else {
       alert(pass_error);
     }
+
+    setIsLogin(1);
+    Router.push({
+      pathname: '/dashboard',
+    });
   }
+
   useEffect(() => {
     setMobile();
+    if (isAuthenticated()) {
+      router.push(`/dashboard`);
+    }
   }, []);
+
   if (useMobile().isMobile) {
     return (
       <div className='LoginContainer'>
+         <ForgotPassword show={show} onHide={handleClose} />
         <div
           style={{
             width: '100vw',
             height: '60vh',
-            backgroundImage: 'url(/loginMobile.png)',
+            backgroundImage: 'url(/loginMobile.webp)',
             backgroundSize: '100vw 60vh',
           }}
         >
-          {/* <Image width='100%' height='40' src='/loginMobile.png' /> */}
+          {/* <Image width='100%' height='40' src='/loginMobile.webp' /> */}
         </div>
         <div className='LoginForm'>
           <div className='LoginFormLeft'>
@@ -90,7 +125,7 @@ function Login() {
                 onChange={(e) => setemail(e.target.value)}
                 type='text'
                 value={email}
-                placeholder='Esummit id'
+                placeholder='E-Summit ID'
               />
               <div style={{ display: 'flex', alignItems: 'center' }}>
                 <input
@@ -105,7 +140,7 @@ function Login() {
                   }}
                   type={ShowPassword ? 'text' : 'Password'}
                   value={Password}
-                  placeholder='Passsword'
+                  placeholder='Password'
                 />
                 <div
                   className='LoginFormLeftShowPassword'
@@ -119,6 +154,26 @@ function Login() {
                     }
                   />
                 </div>
+              </div>
+              <div
+              onClick={() => {setShow(true)}}
+              className='LoginFormLeftForgotPassword'
+                style={{
+                  fontFamily: 'Nunito Sans',
+                  fontSyle: 'normal',
+                  fontWeight: '400',
+                  fontSize: '14px',
+                  linHeight: '24px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  textDecorationLine: 'underline',
+                  color: '#DCD1AD',
+                  opacity: '0.7',
+                  textAlign: 'left',
+                  cursor: 'pointer',
+                }}
+              >
+                Forgot Password
               </div>
               {/* <div className='loginOrContainer'>
                 <div className='loginOrLine'></div>
@@ -136,24 +191,26 @@ function Login() {
                 Login
               </div>
               <div className='loginRegisterContainer'>
-                <div className='loginRegisterText'>New to Esummit?</div>
+                <div className='loginRegisterText'>New to E-Summit ?</div>
                 <Link href='/register'>
                   <div className='loginRegisterText loginRegisterTextBold'>
-                    Register
+                    Register Here
                   </div>
                 </Link>
               </div>
             </div>
           </div>
         </div>
+        <div style={{background: "#12100e",height:"20rem"}}></div>
       </div>
     );
   } else {
     return (
       <>
         <div className='LoginContainer'>
+          <ForgotPassword show={show} onHide={handleClose} />
           <div style={{ width: '100vw', height: '100vh' }}>
-            <Image layout='fill' src='/login.png' />
+            <Image layout='fill' src='/login.webp' />
           </div>
           <div className='LoginForm'>
             <div className='LoginFormLeft'>
@@ -175,7 +232,7 @@ function Login() {
                 }}
                 type='text'
                 value={email}
-                placeholder='Esummit id'
+                placeholder='E-Summit ID'
               />
               <div style={{ display: 'flex', alignItems: 'center' }}>
                 <input
@@ -193,7 +250,7 @@ function Login() {
                   }}
                   type={ShowPassword ? 'text' : 'Password'}
                   value={Password}
-                  placeholder='Passsword'
+                  placeholder='Password'
                 />
                 <div
                   className='LoginFormLeftShowPassword'
@@ -208,6 +265,26 @@ function Login() {
                   />
                 </div>
               </div>
+              <div
+              onClick={() => {setShow(true)}}
+              className='LoginFormLeftForgotPassword'
+                style={{
+                  fontFamily: 'Nunito Sans',
+                  fontSyle: 'normal',
+                  fontWeight: '400',
+                  fontSize: '14px',
+                  linHeight: '24px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  textDecorationLine: 'underline',
+                  color: '#DCD1AD',
+                  opacity: '0.7',
+                  textAlign: 'left',
+                  cursor: 'pointer',
+                }}
+              >
+                Forgot Password
+              </div>
               {/* <div className='loginOrContainer'>
                 <div className='loginOrLine'></div>
                 <div className='loginOrText'>OR</div>
@@ -215,6 +292,7 @@ function Login() {
               </div> */}
 
               <div
+                style={{}}
                 className='LoginButton'
                 onClick={() => {
                   submit();
@@ -222,11 +300,12 @@ function Login() {
               >
                 Login
               </div>
+
               <div className='loginRegisterContainer'>
-                <div className='loginRegisterText'>New to Esummit?</div>
+                <div className='loginRegisterText'>New to E-Summit ?</div>
                 <Link href='/register'>
-                  <div  className='loginRegisterText loginRegisterTextBold'>
-                    Register
+                  <div className='loginRegisterText loginRegisterTextBold'>
+                    Register Here
                   </div>
                 </Link>
               </div>

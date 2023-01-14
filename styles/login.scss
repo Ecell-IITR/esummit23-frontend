@@ -40,12 +40,16 @@
 .LoginFormLeftInput {
   background-color: transparent;
   width: 416px;
-  height: 44px;
+  height: 30px;
   border-bottom: 1px solid #828282;
   border-top: none !important;
   border-left: none;
   border-right: none;
   margin-top: 20px;
+}
+.LoginFormLeftForgotPassword{
+  width: 416px;
+  padding-top: 0.6rem;
 }
 
 .inputGold {
@@ -57,8 +61,6 @@ input:focus {
   border-bottom: 2px solid #dcd1ad;
   color: #dcd1ad;
 }
-
-
 
 .loginOrContainer {
   display: flex;
@@ -139,13 +141,16 @@ input:focus {
 }
 .LoginFormLeftShowPassword {
   margin-bottom: -35px;
-  margin-left: -24px;
+  margin-left: -25px;
 }
 @media screen and (max-width: 1000px) {
   .LoginFormLeft {
     width: 60vw;
   }
   .LoginFormLeftInput {
+    width: 300px;
+  }
+  .LoginFormLeftForgotPassword{
     width: 300px;
   }
   .loginOrLine {
@@ -178,7 +183,7 @@ input:focus {
   .LoginButton {
     margin-bottom: 20px;
   }
-  .loginRegisterContainer{
+  .loginRegisterContainer {
     margin-top: 5px;
     margin-bottom: 20px;
   }

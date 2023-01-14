@@ -1,7 +1,8 @@
 .RegisterationContainer {
-  height: 120vh;
+ 
   width: 100vw;
   position: relative;
+  min-height: 110vh;
 }
 
 .RegisterHere {
@@ -53,22 +54,40 @@
     background-color: transparent;
     border: none;
     border-bottom: 1px white solid;
-    margin: 10px;
+    margin: 12px;
+  }
+}
+.formInput1 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  width: 35vw;
+  background-color: transparent;
+
+  Input {
+    width: 90%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px white solid;
+    margin: 12px;
   }
 }
 
 .SelectGender {
   color: #dcd1ad;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin-top: 10px;
   margin-left: -80px;
+  gap: 1rem;
 }
 
 .selectOneOption {
   display: flex;
   flex-direction: row;
   margin: 10px;
+  gap: 1rem;
+  margin-top: 0px;
   color: #dcd1ad;
   cursor: pointer;
 
@@ -88,9 +107,12 @@
   border-radius: 100px;
   padding: 12px, 72px, 12px, 72px;
   font-weight: 600;
+  margin-left: -5vw;
   font-family: Lexend;
   font-size: 18px;
   color: #ffffff;
+  margin-top: 48px;
+  margin-bottom: 24px;
 }
 
 .identityButton {
@@ -130,19 +152,28 @@
   border-radius: 32px;
   background-color: #ba6d39;
 }
+.regButton:hover {
+  background-color: #DCD1AD;
+  color: #12100E;
+}
+
 .createAccount {
   width: 267px;
   height: 48px;
   border-radius: 100px;
-  margin: 8px;
-  padding: 12px, 72px;
+  margin: 48px;
+  padding: 12px 72px;
   background-color: #ba6d39;
   color: #ffffff;
+  margin: 48px 0px 86px 0px;
 }
 
 .mobRegisterContainer {
   height: 100vh;
   width: 100vw;
+  background-color: #12100e;
+}
+.GenderHdng{
   background-color: #12100e;
 }
 
@@ -165,11 +196,13 @@
   align-items: center;
 }
 
+
 .summitLogo {
   width: 100vw;
 
   display: flex;
 }
+
 
 .mobRegisterForm {
   display: flex;
@@ -274,10 +307,33 @@ button:hover {
     line-height: 110%;
     letter-spacing: 1px;
   }
+  .SelectGender{
+    padding-bottom: 30rem;
+  }
 }
 @media screen and (max-width: 800px) {
   .RegisterLeft {
     width: 80vw;
+  }
+  .SelectGender{
+    padding-left: 6vw;
+
+  }
+  // .gender{
+  //   width: 100vw;
+  // }
+  Select{
+    background-color: #12100e;
+    color: #828282;
+    width: 19rem;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px
+   }
+ 
+  .GenderHdng{
+    
+    padding-top: 1rem;
   }
   .RegisterHereMob {
     display: flex;
@@ -317,23 +373,36 @@ button:hover {
 
     color: #bdbdbd;
   }
+  .GenderHdng{
+   text-align: start;
+  }
+  
   .FormInputs {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  input[type="radio"] {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+    transform: scale(1.5);
   }
   .RegisterGender {
     max-width: 300px;
     width: 70vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
     gap: 1rem;
+    margin-left: 13vw;
+
   }
-  .SelectGender {
-    margin-left: 0px;
+  .SelectGender { 
     width: 80vw;
+    flex-direction: column;
+    margin: 10px;
+
   }
   .AlreadyRegistered {
     height: 14px;
@@ -348,14 +417,51 @@ button:hover {
     text-align: center;
     letter-spacing: 0.04em;
     color: #bdbdbd;
+
     
   }
   .SummitLogo{
     margin-bottom: 55vh;
   }
+  .nextButton{
+   
+    margin-Left:'0rem';
+  }
   .FormInputs{
+    
     background-color: #12100e;
     width: 100vw;
     margin-top: 5vh;
   }
+}
+@media screen and (max-width: 600px) {
+  .RegisterGender {
+    margin-left: 6vw;
+  }
+}
+@media screen and (max-width: 450px) {
+  .RegisterGender {
+    margin-left: 4vw;
+  }
+}
+@media screen and (max-width: 320px) {
+  .RegisterGender {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1110px) {
+  .flex1{
+    font-size: 0.9rem !important ;
+    font-weight: 600  !important;
+   
+  }
+  .selectOneOption{
+    gap: 0.6rem;
+    margin-left: 4vw;
+  }
+  .SelectGender{
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+ 
 }

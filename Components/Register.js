@@ -1,35 +1,34 @@
 import { useState } from 'react';
 import React from 'react';
 
-function Register() {
-  const [IsRegistered, setIsRegistered] = useState(0);
+function Register({ IsRegistered, img, name, desc }) {
   return (
     <>
       <div className='containerRegister'>
-        <div className='photoRegister'></div>
+        <div className='photoRegister'>
+          <img className='photoRegisterImg' src={img} />
+        </div>
 
         <div
           style={
             IsRegistered == 1
-              ? { backgroundColor: '#BA6D39' }
+              ? { backgroundColor: '#BA6D39', color: 'white' }
               : { backgroundColor: '#F3EDD8' }
           }
           className='eventRegister'
         >
-          Ideastorm
+          {name}
         </div>
 
         <div
           style={
             IsRegistered == 1
-              ? { backgroundColor: '#BA6D39' }
+              ? { backgroundColor: '#BA6D39', color: 'white' }
               : { backgroundColor: '#F3EDD8' }
           }
           className='descriptionRegister'
-        >
-          Annual B-Plan competition which witnesses more than 500 entries from
-          over the country
-        </div>
+          dangerouslySetInnerHTML={{ __html: desc }}
+        ></div>
       </div>
     </>
   );
