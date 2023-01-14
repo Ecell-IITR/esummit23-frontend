@@ -133,13 +133,13 @@ width: 100%;
 @keyframes coin2-animate{
 100%{
   transform: rotate(-300deg);
-  margin-top:20vw;
+  margin-top:10rem;
   z-index: 2;
 }
 
   90%{
     transform: rotate(-300deg);
-    margin-top:21vw;
+    margin-top:11rem;
     z-index: 2;
     }
   
@@ -147,6 +147,7 @@ width: 100%;
 
 .coin3{
     margin-top: 25rem;
+    margin-left: 10rem;
     top: 721.25px;
     height: 11rem;
     width: 36rem;
@@ -185,8 +186,8 @@ width: 100%;
     // border: 1px solid white;
     animation: coin5-load 2s;
     animation-fill-mode: forwards;
-    margin-right: -19rem;
-    margin-left:10rem;
+    // margin-right: -19rem;
+    // margin-left:-4rem;
     opacity: 70%;
     
 }
@@ -236,13 +237,13 @@ margin-top:35rem;
 @keyframes coin7-animate{
 90%{
 transform: rotate(-360deg);
-margin-top:27rem;
+margin-top:33rem;
 margin-right: 6.5rem;
 z-index: 1;
 }
 100%{
   transform: rotate(-360deg);
-  margin-top:26.6rem;
+  margin-top:32rem;
   margin-right: 6.5rem;
   z-index: 1;
   }
