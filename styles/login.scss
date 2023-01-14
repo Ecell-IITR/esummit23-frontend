@@ -47,7 +47,10 @@
   border-right: none;
   margin-top: 20px;
 }
-
+.LoginFormLeftForgotPassword{
+  width: 416px;
+  padding-top: 0.6rem;
+}
 
 .inputGold {
   color: #dcd1ad;
@@ -145,6 +148,9 @@ input:focus {
     width: 60vw;
   }
   .LoginFormLeftInput {
+    width: 300px;
+  }
+  .LoginFormLeftForgotPassword{
     width: 300px;
   }
   .loginOrLine {

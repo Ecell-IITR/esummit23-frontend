@@ -41,8 +41,9 @@ function Dashboard(props) {
       toast.error('please enter valid Team Name!')
       return;
     }
+    if (inputFields.length  > 0) {
     for(const [i,inputField] of inputFields.entries()){
-      console.log(i,inputField.full_name)
+   
       if(inputField.full_name==""){
        toast.error('please enter valid name!')
        return;
@@ -59,7 +60,7 @@ function Dashboard(props) {
      toast.error('please enter valid mobile number!')
      return;
   }
- }
+ }}
  if(props.noQuestions==1){
        if(Ans1==""){
         toast.error('please enter an answer')
@@ -83,15 +84,17 @@ function Dashboard(props) {
       event: props.name,
       submission_text: Ans1 + '<br>' + Ans2,
     };
-    console.log(data);
+  
 
     FetchApi('POST', TEAM_REGISTER_API, data, getAuthToken())
       .then((res) => {
         toast.success('Team Registered!');
+        props.handleClose()
+
       })
       .catch((err) => {
         toast.error('Please check the details!');
-        console.log(err);
+   
       });
   };
   return (
@@ -220,7 +223,7 @@ function Dashboard(props) {
         )}
       </div>
 
-      <div className='submitButton' onClick={handleSubmit}>
+      <div className='submitButton' >
         <button
           className='button_GRF'
           onClick={handleSubmit}

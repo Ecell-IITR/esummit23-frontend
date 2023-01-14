@@ -28,6 +28,7 @@
     "react-ga4": "^1.4.1",
     "react-lottie": "^1.2.3",
     "react-notify": "^3.0.0",
+    "react-otp-input": "^2.4.0",
     "react-select": "^5.2.1",
     "react-share": "^4.4.0",
     "react-toastify": "^8.1.0",

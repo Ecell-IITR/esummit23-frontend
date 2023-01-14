@@ -58,7 +58,7 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
             password: password,
           },
         })
-          .then((res) => { console.log(res);
+          .then((res) => { 
             if (res.status === 201) {
               Authenticate(res.data.n, res.data.e_id, res.data.at);
               router.push('/dashboard');

@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 import { isAuthenticated } from '../../utils';
 import Navbar from '../../Components/Navbar';
 export default function Events({ posts }) {
-  console.log(posts);
+
   const router = useRouter();
   const rederict = () => {
     if (isAuthenticated()) {
@@ -20,7 +20,6 @@ export default function Events({ posts }) {
   useEffect(() => {
     const rotation = window.innerWidth;
     setWidth(rotation);
-    console.log(width);
   });
   
   return (

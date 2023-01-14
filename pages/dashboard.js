@@ -17,7 +17,6 @@ function Dashboard() {
   const [Avail, setAvail] = useState([]);
   const [attempts, setattempts] = useState(0);
   const [show, setShow] = useState(false);
-  const [isauth, setisauth] = useState(false);
   const handleClose = () => setShow(false);
   const router = useRouter();
 
@@ -41,7 +40,7 @@ function Dashboard() {
       })
       .catch((err) => {
         setattempts(attempts + 1);
-        console.log(err);
+        
       });
   }, []);
 
@@ -88,6 +87,7 @@ function Dashboard() {
                         onHide={handleClose}
                       >
                         <DashboardForm
+                          handleClose={handleClose}
                           noQuestions={item.no_of_QA}
                           name={item.name}
                           Q_1={item.question1}

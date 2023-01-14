@@ -70,7 +70,6 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
             }
           })
           .catch((err) => {
-            console.log(err);
             toast(err.response.data.error);
           });
       } else {
