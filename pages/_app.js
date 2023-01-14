@@ -11,7 +11,6 @@ import Script from 'next/script';
 import config from '../config';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import SpeakerCard from '../Components/SpeakerCard/SpeakerCard';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -33,7 +32,7 @@ function MyApp({ Component, pageProps }) {
            `}
           </Script>
 
-          <Component {...pageProps} /><SpeakerCard/>
+          <Component {...pageProps} />
         </MobileProvider>
       </AuthContext.Provider>
     </>
