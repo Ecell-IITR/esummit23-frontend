@@ -1,0 +1,76 @@
+.sponsorCard{
+    width: 416px;
+height: 484px;
+display: flex;
+flex-direction: column;
+}
+
+.sponsorCardImage{
+    z-index:1;
+    width:100%;
+    transition: 0.5s all ease-in-out;
+}
+
+.sponsorCard:hover .sponsorCardImage{
+    transform:scale(1.14);
+}
+
+.sponsorCardDescription{
+    padding:16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    height:484px;
+}
+
+.sponsorCardYear{
+    font-family: 'Lexend';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 110%;
+display: flex;
+align-items: center;
+z-index: 5;
+}
+
+.sponsorCardName{
+    font-family: 'Lexend';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 110%;
+display: flex;
+align-items: center;
+z-index: 5;
+}
+
+.sponsorCardCompany{
+    font-family: 'Nunito Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 150%;
+display: flex;
+align-items: center;
+letter-spacing: 0.04em;
+z-index: 5;
+}
+
+.sponsorCard:hover .sponsorCardBox{
+    transform:translateY(-1vh);
+    transition:1s ease;
+    z-index: 300;
+}
+
+.sponsorCardCompany1{
+    // visibility: hidden;
+    display: none;
+
+}
+.sponsorCard:hover .sponsorCardCompany1{
+    // visibility: visible;
+    display: block;
+    transition:1s ease;
+}
