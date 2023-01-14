@@ -25,7 +25,7 @@ width: 100%;
   width: 85%;
   opacity: 30%;
   margin-top: 7rem;
-  margin-left: 2rem;
+  margin-left:4rem;
  
 }
 .coinTiltedDesign{
@@ -127,6 +127,7 @@ width: 100%;
     // border: 1px solid white;
     animation: coin2-animate 2.5s;
     animation-fill-mode: forwards;
+    z-index:2;
     
 }
 
