@@ -1,8 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-
 import { isAuthenticated } from '../../utils';
-
+import Navbar from "../Navbar"
 export default function Header(props) {
   const router = useRouter();
   const rederict = () => {
@@ -15,6 +14,7 @@ export default function Header(props) {
 
   return (
     <>
+  <Navbar/>   
       <div className='ideaThon-main'>
         <div
           style={{ backgroundImage: `url(${props.card})` }}

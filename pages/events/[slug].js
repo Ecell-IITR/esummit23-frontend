@@ -3,6 +3,7 @@ import { EVENT_API } from '../../utils/APIs';
 import { useRouter } from 'next/router';
 import Header from '../../Components/Events/Header';
 import Timline from '../../Components/EventsPage/Timeline';
+
 import Sponsors from '../../Components/EventsPage/Sponsor';
 import { useMobile, useUpdateMobile } from '../../utils/MobileContext';
 export default function EventsDetails({ details }) {

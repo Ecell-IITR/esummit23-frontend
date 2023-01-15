@@ -11,6 +11,7 @@ function NavDesktop() {
   const roleType = getUserRoleType();
   const [active, setActive] = useState('');
 
+
   const router = useRouter();
   useEffect(() => {
     switch (router.asPath) {
@@ -41,7 +42,7 @@ function NavDesktop() {
     <Navbar className='navbarParent'>
       {/* <Container fluid> */}
       <div className='navbarEsummitLogo'>
-       <img src='summitLogo.png' className='navbarImage' /> 
+       <img src='/summitLogo.png' className='navbarImage' /> 
       </div>
       {/* <Navbar.Toggle aria-controls='navbarScroll' /> */}
       <ul className='navbarUl' style={{ maxHeight: '100px' }} navbarScroll>

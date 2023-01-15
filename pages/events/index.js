@@ -2,9 +2,9 @@ import { ALL_EVENTS_API } from '../../utils/APIs';
 import FetchApi from '../../utils/fetchAPI';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Navbar from "../../Components/Navbar"
 import { useRouter } from 'next/router';
 import { isAuthenticated } from '../../utils';
-import Navbar from '../../Components/Navbar';
 export default function Events({ posts }) {
 
   const router = useRouter();
@@ -24,7 +24,8 @@ export default function Events({ posts }) {
   
   return (
     <div className='eventPgCont'>
-      <Navbar />
+      <div style={{}}><Navbar /></div>
+      
       <div className='eventPgHdng'>
         Events{' '}
         {width < 450 ? (
@@ -49,8 +50,9 @@ export default function Events({ posts }) {
           return (
             <div className='eventPgCards'>
               <div className='eventcimg'>
+                {console.log(post.card_image)}
                 <Image
-                  src='/Rectangle 118.png'
+                  src={post.card_image ? post.card_image: "/Rectangle 118.png"}
                   height='199px'
                   width='376px'
                 ></Image>
@@ -109,6 +111,7 @@ export async function getStaticProps() {
   const res = await fetch(ALL_EVENTS_API);
 
   const posts = await res?.json();
+  console.log(posts);
   return {
     props: {
       posts,
