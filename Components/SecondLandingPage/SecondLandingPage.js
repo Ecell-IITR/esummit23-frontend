@@ -15,7 +15,7 @@ const SecondLandingPage = () => {
           <img src='secondLP.webp' width='100%' height='100%' />
           <div
             className='secondLandingPageImg'
-            data-aos-anchor-placement='center-top'
+            data-aos-anchor-placement='top-bottom'
             data-aos='fade-right'
             data-aos-duration='850'
             data-aos-offset='50'
@@ -25,14 +25,14 @@ const SecondLandingPage = () => {
               src='wheel.webp'
               data-aos='rotate-c'
               data-aos-duration='850'
-              data-aos-anchor-placement='center-top'
+              data-aos-anchor-placement='top-center'
               className='secondLandingPagewheel'
             />
           </div>
           <div
             className='secondLandingPageBox'
             data-aos='fade-right'
-            data-aos-anchor-placement='center-top'
+            data-aos-anchor-placement='top-center'
             data-aos-duration='850'
             data-aos-offset='50'
           >

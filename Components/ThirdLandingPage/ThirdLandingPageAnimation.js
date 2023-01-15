@@ -18,7 +18,7 @@ const ThirdLandingPageAnimation = () => {
               data-aos='fade-right'
               data-aos-duration='900'
               data-aos-offset='200'
-              data-aos-anchor-placement='center-top'
+              data-aos-anchor-placement='top-center'
               className='thirdLandingAnimationPageBox1'
             >
               <div
@@ -42,15 +42,14 @@ const ThirdLandingPageAnimation = () => {
         data-aos='fade-left'
         data-aos-duration='900'
         data-aos-offset='200'
-        data-aos-anchor-placement='center-top'
+        data-aos-anchor-placement='top-center'
         style={{ width: '40vw' }}
       >
         <div
-          src='imgreplace.png'
           data-aos='videoTransition'
           data-aos-duration='900'
           data-aos-offset='200'
-          data-aos-anchor-placement='center-top'
+          data-aos-anchor-placement='top-center'
           style={{ width: '41vw' }}
         >
           <iframe

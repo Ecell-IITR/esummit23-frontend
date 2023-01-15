@@ -5,6 +5,7 @@ import Animation from '../Components/Animation';
 import Lottie from 'react-lottie';
 import SecondLandingPage from '../Components/SecondLandingPage';
 import ThirdLandingPage from '../Components/ThirdLandingPage';
+import Footer from "../Components/Footer/Footer"
 
 
 export default function Home() {
@@ -36,6 +37,9 @@ export default function Home() {
       </div>
       <div>
         <ThirdLandingPage />
+      </div>
+      <div>
+        <Footer />
       </div>
       {/* <div style={{width:"100vw",height:"100vh"}}></div> */}
 
