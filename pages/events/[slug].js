@@ -7,6 +7,8 @@ import Sponsors from '../../Components/EventsPage/Sponsor';
 import { useMobile, useUpdateMobile } from '../../utils/MobileContext';
 export default function EventsDetails({ details }) {
   const router = useRouter();
+  
+  
   const setMobile = useUpdateMobile();
 
 
