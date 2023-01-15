@@ -42,14 +42,14 @@ const ThirdLandingPageAnimation = () => {
         data-aos-anchor-placement='center-top'
         style={{ width: '40vw' }}
       >
-        <img
+        <div
           src='imgreplace.png'
           data-aos='videoTransition'
           data-aos-duration='900'
           data-aos-offset='200'
           data-aos-anchor-placement='center-top'
           style={{ width: '41vw' }}
-        />
+        ><iframe width="560" height="315" src="https://www.youtube.com/embed/3TJs2KjpxXc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
       </div>
     </div>
   );
