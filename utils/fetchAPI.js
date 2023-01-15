@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 const FetchApi = (method, url, params, TokenValue) => {
-  //url = "http://localhost:" + process.env.REACT_APP_SERVER_PORT + url;
 
   return new Promise((resolve, reject) => {
     if (TokenValue) {

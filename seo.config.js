@@ -26,7 +26,7 @@ const defaultSEOConfig = {
     {
       name: 'keywords',
       content:
-        'startup india ,e summit,e summit 23,e summit 2023, esummit, esummit 23 ,esummit 2023, e-summit, e-summit 23,e-summit 2023, ecell, entrepreneurship global summit, esummit iit, esummit iitr, esummit iit roorkee, e summit 2023 ,iitr startup ,iit roorkee ,entrepreneur fest ,conference ,conclave ,speaker events',
+        'startup india ,e summit,e summit 23,e summit 2023, esummit, esummit 23 ,esummit 2023, e-summit, e-summit 23,e-summit 2023, ecell, entrepreneurship global summit, esummit iit, esummit iitr, esummit iit roorkee, e summit 2023 ,iitr startup ,iit roorkee ,entrepreneur fest ,conference ,conclave ,speaker eventsesummit, summit, esummit2023, ecell, ecell iit bombay, iit, iit bombay, entrepreneuship, entrepreneuship summit, buisness conclave, mumbai, asias largest, india, biggest, buisness conference, ttmm, seedstars, startup expo, networking arena, investors, mentors, startups, corporates, ',
     },
     {
       name: 'google-site-verification',
