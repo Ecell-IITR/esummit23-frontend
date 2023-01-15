@@ -42,7 +42,6 @@ class MyDocument extends Document {
             href='https://fonts.googleapis.com/css2?family=Lexend&display=swap'
             rel='stylesheet'
           />
-          
         </Head>
         <body>
           <link

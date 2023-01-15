@@ -72,14 +72,13 @@
   background-color: #dcd1ad;
 }
 
-.eventPgCards:hover{ 
-.eventcimg img{
-  width:100%;
-    transition: .4s all ease-in-out;
-  transform: scale(1.2);
+.eventPgCards:hover {
+  .eventcimg img {
+    width: 100%;
+    transition: 0.4s all ease-in-out;
+    transform: scale(1.2);
+  }
 }
-}
-
 
 @media screen and (max-width: 970px) {
   .eventPgHdng {

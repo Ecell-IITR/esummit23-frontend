@@ -6,13 +6,12 @@
   justify-content: center;
 }
 .my-modal {
-  width: 90vw!important;
-
-} 
-.modal-dialog{
-  width: 90vw!important;
-  margin-left: 0!important;
-  margin-right: 0!important;
+  width: 90vw !important;
+}
+.modal-dialog {
+  width: 90vw !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 .dashboardSubContainer {
   height: 100%;
@@ -78,10 +77,9 @@
   border-radius: 100px;
   cursor: pointer;
 }
-.dashboardRegisterButton:hover{
-   background-color:#DCD1AD;
-   color: #12100E;
-
+.dashboardRegisterButton:hover {
+  background-color: #dcd1ad;
+  color: #12100e;
 }
 .dashboardRegisterBox {
   display: flex;
@@ -101,7 +99,7 @@
     width: 100%;
   }
 }
-.Seo-text{
+.Seo-text {
   opacity: 0;
   position: absolute;
 }

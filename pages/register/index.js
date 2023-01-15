@@ -11,10 +11,9 @@ import NonIITRStudent from '../../Components/register/nonIITRStudent';
 import Professional from '../../Components/register/Professional';
 import Select from 'react-select';
 
-
 import { data } from 'jquery';
-import { toast } from "react-toastify";
-import { isAuthenticated  } from '../../utils';
+import { toast } from 'react-toastify';
+import { isAuthenticated } from '../../utils';
 import { useRouter } from 'next/router';
 const Registration = () => {
   const [Fullname, setFullname] = useState('');
@@ -29,81 +28,66 @@ const Registration = () => {
   const [selectedOption, setSelectedOption] = useState(null);
   const setMobile = useUpdateMobile();
   const router = useRouter();
- 
-  
 
-  
- 
   function validatePhoneNumber(str) {
-    let re =/^\d+$/.test(str);
-     return (re)
+    let re = /^\d+$/.test(str);
+    return re;
   }
-
 
   const Submit = () => {
-    
-      if(Email==='')
-        { toast.warning('Please enter Email');
-          setRenderId(0);
-        }
-       else if(Fullname===''){
-        toast.warning('Please enter Full Name');
+    if (Email === '') {
+      toast.warning('Please enter Email');
+      setRenderId(0);
+    } else if (Fullname === '') {
+      toast.warning('Please enter Full Name');
+      setRenderId(0);
+    } else if (Gender === '') {
+      toast.warning('Please enter Gender');
+      setRenderId(0);
+    } else if (Contact === '') {
+      toast.warning('Please enter Contact details');
+      setRenderId(0);
+    } else if (!(validatePhoneNumber(Contact) && Contact.length === 10)) {
+      toast.warning('Please enter 10 digit mobile no.');
+      setRenderId(0);
+    } else {
+      setRenderId(1);
+    }
+  };
+  const onBackButtonEvent = (e) => {
+    e.preventDefault();
+    if (!finishStatus) {
+      setfinishStatus(false);
+
+      if (RenderId == 1) {
+        setfinishStatus(false);
         setRenderId(0);
-          } 
-        else if(Gender===''){
-          toast.warning('Please enter Gender');
-        setRenderId(0);
-        }
-        else if(Contact===""){
-               toast.warning('Please enter Contact details');
-               setRenderId(0);
-        }
-        else if (!(validatePhoneNumber(Contact)&& Contact.length===10)){
-          toast.warning('Please enter 10 digit mobile no.');
-          setRenderId(0);
-        }
-      else{
-         setRenderId(1);
-        }
-       }
-const onBackButtonEvent = (e) => {
-  e.preventDefault();
-  if (!finishStatus) {
-          setfinishStatus(false)
-         
-          if (RenderId==1) {
-            setfinishStatus(false)
-            setRenderId(0)
-            console.log(0)
-        }
-         if (RenderId==2) {
-          setfinishStatus(false)
-          setRenderId(1)
-          console.log(1)
+        console.log(0);
       }
-    } 
-else {
-          window.history.pushState(null, null, window.location.pathname);
-          setfinishStatus(false)
-          console.log('false')
+      if (RenderId == 2) {
+        setfinishStatus(false);
+        setRenderId(1);
+        console.log(1);
       }
-  }
-useEffect(() => {
-  window.history.pushState(RenderId, null, window.location.pathname);
-  window.addEventListener('popstate', onBackButtonEvent);
-  return () => {
-    window.removeEventListener('popstate', onBackButtonEvent);  
-      
+    } else {
+      window.history.pushState(null, null, window.location.pathname);
+      setfinishStatus(false);
+      console.log('false');
+    }
+  };
+  useEffect(() => {
+    window.history.pushState(RenderId, null, window.location.pathname);
+    window.addEventListener('popstate', onBackButtonEvent);
+    return () => {
+      window.removeEventListener('popstate', onBackButtonEvent);
     };
   });
-
 
   useEffect(() => {
     if (isAuthenticated()) {
       router.push(`/dashboard`);
     }
     setMobile();
-
   }, []);
 
   if (RenderId == 0) {
@@ -115,7 +99,6 @@ useEffect(() => {
     const handleChange = (e) => {
       setGender(e);
     };
-
 
     if (useMobile().isMobile) {
       return (
@@ -199,62 +182,62 @@ useEffect(() => {
                     />
 
                     <div className='gender'>
-
-                    <div className='GenderHdng'style={{ fontSize:'1rem' , fontWeight:'400'}}>
-                    <Select
-                   
-                    className='GenderStyling'
-                    styles={{control: (baseStyles, state) => ({
-                      ...baseStyles,
-                      backgroundColor: state.isFocused ? ' #12100e' :' #12100e',
-                      width:  '19rem',
-                      borderTop:'0px',
-                      borderLeft: '0px',
-                      borderRight: '0px',
-                      borderColor: state.isSelected ? '#12100e' :'#828282',
-                      color: '#828282 !important',
-                    }),option: (baseStyles, state) => ({
-                      ...baseStyles,
-                      backgroundColor: state.isFocused ? ' #12100e' :' #12100e',
-                      width:  '19rem',
-                      backgroundColor:'  #dcd1ad',
-                      paddingLeft:'2rem',
-                      color:'black',
-
-                    }),input: (baseStyles, state) => ({
-                      ...baseStyles,
-                      color: ' #dcd1ad',
-
-                    }),
-                    singleValue: (baseStyles, state) => ({
-                      ...baseStyles,
-                      color: '#dcd1ad',
-
-
-                    }),
-                    menu: (baseStyles, state) => ({
-                      ...baseStyles,
-                      backgroundColor: state.isFocused ? ' #12100e' :' #12100e',
-                      width:  '20rem',
-                      fontFamily: 'Nunito Sans',
-                      fontWeight:'400',
-                    
-                      
-               
-                    }),
-                   
-                   }}
-                  
-                    placeholder="Gender"
-                    value={Gender} 
-                    options={data}
-                  
-                    onChange={handleChange}
-                   />
-                    
-                   </div>
-                   </div>
-
+                      <div
+                        className='GenderHdng'
+                        style={{ fontSize: '1rem', fontWeight: '400' }}
+                      >
+                        <Select
+                          className='GenderStyling'
+                          styles={{
+                            control: (baseStyles, state) => ({
+                              ...baseStyles,
+                              backgroundColor: state.isFocused
+                                ? ' #12100e'
+                                : ' #12100e',
+                              width: '19rem',
+                              borderTop: '0px',
+                              borderLeft: '0px',
+                              borderRight: '0px',
+                              borderColor: state.isSelected
+                                ? '#12100e'
+                                : '#828282',
+                              color: '#828282 !important',
+                            }),
+                            option: (baseStyles, state) => ({
+                              ...baseStyles,
+                              backgroundColor: state.isFocused
+                                ? ' #12100e'
+                                : ' #12100e',
+                              width: '19rem',
+                              backgroundColor: '  #dcd1ad',
+                              paddingLeft: '2rem',
+                              color: 'black',
+                            }),
+                            input: (baseStyles, state) => ({
+                              ...baseStyles,
+                              color: ' #dcd1ad',
+                            }),
+                            singleValue: (baseStyles, state) => ({
+                              ...baseStyles,
+                              color: '#dcd1ad',
+                            }),
+                            menu: (baseStyles, state) => ({
+                              ...baseStyles,
+                              backgroundColor: state.isFocused
+                                ? ' #12100e'
+                                : ' #12100e',
+                              width: '20rem',
+                              fontFamily: 'Nunito Sans',
+                              fontWeight: '400',
+                            }),
+                          }}
+                          placeholder='Gender'
+                          value={Gender}
+                          options={data}
+                          onChange={handleChange}
+                        />
+                      </div>
+                    </div>
                   </div>
 
                   <div
@@ -267,8 +250,7 @@ useEffect(() => {
                       cursor: 'pointer',
                       marginLeft: '0px',
                     }}
-                   >
-                   
+                  >
                     <button
                       onClick={() => {
                         Submit();
@@ -276,7 +258,6 @@ useEffect(() => {
                       type='submit'
                       className='LoginButton'
                     >
-
                       Next
                     </button>
                   </div>
@@ -436,14 +417,9 @@ useEffect(() => {
                     </div>
                   </div>
                   <div>
-                     <button
-                   
-                    className='nextButton'
-                    onClick={Submit}
-                  >
-                    Next
-                  </button>
-
+                    <button className='nextButton' onClick={Submit}>
+                      Next
+                    </button>
                   </div>
                   <div classname='registeredEvent'>
                     <span

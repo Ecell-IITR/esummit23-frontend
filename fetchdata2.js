@@ -3,7 +3,6 @@ import axios from 'axios';
 const finalData = (props) => {
   const { Data } = props;
 
- 
   return Data.map((Elements) => {
     return (
       <div key={Elements.id}>

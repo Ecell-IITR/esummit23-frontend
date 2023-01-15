@@ -31,7 +31,7 @@ const MobileProvider = ({ children }) => {
   const setMobile = () => {
     if (window.innerWidth < 800) {
       setIsMobile(true);
-   
+
       setIsStyleMobile('mobile');
     } else {
       setIsMobile(false);

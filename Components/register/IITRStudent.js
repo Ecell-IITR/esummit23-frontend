@@ -6,7 +6,7 @@ import { useMobile, useUpdateMobile } from '../../utils/MobileContext';
 import { Authenticate } from '../../utils';
 import { useRouter } from 'next/router';
 import Select from 'react-select';
-import { toast } from "react-toastify";
+import { toast } from 'react-toastify';
 const IITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
   const [Branch, setBranch] = useState('');
   const [Year, setYear] = useState('');
@@ -21,65 +21,54 @@ const IITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
   const setMobile = useUpdateMobile();
   const router = useRouter();
   const Submit = () => {
-    if(Branch==='')
-    { toast.warning('Please enter Branch Name');
-     }
-   else if(EnrollomentNo==='')
-    { toast.warning('Please enter Enrollment Number');
-     }
-  
-    else if(Year===''){
+    if (Branch === '') {
+      toast.warning('Please enter Branch Name');
+    } else if (EnrollomentNo === '') {
+      toast.warning('Please enter Enrollment Number');
+    } else if (Year === '') {
       toast.warning('Please enter Year');
-   
-    }
-    else if(State===""){
-           toast.warning('Please enter State');
-          
-    }
-    else if(City===""){
+    } else if (State === '') {
+      toast.warning('Please enter State');
+    } else if (City === '') {
       toast.warning('Please enter City');
-     
-       }  
-    else if(password===""){
-     toast.warning('Please enter Password');
-      
-         } 
-   else {
-    if (password?.length > 7) {
-      if (password === Confirmpassword) {
-        FetchApi('POST', REGISTER_API, {
-          UserType: 'stu',
-          referred_by: RefferalCode,
-          user: {
-            full_name: name,
-            gender: Gender.label,
-            email: email,
-            phone_number: contact,
-            collage: 'IIT Roorkee',
-            branch: Branch,
-            year: Year,
-            city: City,
-            state: State.label,
-            password: password,
-            enrollment_no: EnrollomentNo,
-          },
-        })
-          .then((res) => {
-            if (res.status === 201) {
-              Authenticate(res.data.n, res.data.e_id, res.data.at);
-              router.push('/dashboard');
-            }
+    } else if (password === '') {
+      toast.warning('Please enter Password');
+    } else {
+      if (password?.length > 7) {
+        if (password === Confirmpassword) {
+          FetchApi('POST', REGISTER_API, {
+            UserType: 'stu',
+            referred_by: RefferalCode,
+            user: {
+              full_name: name,
+              gender: Gender.label,
+              email: email,
+              phone_number: contact,
+              collage: 'IIT Roorkee',
+              branch: Branch,
+              year: Year,
+              city: City,
+              state: State.label,
+              password: password,
+              enrollment_no: EnrollomentNo,
+            },
           })
-          .catch((err) => {
-       
-            toast(err.response.data.error);
-          });
+            .then((res) => {
+              if (res.status === 201) {
+                Authenticate(res.data.n, res.data.e_id, res.data.at);
+                router.push('/dashboard');
+              }
+            })
+            .catch((err) => {
+              toast(err.response.data.error);
+            });
+        } else {
+          toast('password doesnot match');
+        }
       } else {
-        toast('password doesnot match');
+        toast('password should have 8 or more characters');
       }
-     } else {
-      toast('password should have 8 or more characters');
-    }}
+    }
   };
   useEffect(() => {
     setMobile();
@@ -279,58 +268,59 @@ const IITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
                     value={Year}
                     onChange={(e) => setYear(e.target.value)}
                   />
-                  
-                    <Select
-                      styles={{
-                        control: (baseStyles, state) => ({
-                          ...baseStyles,
-                          backgroundColor: state.isFocused
-                            ? ' #12100e'
-                            : ' #12100e',
-                          width: '20rem',
-                          borderTop: '0px',
-                          borderLeft: '0px',
-                          borderRight: '0px',
-                          borderColor: state.isSelected ? '#12100e' : '#828282',
-                          color: '#828282 !important',
-                        }),
-                        option: (baseStyles, state) => ({
-                          ...baseStyles,
-                          backgroundColor: state.isFocused
-                            ? ' #12100e'
-                            : ' #12100e',
-                          width: '20rem',
-                          backgroundColor: '  #dcd1ad',
-                          paddingLeft: '1rem',
-                          color: '#828282',
-                        }),
-                        input: (baseStyles, state) => ({
-                          ...baseStyles,
-                          color: ' #dcd1ad',
-                        }),
-                        singleValue: (baseStyles, state) => ({
-                          ...baseStyles,
-                          color: '#dcd1ad',
-                        }),
-                        valueContainer: (baseStyles, state) => ({...baseStyles,
-                        padding:0,
-                        }),
-                        menu: (baseStyles, state) => ({
-                          ...baseStyles,
-                          backgroundColor: state.isFocused
-                            ? ' #12100e'
-                            : ' #12100e',
-                          width: '20rem',
-                          fontFamily: 'Nunito Sans',
-                          fontWeight: '400',
-                        }),
-                      }}
-                      placeholder='State'
-                      value={State}
-                      options={StateData}
-                      onChange={handleChange}
-                    />
-                    
+
+                  <Select
+                    styles={{
+                      control: (baseStyles, state) => ({
+                        ...baseStyles,
+                        backgroundColor: state.isFocused
+                          ? ' #12100e'
+                          : ' #12100e',
+                        width: '20rem',
+                        borderTop: '0px',
+                        borderLeft: '0px',
+                        borderRight: '0px',
+                        borderColor: state.isSelected ? '#12100e' : '#828282',
+                        color: '#828282 !important',
+                      }),
+                      option: (baseStyles, state) => ({
+                        ...baseStyles,
+                        backgroundColor: state.isFocused
+                          ? ' #12100e'
+                          : ' #12100e',
+                        width: '20rem',
+                        backgroundColor: '  #dcd1ad',
+                        paddingLeft: '1rem',
+                        color: '#828282',
+                      }),
+                      input: (baseStyles, state) => ({
+                        ...baseStyles,
+                        color: ' #dcd1ad',
+                      }),
+                      singleValue: (baseStyles, state) => ({
+                        ...baseStyles,
+                        color: '#dcd1ad',
+                      }),
+                      valueContainer: (baseStyles, state) => ({
+                        ...baseStyles,
+                        padding: 0,
+                      }),
+                      menu: (baseStyles, state) => ({
+                        ...baseStyles,
+                        backgroundColor: state.isFocused
+                          ? ' #12100e'
+                          : ' #12100e',
+                        width: '20rem',
+                        fontFamily: 'Nunito Sans',
+                        fontWeight: '400',
+                      }),
+                    }}
+                    placeholder='State'
+                    value={State}
+                    options={StateData}
+                    onChange={handleChange}
+                  />
+
                   <input
                     className={
                       City == ''

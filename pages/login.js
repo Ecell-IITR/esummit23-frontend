@@ -65,7 +65,6 @@ function Login() {
               if (roleType == 'startup') {
                 setRole('startup');
               }
-          
             }
           }
           Authenticate(res.data.n, res.data.e_id, res.data.at);
@@ -95,7 +94,7 @@ function Login() {
   if (useMobile().isMobile) {
     return (
       <div className='LoginContainer'>
-         <ForgotPassword show={show} onHide={handleClose} />
+        <ForgotPassword show={show} onHide={handleClose} />
         <div
           style={{
             width: '100vw',
@@ -156,8 +155,10 @@ function Login() {
                 </div>
               </div>
               <div
-              onClick={() => {setShow(true)}}
-              className='LoginFormLeftForgotPassword'
+                onClick={() => {
+                  setShow(true);
+                }}
+                className='LoginFormLeftForgotPassword'
                 style={{
                   fontFamily: 'Nunito Sans',
                   fontSyle: 'normal',
@@ -201,7 +202,7 @@ function Login() {
             </div>
           </div>
         </div>
-        <div style={{background: "#12100e",height:"20rem"}}></div>
+        <div style={{ background: '#12100e', height: '20rem' }}></div>
       </div>
     );
   } else {
@@ -266,8 +267,10 @@ function Login() {
                 </div>
               </div>
               <div
-              onClick={() => {setShow(true)}}
-              className='LoginFormLeftForgotPassword'
+                onClick={() => {
+                  setShow(true);
+                }}
+                className='LoginFormLeftForgotPassword'
                 style={{
                   fontFamily: 'Nunito Sans',
                   fontSyle: 'normal',

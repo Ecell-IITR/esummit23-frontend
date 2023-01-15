@@ -21,7 +21,7 @@ export function EventsIdeathon(props) {
         </div>
       </div>
       <div className='helpSecondContainer'>
-        <div className='secondcontainer'>       
+        <div className='secondcontainer'>
           <div className='arrows'>
             <div className='vl'></div>
             <div className='firstarrow'>Round 1</div>
@@ -63,7 +63,6 @@ export function EventsIdeathon(props) {
                             src='/bulletEvents.webp'
                             height='16'
                             width='16'
-                            
                           ></Image>
                         </div>
                         <div className='writtenRules'>{rule.rule} </div>

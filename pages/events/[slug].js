@@ -9,7 +9,6 @@ export default function EventsDetails({ details }) {
   const router = useRouter();
   const setMobile = useUpdateMobile();
 
-
   useEffect(() => {
     setMobile();
   }, []);
@@ -40,10 +39,9 @@ export default function EventsDetails({ details }) {
     </>
   );
 }
-export async function getServerSideProps({ params}) {
-
+export async function getServerSideProps({ params }) {
   const url = EVENT_API(params.slug);
- 
+
   const response = await fetch(url);
   const detailsEvents = await response.json();
   const details = detailsEvents[0];
