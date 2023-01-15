@@ -21,7 +21,7 @@ const SecondLandingPage = () => {
             <button className='secondLandingPageMobileButton'><span>KNOW MORE</span></button>
         </div>
       </div>
-      <div className='mobileWheel' style={{display:"flex",marginTop:"-50%"}}>
+      <div className='mobileWheel' style={{display:"flex",marginTop:"-50%",mixBlendMode:"overlay"}}>
         <img src="mobwheel.webp" style={{width:"100vw",height:"100vw"}} />
         </div>
     </>
