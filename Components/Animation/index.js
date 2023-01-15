@@ -35,7 +35,7 @@ const SecondLandingPage = () => {
       ><Navbar/>
         <AnimationUp />
         <Animation />
-        <div className='helpPage'></div>
+      
       </div>
     );
   }
