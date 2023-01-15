@@ -15,11 +15,14 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      {/* <div className='LottieContainer'>
+      <div className='LottieContainer'>
         <Lottie options={defaultOptions} />
-      </div> */}
-      <SecondLandingPage/>
-      <ThirdLandingPage/>
+      </div>
+      {/* <div style={{width:"100vw",height:"100vh"}}></div> */}
+      <div><SecondLandingPage/></div>
+      <div><ThirdLandingPage/></div>
+      {/* <div style={{width:"100vw",height:"100vh"}}></div> */}
+
     </>
   );
 }

@@ -7,7 +7,7 @@ const ThirdLandingPageAnimation = () => {
   useEffect(() => {
     AOS.init();
     AOS.refresh();
-}, []);  
+  }, []);
 
   return (
     <div className='thirdLandingAnimationPage'>
@@ -21,11 +21,14 @@ const ThirdLandingPageAnimation = () => {
               data-aos-anchor-placement='center-top'
               className='thirdLandingAnimationPageBox1'
             >
-              <div className='thirdLandingAnimationPageHeading'>
+              <div className='thirdLandingAnimationPageHeading' style={{width:'40vw'}}>
                 {current.Heading}
               </div>
               <div className='thirdLandingAnimationPageDescription'>
-                {current.Description}
+                {current.Description1}
+              </div>
+              <div className='thirdLandingAnimationPageDescription'>
+                {current.Description2}
               </div>
             </div>
           </div>
@@ -37,13 +40,15 @@ const ThirdLandingPageAnimation = () => {
         data-aos-duration='900'
         data-aos-offset='200'
         data-aos-anchor-placement='center-top'
+        style={{ width: '40vw' }}
       >
         <img
           src='imgreplace.png'
           data-aos='videoTransition'
           data-aos-duration='900'
           data-aos-offset='200'
-          // data-aos-anchor-placement='top-center'
+          data-aos-anchor-placement='center-top'
+          style={{ width: '41vw' }}
         />
       </div>
     </div>

@@ -7,54 +7,53 @@ const SecondLandingPage = () => {
   useEffect(() => {
     AOS.init();
     AOS.refresh();
-
-   }, []);
-return(
-  <>
-   <div>
-      <div className='secondLandingPage'>
-        <img src='secondLP.webp' width="100%" />
-        <div
-          className='secondLandingPageImg'
-          data-aos-anchor-placement='center-center'
-          data-aos='fade-right'
-          data-aos-duration='850'
-          
-          style={{ mixBlendMode: 'overlay',zIndex:"1" }}
-        >
-          <img
-            src='wheel.webp'
-            data-aos='rotate-c'
+  }, []);
+  return (
+    <>
+      <div>
+        <div className='secondLandingPage'>
+          <img src='secondLP.webp' width='100%' height='100%' />
+          <div
+            className='secondLandingPageImg'
+            data-aos-anchor-placement='center-top'
+            data-aos='fade-right'
             data-aos-duration='850'
-            data-aos-anchor-placement='center-center'
             data-aos-offset='50'
-            // data-aos-easing='ease-in-sine'
-            className='secondLandingPagewheel'
-          />
-        </div>
-        {sLPData.map((current, index) => {
-          return (
-            <div
-              className='secondLandingPageBox'
-              key='index'
-              data-aos='fade-right'
-              data-aos-anchor-placement='center-top'
+            style={{ mixBlendMode: 'overlay' }}
+          >
+            <img
+              src='wheel.webp'
+              data-aos='rotate-c'
               data-aos-duration='850'
-            >
-              <div className='secondLandingPageHead'>{current.Heading}</div>
-              <div className='secondLandingPageDescription'>
-                {current.Description}
-              </div>
-              <button className='secondLandingPageButton'>
-                <span>KNOW MORE</span>
-              </button>
+              data-aos-anchor-placement='center-top'
+              className='secondLandingPagewheel'
+            />
+          </div>
+          <div
+            className='secondLandingPageBox'
+            data-aos='fade-right'
+            data-aos-anchor-placement='center-top'
+            data-aos-duration='850'
+            data-aos-offset='50'
+          >
+            <div className='secondLandingPageHead'>
+              REMINISCING THE ETHOS : BHARAT
             </div>
-          );
-        })}
+            <div className='secondLandingPageDescription'>
+              E-Summit being the flagship event of ECell, is held annually
+              brings together the academic community, venture capitalists, new
+              age entrepreneurs and all those passionate about entrepreneurship
+              to common grounds.E-Summit being the flagship event of ECell, is
+              held annually brings together the academic community
+            </div>
+            <button className='secondLandingPageButton'>
+              <span>KNOW MORE</span>
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
-  </>
-)
-}
+    </>
+  );
+};
 
 export default SecondLandingPage;

@@ -8,12 +8,6 @@
     margin-bottom: 190px;
 }
 
-.secondLandingPagewheel{
-    margin-top: -55em;
-    width: 50vw;
-    margin-left: -24.5vw;
-    mix-blend-mode: overlay;
-}
 .secondLandingPageBox{
     margin-top:-80vh;
     margin-left:12vw;
@@ -85,13 +79,27 @@ font-size: 18px;
 [data-aos="rotate-c"].aos-animate {
 transform:rotate(0deg);
 }
-// [data-aos="straight"] {
-//     transform: translateX(-30rem);
-//     transition-property: transform;
-// }
 
-// [data-aos="straight"].aos-animate {
-// transform: translateX(10rem);
-// }
+.secondLandingPagewheel{
+    margin-top: -49em;
+    width: 37vw;
+    margin-left: -18.5vw;
+    mix-blend-mode: overlay;
+}
+
+
+@media only screen and (max-width:1150px){
+    .secondLandingPagewheel{
+        margin-top: -47em;
+        width:50vw;
+        margin-left:-24.5vw;
+    }
+}
+@media only screen and (max-width:950px){
+    .secondLandingPageDescription{
+font-size: 15px;
+    } 
+}
+
 
 
