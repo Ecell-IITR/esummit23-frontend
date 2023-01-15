@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from '../Components/Navbar';
 import React from 'react';
-
+import Animation from '../Components/Animation';
 import Lottie from 'react-lottie';
 import SecondLandingPage from '../Components/SecondLandingPage';
 import ThirdLandingPage from '../Components/ThirdLandingPage';
@@ -18,7 +18,7 @@ export default function Home() {
     <>
       <Animation/>
 
-      <Navbar />
+   
       <div className='Seo-text'>
         <p>
           E-Summit 22 is organised by E-Cell IIT Roorkee which is one of the
@@ -29,9 +29,7 @@ export default function Home() {
         </p>
       </div>
 
-      <div className='LottieContainer'>
-        <Lottie options={defaultOptions} />
-      </div>
+      
       {/* <div style={{width:"100vw",height:"100vh"}}></div> */}
       <div>
         <SecondLandingPage />

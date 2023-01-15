@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
-import Image from 'next/image';
+
 import { useMobile, useUpdateMobile } from '../../utils/MobileContext';
-import AnimationUp from '../Animation/AnimationDesktop/AnimationUp';
+
 import Animation from '../Animation/AnimationDesktop/AnimationDown';
+import AnimationUp from '../Animation/AnimationDesktop/AnimationUp';
+
 
 import Navbar from '../Navbar';
 const SecondLandingPage = () => {
