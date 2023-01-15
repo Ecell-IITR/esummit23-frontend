@@ -21,7 +21,10 @@ const ThirdLandingPageAnimation = () => {
               data-aos-anchor-placement='center-top'
               className='thirdLandingAnimationPageBox1'
             >
-              <div className='thirdLandingAnimationPageHeading' style={{width:'40vw'}}>
+              <div
+                className='thirdLandingAnimationPageHeading'
+                style={{ width: '40vw' }}
+              >
                 {current.Heading}
               </div>
               <div className='thirdLandingAnimationPageDescription'>
@@ -49,7 +52,17 @@ const ThirdLandingPageAnimation = () => {
           data-aos-offset='200'
           data-aos-anchor-placement='center-top'
           style={{ width: '41vw' }}
-        ><iframe width="560" height="315" src="https://www.youtube.com/embed/3TJs2KjpxXc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+        >
+          <iframe
+            width='560'
+            height='315'
+            src='https://www.youtube.com/embed/3TJs2KjpxXc'
+            title='YouTube video player'
+            frameborder='0'
+            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
     </div>
   );
