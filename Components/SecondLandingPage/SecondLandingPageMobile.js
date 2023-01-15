@@ -1,20 +1,15 @@
 import React, { useEffect } from 'react';
-import { useMobile, useUpdateMobile } from '../../utils/MobileContext';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const SecondLandingPage = () => {
-  const setMobile = useUpdateMobile();
   useEffect(() => {
     
-    setMobile();
     AOS.init();
     AOS.refresh();
 
 
    }, );
-   console.log(useMobile().isMobile)
-   if (useMobile().isMobile) {
   return (
    <>
       <div className='secondLandingPageMobile' style={{}}>
@@ -32,6 +27,6 @@ const SecondLandingPage = () => {
     </>
   );
 }
-}
+
 
 export default SecondLandingPage;

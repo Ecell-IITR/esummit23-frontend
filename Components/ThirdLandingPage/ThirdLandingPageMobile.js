@@ -1,13 +1,7 @@
 import React, { useEffect } from 'react';
-import { useMobile, useUpdateMobile } from '../../utils/MobileContext';
 
-const SecondLandingPage = () => {
-  const setMobile = useUpdateMobile();
-  useEffect(() => {
-    setMobile();
-  });
-  console.log(useMobile().isMobile);
-  if (useMobile().isMobile) {
+const ThirdLandingPage = () => { 
+  
     return (
       <>
         <div className='ThirdLandingAnimationPageMobile'>
@@ -28,6 +22,5 @@ const SecondLandingPage = () => {
       </>
     );
   }
-};
 
-export default SecondLandingPage;
+export default ThirdLandingPage;

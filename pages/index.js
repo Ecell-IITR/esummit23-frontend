@@ -2,8 +2,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from '../Components/Navbar';
 import React from 'react';
 import Lottie from 'react-lottie';
-import SecondLandingPage from "../Components/2ndLandingPage/SecondLandingPageMobile"
-import ThirdLandingPage from "../Components/3rdLandingPage/ThirdLandingPageMobile"
+import SecondLandingPage from "../Components/SecondLandingPage"
+import ThirdLandingPage from "../Components/ThirdLandingPage"
 
 export default function Home() {
   const defaultOptions = {
