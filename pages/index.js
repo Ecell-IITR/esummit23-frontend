@@ -12,11 +12,9 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
       <Animation/>
-      <div className='LottieContainer'>
-        <Lottie options={defaultOptions} />
-      </div>
+
+
     </>
   );
 }
