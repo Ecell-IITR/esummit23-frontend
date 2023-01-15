@@ -39,7 +39,7 @@
     flex-direction: row;
     height: 1rem;
     display: flex;
-    gap: 5rem;
+    // gap: 1rem;
   
   }
   .coin10{
@@ -93,7 +93,7 @@
       align-items: center;
       width: 80%;
       height: 8rem;
-    margin-top: -1.5rem;
+      margin-top: -1.5rem;
       // border:1px solid white;
   
   }
@@ -135,7 +135,7 @@
   .coin2{
       height: 9.5rem;
       width: 9.8rem;
-      margin-right: -13rem;
+      margin-right: -16rem;
       // border: 1px solid white;
       animation: coin2-animate 1.7s;
       animation-fill-mode: forwards;
@@ -147,15 +147,16 @@
   @keyframes coin2-animate{
   100%{
     transform: rotate(-300deg);
+    //changed here!
     margin-right: -5rem;
-    margin-top:14.7rem;
+    margin-top:11.7rem;
     z-index: 1;
   
   }
   
     90%{
       // transform: rotate(-300deg);
-      margin-top:16rem;
+      margin-top:13rem;
       z-index: 5;
       }
     
@@ -195,6 +196,7 @@
     100%{
       transform: rotate(220.34deg);
       margin-top: -3.5rem;
+      margin-left: 10vw;
       -webkit-filter: blur(1.8px);
     }
     90%{
@@ -203,8 +205,8 @@
   }
   
   .coin5{
-      height: 10rem;
-      width: 10rem;
+      height: 8rem;
+      width: 8rem;
       // border: 1px solid white;
       animation: coin5-load 1.7s;
       animation-fill-mode: forwards;
@@ -217,7 +219,8 @@
     100%{
       transform: rotate(320.34deg);
       margin-top: 10rem;
-      margin-right: -6rem;
+      //changed here
+    //   margin-right: -6rem;
       -webkit-filter: blur(1px);
     }
     90%{
