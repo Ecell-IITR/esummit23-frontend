@@ -7,7 +7,10 @@ const Mobprofiledetails = (props) => {
       <Image src={props.url} width={100} height={100} />
       <div className='profileInfo'>
         <div className='mobFullNameContainer'>{props.name}</div>
-        <div className='mobEsummitIdContainer'> Esummit ID -{props.EsummitId}</div>
+        <div className='mobEsummitIdContainer'>
+          {' '}
+          Esummit ID -{props.EsummitId}
+        </div>
         <div className='mobViewFullProfileContainer'>
           <div>View full profile</div>
           <div style={{ width: '24px', height: '24px', marginLeft: '12px' }}>
@@ -55,21 +58,18 @@ const Mobtaskbar = () => {
   );
 };
 const Mobtask = (props) => {
-    return(
-        <>
-        <div className='mobAllTaskcontainer'>
-            <div className='mobTaskId'>{props.TaskId}</div>
-            <div className='mobTaskContainer'>
-                <div className='task'>{props.Task}
-                </div>
-                <button className='mobTaskSubmitButton'>Submit your task</button>
-            </div>
-
+  return (
+    <>
+      <div className='mobAllTaskcontainer'>
+        <div className='mobTaskId'>{props.TaskId}</div>
+        <div className='mobTaskContainer'>
+          <div className='task'>{props.Task}</div>
+          <button className='mobTaskSubmitButton'>Submit your task</button>
         </div>
-
-        </>
-    )
-}
-export { Mobscore, Mobtaskbar,Mobtask };
+      </div>
+    </>
+  );
+};
+export { Mobscore, Mobtaskbar, Mobtask };
 
 export default Mobprofiledetails;

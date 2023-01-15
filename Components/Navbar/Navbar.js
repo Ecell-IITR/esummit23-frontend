@@ -4,8 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { getUserRoleType } from '../../utils';
-import { isAuthenticated,unAuthenticate } from '../../utils';
-
+import { isAuthenticated, unAuthenticate } from '../../utils';
 
 function NavDesktop() {
   const roleType = getUserRoleType();
@@ -41,7 +40,7 @@ function NavDesktop() {
     <Navbar className='navbarParent'>
       {/* <Container fluid> */}
       <div className='navbarEsummitLogo'>
-       <img src='summitLogo.png' className='navbarImage' /> 
+        <img src='summitLogo.png' className='navbarImage' />
       </div>
       {/* <Navbar.Toggle aria-controls='navbarScroll' /> */}
       <ul className='navbarUl' style={{ maxHeight: '100px' }} navbarScroll>
