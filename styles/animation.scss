@@ -7,7 +7,7 @@
 background:none;
 width: 100%;
   height: 35rem;
-  // border: 1px solid black;
+  // border: 1px solid white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -80,7 +80,7 @@ width: 100%;
     font-size:10vw;
     font-weight: 800;
     font-family:'Lexend';
-    // border:1px solid black;
+    // border:1px solid white;
     display: flex;
     justify-content:center;
     align-items: flex-end;
@@ -94,7 +94,7 @@ width: 100%;
     width: 80%;
     height: 8rem;
   margin-top: -1.5rem;
-    // border:1px solid black;
+    // border:1px solid white;
 
 }
 
@@ -284,7 +284,7 @@ z-index: 1;
 
   width:100% ;
   height: 61rem;
-  // border: 1px solid black;
+  // border: 1px solid white;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -308,3 +308,183 @@ z-index: 1;
 
 
 //for mobile view all css is written below
+
+.containerAnimationMobile{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 45rem;
+  width: 100%;
+}
+.coin1MobileAnimation{
+  padding: .2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 5rem;
+  // border:1px solid white;
+
+}
+.coin2MobileAnimation{
+  padding: .2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 5rem;
+  width: 100%;
+  // border:1px solid white;
+}
+.eSummitHeading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  width: 100%;
+  // border:1px solid white;
+  margin-top: 5rem;
+  margin-bottom: -9rem;
+}
+.collectionOfCoins{
+  padding: .2rem;
+  display: flex;
+  flex-direction: row;
+  height: 15rem;
+  width: 100%;
+  // border:1px solid white;
+}
+.emptySpaceForHelp{
+  height: 3.2rem;
+  width: 100%;
+  // border:1px solid white;
+}
+.coin5MobileAnimation{
+  padding: .2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  width: 100%;
+  // border:1px solid white;
+}
+.coin6MobileAnimation{
+  padding: .2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 5rem;
+  width: 100%;
+  // border:1px solid white;
+}
+.coin1MobileAnimationLeft{
+  -webkit-filter: blur(1px);
+  opacity: 30%;
+  height: 3.5rem;
+  width: 3.5rem;
+  // border: 1px solid white;
+}
+.coin1MobileAnimationRight{
+  height: 100%;
+  width: 60%;
+  // border: 1px solid white;
+}
+.coin2MobileAnimationLeft{
+  height: 100%;
+  width: 70%;
+  // border: 1px solid white;
+}
+.coin2MobileAnimationRight{
+  -webkit-filter: blur(.5px);
+  height: 3rem;
+  width: 3.5rem;
+  // border: 1px solid white;
+}
+
+.collectionOfCoinsLeft{
+  display: flex;
+  flex-direction: column;
+  padding: .2rem;
+  height: 100%;
+  width: 33%;
+  // border: 1px solid white;
+}
+.collectionOfCoinsMiddle{
+  z-index: -1;
+  rotate: 20deg;
+  padding: .2rem;
+  height: 14.5rem;
+  width: 5.3rem;
+  // border: 1px solid white;
+}
+.collectionOfCoinsRight{
+  
+  padding: .2rem;
+  height: 100%;
+  width: 33%;
+  // border: 1px solid white;
+}
+.collectionOfCoins{
+  display: flex;
+  justify-content: space-between;
+}
+.collectionOfCoinsLeftUp{
+  height: 5rem;
+  width: 5rem;
+  // border: 1px solid white;
+  margin-left: -1rem;
+}
+.collectionOfCoinsLeftDown{
+  height: 65%;
+  width: 100%;
+  // border: 1px solid white;
+}
+.collectionOfCoinsRightDown{
+
+  height: 5rem;
+  width: 5rem;
+  // border: 1px solid white;
+}
+.collectionOfCoinsRightUp{
+  height: 65%;
+  width: 100%;
+  // border: 1px solid white;
+}
+.coin6MobileAnimationLeft{
+  height: 100%;
+  width: 60%;
+  // border: 1px solid white;
+
+}
+.coin6MobileAnimationRight{
+  opacity: 40%;
+  -webkit-filter: blur(.5px);
+  height: 5rem;
+  width: 5rem;
+  // border: 1px solid white;
+}
+.containerAnimationMobile{
+  background:linear-gradient(180deg, #12100E 11%, rgba(46, 40, 34, 0.75) 120.26%);
+}
+.imageCoinMobileAnimation{
+  height: 100%;
+  width: 100%;
+}
+.helpcollectionOfCoinsRightDown{
+  display: flex;
+  justify-content: flex-end;
+}
+.coin5MobileAnimationLeft{
+  -webkit-filter: blur(1px);
+  opacity: 20%;
+  height: 3.5rem;
+  width: 3.5rem;
+  // border: 1px solid white;
+
+}
+.coin5MobileAnimationRight{
+  height: 100%;
+  width: 60%;
+  // border: 1px solid white;
+
+}
