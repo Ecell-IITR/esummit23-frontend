@@ -11,11 +11,12 @@ import NonIITRStudent from '../../Components/register/nonIITRStudent';
 import Professional from '../../Components/register/Professional';
 import Select from 'react-select';
 
-import { data } from 'jquery';
 import { toast } from 'react-toastify';
 import { isAuthenticated } from '../../utils';
 import { useRouter } from 'next/router';
-const Registration = () => {
+
+
+const Registration = (props) => {
   const [Fullname, setFullname] = useState('');
   const [Email, setEmail] = useState('');
   const [Contact, setContact] = useState('');
@@ -289,6 +290,7 @@ const Registration = () => {
               {/* <div className='RegisterRight'></div> */}
             </div>
           </div>
+          
         </>
       );
     } else {
