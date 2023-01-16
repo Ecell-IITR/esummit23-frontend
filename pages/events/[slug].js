@@ -4,14 +4,17 @@ import { useRouter } from 'next/router';
 import Header from '../../Components/Events/Header';
 import Timline from '../../Components/EventsPage/Timeline';
 import Sponsors from '../../Components/EventsPage/Sponsor';
+import Navbar from '../../Components/Navbar';
 import { useMobile, useUpdateMobile } from '../../utils/MobileContext';
 export default function EventsDetails({ details }) {
   const router = useRouter();
   const setMobile = useUpdateMobile();
+  console.log(router);
 
   useEffect(() => {
     setMobile();
   }, []);
+  console.log(useMobile());
   return (
     <>
       <Header
@@ -24,6 +27,8 @@ export default function EventsDetails({ details }) {
           useMobile().isMobile ? details.card_image : details.background_image
         }
       />
+      
+      
       <Timline
         name={details.event_name}
         desc={details.description}
@@ -36,12 +41,15 @@ export default function EventsDetails({ details }) {
         Coordinator={details.events_coordinators}
         partners={[]}
       />
+      
     </>
   );
 }
-export async function getServerSideProps({ params }) {
-  const url = EVENT_API(params.slug);
+export async function getServerSideProps({ params}) {
 
+  console.log(params);
+  const url = EVENT_API(params.slug);
+  console.log(url);
   const response = await fetch(url);
   const detailsEvents = await response.json();
   const details = detailsEvents[0];
