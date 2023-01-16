@@ -24,6 +24,7 @@ export function EventsIdeathon(props) {
         </div>
       </div>
       <div className='helpSecondContainer'>
+
         {pid.slug == 'Startup Expo' ? (
           <></>
         ) : (
@@ -44,6 +45,7 @@ export function EventsIdeathon(props) {
               <div className='helpArrow'>
                 <div className='thirdarrow'>Round 3</div>
               </div>
+
             </div>
 
             <div className='roundnamecontent'>

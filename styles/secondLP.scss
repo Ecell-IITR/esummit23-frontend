@@ -1,0 +1,98 @@
+.secondLandingPage {
+  width: 100vw;
+  height: 100vh;
+}
+
+.wheel {
+  margin-bottom: 190px;
+}
+
+.secondLandingPageBox {
+  margin-top: -80vh;
+  margin-left: 12vw;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.secondLandingPageHead {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 110%;
+  display: flex;
+  align-items: center;
+  color: #dcd1ad;
+}
+
+.secondLandingPageDescription {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #e9f0f4;
+  width: 50vw;
+}
+
+.secondLandingPageButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 40px;
+  gap: 8px;
+  background: #ba6d39;
+  border-radius: 100px;
+  color: white;
+  width: 208px;
+  height: 48px;
+  z-index: 1;
+  cursor: pointer;
+  span {
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+  }
+}
+
+.secondLandingPageButton:hover {
+  background-color: #dcd1ad;
+  color: #12100e;
+}
+
+.secondLandingPageImg {
+  img {
+    mix-blend-mode: overlay;
+  }
+}
+
+[data-aos='rotate-c'] {
+  transform: rotate(-90deg);
+  transition-property: transform;
+}
+[data-aos='rotate-c'].aos-animate {
+  transform: rotate(0deg);
+}
+
+.secondLandingPagewheel {
+  margin-top: -49em;
+  width: 37vw;
+  margin-left: -18.5vw;
+  mix-blend-mode: overlay;
+}
+
+@media only screen and (max-width: 1150px) {
+  .secondLandingPagewheel {
+    margin-top: -47em;
+    width: 50vw;
+    margin-left: -24.5vw;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .secondLandingPageDescription {
+    font-size: 15px;
+  }
+}

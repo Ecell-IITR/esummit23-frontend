@@ -5,14 +5,12 @@ import FetchApi from '../utils/fetchAPI';
 import { TEAM_REGISTER_API } from '../utils/APIs';
 import { getAuthToken } from '../utils';
 
-
-
 function Dashboard(props) {
   const [inputFields, setInputFields] = useState([]);
   const [TeamName, setTeamName] = useState('');
   const [Ans1, setAns1] = useState('');
   const [Ans2, setAns2] = useState('');
-  const [Email,setEmail] = useState('');
+  const [Email, setEmail] = useState('');
   const handleFormChange = (index, event) => {
     let data = [...inputFields];
     data[index][event.target.name] = event.target.value;
@@ -20,11 +18,10 @@ function Dashboard(props) {
   };
   const addFields = () => {
     let newfield = { full_name: '', email: '', phone_number: '' };
-    if(inputFields.length<4){
-    setInputFields([...inputFields, newfield]);
-    }
-    else{
-      toast.error('only 5 members allowed')
+    if (inputFields.length < 4) {
+      setInputFields([...inputFields, newfield]);
+    } else {
+      toast.error('only 5 members allowed');
     }
   };
   const removeFields = (index) => {
@@ -37,45 +34,45 @@ function Dashboard(props) {
   const mobileRegex = /^[0][1-9]\d{9}$|^[1-9]\d{9}$/;
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if(TeamName==""){
-      toast.error('please enter valid Team Name!')
+    if (TeamName == '') {
+      toast.error('please enter valid Team Name!');
       return;
     }
-    if (inputFields.length  > 0) {
-    for(const [i,inputField] of inputFields.entries()){
-   
-      if(inputField.full_name==""){
-       toast.error('please enter valid name!')
-       return;
+    if (inputFields.length > 0) {
+      for (const [i, inputField] of inputFields.entries()) {
+        if (inputField.full_name == '') {
+          toast.error('please enter valid name!');
+          return;
+        }
       }
- }
- for(const [i,inputField] of inputFields.entries()){
-  if(!inputField.email.match(emailRegex)){
-     toast.error('please enter valid email!')
-     return;
-  }
- }
- for(const [i,inputField] of inputFields.entries()){
-  if(!inputField.phone_number.match(mobileRegex)){
-     toast.error('please enter valid mobile number!')
-     return;
-  }
- }}
- if(props.noQuestions==1){
-       if(Ans1==""){
-        toast.error('please enter an answer')
+      for (const [i, inputField] of inputFields.entries()) {
+        if (!inputField.email.match(emailRegex)) {
+          toast.error('please enter valid email!');
+          return;
+        }
+      }
+      for (const [i, inputField] of inputFields.entries()) {
+        if (!inputField.phone_number.match(mobileRegex)) {
+          toast.error('please enter valid mobile number!');
+          return;
+        }
+      }
+    }
+    if (props.noQuestions == 1) {
+      if (Ans1 == '') {
+        toast.error('please enter an answer');
         return;
-       }
- }else if(props.noQuestions==2){
-  if(Ans1==""){
-    toast.error('please enter an answer')
-    return;
-   }
-   if(Ans2==""){
-    toast.error('please enter an answer')
-    return;
-   }
- }
+      }
+    } else if (props.noQuestions == 2) {
+      if (Ans1 == '') {
+        toast.error('please enter an answer');
+        return;
+      }
+      if (Ans2 == '') {
+        toast.error('please enter an answer');
+        return;
+      }
+    }
 
     const data = {
       no_user: inputFields.length,
@@ -84,17 +81,14 @@ function Dashboard(props) {
       event: props.name,
       submission_text: Ans1 + '<br>' + Ans2,
     };
-  
 
     FetchApi('POST', TEAM_REGISTER_API, data, getAuthToken())
       .then((res) => {
         toast.success('Team Registered!');
-        props.handleClose()
-
+        props.handleClose();
       })
       .catch((err) => {
         toast.error('Please check the details!');
-   
       });
   };
   return (
@@ -137,9 +131,9 @@ function Dashboard(props) {
                     name='email'
                     value={input.email}
                     placeholder='Email Address'
-                    onChange={(event) =>{
-                       handleFormChange(index, event);
-                       setEmail(event.target.value);
+                    onChange={(event) => {
+                      handleFormChange(index, event);
+                      setEmail(event.target.value);
                     }}
                   ></input>
                 </div>
@@ -153,7 +147,12 @@ function Dashboard(props) {
                     onChange={(event) => handleFormChange(index, event)}
                   />
                 </div>
-                <img src="/Delete.png" onClick={()=>{removeFields(index)}} />
+                <img
+                  src='/Delete.png'
+                  onClick={() => {
+                    removeFields(index);
+                  }}
+                />
                 {/* <div className='commonDetail_GRF gender_GRF'>
                   <input
                     className='commonInput_GRF'
@@ -169,8 +168,7 @@ function Dashboard(props) {
           </div>
         );
       })}
-      <div style={{width:"20rem",cursor: "pointer"
-}}>
+      <div style={{ width: '20rem', cursor: 'pointer' }}>
         <div className='addMember_GRF'>
           <div className='addMemberOption_GRF'>
             <div className='addSymbol_GRF' onClick={addFields}>
@@ -186,7 +184,6 @@ function Dashboard(props) {
             </div>
           </div>
         </div>
-        
       </div>
       <div className='questionBigContainer_GRF'>
         {props.noQuestions > 0 ? (
@@ -223,7 +220,7 @@ function Dashboard(props) {
         )}
       </div>
 
-      <div className='submitButton' >
+      <div className='submitButton'>
         <button
           className='button_GRF'
           onClick={handleSubmit}

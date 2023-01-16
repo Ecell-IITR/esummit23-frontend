@@ -15,18 +15,14 @@ export const initializeGA = (initialUser) => {
       userId: initialUser ? initialUser.id : USER_DEFAULT_ID, // default ID
     },
   });
-  
 };
 
 export const logSetUser = (user) => {
   if (user) {
-    
     ReactGA.set({
       userId: user.id,
-      
     });
   } else {
-
     ReactGA.set({
       userId: USER_DEFAULT_ID,
     });
@@ -35,16 +31,11 @@ export const logSetUser = (user) => {
 
 // PageView
 export const logPageView = (pathname) => {
- 
   ReactGA.set({ page: pathname }); // Update the user's current page
   ReactGA.pageview(pathname, [], pathname); // Record a pageview for the given page
-
-
 };
 
-
 export const logAttemptSignIn = () => {
-
   ReactGA.event({
     category: 'Authentication',
     action: 'Attempt Sign In',
@@ -53,7 +44,6 @@ export const logAttemptSignIn = () => {
 };
 
 export const logSignIn = () => {
-
   ReactGA.event({
     category: 'Authentication',
     action: 'Signed In',
@@ -63,7 +53,6 @@ export const logSignIn = () => {
 
 // Sign Up
 export const logAttemptSignUp = () => {
-
   ReactGA.event({
     category: 'Authentication',
     action: 'Attempt Sign Up',
