@@ -12,7 +12,7 @@ import Navbar from '../Components/Navbar';
 function Dashboard() {
   const [name, setName] = useState('');
   const [Id, setId] = useState('');
-
+  const [name2, setName2] = useState('');
   const [Reg, setReg] = useState([]);
   const [Avail, setAvail] = useState([]);
   const [attempts, setattempts] = useState(0);
@@ -28,7 +28,7 @@ function Dashboard() {
 
     // setName(second[0]);
     setId(second);
-    setName(first);
+    setName2(first);
 
     if (isAuthenticated()) {
       router.push(`/dashboard`);
@@ -60,7 +60,7 @@ function Dashboard() {
       <div className='dashboardContainer'>
         <div className='dashboardSubContainer'>
           <div className='dashboardContainerHeader'>
-            <ProfileCard name={name} esummit_id={Id} />
+            <ProfileCard name={name2} esummit_id={Id} />
             <div></div>
           </div>
           <div className='dashboardEventContainer'>
