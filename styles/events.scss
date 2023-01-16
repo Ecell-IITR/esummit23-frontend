@@ -569,6 +569,7 @@ color: #FFFFFF!important;
 
 
 
+
 }
 .aboutContainer {
   width: 90%;
@@ -594,7 +595,8 @@ color: #FFFFFF!important;
   margin-top: 12px;
 }
 .secondcontainer {
-  margin-top: -4rem;
+  overflow: hidden;
+  margin-top: 2rem;
   display: flex;
   margin-left: 1rem;
   display: flex;
@@ -683,8 +685,9 @@ color: #FFFFFF!important;
 .roundnamecontent {
   // background-color: yellow;
   // border: 1px solid red;
+  overflow: hidden;
   width: 60vw;
-  height: 20rem;
+  // height: 25rem;
   border-radius: 12px;
   padding-top: 4px;
   background: #f3edd8;
@@ -693,6 +696,7 @@ color: #FFFFFF!important;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  // margin-top: 5rem;
 }
 .triangle-right {
   border-top: 33px solid transparent;
@@ -844,7 +848,22 @@ color: #FFFFFF!important;
   margin-top: 43.548828125px;
 }
 
+.paragraph{
+text-overflow: ellipsis;
+}
+
+.triangleDate p{
+  overflow: hidden;
+}
+
 .triangleDate {
+  // background-color: red;
+  overflow: hidden;
+  text-overflow: initial;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  // align-items: flex-end;
   font-family: 'Lexend';
   font-style: normal;
   font-weight: 500;
@@ -853,6 +872,7 @@ color: #FFFFFF!important;
   color: #12100e;
   padding: 1.2rem;
   width: 100%;
+  height: 20rem;
 }
 .listIdeathon {
   font-size: 0.875rem;
@@ -1090,8 +1110,8 @@ color: #FFFFFF!important;
     }
     .triangleDate{
       font-family: 'Lexend';
-      font-size: 8px;
-      line-height: 10px;
+      // font-size: 8px;
+      // line-height: 10px;
     padding-right: 4px;
     }
 }
