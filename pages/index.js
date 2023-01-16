@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from '../Components/Navbar';
 import React from 'react';
-// import Animation from '../Components/Animation';
+import Animation from '../Components/Animation';
 import Lottie from 'react-lottie';
 import SecondLandingPage from '../Components/SecondLandingPage';
 import ThirdLandingPage from '../Components/ThirdLandingPage';
@@ -17,12 +17,11 @@ export default function Home() {
 
   return (
     <>
-      {/* <Animation/> */}
 
-      <Navbar />
-      <div className='LottieContainer'>
+      {/* <Navbar /> */}
+      {/* <div className='LottieContainer'>
         <Lottie options={defaultOptions} />
-      </div>
+      </div> */}
       <div className='Seo-text'>
         <p>
           E-Summit 22 is organised by E-Cell IIT Roorkee which is one of the
@@ -32,6 +31,7 @@ export default function Home() {
           much more{' '}
         </p>
       </div>
+      <Animation/>
 
       <div>
         <SecondLandingPage />
@@ -43,6 +43,7 @@ export default function Home() {
         <Footer />
       </div>
        <div style={{width:"100vw",height:"100vh"}}></div>  */}
+      {/* <div style={{width:"100vw",height:"100vh"}}></div> */}
 
       <div className='Seo-text'>
         <p>
