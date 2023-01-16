@@ -148,9 +148,7 @@ function Footer() {
           © 2022, E-cell IIT Roorkee, All rights reserved
         </div>
       </div>
-      <br></br>
-      <br></br>
-      <br></br>
+      
     </div>
   );
 }

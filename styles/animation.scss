@@ -286,8 +286,19 @@
 //for mobile view all css is written below
 
 .containerAnimationMobile {
-  height: 45rem;
+
   width: 100%;
+  
+  
+}
+@media screen and (max-width: 600px) {
+
+  .containerAnimationMobile {
+  height: 150vw;
+  width: 100%;
+  background-size:100vw 150vw;
+  background-repeat: no-repeat;
+}
 }
 .coin1MobileAnimation {
   padding: 0.2rem;
