@@ -46,7 +46,9 @@ export default function Events({ posts }) {
       <div className='eventPgFlex'>
         {posts?.map((post, id) => {
           return (
-            <div className='eventPgCards'>
+            <div className='eventPgCards'
+            style={{height:"27rem"}}
+            >
               <div className='eventcimg'>
                 <Image
                   src={
@@ -74,14 +76,18 @@ export default function Events({ posts }) {
                   style={{ textAlign: 'initial', lineHeight: '19px' }}
                 ></div>
 
-                <a classname='eventPga' href={'/events/' + post?.event_name}>
+                <a classname='eventPga'
+                style={{marginTop:"-50rem"}}
+                 href={'/events/' + post?.event_name}>
                   Read more
                 </a>
 
                 {/* ({post.card_description.length>200?post.card_description.slice(0,200):post.card_description}) */}
               </div>
 
-              <div className='eventPgBtnC'>
+              <div className='eventPgBtnC'
+              style={{marginTop:"1.5rem"}}
+              >
                 <button
                   className='eventPgBtn'
                   onClick={() => {
@@ -89,7 +95,7 @@ export default function Events({ posts }) {
                   }}
                 >
                   {' '}
-                  Apply Now{' '}
+                  Register Now{' '}
                 </button>
 
                 <Image src='/Vector.png' height='16px' width='21.3px'></Image>
