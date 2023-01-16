@@ -15,8 +15,10 @@ const SecondLandingPage = () => {
     return (
       <div
         style={{
-          backgroundSize: '100vw',
-          backgroundImage: 'url(/mblp.png)',
+         
+          backgroundImage: "url(/mblp.png)",
+          height: "100vh",
+          backgroundSize:"100vw 100vh",
         }}
         className='containerAnimationMobile'
       >

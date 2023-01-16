@@ -5,7 +5,7 @@ import Animation from '../Components/Animation';
 import Lottie from 'react-lottie';
 import SecondLandingPage from '../Components/SecondLandingPage';
 import ThirdLandingPage from '../Components/ThirdLandingPage';
-import Footer from "../Components/Footer/Footer"
+
 
 
 export default function Home() {
@@ -22,29 +22,7 @@ export default function Home() {
       {/* <div className='LottieContainer'>
         <Lottie options={defaultOptions} />
       </div> */}
-      <div className='Seo-text'>
-        <p>
-          E-Summit 22 is organised by E-Cell IIT Roorkee which is one of the
-          Largest Entrepreneurship Promoting college body in Asia.E-Summit has
-          hosted some of the most prominent stalwarts of the industry over the
-          years including but not limited to Startup expo, speaker events and
-          much more{' '}
-        </p>
-      </div>
-      <Animation/>
-
-      <div>
-        <SecondLandingPage />
-      </div>
-      <div>
-        <ThirdLandingPage />
-      </div>
-      {/* <div>
-        <Footer />
-      </div>
-       <div style={{width:"100vw",height:"100vh"}}></div>  */}
-      {/* <div style={{width:"100vw",height:"100vh"}}></div> */}
-
+      
       <div className='Seo-text'>
         <p>
           To find a way out of the darkness that has engulfed us over the past
@@ -75,6 +53,30 @@ export default function Home() {
           the event is to inspire and offer rays of hope to attendees.
         </p>
       </div>
+      <div className='Seo-text'>
+        <p>
+          E-Summit 22 is organised by E-Cell IIT Roorkee which is one of the
+          Largest Entrepreneurship Promoting college body in Asia.E-Summit has
+          hosted some of the most prominent stalwarts of the industry over the
+          years including but not limited to Startup expo, speaker events and
+          much more{' '}
+        </p>
+      </div>
+      <Animation/>
+
+      <div>
+        <SecondLandingPage />
+      </div>
+      <div>
+        <ThirdLandingPage />
+      </div>
+      <div></div>
+      {/* <div>
+        <Footer />
+      </div> */}
+       {/* <div style={{width:"100vw",height:"100vh"}}></div>  */}
+      {/* <div style={{width:"100vw",height:"100vh"}}></div> */}
+
     </>
   );
 }
