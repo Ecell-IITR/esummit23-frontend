@@ -196,6 +196,38 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
         value: 29,
         label: 'West Bengal',
       },
+      {
+        value: 30,
+        label: 'Jammu and Kashmir',
+      },
+      {
+        value: 31,
+        label: 'Ladakh',
+      },
+      {
+        value: 32,
+        label: 'Puducherry',
+      },
+      {
+        value: 33,
+        label: 'Lakshadweep',
+      },
+      {
+        value: 34,
+        label: 'Delhi',
+      },
+      {
+        value: 35,
+        label: 'Chandigarh',
+      },
+      {
+        value: 36,
+        label: 'Dadra and Nagar Haveli and Daman & Diu',
+      },
+      {
+        value: 37,
+        label: 'Andaman and Nicobar Islands',
+      },
     ];
     const handleChange = (e) => {
       setState(e);
