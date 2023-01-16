@@ -1,33 +1,35 @@
 import { useState } from 'react';
 import React from 'react';
 
-function Register({ IsRegistered, img, name, desc }) {
+import Modal from 'react-bootstrap/Modal';
+
+function Register(props) {
   return (
     <>
       <div className='containerRegister'>
         <div className='photoRegister'>
-          <img className='photoRegisterImg' src={img} />
+          <img className='photoRegisterImg' src={props?.img} />
         </div>
 
         <div
           style={
-            IsRegistered == 1
+            props.IsRegistered == 1
               ? { backgroundColor: '#BA6D39', color: 'white' }
               : { backgroundColor: '#F3EDD8' }
           }
           className='eventRegister'
         >
-          {name}
+          {props.name}
         </div>
 
         <div
           style={
-            IsRegistered == 1
+            props.IsRegistered == 1
               ? { backgroundColor: '#BA6D39', color: 'white' }
               : { backgroundColor: '#F3EDD8' }
           }
           className='descriptionRegister'
-          dangerouslySetInnerHTML={{ __html: desc }}
+          dangerouslySetInnerHTML={{ __html: props.desc }}
         ></div>
       </div>
     </>

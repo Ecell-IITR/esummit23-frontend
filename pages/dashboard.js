@@ -17,6 +17,9 @@ function Dashboard() {
   const [Avail, setAvail] = useState([]);
   const [attempts, setattempts] = useState(0);
   const [show, setShow] = useState(false);
+  const [No, setNo] = useState(0);
+  const [question1, setquestion1] = useState('');
+  const [question2, setquestion2] = useState('');
   const handleClose = () => setShow(false);
   const router = useRouter();
 
@@ -78,7 +81,21 @@ function Dashboard() {
           <div className='dashboardEventContainer'>
             <div className='dashboardEventHeader'>Events Available</div>
             <div className='dashboardEventCardsContainer'>
+              <Modal
+                contentClassName='my-modal'
+                show={show}
+                onHide={handleClose}
+              >
+                <DashboardForm
+                  handleClose={handleClose}
+                  noQuestions={No}
+                  name={name}
+                  Q_1={question1}
+                  Q_2={question2}
+                />
+              </Modal>
               {Avail.map((item) => {
+             
                 return (
                   <>
                     <div className='dashboardRegisterBox'>
@@ -88,22 +105,14 @@ function Dashboard() {
                         name={item.name}
                         desc={item.desc}
                       />
-                      <Modal
-                        contentClassName='my-modal'
-                        show={show}
-                        onHide={handleClose}
-                      >
-                        <DashboardForm
-                          handleClose={handleClose}
-                          noQuestions={item.no_of_QA}
-                          name={item.name}
-                          Q_1={item.question1}
-                          Q_2={item.question2}
-                        />
-                      </Modal>
+
                       <div
                         onClick={() => {
                           setShow(true);
+                          setNo(item.no_of_QA);
+                          setName(item.name);
+                          setquestion1(item.question1);
+                          setquestion2(item.question2);
                         }}
                         className='dashboardRegisterButton'
                       >

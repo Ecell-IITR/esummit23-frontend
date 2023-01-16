@@ -171,7 +171,7 @@ function Dashboard(props) {
       <div style={{ width: '20rem', cursor: 'pointer' }}>
         <div className='addMember_GRF'>
           <div className='addMemberOption_GRF'>
-            <div className='addSymbol_GRF' onClick={addFields}>
+            <div className='addSymbol_GRF' onClick={()=>{addFields()}}>
               <Image
                 className='addImage'
                 src='/add.webp'
@@ -179,7 +179,7 @@ function Dashboard(props) {
                 height='9rem'
               ></Image>
             </div>
-            <div className='afterAddSymbol_GRF' onClick={addFields}>
+            <div className='afterAddSymbol_GRF' onClick={()=>{addFields()}}>
               Add Member
             </div>
           </div>
@@ -223,7 +223,7 @@ function Dashboard(props) {
       <div className='submitButton'>
         <button
           className='button_GRF'
-          onClick={handleSubmit}
+          onClick={()=>{handleSubmit}}
           placeholder='SUBMIT RESPONSE'
         >
           SUBMIT RESPONSE
