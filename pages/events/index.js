@@ -49,7 +49,9 @@ export default function Events({ posts }) {
             <div className='eventPgCards'>
               <div className='eventcimg'>
                 <Image
-                  src='/Rectangle 118.png'
+                  src={
+                    post?.card_image ? post?.card_image : '/Rectangle 118.png'
+                  }
                   height='220px'
                   width='376px'
                 ></Image>
