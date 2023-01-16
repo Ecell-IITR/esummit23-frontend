@@ -11,8 +11,6 @@ import Script from 'next/script';
 import config from '../config';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Dash from "../Components/DashboardForm"
-
 function MyApp({ Component, pageProps }) {
   return (
     <>

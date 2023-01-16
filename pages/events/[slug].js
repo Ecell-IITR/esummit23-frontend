@@ -7,13 +7,12 @@ import Sponsors from '../../Components/EventsPage/Sponsor';
 import { useMobile, useUpdateMobile } from '../../utils/MobileContext';
 export default function EventsDetails({ details }) {
   const router = useRouter();
+
   const setMobile = useUpdateMobile();
-  console.log(router);
 
   useEffect(() => {
     setMobile();
   }, []);
-  console.log(useMobile());
   return (
     <>
       <Header
@@ -41,11 +40,9 @@ export default function EventsDetails({ details }) {
     </>
   );
 }
-export async function getServerSideProps({ params}) {
-
-  console.log(params);
+export async function getServerSideProps({ params }) {
   const url = EVENT_API(params.slug);
-  console.log(url);
+
   const response = await fetch(url);
   const detailsEvents = await response.json();
   const details = detailsEvents[0];

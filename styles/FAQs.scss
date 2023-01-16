@@ -1,0 +1,52 @@
+.speakersContainer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #232323;
+}
+.faqContainer {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #232323;
+}
+.faqHeading {
+  width: 90px;
+  height: 48px;
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 44px;
+  color: #dcd1ad;
+  margin-bottom: 64px;
+}
+.questionContainer {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+}
+.FrequentlyAskedQuestions {
+  width: 85vw;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  padding: 16px 15px 22px 16px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid #dcd1ad;
+}
+.question {
+  width: 1245px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #ffffff;
+}
+.addSignContainer {
+  width: 28px;
+  height: 28px;
+}

@@ -6,7 +6,6 @@ import { useRouter } from 'next/router';
 import { isAuthenticated } from '../../utils';
 import Navbar from '../../Components/Navbar';
 export default function Events({ posts }) {
-  console.log(posts);
   const router = useRouter();
   const rederict = () => {
     if (isAuthenticated()) {
@@ -20,9 +19,8 @@ export default function Events({ posts }) {
   useEffect(() => {
     const rotation = window.innerWidth;
     setWidth(rotation);
-    console.log(width);
   });
-  
+
   return (
     <div className='eventPgCont'>
       <Navbar />
@@ -51,8 +49,10 @@ export default function Events({ posts }) {
             <div className='eventPgCards'>
               <div className='eventcimg'>
                 <Image
-                  src='/Rectangle 118.png'
-                  height='199px'
+                  src={
+                    post?.card_image ? post?.card_image : '/Rectangle 118.png'
+                  }
+                  height='220px'
                   width='376px'
                 ></Image>
               </div>
@@ -71,6 +71,7 @@ export default function Events({ posts }) {
                 <div
                   className='eventPgDesc'
                   dangerouslySetInnerHTML={{ __html: post?.card_description }}
+                  style={{ textAlign: 'initial', lineHeight: '19px' }}
                 ></div>
 
                 <a classname='eventPga' href={'/events/' + post?.event_name}>

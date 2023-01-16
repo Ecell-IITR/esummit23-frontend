@@ -17,7 +17,6 @@ function Dashboard() {
   const [Avail, setAvail] = useState([]);
   const [attempts, setattempts] = useState(0);
   const [show, setShow] = useState(false);
-  const [isauth, setisauth] = useState(false);
   const handleClose = () => setShow(false);
   const router = useRouter();
 
@@ -41,13 +40,20 @@ function Dashboard() {
       })
       .catch((err) => {
         setattempts(attempts + 1);
-        console.log(err);
       });
   }, []);
 
   return (
-    <div style={{minHeight:"100vh",minWidth:"100vw",background:"#301a08",height:"auto",width:"auto"}}>
-      <Navbar/>
+    <div
+      style={{
+        minHeight: '100vh',
+        minWidth: '100vw',
+        background: '#301a08',
+        height: 'auto',
+        width: 'auto',
+      }}
+    >
+      <Navbar />
       <div className='dashboardContainer'>
         <div className='dashboardSubContainer'>
           <div className='dashboardContainerHeader'>

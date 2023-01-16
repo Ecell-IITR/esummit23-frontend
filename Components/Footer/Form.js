@@ -33,27 +33,8 @@ const Forms = () => {
       })
       .catch((err) => {
         toast.error('Query Unsuccessful!');
-        console.log(err);
-        // const errors = err.response.data;
-        // for (let value of Object.values(errors)) {
-        //   toast.error('Error !', value[0]);
-        // }
-        // this.setState({
-        //   name: '',
-        //   email: '',
-        //   message: '',
-        //   contact: null,
-        //   query: '',
-        // });
       });
   };
-
-  // FetchApi('get','http://127.0.0.1:8000/design/colors/',null,null)
-  // .then((res) => {
-
-  //   console.log(res['data']['1']['colourid']);
-
-  //   })
 
   return (
     <>

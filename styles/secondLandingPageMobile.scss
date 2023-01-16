@@ -1,0 +1,76 @@
+.secondLandingPageMobile {
+  width: 100vw;
+  height: 160vh;
+}
+
+.secondLandingPageMobileBackground {
+  width: 100vw;
+  height: 160vh;
+  position: relative;
+  z-index: -1;
+}
+
+.secondLandingPageMobileBox {
+  padding-left: 23px;
+}
+
+.secondLandingPageMobileHeading {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 110%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #dcd1ad;
+  padding-bottom: 64px;
+}
+
+.secondLandingPageMobileDescription1 {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  opacity: 0.7;
+}
+
+.mobileWheel {
+  width: 100vw;
+  z-index: 10;
+  position: relative;
+}
+
+.secondLandingPageMobileButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  // padding: 12px 40px;
+  gap: 8px;
+  background-color: #ba6d39;
+  color: #ffffff;
+  border-radius: 100px;
+  border: none;
+  width: 208px;
+  height: 48px;
+  span {
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+}
+
+.secondLandingPageMobileButton:hover {
+  background: #dcd1ad;
+  color: #12100e;
+}
