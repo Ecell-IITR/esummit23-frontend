@@ -265,7 +265,6 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
                     value={Year}
                     onChange={(e) => setYear(e.target.value)}
                   />
-
                   <Select
                     styles={{
                       control: (baseStyles, state) => ({
