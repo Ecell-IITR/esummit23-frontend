@@ -57,7 +57,7 @@ export default function Home() {
           lithora of opportunity.Esummit 2022 organized between 21 Jan to 23 Jan
           which promates the idea of startup india also giving opportunity of
           networkink funding and much more. Hope to see you in E-summit 22
-          organized by IIT Roorkee{' '}
+          organized by IIT Roorkee
         </p>
       </div>
       <div className='Seo-text'>
@@ -65,7 +65,7 @@ export default function Home() {
           IIT Bombay will host the  E-Summit'23 aims to provide a platform for
           discussion on innovative ideas that have the potential to transform
           current challenges into opportunities for positive change. The goal of
-          the event is to inspire and offer rays of hope to attendees.{' '}
+          the event is to inspire and offer rays of hope to attendees.
         </p>
       </div>
     </>
