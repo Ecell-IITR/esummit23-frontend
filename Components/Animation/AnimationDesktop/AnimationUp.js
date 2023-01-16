@@ -1,4 +1,4 @@
-import React ,{useState,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 function AnimationUp() {
   const [width, setwidth] = useState(300);
@@ -31,17 +31,25 @@ function AnimationUp() {
           <div className='coin4'>
             <img className='coin175year' src='coin7.png'></img>
           </div>
-          {width>1037? <div className='coin5'>
-            <img className='coin1paisa' src='coin6.png'></img>
-          </div>:<></>}
+          {width > 1037 ? (
+            <div className='coin5'>
+              <img className='coin1paisa' src='coin6.png'></img>
+            </div>
+          ) : (
+            <></>
+          )}
         </div>
         <div className='coinsDown'>
           <div className='coin6'>
             <img className='coinTiltedDesign' src='coin3.png'></img>
           </div>
-          {width>1037? <div className='coin7'>
-            <img className='coin175year' src='coin5.png'></img>
-          </div>:<></>}
+          {width > 1037 ? (
+            <div className='coin7'>
+              <img className='coin175year' src='coin5.png'></img>
+            </div>
+          ) : (
+            <></>
+          )}
         </div>
       </div>
     </>

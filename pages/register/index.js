@@ -62,17 +62,14 @@ const Registration = () => {
       if (RenderId == 1) {
         setfinishStatus(false);
         setRenderId(0);
-        console.log(0);
       }
       if (RenderId == 2) {
         setfinishStatus(false);
         setRenderId(1);
-        console.log(1);
       }
     } else {
       window.history.pushState(null, null, window.location.pathname);
       setfinishStatus(false);
-      console.log('false');
     }
   };
   useEffect(() => {

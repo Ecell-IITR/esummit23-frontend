@@ -5,14 +5,12 @@ import { useMobile, useUpdateMobile } from '../../utils/MobileContext';
 import Animation from '../Animation/AnimationDesktop/AnimationDown';
 import AnimationUp from '../Animation/AnimationDesktop/AnimationUp';
 
-
 import Navbar from '../Navbar';
 const SecondLandingPage = () => {
   const setMobile = useUpdateMobile();
   useEffect(() => {
     setMobile();
   });
-  console.log(useMobile().isMobile);
   if (useMobile().isMobile) {
     return (
       <div
@@ -22,7 +20,7 @@ const SecondLandingPage = () => {
         }}
         className='containerAnimationMobile'
       >
-        <Navbar/>
+        <Navbar />
         {/* <img src='/mblp.png'/> */}
       </div>
     );
@@ -34,10 +32,10 @@ const SecondLandingPage = () => {
           backgroundColor:
             'linear-gradient(180deg, #12100E 11%, rgba(46, 40, 34, 0.75) 120.26%)',
         }}
-      ><Navbar/>
+      >
+        <Navbar />
         <AnimationUp />
         <Animation />
-      
       </div>
     );
   }
