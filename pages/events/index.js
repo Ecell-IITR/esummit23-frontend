@@ -10,11 +10,7 @@ import DashboardForm from '../../Components/DashboardForm';
 import { Modal } from 'react-bootstrap';
 export default function Events({ posts }) {
   const [name, setName] = useState('');
-  const [Id, setId] = useState('');
-  const [name2, setName2] = useState('');
-  const [Reg, setReg] = useState([]);
-  const [Avail, setAvail] = useState([]);
-  const [attempts, setattempts] = useState(0);
+
   const [show, setShow] = useState(false);
   const [No, setNo] = useState(0);
   const [question1, setquestion1] = useState('');

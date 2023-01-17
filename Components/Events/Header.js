@@ -12,6 +12,10 @@ export default function Header(props) {
       router.push(`/login`);
     }
   };
+  const OnSubmit = () => {
+    props.setShow(true);
+    props.GetData(props.name);
+  }
 
   return (
     <>
@@ -24,7 +28,7 @@ export default function Header(props) {
             <div className='idea-Text1'>{props.name}</div>
             <div className='idea-Text2'>{props.tagline}</div>
             <div className='idea-text3'>
-            <button onClick={rederict} className='idea-Button'>
+            <button onClick={OnSubmit} className='idea-Button'>
               <span className='iBT'>REGISTER NOW</span>
             </button>
             </div>
