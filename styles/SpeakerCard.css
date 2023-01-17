@@ -1,20 +1,14 @@
-
-// .allSpeakerContainerDiv{
-//     width: 100vw;
-//     display: flex;
-//     justify-content: center;
-//     background: linear-gradient(180deg, #12100e 0%, #301a08 100%);
-//   }
 .allSpeakerContainer {
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(180deg, #12100e 0%, #301a08 100%);
-  }
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #12100e 0%, #301a08 100%);
+}
+
 .speakerText {
   width: 204px;
   height: 48px;
-  font-family: 'Lexend';
+  font-family: "Lexend";
   font-style: normal;
   font-weight: 600;
   font-size: 44px;
@@ -23,10 +17,11 @@
   align-items: center;
   color: #dcd1ad;
 }
+
 .SpeakerDescriptionText {
   width: 1312px;
   height: 108px;
-  font-family: 'Nunito Sans';
+  font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 400;
   color: #bdbdbd;
@@ -40,8 +35,7 @@
 }
 
 .sponsorCard {
-//   width: 416px;
-width: 416px;
+  width: 416px;
   height: 484px;
   display: flex;
   flex-direction: column;
@@ -68,7 +62,7 @@ width: 416px;
 }
 
 .sponsorCardYear {
-  font-family: 'Lexend';
+  font-family: "Lexend";
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -79,7 +73,7 @@ width: 416px;
 }
 
 .sponsorCardName {
-  font-family: 'Lexend';
+  font-family: "Lexend";
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -90,7 +84,7 @@ width: 416px;
 }
 
 .sponsorCardCompany {
-  font-family: 'Nunito Sans';
+  font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -108,16 +102,16 @@ width: 416px;
 }
 
 .sponsorCardCompany1 {
-  // visibility: hidden;
   display: none;
 }
+
 .sponsorCard:hover .sponsorCardCompany1 {
-  // visibility: visible;
   display: block;
   transition: 1s ease;
 }
+
 .speakerCardContainerDiv {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-}
+}/*# sourceMappingURL=SpeakerCard.css.map */

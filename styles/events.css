@@ -1,38 +1,43 @@
-//PERKS OF PARTICIPATING
 .event {
   width: 100%;
-  // background: linear-gradient(#12100E,#331C00);
 }
-.certificateDescription h4{
+
+.certificateDescription h4 {
   font-Family: Lexend;
   font-Weight: 600;
   font-Size: 18px;
   line-Height: 24px;
-  color: 'white';
+  color: "white";
 }
+
 .certificateDescription > div {
   font-Family: Lexend;
   font-Weight: 400;
   font-Size: 16px;
   line-Height: 24px;
-  color: 'white';
+  color: "white";
 }
+
 .container {
   height: 15rem;
   max-width: 100% !important;
   width: 100% !important;
   background-color: #ba6d39;
 }
+
 .heading {
   height: 5% !important;
 }
+
 .certificates {
   height: 90% !important;
   color: white;
 }
-.B{
+
+.B {
   z-index: 4;
 }
+
 .heading {
   width: 95%;
   font-size: 32px;
@@ -47,18 +52,19 @@
   justify-content: space-around;
   flex-wrap: wrap;
   align-content: center;
-  // margin-left: 150px;
   margin-top: 1rem;
 }
+
 .certificates .certificate {
   display: flex;
   height: 56px;
-
   margin-bottom: 50px;
 }
+
 .certificates .certificateImage {
   width: 56px;
 }
+
 .certificates .certificateImage .img {
   background-color: #f7f8ff;
   height: 100%;
@@ -67,33 +73,37 @@
   text-align: center;
   margin-top: -1rem;
 }
+
 .certificates .certificateImage .img svg {
   margin-top: 50%;
   transform: translateY(-50%);
 }
-.img{
-  display:flex;
+
+.img {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-
 .certificates .certificateDescription {
   padding-left: 18px;
-  // width: calc(100% - 56px);
 }
+
 .certificates .certificateDescription h2 {
   height: 24px;
   font-size: 18px;
 }
+
 .certificates .certificateDescription p {
   font-size: 12px;
 }
-.nameISCoordinator{
+
+.nameISCoordinator {
   font-weight: 500;
 }
-.helpRuleContainer{
- margin-top: 3rem;
+
+.helpRuleContainer {
+  margin-top: 4rem;
   height: 15rem;
 }
 
@@ -101,22 +111,21 @@
   .certificates .certificate {
     margin-bottom: 15px;
   }
-  .firstarrow,.secondarrow, .thirdarrow{
-   font-size: 10px;
-   font-weight: 400;
-   justify-content: center;
-   letter-spacing: 0.5px;
+  .firstarrow, .secondarrow, .thirdarrow {
+    font-size: 10px;
+    font-weight: 400;
+    justify-content: center;
+    letter-spacing: 0.5px;
   }
-  .A{
+  .A {
     gap: 1rem;
   }
 }
 @media only screen and (max-width: 680px) {
-  .A{
+  .A {
     gap: 1rem;
   }
 }
-//EVENT COORDINATOR
 .parentIS {
   padding: 4rem;
   background: linear-gradient(180deg, #2c2117 0%, #301a08 100%);
@@ -127,10 +136,11 @@
   justify-content: flex-start;
   align-items: center;
 }
+
 .coordinatorHeadingIS {
   font-size: 2rem;
   font-weight: bolder;
-  font-family: 'Lexend';
+  font-family: "Lexend";
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
@@ -142,7 +152,6 @@
 }
 
 .coordinatorDetailIS {
-  // border: 1px solid white;
   color: white;
   background-color: none;
   height: 35%;
@@ -155,7 +164,6 @@
 }
 
 .registerIS {
-  // border: 1px solid white;
   color: white;
   background-color: none;
   height: 40%;
@@ -174,8 +182,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  
 }
+
 .C {
   display: flex;
   flex-direction: column;
@@ -189,18 +197,17 @@
   min-width: 20rem;
 }
 
-.B{
+.B {
   border-radius: 1.5rem;
   min-width: 11rem;
   width: 35%;
   background: none;
-  // border: 1px solid white;
 }
 
 .nameISCoordinator {
   height: 40%;
   display: flex;
-  font-family: 'Lexend';
+  font-family: "Lexend";
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -211,6 +218,7 @@
   font-size: 1.5rem;
   color: #2a1809;
 }
+
 .mailISCoordinator {
   height: 15%;
   padding: 1rem;
@@ -220,6 +228,7 @@
   gap: 0.5rem;
   color: #2a1809;
 }
+
 .contactISCordinator {
   height: 15%;
   padding: 1rem;
@@ -252,21 +261,17 @@
 }
 
 .boldRegisterQuestion {
-  // border: 1px solid black;
   height: 25%;
   width: 80%;
-  font-family: 'Lexend';
+  font-family: "Lexend";
   font-style: normal;
   font-weight: 600;
   font-size: 28px;
   line-height: 110%;
   /* identical to box height, or 31px */
-
   display: flex;
   align-items: flex-end;
-
   color: #2f1908;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -274,11 +279,10 @@
 }
 
 .lightRegisterQuestion {
-  // border: 1px solid black;
   font-size: 1.1rem;
   height: 15%;
   width: 80%;
-  font-family: 'Nunito Sans';
+  font-family: "Nunito Sans";
   color: #2f1908;
   display: flex;
   justify-content: center;
@@ -287,7 +291,6 @@
 }
 
 .registerButton {
-  // border: 1px solid black;
   height: 25%;
   width: 80%;
   display: flex;
@@ -295,6 +298,7 @@
   align-items: center;
   font-weight: 700;
 }
+
 .button {
   width: 13rem;
   height: 65%;
@@ -304,21 +308,23 @@
   color: white;
   border: 2px solid #ba6d39;
 }
+
 .button:hover {
   background-color: #DCD1AD;
   color: #12100E;
-  border:2px solid #DCD1AD ;
+  border: 2px solid #DCD1AD;
 }
 
 .inbox {
   height: 20px;
   width: 20px;
 }
+
 .mailId {
   height: 1.5rem;
   width: 80%;
   text-align: start;
-  font-family: 'Nunito Sans';
+  font-family: "Nunito Sans";
   opacity: 90%;
 }
 
@@ -330,7 +336,6 @@
   .C {
     height: 12rem;
   }
-  
   .event {
     width: 55rem;
   }
@@ -343,17 +348,14 @@
     align-items: center;
     z-index: 4;
   }
-  .nameISCoordinator{
+  .nameISCoordinator {
     font-size: 1.3rem;
   }
   .coordinatorDetailIS {
     height: 1rem;
-    gap:0rem;
+    gap: 0rem;
   }
 }
-
-//SPONSOR CARD
-
 .CardBox1 {
   height: 15.75rem;
   width: 5rem;
@@ -367,6 +369,7 @@
   background-color: #98613b;
   border-radius: 0px 12px 12px 0px;
 }
+
 .CardContainer {
   display: flex;
   justify-content: center;
@@ -375,12 +378,12 @@
   background: linear-gradient(180deg, #1e150d 0%, #2b2118 100%);
   height: 32rem;
 }
+
 .CardContent {
   width: 80%;
   height: 23.9375rem;
   background-color: #f3edd8;
-  box-shadow: 0px -35px 12px 12px rgba(46, 25, 8, 0.1),
-    0px 0px 15px 10px rgba(46, 25, 8, 0.05);
+  box-shadow: 0px -35px 12px 12px rgba(46, 25, 8, 0.1), 0px 0px 15px 10px rgba(46, 25, 8, 0.05);
   border-radius: 12px;
   gap: 43px;
   display: flex;
@@ -392,23 +395,23 @@
 }
 
 .sponsorImage {
-  // border: 1px solid black;
   width: 100%;
   height: 15%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .gfg {
-  // border: 1px solid black;
   width: 55%;
   height: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .CText1 {
-  font-family: 'Lexend';
+  font-family: "Lexend";
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
@@ -476,25 +479,16 @@
   .coordinatorHeadingIS {
     font-size: 24px;
   }
- 
 }
-
-//SPONSOR CARD END
-
-//EVENT COORDINATOR END
-
 @media screen and (max-width: 1235px) {
   .coordinatorDetailIS {
     align-items: center;
     height: 40rem;
   }
-
   .C {
     height: 8rem;
-  
   }
 }
-
 @media screen and (max-width: 1235px) {
   .registerFront {
     height: 15rem;
@@ -505,7 +499,6 @@
     width: 42rem;
   }
 }
-
 @media screen and (max-width: 960px) {
   .registerBack {
     width: 70vw;
@@ -520,9 +513,7 @@
   .lightRegisterQuestion {
     font-size: 16px;
   }
-
 }
-
 @media screen and (max-width: 960px) {
   .registerBack {
     width: 85vw;
@@ -531,7 +522,6 @@
     width: 10vw;
   }
 }
-
 .containerEvents {
   margin-top: 6rem;
   background: linear-gradient(180deg, #12100e 0%, #301a08 100%);
@@ -549,22 +539,20 @@
   align-items: center;
   width: 100%;
 }
+
 .aboutbox {
   width: 100%;
-  font-family: 'Nunito Sans'!important;
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 150%;
-
-display: flex;
-align-items: center;
-letter-spacing: 0.04em;
-
-color: #FFFFFF!important;
-
-
+  font-family: "Nunito Sans" !important;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+  color: #FFFFFF !important;
 }
+
 .aboutContainer {
   width: 90%;
   height: 20rem;
@@ -573,21 +561,24 @@ color: #FFFFFF!important;
   padding: 3.5rem;
   margin-top: 6rem;
 }
+
 .aboutHeading {
   color: #e8dbb9;
-  font-family: 'Lexend' !important;
+  font-family: "Lexend" !important;
   font-weight: 700 !important;
   font-style: normal;
   width: 100%;
   font-size: 2rem !important;
 }
+
 .aboutEvent {
-  font-family: 'Nunito Sans';
+  font-family: "Nunito Sans";
   text-align: justify;
   height: 135px;
   width: 100%;
   margin-top: 12px;
 }
+
 .secondcontainer {
   margin-top: -4rem;
   display: flex;
@@ -599,43 +590,42 @@ color: #FFFFFF!important;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  // margin-left: 0.1rem;
-
 }
+
 .helpArrow {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 10px;
-
   width: 9rem;
   height: 3rem;
-
   background: #98613b;
   border-radius: 6px;
 }
+
 .rulecontainer {
   padding: 2rem;
-  // background-color: green;
   width: 100%;
 }
+
 .secondarrow,
 .thirdarrow {
   width: 6rem;
   border-radius: 6px;
-
   background-color: #98613b;
 }
+
 .firstarrow {
   border-radius: 6px 0px 0px 6px;
-  clip-path: polygon(0 0, 80% 0%, 100% 50%, 80% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 80% 0%, 100% 50%, 80% 100%, 0 100%);
+          clip-path: polygon(0 0, 80% 0%, 100% 50%, 80% 100%, 0 100%);
   background-color: #98613b;
   margin-top: -0.1rem;
   width: 100%;
   height: 4.2rem;
   justify-content: center;
-  font-family: 'Lexend';
+  font-family: "Lexend";
   font-style: normal;
   font-weight: 600;
   font-size: 22px;
@@ -644,12 +634,11 @@ color: #FFFFFF!important;
   align-items: center;
   color: #ffffff;
   padding-right: 1rem;
-  
 }
 
 .secondarrow,
 .thirdarrow {
-  font-family: 'Lexend';
+  font-family: "Lexend";
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -664,15 +653,15 @@ color: #FFFFFF!important;
   background-color: #9b9996;
   width: 0.5rem;
 }
+
 .helpVerticalLine {
   width: 9rem;
   height: 19%;
   display: flex;
   justify-content: center;
 }
+
 .roundnamecontent {
-  // background-color: yellow;
-  // border: 1px solid red;
   width: 60vw;
   height: 20rem;
   border-radius: 12px;
@@ -684,16 +673,18 @@ color: #FFFFFF!important;
   justify-content: center;
   align-items: center;
 }
+
 .triangle-right {
   border-top: 33px solid transparent;
   border-left: 50px solid #98613b;
   border-bottom: 33px solid transparent;
 }
+
 .rulecontainer,
 .criteriacontainer {
   display: flex;
   flex-direction: column;
-  font-family: 'Nunito Sans';
+  font-family: "Nunito Sans";
   height: 25rem;
   width: 90%;
 }
@@ -701,30 +692,34 @@ color: #FFFFFF!important;
 .criteria {
   opacity: 80%;
   padding-top: 2rem;
-  padding-right: 3rem;
 }
+
 .rulecontainer {
   margin-top: 2rem;
 }
+
 .criteriacontainer {
   margin-top: -6rem;
 }
+
 .helpSecondContainer {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .helpRuleContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 8rem;
+  margin-bottom: 5rem;
 }
+
 .ruleheading,
 .criteriaheading {
   display: flex;
   align-items: center;
-  font-family: 'Lexend';
+  font-family: "Lexend";
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -736,8 +731,9 @@ color: #FFFFFF!important;
   height: 15%;
   margin-left: 2rem;
 }
+
 .ruleheading {
-  font-family: 'Lexend';
+  font-family: "Lexend";
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -746,6 +742,7 @@ color: #FFFFFF!important;
   align-items: center;
   color: #f2f2f2;
 }
+
 .criteriacontainer {
   padding: 2rem;
 }
@@ -753,51 +750,48 @@ color: #FFFFFF!important;
 .rulebox {
   font: Nunito Sans;
 }
+
 .rules {
   opacity: 80%;
   width: 100%;
   padding-top: 2rem;
-  padding-right: 3rem;
 }
+
 .rulesMentioned {
   height: 10%;
   width: 100%;
-  // background-color:yellow;
   display: flex;
   flex-direction: row;
   gap: 0.3rem;
   margin-left: 1rem;
 }
+
 .bullets {
   width: 2rem;
   height: 2rem;
-  // background-color: red;
 }
+
 .writtenRules {
   width: 90%;
   height: 100%;
-  font-family: 'Nunito Sans';
+  font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
   /* identical to box height, or 27px */
-
   display: flex;
   align-items: center;
   letter-spacing: 0.04em;
-
   /* White */
-
   color: #ffffff;
-
-  // background-color: green;
 }
 
 .helpRules {
   height: 100%;
   width: 100%;
 }
+
 .perksbox {
   height: 251px;
   width: 100%;
@@ -805,20 +799,24 @@ color: #FFFFFF!important;
   padding: 18px 156px 64px 156px;
   background: #98613b;
 }
+
 .perksheading {
   height: 35px;
   width: 100%;
   size: 32px;
   margin-left: 500px;
 }
+
 .pstmt {
   font-size: 12px;
 }
+
 .perksflex {
   display: flex;
   justify-content: space-around;
   padding-top: 60px;
 }
+
 .backgroundbox {
   height: 316px;
   width: 100%;
@@ -827,24 +825,25 @@ color: #FFFFFF!important;
   border-radius: 12px;
   background-color: #98613b;
 }
+
 .simg {
-  height: 160.35000610351562px;
+  height: 160.3500061035px;
   width: 100%;
   margin-left: 3.349609375px;
   margin-top: 43.548828125px;
 }
 
 .triangleDate {
-  font-family: 'Lexend';
+  font-family: "Lexend";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-
   color: #12100e;
   padding: 1.2rem;
   width: 100%;
 }
+
 .listIdeathon {
   font-size: 0.875rem;
   width: 90%;
@@ -858,45 +857,43 @@ color: #FFFFFF!important;
   gap: 0.5rem;
   opacity: 70%;
 }
+
 .dateIdeathon {
   font-size: 1.125rem;
-  font-style: 'Nunito Sans';
+  font-style: "Nunito Sans";
   height: 25%;
   background-color: #f3edd8;
   width: 80%;
   font-weight: 500;
   color: black;
 }
+
 .descriptionIdeathon {
   width: 90%;
   background-color: #f3edd8;
-  font-family: 'Nunito Sans';
+  font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
   /* or 20px */
-
   letter-spacing: 0.03em;
-
   /* Black */
-
   color: #12100e;
-
   opacity: 0.7;
 }
+
 .conclusionIdeathon {
   color: black;
   width: 90%;
   height: 20%;
   background-color: #f3edd8;
   margin-bottom: 20px;
-  font-family: 'Nunito Sans';
+  font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
   line-height: 120%;
-
   letter-spacing: 0.03em;
 }
 
@@ -916,15 +913,13 @@ color: #FFFFFF!important;
     padding: 0;
     margin: 0;
   }
-  .helpAboutContainer{
+  .helpAboutContainer {
     margin-bottom: 4rem;
   }
-  .firstarrow{
+  .firstarrow {
     margin-left: 2px;
   }
-
 }
-
 @media screen and (max-width: 700px) {
   .arrows {
     width: 40%;
@@ -932,23 +927,18 @@ color: #FFFFFF!important;
   .helpVerticalLine {
     width: 8rem;
   }
- 
-
 }
-
 @media screen and (max-width: 500px) {
   .aboutContainer {
     height: 30rem;
   }
-  .boldRegisterQuestion{
+  .boldRegisterQuestion {
     font-weight: 550;
     font-size: 1rem;
   }
- 
-  .certificates{
-   height: 2rem;
+  .certificates {
+    height: 2rem;
   }
- 
 }
 @media screen and (max-width: 400px) {
   .aboutContainer {
@@ -958,51 +948,38 @@ color: #FFFFFF!important;
     font-size: 1.3rem;
     justify-content: center;
   }
- 
   .descriptionIdeathon {
     margin-top: 1rem;
   }
-  .boldRegisterQuestion{
+  .boldRegisterQuestion {
     font-weight: 550;
     font-size: 4vw;
   }
-  .coordinatorHeadingIS{
+  .coordinatorHeadingIS {
     margin-top: 5rem;
   }
-  .coordinatogDetailIS{
+  .coordinatogDetailIS {
     gap: 2rem;
-
   }
-  .lightRegisterQuestion{
+  .lightRegisterQuestion {
     font-size: 8px;
   }
   .criteriacontainer {
-   margin-top: -5rem;
+    margin-top: -5rem;
   }
-  .criteria{
+  .criteria {
     height: 15rem;
   }
-  .container{
+  .container {
     padding-top: 3rem;
   }
-
 }
-
 @media screen and (max-width: 353px) {
   .firstarrow {
     font-size: 1rem;
     text-align: center;
   }
 }
-// @media screen and (max-width: 600px) {
-//   .arrows {
-//     width: 40%;
-//   }
-//   .helpVerticalLine {
-//     width: 35%;
-//   }
-// }
-
 @media screen and (max-width: 480px) {
   .arrows {
     width: 40%;
@@ -1020,14 +997,14 @@ color: #FFFFFF!important;
   .mailId {
     font-size: 0.8rem;
   }
-  .certificateDescription{
+  .certificateDescription {
     height: 25rem;
   }
-  .certificateDescription> div {
+  .certificateDescription > div {
     line-height: 0.5rem;
     font-size: 12px;
   }
-  .lightRegisterQuestion{
+  .lightRegisterQuestion {
     font-size: 12px;
     font-weight: 400;
   }
@@ -1035,71 +1012,53 @@ color: #FFFFFF!important;
     font-weight: 400;
     font-size: 16px;
   }
-  .A{
+  .A {
     justify-content: flex-start;
   }
-  .B> img{
+  .B > img {
     width: 30vw;
     height: 30vw;
   }
-  .C{
-   
+  .C {
     height: 30vw;
   }
 }
-
 @media screen and (max-width: 400px) {
   .helpRuleContainer {
-    height: 33rem;
+    height: 40rem;
     padding-top: "-2rem";
   }
-  .certificateDescription> div{
-      font-size: 10px;
-    }
-    .certificateDescription h4{
-      font-size: 12px;
-
-      line-height: 9px;
-    }
-    .certificateDescription{
-      font-size: 4px;
-      line-height: 2px;
-    }
-    .roundnamecontent{
-      line-height: 7px;
-    }
-    .triangleDate{
-      font-size: 10px;
-      line-height: 10px;
+  .certificateDescription > div {
+    font-size: 10px;
+  }
+  .certificateDescription h4 {
+    font-size: 12px;
+    line-height: 9px;
+  }
+  .certificateDescription {
+    font-size: 4px;
+    line-height: 2px;
+  }
+  .roundnamecontent {
+    line-height: 7px;
+  }
+  .triangleDate {
+    font-size: 8px;
+    line-height: 10px;
     padding-right: 4px;
-    }
+  }
 }
-
-
-
-
 @media screen and (max-width: 426px) {
   .aboutHeading {
     font-size: 1.5rem;
     height: 3%;
   }
-  // .certificateDescription> div{
-  //   font-size: 10px;
-  // }
-  // .certificateDescription h2{
-  //   font-size: 8px;
-  // }
-  // .certificateDescription{
-  //   font-size: 4px;
-  // }
 }
 @media screen and (max-width: 350px) {
   .aboutHeading {
     font-size: 1.3rem;
   }
-
 }
-
 @media screen and (max-width: 504px) {
   .secondcontainer {
     margin-top: -2rem;
@@ -1107,28 +1066,12 @@ color: #FFFFFF!important;
   .rulecontainer {
     height: 35rem;
   }
-  // .certificateDescription{
-  //   font-size: 4px;
-  // }
-  // .certificateDescription h4 {
-  //   font-size: 18px;
-  //   line-height: 4px;
-  //   font-weight: 400;
-  //   color: white;
-  // }
- 
 }
-
 @media screen and (max-width: 476px) {
   .dateIdeathon {
     font-size: 0.9rem;
   }
-  // .certificateDescription> div{
-  //   line-height: 12px;
-  //   color: white;
-  // }
 }
-
 @media screen and (max-width: 800px) {
   .gfg {
     width: 100%;
@@ -1137,75 +1080,61 @@ color: #FFFFFF!important;
     height: auto;
     width: auto;
   }
-  .event{
+  .event {
     text-align: left;
-   
   }
-  .C{
+  .C {
     min-width: 15rem;
   }
- 
-  .helpAboutContainer{
-    margin-bottom: 10rem;
+  .helpAboutContainer {
+    margin-bottom: 8rem;
   }
-  .certificates{
+  .certificates {
     justify-content: flex-start;
   }
-  .certificateDescription{
+  .certificateDescription {
     height: 8rem;
   }
-  
-
-
-  .secondcontainer{
+  .secondcontainer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 85vw;
-    
   }
-  .arrows{
+  .arrows {
     flex-direction: row;
-    // justify-content: flex-start;
     width: 70vw;
-   
   }
- 
-  .firstarrow  {
+  .firstarrow {
     width: 70vw;
     height: 10vw;
     font-weight: 600;
-    clip-path: inset(0 0 0 0);
+    -webkit-clip-path: inset(0 0 0 0);
+            clip-path: inset(0 0 0 0);
     border-radius: 4px;
     font-size: 18px;
     justify-content: center;
     letter-spacing: 1px;
     padding-right: 0px;
-    
   }
-
-  .helpArrow{
+  .helpArrow {
     width: 18vw;
     height: 10vw;
-    
   }
-  .secondarrow , .thirdarrow {
+  .secondarrow, .thirdarrow {
     width: 45vw;
     justify-content: center;
-    
   }
- 
-  .roundnamecontent{
+  .roundnamecontent {
     width: 80vw;
     padding-left: 0rem;
     padding-top: 2rem;
   }
- 
-  
 }
-ul{
+ul {
   padding: 0rem;
 }
+
 @media screen and (max-width: 500px) {
   .CardBox2 {
     width: 0;
@@ -1215,24 +1144,21 @@ ul{
     width: 0;
     height: 0;
   }
-  .helpArrow{
-    width:17vw;
+  .helpArrow {
+    width: 17vw;
   }
- 
-  .helpVerticalLine{
+  .helpVerticalLine {
     width: 6rem;
   }
- 
-   
-  .C{
+  .C {
     min-width: 6rem;
   }
-  .firstarrow{
-    font-size: 14px; 
+  .firstarrow {
+    font-size: 14px;
   }
-  .secondarrow, .thirdarrow{
+  .secondarrow, .thirdarrow {
     font-weight: 300;
     font-size: 14px;
-    letter-spacing: 0.1px
+    letter-spacing: 0.1px;
   }
-}
+}/*# sourceMappingURL=events.css.map */

@@ -1,26 +1,42 @@
 import React from 'react';
 import Image from 'next/image';
-const SpeakerCard = () => {
-  return (
-    <div>
+import axios from 'axios';
+
+const SpeakerCard = (props) => {
+  const { Data } = props;
+  return Data.map((Elements) => {
+    return (
+    <div key={Elements.id}>
       <div className='sponsorCard'>
-        <Image className='sponsorCardImage' src='/speaker.png' height={484} width={416}></Image>
+        <Image className='sponsorCardImage' src={Elements.URL} height={484} width={416}/>
         <div className='sponsorCardDescription' style={{marginTop:"-30.5rem"}}>
-        <div className='sponsorCardYear'>2022</div>
+        <div className='sponsorCardYear'>{Elements.Year}</div>
         <div className='sponsorCardBox' style={{display:"flex",gap:"8px",flexDirection:"column",marginBottom:"-10px"}} >
-            <div className='sponsorCardName'>Mary Colson</div>
-            <div className='sponsorCardCompany'>CEO Founder of XYZ</div>
+            <div className='sponsorCardName'>{Elements.FounderName}</div>
+            <div className='sponsorCardCompany'>CEO Founder of {Elements.OrganisationName}</div>
             <div className='sponsorcardText' style={{zIndex:"5"}}>
-            <div className='sponsorCardCompany1'>CEO Founder of XYZ</div>
-            <div className='sponsorCardCompany1'>CEO Founder of XYZ</div>
-            <div className='sponsorCardCompany1'>CEO Founder of XYZ</div>
+              <div className='sponsorCardCompany1'>{Elements.briefDescription1}</div>
+              <div className='sponsorCardCompany1'>{Elements.briefDescription2}</div>
+              <div className='sponsorCardCompany1'>{Elements.briefDescription3}</div>
             </div>
             </div>
         </div>
       </div>
-      {/* <div className='' style={{width:"100vw",height:"100vh"}}></div> */}
+      
     </div>
   );
-};
+});
+}
+export async function getStaticProps() {
+  const res = await axios.get('');
+  const Data = res.data;
+  return {
+    props: { 
+      Data: [
+        {id: 1, URL: '', Year: 2022, FounderName: 'Divya', OrganisationName: 'ABCD',briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.', briefDescription2: 'Lorem ipsum dolor sit.', briefDescription3: 'Lorem ipsum dolor sit.'  }
+      ] 
+  }
+  };
+}
 
 export default SpeakerCard;

@@ -1,0 +1,101 @@
+.cardsevent {
+  width: 250px;
+  height: 415px;
+  background-color: #f3edd8;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.eventchdng {
+  font-size: 44px;
+  height: 48px;
+  width: 550px;
+  margin-left: 99px;
+  font-style: Lexend;
+  line-height: 48.4px;
+  color: #dcd1ad;
+  font-weight: 600;
+  padding-top: 2rem;
+}
+
+.eventscardcontainer {
+  background: linear-gradient(180deg, #12100e 0%, #301a08 100%);
+  height: 100rem;
+}
+
+.ecmaincontainer {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+  padding-left: 8rem;
+  height: 415px;
+}
+.ecmaincontainer .cardsevent {
+  flex: 0 0 auto;
+}
+
+.eventcabout {
+  padding-left: 1.5rem;
+  padding-top: 1rem;
+  padding-right: 1.5rem;
+  letter-spacing: 0.04em;
+  margin: auto;
+  height: 14rem;
+}
+
+.eventcabout > h1 {
+  text-align: center;
+}
+
+.eventcabout > p {
+  text-align: center;
+}
+
+.eventcbuttonc {
+  height: 56px;
+  width: 250px;
+  background-color: #ba6d39;
+  padding-left: 4rem;
+  padding-top: 1rem;
+  margin-top: 2rem;
+}
+
+.eventcbutton {
+  border: none;
+  background-color: #ba6d39;
+  color: white;
+  border-radius: 12px;
+  margin-top: -2px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.ecmaincontainer {
+  padding-top: 8rem;
+  width: auto;
+  height: 40rem;
+}
+
+.cardsevent:hover {
+  background-color: #f3edd8;
+  transform: scale(1.2);
+  box-shadow: 0px 0px 10px 3px rgba(220, 209, 173, 0.0509803922);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.eventcbuttonc:hover {
+  background-color: #dcd1ad;
+}
+
+.eventcbuttonc:hover .eventcbutton {
+  background-color: #dcd1ad;
+}
+
+.eventcabout > p {
+  text-align: center;
+}/*# sourceMappingURL=eventtop.css.map */

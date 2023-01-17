@@ -30,20 +30,14 @@
   text-align: center;
   padding-top: 20px;
 }
-// .eventPgBtnC:hover {
-  
-// }
-
 
 .eventPgFlex {
   display: flex;
-  // justify-content: space-around;
   flex-wrap: wrap;
-  column-gap: 20%;
+  -moz-column-gap: 20%;
+       column-gap: 20%;
   justify-content: center;
   align-items: center;
-
-  //    padding-left: 20rem;
 }
 
 .eventPgBtnC {
@@ -74,15 +68,12 @@
   background-color: #dcd1ad;
 }
 
-
-
 @media screen and (max-width: 970px) {
   .eventPgHdng {
     font-size: 6vw;
     font-weight: 500;
     line-height: 30px;
   }
-
   .eventPgCards {
     width: 300px;
     height: 415px;
@@ -95,7 +86,6 @@
     font-size: 14px;
   }
 }
-
 @media screen and (max-width: 800px) {
   .eventPgFlex {
     flex-direction: column;
@@ -132,4 +122,4 @@
   .eventPgCards {
     margin-bottom: 20vw;
   }
-}
+}/*# sourceMappingURL=eventpe.css.map */
