@@ -223,7 +223,7 @@ function Dashboard(props) {
       <div className='submitButton'>
         <button
           className='button_GRF'
-          onClick={()=>{handleSubmit}}
+          onClick={handleSubmit}
           placeholder='SUBMIT RESPONSE'
         >
           SUBMIT RESPONSE
