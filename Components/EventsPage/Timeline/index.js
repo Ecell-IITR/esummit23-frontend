@@ -1,9 +1,7 @@
 import Image from 'next/image';
-import { useRouter } from 'next/router';
+import { toast } from 'react-toastify';
 
 export function EventsIdeathon(props) {
-  const router = useRouter();
-  const pid = router.query;
   return (
     <div className='containerEvents'>
       <div className='helpAboutContainer'>
@@ -24,36 +22,34 @@ export function EventsIdeathon(props) {
         </div>
       </div>
       <div className='helpSecondContainer'>
-        {pid.slug == 'Startup Expo' ? (
-          <></>
-        ) : (
-          <div className='secondcontainer'>
-            <div className='arrows'>
-              <div className='vl'></div>
-              <div className='firstarrow'>Round 1</div>
-              <div className='helpVerticalLine'>
-                <div className='verticalLine'></div>
-              </div>
-              <div className='helpArrow'>
-                <div className='secondarrow'>Round 2</div>
-              </div>
-              <div className='helpVerticalLine'>
-                <div className='verticalLine'></div>
-              </div>
-              <div className='vl1'></div>
-              <div className='helpArrow'>
-                <div className='thirdarrow'>Round 3</div>
-              </div>
+        <div className='secondcontainer'>       
+          <div className='arrows'>
+            <div className='vl'></div>
+            <div className='firstarrow'>Round 1</div>
+            <div className='helpVerticalLine'>
+              <div className='verticalLine'></div>
             </div>
-
-            <div className='roundnamecontent'>
-              <div
-                className='triangleDate'
-                dangerouslySetInnerHTML={{ __html: props?.round[0]?.tasks }}
-              ></div>
+            <div className='helpArrow'>
+              <div className='secondarrow' onClick={()=>{toast.error("Coming Soon!")}}>Round 2</div>
+            </div>
+            <div className='helpVerticalLine'>
+              <div className='verticalLine'></div>
+            </div>
+            <div className='vl1'></div>
+            <div className='helpArrow'>
+              <div className='thirdarrow' onClick={()=>{toast.error("Coming Soon!")}}>Round 3</div>
             </div>
           </div>
-        )}
+
+          <div className='roundnamecontent'>
+          <div className="paragraph">
+            <div
+              className='triangleDate'
+              dangerouslySetInnerHTML={{ __html: props?.round[0]?.tasks }}
+            ></div>
+            </div>
+          </div>
+        </div>
       </div>
       <div className='helpRuleContainer'>
         <div className='rulecontainer'>
@@ -70,6 +66,7 @@ export function EventsIdeathon(props) {
                             src='/bulletEvents.webp'
                             height='16'
                             width='16'
+                            
                           ></Image>
                         </div>
                         <div className='writtenRules'>{rule.rule} </div>

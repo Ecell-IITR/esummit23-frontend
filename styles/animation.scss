@@ -1,9 +1,6 @@
 .parentAnimation {
-  background: linear-gradient(
-    180deg,
-    #12100e 11%,
-    rgba(46, 40, 34, 0.75) 120.26%
-  );
+  background: linear-gradient(180deg, #12100E 51.91%, #1A120C 100%);
+
 }
 
 .containerAnimationDown {
@@ -286,8 +283,19 @@
 //for mobile view all css is written below
 
 .containerAnimationMobile {
-  height: 45rem;
+
   width: 100%;
+  
+  
+}
+@media screen and (max-width: 600px) {
+
+  .containerAnimationMobile {
+  height: 150vw;
+  width: 100%;
+  background-size:100vw 150vw;
+  background-repeat: no-repeat;
+}
 }
 .coin1MobileAnimation {
   padding: 0.2rem;

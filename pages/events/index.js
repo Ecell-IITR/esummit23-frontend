@@ -5,8 +5,30 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { isAuthenticated } from '../../utils';
 import Navbar from '../../Components/Navbar';
+import { SINGLE_SERVICES } from '../../utils/APIs';
+import DashboardForm from '../../Components/DashboardForm';
+import { Modal } from 'react-bootstrap';
 export default function Events({ posts }) {
+  const [name, setName] = useState('');
+
+  const [show, setShow] = useState(false);
+  const [No, setNo] = useState(0);
+  const [question1, setquestion1] = useState('');
+  const [question2, setquestion2] = useState('');
+  const handleClose = () => setShow(false);
   const router = useRouter();
+
+  const GetData = (name) => {
+    FetchApi('POST', SINGLE_SERVICES, { service_name: name }, null)
+      .then((res) => {
+        setName(res.data.name);
+        setquestion1(res.data.question1);
+        setquestion2(res.data.question2);
+        setNo(res.data.no_of_QA);
+      })
+      .catch((err) => {});
+  };
+
   const rederict = () => {
     if (isAuthenticated()) {
       router.push(`/dashboard`);
@@ -24,6 +46,16 @@ export default function Events({ posts }) {
   return (
     <div className='eventPgCont'>
       <Navbar />
+      <Modal  contentClassName='my-modal' show={show} onHide={handleClose}>
+        <DashboardForm
+          Auth={true}
+          handleClose={handleClose}
+          noQuestions={No}
+          name={name}
+          Q_1={question1}
+          Q_2={question2}
+        />
+      </Modal>
       <div className='eventPgHdng'>
         Events{' '}
         {width < 450 ? (
@@ -43,10 +75,11 @@ export default function Events({ posts }) {
         )}{' '}
         Competitions
       </div>
+
       <div className='eventPgFlex'>
         {posts?.map((post, id) => {
           return (
-            <div className='eventPgCards'>
+            <div className='eventPgCards' style={{ height: '27rem' }}>
               <div className='eventcimg'>
                 <Image
                   src={
@@ -74,22 +107,27 @@ export default function Events({ posts }) {
                   style={{ textAlign: 'initial', lineHeight: '19px' }}
                 ></div>
 
-                <a classname='eventPga' href={'/events/' + post?.event_name}>
+                <a
+                  classname='eventPga'
+                  style={{ marginTop: '-50rem' }}
+                  href={'/events/' + post?.event_name}
+                >
                   Read more
                 </a>
 
                 {/* ({post.card_description.length>200?post.card_description.slice(0,200):post.card_description}) */}
               </div>
 
-              <div className='eventPgBtnC'>
+              <div className='eventPgBtnC' style={{ marginTop: '1.5rem' }}>
                 <button
                   className='eventPgBtn'
                   onClick={() => {
-                    rederict();
+                    GetData(post?.event_name);
+                    setShow(true);
+                    // rederict();
                   }}
                 >
-                  {' '}
-                  Apply Now{' '}
+                  Register Now
                 </button>
 
                 <Image src='/Vector.png' height='16px' width='21.3px'></Image>

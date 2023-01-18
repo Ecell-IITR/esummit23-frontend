@@ -12,7 +12,10 @@ function Events(props) {
       router.push(`/login`);
     }
   };
-
+  const OnSubmit = () => {
+    props.setShow(true);
+    props.GetData(props.name);
+  }
   return (
     <>
       <div
@@ -151,7 +154,7 @@ function Events(props) {
               <div className='registerButton'>
                 {' '}
                 <button
-                  onClick={rederict}
+                  onClick={OnSubmit}
                   className='button'
                   style={{ fontStyle: ' Lexend', fontWeight: '600' }}
                 >

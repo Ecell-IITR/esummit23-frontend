@@ -3,18 +3,18 @@
   width: 100%;
   // background: linear-gradient(#12100E,#331C00);
 }
-.certificateDescription h4 {
-  font-family: Lexend;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 24px;
+.certificateDescription h4{
+  font-Family: Lexend;
+  font-Weight: 600;
+  font-Size: 18px;
+  line-Height: 24px;
   color: 'white';
 }
 .certificateDescription > div {
-  font-family: Lexend;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+  font-Family: Lexend;
+  font-Weight: 400;
+  font-Size: 16px;
+  line-Height: 24px;
   color: 'white';
 }
 .container {
@@ -30,8 +30,9 @@
   height: 90% !important;
   color: white;
 }
-.B {
+.B{
   z-index: 4;
+  height: 12rem;
 }
 .heading {
   width: 95%;
@@ -71,11 +72,12 @@
   margin-top: 50%;
   transform: translateY(-50%);
 }
-.img {
-  display: flex;
+.img{
+  display:flex;
   justify-content: center;
   align-items: center;
 }
+
 
 .certificates .certificateDescription {
   padding-left: 18px;
@@ -88,11 +90,11 @@
 .certificates .certificateDescription p {
   font-size: 12px;
 }
-.nameISCoordinator {
+.nameISCoordinator{
   font-weight: 500;
 }
-.helpRuleContainer {
-  margin-top: 4rem;
+.helpRuleContainer{
+ margin-top: 4rem;
   height: 15rem;
 }
 
@@ -100,23 +102,21 @@
   .certificates .certificate {
     margin-bottom: 15px;
   }
-  .firstarrow,
-  .secondarrow,
-  .thirdarrow {
-    font-size: 10px;
-    font-weight: 400;
-    justify-content: center;
-    letter-spacing: 0.5px;
+  .firstarrow,.secondarrow, .thirdarrow{
+   font-size: 10px;
+   font-weight: 400;
+   justify-content: center;
+   letter-spacing: 0.5px;
   }
-  .A {
-    gap: 1rem;
-  }
+  // .A{
+  //   gap: 1rem;
+  // }
 }
-@media only screen and (max-width: 680px) {
-  .A {
-    gap: 1rem;
-  }
-}
+// @media only screen and (max-width: 680px) {
+//   .A{
+//     gap: 1rem;
+//   }
+// }
 //EVENT COORDINATOR
 .parentIS {
   padding: 4rem;
@@ -140,6 +140,7 @@
   width: 80%;
   display: flex;
   align-items: flex-start;
+  margin-bottom: 2rem;
 }
 
 .coordinatorDetailIS {
@@ -148,6 +149,7 @@
   background-color: none;
   height: 35%;
   display: flex;
+  justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 9rem;
@@ -175,6 +177,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  
 }
 .C {
   display: flex;
@@ -189,7 +192,7 @@
   min-width: 20rem;
 }
 
-.B {
+.B{
   border-radius: 1.5rem;
   min-width: 11rem;
   width: 35%;
@@ -250,6 +253,9 @@
   justify-content: center;
   align-items: center;
 }
+.imageCordinator{
+  height: 100%;
+}
 
 .boldRegisterQuestion {
   // border: 1px solid black;
@@ -290,6 +296,7 @@
   // border: 1px solid black;
   height: 25%;
   width: 80%;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -320,30 +327,30 @@
 @media screen and (max-width: 685px) {
   .parentIS {
     width: 100vw;
-    height: 80rem;
+    // height: 80rem;
   }
   .C {
     height: 12rem;
   }
-
+  
   .event {
     width: 55rem;
   }
   .B {
-    margin-left: -20vw;
-    width: 15rem;
-    height: 15rem;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    // margin-left: -20vw;
+    // width: 15rem;
+    // height: 15rem;
+    // display: flex;
+    // justify-content: flex-end;
+    // align-items: center;
     z-index: 4;
   }
-  .nameISCoordinator {
+  .nameISCoordinator{
     font-size: 1.3rem;
   }
   .coordinatorDetailIS {
     height: 1rem;
-    gap: 0rem;
+    gap:0rem;
   }
 }
 
@@ -465,12 +472,11 @@
     margin-top: 16px !important;
     margin-bottom: 5rem;
   }
-  .parentIS {
-    padding: 1rem;
-  }
+  
   .coordinatorHeadingIS {
     font-size: 24px;
   }
+ 
 }
 
 //SPONSOR CARD END
@@ -485,6 +491,7 @@
 
   .C {
     height: 8rem;
+  
   }
 }
 
@@ -497,6 +504,12 @@
     height: 10rem;
     width: 42rem;
   }
+}
+@media screen and (max-width: 422px) {
+  .coordinatorHeadingIS{
+    font-size: 1.3rem;
+  }
+  
 }
 
 @media screen and (max-width: 960px) {
@@ -513,6 +526,7 @@
   .lightRegisterQuestion {
     font-size: 16px;
   }
+
 }
 
 @media screen and (max-width: 960px) {
@@ -525,7 +539,7 @@
 }
 
 .containerEvents {
-  margin-top: 6rem;
+  // margin-top: 6rem;
   background: linear-gradient(180deg, #12100e 0%, #301a08 100%);
   color: white;
   width: 100%;
@@ -542,18 +556,20 @@
   width: 100%;
 }
 .aboutbox {
-  width: 100%;
-  font-family: 'Nunito Sans' !important;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 150%;
+width: 100%;
+font-family: 'Nunito Sans'!important;
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+// line-height: 150%;
+display: flex;
+align-items: center;
+// letter-spacing: 0.04em;
+color: #FFFFFF!important;
 
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.04em;
 
-  color: #ffffff !important;
+
+
 }
 .aboutContainer {
   width: 90%;
@@ -579,18 +595,21 @@
   margin-top: 12px;
 }
 .secondcontainer {
-  margin-top: -4rem;
+  overflow: hidden;
+  margin-top: 2rem;
   display: flex;
   margin-left: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .arrows {
-  margin-top: 1.4rem;
+  margin-top: 0.4rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-right: 19px;
   // margin-left: 0.1rem;
+
 }
 .helpArrow {
   display: flex;
@@ -601,7 +620,6 @@
 
   width: 9rem;
   height: 3rem;
-
   background: #98613b;
   border-radius: 6px;
 }
@@ -612,7 +630,7 @@
 }
 .secondarrow,
 .thirdarrow {
-  width: 6rem;
+  width: 100%;
   border-radius: 6px;
 
   background-color: #98613b;
@@ -620,9 +638,9 @@
 .firstarrow {
   border-radius: 6px 0px 0px 6px;
   clip-path: polygon(0 0, 80% 0%, 100% 50%, 80% 100%, 0 100%);
-  background-color: #ba6d39;
+  background-color: #BA6D39;
   margin-top: -0.1rem;
-  width: 100%;
+  width: 110%;
   height: 4.2rem;
   justify-content: center;
   font-family: 'Lexend';
@@ -633,7 +651,9 @@
   display: flex;
   align-items: center;
   color: #ffffff;
-  padding-right: 1rem;
+  padding: 1.5rem;
+  padding-right: 2rem;
+  
 }
 
 .secondarrow,
@@ -644,9 +664,12 @@
   font-size: 18px;
   text-align: center;
   display: flex;
+  justify-content: center;
   align-items: center;
   letter-spacing: 1px;
   color: #ffffff;
+  
+
 }
 
 .verticalLine {
@@ -662,8 +685,9 @@
 .roundnamecontent {
   // background-color: yellow;
   // border: 1px solid red;
+  overflow: hidden;
   width: 60vw;
-  height: 20rem;
+  // height: 25rem;
   border-radius: 12px;
   padding-top: 4px;
   background: #f3edd8;
@@ -672,6 +696,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  // margin-top: 5rem;
 }
 .triangle-right {
   border-top: 33px solid transparent;
@@ -689,7 +714,8 @@
 
 .criteria {
   opacity: 80%;
-  padding-top: 2rem;
+  padding-top: 1rem;
+  margin-left: -1rem;
 }
 .rulecontainer {
   margin-top: 2rem;
@@ -744,6 +770,7 @@
 .rules {
   opacity: 80%;
   width: 100%;
+  margin-left: -1rem;
   padding-top: 2rem;
 }
 .rulesMentioned {
@@ -821,16 +848,31 @@
   margin-top: 43.548828125px;
 }
 
+.paragraph{
+text-overflow: ellipsis;
+}
+
+// .triangleDate p{
+//   overflow: scroll;
+// }
+
 .triangleDate {
+  // background-color: red;
+  overflow: hidden;
+  text-overflow: initial;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  // align-items: flex-end;
   font-family: 'Lexend';
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-
   color: #12100e;
   padding: 1.2rem;
   width: 100%;
+  height: 20rem;
 }
 .listIdeathon {
   font-size: 0.875rem;
@@ -903,12 +945,13 @@
     padding: 0;
     margin: 0;
   }
-  .helpAboutContainer {
+  .helpAboutContainer{
     margin-bottom: 4rem;
   }
-  .firstarrow {
+  .firstarrow{
     margin-left: 2px;
   }
+
 }
 
 @media screen and (max-width: 700px) {
@@ -918,61 +961,77 @@
   .helpVerticalLine {
     width: 8rem;
   }
+ 
+
 }
 
 @media screen and (max-width: 500px) {
   .aboutContainer {
     height: 30rem;
   }
-  .boldRegisterQuestion {
+  .boldRegisterQuestion{
     font-weight: 550;
     font-size: 1rem;
   }
-
-  .certificates {
-    height: 2rem;
+ 
+  .certificates{
+   height: 2rem;
   }
+ 
 }
 @media screen and (max-width: 400px) {
   .aboutContainer {
     height: 25rem;
   }
   .firstarrow {
+    
     font-size: 1.3rem;
     justify-content: center;
   }
-
+ 
   .descriptionIdeathon {
     margin-top: 1rem;
   }
-  .boldRegisterQuestion {
+  .boldRegisterQuestion{
     font-weight: 550;
     font-size: 4vw;
   }
-  .coordinatorHeadingIS {
+  .coordinatorHeadingIS{
     margin-top: 5rem;
   }
-  .coordinatogDetailIS {
+  .coordinatogDetailIS{
     gap: 2rem;
+
   }
-  .lightRegisterQuestion {
+  .lightRegisterQuestion{
     font-size: 8px;
   }
   .criteriacontainer {
-    margin-top: -5rem;
+   margin-top: -5rem;
   }
-  .criteria {
+  .criteria{
     height: 15rem;
   }
-  .container {
+  .container{
     padding-top: 3rem;
   }
+
 }
 
 @media screen and (max-width: 353px) {
   .firstarrow {
-    font-size: 1rem;
-    text-align: center;
+    font-size: .6rem;
+    // text-align: center;
+  }
+}
+@media screen and (max-width: 321px) {
+  .secondarrow {
+    margin-top: 1rem;
+    font-size: .6rem;
+    // text-align: center;
+  }
+  .thirdarrow{
+    margin-top: 1rem;
   }
 }
 // @media screen and (max-width: 600px) {
@@ -1001,14 +1060,14 @@
   .mailId {
     font-size: 0.8rem;
   }
-  .certificateDescription {
+  .certificateDescription{
     height: 25rem;
   }
-  .certificateDescription > div {
+  .certificateDescription> div {
     line-height: 0.5rem;
     font-size: 12px;
   }
-  .lightRegisterQuestion {
+  .lightRegisterQuestion{
     font-size: 12px;
     font-weight: 400;
   }
@@ -1016,14 +1075,15 @@
     font-weight: 400;
     font-size: 16px;
   }
-  .A {
+  .A{
     justify-content: flex-start;
   }
-  .B > img {
-    width: 30vw;
-    height: 30vw;
-  }
-  .C {
+  // .B>img{
+  //   width: 30vw;
+  //   height: 30vw;
+  // }
+  .C{
+   
     height: 30vw;
   }
 }
@@ -1031,29 +1091,33 @@
 @media screen and (max-width: 400px) {
   .helpRuleContainer {
     height: 40rem;
-    padding-top: '-2rem';
+    padding-top: "-2rem";
   }
-  .certificateDescription > div {
-    font-size: 10px;
-  }
-  .certificateDescription h4 {
-    font-size: 12px;
+  .certificateDescription> div{
+      font-size: 10px;
+    }
+    .certificateDescription h4{
+      font-size: 12px;
 
-    line-height: 9px;
-  }
-  .certificateDescription {
-    font-size: 4px;
-    line-height: 2px;
-  }
-  .roundnamecontent {
-    line-height: 7px;
-  }
-  .triangleDate {
-    font-size: 8px;
-    line-height: 10px;
+      line-height: 9px;
+    }
+    .certificateDescription{
+      font-size: 4px;
+      line-height: 2px;
+    }
+    .roundnamecontent{
+      line-height: 7px;
+    }
+    .triangleDate{
+      font-family: 'Lexend';
+      // font-size: 8px;
+      // line-height: 10px;
     padding-right: 4px;
-  }
+    }
 }
+
+
+
 
 @media screen and (max-width: 426px) {
   .aboutHeading {
@@ -1074,11 +1138,15 @@
   .aboutHeading {
     font-size: 1.3rem;
   }
+
 }
 
 @media screen and (max-width: 504px) {
   .secondcontainer {
     margin-top: -2rem;
+  }
+  .ruleheading{
+    margin-top: 5rem;
   }
   .rulecontainer {
     height: 35rem;
@@ -1092,6 +1160,7 @@
   //   font-weight: 400;
   //   color: white;
   // }
+ 
 }
 
 @media screen and (max-width: 476px) {
@@ -1112,36 +1181,41 @@
     height: auto;
     width: auto;
   }
-  .event {
+  .event{
     text-align: left;
+   
   }
-  .C {
+  .C{
     min-width: 15rem;
   }
-
-  .helpAboutContainer {
+ 
+  .helpAboutContainer{
     margin-bottom: 8rem;
   }
-  .certificates {
+  .certificates{
     justify-content: flex-start;
   }
-  .certificateDescription {
+  .certificateDescription{
     height: 8rem;
   }
+  
 
-  .secondcontainer {
+
+  .secondcontainer{
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 85vw;
+    
   }
-  .arrows {
+  .arrows{
     flex-direction: row;
     // justify-content: flex-start;
     width: 70vw;
+   
   }
-
-  .firstarrow {
+ 
+  .firstarrow  {
     width: 70vw;
     height: 10vw;
     font-weight: 600;
@@ -1151,25 +1225,31 @@
     justify-content: center;
     letter-spacing: 1px;
     padding-right: 0px;
+    
   }
 
-  .helpArrow {
+  .helpArrow{
     width: 18vw;
     height: 10vw;
+    
   }
-  .secondarrow,
-  .thirdarrow {
+  .secondarrow , .thirdarrow {
     width: 45vw;
-    justify-content: center;
-  }
+    display: flex;
 
-  .roundnamecontent {
+    justify-content: center;
+    
+  }
+ 
+  .roundnamecontent{
     width: 80vw;
     padding-left: 0rem;
     padding-top: 2rem;
   }
+ 
+  
 }
-ul {
+ul{
   padding: 0rem;
 }
 @media screen and (max-width: 500px) {
@@ -1181,24 +1261,31 @@ ul {
     width: 0;
     height: 0;
   }
-  .helpArrow {
-    width: 17vw;
+  .helpArrow{
+    width:17vw;
   }
-
-  .helpVerticalLine {
+ 
+  .helpVerticalLine{
     width: 6rem;
   }
-
-  .C {
+ 
+   
+  .C{
     min-width: 6rem;
   }
-  .firstarrow {
+  .firstarrow{
     font-size: 14px;
+    margin-left: -1rem; 
+    display: flex;
+    justify-content: flex-start;
+    
   }
-  .secondarrow,
-  .thirdarrow {
+  .secondarrow, .thirdarrow{
     font-weight: 300;
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 0.1px;
+    height: 3rem;
+    margin-top:.5rem;
+  
   }
 }

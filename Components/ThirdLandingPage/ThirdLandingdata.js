@@ -1,10 +1,8 @@
 const ThirdLandingdata = [
   {
     Heading: 'REMINSCING THE ETHOS: BHARAT',
-    Description1:
-      'E-Summit being the flagship event of ECell, is held annually brings together the academic community, venture capitalists, new age entrepreneurs and all those passionate about entrepreneurship to common grounds.',
-    Description2:
-      'E-Summit being the flagship event of ECell, is held annually brings together the academic community, ',
+    Description1: ` is like diving into a treasure trove of memories of ECell, where each one holds a special significance. It’s the perfect platform for students to reconnect with the entrepreneurial spirit, gaining valuable insights for their future endeavors. Don't miss out on this opportunity to rejuvenate your passion for entrepreneurship.`,
+    Description2: `Join us at Esummit'23 and let's reminisce the ethos together!`,
   },
 ];
 
