@@ -57,13 +57,13 @@ const Mobtaskbar = () => {
     </>
   );
 };
-const Mobtask = (props) => {
+const Mobtask = () => {
   return (
     <>
       <div className='mobAllTaskcontainer'>
-        <div className='mobTaskId'>{props.TaskId}</div>
+        <div className='mobTaskId'></div>
         <div className='mobTaskContainer'>
-          <div className='task'>{props.Task}</div>
+          <div className='task'></div>
           <button className='mobTaskSubmitButton'>Submit your task</button>
         </div>
       </div>

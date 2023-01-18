@@ -1,4 +1,9 @@
 import React from 'react';
+import FetchApi from '../utils/fetchAPI';
+import { useEffect, useState } from 'react';
+import { useMobile, useUpdateMobile } from '../utils/MobileContext';
+import {  getAuthToken } from '../utils';
+import { CAP_TASK_API } from '../utils/APIs';
 import {
   Personalinfo,
   PointScored,
@@ -10,13 +15,28 @@ import Mobprofiledetails, {
   Mobtaskbar,
   Mobtask,
 } from '../Components/dashboard/Mobdashboard';
-import { useEffect } from 'react';
-import { useMobile, useUpdateMobile } from '../utils/MobileContext';
+
+
 const capdashboard = () => {
+   
+  const [Taskname, setTaskname] = useState([]);
+  
+
   const setMobile = useUpdateMobile();
   useEffect(() => {
     setMobile();
+  FetchApi('get',CAP_TASK_API, null, getAuthToken())
+    .then((res) => {
+      console.log(res)
+      setTaskname(res.data.data);
+    })
+    .catch((err) => {
+      console.log(err)      
+    });
+
   }, []);
+
+  
 
   if (useMobile().isMobile) {
     return (
@@ -29,19 +49,17 @@ const capdashboard = () => {
           />
           <Mobscore Rank='6' Points='245' />
           <Mobtaskbar />
+          {Taskname.map((item) => {
 
+            return(<>
           <Mobtask
-            TaskId='Task 1'
-            Task='Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, magnam.'
+          id = {item.task_id}
+          task={item.desc}
+            
           />
-          <Mobtask
-            TaskId='Task 2'
-            Task='Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, magnam.'
-          />
-          <Mobtask
-            TaskId='Task 3'
-            Task='Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, magnam.'
-          />
+          
+          </>)
+          })}
         </div>
       </div>
     );
@@ -59,19 +77,16 @@ const capdashboard = () => {
           </div>
           <Taskbar />
           <div className='capTaskContainer'>
-            <Task
-              TaskId='Task 1'
-              task='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, alias ad explicabo quod sit unde eligendi autem consectetur fugiat, possimus architecto optio. Non veritatis vero voluptate, amet aut at saepe!'
-            />
+          {Taskname.map((item) => {
+            return(<>
+             <Task
+              id = {item.task_id}
+              desc={item.desc}
+             />
 
-            <Task
-              TaskId='Task 2'
-              task='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, alias ad explicabo quod sit unde eligendi autem consectetur fugiat, possimus architecto optio. Non veritatis vero voluptate, amet aut at saepe!'
-            />
-            <Task
-              TaskId='Task 3'
-              task='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, alias ad explicabo quod sit unde eligendi autem consectetur fugiat, possimus architecto optio. Non veritatis vero voluptate, amet aut at saepe!'
-            />
+            
+            
+            </>)})}
           </div>
         </div>
       </div>

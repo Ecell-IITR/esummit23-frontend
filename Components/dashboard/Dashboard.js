@@ -53,9 +53,9 @@ const PointScored = (props) => {
 const Task = (props) => {
   return (
     <div className='taskContainer'>
-      <div className='taskId'>{props.TaskId}</div>
+      <div className='taskId'> Task {props.id}</div>
       <div className='taskTextContainer'>
-        <div className='taskText'>{props.task}</div>
+        <div className='taskText'>{props.desc}</div>
         <div>
           <button type='submit' className='submitTask'>
             Submit your Task
