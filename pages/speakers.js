@@ -15,12 +15,12 @@ const Speaker = (props) => {
         <div key={Elements.id} className='sponsorCard'>
           <Image
             className='sponsorCardImage'
-            src={Elements.URL}
+            src={Elements.profile_image}
             height={484}
             width={416}
           />
           <div className='sponsorCardDescription'>
-            <div className='sponsorCardYear'>{Elements.Year}</div>
+            <div className='sponsorCardYear'>{Elements.event_Year}</div>
             <div
               className='sponsorCardBox'
               style={{
@@ -29,8 +29,8 @@ const Speaker = (props) => {
                 flexDirection: 'column',
               }}
             >
-              <div className='sponsorCardName'>{Elements.FounderName}</div>
-              <div className='sponsorCardCompany'>CEO Founder of {Elements.OrganisationName}</div>
+              <div className='sponsorCardName'>{Elements.name}</div>
+              <div className='sponsorCardCompany'> {Elements.designation}</div>
               <div className='sponsorcardText' style={{ zIndex: '5' }}>
                   <div className='sponsorCardCompany1'>{Elements.briefDescription1}</div>
                   <div className='sponsorCardCompany1'>{Elements.briefDescription2}</div>
@@ -48,21 +48,23 @@ const Speaker = (props) => {
     </div>)
 }
 export async function getStaticProps() {
-  // const res = await axios.get('');
+  // const res = await axios.get('https://api.esummit.in/public/speakers');
+  
   // const Data = res.data;
+  // console.log(Data);
   return {
     props: { 
       Data: [
-        {id: '1', URL: '/speaker.png', Year: '2023', FounderName: 'Divya', OrganisationName: 'ABCD', briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.', briefDescription2: 'Lorem ipsum dolor sit.', briefDescription3: 'Lorem ipsum dolor sit.'  },
-        {id: '1', URL: '/speaker.png', Year: '2023', FounderName: 'Divya', OrganisationName: 'ABCD', briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.', briefDescription2: 'Lorem ipsum dolor sit.', briefDescription3: 'Lorem ipsum dolor sit.'  },
-        {id: '1', URL: '/speaker.png', Year: '2023', FounderName: 'Divya', OrganisationName: 'ABCD', briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.', briefDescription2: 'Lorem ipsum dolor sit.', briefDescription3: 'Lorem ipsum dolor sit.'  },
-        {id: '1', URL: '/speaker.png', Year: '2023', FounderName: 'Divya', OrganisationName: 'ABCD', briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.', briefDescription2: 'Lorem ipsum dolor sit.', briefDescription3: 'Lorem ipsum dolor sit.'  },
-        {id: '1', URL: '/speaker.png', Year: '2023', FounderName: 'Divya', OrganisationName: 'ABCD', briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.', briefDescription2: 'Lorem ipsum dolor sit.', briefDescription3: 'Lorem ipsum dolor sit.'  },
-        {id: '1', URL: '/speaker.png', Year: '2023', FounderName: 'Divya', OrganisationName: 'ABCD', briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.', briefDescription2: 'Lorem ipsum dolor sit.', briefDescription3: 'Lorem ipsum dolor sit.'  }
+        {id: '1', profile_image: '/speaker.png', event_Year: '2023', name: 'Divya', designation: 'Product Manager', briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.', briefDescription2: 'Lorem ipsum dolor sit.', briefDescription3: 'Lorem ipsum dolor sit.'  },
+        {id: '1', profile_image: '/speaker.png', event_Year: '2023', name: 'Divya', designation: 'Product Manager', briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.', briefDescription2: 'Lorem ipsum dolor sit.', briefDescription3: 'Lorem ipsum dolor sit.'  },
+        {id: '1', profile_image: '/speaker.png', event_Year: '2023', name: 'Divya', designation: 'Product Manager', briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.', briefDescription2: 'Lorem ipsum dolor sit.', briefDescription3: 'Lorem ipsum dolor sit.'  },
+        {id: '1', profile_image: '/speaker.png', event_Year: '2023', name: 'Divya', designation: 'Product Manager', briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.', briefDescription2: 'Lorem ipsum dolor sit.', briefDescription3: 'Lorem ipsum dolor sit.'  },
+        {id: '1', profile_image: '/speaker.png', event_Year: '2023', name: 'Divya', designation: 'Product Manager', briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.', briefDescription2: 'Lorem ipsum dolor sit.', briefDescription3: 'Lorem ipsum dolor sit.'  },
+        {id: '1', profile_image: '/speaker.png', event_Year: '2023', name: 'Divya', designation: 'Product Manager', briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.', briefDescription2: 'Lorem ipsum dolor sit.', briefDescription3: 'Lorem ipsum dolor sit.'  }
 
       ] 
   }
-  };
+  }
 }
 
 export default Speaker

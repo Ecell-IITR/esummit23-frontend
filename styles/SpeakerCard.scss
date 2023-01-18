@@ -130,6 +130,9 @@
 }
 
 @media only screen and (max-width: 420px) {
+  .allSpeakerContainerDiv{
+    width: auto;
+  }
   .sponsorCard {
     display: flex;
     width: 250px;
