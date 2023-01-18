@@ -84,7 +84,9 @@ function Dashboard(props) {
       team_name: TeamName,
       users: inputFields,
       event: props.name,
-      submission_text: Ans1 + '<br>' + Ans2,
+      submission_text: Ans1,
+      submission_text2: Ans2,
+
     };
     let ApiUsed=!props?.Auth ? TEAM_REGISTER_API:NEW_TEAM_REGISTER_API;
     let Auth = !props?.Auth ? getAuthToken() : null;
