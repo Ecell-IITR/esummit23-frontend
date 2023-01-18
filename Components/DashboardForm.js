@@ -98,7 +98,7 @@ function Dashboard(props) {
       })
       .catch((err) => {
         console.log(err)
-        toast.error('Please check the details!');
+        toast.error('Length of answer exceds maximum length ');
       });
   };
   return (
