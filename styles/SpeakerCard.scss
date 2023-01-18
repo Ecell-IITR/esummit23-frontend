@@ -49,7 +49,7 @@
 
 .sponsorCard {
 //   width: 416px;
-width: 416px;
+width: 350px;
   height: 484px;
   display: flex;
   flex-direction: column;
@@ -67,12 +67,13 @@ width: 416px;
 }
 
 .sponsorCardDescription {
-  padding: 16px;
+  padding: 169px 16px 16px 16px; 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   color: white;
-  height: 484px;
+  height: 569px;
+    margin-top:-35.5rem;
 }
 
 .sponsorCardYear {
@@ -111,7 +112,7 @@ width: 416px;
 
 .sponsorCard:hover .sponsorCardBox {
   transform: translateY(-1vh);
-  transition: 1s ease;
+  transition: .5s ease;
   z-index: 300;
 }
 
@@ -122,10 +123,32 @@ width: 416px;
 .sponsorCard:hover .sponsorCardCompany1 {
   // visibility: visible;
   display: block;
-  transition: 1s ease;
+  transition:2s ease;
+}
+.sponsorCardBox{
+    margin-bottom: 1vh;
+}
+
+@media only screen and (max-width:420px){
+    .sponsorCard{
+        display: flex;
+        width: 250px;
+height: 254px;
+    }
+    .sponsorCardImage{
+        width: 340px;
+        height: 254px;
+    }
+    .sponsorCardYear{
+        margin-top: 21vh;
+    }
+    .sponsorCardBox{
+        margin-bottom:-6vh;
 }
 .speakerCardContainerDiv {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+    }
+
 }
