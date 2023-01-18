@@ -12,6 +12,13 @@ class MyDocument extends Document {
         <Head>
           <link rel='preconnect' href='https://fonts.googleapis.com' />
           <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin />
+          <link rel='stylesheet' href='bower_components/aos/dist/aos.css' />
+          <link
+            rel='stylesheet'
+            type='text/css'
+            href='https://unpkg.com/
+    fullpage.js@3.0.1/dist/fullpage.min.css'
+          />
           <link
             href='https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap'
             rel='stylesheet'
@@ -37,6 +44,13 @@ class MyDocument extends Document {
           />
         </Head>
         <body>
+          <link
+            rel='stylesheet'
+            type='text/css'
+            href='https://unpkg.com/
+    fullpage.js@3.0.1/dist/fullpage.min.css'
+          />
+          <link rel='stylesheet' href='bower_components/aos/dist/aos.css' />
           <Main />
           <NextScript />
         </body>

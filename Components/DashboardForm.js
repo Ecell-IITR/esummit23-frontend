@@ -2,17 +2,15 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { toast } from 'react-toastify';
 import FetchApi from '../utils/fetchAPI';
-import { TEAM_REGISTER_API } from '../utils/APIs';
+import { TEAM_REGISTER_API,NEW_TEAM_REGISTER_API } from '../utils/APIs';
 import { getAuthToken } from '../utils';
-
-
 
 function Dashboard(props) {
   const [inputFields, setInputFields] = useState([]);
   const [TeamName, setTeamName] = useState('');
   const [Ans1, setAns1] = useState('');
   const [Ans2, setAns2] = useState('');
-  const [Email,setEmail] = useState('');
+  const [Email, setEmail] = useState('');
   const handleFormChange = (index, event) => {
     let data = [...inputFields];
     data[index][event.target.name] = event.target.value;
@@ -20,11 +18,10 @@ function Dashboard(props) {
   };
   const addFields = () => {
     let newfield = { full_name: '', email: '', phone_number: '' };
-    if(inputFields.length<4){
-    setInputFields([...inputFields, newfield]);
-    }
-    else{
-      toast.error('only 5 members allowed')
+    if (inputFields.length < 4) {
+      setInputFields([...inputFields, newfield]);
+    } else {
+      toast.error('only 5 members allowed');
     }
   };
   const removeFields = (index) => {
@@ -37,64 +34,71 @@ function Dashboard(props) {
   const mobileRegex = /^[0][1-9]\d{9}$|^[1-9]\d{9}$/;
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if(TeamName==""){
-      toast.error('please enter valid Team Name!')
+    if (TeamName == '') {
+      toast.error('please enter valid Team Name!');
       return;
     }
-    if (inputFields.length  > 0) {
-    for(const [i,inputField] of inputFields.entries()){
-   
-      if(inputField.full_name==""){
-       toast.error('please enter valid name!')
-       return;
+    console.log(inputFields.length,props.Auth);
+    if (inputFields.length < 1 && props.Auth) {
+      toast.error('please enter Team Members!');
+      return;
+    }
+    if (inputFields.length > 0) {
+      for (const [i, inputField] of inputFields.entries()) {
+        if (inputField.full_name == '') {
+          toast.error('please enter valid name!');
+          return;
+        }
       }
- }
- for(const [i,inputField] of inputFields.entries()){
-  if(!inputField.email.match(emailRegex)){
-     toast.error('please enter valid email!')
-     return;
-  }
- }
- for(const [i,inputField] of inputFields.entries()){
-  if(!inputField.phone_number.match(mobileRegex)){
-     toast.error('please enter valid mobile number!')
-     return;
-  }
- }}
- if(props.noQuestions==1){
-       if(Ans1==""){
-        toast.error('please enter an answer')
+      for (const [i, inputField] of inputFields.entries()) {
+        if (!inputField.email.match(emailRegex)) {
+          toast.error('please enter valid email!');
+          return;
+        }
+      }
+      for (const [i, inputField] of inputFields.entries()) {
+        if (!inputField.phone_number.match(mobileRegex)) {
+          toast.error('please enter valid mobile number!');
+          return;
+        }
+      }
+    }
+    if (props.noQuestions == 1) {
+      if (Ans1 == '') {
+        toast.error('please enter an answer');
         return;
-       }
- }else if(props.noQuestions==2){
-  if(Ans1==""){
-    toast.error('please enter an answer')
-    return;
-   }
-   if(Ans2==""){
-    toast.error('please enter an answer')
-    return;
-   }
- }
+      }
+    } else if (props.noQuestions == 2) {
+      if (Ans1 == '') {
+        toast.error('please enter an answer');
+        return;
+      }
+      if (Ans2 == '') {
+        toast.error('please enter an answer');
+        return;
+      }
+    }
 
     const data = {
       no_user: inputFields.length,
       team_name: TeamName,
       users: inputFields,
       event: props.name,
-      submission_text: Ans1 + '<br>' + Ans2,
-    };
-  
+      submission_text: Ans1,
+      submission_text2: Ans2,
 
-    FetchApi('POST', TEAM_REGISTER_API, data, getAuthToken())
+    };
+    let ApiUsed=!props?.Auth ? TEAM_REGISTER_API:NEW_TEAM_REGISTER_API;
+    let Auth = !props?.Auth ? getAuthToken() : null;
+    console.log(NEW_TEAM_REGISTER_API,TEAM_REGISTER_API);
+    FetchApi('POST', ApiUsed, data, Auth)
       .then((res) => {
         toast.success('Team Registered!');
-        props.handleClose()
-
+        props.handleClose();
       })
       .catch((err) => {
+        console.log(err)
         toast.error('Please check the details!');
-   
       });
   };
   return (
@@ -137,9 +141,9 @@ function Dashboard(props) {
                     name='email'
                     value={input.email}
                     placeholder='Email Address'
-                    onChange={(event) =>{
-                       handleFormChange(index, event);
-                       setEmail(event.target.value);
+                    onChange={(event) => {
+                      handleFormChange(index, event);
+                      setEmail(event.target.value);
                     }}
                   ></input>
                 </div>
@@ -153,7 +157,12 @@ function Dashboard(props) {
                     onChange={(event) => handleFormChange(index, event)}
                   />
                 </div>
-                <img src="/Delete.png" onClick={()=>{removeFields(index)}} />
+                <img
+                  src='/Delete.png'
+                  onClick={() => {
+                    removeFields(index);
+                  }}
+                />
                 {/* <div className='commonDetail_GRF gender_GRF'>
                   <input
                     className='commonInput_GRF'
@@ -169,11 +178,10 @@ function Dashboard(props) {
           </div>
         );
       })}
-      <div style={{width:"20rem",cursor: "pointer"
-}}>
+      <div style={{ width: '20rem', cursor: 'pointer' }}>
         <div className='addMember_GRF'>
           <div className='addMemberOption_GRF'>
-            <div className='addSymbol_GRF' onClick={addFields}>
+            <div className='addSymbol_GRF' onClick={()=>{addFields()}}>
               <Image
                 className='addImage'
                 src='/add.webp'
@@ -181,12 +189,11 @@ function Dashboard(props) {
                 height='9rem'
               ></Image>
             </div>
-            <div className='afterAddSymbol_GRF' onClick={addFields}>
+            <div className='afterAddSymbol_GRF' onClick={()=>{addFields()}}>
               Add Member
             </div>
           </div>
         </div>
-        
       </div>
       <div className='questionBigContainer_GRF'>
         {props.noQuestions > 0 ? (
@@ -223,7 +230,7 @@ function Dashboard(props) {
         )}
       </div>
 
-      <div className='submitButton' >
+      <div className='submitButton'>
         <button
           className='button_GRF'
           onClick={handleSubmit}

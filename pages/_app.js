@@ -30,13 +30,11 @@ function MyApp({ Component, pageProps }) {
             gtag('js', new Date());
             gtag('config', '${config.GOOGLE_ANALYTICS_ID}');
            `}
-
           </Script>
 
           <Component {...pageProps} />
         </MobileProvider>
       </AuthContext.Provider>
-
     </>
   );
 }

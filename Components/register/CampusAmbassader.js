@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react';
 import { Authenticate } from '../../utils';
 import { useRouter } from 'next/router';
 import Select from 'react-select';
-import { toast } from "react-toastify";
+import { toast } from 'react-toastify';
 const CampusAmbassader = ({ name, email, contact, Gender }) => {
   const [Institute, setInstitute] = useState('');
   const [Branch, setBranch] = useState('');
@@ -21,190 +21,224 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
   const [Degree, setDegree] = useState('');
   const setMobile = useUpdateMobile();
   const router = useRouter();
-  
-    
-   
-     
+
   const Submit = () => {
-    if(Institute==='')
-    { toast.warning('Please enter Institute Name');
-     }
-  
-    else if(Year===''){
+    if (Institute === '') {
+      toast.warning('Please enter Institute Name');
+    } else if (Year === '') {
       toast.warning('Please enter Year');
-   
-    }
-    else if(State===""){
-           toast.warning('Please enter State');
-          
-    }
-    else if(City===""){
+    } else if (State === '') {
+      toast.warning('Please enter State');
+    } else if (City === '') {
       toast.warning('Please enter City');
-     
-       }  
-    else if(password===""){
-     toast.warning('Please enter Password');
-      
-         } 
-   else{ 
-    if (password?.length > 7) {
-      if (password === Confirmpassword) {
-        FetchApi('POST', REGISTER_API, {
-          UserType: 'ca',
-          user: {
-            full_name: name,
-            gender: Gender.label,
-            email: email,
-            phone_number: contact,
-            collage: Institute,
-            branch: Degree,
-            year: Year,
-            city: City,
-            state: State.label,
-            password: password,
-          },
-        })
-          .then((res) => {
-            if (res.status === 201) {
-              if (res.data.role) {
-                localStorage.setItem('userRoleType', res.data.role);
-              }
-              Authenticate(res.data.n, res.data.e_id, res.data.at);
-              router.push('/dashboard');
-            }
+    } else if (password === '') {
+      toast.warning('Please enter Password');
+    } else {
+      if (password?.length > 7) {
+        if (password === Confirmpassword) {
+          FetchApi('POST', REGISTER_API, {
+            UserType: 'ca',
+            user: {
+              full_name: name,
+              gender: Gender.label,
+              email: email,
+              phone_number: contact,
+              collage: Institute,
+              branch: Degree,
+              year: Year,
+              city: City,
+              state: State.label,
+              password: password,
+            },
           })
-          .catch((err) => {
-            toast(err.response.data.error);
-          });
+            .then((res) => {
+              if (res.status === 201) {
+                if (res.data.role) {
+                  localStorage.setItem('userRoleType', res.data.role);
+                }
+                Authenticate(res.data.n, res.data.e_id, res.data.at);
+                router.push('/dashboard');
+              }
+            })
+            .catch((err) => {
+              toast(err.response.data.error);
+            });
+        } else {
+          toast('password doesnot match');
+        }
       } else {
-       toast('password doesnot match');
+        toast('password should have 8 or more characters');
       }
-     }  else {
-      toast('password should have 8 or more characters');
-    } }
+    }
   };
+  const StateData = [
+    {
+      value: 1,
+      label: 'Andhra Pradesh',
+    },
+    {
+      value: 2,
+      label: 'Arunachal Pradesh',
+    },
+    {
+      value: 3,
+      label: 'Assam',
+    },
+    {
+      value: 4,
+      label: 'Bihar',
+    },
+    {
+      value: 5,
+      label: 'Chhattisgarh',
+    },
+    
+    {
+      value: 6,
+      label: 'Goa',
+    },
+    {
+      value: 7,
+      label: 'Gujarat',
+    },
+    {
+      value: 8,
+      label: 'Haryana',
+    },
+    {
+      value: 9,
+      label: 'Himachal Pradesh',
+    },
+    {
+      value: 10,
+      label: 'Jharkhand',
+    },
+    {
+      value: 11,
+      label: 'Karnataka',
+    },
+    {
+      value: 12,
+      label: 'Kerala',
+    },
+    {
+      value: 13,
+      label: 'Madhya Pradesh',
+    },
+    {
+      value: 14,
+      label: 'Maharashtra',
+    },
+    {
+      value: 15,
+      label: 'Manipur',
+    },
+    {
+      value: 16,
+      label: 'Meghalaya',
+    },
+    {
+      value: 17,
+      label: 'Mizoram',
+    },
+    {
+      value: 18,
+      label: 'Nagaland',
+    },
+    {
+      value: 19,
+      label: 'Odisha',
+    },
+    {
+      value: 20,
+      label: 'Puducherry',
+    },
+    {
+      value: 21,
+      label: 'Punjab',
+    },
+    {
+      value: 22,
+      label: 'Rajasthan',
+    },
+    {
+      value: 23,
+      label: 'Sikkim',
+    },
+    {
+      value: 24,
+      label: 'Tamil Nadu',
+    },
+    {
+      value: 25,
+      label: 'Telangana',
+    },
+    {
+      value: 26,
+      label: 'Tripura',
+    },
+    {
+      value: 27,
+      label: 'Uttar Pradesh',
+    },
+    {
+      value: 28,
+      label: 'Uttarakhand',
+    },
+    {
+      value: 29,
+      label: 'West Bengal',
+    },
+    {
+      value: 30,
+      label: 'Delhi',
+    },
+    {
+      value: 31,
+      label: 'Ladakh',
+    },
+    {
+      value: 32,
+      label: 'Jammu & Kashmir'
+      
+    },
+    
+    {
+      value: 33,
+      label: 'Puducherry'
+    },
+    ,
+    
+    {
+      value: 34,
+      label: 'Lakshadweep'
+    },
+    {
+      value: 35,
+      label: 'Lakshadweep'
+    },
+    {
+      value: 36,
+      label: 'Chandigarh'
+    },
+    {
+      value: 36,
+      label: 'Dadra and Nagar Haveli and Daman & Diu'
+    },
+    {
+      value: 37,
+      label: 'Andaman and Nicobar Islands'
+    },
+
+
+  ];
+
+
   useEffect(() => {
     setMobile();
   }, []);
   if (RenderId == 0) {
-    const StateData = [
-      {
-        value: 1,
-        label: 'Andhra Pradesh',
-      },
-      {
-        value: 2,
-        label: 'Arunachal Pradesh',
-      },
-      {
-        value: 3,
-        label: 'Assam',
-      },
-      {
-        value: 4,
-        label: 'Bihar',
-      },
-      {
-        value: 5,
-        label: 'Chhattisgarh',
-      },
-      {
-        value: 6,
-        label: 'Goa',
-      },
-      {
-        value: 7,
-        label: 'Gujarat',
-      },
-      {
-        value: 8,
-        label: 'Haryana',
-      },
-      {
-        value: 9,
-        label: 'Himachal Pradesh',
-      },
-      {
-        value: 10,
-        label: 'Jharkhand',
-      },
-      {
-        value: 11,
-        label: 'Karnataka',
-      },
-      {
-        value: 12,
-        label: 'Kerala',
-      },
-      {
-        value: 13,
-        label: 'Madhya Pradesh',
-      },
-      {
-        value: 14,
-        label: 'Maharashtra',
-      },
-      {
-        value: 15,
-        label: 'Manipur',
-      },
-      {
-        value: 16,
-        label: 'Meghalaya',
-      },
-      {
-        value: 17,
-        label: 'Mizoram',
-      },
-      {
-        value: 18,
-        label: 'Nagaland',
-      },
-      {
-        value: 19,
-        label: 'Odisha',
-      },
-      {
-        value: 20,
-        label: 'Puducherry',
-      },
-      {
-        value: 21,
-        label: 'Punjab',
-      },
-      {
-        value: 22,
-        label: 'Rajasthan',
-      },
-      {
-        value: 23,
-        label: 'Sikkim',
-      },
-      {
-        value: 24,
-        label: 'Tamil Nadu',
-      },
-      {
-        value: 25,
-        label: 'Telangana',
-      },
-      {
-        value: 26,
-        label: 'Tripura',
-      },
-      {
-        value: 27,
-        label: 'Uttar Pradesh',
-      },
-      {
-        value: 28,
-        label: 'Uttarakhand',
-      },
-      {
-        value: 29,
-        label: 'West Bengal',
-      },
-    ];
+    
     const handleChange = (e) => {
       setState(e);
     };
@@ -278,58 +312,59 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
                     value={Year}
                     onChange={(e) => setYear(e.target.value)}
                   />
-                  
-                    <Select
-                      styles={{
-                        control: (baseStyles, state) => ({
-                          ...baseStyles,
-                          backgroundColor: state.isFocused
-                            ? ' #12100e'
-                            : ' #12100e',
-                          width: '20rem',
-                          borderTop: '0px',
-                          borderLeft: '0px',
-                          borderRight: '0px',
-                          borderColor: state.isSelected ? '#12100e' : '#828282',
-                          color: '#828282 !important',
-                        }),
-                        option: (baseStyles, state) => ({
-                          ...baseStyles,
-                          backgroundColor: state.isFocused
-                            ? ' #12100e'
-                            : ' #12100e',
-                          width: '20rem',
-                          backgroundColor: '  #dcd1ad',
-                          paddingLeft: '1rem',
-                          color: '#828282',
-                        }),
-                        input: (baseStyles, state) => ({
-                          ...baseStyles,
-                          color: ' #dcd1ad',
-                        }),
-                        singleValue: (baseStyles, state) => ({
-                          ...baseStyles,
-                          color: '#dcd1ad',
-                        }),
-                        valueContainer: (baseStyles, state) => ({...baseStyles,
-                        padding:0,
-                        }),
-                        menu: (baseStyles, state) => ({
-                          ...baseStyles,
-                          backgroundColor: state.isFocused
-                            ? ' #12100e'
-                            : ' #12100e',
-                          width: '20rem',
-                          fontFamily: 'Nunito Sans',
-                          fontWeight: '400',
-                        }),
-                      }}
-                      placeholder='State'
-                      value={State}
-                      options={StateData}
-                      onChange={handleChange}
-                    />
-              
+
+                  <Select
+                    styles={{
+                      control: (baseStyles, state) => ({
+                        ...baseStyles,
+                        backgroundColor: state.isFocused
+                          ? ' #12100e'
+                          : ' #12100e',
+                        width: '20rem',
+                        borderTop: '0px',
+                        borderLeft: '0px',
+                        borderRight: '0px',
+                        borderColor: state.isSelected ? '#12100e' : '#828282',
+                        color: '#828282 !important',
+                      }),
+                      option: (baseStyles, state) => ({
+                        ...baseStyles,
+                        backgroundColor: state.isFocused
+                          ? ' #12100e'
+                          : ' #12100e',
+                        width: '20rem',
+                        backgroundColor: '  #dcd1ad',
+                        paddingLeft: '1rem',
+                        color: '#828282',
+                      }),
+                      input: (baseStyles, state) => ({
+                        ...baseStyles,
+                        color: ' #dcd1ad',
+                      }),
+                      singleValue: (baseStyles, state) => ({
+                        ...baseStyles,
+                        color: '#dcd1ad',
+                      }),
+                      valueContainer: (baseStyles, state) => ({
+                        ...baseStyles,
+                        padding: 0,
+                      }),
+                      menu: (baseStyles, state) => ({
+                        ...baseStyles,
+                        backgroundColor: state.isFocused
+                          ? ' #12100e'
+                          : ' #12100e',
+                        width: '20rem',
+                        fontFamily: 'Nunito Sans',
+                        fontWeight: '400',
+                      }),
+                    }}
+                    placeholder='State'
+                    value={State}
+                    options={StateData}
+                    onChange={handleChange}
+                  />
+
                   <input
                     className={
                       City == ''
@@ -623,8 +658,4 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
 
 export default CampusAmbassader;
 
-
-
-
-
-98332900022
+98332900022;

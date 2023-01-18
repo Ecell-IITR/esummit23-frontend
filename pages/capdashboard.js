@@ -12,7 +12,6 @@ import Mobprofiledetails, {
 } from '../Components/dashboard/Mobdashboard';
 import { useEffect } from 'react';
 import { useMobile, useUpdateMobile } from '../utils/MobileContext';
-import { display } from '@mui/system';
 const capdashboard = () => {
   const setMobile = useUpdateMobile();
   useEffect(() => {

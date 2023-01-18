@@ -1,28 +1,36 @@
-
-// .allSpeakerContainerDiv{
-//     width: 100vw;
-//     display: flex;
-//     justify-content: center;
-//     background: linear-gradient(180deg, #12100e 0%, #301a08 100%);
-//   }
+.allSpeakerContainerDiv {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 1;
+  background: linear-gradient(180deg, #12100e 0%, #301a08 100%);
+}
 .allSpeakerContainer {
-    width: 100vw;
+    width: 86vw;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(180deg, #12100e 0%, #301a08 100%);
+    flex-wrap: wrap;
+    flex-grow: 1;
   }
 .speakerText {
   width: 204px;
   height: 48px;
+  margin-top: 50px;
   font-family: 'Lexend';
   font-style: normal;
   font-weight: 600;
-  font-size: 44px;
+  font-size: 3rem;
   line-height: 110%;
   display: flex;
   align-items: center;
   color: #dcd1ad;
 }
+
+// .viewAllSpeakerBtn {
+//   width: ;
+//   height: ;
+// }
+
 .SpeakerDescriptionText {
   width: 1312px;
   height: 108px;

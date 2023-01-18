@@ -8,10 +8,9 @@
 }
 
 .eventPgCont {
-  height: auto;
-  width: auto;
   background: linear-gradient(180deg, #12100e 0%, #301a08 100%);
   color: #f3edd8;
+  width: 100%;
 }
 
 .eventPgCards {
@@ -25,10 +24,12 @@
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   letter-spacing: 0.04em;
-  height: 14rem;
+  height: 13rem;
+  // width: 17rem;
   color: black;
   text-align: center;
   padding-top: 20px;
+  margin-top: -1rem;
 }
 // .eventPgBtnC:hover {
   
@@ -85,7 +86,6 @@
 
   .eventPgCards {
     width: 300px;
-    height: 415px;
     margin-bottom: 10%;
   }
   .eventPgBtnC {
@@ -93,6 +93,9 @@
   }
   .eventPgDesc {
     font-size: 14px;
+  }
+  .eventPgBtn{
+    margin-left: 1.6rem;
   }
 }
 
@@ -108,20 +111,24 @@
   }
   .eventPgBtnC {
     width: 250px;
-    margin-top: -5%;
+    height: 4rem;
   }
   .eventPgDesc {
     font-size: 12px;
   }
-  .eventPgBtn {
-    margin-left: 0rem;
-  }
+  // .eventPgBtn {
+  //   margin-left: 0rem;
+  // }
   .eventPgFlex {
     gap: 3rem;
   }
   .eventPga {
     font-size: 10px;
   }
+  .eventPgBtn{
+    margin-left: -.2rem;
+  }
+
 }
 @media screen and (max-width: 450px) {
   .eventPgHdng {

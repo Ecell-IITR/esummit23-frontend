@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react';
 import { Authenticate } from '../../utils';
 import { useRouter } from 'next/router';
 import Select from 'react-select';
-import { toast } from "react-toastify";
+import { toast } from 'react-toastify';
 const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
   const [Organisation, setOrganisation] = useState('');
   const [Indusrty, setIndusrty] = useState('');
@@ -18,62 +18,52 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
   const [ShowPassword, setShowPassword] = useState(false);
   const [ShowPassword2, setShowPassword2] = useState(false);
   const [Degree, setDegree] = useState('');
-  
+
   const setMobile = useUpdateMobile();
   const router = useRouter();
   const Submit = () => {
-    if(Organisation==='')
-    { toast.warning('Please enter Organization name');
-     }
-  
-    else if(Indusrty===''){
+    if (Organisation === '') {
+      toast.warning('Please enter Organization name');
+    } else if (Indusrty === '') {
       toast.warning('Please enter Industry name');
-   
-    }
-    else if(State===""){
-           toast.warning('Please enter State');
-          
-    }
-    else if(City===""){
+    } else if (State === '') {
+      toast.warning('Please enter State');
+    } else if (City === '') {
       toast.warning('Please enter City');
-     
-       }  
-    else if(password===""){
-     toast.warning('Please enter Password');
-      
-         } 
-   else {
-    if (password?.length > 7) {
-      if (password === Confirmpassword) {
-        FetchApi('POST', REGISTER_API, {
-          UserType: 'proff',
-          referred_by: RefferalCode,
-          user: {
-            full_name: name,
-            gender: Gender.label,
-            email: email,
-            phone_number: contact,
-            city: City,
-            state: State.label,
-            password: password,
-          },
-        })
-          .then((res) => { 
-            if (res.status === 201) {
-              Authenticate(res.data.n, res.data.e_id, res.data.at);
-              router.push('/dashboard');
-            }
-          })
-          .catch((err) => {
-            toast(err.response.data.error);
-          
-          });
-      } else {
-        toast('password doesnot match');
-      }
+    } else if (password === '') {
+      toast.warning('Please enter Password');
     } else {
-      toast('password should have 8 or more characters');
-    }}
+      if (password?.length > 7) {
+        if (password === Confirmpassword) {
+          FetchApi('POST', REGISTER_API, {
+            UserType: 'proff',
+            referred_by: RefferalCode,
+            user: {
+              full_name: name,
+              gender: Gender.label,
+              email: email,
+              phone_number: contact,
+              city: City,
+              state: State.label,
+              password: password,
+            },
+          })
+            .then((res) => {
+              if (res.status === 201) {
+                Authenticate(res.data.n, res.data.e_id, res.data.at);
+                router.push('/dashboard');
+              }
+            })
+            .catch((err) => {
+              toast(err.response.data.error);
+            });
+        } else {
+          toast('password doesnot match');
+        }
+      } else {
+        toast('password should have 8 or more characters');
+      }
+    }
   };
   useEffect(() => {
     setMobile();
@@ -196,6 +186,38 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
         value: 29,
         label: 'West Bengal',
       },
+      {
+        value: 30,
+        label: 'Jammu and Kashmir',
+      },
+      {
+        value: 31,
+        label: 'Ladakh',
+      },
+      {
+        value: 32,
+        label: 'Puducherry',
+      },
+      {
+        value: 33,
+        label: 'Lakshadweep',
+      },
+      {
+        value: 34,
+        label: 'Delhi',
+      },
+      {
+        value: 35,
+        label: 'Chandigarh',
+      },
+      {
+        value: 36,
+        label: 'Dadra and Nagar Haveli and Daman & Diu',
+      },
+      {
+        value: 37,
+        label: 'Andaman and Nicobar Islands',
+      },
     ];
     const handleChange = (e) => {
       setState(e);
@@ -238,11 +260,11 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
 
                 <div className='regInputContainer'>
                   <input
-                  className={
-                    Organisation == ''
-                      ? 'LoginFormLeftInput'
-                      : 'LoginFormLeftInput inputGold'
-                  }
+                    className={
+                      Organisation == ''
+                        ? 'LoginFormLeftInput'
+                        : 'LoginFormLeftInput inputGold'
+                    }
                     styles={{ margintop: '36px' }}
                     type='text'
                     placeholder='Organization Name'
@@ -250,73 +272,74 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
                     onChange={(e) => setOrganisation(e.target.value)}
                   />
                   <input
-                  className={
-                    Indusrty== ''
-                      ? 'LoginFormLeftInput'
-                      : 'LoginFormLeftInput inputGold'
-                  }
+                    className={
+                      Indusrty == ''
+                        ? 'LoginFormLeftInput'
+                        : 'LoginFormLeftInput inputGold'
+                    }
                     type='text'
                     placeholder='Indusrty Name'
                     value={Indusrty}
                     onChange={(e) => setIndusrty(e.target.value)}
                   />
-                  
-                    <Select
-                      styles={{
-                        control: (baseStyles, state) => ({
-                          ...baseStyles,
-                          backgroundColor: state.isFocused
-                            ? ' #12100e'
-                            : ' #12100e',
-                          width: '20rem',
-                          borderTop: '0px',
-                          borderLeft: '0px',
-                          borderRight: '0px',
-                          borderColor: state.isSelected ? '#12100e' : '#828282',
-                          color: '#828282 !important',
-                        }),
-                        option: (baseStyles, state) => ({
-                          ...baseStyles,
-                          backgroundColor: state.isFocused
-                            ? ' #12100e'
-                            : ' #12100e',
-                          width: '20rem',
-                          backgroundColor: '  #dcd1ad',
-                          paddingLeft: '1rem',
-                          color: '#828282',
-                        }),
-                        input: (baseStyles, state) => ({
-                          ...baseStyles,
-                          color: ' #dcd1ad',
-                        }),
-                        singleValue: (baseStyles, state) => ({
-                          ...baseStyles,
-                          color: '#dcd1ad',
-                        }),
-                        valueContainer: (baseStyles, state) => ({...baseStyles,
-                        padding:0,
-                        }),
-                        menu: (baseStyles, state) => ({
-                          ...baseStyles,
-                          backgroundColor: state.isFocused
-                            ? ' #12100e'
-                            : ' #12100e',
-                          width: '20rem',
-                          fontFamily: 'Nunito Sans',
-                          fontWeight: '400',
-                        }),
-                      }}
-                      placeholder='State'
-                      value={State}
-                      options={StateData}
-                      onChange={handleChange}
-                    />
+
+                  <Select
+                    styles={{
+                      control: (baseStyles, state) => ({
+                        ...baseStyles,
+                        backgroundColor: state.isFocused
+                          ? ' #12100e'
+                          : ' #12100e',
+                        width: '20rem',
+                        borderTop: '0px',
+                        borderLeft: '0px',
+                        borderRight: '0px',
+                        borderColor: state.isSelected ? '#12100e' : '#828282',
+                        color: '#828282 !important',
+                      }),
+                      option: (baseStyles, state) => ({
+                        ...baseStyles,
+                        backgroundColor: state.isFocused
+                          ? ' #12100e'
+                          : ' #12100e',
+                        width: '20rem',
+                        backgroundColor: '  #dcd1ad',
+                        paddingLeft: '1rem',
+                        color: '#828282',
+                      }),
+                      input: (baseStyles, state) => ({
+                        ...baseStyles,
+                        color: ' #dcd1ad',
+                      }),
+                      singleValue: (baseStyles, state) => ({
+                        ...baseStyles,
+                        color: '#dcd1ad',
+                      }),
+                      valueContainer: (baseStyles, state) => ({
+                        ...baseStyles,
+                        padding: 0,
+                      }),
+                      menu: (baseStyles, state) => ({
+                        ...baseStyles,
+                        backgroundColor: state.isFocused
+                          ? ' #12100e'
+                          : ' #12100e',
+                        width: '20rem',
+                        fontFamily: 'Nunito Sans',
+                        fontWeight: '400',
+                      }),
+                    }}
+                    placeholder='State'
+                    value={State}
+                    options={StateData}
+                    onChange={handleChange}
+                  />
                   <input
-                  className={
-                   City== ''
-                      ? 'LoginFormLeftInput'
-                      : 'LoginFormLeftInput inputGold'
-                  }
+                    className={
+                      City == ''
+                        ? 'LoginFormLeftInput'
+                        : 'LoginFormLeftInput inputGold'
+                    }
                     type='text'
                     placeholder='City'
                     value={City}
@@ -324,7 +347,6 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
                   />
                   <div style={{ display: 'flex', alignItems: 'center' }}>
                     <input
-                    
                       className={
                         password == ''
                           ? 'LoginFormLeftInput'
@@ -428,28 +450,28 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
                   </h3>
                   <div className='formInput'>
                     <input
-                    className={
-                     Organisation == ''
-                        ? 'LoginFormLeftInput'
-                        : 'LoginFormLeftInput inputGold'
-                    }
+                      className={
+                        Organisation == ''
+                          ? 'LoginFormLeftInput'
+                          : 'LoginFormLeftInput inputGold'
+                      }
                       type='text'
                       value={Organisation}
                       onChange={(e) => setOrganisation(e.target.value)}
                       placeholder='Organization Name'
                     />
                     <input
-                    className={
-                      Indusrty == ''
-                         ? 'LoginFormLeftInput'
-                         : 'LoginFormLeftInput inputGold'
-                     }                  
+                      className={
+                        Indusrty == ''
+                          ? 'LoginFormLeftInput'
+                          : 'LoginFormLeftInput inputGold'
+                      }
                       type='text'
                       value={Indusrty}
                       onChange={(e) => setIndusrty(e.target.value)}
                       placeholder='Industry (You work in) '
                     />
-                   
+
                     <Select
                       styles={{
                         control: (baseStyles, state) => ({
@@ -493,11 +515,11 @@ const Professional = ({ name, email, contact, Gender, RefferalCode }) => {
                       onChange={handleChange}
                     />
                     <input
-                    className={
-                      City == ''
-                         ? 'LoginFormLeftInput'
-                         : 'LoginFormLeftInput inputGold'
-                     }   
+                      className={
+                        City == ''
+                          ? 'LoginFormLeftInput'
+                          : 'LoginFormLeftInput inputGold'
+                      }
                       type='text'
                       value={City}
                       onChange={(e) => setCity(e.target.value)}

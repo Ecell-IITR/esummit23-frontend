@@ -33,11 +33,8 @@ const Forms = () => {
       })
       .catch((err) => {
         toast.error('Query Unsuccessful!');
-
-        
       });
   };
-
 
   return (
     <>

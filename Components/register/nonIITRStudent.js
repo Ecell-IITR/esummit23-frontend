@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react';
 import { Authenticate } from '../../utils';
 import { useRouter } from 'next/router';
 import Select from 'react-select';
-import { toast } from "react-toastify";
+import { toast } from 'react-toastify';
 const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
   const [Institute, setInstitute] = useState('');
   const [Degree, setDegree] = useState('');
@@ -20,64 +20,55 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
   const [ShowPassword2, setShowPassword2] = useState(false);
   const setMobile = useUpdateMobile();
   const router = useRouter();
-  const [Branch,setBranch] = useState('');
+  const [Branch, setBranch] = useState('');
   const Submit = () => {
-    if(Institute==='')
-    { toast.warning('Please enter Institute Name');
-     }
-    else if(Degree===''){
+    if (Institute === '') {
+      toast.warning('Please enter Institute Name');
+    } else if (Degree === '') {
       toast.warning('Please enter Degree ');
-    }
-    else if(Year===''){
+    } else if (Year === '') {
       toast.warning('Please enter Year');
-   
-    }
-    else if(State===""){
-           toast.warning('Please enter State');
-          
-    }
-    else if(City===""){
+    } else if (State === '') {
+      toast.warning('Please enter State');
+    } else if (City === '') {
       toast.warning('Please enter City');
-     
-       }  
-    else if(password===""){
-     toast.warning('Please enter Password');
-      
-         } 
-   else {
-    if (password?.length > 7) {
-      if (password === Confirmpassword) {
-        FetchApi('POST', REGISTER_API, {
-          UserType: 'stu',
-          referred_by: RefferalCode,
-          user: {
-            full_name: name,
-            gender: Gender.label,
-            email: email,
-            phone_number: contact,
-            collage: Degree,
-            branch: Branch,
-            year: Year,
-            city: City,
-            state: State.label,
-            password: password,
-          },
-        })
-          .then((res) => {
-            if (res.status === 201) {
-              Authenticate(res.data.n, res.data.e_id, res.data.at);
-              router.push('/dashboard');
-            }
-          })
-          .catch((err) => {
-            toast(err.response.data.error);
-          });
-      } else {
-        toast('password doesnot match');
-      }
+    } else if (password === '') {
+      toast.warning('Please enter Password');
     } else {
-      toast('password should have 8 or more characters');
-    }}
+      if (password?.length > 7) {
+        if (password === Confirmpassword) {
+          FetchApi('POST', REGISTER_API, {
+            UserType: 'stu',
+            referred_by: RefferalCode,
+            user: {
+              full_name: name,
+              gender: Gender.label,
+              email: email,
+              phone_number: contact,
+              collage: Degree,
+              branch: Branch,
+              year: Year,
+              city: City,
+              state: State.label,
+              password: password,
+            },
+          })
+            .then((res) => {
+              if (res.status === 201) {
+                Authenticate(res.data.n, res.data.e_id, res.data.at);
+                router.push('/dashboard');
+              }
+            })
+            .catch((err) => {
+              toast(err.response.data.error);
+            });
+        } else {
+          toast('password doesnot match');
+        }
+      } else {
+        toast('password should have 8 or more characters');
+      }
+    }
   };
   useEffect(() => {
     setMobile();
@@ -200,6 +191,38 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
         value: 29,
         label: 'West Bengal',
       },
+      {
+        value: 30,
+        label: 'Jammu and Kashmir',
+      },
+      {
+        value: 31,
+        label: 'Ladakh',
+      },
+      {
+        value: 32,
+        label: 'Puducherry',
+      },
+      {
+        value: 33,
+        label: 'Lakshadweep',
+      },
+      {
+        value: 34,
+        label: 'Delhi',
+      },
+      {
+        value: 35,
+        label: 'Chandigarh',
+      },
+      {
+        value: 36,
+        label: 'Dadra and Nagar Haveli and Daman & Diu',
+      },
+      {
+        value: 37,
+        label: 'Andaman and Nicobar Islands',
+      },
     ];
     const handleChange = (e) => {
       setState(e);
@@ -274,7 +297,6 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
                     value={Year}
                     onChange={(e) => setYear(e.target.value)}
                   />
-                  
                   <Select
                     styles={{
                       control: (baseStyles, state) => ({
@@ -307,8 +329,9 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
                         ...baseStyles,
                         color: '#dcd1ad',
                       }),
-                      valueContainer: (baseStyles, state) => ({...baseStyles,
-                      padding:0,
+                      valueContainer: (baseStyles, state) => ({
+                        ...baseStyles,
+                        padding: 0,
                       }),
                       menu: (baseStyles, state) => ({
                         ...baseStyles,
@@ -320,7 +343,6 @@ const NonIITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
                         fontWeight: '400',
                       }),
                     }}
-
                     placeholder='State'
                     value={State}
                     options={StateData}

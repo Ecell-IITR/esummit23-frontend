@@ -41,8 +41,8 @@ function ForgotPassword(props) {
     }
   }
   function validateNumber(str) {
-  let re =/^\d+$/.test(str);
-     return !(re)
+    let re = /^\d+$/.test(str);
+    return !re;
   }
   function submit2() {
     if (OTP.length != 6 || validateNumber(OTP)) {
@@ -54,7 +54,7 @@ function ForgotPassword(props) {
     } else {
       const data = {
         otp: OTP,
-        email:Email,
+        email: Email,
         password: Password,
       };
       FetchApi('POST', VERIFY_API, data)
@@ -65,7 +65,6 @@ function ForgotPassword(props) {
         })
         .catch((err) => {
           toast.error(err?.response?.data?.error);
-          
         });
     }
   }

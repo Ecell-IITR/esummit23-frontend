@@ -55,7 +55,7 @@ const Identity = ({ setUserType, setRenderId }) => {
               >
                 <div
                   className='regButton'
-                  style={{cursor: 'pointer'}}
+                  style={{ cursor: 'pointer' }}
                   onClick={() => {
                     setUserType('stuIITR');
                     setRenderId(2);
@@ -65,7 +65,7 @@ const Identity = ({ setUserType, setRenderId }) => {
                 </div>
                 <div
                   className='regButton'
-                  style={{cursor: 'pointer'}}
+                  style={{ cursor: 'pointer' }}
                   onClick={() => {
                     setUserType('stu');
                     setRenderId(2);
@@ -75,7 +75,7 @@ const Identity = ({ setUserType, setRenderId }) => {
                 </div>
                 <div
                   className='regButton'
-                  style={{cursor: 'pointer'}}
+                  style={{ cursor: 'pointer' }}
                   onClick={() => {
                     setUserType('ca');
                     setRenderId(2);
@@ -85,7 +85,7 @@ const Identity = ({ setUserType, setRenderId }) => {
                 </div>
                 <div
                   className='regButton'
-                  style={{cursor: 'pointer'}}
+                  style={{ cursor: 'pointer' }}
                   onClick={() => {
                     setUserType('proff');
                     setRenderId(2);
@@ -139,7 +139,7 @@ const Identity = ({ setUserType, setRenderId }) => {
                 >
                   <div
                     className='regButton'
-                    style={{cursor: 'pointer'}}
+                    style={{ cursor: 'pointer' }}
                     onClick={() => {
                       setUserType('stuIITR');
                       setRenderId(2);
@@ -150,7 +150,7 @@ const Identity = ({ setUserType, setRenderId }) => {
 
                   <div
                     className='regButton'
-                    style={{cursor: 'pointer'}}
+                    style={{ cursor: 'pointer' }}
                     onClick={() => {
                       setUserType('stu');
                       setRenderId(2);
@@ -161,7 +161,7 @@ const Identity = ({ setUserType, setRenderId }) => {
 
                   <div
                     className='regButton'
-                    style={{cursor: 'pointer'}}
+                    style={{ cursor: 'pointer' }}
                     onClick={() => {
                       setUserType('ca');
                       setRenderId(2);
@@ -172,7 +172,7 @@ const Identity = ({ setUserType, setRenderId }) => {
 
                   <div
                     className='regButton'
-                    style={{cursor: 'pointer'}}
+                    style={{ cursor: 'pointer' }}
                     onClick={() => {
                       setUserType('proff');
                       setRenderId(2);

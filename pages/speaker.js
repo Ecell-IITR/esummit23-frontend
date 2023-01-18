@@ -6,10 +6,13 @@ import Image from 'next/image';
 const Speaker = (props) => {
   const { Data } = props;
   return ( 
-  <div className='allSpeakerContainerDiv' style={{ width: '100vw', display:"flex", background: 'linear-gradient(180deg, #12100e 0%, #301a08 100%)', justifyContent: 'center'
- }} >
+  <div className='allSpeakerContainerDiv'>
     <div className='allSpeakerContainer'>
+      {/* <div style={{ width: '100vw', display:"flex", background: 'linear-gradient(180deg, #12100e 0%, #301a08 100%)', justifyContent: 'center'
+ }}> */}
     <div className='speakerText'>Speaker</div>
+    {/* <button className='viewAllSpeakerBtn'>VIEW ALL SPEAER</button> */}
+    {/* </div> */}
     <div className='SpeakerDescriptionText'>Lorem ipsum dolor sit amet consectetur. Eu in pharetra pharetra nisi. Tincidunt placerat orci lacus amet arcu malesuada. Massa aliquet porttitor nunc nulla. Sed mattis commodo massa metus nulla faucibus justo quisque. Ultrices ipsum vel viverra sed orci quam mi dui rutrum. Lorem ipsum dolor sit amet consectetur. Eu in pharetra pharetra nisi. Tincidunt placerat orci lacus amet arcu malesuada. Massa aliquet porttitor nunc nulla. Sed mattis commodo massa metus nulla faucibus justo quisque. Ultrices ipsum vel viverra sed orci quam mi dui rutrum. </div>
     <div className='speakerCardContainerDiv'>
   {Data.map((Elements) => (
