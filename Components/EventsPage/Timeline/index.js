@@ -1,7 +1,11 @@
 import Image from 'next/image';
 import { toast } from 'react-toastify';
+import { useRouter } from 'next/router'
 
 export function EventsIdeathon(props) {
+  const router = useRouter()
+
+  
   return (
     <div className='containerEvents'>
       <div className='helpAboutContainer'>
@@ -21,7 +25,7 @@ export function EventsIdeathon(props) {
           </div>
         </div>
       </div>
-      <div className='helpSecondContainer'>
+      {router.query.slug==="Startup Expo" ? <></>:<>  <div className='helpSecondContainer'>
         <div className='secondcontainer'>       
           <div className='arrows'>
             <div className='vl'></div>
@@ -50,7 +54,7 @@ export function EventsIdeathon(props) {
             </div>
           </div>
         </div>
-      </div>
+      </div> </>}
       <div className='helpRuleContainer'>
         <div className='rulecontainer'>
           <div className='ruleheading'>Rules and Regulation</div>
