@@ -28,7 +28,8 @@ const Speaker = (props) => {
   <div className='allSpeakerContainerDiv'>
     <div className='allSpeakerContainer'>     
     <div className='speakerText'>Speaker</div>
-    <div className='SpeakerDescriptionText'>Lorem ipsum dolor sit amet consectetur. Eu in pharetra pharetra nisi. Tincidunt placerat orci lacus amet arcu malesuada. Massa aliquet porttitor nunc nulla. Sed mattis commodo massa metus nulla faucibus justo quisque. Ultrices ipsum vel viverra sed orci quam mi dui rutrum. Lorem ipsum dolor sit amet consectetur. Eu in pharetra pharetra nisi. Tincidunt placerat orci lacus amet arcu malesuada. Massa aliquet porttitor nunc nulla. Sed mattis commodo massa metus nulla faucibus justo quisque. Ultrices ipsum vel viverra sed orci quam mi dui rutrum.</div>
+    <div className='SpeakerDescriptionText'>E-summit, IIT Roorkee is known for the quality speaker sessions, it brings to the table. Speakers are enthusiastic about sharing their knowledge, thrilling experiences, and insights. Here comes the time for more amazing sessions, catering to every segment of the audience, students, professors, and investors.
+</div>
     <div className='speakerCardContainerDiv'>
   {Data.map((Elements) => (
         <div key={Elements.id} className='sponsorCard'>
@@ -58,8 +59,6 @@ const Speaker = (props) => {
             </div>
           </div>
         </div>
-        
-      
       ))
     }
      </div>
