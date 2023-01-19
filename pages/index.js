@@ -5,8 +5,7 @@ import Animation from '../Components/Animation';
 import Lottie from 'react-lottie';
 import SecondLandingPage from '../Components/SecondLandingPage';
 import ThirdLandingPage from '../Components/ThirdLandingPage';
-
-
+import Footer from "../Components/Footer/Footer"
 
 export default function Home() {
   const defaultOptions = {
@@ -17,12 +16,11 @@ export default function Home() {
 
   return (
     <>
-
       {/* <Navbar /> */}
       {/* <div className='LottieContainer'>
         <Lottie options={defaultOptions} />
       </div> */}
-      
+
       <div className='Seo-text'>
         <p>
           To find a way out of the darkness that has engulfed us over the past
@@ -34,6 +32,15 @@ export default function Home() {
           the issues troubling us into an opportunity to revolutionize the
           world. E-Summit 23 will present rays of hope so dazzling that they
           penetrate even the darkness that veils our eyes.
+        </p>
+      </div>
+      <div className='Seo-text'>
+        <p>
+          Global leadership summit Global entrepreneurship summit International
+          entrepreneurship summit Summit international School events School
+          event ideas High school track events Hackathon What is a hackathon
+          Virtual hackathon Community Fest Tickets Startup Startup school Go
+          fund me Management fest
         </p>
       </div>
       <div className='Seo-text'>
@@ -62,7 +69,7 @@ export default function Home() {
           much more{' '}
         </p>
       </div>
-      <Animation/>
+      <Animation />
 
       <div>
         <SecondLandingPage />
@@ -71,12 +78,11 @@ export default function Home() {
         <ThirdLandingPage />
       </div>
       <div></div>
-      {/* <div>
+      <div>
         <Footer />
-      </div> */}
-       {/* <div style={{width:"100vw",height:"100vh"}}></div>  */}
+      </div>
+      {/* <div style={{width:"100vw",height:"100vh"}}></div>  */}
       {/* <div style={{width:"100vw",height:"100vh"}}></div> */}
-
     </>
   );
 }
