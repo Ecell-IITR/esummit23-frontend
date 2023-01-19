@@ -1,7 +1,16 @@
 import React from 'react'
 import Image from 'next/image';
 import axios from 'axios';
+import  { SPEAKER_DETAIL_API  } from '../utils/APIs';
 
+export async function getStaticProps() {
+  const res = await axios.get(SPEAKER_DETAIL_API); 
+  const Data = res.data;
+  // console.log(Data);
+  return {
+    props: { Data}
+  }
+}
 
 const Speaker = (props) => {
   const { Data } = props;
@@ -46,25 +55,6 @@ const Speaker = (props) => {
      </div>
      </div>
     </div>)
-}
-export async function getStaticProps() {
-  // const res = await axios.get('https://api.esummit.in/public/speakers');
-  
-  // const Data = res.data;
-  // console.log(Data);
-  return {
-    props: { 
-      Data: [
-        {id: '1', profile_image: '/speaker.png', event_Year: '2023', name: 'Divya', designation: 'Product Manager', briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.', briefDescription2: 'Lorem ipsum dolor sit.', briefDescription3: 'Lorem ipsum dolor sit.'  },
-        {id: '1', profile_image: '/speaker.png', event_Year: '2023', name: 'Divya', designation: 'Product Manager', briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.', briefDescription2: 'Lorem ipsum dolor sit.', briefDescription3: 'Lorem ipsum dolor sit.'  },
-        {id: '1', profile_image: '/speaker.png', event_Year: '2023', name: 'Divya', designation: 'Product Manager', briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.', briefDescription2: 'Lorem ipsum dolor sit.', briefDescription3: 'Lorem ipsum dolor sit.'  },
-        {id: '1', profile_image: '/speaker.png', event_Year: '2023', name: 'Divya', designation: 'Product Manager', briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.', briefDescription2: 'Lorem ipsum dolor sit.', briefDescription3: 'Lorem ipsum dolor sit.'  },
-        {id: '1', profile_image: '/speaker.png', event_Year: '2023', name: 'Divya', designation: 'Product Manager', briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.', briefDescription2: 'Lorem ipsum dolor sit.', briefDescription3: 'Lorem ipsum dolor sit.'  },
-        {id: '1', profile_image: '/speaker.png', event_Year: '2023', name: 'Divya', designation: 'Product Manager', briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.',briefDescription1: 'Lorem ipsum dolor sit.', briefDescription2: 'Lorem ipsum dolor sit.', briefDescription3: 'Lorem ipsum dolor sit.'  }
-
-      ] 
-  }
-  }
 }
 
 export default Speaker
