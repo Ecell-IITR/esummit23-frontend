@@ -38,14 +38,15 @@
   flex-direction: row;
   height: 1rem;
   display: flex;
+  width: 100%;
   // gap: 1rem;
 }
 .coin10 {
-  height: 75%;
+  height: 70%;
   width: 70%;
 }
 .coinsDown {
-  width: 55rem;
+  // width: 55rem;
   // border: 1px solid yellow;
   height: 1rem;
   display: flex;
@@ -180,7 +181,7 @@
   100% {
     transform: rotate(220.34deg);
     margin-top: -3.5rem;
-    margin-right: 10vw;
+    margin-right: 18vw;
     -webkit-filter: blur(1.8px);
   }
   90% {
@@ -207,7 +208,7 @@
     -webkit-filter: blur(1px);
   }
   90% {
-    margin-top: 11rem;
+    margin-top:7rem;
   }
 }
 
@@ -468,3 +469,81 @@
   width: 60%;
   // border: 1px solid white;
 }
+
+@media screen and (max-width:1160px)
+{
+  .landingImage{
+    margin-bottom: 7rem;
+  }
+}
+
+
+@media screen and (max-width:1060px)
+{
+  .landingImage{
+    margin-bottom:9rem;
+  }
+
+}
+@media screen and (max-width:1000px)
+{
+  .landingImage{
+    margin-bottom:13rem;
+  }
+
+}
+
+@media screen and (max-width:875px)
+{
+  .landingImage{
+    margin-bottom:18rem;
+  }
+
+}
+
+@media screen and (min-width:1417px)
+{
+  .landingImage{
+    margin-bottom:-1rem;
+  }
+
+}
+@media screen and (min-width:1487px)
+{
+  .landingImage{
+    margin-bottom:-3rem;
+  }
+
+}
+
+@media screen and (min-width:1540px)
+{
+  .landingImage{
+    margin-bottom:-8rem;
+  }
+
+}
+@media screen and (min-width:1671px)
+{
+  .landingImage{
+    margin-bottom:-12rem;
+  }
+
+}
+
+
+// @media screen and (min-width:1481px)
+// {
+//   .landingImage{
+//     margin-bottom:-3rem;
+//   }
+
+// }
+
+// @media screen and (min-width:1319px)
+// {
+//   .landingImage{
+//     margin-bottom:1rem;
+//   }
+
+// }
