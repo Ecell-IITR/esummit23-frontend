@@ -4,11 +4,21 @@ import axios from 'axios';
 import  { SPEAKER_DETAIL_API  } from '../utils/APIs';
 
 export async function getStaticProps() {
-  const res = await axios.get(SPEAKER_DETAIL_API); 
-  const Data = res.data;
+  // const res = await axios.get(SPEAKER_DETAIL_API); 
+  // const Data = res.data;
   // console.log(Data);
   return {
-    props: { Data}
+    props: { 
+      Data:[
+        { id: 1, name:'Divya', designation: 'product manager',event_year: 2023, profile_image:'/speaker.png',briefDescription1:'Lorem ipsum dolor sit.',briefDescription2:'Lorem ipsum dolor sit.',briefDescription3:'Lorem ipsum dolor sit.' },
+        { id: 1, name:'Divya', designation: 'product manager',event_year: 2023, profile_image:'/speaker.png',briefDescription1:'Lorem ipsum dolor sit.',briefDescription2:'Lorem ipsum dolor sit.',briefDescription3:'Lorem ipsum dolor sit.' },
+        { id: 1, name:'Divya', designation: 'product manager',event_year: 2023, profile_image:'/speaker.png',briefDescription1:'Lorem ipsum dolor sit.',briefDescription2:'Lorem ipsum dolor sit.',briefDescription3:'Lorem ipsum dolor sit.' },
+        { id: 1, name:'Divya', designation: 'product manager',event_year: 2023, profile_image:'/speaker.png',briefDescription1:'Lorem ipsum dolor sit.',briefDescription2:'Lorem ipsum dolor sit.',briefDescription3:'Lorem ipsum dolor sit.' },
+        { id: 1, name:'Divya', designation: 'product manager',event_year: 2023, profile_image:'/speaker.png',briefDescription1:'Lorem ipsum dolor sit.',briefDescription2:'Lorem ipsum dolor sit.',briefDescription3:'Lorem ipsum dolor sit.' },
+        { id: 1, name:'Divya', designation: 'product manager',event_year: 2023, profile_image:'/speaker.png',briefDescription1:'Lorem ipsum dolor sit.',briefDescription2:'Lorem ipsum dolor sit.',briefDescription3:'Lorem ipsum dolor sit.' }
+     
+      ]
+    }
   }
 }
 
