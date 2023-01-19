@@ -29,7 +29,7 @@ const Speaker = (props) => {
             width={416}
           />
           <div className='sponsorCardDescription'>
-            <div className='sponsorCardYear'>{Elements.event_Year}</div>
+            <div className='sponsorCardYear'>{Elements.event_year}</div>
             <div
               className='sponsorCardBox'
               style={{
