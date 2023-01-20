@@ -30,7 +30,7 @@ function rzp() {
         name: "Esummit'23",
         currency: 'INR',
         amount: res.data?.amount,
-        order_id: res.data?.id,
+        order_id: res.data?.orderId,
         description: 'Test Website',
         image: 'https://manuarora.in/logo.png',
 
