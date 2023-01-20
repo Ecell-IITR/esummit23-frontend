@@ -584,6 +584,17 @@
 
 }
 
+@media only screen and (max-width:440px){
+  .logoNew_footer{
+    padding: 0.8rem 1rem 0rem 3.5rem;
+  }
+}
+@media only screen and (max-width:392px){
+  .logoNew_footer{
+    padding: 0.8rem 1rem 0rem 4.5rem;
+  }
+}
+
 @media only screen and (max-width:361px){
   .contactNo_footer {
     margin-left: -1.7rem;
@@ -598,7 +609,7 @@
   font-size: 14px;
 }
 .logoNew_footer {
-  padding: 0.8rem 23px 0px 69px;
+  padding: 0.8rem 40px 0px 77px;
 }
 .addressBelow_footer {
   margin-left: -1rem;
