@@ -191,6 +191,46 @@ const IITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
         value: 29,
         label: 'West Bengal',
       },
+      {
+        value: 30,
+        label: 'Delhi',
+      },
+      {
+        value: 31,
+        label: 'Ladakh',
+      },
+      {
+        value: 32,
+        label: 'Jammu & Kashmir'
+        
+      },
+      
+      {
+        value: 33,
+        label: 'Puducherry'
+      },
+      ,
+      
+      {
+        value: 34,
+        label: 'Lakshadweep'
+      },
+      {
+        value: 35,
+        label: 'Lakshadweep'
+      },
+      {
+        value: 36,
+        label: 'Chandigarh'
+      },
+      {
+        value: 36,
+        label: 'Dadra and Nagar Haveli and Daman & Diu'
+      },
+      {
+        value: 37,
+        label: 'Andaman and Nicobar Islands'
+      },
     ];
     const handleChange = (e) => {
       setState(e);

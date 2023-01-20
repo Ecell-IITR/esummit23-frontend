@@ -11,11 +11,12 @@ import NonIITRStudent from '../../Components/register/nonIITRStudent';
 import Professional from '../../Components/register/Professional';
 import Select from 'react-select';
 
-import { data } from 'jquery';
 import { toast } from 'react-toastify';
 import { isAuthenticated } from '../../utils';
 import { useRouter } from 'next/router';
-const Registration = () => {
+
+
+const Registration = (props) => {
   const [Fullname, setFullname] = useState('');
   const [Email, setEmail] = useState('');
   const [Contact, setContact] = useState('');
@@ -62,17 +63,14 @@ const Registration = () => {
       if (RenderId == 1) {
         setfinishStatus(false);
         setRenderId(0);
-        console.log(0);
       }
       if (RenderId == 2) {
         setfinishStatus(false);
         setRenderId(1);
-        console.log(1);
       }
     } else {
       window.history.pushState(null, null, window.location.pathname);
       setfinishStatus(false);
-      console.log('false');
     }
   };
   useEffect(() => {
@@ -292,6 +290,7 @@ const Registration = () => {
               {/* <div className='RegisterRight'></div> */}
             </div>
           </div>
+          
         </>
       );
     } else {

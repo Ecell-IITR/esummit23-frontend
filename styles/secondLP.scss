@@ -1,6 +1,6 @@
 .secondLandingPage {
   width: 100vw;
-  height: 100vh;
+  // height: 100vh;
 }
 
 .wheel {
@@ -68,6 +68,12 @@
     mix-blend-mode: overlay;
   }
 }
+
+// .secondLandingPageImg{
+//   display: flex;
+//   flex-direction: column;
+
+// }
 
 [data-aos='rotate-c'] {
   transform: rotate(-90deg);

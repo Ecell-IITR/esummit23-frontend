@@ -71,128 +71,174 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
       }
     }
   };
+  const StateData = [
+    {
+      value: 1,
+      label: 'Andhra Pradesh',
+    },
+    {
+      value: 2,
+      label: 'Arunachal Pradesh',
+    },
+    {
+      value: 3,
+      label: 'Assam',
+    },
+    {
+      value: 4,
+      label: 'Bihar',
+    },
+    {
+      value: 5,
+      label: 'Chhattisgarh',
+    },
+    
+    {
+      value: 6,
+      label: 'Goa',
+    },
+    {
+      value: 7,
+      label: 'Gujarat',
+    },
+    {
+      value: 8,
+      label: 'Haryana',
+    },
+    {
+      value: 9,
+      label: 'Himachal Pradesh',
+    },
+    {
+      value: 10,
+      label: 'Jharkhand',
+    },
+    {
+      value: 11,
+      label: 'Karnataka',
+    },
+    {
+      value: 12,
+      label: 'Kerala',
+    },
+    {
+      value: 13,
+      label: 'Madhya Pradesh',
+    },
+    {
+      value: 14,
+      label: 'Maharashtra',
+    },
+    {
+      value: 15,
+      label: 'Manipur',
+    },
+    {
+      value: 16,
+      label: 'Meghalaya',
+    },
+    {
+      value: 17,
+      label: 'Mizoram',
+    },
+    {
+      value: 18,
+      label: 'Nagaland',
+    },
+    {
+      value: 19,
+      label: 'Odisha',
+    },
+    {
+      value: 20,
+      label: 'Puducherry',
+    },
+    {
+      value: 21,
+      label: 'Punjab',
+    },
+    {
+      value: 22,
+      label: 'Rajasthan',
+    },
+    {
+      value: 23,
+      label: 'Sikkim',
+    },
+    {
+      value: 24,
+      label: 'Tamil Nadu',
+    },
+    {
+      value: 25,
+      label: 'Telangana',
+    },
+    {
+      value: 26,
+      label: 'Tripura',
+    },
+    {
+      value: 27,
+      label: 'Uttar Pradesh',
+    },
+    {
+      value: 28,
+      label: 'Uttarakhand',
+    },
+    {
+      value: 29,
+      label: 'West Bengal',
+    },
+    {
+      value: 30,
+      label: 'Delhi',
+    },
+    {
+      value: 31,
+      label: 'Ladakh',
+    },
+    {
+      value: 32,
+      label: 'Jammu & Kashmir'
+      
+    },
+    
+    {
+      value: 33,
+      label: 'Puducherry'
+    },
+    ,
+    
+    {
+      value: 34,
+      label: 'Lakshadweep'
+    },
+    {
+      value: 35,
+      label: 'Lakshadweep'
+    },
+    {
+      value: 36,
+      label: 'Chandigarh'
+    },
+    {
+      value: 36,
+      label: 'Dadra and Nagar Haveli and Daman & Diu'
+    },
+    {
+      value: 37,
+      label: 'Andaman and Nicobar Islands'
+    },
+
+
+  ];
+
+
   useEffect(() => {
     setMobile();
   }, []);
   if (RenderId == 0) {
-    const StateData = [
-      {
-        value: 1,
-        label: 'Andhra Pradesh',
-      },
-      {
-        value: 2,
-        label: 'Arunachal Pradesh',
-      },
-      {
-        value: 3,
-        label: 'Assam',
-      },
-      {
-        value: 4,
-        label: 'Bihar',
-      },
-      {
-        value: 5,
-        label: 'Chhattisgarh',
-      },
-      {
-        value: 6,
-        label: 'Goa',
-      },
-      {
-        value: 7,
-        label: 'Gujarat',
-      },
-      {
-        value: 8,
-        label: 'Haryana',
-      },
-      {
-        value: 9,
-        label: 'Himachal Pradesh',
-      },
-      {
-        value: 10,
-        label: 'Jharkhand',
-      },
-      {
-        value: 11,
-        label: 'Karnataka',
-      },
-      {
-        value: 12,
-        label: 'Kerala',
-      },
-      {
-        value: 13,
-        label: 'Madhya Pradesh',
-      },
-      {
-        value: 14,
-        label: 'Maharashtra',
-      },
-      {
-        value: 15,
-        label: 'Manipur',
-      },
-      {
-        value: 16,
-        label: 'Meghalaya',
-      },
-      {
-        value: 17,
-        label: 'Mizoram',
-      },
-      {
-        value: 18,
-        label: 'Nagaland',
-      },
-      {
-        value: 19,
-        label: 'Odisha',
-      },
-      {
-        value: 20,
-        label: 'Puducherry',
-      },
-      {
-        value: 21,
-        label: 'Punjab',
-      },
-      {
-        value: 22,
-        label: 'Rajasthan',
-      },
-      {
-        value: 23,
-        label: 'Sikkim',
-      },
-      {
-        value: 24,
-        label: 'Tamil Nadu',
-      },
-      {
-        value: 25,
-        label: 'Telangana',
-      },
-      {
-        value: 26,
-        label: 'Tripura',
-      },
-      {
-        value: 27,
-        label: 'Uttar Pradesh',
-      },
-      {
-        value: 28,
-        label: 'Uttarakhand',
-      },
-      {
-        value: 29,
-        label: 'West Bengal',
-      },
-    ];
+    
     const handleChange = (e) => {
       setState(e);
     };

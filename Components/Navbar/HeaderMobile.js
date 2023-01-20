@@ -49,21 +49,23 @@ export const HeaderMobile = () => {
           </li>
         }
         <li className='mobilenavMenu-items'>
-          <Link href='/events' passHref>
+          <Link href='/' passHref>
             <div className='mobilenavMenu-links'>Speakers</div>
           </Link>
         </li>
         <li className='mobilenavMenu-items'>
-          <Link href='/speakers' passHref>
+          <Link href='/' passHref>
             <div className='mobilenavMenu-links'>Sponsors</div>
           </Link>
         </li>
-
+    
         {/* <li className='mobilenavMenu-items'>
           <Link href='/#faq' passHref>
             <div className='mobilenavMenu-links'>About</div>
           </Link>
         </li> */}
+
+
 
         {/* {isCA && (
           <>

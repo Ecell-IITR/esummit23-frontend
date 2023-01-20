@@ -1,10 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from '../Components/Navbar';
 import React from 'react';
-// import Animation from '../Components/Animation';
+import Animation from '../Components/Animation';
 import Lottie from 'react-lottie';
-// import SecondLandingPage from '../Components/SecondLandingPage';
-// import ThirdLandingPage from '../Components/ThirdLandingPage';
+import SecondLandingPage from '../Components/SecondLandingPage';
+import ThirdLandingPage from '../Components/ThirdLandingPage';
+
+
+// import SpeakerCard from "../Components/SpeakerCard/SpeakerCard"
 
 export default function Home() {
   const defaultOptions = {
@@ -15,29 +18,12 @@ export default function Home() {
 
   return (
     <>
-      {/* <Animation/> */}
 
-      <Navbar />
-      <div className='LottieContainer'>
+      {/* <Navbar /> */}
+      {/* <div className='LottieContainer'>
         <Lottie options={defaultOptions} />
-      </div>
-      <div className='Seo-text'>
-        <p>
-          E-Summit 22 is organised by E-Cell IIT Roorkee which is one of the
-          Largest Entrepreneurship Promoting college body in Asia.E-Summit has
-          hosted some of the most prominent stalwarts of the industry over the
-          years including but not limited to Startup expo, speaker events and
-          much more{' '}
-        </p>
-      </div>
-
-      {/* <div>
-        <SecondLandingPage />
-      </div>
-      <div>
-        <ThirdLandingPage />
       </div> */}
-
+      
       <div className='Seo-text'>
         <p>
           To find a way out of the darkness that has engulfed us over the past
@@ -62,11 +48,40 @@ export default function Home() {
       </div>
       <div className='Seo-text'>
         <p>
-          IIT Bombay will host the  E-Summit'23 aims to provide a platform for
+          IIT Bombay will host the E-Summit'23 aims to provide a platform for
           discussion on innovative ideas that have the potential to transform
           current challenges into opportunities for positive change. The goal of
           the event is to inspire and offer rays of hope to attendees.
         </p>
+      </div>
+      <div className='Seo-text'>
+        <p>
+          E-Summit 22 is organised by E-Cell IIT Roorkee which is one of the
+          Largest Entrepreneurship Promoting college body in Asia.E-Summit has
+          hosted some of the most prominent stalwarts of the industry over the
+          years including but not limited to Startup expo, speaker events and
+          much more{' '}
+        </p>
+      </div>
+      <Animation/>
+
+      <div>
+        <SecondLandingPage />
+      </div>
+      <div>
+        <ThirdLandingPage />
+      </div>
+      <div></div>
+      {/* <div>
+        <Footer />
+      </div> */}
+       {/* <div style={{width:"100vw",height:"100vh"}}></div>  */}
+      {/* <div style={{width:"100vw",height:"100vh"}}></div> */}
+
+      <div style={{display:"flex", justifyContent:"space-between"}}>
+      {/* <SpeakerCard/> */}
+      {/* <SpeakerCard/>
+      <SpeakerCard/> */}
       </div>
     </>
   );

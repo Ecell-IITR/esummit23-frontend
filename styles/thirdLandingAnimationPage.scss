@@ -1,5 +1,6 @@
 .thirdLandingAnimationPage {
-  height: 100vh;
+  height: 120vh;
+  margin-top: 10vw;
   width: 100vw;
   background-color: #ba6d39;
   display: flex;
@@ -52,6 +53,7 @@
   margin-top: -50%;
   position: relative;
   z-index: 100;
+  margin-bottom: 50%;
 }
 
 .ThirdLandingAnimationPageMobileBox {
@@ -82,11 +84,16 @@
   color: #e9f0f4;
 }
 
-@media only screen and (max-width: 1040px) {
+@media only screen and (max-width: 1080px) {
   .thirdLandingAnimationPageDescription {
     font-size: 15px;
   }
   .thirdLandingAnimationPageHeading {
     font-size: 34px;
   }
+
 }
+
+  .thirdAnimationVideo{
+    z-index: 50;
+  }

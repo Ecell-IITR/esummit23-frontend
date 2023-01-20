@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import ThirdLandingdata from './ThirdLandingdata';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -7,7 +7,8 @@ const ThirdLandingPageAnimation = () => {
   useEffect(() => {
     AOS.init();
     AOS.refresh();
-  }, []);
+
+  },[]);
 
   return (
     <div className='thirdLandingAnimationPage'>
@@ -18,7 +19,7 @@ const ThirdLandingPageAnimation = () => {
               data-aos='fade-right'
               data-aos-duration='900'
               data-aos-offset='200'
-              data-aos-anchor-placement='center-top'
+              data-aos-anchor-placement='top-center'
               className='thirdLandingAnimationPageBox1'
             >
               <div
@@ -40,29 +41,33 @@ const ThirdLandingPageAnimation = () => {
       <div
         className='thirdLandingAnimationPageBox2'
         data-aos='fade-left'
-        data-aos-duration='900'
-        data-aos-offset='200'
-        data-aos-anchor-placement='center-top'
+        data-aos-duration='1000'
+        data-aos-offset='250'
+        data-aos-anchor-placement='top-center'
         style={{ width: '40vw' }}
       >
+        <a href="https://www.youtube.com/embed/3TJs2KjpxXc">
         <div
-          src='imgreplace.png'
           data-aos='videoTransition'
           data-aos-duration='900'
           data-aos-offset='200'
-          data-aos-anchor-placement='center-top'
+          data-aos-anchor-placement='top-center'
           style={{ width: '41vw' }}
         >
-          <iframe
-            width='560'
-            height='315'
-            src='https://www.youtube.com/embed/3TJs2KjpxXc'
+          <img
+            className='thirdAnimationVideo'
+            width="100%"
+            // height='400px'
+            // src='https://www.youtube.com/embed/3TJs2KjpxXc'
+            src="thirdLandingImage.png"
             title='YouTube video player'
             frameborder='0'
+            
             allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
             allowfullscreen
-          ></iframe>
+          ></img>
         </div>
+        </a>
       </div>
     </div>
   );

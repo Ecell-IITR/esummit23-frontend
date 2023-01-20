@@ -1,21 +1,50 @@
-import React, { useEffect } from 'react';
+import FetchApi from '../../utils/fetchAPI';
+import React, { useState, useEffect } from 'react';
 import { EVENT_API } from '../../utils/APIs';
 import { useRouter } from 'next/router';
 import Header from '../../Components/Events/Header';
 import Timline from '../../Components/EventsPage/Timeline';
+
 import Sponsors from '../../Components/EventsPage/Sponsor';
 import { useMobile, useUpdateMobile } from '../../utils/MobileContext';
+import { SINGLE_SERVICES } from '../../utils/APIs';
+import DashboardForm from '../../Components/DashboardForm';
+import { Modal } from 'react-bootstrap';
 export default function EventsDetails({ details }) {
   const router = useRouter();
-  
-  
+  const [name, setName] = useState('');
   const setMobile = useUpdateMobile();
+  const [show, setShow] = useState(false);
+  const [No, setNo] = useState(0);
+  const [question1, setquestion1] = useState('');
+  const [question2, setquestion2] = useState('');
+  const handleClose = () => setShow(false);
 
   useEffect(() => {
     setMobile();
   }, []);
+  const GetData = (name) => {
+    FetchApi('POST', SINGLE_SERVICES, { service_name: name }, null)
+      .then((res) => {
+        setName(res.data.name);
+        setquestion1(res.data.question1);
+        setquestion2(res.data.question2);
+        setNo(res.data.no_of_QA);
+      })
+      .catch((err) => {});
+  };
   return (
     <>
+    <Modal  contentClassName='my-modal' show={show} onHide={handleClose}>
+        <DashboardForm
+          Auth={true}
+          handleClose={handleClose}
+          noQuestions={No}
+          name={name}
+          Q_1={question1}
+          Q_2={question2}
+        />
+      </Modal>
       <Header
         name={details.event_name}
         tagline={details.tagline}
@@ -25,6 +54,8 @@ export default function EventsDetails({ details }) {
         card={
           useMobile().isMobile ? details.card_image : details.background_image
         }
+        GetData={GetData}
+        setShow={setShow}
       />
       <Timline
         name={details.event_name}
@@ -37,6 +68,8 @@ export default function EventsDetails({ details }) {
         perks={details.event_perks}
         Coordinator={details.events_coordinators}
         partners={[]}
+        GetData={GetData}
+        setShow={setShow}
       />
     </>
   );
