@@ -15,7 +15,6 @@ import { toast } from 'react-toastify';
 import { isAuthenticated } from '../../utils';
 import { useRouter } from 'next/router';
 
-
 const Registration = (props) => {
   const [Fullname, setFullname] = useState('');
   const [Email, setEmail] = useState('');
@@ -290,7 +289,6 @@ const Registration = (props) => {
               {/* <div className='RegisterRight'></div> */}
             </div>
           </div>
-          
         </>
       );
     } else {
