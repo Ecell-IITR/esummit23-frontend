@@ -11,7 +11,7 @@ const Personalinfo = (props) => {
         width='150px'
       />
       <div className='personalInfoContainer'>
-        <div className='fullNameContainer'>{props.name}</div>
+        <div className='fullNameContainer'>{props.full_name}</div>
         <div className='esummitIdContainer'>Esummit ID - {props.EsummitId}</div>
         <div className='fullProfileContainer'>
           <div>View full profile</div>

@@ -27,4 +27,4 @@ export const VERIFY_API = `${API_URL}/user/verify`;
 export const CAP_DASH_API = `${API_URL}/cap/leaderboard`;
 export const CAP_TASK_API = `${API_URL}/cap/taskassigned`;
 export const SINGLE_SERVICES = `${API_URL}/events/services/single`;
-
+export const SPEAKER_DETAIL_API = `${API_URL}/public/speakers`;

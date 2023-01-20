@@ -1,0 +1,157 @@
+.allSpeakerContainerDiv {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(180deg, #12100e 0%, #301a08 100%);
+  position: relative;
+}
+.allSpeakerContainer {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+.speakerText {
+  width: 204px;
+  height: 48px;
+  margin-top: 15vh;
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 110%;
+  display: flex;
+  align-items: center;
+  color: #dcd1ad;
+}
+.SpeakerDescriptionText {
+  width: 90vw;
+  // height: 7rem;
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400;
+  color: #bdbdbd;
+  font-size: 1rem;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+  margin-top: 5rem;
+  margin-bottom: 3.5rem;
+}
+.speakerCardContainerDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.sponsorCard {
+  //   width: 416px;
+  width: 350px;
+  // height: 400px;
+  display: flex;
+  flex-direction: column;
+  margin: 30px 15px;
+}
+
+.sponsorCardImage {
+  z-index: 1;
+  width: 100%;
+  transition: 0.5s all ease-in-out;
+}
+
+.sponsorCard:hover .sponsorCardImage {
+  transform: scale(1.14);
+}
+
+.sponsorCardDescription {
+  padding: 169px 16px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  height: 569px;
+  margin-top: -35.5rem;
+}
+
+.sponsorCardYear {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 110%;
+  display: flex;
+  align-items: center;
+  z-index: 5;
+}
+
+.sponsorCardName {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 110%;
+  display: flex;
+  align-items: center;
+  z-index: 5;
+}
+
+.sponsorCardCompany {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+  z-index: 5;
+}
+
+.sponsorCard:hover .sponsorCardBox {
+  transform: translateY(-1vh);
+  transition: 0.5s ease;
+  z-index: 300;
+}
+
+.sponsorCardCompany1 {
+  // visibility: hidden;
+  display: none;
+}
+.sponsorCard:hover .sponsorCardCompany1 {
+  // visibility: visible;
+  display: block;
+  transition: 2s ease;
+}
+.sponsorCardBox {
+  margin-bottom: 1vh;
+}
+
+@media only screen and (max-width: 420px) {
+  .allSpeakerContainerDiv{
+    width: auto;
+  }
+  .sponsorCard {
+    display: flex;
+    width: 250px;
+    height: 254px;
+  }
+  .sponsorCardImage {
+    width: 340px;
+    height: 254px;
+  }
+  .sponsorCardYear {
+    margin-top: 21vh;
+  }
+  .sponsorCardBox {
+    margin-bottom: -6vh;
+  }
+  .speakerCardContainerDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}

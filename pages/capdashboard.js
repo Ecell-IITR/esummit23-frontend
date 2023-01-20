@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useMobile, useUpdateMobile } from '../utils/MobileContext';
 import {  getAuthToken } from '../utils';
 import { CAP_TASK_API } from '../utils/APIs';
+import {  CAP_DASH_API } from '../utils/APIs';
 import {
   Personalinfo,
   PointScored,
@@ -20,7 +21,7 @@ import Mobprofiledetails, {
 const capdashboard = () => {
    
   const [Taskname, setTaskname] = useState([]);
-  
+  const [Leaderboard, setLeaderboard] = useState([]);
 
   const setMobile = useUpdateMobile();
   useEffect(() => {
@@ -33,8 +34,18 @@ const capdashboard = () => {
     .catch((err) => {
       console.log(err)      
     });
+    FetchApi('get',CAP_DASH_API, null, getAuthToken())
+    .then((res) => {
+      console.log(res)
+      setTaskname(res.data.data);
+    })
+    .catch((err) => {
+      console.log(err)      
+    });
 
-  }, []);
+
+  }
+  , []);
 
   
 
@@ -73,7 +84,15 @@ const capdashboard = () => {
               name='Abcd Xyz'
               EsummitId='EERRTTYY1'
             />
-            <PointScored PointsScored='216' NetPoints='216' />
+           
+            {Leaderboard.map((item)=>{
+              return(<>
+                <PointScored 
+                points = {item.points}
+                />
+                </>)
+            })}
+            
           </div>
           <Taskbar />
           <div className='capTaskContainer'>
