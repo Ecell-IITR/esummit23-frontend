@@ -63,11 +63,11 @@ export default function EventsDetails({ details }) {
         rules={details.event_rules}
         eligiblity={details.event_eligibility}
         round={details.event_rounds}
-      />
+      />{console.log(details)}
       <Sponsors
         perks={details.event_perks}
         Coordinator={details.events_coordinators}
-        partners={[]}
+        partners={details.event_partners}
         GetData={GetData}
         setShow={setShow}
       />
