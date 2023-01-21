@@ -14,6 +14,8 @@ function Login() {
   const [Name, setName] = useState('');
   const [PhoneNo, setPhoneNo] = useState('');
   const [Gender, setGender] = useState({ value: '2', label: 'Female' });
+  const [Collage, setCollage] = useState("");
+
 
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -54,7 +56,8 @@ function Login() {
           email: email,
           phone: PhoneNo,
           gender: Gender.value,
-          collage:router.query.collage
+          collage:Collage
+        
         },
       },
       null
@@ -75,7 +78,7 @@ function Login() {
   if (useMobile().isMobile) {
     return (
       <div className='LoginContainer'>
-         <Verify show={show} handleClose={handleChange} />
+         <Verify email={email} show={show} handleClose={handleChange} />
         <div
           style={{
             width: '100vw',
@@ -140,10 +143,10 @@ function Login() {
               <input
                 type='text'
                 className={'LoginFormLeftInput inputGold'}
-                placeholder={router.query.collage}
+                placeholder={"collage"}
                 style={{ margin: '10px' }}
-                value={router.query.collage}
-                disabled='disabled'
+                value={Collage}
+                onChange={(e)=>{setCollage(e.target.value)}}
               />
 
               <div className='gender'>
@@ -280,10 +283,11 @@ function Login() {
               <input
                 type='text'
                 className={'LoginFormLeftInput inputGold'}
-                placeholder={router.query.collage}
+                placeholder={"collage"}
                 style={{ margin: '10px' }}
-                value={router.query.collage}
-                disabled='disabled'
+                
+                value={Collage}
+                onChange={(e)=>{setCollage(e.target.value)}}
               />
 
               <div className='gender'>

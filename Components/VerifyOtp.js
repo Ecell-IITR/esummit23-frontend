@@ -5,10 +5,11 @@ import FetchApi from '../utils/fetchAPI';
 import { OTP_SIGNUP_VERIFY_API } from '../utils/APIs';
 import OtpInput from 'react-otp-input';
 import { Authenticate, isAuthenticated } from '../utils';
+import { useRouter } from 'next/router';
 function Verify(props) {
   const [Email, setEmail] = useState(props?.email? props?.email: 'pranav_a@ece.iitr.ac.in');
   const [OTP, setOTP] = useState('');
-
+  const router = useRouter()
   
   let hideEmail = function (email) {
     return email.replace(/(.{2})(.*)(?=@)/, function (gp1, gp2, gp3) {
@@ -34,7 +35,9 @@ function Verify(props) {
       FetchApi('POST', OTP_SIGNUP_VERIFY_API, data)
         .then((res) => {
             Authenticate(res.data.n, res.data.e_id, res.data.at);
-          props.onHide();
+          
+          router.push("tickets/tickets")
+          
         })
         .catch((err) => {
           toast.error(err?.response?.data?.error);
