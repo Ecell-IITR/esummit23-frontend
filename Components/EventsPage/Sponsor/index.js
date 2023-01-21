@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import sponsorData from './sponsorData';
 import { useRouter } from 'next/router';
 import { isAuthenticated } from '../../../utils';
 import { useEffect,useState } from 'react';
@@ -7,14 +6,18 @@ import { useEffect,useState } from 'react';
 function Events(props) {
   const router = useRouter();
   const [x,setx] = useState([]);
-  
+  console.log(props.partners)
   useEffect(() => {
     let i = 0;
     let t=[]
-    while (i < sponsorData.length){
-    
-      if((sponsorData.length-i)/3>0){
-        t=[...t,sponsorData.slice(i, i+ 3)]
+    console.log(props.partners)
+    if(props.partners.length == 0){
+      return;
+    }else{
+    while (i < props.partners.length){
+      
+      if((props.partners.length-i)/3>0){
+        t=[...t,props.partners.slice(i, i+ 3)]
      
         setx(t)
       
@@ -23,6 +26,7 @@ function Events(props) {
       }
   i+=1
 }
+    }
 
 }, []);
   const rederict = () => {
@@ -116,7 +120,7 @@ function Events(props) {
           {curr?.map((items,index1) => {
             return(
                 <div className='gfg' key='index1'>
-                  <Image src={items?.Img1} width='240rem' height='180rem'/>
+                  <Image src={items?.image} width='240rem' height='180rem'/>
                 </div>
             )
           })}
