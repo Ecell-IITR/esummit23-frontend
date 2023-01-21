@@ -10,6 +10,7 @@ function NavDesktop() {
   const roleType = getUserRoleType();
   const [active, setActive] = useState('');
 
+
   const router = useRouter();
   useEffect(() => {
     switch (router.asPath) {
@@ -40,7 +41,7 @@ function NavDesktop() {
     <Navbar className='navbarParent'>
       {/* <Container fluid> */}
       <div className='navbarEsummitLogo'>
-        <img src='summitLogo.png' className='navbarImage' />
+        <img src='/summitLogo.png' className='navbarImage' />
       </div>
       {/* <Navbar.Toggle aria-controls='navbarScroll' /> */}
       <ul className='navbarUl' style={{ maxHeight: '100px' }} navbarScroll>
@@ -92,12 +93,12 @@ function NavDesktop() {
         </li>
 
         <li>
-          <Link href='/about'>
+          <Link href='/tickets'>
             <div
-              className={'about' == active ? 'navbarActive' : 'navbarListBox'}
+              className={'tickets' == active ? 'navbarActive' : 'navbarListBox'}
             >
-              About
-              <div className={'about' == active ? 'circle' : ''} />
+              Tickets
+              <div className={'tickets' == active ? 'circle' : ''} />
             </div>
           </Link>
         </li>

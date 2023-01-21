@@ -9,6 +9,7 @@
   display: flex !important;
   justify-content: space-between !important;
   height: 73px;
+  z-index: 500;
   align-items: center !important;
 }
 
@@ -297,7 +298,8 @@ ul a.active {
 
 @media screen and (max-width: 350px) {
   .navbar-logo-mobile {
-    width: 8.5em !important;
+    
+    height: 2rem;
   }
 }
 
@@ -321,7 +323,7 @@ ul a.active {
     background: transparent;
     margin-top: 0.75em;
     margin-left: 0.25em;
-    width: 10em;
+    width: 11rem;
     height: 3em;
   }
 }

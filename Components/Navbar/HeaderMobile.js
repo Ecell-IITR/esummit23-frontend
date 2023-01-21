@@ -30,7 +30,7 @@ export const HeaderMobile = () => {
       <input checked={Checked} type='checkbox' />
       <Link href='/' className='image' passHref>
         <img
-          src='summitLogo.png'
+          src='/summitLogo.png'
           alt='Esummit Logo'
           className='navbar-logo-mobile'
         />
@@ -49,21 +49,28 @@ export const HeaderMobile = () => {
           </li>
         }
         <li className='mobilenavMenu-items'>
-          <Link href='/events' passHref>
+          <Link href='/speakers' passHref>
             <div className='mobilenavMenu-links'>Speakers</div>
           </Link>
         </li>
         <li className='mobilenavMenu-items'>
-          <Link href='/speakers' passHref>
+          <Link href='/sponsors' passHref>
             <div className='mobilenavMenu-links'>Sponsors</div>
           </Link>
         </li>
-
+        <li className='mobilenavMenu-items'>
+          <Link href='/tickets' passHref>
+            <div className='mobilenavMenu-links'>Tickets</div>
+          </Link>
+        </li>
+    
         {/* <li className='mobilenavMenu-items'>
           <Link href='/#faq' passHref>
             <div className='mobilenavMenu-links'>About</div>
           </Link>
         </li> */}
+
+
 
         {/* {isCA && (
           <>
