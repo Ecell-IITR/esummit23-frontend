@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-
+import { getUserDetails} from '../../utils';
+import { useState,useEffect } from 'react';
+import Upload from './upload_popup';
 
 
 const Personalinfo = (props) => {
@@ -53,9 +55,18 @@ const PointScored = (props) => {
 };
 
 const Task = (props) => {
+  const[Id, setId]=useState();
+  const[Name,setName]=useState();
+  const[Show, setShow]=useState(false);
+  useEffect(() => {
+    const [name,id] = getUserDetails();
+    setId(id)
+    setName(name)
+  })
 
   
   return (<>
+  
     <div className='taskContainer'>
       <div className='taskId'> Task {props?.id}</div>
       <div className='taskTextContainer'>
@@ -69,6 +80,15 @@ const Task = (props) => {
           </button>
         </div>
       </div>
+      <Upload
+      esummitId={Id}
+      taskid={props?.id}
+      show={Show}
+      points={props.points}
+      setShow={(e) => {
+        setShow(e);
+      }}
+    />
     </div>
     </> )
 };

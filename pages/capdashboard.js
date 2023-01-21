@@ -5,7 +5,7 @@ import { useMobile, useUpdateMobile } from '../utils/MobileContext';
 import {  getAuthToken } from '../utils';
 import { CAP_TASK_API } from '../utils/APIs';
 import { getUserDetails} from '../utils';
-import Upload from '../Components/dashboard/Dashboard'
+
 import {
   Personalinfo,
   PointScored,
@@ -103,6 +103,7 @@ const capdashboard = () => {
              <Task
               id = {item?.task_id}
               desc={item?.desc}
+              points={item?.points}
              />
           
 
