@@ -8,7 +8,7 @@ import {getAuthToken,isAuthenticated} from '../utils'
 import { useRouter } from 'next/router';
 function QM(props) {
   const [Number, setNumber] = useState(1);
-
+  const router = useRouter()
   const makePayment = async (amount,name=props.name) => {
     
     const res = await initializeRazorpay();
@@ -43,7 +43,7 @@ function QM(props) {
           console.log(response);
           // Validate payment at server - using webhooks is a better idea.
           FetchApi('POST', RAZORPAY_CALLBACK, data, getAuthToken()).then((res) => {
-            console.log(res);
+              router.push("/tickets/sucess")
           });
           console.log(response);
         },

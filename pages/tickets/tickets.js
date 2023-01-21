@@ -60,6 +60,7 @@ function tickets() {
           // Validate payment at server - using webhooks is a better idea.
           FetchApi('POST', RAZORPAY_CALLBACK, data, null).then((res) => {
             console.log(res);
+            
           });
           console.log(response);
         },
