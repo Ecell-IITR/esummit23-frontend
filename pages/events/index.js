@@ -2,9 +2,9 @@ import { ALL_EVENTS_API } from '../../utils/APIs';
 import FetchApi from '../../utils/fetchAPI';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Navbar from "../../Components/Navbar"
 import { useRouter } from 'next/router';
 import { isAuthenticated } from '../../utils';
-import Navbar from '../../Components/Navbar';
 import { SINGLE_SERVICES } from '../../utils/APIs';
 import DashboardForm from '../../Components/DashboardForm';
 import { Modal } from 'react-bootstrap';
@@ -45,7 +45,8 @@ export default function Events({ posts }) {
 
   return (
     <div className='eventPgCont'>
-      <Navbar />
+      <div style={{}}><Navbar /></div>
+      
       <Modal  contentClassName='my-modal' show={show} onHide={handleClose}>
         <DashboardForm
           Auth={true}
@@ -81,9 +82,10 @@ export default function Events({ posts }) {
           return (
             <div className='eventPgCards' style={{ height: '27rem' }}>
               <div className='eventcimg'>
+                {console.log(post.card_image)}
                 <Image
                   src={
-                    post?.card_image ? post?.card_image : '/Rectangle 118.png'
+                    post?.card_image ? post?.card_image :"/Rectangle 118.png"
                   }
                   height='220px'
                   width='376px'
@@ -119,6 +121,18 @@ export default function Events({ posts }) {
               </div>
 
               <div className='eventPgBtnC' style={{ marginTop: '1.5rem' }}>
+                
+              {post.event_name === 'Startup Expo' ? (
+                <a style={{color:"transparent"}} href='https://docs.google.com/forms/d/1bYuLAoCbFzO2SDpSn0uYShaDYvyEmuXmYPtp1IUILX4/viewform?edit_requested=true'>
+                  {' '}
+                  <button
+                  className='eventPgBtn'
+                >
+                  Register Now
+                </button>
+                </a>
+              ) : (
+
                 <button
                   className='eventPgBtn'
                   onClick={() => {
@@ -129,7 +143,8 @@ export default function Events({ posts }) {
                 >
                   Register Now
                 </button>
-
+              )
+                }
                 <Image src='/Vector.png' height='16px' width='21.3px'></Image>
               </div>
             </div>
@@ -149,6 +164,7 @@ export async function getStaticProps() {
   const res = await fetch(ALL_EVENTS_API);
 
   const posts = await res?.json();
+  console.log(posts);
   return {
     props: {
       posts,

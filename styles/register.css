@@ -1,0 +1,50 @@
+.containerRegister {
+  height: 17.5rem;
+  width: 13rem;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.5rem;
+}
+
+.photoRegister {
+  border-top-right-radius: 1.5rem;
+  border-top-left-radius: 1.5rem;
+  border: 1px solid black;
+  height: 7.5rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.photoRegisterImg {
+  height: 7.5rem;
+  width: 100%;
+}
+
+.eventRegister {
+  width: 100%;
+  color: #12100e;
+  font-size: 1.125rem;
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 600;
+  padding: 1rem;
+  padding-bottom: 0.2rem;
+}
+
+.CreateAccountButton {
+  margin-bottom: 2rem;
+}
+
+.descriptionRegister {
+  height: 40%;
+  width: 100%;
+  overflow: scroll;
+  border-bottom-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  font-size: 0.75rem;
+  font-family: "Nunito Sans";
+  font-weight: 400;
+  padding: 1rem;
+  padding-top: 0.2rem;
+}/*# sourceMappingURL=register.css.map */

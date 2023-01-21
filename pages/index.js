@@ -7,6 +7,7 @@ import SecondLandingPage from '../Components/SecondLandingPage';
 import ThirdLandingPage from '../Components/ThirdLandingPage';
 
 
+// import SpeakerCard from "../Components/SpeakerCard/SpeakerCard"
 
 export default function Home() {
   const defaultOptions = {
@@ -77,6 +78,11 @@ export default function Home() {
        {/* <div style={{width:"100vw",height:"100vh"}}></div>  */}
       {/* <div style={{width:"100vw",height:"100vh"}}></div> */}
 
+      <div style={{display:"flex", justifyContent:"space-between"}}>
+      {/* <SpeakerCard/> */}
+      {/* <SpeakerCard/>
+      <SpeakerCard/> */}
+      </div>
     </>
   );
 }

@@ -1,8 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-
 import { isAuthenticated } from '../../utils';
-
+import Navbar from '../Navbar';
 export default function Header(props) {
   const router = useRouter();
   const rederict = () => {
@@ -15,10 +14,11 @@ export default function Header(props) {
   const OnSubmit = () => {
     props.setShow(true);
     props.GetData(props.name);
-  }
+  };
 
   return (
     <>
+      <Navbar />
       <div className='ideaThon-main'>
         <div
           style={{ backgroundImage: `url(${props.card})` }}
@@ -28,11 +28,19 @@ export default function Header(props) {
             <div className='idea-Text1'>{props.name}</div>
             <div className='idea-Text2'>{props.tagline}</div>
             <div className='idea-text3'>
-            <button onClick={OnSubmit} className='idea-Button'>
-              <span className='iBT'>REGISTER NOW</span>
-            </button>
+              {router.query.slug === 'Startup Expo' ? (
+                <a style={{color:"transparent"}} href='https://docs.google.com/forms/d/1bYuLAoCbFzO2SDpSn0uYShaDYvyEmuXmYPtp1IUILX4/viewform?edit_requested=true'>
+                  {' '}
+                  <button className='idea-Button'>
+                    <span className='iBT'>REGISTER NOW</span>
+                  </button>
+                </a>
+              ) : (
+                <button onClick={OnSubmit} className='idea-Button'>
+                  <span className='iBT'>REGISTER NOW</span>
+                </button>
+              )}
             </div>
-
           </div>
           <div className='ideaBox2'></div>
         </div>
