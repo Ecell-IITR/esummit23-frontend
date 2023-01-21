@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 
+
+
 const Personalinfo = (props) => {
   return (
     <>
@@ -24,11 +26,12 @@ const Personalinfo = (props) => {
   );
 };
 const PointScored = (props) => {
+
   return (
     <>
       <div className='pointContainer'>
         <div className='pointScored'>
-          <div className='pointScoredTop'>{props.PointsScored}</div>
+          <div className='pointScoredTop'>{props.points}</div>
 
           <div className='pointScoredBottom'>
             <div style={{ height: '33px', width: '146px' }}>Points Scored</div>
@@ -38,10 +41,9 @@ const PointScored = (props) => {
         </div>
 
         <div className='netPoints'>
-          <div className='pointScoredTop'>{props.NetPoints}</div>
+          <div className='pointScoredTop'>{props.rank}</div>
           <div className='pointScoredBottom' style={{ width: '92px' }}>
-            <div style={{ height: '33px', width: '66px' }}>Points</div>
-
+            <div style={{ height: '33px', width: '66px' }}>Rank</div>
             <Image src='/Info_circle.png' height={18} width={18} />
           </div>
         </div>
@@ -51,19 +53,24 @@ const PointScored = (props) => {
 };
 
 const Task = (props) => {
-  return (
+
+  
+  return (<>
     <div className='taskContainer'>
-      <div className='taskId'> Task {props.id}</div>
+      <div className='taskId'> Task {props?.id}</div>
       <div className='taskTextContainer'>
-        <div className='taskText'>{props.desc}</div>
+        <div className='taskText'>{props?.desc}</div>
         <div>
-          <button type='submit' className='submitTask'>
+          <button type='submit' 
+          onClick={() => { setShow(true);}}
+          
+            className='submitTask'>
             Submit your Task
           </button>
         </div>
       </div>
     </div>
-  );
+    </> )
 };
 const Taskbar = () => {
   return (

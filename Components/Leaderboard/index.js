@@ -73,7 +73,7 @@ const Leaderboard = () => {
                   style={{ width: '17.007vw' }}
                   className='leaderBoardCollege'
                 >
-                  {current.College}
+                  {current.Collage}
                 </div>
                 <div style={{ width: '17.007vw' }} className='leaderBoardTc'>
                   {current.Tasks_Completed}

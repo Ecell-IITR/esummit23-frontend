@@ -4,7 +4,8 @@ import { useEffect, useState } from 'react';
 import { useMobile, useUpdateMobile } from '../utils/MobileContext';
 import {  getAuthToken } from '../utils';
 import { CAP_TASK_API } from '../utils/APIs';
-import {  CAP_DASH_API } from '../utils/APIs';
+import { getUserDetails} from '../utils';
+import Upload from '../Components/dashboard/Dashboard'
 import {
   Personalinfo,
   PointScored,
@@ -19,30 +20,27 @@ import Mobprofiledetails, {
 
 
 const capdashboard = () => {
-   
+  
   const [Taskname, setTaskname] = useState([]);
-  const [Leaderboard, setLeaderboard] = useState([]);
+  const [TotalPoints, setTotalPoints] = useState([]);
+  const [Id, setId] = useState([]);
+  const [Name, setName]= useState([]);
 
   const setMobile = useUpdateMobile();
   useEffect(() => {
     setMobile();
+    const [name,id] = getUserDetails();
+    setId(id)
+    setName(name)
   FetchApi('get',CAP_TASK_API, null, getAuthToken())
     .then((res) => {
       console.log(res)
       setTaskname(res.data.data);
+      setTotalPoints(res.data.points);
     })
     .catch((err) => {
       console.log(err)      
     });
-    FetchApi('get',CAP_DASH_API, null, getAuthToken())
-    .then((res) => {
-      console.log(res)
-      setTaskname(res.data.data);
-    })
-    .catch((err) => {
-      console.log(err)      
-    });
-
 
   }
   , []);
@@ -64,8 +62,8 @@ const capdashboard = () => {
 
             return(<>
           <Mobtask
-          id = {item.task_id}
-          task={item.desc}
+          id = {item?.task_id}
+          task={item?.desc}
             
           />
           
@@ -81,17 +79,21 @@ const capdashboard = () => {
           <div className='profileContainer'>
             <Personalinfo
               url='/Ellipse 40.png'
-              name='Abcd Xyz'
-              EsummitId='EERRTTYY1'
+              name={Name} 
+              EsummitId={Id}
             />
-           
-            {Leaderboard.map((item)=>{
-              return(<>
+             {TotalPoints.map((item) => {
+               return(<>
                 <PointScored 
-                points = {item.points}
+                 points = {item?.points}
+                 rank = {item?.rank}
                 />
-                </>)
-            })}
+
+                {console.log(item)}
+                
+                </>)})}
+               
+            
             
           </div>
           <Taskbar />
@@ -99,11 +101,12 @@ const capdashboard = () => {
           {Taskname.map((item) => {
             return(<>
              <Task
-              id = {item.task_id}
-              desc={item.desc}
+              id = {item?.task_id}
+              desc={item?.desc}
              />
+          
 
-            
+            {console.log(item)}
             
             </>)})}
           </div>

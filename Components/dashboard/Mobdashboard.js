@@ -6,7 +6,7 @@ const Mobprofiledetails = (props) => {
     <div className='mobProfileContainer'>
       <Image src={props.url} width={100} height={100} />
       <div className='profileInfo'>
-        <div className='mobFullNameContainer'>{props.name}</div>
+        <div className='mobFullNameContainer'>{props?.name}</div>
         <div className='mobEsummitIdContainer'>
           {' '}
           Esummit ID -{props.EsummitId}
@@ -27,14 +27,14 @@ const Mobscore = (props) => {
     <>
       <div className='mobScoreContainer'>
         <div className='mobRankContainer'>
-          <div className='rankContainer'>{props.Rank}</div>
+          <div className='rankContainer'>{props?.Rank}</div>
           <div className='currentRankContainer'>
             <div style={{ marginRight: '8px' }}>Current rank</div>
             <Image src='/Info_circle.png' height={16} width={16} />
           </div>
         </div>
         <div className='mobPointsContainer'>
-          <div className='pointsContainer'>{props.Points}</div>
+          <div className='pointsContainer'>{props?.Points}</div>
           <div className='mobPointsScoredContainer'>
             <div style={{ marginRight: '8px', height: '21px', width: '107px' }}>
               Points Scored

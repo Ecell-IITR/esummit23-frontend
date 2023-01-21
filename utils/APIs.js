@@ -26,5 +26,7 @@ export const OTP_API = `${API_URL}/user/otp`;
 export const VERIFY_API = `${API_URL}/user/verify`;
 export const CAP_DASH_API = `${API_URL}/cap/leaderboard`;
 export const CAP_TASK_API = `${API_URL}/cap/taskassigned`;
+export const CAP_SUB_API = `${API_URL}/cap/submission`;
 export const SINGLE_SERVICES = `${API_URL}/events/services/single`;
 export const SPEAKER_DETAIL_API = `${API_URL}/public/speakers`;
+export const USER_CAP_DETAILS_API = `${API_URL}/cap/usercapdetails`;
