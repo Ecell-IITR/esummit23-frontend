@@ -2,14 +2,14 @@ export let API_URL;
 if (process.env.ENV === 'prod') {
   API_URL = 'https://api.esummit.in';
 } else {
-  API_URL = 'http://localhost:8000'; // Change this to your local API URL
+  API_URL = 'https://api.esummit.in'; // Change this to your local API URL
 }
 
 export let HOST_URL;
 if (process.env.ENV === 'prod') {
   HOST_URL = 'https://www.esummit.in';
 } else {
-  HOST_URL = 'http://localhost:3000';
+  HOST_URL = 'https://api.esummit.in';
 }
 
 export const FOOTER_QUERY_API = `${API_URL}/user/querry`;
