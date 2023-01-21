@@ -398,6 +398,12 @@
   padding: 2rem;
 }
 
+@media only screen and (max-width:900px) {
+  // .noOfImages{
+  //   flex-direction: column;
+  // }
+}
+
 .sponsorImage {
   // border: 1px solid black;
   width: 100%;
@@ -408,12 +414,27 @@
 }
 .gfg {
   // border: 1px solid black;
-  width: 55%;
-  height: 60%;
+  width: 100%;
+  // height: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.noOfImages{
+  width:100%;
+  display: grid;
+  gap:2rem;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
+}
+@media only screen and (max-width:650px) {
+  .noOfImages{
+    width:0% !important;
+    gap:1rem;
+  } 
+}
+
 .CText1 {
   font-family: 'Lexend';
   font-style: normal;
@@ -460,7 +481,11 @@
   align-items: center;
   width: 80%;
 }
-
+@media only screen and (max-width:920px){
+  .noOfImages{
+    width:80%;
+  }
+}
 @media only screen and (max-width: 1190px) {
   .CardContainer {
     padding: 0px 24px;
@@ -868,7 +893,7 @@ text-overflow: ellipsis;
   text-overflow: initial;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  // justify-content: flex-end;
   // align-items: flex-end;
   font-family: 'Lexend';
   font-style: normal;
@@ -966,6 +991,9 @@ text-overflow: ellipsis;
   }
   .helpVerticalLine {
     width: 8rem;
+  }
+  .CardContent{
+    height:77vw !important;
   }
  
 
@@ -1276,9 +1304,9 @@ ul{
   }
  
    
-  .C{
-    min-width: 6rem;
-  }
+  // .C{
+  //   // min-width: 6rem;
+  // }
   .firstarrow{
     font-size: 14px;
     margin-left: -1rem; 
@@ -1293,5 +1321,38 @@ ul{
     height: 3rem;
     margin-top:.5rem;
   
+  }
+}
+
+@media only screen and (max-width:522px) {
+  .noOfImages{
+    width:0% !important;
+    gap:1rem;
+  } 
+  .gfg{
+    width:30vw !important;
+  }
+  .CardContent{
+    height:auto !important;
+  }
+  .C{
+    min-width:none !important;
+  }
+}
+@media only screen and (max-width:374px) {
+  .B{
+    display: none;
+  }
+  .ideaBox1{
+    margin-left: -1rem;
+  }
+  .writtenRules{
+    font-size:16px;
+  }
+  .coordinatorHeadingIS {
+  width:110%;
+  }
+  .noOfImages{
+    padding-left:1.5rem;
   }
 }

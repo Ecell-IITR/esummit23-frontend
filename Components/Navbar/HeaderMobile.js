@@ -30,7 +30,7 @@ export const HeaderMobile = () => {
       <input checked={Checked} type='checkbox' />
       <Link href='/' className='image' passHref>
         <img
-          src='summitLogo.png'
+          src='/summitLogo.png'
           alt='Esummit Logo'
           className='navbar-logo-mobile'
         />
