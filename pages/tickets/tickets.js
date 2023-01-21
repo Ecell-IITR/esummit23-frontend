@@ -86,7 +86,7 @@ function tickets() {
           />
           <img
             onClick={() => {
-              Clicker(1999, 'student pass', 2499);
+              Clicker(1999, 'Profestional pass', 2499);
             }}
             className='TicketDisplayImage'
             src='/PP.png'
