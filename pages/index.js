@@ -1,15 +1,18 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from '../Components/Navbar';
 import React from 'react';
+import Image from 'next/image';
 import Animation from '../Components/Animation';
 import Lottie from 'react-lottie';
 import SecondLandingPage from '../Components/SecondLandingPage';
 import ThirdLandingPage from '../Components/ThirdLandingPage';
+import SpeakerCard from '../Components/SpeakerCard/SpeakerCard';
+import { SPEAKER_DETAIL_API } from '../utils/APIs'
+import axios from 'axios'
 
 
-// import SpeakerCard from "../Components/SpeakerCard/SpeakerCard"
-
-export default function Home() {
+export default function Home(props) {
+  const {Data} = props;
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -18,12 +21,11 @@ export default function Home() {
 
   return (
     <>
-
       {/* <Navbar /> */}
       {/* <div className='LottieContainer'>
         <Lottie options={defaultOptions} />
       </div> */}
-      
+
       <div className='Seo-text'>
         <p>
           To find a way out of the darkness that has engulfed us over the past
@@ -63,7 +65,7 @@ export default function Home() {
           much more{' '}
         </p>
       </div>
-      <Animation/>
+      <Animation />
 
       <div>
         <SecondLandingPage />
@@ -71,18 +73,15 @@ export default function Home() {
       <div>
         <ThirdLandingPage />
       </div>
-      <div></div>
-      {/* <div>
-        <Footer />
-      </div> */}
-       {/* <div style={{width:"100vw",height:"100vh"}}></div>  */}
-      {/* <div style={{width:"100vw",height:"100vh"}}></div> */}
-
-      <div style={{display:"flex", justifyContent:"space-between"}}>
-      {/* <SpeakerCard/> */}
-      {/* <SpeakerCard/>
-      <SpeakerCard/> */}
+      <div>
+      {Data && Data.map((Element) => {return (<SpeakerCard Heading='Speaker' BtnText='View All Speakers' Id={Element.id} profile_Image={Element.profile_image} event_Year={Element.event_year} Name={Element.name} Designation={Element.designation} Description={Element.description} />)
+      })} 
       </div>
     </>
   );
+}
+export async function getStaticProps(){
+ const res = await axios.get(SPEAKER_DETAIL_API)
+  const Data = res.data;
+  return {props:{Data}}
 }

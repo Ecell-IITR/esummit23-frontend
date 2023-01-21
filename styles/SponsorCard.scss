@@ -70,7 +70,44 @@
   color: #43a047;
   font-weight: 600;
 }
-
+.speakerBtnAndTextContainer {
+  width: 93%;
+  height: 240px;
+  display: flex;
+  flex-direction: row;
+  // margin-top: 6rem;
+  // margin-bottom: 6rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.homepageSpeakerText {
+  // width: 204px;
+  height: 48px;
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 110%;
+  display: flex;
+  align-items: center;
+  color: #dcd1ad;
+}
+.viewAllSpeakersBtn {
+  border: 2px;
+  height: 3rem;
+  width: 18rem;
+  background-color: #ba6d39;
+  border-radius: 6rem;
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: #ffffff;
+  z-index: 1;
+}
+.viewAllSpeakersBtn:hover {
+ color: black;
+  }
 @media only screen and (max-width: 1190px) {
   .CardContainer {
     padding: 0px 24px;
