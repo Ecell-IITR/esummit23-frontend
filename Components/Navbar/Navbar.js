@@ -92,12 +92,12 @@ function NavDesktop() {
         </li>
 
         <li>
-          <Link href='/about'>
+          <Link href='/tickets'>
             <div
-              className={'about' == active ? 'navbarActive' : 'navbarListBox'}
+              className={'tickets' == active ? 'navbarActive' : 'navbarListBox'}
             >
-              About
-              <div className={'about' == active ? 'circle' : ''} />
+              Tickets
+              <div className={'tickets' == active ? 'circle' : ''} />
             </div>
           </Link>
         </li>

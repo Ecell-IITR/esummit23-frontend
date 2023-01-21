@@ -22,74 +22,8 @@ function tickets() {
   }, []);
   const router = useRouter();
 
-  const makePayment = async (amount) => {
-    if (!isAuthenticated()) {
-      router.push('/tickets');
-    }
-    const res = await initializeRazorpay();
 
-    if (!res) {
-      alert('Razorpay SDK Failed to load');
-      return;
-    }
-    let data = [];
-    // Make API call to the serverless API
-    FetchApi('POST', RAZORPAY_GET_ORDER_ID, {
-      name: name,
-      amount: amount,
-    }).then((res) => {
-      setData(res.data);
-      console.log(process.env);
-      let options = {
-        key: 'rzp_live_U0W39W3I1yR00g', // Enter the Key ID generated from the Dashboard
-        name: "Esummit'23",
-        currency: 'INR',
-        amount: res.data?.amount,
-        order_id: res.data?.orderId,
-        description: 'Test Website',
-        image: 'https://manuarora.in/logo.png',
 
-        handler: async function (response) {
-          const data = {
-            response: response,
-            razorpayPaymentId: response.razorpay_payment_id,
-            razorpayOrderId: response.razorpay_order_id,
-            razorpaySignature: response.razorpay_signature,
-          };
-          console.log(response);
-          // Validate payment at server - using webhooks is a better idea.
-          FetchApi('POST', RAZORPAY_CALLBACK, data, null).then((res) => {
-            console.log(res);
-            
-          });
-          console.log(response);
-        },
-        redirect: true,
-        prefill: {
-          name: 'Pranav Arya',
-        },
-      };
-
-      const paymentObject = new window.Razorpay(options);
-      paymentObject.open();
-    });
-  };
-  const initializeRazorpay = () => {
-    return new Promise((resolve) => {
-      const script = document.createElement('script');
-      script.src = 'https://checkout.razorpay.com/v1/checkout.js';
-      // document.body.appendChild(script);
-
-      script.onload = () => {
-        resolve(true);
-      };
-      script.onerror = () => {
-        resolve(false);
-      };
-
-      document.body.appendChild(script);
-    });
-  };
 
   const Clicker = (amount, passer, org) => {
     if (!isAuthenticated()) {
@@ -138,21 +72,21 @@ function tickets() {
         <div className='TicketDisplayContainer'>
           <img
             onClick={() => {
-              Clicker(1, 'student pass', 2);
+              Clicker(599, 'Standard Student pass', 999);
             }}
             className='TicketDisplayImage'
             src='/SSP.png'
           />
           <img
             onClick={() => {
-              Clicker(1, 'student pass', 2);
+              Clicker(1499, 'Premium Student pass', 1999);
             }}
             className='TicketDisplayImage2'
             src='/PSP.png'
           />
           <img
             onClick={() => {
-              Clicker(1, 'student pass', 2);
+              Clicker(1999, 'student pass', 2499);
             }}
             className='TicketDisplayImage'
             src='/PP.png'

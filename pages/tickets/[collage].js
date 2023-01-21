@@ -91,7 +91,7 @@ function Login() {
             <div style={{ width: '200px', height: '100px' }}>
               <Image width='294' height='77' src='/summitLogo.png' />
             </div>
-            <h1 className='LoginFormLeftTitle'> Welcome Back </h1>
+            <h1 className='LoginFormLeftTitle'> Login to Continue </h1>
             <div className='LoginFormBlack'>
               <h3 className='LoginFormLeftSubTitle'>
                 Please enter your details.
@@ -232,7 +232,7 @@ function Login() {
               <div style={{ width: '200px', height: '100px' }}>
                 <Image width='294' height='77' src='/summitLogo.png' />
               </div>
-              <h1 className='LoginFormLeftTitle'> Welcome Back </h1>
+              <h1 className='LoginFormLeftTitle'> Login to Continue </h1>
               <h3 className='LoginFormLeftSubTitle'>
                 Please enter your details.
               </h3>
