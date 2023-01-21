@@ -49,13 +49,18 @@ export const HeaderMobile = () => {
           </li>
         }
         <li className='mobilenavMenu-items'>
-          <Link href='/' passHref>
+          <Link href='/speakers' passHref>
             <div className='mobilenavMenu-links'>Speakers</div>
           </Link>
         </li>
         <li className='mobilenavMenu-items'>
-          <Link href='/' passHref>
+          <Link href='/sponsors' passHref>
             <div className='mobilenavMenu-links'>Sponsors</div>
+          </Link>
+        </li>
+        <li className='mobilenavMenu-items'>
+          <Link href='/tickets' passHref>
+            <div className='mobilenavMenu-links'>Tickets</div>
           </Link>
         </li>
     
