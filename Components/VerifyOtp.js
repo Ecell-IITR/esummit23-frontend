@@ -29,7 +29,7 @@ function Verify(props) {
     } else {
       const data = {
         otp: OTP,
-        email: Email,
+        email: props.email,
       };
       FetchApi('POST', OTP_SIGNUP_VERIFY_API, data)
         .then((res) => {
