@@ -6,15 +6,13 @@ import Animation from '../Components/Animation';
 import Lottie from 'react-lottie';
 import SecondLandingPage from '../Components/SecondLandingPage';
 import ThirdLandingPage from '../Components/ThirdLandingPage';
-import SpeakerCard from '../Components/SpeakerCard/SpeakerCard';
-import { SPEAKER_DETAIL_API } from '../utils/APIs'
-import axios from 'axios'
-import Footer from "../Components/Footer/Footer"
-
-
+import SpeakerCard from '../Components/Homepage/SpeakerCard';
+import { SPEAKER_DETAIL_API } from '../utils/APIs';
+import axios from 'axios';
+import Footer from '../Components/Footer/Footer';
 
 export default function Home(props) {
-  const {Data} = props;
+  const { Data } = props;
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -84,16 +82,29 @@ export default function Home(props) {
       <div>
         <ThirdLandingPage />
       </div>
-      <div>
-      {Data && Data.map((Element) => {return (<SpeakerCard Heading='Speaker' BtnText='View All Speakers' Id={Element.id} profile_Image={Element.profile_image} event_Year={Element.event_year} Name={Element.name} Designation={Element.designation} Description={Element.description} />)
-      })} 
-      </div>
 
+      <div>
+        {Data &&
+          Data.map((Element) => {
+            return (
+              <SpeakerCard
+                Heading='Speaker'
+                BtnText='View All Speakers'
+                Id={Element.id}
+                profile_Image={Element.profile_image}
+                event_Year={Element.event_year}
+                Name={Element.name}
+                Designation={Element.designation}
+                Description={Element.description}
+              />
+            );
+          })}
+      </div>
     </>
   );
 }
-export async function getStaticProps(){
- const res = await axios.get(SPEAKER_DETAIL_API)
+export async function getStaticProps() {
+  const res = await axios.get(SPEAKER_DETAIL_API);
   const Data = res.data;
-  return {props:{Data}}
+  return { props: { Data } };
 }
