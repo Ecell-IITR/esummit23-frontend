@@ -10,9 +10,13 @@ import SpeakerCard from '../Components/Homepage/SpeakerCard';
 import { SPEAKER_DETAIL_API } from '../utils/APIs';
 import axios from 'axios';
 import Footer from '../Components/Footer/Footer';
+import Events from '../pages/events';
+import EventCard from '../Components/Homepage/EventCard';
+import { ALL_EVENTS_API } from '../utils/APIs';
 
 export default function Home(props) {
-  const { Data } = props;
+  const { Data} = props;
+  const { Posts} = props;
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -81,8 +85,43 @@ export default function Home(props) {
       </div>
       <div>
         <ThirdLandingPage />
+        <div> 
       </div>
-
+      <div style={{
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    flexWrap: 'wrap',
+    background: 'linear-gradient(180deg, #12100E 0%, #301A08 100%)',
+  }}> 
+  <div className='speakerBtnAndTextContainer'>
+          <div className='homepageSpeakerText'>Events and Competition</div>
+          <button className='viewAllSpeakersBtn'>View all Events</button>
+        </div>
+        <div
+          style={{
+            width: '93%',
+            display: 'flex',
+            justifyContent: 'space-between',
+            flexWrap: 'wrap',
+            background: 'linear-gradient(180deg, #12100E 0%, #301A08 100%)',
+          }}
+        >
+        {Posts &&
+          Posts.map((Post,id) => {
+            return (
+            <EventCard
+            Heading='Events and Competitions'
+            BtnText='View All Events'
+            Profile_Image={
+              Post?.card_image ? Post?.card_image : '/Rectangle 118.png'
+            }
+            event_Name={Post.event_name}
+            // card_Description={card_Description}
+            />
+            )})}
+      </div>
+        </div>
       <div>
         {Data &&
           Data.map((Element) => {
@@ -100,11 +139,15 @@ export default function Home(props) {
             );
           })}
       </div>
+      </div>
     </>
   );
 }
 export async function getStaticProps() {
   const res = await axios.get(SPEAKER_DETAIL_API);
+  const resolve = await axios.get(ALL_EVENTS_API);
+  const Posts = resolve.data;
   const Data = res.data;
-  return { props: { Data } };
+  console.log(Posts)
+  return { props: { Data, Posts} };
 }
