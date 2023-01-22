@@ -72,7 +72,7 @@ function tickets() {
         <div className='TicketDisplayContainer'>
           <img
             onClick={() => {
-              Clicker(1, 'Standard Student pass', 999);
+              Clicker(599, 'Standard Student pass', 999);
             }}
             className='TicketDisplayImage'
             src='/SSP.png'
