@@ -75,7 +75,7 @@ function Login() {
   if (useMobile().isMobile) {
     return (
       <div className='LoginContainer'>
-         <Verify show={show} handleClose={handleChange} />
+         <Verify email={email} show={show} handleClose={handleChange} />
         <div
           style={{
             width: '100vw',
@@ -222,7 +222,7 @@ function Login() {
   } else {
     return (
       <>
-        <Verify show={show} handleClose={handleChange} />
+        <Verify email={email} show={show} handleClose={handleChange} />
         <div className='LoginContainer'>
           <div style={{ width: '100vw', height: '100vh' }}>
             <Image layout='fill' src='/login.webp' />

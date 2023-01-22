@@ -7,7 +7,6 @@ import OtpInput from 'react-otp-input';
 import { Authenticate, isAuthenticated } from '../utils';
 import { useRouter } from 'next/router';
 function Verify(props) {
-  const [Email, setEmail] = useState(props?.email? props?.email: 'pranav_a@ece.iitr.ac.in');
   const [OTP, setOTP] = useState('');
   const router = useRouter()
   
@@ -57,7 +56,7 @@ function Verify(props) {
           >
             <div className='forgotPasswordHeader'>Verify OTP</div>
             <div className='forgotPasswordSubHeader3'>
-              Enter OTP send to {hideEmail(Email)}
+              Enter OTP send to {hideEmail(props?.email)}
             </div>
             <div className='forgotPasswordInputContainer'>
               <OtpInput

@@ -93,7 +93,7 @@ function NavDesktop() {
         </li>
 
         <li>
-          <Link href='/tickets'>
+          <Link href='/tickets/tickets'>
             <div
               className={'tickets' == active ? 'navbarActive' : 'navbarListBox'}
             >
