@@ -101,6 +101,7 @@
     display: flex;
     flex-direction: row;
     padding-bottom: 1rem;
+    flex-wrap: wrap;
 
   }
   .Upload_popup_para {
@@ -167,4 +168,9 @@
       width: 54.8vw;
     }
   }
-  
+  @media screen and (max-width:500px) {
+    .Share_popup_share_background{
+        translate: (-60%,-60%);
+    }
+        
+  }

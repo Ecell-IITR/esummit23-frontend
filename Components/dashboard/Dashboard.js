@@ -8,14 +8,12 @@ import Upload from './upload_popup';
 const Personalinfo = (props) => {
   return (
     <>
-      <Image
-        className='ProfileImage'
-        src={props.url}
-        height='150px'
-        width='150px'
-      />
+      
+        <div className='profileImage'>{props.name[0]}</div>
+      
+     
       <div className='personalInfoContainer'>
-        <div className='fullNameContainer'>{props.full_name}</div>
+        <div className='fullNameContainer'>{props.name}</div>
         <div className='esummitIdContainer'>Esummit ID - {props.EsummitId}</div>
         <div className='fullProfileContainer'>
           <div>View full profile</div>
@@ -62,7 +60,7 @@ const Task = (props) => {
     const [name,id] = getUserDetails();
     setId(id)
     setName(name)
-  })
+  }),[]
 
   
   return (<>
@@ -92,16 +90,7 @@ const Task = (props) => {
     </div>
     </> )
 };
-const Taskbar = () => {
-  return (
-    <>
-      <div className='taskbarContainer'>
-        <div className='eventsCart'>Events Cart</div>
-        <div className='capLeaderBoard'> CAP Leaderboard</div>
-        <div className='capTask'>CAP Task </div>
-      </div>
-    </>
-  );
-};
 
-export { Personalinfo, PointScored, Task, Taskbar };
+
+
+export { Personalinfo, PointScored, Task };

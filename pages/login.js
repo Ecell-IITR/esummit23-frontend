@@ -68,7 +68,8 @@ function Login() {
             }
           }
           Authenticate(res.data.n, res.data.e_id, res.data.at);
-          router.push('/dashboard');
+          if (roleType == 'ca') {router.push('/capdashboard');}
+          else {router.push('/dashboard');}
         })
 
         .catch((res) => {
