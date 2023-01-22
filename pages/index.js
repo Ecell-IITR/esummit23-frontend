@@ -9,6 +9,8 @@ import ThirdLandingPage from '../Components/ThirdLandingPage';
 import SpeakerCard from '../Components/SpeakerCard/SpeakerCard';
 import { SPEAKER_DETAIL_API } from '../utils/APIs'
 import axios from 'axios'
+import Footer from "../Components/Footer/Footer"
+
 
 
 export default function Home(props) {
@@ -37,6 +39,15 @@ export default function Home(props) {
           the issues troubling us into an opportunity to revolutionize the
           world. E-Summit 23 will present rays of hope so dazzling that they
           penetrate even the darkness that veils our eyes.
+        </p>
+      </div>
+      <div className='Seo-text'>
+        <p>
+          Global leadership summit Global entrepreneurship summit International
+          entrepreneurship summit Summit international School events School
+          event ideas High school track events Hackathon What is a hackathon
+          Virtual hackathon Community Fest Tickets Startup Startup school Go
+          fund me Management fest
         </p>
       </div>
       <div className='Seo-text'>
@@ -77,6 +88,7 @@ export default function Home(props) {
       {Data && Data.map((Element) => {return (<SpeakerCard Heading='Speaker' BtnText='View All Speakers' Id={Element.id} profile_Image={Element.profile_image} event_Year={Element.event_year} Name={Element.name} Designation={Element.designation} Description={Element.description} />)
       })} 
       </div>
+
     </>
   );
 }

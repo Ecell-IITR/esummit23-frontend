@@ -1,0 +1,176 @@
+.Share_popup_share_background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    color: white;
+  }
+  
+  .Share_popup_mainDiv_behind {
+    background: linear-gradient(124.76deg, #f5e4ca 12.61%, #dbba89 63.66%);
+    width: 42vw;
+    padding: 0.1rem; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .Share_popup_mainDiv_front {
+    background-color: black;
+    width: 41.8vw;
+    padding-left: 1.2rem;
+    border-width: 0px;
+    
+    padding-bottom:  1.4rem;
+  }
+  
+  .Share_popup_heading {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  
+  .Share_popup_share_heading > h1 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.7rem;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    color: #e9f0f4;
+  }
+  
+  .Share_popup_close_btn {
+    padding-top: 0.7rem;
+    padding-right: 1rem;
+    color: white;
+  }
+  
+  .Share_popup_subDiv_behind {
+  
+    width: 39vw;
+    border-width: 0px;
+    padding: 0.05rem;
+    
+  }
+  
+//   .Share_popup_subDiv_front {
+//     background-color: black;
+//     width: 38.9vw;
+//     padding-left: 1rem;
+//     border: 0px;
+//     padding-top: 0.7rem;
+//     padding-right: 1rem;
+//   }
+  
+  .Share_popup_para {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.09em;
+    line-height: 140%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.01em;
+    color: #e9f0f4;
+  }
+  
+  ::selection {
+    color: none;
+    background: none;
+  }
+  
+  .Upload_popup_UploadBtn{
+    cursor: pointer;
+    background-color:  #BA6D39;
+    color:white;
+    border-radius: 100px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-weight: 700;
+    height: 2.4rem;
+    padding-top: 0.3rem;
+   
+  }
+  .Upload_popup_ChooseFileContainer {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 1rem;
+    flex-wrap: wrap;
+
+  }
+  .Upload_popup_para {
+   
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 140%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.01em;
+    color: #e9f0f4;
+    padding-bottom: 2rem;
+  }
+  .Upload_popup_UploadBtn_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0.5rem;
+  }
+
+  
+  @media screen and (max-width: 768px) {
+    .Share_popup_mainDiv_behind {
+      width: 73vw;
+    }
+    .Share_popup_mainDiv_front {
+      width: 72vw;
+    }
+  
+    .Share_popup_subDiv_behind {
+      width: 63vw;
+    }
+    .Share_popup_subDiv_front {
+      width: 62.5vw;
+    }
+  
+    .Share_popup_media_div {
+      display: flex;
+    }
+  
+    .Share_popup_single_media_div {
+      padding: 0.2rem;
+    }
+    img {
+      width: 20vw;
+    }
+    .Share_popup_media_title {
+      display: none;
+    }
+  }
+  
+  @media screen and (width: 1024px) {
+    .Share_popup_mainDiv_behind {
+      width: 60vw;
+    }
+    .Share_popup_mainDiv_front {
+      width: 59.5vw;
+    }
+    .Share_popup_subDiv_behind {
+      width: 55vw;
+    }
+    .Share_popup_subDiv_front {
+      width: 54.8vw;
+    }
+  }
+  @media screen and (max-width:500px) {
+    .Share_popup_share_background{
+        translate: (-60%,-60%);
+    }
+        
+  }

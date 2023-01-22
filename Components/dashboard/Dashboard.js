@@ -1,15 +1,17 @@
 import React from 'react';
 import Image from 'next/image';
+import { getUserDetails} from '../../utils';
+import { useState,useEffect } from 'react';
+import Upload from './upload_popup';
+
 
 const Personalinfo = (props) => {
   return (
     <>
-      <Image
-        className='ProfileImage'
-        src={props.url}
-        height='150px'
-        width='150px'
-      />
+      
+        <div className='profileImage'>{props.name[0]}</div>
+      
+     
       <div className='personalInfoContainer'>
         <div className='fullNameContainer'>{props.name}</div>
         <div className='esummitIdContainer'>Esummit ID - {props.EsummitId}</div>
@@ -24,11 +26,12 @@ const Personalinfo = (props) => {
   );
 };
 const PointScored = (props) => {
+
   return (
     <>
       <div className='pointContainer'>
         <div className='pointScored'>
-          <div className='pointScoredTop'>{props.PointsScored}</div>
+          <div className='pointScoredTop'>{props.points}</div>
 
           <div className='pointScoredBottom'>
             <div style={{ height: '33px', width: '146px' }}>Points Scored</div>
@@ -38,10 +41,9 @@ const PointScored = (props) => {
         </div>
 
         <div className='netPoints'>
-          <div className='pointScoredTop'>{props.NetPoints}</div>
+          <div className='pointScoredTop'>{props.rank}</div>
           <div className='pointScoredBottom' style={{ width: '92px' }}>
-            <div style={{ height: '33px', width: '66px' }}>Points</div>
-
+            <div style={{ height: '33px', width: '66px' }}>Rank</div>
             <Image src='/Info_circle.png' height={18} width={18} />
           </div>
         </div>
@@ -51,30 +53,44 @@ const PointScored = (props) => {
 };
 
 const Task = (props) => {
-  return (
+  const[Id, setId]=useState();
+  const[Name,setName]=useState();
+  const[Show, setShow]=useState(false);
+  useEffect(() => {
+    const [name,id] = getUserDetails();
+    setId(id)
+    setName(name)
+  }),[]
+
+  
+  return (<>
+  
     <div className='taskContainer'>
-      <div className='taskId'>{props.TaskId}</div>
+      <div className='taskId'> Task {props?.id}</div>
       <div className='taskTextContainer'>
-        <div className='taskText'>{props.task}</div>
+        <div className='taskText'>{props?.desc}</div>
         <div>
-          <button type='submit' className='submitTask'>
+          <button type='submit' 
+          onClick={() => { setShow(true);}}
+          
+            className='submitTask'>
             Submit your Task
           </button>
         </div>
       </div>
+      <Upload
+      esummitId={Id}
+      taskid={props?.id}
+      show={Show}
+      points={props.points}
+      setShow={(e) => {
+        setShow(e);
+      }}
+    />
     </div>
-  );
-};
-const Taskbar = () => {
-  return (
-    <>
-      <div className='taskbarContainer'>
-        <div className='eventsCart'>Events Cart</div>
-        <div className='capLeaderBoard'> CAP Leaderboard</div>
-        <div className='capTask'>CAP Task </div>
-      </div>
-    </>
-  );
+    </> )
 };
 
-export { Personalinfo, PointScored, Task, Taskbar };
+
+
+export { Personalinfo, PointScored, Task };

@@ -8,19 +8,14 @@ function Footer() {
         <div className='footerLeft_footer'>
           <div className='logoNew_footer'>
             <div className='summitLogoAndName_footer'>
-              <div className='esummitLogo_footer'>
-                <a href='https://www.esummit.in/'>
-                  <Image src='/vector.webp' height='90%' width='100%'></Image>
-                </a>
-              </div>
               <div className='collegeName_footer'>
                 <div className='nameOfCollege_footer'>
                   <div className='motto_footer'>
                     <a href='https://www.esummit.in/'>
                       <Image
-                        src='/motto.webp'
+                        src='/summitLogo.png'
                         height='53%'
-                        width='130%'
+                        width='170%'
                       ></Image>
                     </a>
                   </div>

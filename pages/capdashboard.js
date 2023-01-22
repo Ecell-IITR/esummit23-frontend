@@ -1,22 +1,106 @@
 import React from 'react';
+import FetchApi from '../utils/fetchAPI';
+import { useEffect, useState } from 'react';
+import { useMobile, useUpdateMobile } from '../utils/MobileContext';
+import { getAuthToken } from '../utils';
+import { CAP_TASK_API, CAP_DASH_API } from '../utils/APIs';
+import { getUserDetails } from '../utils';
+import { isAuthenticated } from '../utils';
+import { useRouter } from 'next/router';
+import Leaderboard from '../Components/Leaderboard';
 import {
   Personalinfo,
   PointScored,
   Task,
-  Taskbar,
 } from '../Components/dashboard/Dashboard';
 import Mobprofiledetails, {
   Mobscore,
-  Mobtaskbar,
   Mobtask,
 } from '../Components/dashboard/Mobdashboard';
-import { useEffect } from 'react';
-import { useMobile, useUpdateMobile } from '../utils/MobileContext';
+// import { data } from 'jquery';
+
 const capdashboard = () => {
+  const [RenderId, setRenderId] = useState(0);
   const setMobile = useUpdateMobile();
+  const [Taskname, setTaskname] = useState([]);
+  const [TotalPoints, setTotalPoints] = useState([]);
+  const [Id, setId] = useState('');
+  const [Name, setName] = useState('');
+  const [LeaderBoardData, setLeaderBoardData] = useState([]);
+  const router = useRouter()
   useEffect(() => {
+    if (!isAuthenticated()) {
+      
+      router.push(`/login`);
+    }
     setMobile();
+    const [name, id] = getUserDetails();
+    setId(id);
+    setName(name);
+    setMobile();
+    FetchApi('get', CAP_TASK_API, null, getAuthToken())
+      .then((res) => {
+        setTaskname(res.data.data);
+        setTotalPoints(res.data.points);
+      })
+      .catch((err) => {});
+
+    FetchApi('get', CAP_DASH_API, null, getAuthToken())
+      .then((res) => {
+        setLeaderBoardData(res.data.data);
+      })
+      .catch((err) => {});
   }, []);
+
+  const View = () => {
+    if (RenderId == 0) {
+      if (useMobile().isMobile) {
+        return (
+          <div className='capTaskContainer'>   
+          {console.log(Taskname)}       
+            {Taskname.map((item,index) => {
+               return (
+                 <>              
+                  <Mobtask
+                   id={item?.task_id}                    
+                   desc={item?.desc}
+                   points={item?.points}
+                      />
+                    </>
+                  );              
+            })}
+          </div>
+        );
+      } else {
+        return (
+          <div className='capTaskContainer'>
+            {Taskname.map((item) => {
+              return (
+                <>
+                  <Task
+                    id={item?.task_id}
+                    desc={item?.desc}
+                    points={item?.points}
+                  />
+                </>
+              );
+            })}
+          </div>
+        );
+      }
+    } else if (RenderId == 1) {
+      return (
+        <>
+                <Leaderboard
+                data={LeaderBoardData}
+                />
+             
+        </>
+      );
+    } else {
+      return <>ikuiju</>;
+    }
+  };
 
   if (useMobile().isMobile) {
     return (
@@ -24,58 +108,81 @@ const capdashboard = () => {
         <div className='mobContainer'>
           <Mobprofiledetails
             url='/Ellipse 40.png'
-            name='Abhdfg xyz'
-            EsummitId='RTTEUVF32'
+            name={Name} EsummitId={Id}
           />
-          <Mobscore Rank='6' Points='245' />
-          <Mobtaskbar />
+          {TotalPoints.map((item) => {
+            return (
+              <>
+                <Mobscore points={item?.points} rank={item?.rank} />
 
-          <Mobtask
-            TaskId='Task 1'
-            Task='Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, magnam.'
-          />
-          <Mobtask
-            TaskId='Task 2'
-            Task='Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, magnam.'
-          />
-          <Mobtask
-            TaskId='Task 3'
-            Task='Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, magnam.'
-          />
+              </>
+            );
+          })}
+          
+          <div className='mobTaskbar'>
+           
+            <div 
+            className={RenderId==1 ?"mobCapTask":"mobEventsCart"}
+            style={{cursor:'pointer'}}
+            onClick={() => {
+              setRenderId(1);
+            }}> CAP Leaderboard</div>
+            <div 
+            className={RenderId==0?"mobCapTask":"mobEventsCart"}
+            style={{cursor:'pointer'}}
+            onClick={() => {
+              setRenderId(0);
+            }}>CAP Tasks</div>
+          </div>
+          
+<View/>
+
         </div>
       </div>
     );
   } else {
     return (
-      <div style={{ display: 'flex' }}>
+      <div className='mainContainer' style={{ display: 'flex' }}>
         <div className='capDashboardContainer'>
           <div className='profileContainer'>
-            <Personalinfo
-              url='/Ellipse 40.png'
-              name='Abcd Xyz'
-              EsummitId='EERRTTYY1'
-            />
-            <PointScored PointsScored='216' NetPoints='216' />
-          </div>
-          <Taskbar />
-          <div className='capTaskContainer'>
-            <Task
-              TaskId='Task 1'
-              task='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, alias ad explicabo quod sit unde eligendi autem consectetur fugiat, possimus architecto optio. Non veritatis vero voluptate, amet aut at saepe!'
-            />
+            <Personalinfo url='/Ellipse 40.png' name={Name} EsummitId={Id} />
+            {TotalPoints.map((item) => {
+              return (
+                <>
+                  <PointScored points={item?.points} rank={item?.rank} />
 
-            <Task
-              TaskId='Task 2'
-              task='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, alias ad explicabo quod sit unde eligendi autem consectetur fugiat, possimus architecto optio. Non veritatis vero voluptate, amet aut at saepe!'
-            />
-            <Task
-              TaskId='Task 3'
-              task='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, alias ad explicabo quod sit unde eligendi autem consectetur fugiat, possimus architecto optio. Non veritatis vero voluptate, amet aut at saepe!'
-            />
+                </>
+              );
+            })}
           </div>
+
+
+          <div className='taskbarContainer'>
+            
+            <div
+            className={RenderId==1 ?"capTask":"capLeaderBoard"}
+            style={{cursor:'pointer'}}
+              onClick={() => {setRenderId(1)}}
+            >
+              CAP Leaderboard
+            </div>
+            <div
+            className={RenderId==0 ?"capTask":"capLeaderBoard"}
+            style={{cursor:'pointer'}}
+              onClick={() => {
+                setRenderId(0);
+              }}
+            >
+              CAP Task{' '}
+            </div>
+          </div>
+        </div>
+        <div className='bottomContainer'>
+          <View />;
         </div>
       </div>
     );
   }
 };
+
 export default capdashboard;
