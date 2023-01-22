@@ -1,28 +1,19 @@
 .leaderBox {
-  background-color: #301a08;
+  background-color: #301A08;
   height: 100vh;
-  width: 100vw;
-  padding: 0px 10vw;
-  padding-top: 3rem;
+  padding: 0px 180px;
 }
+
 .leaderBoardTop {
   display: flex;
   justify-content: space-evenly;
   opacity: 0.5;
-  border-bottom: 1px solid #dcd1ad;
+  border-bottom: 1px solid #DCD1AD;
   padding: 13px 2vw;
   gap: 2.107vw;
-  div {
-    color: #bcd1ab;
-  }
 }
-
-
-.leaderBoardParent{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap:0.5rem
+.leaderBoardTop div {
+  color: #bcd1ab;
 }
 
 .leaderBoard {
@@ -31,12 +22,11 @@
   gap: 2.107vw;
   color: white;
   padding: 13px 2.107vw;
-
-  div {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-  }
+}
+.leaderBoard div {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 .leaderBoardName1 {
@@ -48,12 +38,12 @@
   .leaderBoardTop {
     gap: 10px;
     justify-content: space-between;
-    div {
-      font-size: 12px;
-      font-weight: 400;
-    }
+  }
+  .leaderBoardTop div {
+    font-size: 12px;
+    font-weight: 400;
   }
   .leaderBoard {
     gap: 21px;
   }
-}
+}/*# sourceMappingURL=leaderboard.css.map */

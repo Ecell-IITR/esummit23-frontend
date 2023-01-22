@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import LeaderBoardData from './LeaderBoardData';
 import { useMobile, useUpdateMobile } from '../../utils/MobileContext';
 
-const Leaderboard = () => {
+
+const Leaderboard = (props) => {
+ console.log(props)
   const setMobile = useUpdateMobile();
   useEffect(() => {
     setMobile();
+   
   }, []);
   if (useMobile().isMobile) {
-    return (
+     return (<>
       <div className='leaderBox'>
         <div className='leaderBoardTop'>
           <div style={{ width: '3.16vw', paddingRight: '20px' }}>Rank</div>
@@ -19,37 +21,41 @@ const Leaderboard = () => {
         </div>
 
         <div className='leaderBoardBottom'>
-          {LeaderBoardData.map((current, index) => {
+        
             return (
-              <div className='leaderBoard' key={index}>
-                <div style={{ width: '3.16vw' }} className='leaderBoardRank'>
-                  {current.Rank}
+              <div className='leaderBoardParent' >
+               {props.data.map((item,index)=>{
+                return(<div className='leaderBoard'>
+                 <div style={{ width: '3.16vw' }} className='leaderBoardRank'>
+                  {item.rank}
                 </div>
                 <div style={{ width: '17.007vw' }} className='leaderBoardName'>
-                  {current.Name}
+                  {item.full_name}
                 </div>
                 <div
                   style={{ width: '17.007vw' }}
                   className='leaderBoardCollege'
                 >
-                  {current.College.length > 10
-                    ? current.College.substring(0, 10) + '..'
-                    : current.College}
+                  {item.collage.length > 10
+                    ?item.collage.substring(0, 10) + '..'
+                    : item.collage}
                 </div>
                 <div style={{ width: '17.007vw' }} className='leaderBoardTc'>
-                  {current.Tasks_Completed}
+                  {item.noOftaskCompleted}
                 </div>
                 <div style={{ width: '9.019vw' }} className='leaderBoardPs'>
-                  {current.Points_Scored}
+                  {item.points}
                 </div>
-              </div>
+               </div> )})}
+                
+                </div>
             );
-          })}
+          
         </div>
       </div>
-    );
+   </> );
   } else {
-    return (
+    return (<>
       <div className='leaderBox'>
         <div className='leaderBoardTop'>
           <div style={{ width: '3.16vw', paddingRight: '20px' }}>Rank</div>
@@ -60,32 +66,36 @@ const Leaderboard = () => {
         </div>
 
         <div className='leaderBoardBottom'>
-          {LeaderBoardData.map((current, index) => {
-            return (
-              <div className='leaderBoard' key={index}>
+          
+              <div  className="leaderBoardParent">
+              {props.data.map((item,index)=>{
+                return(<div className='leaderBoard'>
+                  
                 <div style={{ width: '3.16vw' }} className='leaderBoardRank'>
-                  {current.Rank}
+                  {item.rank}
                 </div>
                 <div style={{ width: '17.007vw' }} className='leaderBoardName'>
-                  {current.Name}
+                  {item.full_name}
                 </div>
                 <div
                   style={{ width: '17.007vw' }}
                   className='leaderBoardCollege'
                 >
-                  {current.College}
+                  {item.collage}
                 </div>
                 <div style={{ width: '17.007vw' }} className='leaderBoardTc'>
-                  {current.Tasks_Completed}
+                  {item.noOftaskCompleted}
                 </div>
                 <div style={{ width: '9.019vw' }} className='leaderBoardPs'>
-                  {current.Points_Scored}
+                  {item.points}
                 </div>
+                </div> )  })}
               </div>
             );
-          })}
+         
         </div>
       </div>
+      </>
     );
   }
 };
