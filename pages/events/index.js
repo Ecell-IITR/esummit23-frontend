@@ -106,7 +106,7 @@ export default function Events({ posts }) {
                 <div
                   className='eventPgDesc'
                   dangerouslySetInnerHTML={{ __html: post?.card_description }}
-                  style={{ textAlign: 'initial', lineHeight: '19px' }}
+                  style={{ textAlign: 'initial', lineHeight: '19px',paddingTop:"13px" }}
                 ></div>
 
                 <a
