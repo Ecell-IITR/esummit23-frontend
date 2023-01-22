@@ -1,10 +1,9 @@
 import { Form } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
-import FetchApi from '../../utils/FetchAPI';
+import FetchApi from '../../utils/fetchAPI';
 import { FOOTER_QUERY_API } from '../../utils/APIs';
 import { toast } from 'react-toastify';
 import React, { useState } from 'react';
-import { data } from 'autoprefixer';
 
 const Forms = () => {
   const [name, setName] = useState('');
