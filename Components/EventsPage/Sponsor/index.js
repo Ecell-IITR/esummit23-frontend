@@ -1,10 +1,34 @@
 import Image from 'next/image';
-
 import { useRouter } from 'next/router';
 import { isAuthenticated } from '../../../utils';
+import { useEffect,useState } from 'react';
 
 function Events(props) {
   const router = useRouter();
+  const [x,setx] = useState([]);
+  console.log(props.partners)
+  useEffect(() => {
+    let i = 0;
+    let t=[]
+    console.log(props.partners)
+    if(props.partners.length == 0){
+      return;
+    }else{
+    while (i < props.partners.length){
+      
+      if((props.partners.length-i)/3>0){
+        t=[...t,props.partners.slice(i, i+ 3)]
+     
+        setx(t)
+      
+        i+=2
+        
+      }
+  i+=1
+}
+    }
+
+}, []);
   const rederict = () => {
     if (isAuthenticated()) {
       router.push(`/dashboard`);
@@ -16,6 +40,7 @@ function Events(props) {
     props.setShow(true);
     props.GetData(props.name);
   }
+
   return (
     <>
       <div
@@ -27,7 +52,7 @@ function Events(props) {
           height: '120%',
           alignItems: 'center',
         }}
-      >
+      >{console.log(x)}
         <div
           style={{
             fontFamily: 'Lexend',
@@ -80,26 +105,35 @@ function Events(props) {
           )}
         </div>
       </div>
-      {/* <div className='CardContainer'>
+     {x?.map((curr,index) => {
+      return(
+      <div className='CardContainer' key='index' >
         <div className='sponsCardContainer'>
           <div className='CardBox1'></div>
-
           <div className='CardContent'>
             <div className='sponsorImage'>
-              <Image src='/Sponsor.webp' height='60rem' width='700rem'></Image>
+              <Image src='/Sponsor.webp' height='60rem' width='700rem'/>
             </div>
-            {props.partners.map((curr, index) => {
-              return (
-                <div className='gfg'>
-                  <Image src='/gfg.webp' width='240rem' height='180rem'></Image>
+            <div className='noOfImages'
+            //  style={{display:"flex",gap:"5vw",alignItems:"center"}}
+              >
+          {curr?.map((items,index1) => {
+            return(
+                <div className='gfg' key='index1'>
+                  <Image src={items?.image} width='240rem' height='180rem'/>
                 </div>
-              );
-            })}
+            )
+          })}
+                </div>
+              
           </div>
 
           <div className='CardBox2'></div>
         </div>
-      </div> */}
+      </div>
+      )
+     })}
+
 
       <div className='parentIS'>
         <div className='coordinatorHeadingIS'>Event Coordinators</div>

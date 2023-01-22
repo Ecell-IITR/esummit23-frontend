@@ -30,3 +30,7 @@ export const CAP_SUB_API = `${API_URL}/cap/submission`;
 export const SINGLE_SERVICES = `${API_URL}/events/services/single`;
 export const SPEAKER_DETAIL_API = `${API_URL}/public/speakers`;
 export const USER_CAP_DETAILS_API = `${API_URL}/cap/usercapdetails`;
+export const RAZORPAY_GET_ORDER_ID = `${API_URL}/ticket/razorpay`;
+export const RAZORPAY_CALLBACK = `${API_URL}/ticket/razorpay/callback`;
+export const OTP_SIGNUP_API  = `${API_URL}/user/otp_signup`;
+export const OTP_SIGNUP_VERIFY_API  = `${API_URL}/user/otp_signup/verify`;

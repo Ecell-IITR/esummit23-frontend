@@ -38,7 +38,7 @@ const Forms = () => {
 
   return (
     <>
-      <Form>
+      <Form className='footer_Form'>
         <div className='name_footer'>
           <Form.Group className='mb-3' controlId='formBasicPassword'>
             <Form.Control
