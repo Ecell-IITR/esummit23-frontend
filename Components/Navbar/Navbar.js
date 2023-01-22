@@ -12,6 +12,7 @@ function NavDesktop() {
 
 
   const router = useRouter();
+  
   useEffect(() => {
     switch (router.asPath) {
       case '/':
@@ -38,7 +39,9 @@ function NavDesktop() {
   });
 
   return (
-    <Navbar className='navbarParent'>
+    <Navbar className={
+      router.asPath === '/sponsors' ? 'navbarParentNew' : 'navbarParent'
+    } >
       {/* <Container fluid> */}
       <div className='navbarEsummitLogo'>
         <img src='/summitLogo.png' className='navbarImage' />
