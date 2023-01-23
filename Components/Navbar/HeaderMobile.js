@@ -59,7 +59,7 @@ export const HeaderMobile = () => {
           </Link>
         </li>
         <li className='mobilenavMenu-items'>
-          <Link href='/tickets' passHref>
+          <Link href='/tickets/tickets' passHref>
             <div className='mobilenavMenu-links'>Tickets</div>
           </Link>
         </li>

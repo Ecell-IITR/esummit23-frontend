@@ -19,7 +19,7 @@ function QM(props) {
     }
     // Make API call to the serverless API
     FetchApi('POST', RAZORPAY_GET_ORDER_ID, {
-      name: name,
+      name: props.name,
       amount: amount,
     }).then((res) => {
       console.log(process.env);
@@ -29,7 +29,7 @@ function QM(props) {
         currency: 'INR',
         amount: res.data?.amount,
         order_id: res.data?.orderId,
-        description: 'Test Website',
+        description: 'TIcket Payment',
         image: 'https://manuarora.in/logo.png',
 
         handler: async function (response) {
@@ -39,7 +39,7 @@ function QM(props) {
             razorpayOrderId: response.razorpay_order_id,
             razorpaySignature: response.razorpay_signature,
             plan:props.pass,
-            quantity:Number        };
+            quantity:Number  };
           console.log(response);
           // Validate payment at server - using webhooks is a better idea.
           FetchApi('POST', RAZORPAY_CALLBACK, data, getAuthToken()).then((res) => {
@@ -47,7 +47,6 @@ function QM(props) {
           });
           console.log(response);
         },
-        redirect: true,
         prefill: {
           name: props.name,
         },

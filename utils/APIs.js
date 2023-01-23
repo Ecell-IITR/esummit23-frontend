@@ -2,7 +2,8 @@ export let API_URL;
 if (process.env.ENV === 'prod') {
   API_URL = 'https://api.esummit.in';
 } else {
-  API_URL = 'http://api.esummit.in'; // Change this to your local API URL
+  API_URL = 'https://api.esummit.in'; // Change this to your local API URL
+
 }
 
 export let HOST_URL;
