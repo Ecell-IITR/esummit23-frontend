@@ -38,7 +38,6 @@ function Dashboard(props) {
       toast.error('please enter valid Team Name!');
       return;
     }
-    console.log(inputFields.length,props.Auth);
     if (inputFields.length < 1 && props.Auth) {
       toast.error('please enter Team Members!');
       return;
@@ -90,14 +89,12 @@ function Dashboard(props) {
     };
     let ApiUsed=!props?.Auth ? TEAM_REGISTER_API:NEW_TEAM_REGISTER_API;
     let Auth = !props?.Auth ? getAuthToken() : null;
-    console.log(NEW_TEAM_REGISTER_API,TEAM_REGISTER_API);
     FetchApi('POST', ApiUsed, data, Auth)
       .then((res) => {
         toast.success('Team Registered!');
         props.handleClose();
       })
       .catch((err) => {
-        console.log(err)
         toast.error('Length of answer exceds maximum length ');
       });
   };

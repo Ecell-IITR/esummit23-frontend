@@ -15,7 +15,7 @@ function sucess() {
       const nam = localStorage.getItem('name');
       setName(nam);
       setId(localStorage.getItem('id'));
-      console.log(nam);
+   
     }, []);
 
 
