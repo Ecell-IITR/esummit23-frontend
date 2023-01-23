@@ -348,6 +348,7 @@
     // display: flex;
     // justify-content: flex-end;
     // align-items: center;
+    min-width: 23vw;
     z-index: 4;
   }
   .nameISCoordinator{
@@ -499,7 +500,7 @@
     width: 80px;
   }
   .aboutEvent {
-    margin-top: 16px !important;
+    margin-top: 4vh !important;
     margin-bottom: 5rem;
   }
   
@@ -802,7 +803,7 @@ color: #FFFFFF!important;
   width: 100%;
   margin-left: -1rem;
   padding-top: 2rem;
-  padding-right: 3rem;
+  // padding-right: 3rem;
 }
 .rulesMentioned {
   height: 10%;
@@ -824,7 +825,7 @@ color: #FFFFFF!important;
   font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 150%;
   /* identical to box height, or 27px */
 
@@ -1087,6 +1088,7 @@ text-overflow: ellipsis;
   .B {
     width: 2rem;
     height: auto;
+    min-width:23vw;
   }
   .nameISCoordinator {
     font-size: 1rem;

@@ -9,6 +9,7 @@ const ThirdLandingPage = () => {
             <div style={{ width: '90vw' }}>
               <img
                 width='100%'
+                style={{ width: '90vw' }}
                 // height="100"
                 // src='https://www.youtube.com/embed/3TJs2KjpxXc'
                 src='thirdLandingImage.png'

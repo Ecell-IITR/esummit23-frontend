@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
 import axios from 'axios';
+import Navbar from '../Components/Navbar';
 import  { SPEAKER_DETAIL_API  } from '../utils/APIs';
 
 export async function getStaticProps() {
@@ -25,7 +26,9 @@ export async function getStaticProps() {
 const Speaker = (props) => {
   const { Data } = props;
   return ( 
-  <div className='allSpeakerContainerDiv'>
+    <div style={{background:"linear-gradient(180deg, #12100e 0%, #301a08 100%)"}}>
+      <Navbar/>
+    <div className='allSpeakerContainerDiv'>
     <div className='allSpeakerContainer'>     
     <div className='speakerText'>Speaker</div>
     <div className='SpeakerDescriptionText'>E-summit, IIT Roorkee is known for the quality speaker sessions, it brings to the table. Speakers are enthusiastic about sharing their knowledge, thrilling experiences, and insights. Here comes the time for more amazing sessions, catering to every segment of the audience, students, professors, and investors.
@@ -63,7 +66,9 @@ const Speaker = (props) => {
     }
      </div>
      </div>
-    </div>)
+    </div>
+    </div>
+    )
 }
 
 export default Speaker

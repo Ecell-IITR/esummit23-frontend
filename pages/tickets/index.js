@@ -99,6 +99,11 @@ function Login() {
               <h3 className='LoginFormLeftSubTitle'>
                 Please enter your details.
               </h3>
+              <div className='sliderContainer'>
+
+                <div onClick={()=>{setToggel(true)}} className={Toggel? "toggActive" : "toggSetActive"  }>Student</div>
+                <div onClick={()=>{setToggel(false)}} className={Toggel? "toggSetActive" : "toggActive"  }>Profestional</div>
+              </div>
               <input
                 className={
                   Name == ''
@@ -238,10 +243,7 @@ function Login() {
                 <Image width='294' height='77' src='/summitLogo.png' />
               </div>
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 3229f3c42d4774d4f9dff1c847c8a50819085e71
               <h1 className='LoginFormLeftTitle'> Login or signup </h1>
 
               <h3 className='LoginFormLeftSubTitle'>

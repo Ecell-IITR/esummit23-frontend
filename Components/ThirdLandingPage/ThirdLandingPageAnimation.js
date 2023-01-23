@@ -26,7 +26,8 @@ const ThirdLandingPageAnimation = () => {
                 className='thirdLandingAnimationPageHeading'
                 style={{ width: '40vw' }}
               >
-                {current.Heading}
+                {/* {current.Heading} */}
+                REMINSCING THE ETHOS: <span style={{color:"#FFD685"}}>BHARAT</span> 
               </div>
               <div className='thirdLandingAnimationPageDescription'>
                 {current.Description1}
