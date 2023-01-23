@@ -99,6 +99,11 @@ function Login() {
               <h3 className='LoginFormLeftSubTitle'>
                 Please enter your details.
               </h3>
+              <div className='sliderContainer'>
+
+                <div onClick={()=>{setToggel(true)}} className={Toggel? "toggActive" : "toggSetActive"  }>Student</div>
+                <div onClick={()=>{setToggel(false)}} className={Toggel? "toggSetActive" : "toggActive"  }>Profestional</div>
+              </div>
               <input
                 className={
                   Name == ''
