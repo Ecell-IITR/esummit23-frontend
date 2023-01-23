@@ -238,7 +238,10 @@ function Login() {
                 <Image width='294' height='77' src='/summitLogo.png' />
               </div>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3229f3c42d4774d4f9dff1c847c8a50819085e71
               <h1 className='LoginFormLeftTitle'> Login or signup </h1>
 
               <h3 className='LoginFormLeftSubTitle'>
