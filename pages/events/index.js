@@ -82,7 +82,6 @@ export default function Events({ posts }) {
           return (
             <div className='eventPgCards' style={{ height: '27rem' }}>
               <div className='eventcimg'>
-                {console.log(post.card_image)}
                 <Image
                   src={
                     post?.card_image ? post?.card_image :"/Rectangle 118.png"
@@ -167,7 +166,7 @@ export async function getStaticProps() {
   const res = await fetch(ALL_EVENTS_API);
 
   const posts = await res?.json();
-  console.log(posts);
+  
   return {
     props: {
       posts,

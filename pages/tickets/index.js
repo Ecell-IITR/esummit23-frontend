@@ -15,12 +15,11 @@ function Login() {
   const [PhoneNo, setPhoneNo] = useState('');
   const [Gender, setGender] = useState({ value: '2', label: 'Female' });
   const [Collage, setCollage] = useState("");
-
+  const [Toggel, setToggel] = useState(true)
 
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const router = useRouter();
-  console.log(router.query);
   const data = [
     { value: '1', label: 'Male' },
     { value: '2', label: 'Female' },
@@ -46,11 +45,12 @@ function Login() {
       toast.warning('Please enter Email');
       return;
     }
-
+    
     FetchApi(
       'POST',
       OTP_SIGNUP_API,
       {
+        type: Toggel ? 'stu' : 'proff',
         user: {
           full_name: Name,
           email: email,
@@ -143,7 +143,9 @@ function Login() {
               <input
                 type='text'
                 className={'LoginFormLeftInput inputGold'}
-                placeholder={"College"}
+
+                placeholder={Toggel? "College" : "Company"}
+
                 style={{ margin: '10px' }}
                 value={Collage}
                 onChange={(e)=>{setCollage(e.target.value)}}
@@ -235,10 +237,22 @@ function Login() {
               <div style={{ width: '200px', height: '100px' }}>
                 <Image width='294' height='77' src='/summitLogo.png' />
               </div>
-              <h1 className='LoginFormLeftTitle'> Create account to Continue </h1>
+
+              <h1 className='LoginFormLeftTitle'> Login or signup </h1>
+
               <h3 className='LoginFormLeftSubTitle'>
                 Please enter your details.
               </h3>
+
+
+              <div className='sliderContainer'>
+
+                <div onClick={()=>{setToggel(true)}} className={Toggel? "toggActive" : "toggSetActive"  }>Student</div>
+                <div onClick={()=>{setToggel(false)}} className={Toggel? "toggSetActive" : "toggActive"  }>Profestional</div>
+              </div>
+
+
+
               <input
                 className={
                   Name == ''
@@ -283,7 +297,10 @@ function Login() {
               <input
                 type='text'
                 className={'LoginFormLeftInput inputGold'}
-                placeholder={"College"}
+
+                
+                placeholder={Toggel? "College" : "Company"}
+
                 style={{ margin: '10px' }}
                 
                 value={Collage}

@@ -25,13 +25,11 @@ const Upload = ({ esummitId, taskid, points, show, setShow }) => {
       form_data.append('points',points);
       FetchApi('post',CAP_SUB_API, form_data, getAuthToken())
         .then((res) => {
-          console.log(res);
           setloading(false);
           toast.success('image uploaded successfully')
         })
         .catch((err) => {
           setloading(false);
-          console.log(err);
         });
     } else {
       toast.error('Please Upload a Valid File/Image !');
