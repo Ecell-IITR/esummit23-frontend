@@ -123,7 +123,7 @@ export default function Events({ posts }) {
               <div className='eventPgBtnC' style={{ marginTop: '1.5rem' }}>
                 
               {post.event_name === 'Startup Expo' ? (
-                <a style={{color:"transparent"}} href='https://docs.google.com/forms/d/1bYuLAoCbFzO2SDpSn0uYShaDYvyEmuXmYPtp1IUILX4/viewform?edit_requested=true'>
+                <a style={{color:"transparent"}} href='/login'>
                   {' '}
                   <button
                   className='eventPgBtn'
@@ -132,17 +132,20 @@ export default function Events({ posts }) {
                 </button>
                 </a>
               ) : (
-
+                <a href='/login'>
                 <button
                   className='eventPgBtn'
-                  onClick={() => {
-                    GetData(post?.event_name);
-                    setShow(true);
+                  // onClick={() => {
+                  
+                  //   GetData(post?.event_name);
+                  //   setShow(true);
                     // rederict();
-                  }}
+                  // }}
+                 
                 >
                   Register Now
                 </button>
+                </a>
               )
                 }
                 <Image src='/Vector.png' height='16px' width='21.3px'></Image>

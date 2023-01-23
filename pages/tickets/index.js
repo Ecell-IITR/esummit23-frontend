@@ -143,7 +143,7 @@ function Login() {
               <input
                 type='text'
                 className={'LoginFormLeftInput inputGold'}
-                placeholder={"collage"}
+                placeholder={"College"}
                 style={{ margin: '10px' }}
                 value={Collage}
                 onChange={(e)=>{setCollage(e.target.value)}}
@@ -235,7 +235,7 @@ function Login() {
               <div style={{ width: '200px', height: '100px' }}>
                 <Image width='294' height='77' src='/summitLogo.png' />
               </div>
-              <h1 className='LoginFormLeftTitle'> Login to Continue </h1>
+              <h1 className='LoginFormLeftTitle'> Create account to Continue </h1>
               <h3 className='LoginFormLeftSubTitle'>
                 Please enter your details.
               </h3>
@@ -283,7 +283,7 @@ function Login() {
               <input
                 type='text'
                 className={'LoginFormLeftInput inputGold'}
-                placeholder={"collage"}
+                placeholder={"College"}
                 style={{ margin: '10px' }}
                 
                 value={Collage}
@@ -300,7 +300,7 @@ function Login() {
                       control: (baseStyles, state) => ({
                         ...baseStyles,
                         backgroundColor: ' #12100e',
-                        width: '32vw',
+                        width: '28vw',
                         marginTop: '0.5rem',
                         marginLeft: '0.5rem',
                         borderTop: '0px',
@@ -314,7 +314,7 @@ function Login() {
                           ? ' #12100e'
                           : ' #12100e',
                         backgroundColor: '  #dcd1ad',
-                        width: '30rem',
+                        width: '28rem',
                         color: 'black',
                       }),
                       singleValue: (baseStyles, state) => ({
@@ -326,7 +326,7 @@ function Login() {
                         backgroundColor: state.isFocused
                           ? ' #12100e'
                           : ' #12100e',
-                        width: '30rem',
+                        width: '28rem',
                         fontFamily: 'Nunito Sans',
                         fontWeight: '400',
                       }),
