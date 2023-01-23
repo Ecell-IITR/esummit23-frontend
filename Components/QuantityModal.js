@@ -22,14 +22,13 @@ function QM(props) {
       name: props.name,
       amount: amount,
     }).then((res) => {
-      console.log(process.env);
       let options = {
         key: 'rzp_live_U0W39W3I1yR00g', // Enter the Key ID generated from the Dashboard
         name: "Esummit'23",
         currency: 'INR',
         amount: res.data?.amount,
         order_id: res.data?.orderId,
-        description: 'TIcket Payment',
+        description: 'Ticket Payment',
         image: 'https://manuarora.in/logo.png',
 
         handler: async function (response) {
@@ -40,12 +39,12 @@ function QM(props) {
             razorpaySignature: response.razorpay_signature,
             plan:props.pass,
             quantity:Number  };
-          console.log(response);
+          
           // Validate payment at server - using webhooks is a better idea.
           FetchApi('POST', RAZORPAY_CALLBACK, data, getAuthToken()).then((res) => {
               router.push("/tickets/sucess")
           });
-          console.log(response);
+          
         },
         prefill: {
           name: props.name,

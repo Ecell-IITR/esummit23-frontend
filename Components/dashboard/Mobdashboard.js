@@ -60,7 +60,7 @@ const Mobtask = (props) => {
     setName(name)
   }),[]
   return (
-    <> console.log(props)
+    <>
       <div className='mobAllTaskcontainer'>
         <div className='mobTaskId'>Task {props.id}</div>
        

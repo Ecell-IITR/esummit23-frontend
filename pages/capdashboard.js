@@ -57,7 +57,7 @@ const capdashboard = () => {
       if (useMobile().isMobile) {
         return (
           <div className='capTaskContainer'>   
-          {console.log(Taskname)}       
+              
             {Taskname.map((item,index) => {
                return (
                  <>              

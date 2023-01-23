@@ -10,7 +10,7 @@ function rzp() {
   // const [data, setData] = useState();
 
   const makePayment = async () => {
-    console.log('here...');
+  
     const res = await initializeRazorpay();
 
     if (!res) {
@@ -24,7 +24,6 @@ function rzp() {
       amount: amount,
     }).then((res) => {
       setData(res.data);
-      console.log(process.env);
       let options = {
         key: 'rzp_live_U0W39W3I1yR00g', // Enter the Key ID generated from the Dashboard
         name: "Esummit'23",
@@ -41,12 +40,10 @@ function rzp() {
             razorpayOrderId: response.razorpay_order_id,
             razorpaySignature: response.razorpay_signature,
           };
-          console.log(response);
           // Validate payment at server - using webhooks is a better idea.
           FetchApi('POST', RAZORPAY_CALLBACK, data, null).then((res) => {
-            console.log(res);
+          
           });
-          console.log(response);
         },
         redirect: true,
         prefill: {

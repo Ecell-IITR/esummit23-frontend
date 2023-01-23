@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { RAZORPAY_GET_ORDER_ID, RAZORPAY_CALLBACK } from '../../utils/APIs';
 import FetchApi from '../../utils/fetchAPI';
-import { getAuthToken, isAuthenticated } from '../../utils';
+import { getAuthToken, isAuthenticated,getUserRoleType } from '../../utils';
 import { useRouter } from 'next/router';
 import QM from '../../Components/QuantityModal';
+import { toast } from 'react-toastify';
 function tickets() {
   const [name, setName] = useState('');
   const [Id, setId] = useState('');
@@ -18,7 +19,7 @@ function tickets() {
     const nam = localStorage.getItem('name');
     setName(nam);
     setId(localStorage.getItem('id'));
-    console.log(nam);
+    
   }, []);
   const router = useRouter();
 
@@ -35,6 +36,25 @@ function tickets() {
       setShow(true);
     }
   };
+
+
+  const Clicker2 = (amount, passer, org) => {
+    if (!isAuthenticated()) {
+      router.push('/tickets');
+    } else if(!(getUserRoleType()=="proff")){
+      toast.error("You are not a proffessional user");
+
+    }
+    
+    else {
+      setAmount(amount);
+      setPass(passer);
+      setOrg(org);
+      setShow(true);
+    }
+  };
+
+
 
   return (
     <>
@@ -86,7 +106,7 @@ function tickets() {
           />
           <img
             onClick={() => {
-              Clicker(1999, 'Profestional pass', 2499);
+              Clicker2(1999, 'Profestional pass', 2499);
             }}
             className='TicketDisplayImage'
             src='/PP.png'
