@@ -22,7 +22,7 @@ const ThirdLandingPage = () => {
         </div>
         <div className='ThirdLandingAnimationPageMobileBox'>
           <div className='ThirdLandingAnimationPageMobileHeading'>
-            REMINSCING THE ETHOS:
+            REMINISCING THE ETHOS:
             <span style={{ color: ' #FFD685' }}>BHARAT</span>
           </div>
 
