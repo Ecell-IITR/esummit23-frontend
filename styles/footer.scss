@@ -10,16 +10,16 @@
 }
 
 .line {
-  margin-left: 3rem;
- 
   color: white;
-  margin-top: -4rem;
+  margin-top: -3rem;
+  display: flex;
+  justify-content: center;
   
 }
 .copyRight {
   font-family: 'Nunito Sans';
   color: white;
-  margin-top: -0.8rem;
+  margin-top: -0.6rem;
   opacity: 70%;
   margin-left: 3.7rem;
 }
@@ -376,6 +376,7 @@
     justify-content: center;
     align-items: center;
     height: 65rem;
+    margin-bottom: 55vw;
   }
   .footerMiddle_footer {
     position: relative;
@@ -511,7 +512,6 @@
     display: flex;
     justify-content: center;
     margin-left: 1rem;
-   
   }
 }
 
@@ -532,10 +532,19 @@
   .buttonSubmitDiv{
     display: flex;
     justify-content: center;
-    
+    margin-bottom: 5rem;
+  }
+ 
+}
+@media screen and (max-width: 400px) {
+  .Parent_footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 65rem;
+    margin-bottom: 25vw;
   }
 }
-
 // @media screen and (max-width:500px)
 // {
 //   .line{

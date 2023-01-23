@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 function Footer() {
   return (
-    <div>
+    <>
       <div id="footer" className='Parent_footer'>
         <div className='footerLeft_footer'>
           <div className='logoNew_footer'>
@@ -146,7 +146,7 @@ function Footer() {
         </div>
       </div>
       
-    </div>
+    </>
   );
 }
 

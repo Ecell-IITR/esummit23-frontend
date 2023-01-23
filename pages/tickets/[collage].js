@@ -18,7 +18,6 @@ function Login() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const router = useRouter();
-  console.log(router.query);
   const data = [
     { value: '1', label: 'Male' },
     { value: '2', label: 'Female' },
