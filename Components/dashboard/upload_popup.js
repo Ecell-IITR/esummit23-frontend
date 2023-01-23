@@ -4,7 +4,7 @@ import { CAP_SUB_API } from '../../utils/APIs';
 import { toast } from 'react-toastify';
 import { getAuthToken } from '../../utils';
 import { Modal } from 'react-bootstrap';
-const Upload = ({ esummitId, taskid,points, show, setShow }) => {
+const Upload = ({ esummitId, taskid, points, show, setShow }) => {
 //   const [profile, setprofile] = useState();
   const [selectedFile, setselectedFile] = useState('');
   const [loading, setloading] = useState();

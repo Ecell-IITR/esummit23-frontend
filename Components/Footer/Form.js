@@ -131,7 +131,7 @@ const Forms = () => {
             />
           </Form.Group>
         </div>
-
+        <div className='buttonSubmitDiv'>
         <Button
           onClick={handleSubmit}
           // variant='primary'
@@ -140,6 +140,7 @@ const Forms = () => {
         >
           Submit
         </Button>
+        </div>
       </Form>
     </>
   );
