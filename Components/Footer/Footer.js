@@ -107,10 +107,11 @@ function Footer() {
               <div className='email_footer headings'>E-mail</div>
               <div className='text_footer'>
                 <a
-                  href='mailto:esummitiitr@gmail.com'
+                  href='mailto:esummit@iitr.ac.in                  '
                   style={{ color: 'white', textDecoration: 'none' }}
                 >
-                  esummitiitr@gmail.com
+                  esummit@iitr.ac.in
+
                 </a>
               </div>
             </div>
@@ -141,7 +142,7 @@ function Footer() {
       <div className='marginCopyright'>
         <div className='copyRight'>
           {' '}
-          © 2022, E-cell IIT Roorkee, All rights reserved
+          © 2023, E-cell IIT Roorkee, All rights reserved
         </div>
       </div>
       
