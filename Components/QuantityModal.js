@@ -47,7 +47,6 @@ function QM(props) {
           });
           console.log(response);
         },
-        redirect: true,
         prefill: {
           name: props.name,
         },
