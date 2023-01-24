@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from 'next/image';
 import axios from 'axios';
-import Navbar from '../Components/Navbar';
-import  { SPEAKER_DETAIL_API  } from '../utils/APIs';
+import Navbar from '../../Components/Navbar';
+import  { SPEAKER_DETAIL_API  } from '../../utils/APIs';
 
 export async function getStaticProps() {
   const res = await axios.get(SPEAKER_DETAIL_API); 
