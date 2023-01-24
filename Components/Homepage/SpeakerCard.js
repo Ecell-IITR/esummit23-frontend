@@ -19,11 +19,11 @@ const SpeakerCard = (props) => {
         </div>
         <div
           style={{
-            width: '93%',
+            // width: '93%',
+            width: '93vw',
             display: 'flex',
             justifyContent: 'space-between',
-            flexWrap: 'wrap',
-            background: 'linear-gradient(180deg, #12100E 0%, #301A08 100%)',
+            flexWrap: 'wrap'
           }}
         >
                 <div className='sponsorCard' key={props.Id}>

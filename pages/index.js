@@ -13,10 +13,11 @@ import Footer from '../Components/Footer/Footer';
 import Events from '../pages/events';
 import EventCard from '../Components/Homepage/EventCard';
 import { ALL_EVENTS_API } from '../utils/APIs';
+import Link from 'next/link';
 
 export default function Home(props) {
-  const { Data} = props;
-  const { Posts} = props;
+  const { Data } = props;
+  const { Posts } = props;
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -85,9 +86,62 @@ export default function Home(props) {
       </div>
       <div>
         <ThirdLandingPage />
-        <div> 
-      </div>
-      <div style={{
+        <div></div>
+        <div
+          style={{
+            width: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            background: 'linear-gradient(180deg, #12100E 0%, #301A08 100%)',
+          }}
+        >
+          <div style={{ width: '100vw', display: 'flex',flexDirection: 'column',alignItems: 'center' }}>
+            <div className='headingAndBtnContainerDiv2'>
+              <div className='EventsAndCompetitionsContainer2'>
+                Events and Competitions
+              </div>
+              <Link rel="stylesheet" href="/events" ><button className='ViewAllEventsBtn2'>View all Events</button></Link>
+            </div>
+
+            <div className='eventsCardFlexContainerDiv2'>
+              {Posts &&
+                Posts.map((Post, id) => {
+                  return (
+                    <EventCard
+                      Heading='Events and Competitions'
+                      BtnText='View All Events'
+                      eventImage={
+                        Post?.card_image
+                          ? Post?.card_image
+                          : '/Rectangle 118.png'
+                      }
+                      eventName={Post.event_name}
+                      eventShortDescription='hello this event is named poductathon. i will be supervising this event'
+                    />
+                  );
+                })}
+            </div>
+          </div>
+          <div style={{ width: '100vw' }}>
+            {Data &&
+              Data.map((Element) => {
+                return (
+                  <SpeakerCard
+                    Heading='Speaker'
+                    BtnText='View All Speakers'
+                    Id={Element.id}
+                    profile_Image={Element.profile_image}
+                    event_Year={Element.event_year}
+                    Name={Element.name}
+                    Designation={Element.designation}
+                    Description={Element.description}
+                  />
+                );
+              })}
+          </div>
+        </div>
+        {/* <div style={{
     width: '100%',
     display: 'flex',
     justifyContent: 'space-evenly',
@@ -117,12 +171,11 @@ export default function Home(props) {
               Post?.card_image ? Post?.card_image : '/Rectangle 118.png'
             }
             event_Name={Post.event_name}
-            // card_Description={card_Description}
             />
             )})}
       </div>
-        </div>
-      <div>
+        </div> */}
+        {/* <div>
         {Data &&
           Data.map((Element) => {
             return (
@@ -138,7 +191,7 @@ export default function Home(props) {
               />
             );
           })}
-      </div>
+      </div> */}
       </div>
     </>
   );
@@ -148,6 +201,6 @@ export async function getStaticProps() {
   const resolve = await axios.get(ALL_EVENTS_API);
   const Posts = resolve.data;
   const Data = res.data;
-  console.log(Posts)
-  return { props: { Data, Posts} };
+  console.log(Posts);
+  return { props: { Data, Posts } };
 }
