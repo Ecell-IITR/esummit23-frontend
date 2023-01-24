@@ -92,21 +92,24 @@ function tickets() {
         <div className='TicketDisplayContainer'>
           <img
             onClick={() => {
-              Clicker(599, 'Standard Student pass', 999);
+              // Clicker(599, 'Standard Student pass', 999);
+              router.push('https://rzp.io/l/bCXJ7yYLkS');
             }}
             className='TicketDisplayImage'
             src='/SSP.png'
           />
           <img
             onClick={() => {
-              Clicker(1499, 'Premium Student pass', 1999);
+              // Clicker(1499, 'Premium Student pass', 1999);
+              router.push('https://rzp.io/l/xfTrBJLI59');
             }}
             className='TicketDisplayImage2'
             src='/PSP.png'
           />
           <img
             onClick={() => {
-              Clicker2(1999, 'Profestional pass', 2499);
+              // Clicker2(1999, 'Profestional pass', 2499);
+              router.push('https://rzp.io/l/d1DNKhIf');
             }}
             className='TicketDisplayImage'
             src='/PP.png'
