@@ -5,9 +5,6 @@ import Image from 'next/image';
 
 
 const SpeakerCard = (props) => {
-  const Submit = () => {
-
-  }
   
   return (
   <div  style={{
@@ -19,7 +16,7 @@ const SpeakerCard = (props) => {
   }}> 
   <div className='speakerBtnAndTextContainer'>
           <div className='homepageSpeakerText'>{props.Heading}</div>
-          <button className='viewAllSpeakersBtn'>{props.BtnText}</button>
+          <button onClick={props.HandleSubmit} className='viewAllSpeakersBtn'>{props.BtnText}</button>
         </div>
         <div
           style={{
