@@ -20,7 +20,7 @@ const SecondLandingPage = () => {
         >
           <div className='secondLandingPageMobileHeading'>About E-Summit</div>
           <div
-          id="about"
+            id='about'
             className='secondLandingPageMobileDescription1'
             style={{ paddingBottom: '24px' }}
           >

@@ -8,7 +8,10 @@ function Register(props) {
     <>
       <div className='containerRegister'>
         <div className='photoRegister'>
-          <img className='photoRegisterImg' src={props?.img ? props?.img : "/Rectangle 118.png"} />
+          <img
+            className='photoRegisterImg'
+            src={props?.img ? props?.img : '/Rectangle 118.png'}
+          />
         </div>
 
         <div

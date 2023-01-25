@@ -4,13 +4,12 @@ import { toast } from 'react-toastify';
 import FetchApi from '../utils/fetchAPI';
 import { RAZORPAY_GET_ORDER_ID, RAZORPAY_CALLBACK } from '../utils/APIs';
 
-import {getAuthToken,isAuthenticated} from '../utils'
+import { getAuthToken, isAuthenticated } from '../utils';
 import { useRouter } from 'next/router';
 function QM(props) {
   const [Number, setNumber] = useState(1);
-  const router = useRouter()
-  const makePayment = async (amount,name=props.name) => {
-    
+  const router = useRouter();
+  const makePayment = async (amount, name = props.name) => {
     const res = await initializeRazorpay();
 
     if (!res) {
@@ -37,14 +36,16 @@ function QM(props) {
             razorpayPaymentId: response.razorpay_payment_id,
             razorpayOrderId: response.razorpay_order_id,
             razorpaySignature: response.razorpay_signature,
-            plan:props.pass,
-            quantity:Number  };
-          
+            plan: props.pass,
+            quantity: Number,
+          };
+
           // Validate payment at server - using webhooks is a better idea.
-          FetchApi('POST', RAZORPAY_CALLBACK, data, getAuthToken()).then((res) => {
-              router.push("/tickets/sucess")
-          });
-          
+          FetchApi('POST', RAZORPAY_CALLBACK, data, getAuthToken()).then(
+            (res) => {
+              router.push('/tickets/sucess');
+            }
+          );
         },
         prefill: {
           name: props.name,
@@ -126,7 +127,7 @@ function QM(props) {
                 &#8377;{Number * props.orgAmount}
               </div>
             </div>
-            
+
             <div
               style={{
                 display: 'flex',
@@ -146,10 +147,10 @@ function QM(props) {
                 style={{ fontWeight: '500', color: '#6FCF97' }}
                 className='forgotPasswordSubHeader3'
               >
-                -&#8377;{Number * (props.orgAmount-props.amount)}
+                -&#8377;{Number * (props.orgAmount - props.amount)}
               </div>
             </div>
-            <div className='TicketLine' ></div>
+            <div className='TicketLine'></div>
 
             <div
               style={{
@@ -170,14 +171,13 @@ function QM(props) {
                 style={{ fontWeight: '600', color: '#ffffff' }}
                 className='forgotPasswordSubHeader3'
               >
-                &#8377;{Number * (props.amount)}
+                &#8377;{Number * props.amount}
               </div>
             </div>
-
           </div>
           <button
             onClick={() => {
-                makePayment(Number * (props.amount),"pr")
+              makePayment(Number * props.amount, 'pr');
             }}
             className='forgotPasswordButtonContainer'
           >

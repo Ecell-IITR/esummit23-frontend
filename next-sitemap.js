@@ -1,7 +1,4 @@
-const HOST_URL =
-  process.env.ENV === 'prod'
-    ? 'https://www.esummit.in'
-    : 'http://localhost:3000';
+const HOST_URL = 'https://www.esummit.in';
 
 module.exports = {
   siteUrl: HOST_URL,

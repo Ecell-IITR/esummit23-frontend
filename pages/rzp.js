@@ -10,7 +10,6 @@ function rzp() {
   // const [data, setData] = useState();
 
   const makePayment = async () => {
-  
     const res = await initializeRazorpay();
 
     if (!res) {
@@ -41,9 +40,7 @@ function rzp() {
             razorpaySignature: response.razorpay_signature,
           };
           // Validate payment at server - using webhooks is a better idea.
-          FetchApi('POST', RAZORPAY_CALLBACK, data, null).then((res) => {
-          
-          });
+          FetchApi('POST', RAZORPAY_CALLBACK, data, null).then((res) => {});
         },
         redirect: true,
         prefill: {

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { RAZORPAY_GET_ORDER_ID, RAZORPAY_CALLBACK } from '../../utils/APIs';
 import FetchApi from '../../utils/fetchAPI';
-import { getAuthToken, isAuthenticated,getUserRoleType } from '../../utils';
+import { getAuthToken, isAuthenticated, getUserRoleType } from '../../utils';
 import { useRouter } from 'next/router';
 import QM from '../../Components/QuantityModal';
 import { toast } from 'react-toastify';
@@ -19,12 +19,8 @@ function tickets() {
     const nam = localStorage.getItem('name');
     setName(nam);
     setId(localStorage.getItem('id'));
-    
   }, []);
   const router = useRouter();
-
-
-
 
   const Clicker = (amount, passer, org) => {
     if (!isAuthenticated()) {
@@ -37,24 +33,18 @@ function tickets() {
     }
   };
 
-
   const Clicker2 = (amount, passer, org) => {
     if (!isAuthenticated()) {
       router.push('/tickets');
-    } else if(!(getUserRoleType()=="proff")){
-      toast.error("You are not a proffessional user");
-
-    }
-    
-    else {
+    } else if (!(getUserRoleType() == 'proff')) {
+      toast.error('You are not a proffessional user');
+    } else {
       setAmount(amount);
       setPass(passer);
       setOrg(org);
       setShow(true);
     }
   };
-
-
 
   return (
     <>
@@ -65,7 +55,6 @@ function tickets() {
         show={show}
         handleClose={handleClose}
         name={name}
-
       />
       <div className='TicketBackground'>
         <div className='TicketHeader'>

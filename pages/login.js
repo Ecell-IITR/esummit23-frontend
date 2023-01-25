@@ -47,35 +47,37 @@ function Login() {
         null
       )
         .then((res) => {
-          
-            localStorage.setItem('userRoleType', res.data.role);
+          localStorage.setItem('userRoleType', res.data.role);
 
-            if (localStorage.getItem('userRoleType')) {
-              const roleType = localStorage.getItem('userRoleType');
+          if (localStorage.getItem('userRoleType')) {
+            const roleType = localStorage.getItem('userRoleType');
 
-              if (res.data.role == 'ca') {
-                setRole('ca');
-              }
-              if (res.data.role == 'stu') {
-                setRole('student');
-              }
-              if (res.data.role == 'professor') {
-                setRole('proff');
-              }
-              if (res.data.role == 'startup') {
-                setRole('startup');
-              }
+            if (res.data.role == 'ca') {
+              setRole('ca');
             }
-          
+            if (res.data.role == 'stu') {
+              setRole('student');
+            }
+            if (res.data.role == 'professor') {
+              setRole('proff');
+            }
+            if (res.data.role == 'startup') {
+              setRole('startup');
+            }
+          }
+
           Authenticate(res.data.n, res.data.e_id, res.data.at);
-          if (res.data.role == 'ca') {router.push('/capdashboard');}
-          else {router.push('/dashboard');}
+          if (res.data.role == 'ca') {
+            router.push('/capdashboard');
+          } else {
+            router.push('/dashboard');
+          }
         })
 
         .catch((res) => {
           alert('Credentials are wrong');
         });
-    } 
+    }
 
     setIsLogin(1);
     Router.push({

@@ -10,7 +10,6 @@ function NavDesktop() {
   const roleType = getUserRoleType();
   const [active, setActive] = useState('');
 
-
   const router = useRouter();
   useEffect(() => {
     switch (router.asPath) {

@@ -1,17 +1,14 @@
 import React from 'react';
 import Image from 'next/image';
-import { getUserDetails} from '../../utils';
-import { useState,useEffect } from 'react';
+import { getUserDetails } from '../../utils';
+import { useState, useEffect } from 'react';
 import Upload from './upload_popup';
-
 
 const Personalinfo = (props) => {
   return (
     <>
-      
-        <div className='profileImage'>{props.name[0]}</div>
-      
-     
+      <div className='profileImage'>{props.name[0]}</div>
+
       <div className='personalInfoContainer'>
         <div className='fullNameContainer'>{props.name}</div>
         <div className='esummitIdContainer'>Esummit ID - {props.EsummitId}</div>
@@ -26,7 +23,6 @@ const Personalinfo = (props) => {
   );
 };
 const PointScored = (props) => {
-
   return (
     <>
       <div className='pointContainer'>
@@ -53,44 +49,46 @@ const PointScored = (props) => {
 };
 
 const Task = (props) => {
-  const[Id, setId]=useState();
-  const[Name,setName]=useState();
-  const[Show, setShow]=useState(false);
+  const [Id, setId] = useState();
+  const [Name, setName] = useState();
+  const [Show, setShow] = useState(false);
   useEffect(() => {
-    const [name,id] = getUserDetails();
-    setId(id)
-    setName(name)
-  }),[]
+    const [name, id] = getUserDetails();
+    setId(id);
+    setName(name);
+  }),
+    [];
 
-  
-  return (<>
-  
-    <div className='taskContainer'>
-      <div className='taskId'> Task {props?.id}</div>
-      <div className='taskTextContainer'>
-        <div className='taskText'>{props?.desc}</div>
-        <div>
-          <button type='submit' 
-          onClick={() => { setShow(true);}}
-          
-            className='submitTask'>
-            Submit your Task
-          </button>
+  return (
+    <>
+      <div className='taskContainer'>
+        <div className='taskId'> Task {props?.id}</div>
+        <div className='taskTextContainer'>
+          <div className='taskText'>{props?.desc}</div>
+          <div>
+            <button
+              type='submit'
+              onClick={() => {
+                setShow(true);
+              }}
+              className='submitTask'
+            >
+              Submit your Task
+            </button>
+          </div>
         </div>
+        <Upload
+          esummitId={Id}
+          taskid={props?.id}
+          show={Show}
+          points={props.points}
+          setShow={(e) => {
+            setShow(e);
+          }}
+        />
       </div>
-      <Upload
-      esummitId={Id}
-      taskid={props?.id}
-      show={Show}
-      points={props.points}
-      setShow={(e) => {
-        setShow(e);
-      }}
-    />
-    </div>
-    </> )
+    </>
+  );
 };
-
-
 
 export { Personalinfo, PointScored, Task };

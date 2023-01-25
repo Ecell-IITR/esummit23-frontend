@@ -14,7 +14,6 @@
   margin-top: -3rem;
   display: flex;
   justify-content: center;
-  
 }
 .copyRight {
   font-family: 'Nunito Sans';
@@ -521,20 +520,19 @@
   //   margin-left: 7rem;
   //   width: 30rem;
   // }
-  .handlesNewUp_footer, .handlesNew_footer{
+  .handlesNewUp_footer,
+  .handlesNew_footer {
     display: flex;
     justify-content: center;
-   
   }
-  .handlesNewUp_footer{
+  .handlesNewUp_footer {
     padding-top: 3rem;
   }
-  .buttonSubmitDiv{
+  .buttonSubmitDiv {
     display: flex;
     justify-content: center;
     margin-bottom: 5rem;
   }
- 
 }
 @media screen and (max-width: 400px) {
   .Parent_footer {
@@ -582,70 +580,67 @@
 //   }
 // }
 
-@media only screen and (max-width:530px) {
-  .footer_Form{
-    width:92vw;
+@media only screen and (max-width: 530px) {
+  .footer_Form {
+    width: 92vw;
   }
-  .line{
-    width:85vw;
+  .line {
+    width: 85vw;
   }
-  .button_footer{
+  .button_footer {
     justify-self: center;
     display: flex;
   }
-
-
 }
-@media only screen and (max-width:490px){
+@media only screen and (max-width: 490px) {
   .footerRight_footer {
     width: 98vw;
   }
-.footerMiddle_footer {
-  width: 100vw;
-}
-.footerLeft_footer {
-  width: 100vw;
-}
-.copyRight{
-  margin-left: -3rem;
-}
+  .footerMiddle_footer {
+    width: 100vw;
+  }
+  .footerLeft_footer {
+    width: 100vw;
+  }
+  .copyRight {
+    margin-left: -3rem;
+  }
 }
 
-@media only screen and (max-width:440px){
-  .logoNew_footer{
+@media only screen and (max-width: 440px) {
+  .logoNew_footer {
     padding: 0.8rem 1rem 0rem 3.5rem;
   }
-
 }
-@media only screen and (max-width:392px){
-  .logoNew_footer{
+@media only screen and (max-width: 392px) {
+  .logoNew_footer {
     padding: 0.8rem 1rem 0rem 4.5rem;
   }
 }
 
-@media only screen and (max-width:361px){
+@media only screen and (max-width: 361px) {
   .contactNo_footer {
     margin-left: -1.7rem;
-}
-.text_footer{
-  font-size:13px;
-}
-.contactNo_footer {
-  margin-left: -2.1rem;
-}
-.description_footer{
-  font-size: 14px;
-}
-.logoNew_footer {
-  padding: 0.8rem 40px 0px 77px;
-}
-.addressBelow_footer {
-  margin-left: -1rem;
-}
-// .handlesNewUp_footer {
-//   margin-top: 35.5rem;
-// }
-.copyRight{
-  font-size: 10px;
-}
+  }
+  .text_footer {
+    font-size: 13px;
+  }
+  .contactNo_footer {
+    margin-left: -2.1rem;
+  }
+  .description_footer {
+    font-size: 14px;
+  }
+  .logoNew_footer {
+    padding: 0.8rem 40px 0px 77px;
+  }
+  .addressBelow_footer {
+    margin-left: -1rem;
+  }
+  // .handlesNewUp_footer {
+  //   margin-top: 35.5rem;
+  // }
+  .copyRight {
+    font-size: 10px;
+  }
 }
