@@ -11,9 +11,13 @@ import { SPEAKER_DETAIL_API } from '../utils/APIs';
 import axios from 'axios';
 import Footer from '../Components/Footer/Footer';
 import Events from '../pages/events';
-import EventCard from '../Components/Homepage/EventCard';
 import { ALL_EVENTS_API } from '../utils/APIs';
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import FetchApi from '../utils/fetchAPI';
+import { isAuthenticated } from '../utils';
+import { SINGLE_SERVICES } from '../utils/APIs';
 
 export default function Home(props) {
   const { Data } = props;
@@ -23,6 +27,39 @@ export default function Home(props) {
     autoplay: true,
     path: '/coming.json',
   };
+  const [name, setName] = useState('');
+
+  const [show, setShow] = useState(false);
+  const [No, setNo] = useState(0);
+  const [question1, setquestion1] = useState('');
+  const [question2, setquestion2] = useState('');
+  const handleClose = () => setShow(false);
+  const router = useRouter();
+
+  const GetData = (name) => {
+    FetchApi('POST', SINGLE_SERVICES, { service_name: name }, null)
+      .then((res) => {
+        setName(res.data.name);
+        setquestion1(res.data.question1);
+        setquestion2(res.data.question2);
+        setNo(res.data.no_of_QA);
+      })
+      .catch((err) => {});
+  };
+
+  const rederict = () => {
+    if (isAuthenticated()) {
+      router.push(`/dashboard`);
+    } else {
+      router.push(`/login`);
+    }
+  };
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    const rotation = window.innerWidth;
+    setWidth(rotation);
+  });
 
   return (
     <>
@@ -96,29 +133,65 @@ export default function Home(props) {
             background: 'linear-gradient(180deg, #12100E 0%, #301A08 100%)',
           }}
         >
-          <div style={{ width: '100vw', display: 'flex',flexDirection: 'column',alignItems: 'center' }}>
+          <div
+            style={{
+              width: '100vw',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }}
+          >
             <div className='headingAndBtnContainerDiv2'>
               <div className='EventsAndCompetitionsContainer2'>
                 Events and Competitions
               </div>
-              <Link rel="stylesheet" href="/events" ><button className='ViewAllEventsBtn2'>View all Events</button></Link>
+              <Link rel='stylesheet' href='/events'>
+                <button className='ViewAllEventsBtn2'>View all Events</button>
+              </Link>
             </div>
 
             <div className='eventsCardFlexContainerDiv2'>
               {Posts &&
                 Posts.map((Post, id) => {
                   return (
-                    <EventCard
-                      Heading='Events and Competitions'
-                      BtnText='View All Events'
-                      eventImage={
-                        Post?.card_image
-                          ? Post?.card_image
-                          : '/Rectangle 118.png'
-                      }
-                      eventName={Post.event_name}
-                      eventShortDescription='hello this event is named poductathon. i will be supervising this event'
-                    />
+                    <div className='eventCardContainerDiv2'>
+                      <div className='eventImageContainerDiv2'>
+                        <Image
+                          src={
+                            Post?.card_image
+                              ? Post?.card_image
+                              : '/Rectangle 118.png'
+                          }
+                          height='230px'
+                          width='350px'
+                          alt={props.eventImageDescription}
+                        />
+                      </div>
+                      <div className='eventTextContainer2'>
+                        <div className='eventNameTextContainerDiv2'>
+                          {Post.event_name}
+                        </div>
+                        <div
+                          className='eventShortDescriptionContainerDiv2'
+                          dangerouslySetInnerHTML={{
+                            __html: Post.card_description,
+                          }}
+                        ></div>
+                        <div className='ReadMoreContainerDiv'>
+                          <a href=''>Read more</a>
+                        </div>
+                      </div>
+                      <button
+                        onClick={() => {
+                          GetData(Post?.event_name);
+                          setShow(true);
+                        }}
+                        className='eventBtnAndArrowContainerDiv2'
+                      >
+                        <span className='applyNowSpan2'>Apply Now</span>
+                        <Image src='/vector.png' height='12px' width='16px' />
+                      </button>
+                    </div>
                   );
                 })}
             </div>
@@ -140,58 +213,15 @@ export default function Home(props) {
                 );
               })}
           </div>
+          <div
+            style={{
+              width: '100vw',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }}
+          ></div>
         </div>
-        {/* <div style={{
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'space-evenly',
-    flexWrap: 'wrap',
-    background: 'linear-gradient(180deg, #12100E 0%, #301A08 100%)',
-  }}> 
-  <div className='speakerBtnAndTextContainer'>
-          <div className='homepageSpeakerText'>Events and Competition</div>
-          <button className='viewAllSpeakersBtn'>View all Events</button>
-        </div>
-        <div
-          style={{
-            width: '93%',
-            display: 'flex',
-            justifyContent: 'space-between',
-            flexWrap: 'wrap',
-            background: 'linear-gradient(180deg, #12100E 0%, #301A08 100%)',
-          }}
-        >
-        {Posts &&
-          Posts.map((Post,id) => {
-            return (
-            <EventCard
-            Heading='Events and Competitions'
-            BtnText='View All Events'
-            Profile_Image={
-              Post?.card_image ? Post?.card_image : '/Rectangle 118.png'
-            }
-            event_Name={Post.event_name}
-            />
-            )})}
-      </div>
-        </div> */}
-        {/* <div>
-        {Data &&
-          Data.map((Element) => {
-            return (
-              <SpeakerCard
-                Heading='Speaker'
-                BtnText='View All Speakers'
-                Id={Element.id}
-                profile_Image={Element.profile_image}
-                event_Year={Element.event_year}
-                Name={Element.name}
-                Designation={Element.designation}
-                Description={Element.description}
-              />
-            );
-          })}
-      </div> */}
       </div>
     </>
   );

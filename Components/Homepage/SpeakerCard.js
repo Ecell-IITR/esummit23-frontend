@@ -3,7 +3,11 @@ import Image from 'next/image';
 
 
 
+
 const SpeakerCard = (props) => {
+  const Submit = () => {
+
+  }
   
   return (
   <div  style={{
