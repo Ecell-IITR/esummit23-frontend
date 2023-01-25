@@ -13,11 +13,6 @@ import Footer from '../Components/Footer/Footer';
 import Events from '../pages/events';
 import { ALL_EVENTS_API } from '../utils/APIs';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import FetchApi from '../utils/fetchAPI';
-import { isAuthenticated } from '../utils';
-import { SINGLE_SERVICES } from '../utils/APIs';
 
 export default function Home(props) {
   const { Data } = props;
@@ -27,40 +22,6 @@ export default function Home(props) {
     autoplay: true,
     path: '/coming.json',
   };
-  const [name, setName] = useState('');
-
-  const [show, setShow] = useState(false);
-  const [No, setNo] = useState(0);
-  const [question1, setquestion1] = useState('');
-  const [question2, setquestion2] = useState('');
-  const handleClose = () => setShow(false);
-  const router = useRouter();
-
-  const GetData = (name) => {
-    FetchApi('POST', SINGLE_SERVICES, { service_name: name }, null)
-      .then((res) => {
-        setName(res.data.name);
-        setquestion1(res.data.question1);
-        setquestion2(res.data.question2);
-        setNo(res.data.no_of_QA);
-      })
-      .catch((err) => {});
-  };
-
-  const rederict = () => {
-    if (isAuthenticated()) {
-      router.push(`/dashboard`);
-    } else {
-      router.push(`/login`);
-    }
-  };
-  const [width, setWidth] = useState(0);
-
-  useEffect(() => {
-    const rotation = window.innerWidth;
-    setWidth(rotation);
-  });
-
   return (
     <>
       {/* <Navbar /> */}
@@ -183,16 +144,12 @@ export default function Home(props) {
                           <a href=''>Read more</a>
                         </div>
                       </div>
-                      <button
-                        onClick={() => {
-                          GetData(Post?.event_name);
-                          setShow(true);
-                        }}
-                        className='eventBtnAndArrowContainerDiv2'
-                      >
-                        <span className='applyNowSpan2'>Apply Now</span>
-                        <Image src='/vector.png' height='12px' width='16px' />
-                      </button>
+                      <Link href='/login'>
+                        <button className='eventBtnAndArrowContainerDiv2'>
+                          <span className='applyNowSpan2'>Apply Now</span>
+                          <Image src='/vector.png' height='12px' width='16px' />
+                        </button>
+                      </Link>
                     </div>
                   );
                 })}

@@ -3,7 +3,6 @@ import FetchApi from '../../utils/fetchAPI';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Navbar from '../../Components/Navbar';
-import Navbar from '../../Components/Navbar';
 import { useRouter } from 'next/router';
 import { isAuthenticated } from '../../utils';
 import { SINGLE_SERVICES } from '../../utils/APIs';
