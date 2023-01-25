@@ -92,7 +92,7 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
       value: 5,
       label: 'Chhattisgarh',
     },
-    
+
     {
       value: 6,
       label: 'Goa',
@@ -199,46 +199,40 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
     },
     {
       value: 32,
-      label: 'Jammu & Kashmir'
-      
+      label: 'Jammu & Kashmir',
     },
-    
+
     {
       value: 33,
-      label: 'Puducherry'
+      label: 'Puducherry',
     },
     ,
-    
     {
       value: 34,
-      label: 'Lakshadweep'
+      label: 'Lakshadweep',
     },
     {
       value: 35,
-      label: 'Lakshadweep'
+      label: 'Lakshadweep',
     },
     {
       value: 36,
-      label: 'Chandigarh'
+      label: 'Chandigarh',
     },
     {
       value: 36,
-      label: 'Dadra and Nagar Haveli and Daman & Diu'
+      label: 'Dadra and Nagar Haveli and Daman & Diu',
     },
     {
       value: 37,
-      label: 'Andaman and Nicobar Islands'
+      label: 'Andaman and Nicobar Islands',
     },
-
-
   ];
-
 
   useEffect(() => {
     setMobile();
   }, []);
   if (RenderId == 0) {
-    
     const handleChange = (e) => {
       setState(e);
     };
@@ -657,5 +651,3 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
 };
 
 export default CampusAmbassader;
-
-98332900022;

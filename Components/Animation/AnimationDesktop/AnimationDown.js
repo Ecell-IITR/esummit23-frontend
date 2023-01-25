@@ -4,11 +4,11 @@ import Image from 'next/image';
 function Animation() {
   return (
     <div>
-    <h1 style={{display:"none"}}>E-CELL IIT ROORKEE</h1>
-    <h2 style={{display:"none"}}>E-CELL IIT ROORKEE</h2>
-    <h3 style={{display:"none"}}>E-CELL IIT ROORKEE</h3>
-    <a href="#" style={{display:"none"}}></a>
-  {/*
+      <h1 style={{ display: 'none' }}>E-CELL IIT ROORKEE</h1>
+      <h2 style={{ display: 'none' }}>E-CELL IIT ROORKEE</h2>
+      <h3 style={{ display: 'none' }}>E-CELL IIT ROORKEE</h3>
+      <a href='#' style={{ display: 'none' }}></a>
+      {/*
     <p style={{display:"none"}}>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget 
     dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur 
     ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla 
@@ -84,9 +84,15 @@ function Animation() {
                        ac habitasse platea dictumst. Fusce a quam. Etiam ut purus mattis mauris
   </p>*/}
       <div className='containerAnimationDown'>
-        <div className='upAnimationDown'><img style={{width:"100vw"}}  className="landingImage" src="Landing.png" alt="landingImage"/></div>
-        <div className='middleAnimationDown'>
+        <div className='upAnimationDown'>
+          <img
+            style={{ width: '100vw' }}
+            className='landingImage'
+            src='Landing.png'
+            alt='landingImage'
+          />
         </div>
+        <div className='middleAnimationDown'></div>
       </div>
     </div>
   );

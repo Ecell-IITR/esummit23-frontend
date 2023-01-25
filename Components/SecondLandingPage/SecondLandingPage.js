@@ -14,7 +14,6 @@ const SecondLandingPage = () => {
         <div className='secondLandingPage'>
           <img src='secondLP.webp' width='100%' height='100%' />
 
-
           <div
             className='secondLandingPageImg'
             data-aos-anchor-placement='top-bottom'
@@ -33,7 +32,6 @@ const SecondLandingPage = () => {
             />
           </div>
 
-
           <div
             className='secondLandingPageBox'
             data-aos='fade-right'
@@ -41,15 +39,17 @@ const SecondLandingPage = () => {
             data-aos-duration='850'
             data-aos-offset='250'
           >
-            <div className='secondLandingPageHead'>
-              REMINISCING THE ETHOS : BHARAT
+            <div id='about' className='secondLandingPageHead'>
+              About Esummit IIT Roorkee
             </div>
             <div className='secondLandingPageDescription'>
-              E-Summit being the flagship event of ECell, is held annually
-              brings together the academic community, venture capitalists, new
-              age entrepreneurs and all those passionate about entrepreneurship
-              to common grounds.E-Summit being the flagship event of ECell, is
-              held annually brings together the academic community
+              We are excited to announce the upcoming Esummit IIT Roorkee, an
+              event bringing together entrepreneurs, investors, and industry
+              leaders from around the world. This year's Esummit is extra
+              special as we are celebrating the 175th year of IIT Roorkee. We
+              believe that the Esummit will be a valuable platform for startups
+              to showcase their innovative ideas and build relationships with
+              key players in the industry
             </div>
             <button className='secondLandingPageButton'>
               <span>KNOW MORE</span>

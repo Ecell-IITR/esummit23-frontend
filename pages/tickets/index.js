@@ -14,13 +14,12 @@ function Login() {
   const [Name, setName] = useState('');
   const [PhoneNo, setPhoneNo] = useState('');
   const [Gender, setGender] = useState({ value: '2', label: 'Female' });
-  const [Collage, setCollage] = useState("");
-
+  const [Collage, setCollage] = useState('');
+  const [Toggel, setToggel] = useState(true);
 
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const router = useRouter();
-  console.log(router.query);
   const data = [
     { value: '1', label: 'Male' },
     { value: '2', label: 'Female' },
@@ -51,13 +50,13 @@ function Login() {
       'POST',
       OTP_SIGNUP_API,
       {
+        type: Toggel ? 'stu' : 'proff',
         user: {
           full_name: Name,
           email: email,
           phone: PhoneNo,
           gender: Gender.value,
-          collage:Collage
-        
+          collage: Collage,
         },
       },
       null
@@ -78,7 +77,7 @@ function Login() {
   if (useMobile().isMobile) {
     return (
       <div className='LoginContainer'>
-         <Verify email={email} show={show} handleClose={handleChange} />
+        <Verify email={email} show={show} handleClose={handleChange} />
         <div
           style={{
             width: '100vw',
@@ -99,6 +98,24 @@ function Login() {
               <h3 className='LoginFormLeftSubTitle'>
                 Please enter your details.
               </h3>
+              <div className='sliderContainer'>
+                <div
+                  onClick={() => {
+                    setToggel(true);
+                  }}
+                  className={Toggel ? 'toggActive' : 'toggSetActive'}
+                >
+                  Student
+                </div>
+                <div
+                  onClick={() => {
+                    setToggel(false);
+                  }}
+                  className={Toggel ? 'toggSetActive' : 'toggActive'}
+                >
+                  Profestional
+                </div>
+              </div>
               <input
                 className={
                   Name == ''
@@ -143,10 +160,12 @@ function Login() {
               <input
                 type='text'
                 className={'LoginFormLeftInput inputGold'}
-                placeholder={"collage"}
+                placeholder={Toggel ? 'College' : 'Company'}
                 style={{ margin: '10px' }}
                 value={Collage}
-                onChange={(e)=>{setCollage(e.target.value)}}
+                onChange={(e) => {
+                  setCollage(e.target.value);
+                }}
               />
 
               <div className='gender'>
@@ -166,9 +185,7 @@ function Login() {
                         borderTop: '0px',
                         borderLeft: '0px',
                         borderRight: '0px',
-                        borderColor: state.isSelected
-                          ? '#12100e'
-                          : '#828282',
+                        borderColor: state.isSelected ? '#12100e' : '#828282',
                         color: '#828282 !important',
                       }),
                       option: (baseStyles, state) => ({
@@ -210,7 +227,6 @@ function Login() {
               <div
                 className='LoginButton'
                 onClick={() => {
-                  
                   submit();
                 }}
               >
@@ -235,10 +251,32 @@ function Login() {
               <div style={{ width: '200px', height: '100px' }}>
                 <Image width='294' height='77' src='/summitLogo.png' />
               </div>
-              <h1 className='LoginFormLeftTitle'> Login to Continue </h1>
+
+              <h1 className='LoginFormLeftTitle'> Login or signup </h1>
+
               <h3 className='LoginFormLeftSubTitle'>
                 Please enter your details.
               </h3>
+
+              <div className='sliderContainer'>
+                <div
+                  onClick={() => {
+                    setToggel(true);
+                  }}
+                  className={Toggel ? 'toggActive' : 'toggSetActive'}
+                >
+                  Student
+                </div>
+                <div
+                  onClick={() => {
+                    setToggel(false);
+                  }}
+                  className={Toggel ? 'toggSetActive' : 'toggActive'}
+                >
+                  Profestional
+                </div>
+              </div>
+
               <input
                 className={
                   Name == ''
@@ -283,11 +321,12 @@ function Login() {
               <input
                 type='text'
                 className={'LoginFormLeftInput inputGold'}
-                placeholder={"collage"}
+                placeholder={Toggel ? 'College' : 'Company'}
                 style={{ margin: '10px' }}
-                
                 value={Collage}
-                onChange={(e)=>{setCollage(e.target.value)}}
+                onChange={(e) => {
+                  setCollage(e.target.value);
+                }}
               />
 
               <div className='gender'>
@@ -300,7 +339,7 @@ function Login() {
                       control: (baseStyles, state) => ({
                         ...baseStyles,
                         backgroundColor: ' #12100e',
-                        width: '32vw',
+                        width: '28vw',
                         marginTop: '0.5rem',
                         marginLeft: '0.5rem',
                         borderTop: '0px',
@@ -314,7 +353,7 @@ function Login() {
                           ? ' #12100e'
                           : ' #12100e',
                         backgroundColor: '  #dcd1ad',
-                        width: '30rem',
+                        width: '28rem',
                         color: 'black',
                       }),
                       singleValue: (baseStyles, state) => ({
@@ -326,7 +365,7 @@ function Login() {
                         backgroundColor: state.isFocused
                           ? ' #12100e'
                           : ' #12100e',
-                        width: '30rem',
+                        width: '28rem',
                         fontFamily: 'Nunito Sans',
                         fontWeight: '400',
                       }),

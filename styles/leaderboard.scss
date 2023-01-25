@@ -16,13 +16,62 @@
     color: #bcd1ab;
   }
 }
+.sliderContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
 
+  width: 413px;
+  height: 42px;
 
-.leaderBoardParent{
+  background: rgba(243, 237, 216, 0.1);
+  border-radius: 48px;
+}
+
+.toggActive {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  gap: 10px;
+  width: 50%;
+  height: 100%;
+  background: #dcd1ad;
+  border-radius: 48px;
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 110%;
+  color: #12100e;
+  cursor: pointer;
+}
+.toggSetActive {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  gap: 10px;
+  width: 50%;
+  height: 100%;
+  background: transparent;
+  border-radius: 48px;
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 110%;
+  color: #ffffff;
+  cursor: pointer;
+}
+.leaderBoardParent {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap:0.5rem
+  gap: 0.5rem;
 }
 
 .leaderBoard {
@@ -44,7 +93,6 @@
 }
 
 @media only screen and (max-width: 800px) {
-  
   .leaderBoardTop {
     gap: 10px;
     justify-content: space-between;
@@ -55,5 +103,8 @@
   }
   .leaderBoard {
     gap: 21px;
+  }
+  .sliderContainer {
+    width: 85vw;
   }
 }

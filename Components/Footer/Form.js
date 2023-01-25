@@ -131,15 +131,16 @@ const Forms = () => {
             />
           </Form.Group>
         </div>
-
-        <Button
-          onClick={handleSubmit}
-          // variant='primary'
-          type='submit'
-          className='button_footer'
-        >
-          Submit
-        </Button>
+        <div className='buttonSubmitDiv'>
+          <Button
+            onClick={handleSubmit}
+            // variant='primary'
+            type='submit'
+            className='button_footer'
+          >
+            Submit
+          </Button>
+        </div>
       </Form>
     </>
   );

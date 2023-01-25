@@ -1,6 +1,6 @@
 .ideaThon-bg {
   height: 100vh;
-  margin-top:-11vh;
+  margin-top: -11vh;
   width: 100vw;
   display: flex;
   flex-direction: row;
@@ -27,7 +27,7 @@
   font-family: 'Lexend', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size:3rem;
+  font-size: 3rem;
   line-height: 110%;
   display: flex;
   align-items: flex-end;
@@ -48,14 +48,14 @@
   color: #f2f2f2;
   width: 100%;
   opacity: 0.8;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   margin-top: -1.25rem;
 }
-.idea-text3{
+.idea-text3 {
   width: 65%;
 }
 .idea-Button {
-  margin-top: .2rem;
+  margin-top: 0.2rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -66,23 +66,21 @@
   border-radius: 100px;
   border: none;
   width: 20rem;
-  
-  
 }
 
-.idea-Button:hover > .iBT{
+.idea-Button:hover > .iBT {
   color: black;
 }
 .idea-Button:hover .iBT {
-  background-color: #DCD1AD;
-  color: #12100E;
+  background-color: #dcd1ad;
+  color: #12100e;
 }
 
 .iBT {
   font-family: 'lexend', sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size:22px;
+  font-size: 22px;
   line-height: 24px;
   display: flex;
   align-items: center;
@@ -94,10 +92,9 @@
   flex-grow: 0;
 }
 .iBT:hover {
-  background-color: #DCD1AD;
-  color: #12100E;
+  background-color: #dcd1ad;
+  color: #12100e;
 }
-
 
 .yellowBox {
   display: flex;
@@ -152,7 +149,7 @@
   .ideaBox1 {
     display: flex;
     justify-content: center;
-// background-color: red;
+    // background-color: red;
   }
   .ideaThon-bg {
     height: 100vh;
@@ -170,17 +167,15 @@
     justify-content: flex-start;
     align-items: flex-end;
     color: #f2f2f2;
-
   }
   .idea-Text2 {
-  width: 70%;
-
+    width: 70%;
   }
 
   .ideaBox1 {
     display: flex;
     flex-direction: column;
-    gap: 35px;
+    gap: 1.5rem;
     align-items: center;
     padding-left: 0;
     width: 50%;
@@ -201,33 +196,31 @@
   }
 }
 @media screen and (max-width: 500px) {
-   
-  .yellowBox{
-   padding-left: 15px;
+  .yellowBox {
+    padding-left: 15px;
   }
 }
 
 @media screen and (max-width: 800px) {
-   
-  .ideaBox1{
+  .ideaBox1 {
     margin-top: 20rem;
     width: 18rem;
   }
-  .idea-Text1{
-    font-size:2rem;
+  .idea-Text1 {
+    font-size: 2rem;
   }
 
-  .idea-Text2{
+  .idea-Text2 {
     font-size: 1rem;
     margin-left: 1rem;
   }
 
-  .idea-Button{
+  .idea-Button {
     width: 11rem;
     height: 2.5rem;
-    margin-top: -.2rem;
+    margin-top: -0.2rem;
   }
-  .iBT{
-    font-size: .9rem;
+  .iBT {
+    font-size: 0.9rem;
   }
 }

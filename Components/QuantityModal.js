@@ -4,13 +4,12 @@ import { toast } from 'react-toastify';
 import FetchApi from '../utils/fetchAPI';
 import { RAZORPAY_GET_ORDER_ID, RAZORPAY_CALLBACK } from '../utils/APIs';
 
-import {getAuthToken,isAuthenticated} from '../utils'
+import { getAuthToken, isAuthenticated } from '../utils';
 import { useRouter } from 'next/router';
 function QM(props) {
   const [Number, setNumber] = useState(1);
-  const router = useRouter()
-  const makePayment = async (amount,name=props.name) => {
-    
+  const router = useRouter();
+  const makePayment = async (amount, name = props.name) => {
     const res = await initializeRazorpay();
 
     if (!res) {
@@ -22,14 +21,13 @@ function QM(props) {
       name: props.name,
       amount: amount,
     }).then((res) => {
-      console.log(process.env);
       let options = {
         key: 'rzp_live_U0W39W3I1yR00g', // Enter the Key ID generated from the Dashboard
         name: "Esummit'23",
         currency: 'INR',
         amount: res.data?.amount,
         order_id: res.data?.orderId,
-        description: 'TIcket Payment',
+        description: 'Ticket Payment',
         image: 'https://manuarora.in/logo.png',
 
         handler: async function (response) {
@@ -38,16 +36,17 @@ function QM(props) {
             razorpayPaymentId: response.razorpay_payment_id,
             razorpayOrderId: response.razorpay_order_id,
             razorpaySignature: response.razorpay_signature,
-            plan:props.pass,
-            quantity:Number  };
-          console.log(response);
+            plan: props.pass,
+            quantity: Number,
+          };
+
           // Validate payment at server - using webhooks is a better idea.
-          FetchApi('POST', RAZORPAY_CALLBACK, data, getAuthToken()).then((res) => {
-              router.push("/tickets/sucess")
-          });
-          console.log(response);
+          FetchApi('POST', RAZORPAY_CALLBACK, data, getAuthToken()).then(
+            (res) => {
+              router.push('/tickets/sucess');
+            }
+          );
         },
-        redirect: true,
         prefill: {
           name: props.name,
         },
@@ -128,7 +127,7 @@ function QM(props) {
                 &#8377;{Number * props.orgAmount}
               </div>
             </div>
-            
+
             <div
               style={{
                 display: 'flex',
@@ -148,10 +147,10 @@ function QM(props) {
                 style={{ fontWeight: '500', color: '#6FCF97' }}
                 className='forgotPasswordSubHeader3'
               >
-                -&#8377;{Number * (props.orgAmount-props.amount)}
+                -&#8377;{Number * (props.orgAmount - props.amount)}
               </div>
             </div>
-            <div className='TicketLine' ></div>
+            <div className='TicketLine'></div>
 
             <div
               style={{
@@ -172,14 +171,13 @@ function QM(props) {
                 style={{ fontWeight: '600', color: '#ffffff' }}
                 className='forgotPasswordSubHeader3'
               >
-                &#8377;{Number * (props.amount)}
+                &#8377;{Number * props.amount}
               </div>
             </div>
-
           </div>
           <button
             onClick={() => {
-                makePayment(Number * (props.amount),"pr")
+              makePayment(Number * props.amount, 'pr');
             }}
             className='forgotPasswordButtonContainer'
           >

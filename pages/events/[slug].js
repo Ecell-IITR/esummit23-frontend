@@ -23,7 +23,7 @@ export default function EventsDetails({ details }) {
     setMobile();
   }, []);
   const GetData = (name) => {
-    FetchApi('POST', SINGLE_SERVICES, { service_name: name }, null)
+    FetchApi('POST', SINGLE_SERVICES, { service_name: router.query.slug }, null)
       .then((res) => {
         setName(res.data.name);
         setquestion1(res.data.question1);
@@ -34,7 +34,7 @@ export default function EventsDetails({ details }) {
   };
   return (
     <>
-    <Modal  contentClassName='my-modal' show={show} onHide={handleClose}>
+      <Modal contentClassName='my-modal' show={show} onHide={handleClose}>
         <DashboardForm
           Auth={true}
           handleClose={handleClose}
@@ -62,7 +62,7 @@ export default function EventsDetails({ details }) {
         rules={details.event_rules}
         eligiblity={details.event_eligibility}
         round={details.event_rounds}
-      />{console.log(details)}
+      />
       <Sponsors
         perks={details.event_perks}
         Coordinator={details.events_coordinators}

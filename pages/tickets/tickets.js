@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { RAZORPAY_GET_ORDER_ID, RAZORPAY_CALLBACK } from '../../utils/APIs';
 import FetchApi from '../../utils/fetchAPI';
-import { getAuthToken, isAuthenticated } from '../../utils';
+import { getAuthToken, isAuthenticated, getUserRoleType } from '../../utils';
 import { useRouter } from 'next/router';
 import QM from '../../Components/QuantityModal';
+import { toast } from 'react-toastify';
 function tickets() {
   const [name, setName] = useState('');
   const [Id, setId] = useState('');
@@ -18,16 +19,25 @@ function tickets() {
     const nam = localStorage.getItem('name');
     setName(nam);
     setId(localStorage.getItem('id'));
-    console.log(nam);
   }, []);
   const router = useRouter();
-
-
-
 
   const Clicker = (amount, passer, org) => {
     if (!isAuthenticated()) {
       router.push('/tickets');
+    } else {
+      setAmount(amount);
+      setPass(passer);
+      setOrg(org);
+      setShow(true);
+    }
+  };
+
+  const Clicker2 = (amount, passer, org) => {
+    if (!isAuthenticated()) {
+      router.push('/tickets');
+    } else if (!(getUserRoleType() == 'proff')) {
+      toast.error('You are not a proffessional user');
     } else {
       setAmount(amount);
       setPass(passer);
@@ -45,7 +55,6 @@ function tickets() {
         show={show}
         handleClose={handleClose}
         name={name}
-
       />
       <div className='TicketBackground'>
         <div className='TicketHeader'>
@@ -72,21 +81,24 @@ function tickets() {
         <div className='TicketDisplayContainer'>
           <img
             onClick={() => {
-              Clicker(599, 'Standard Student pass', 999);
+              // Clicker(599, 'Standard Student pass', 999);
+              router.push('https://rzp.io/l/bCXJ7yYLkS');
             }}
             className='TicketDisplayImage'
             src='/SSP.png'
           />
           <img
             onClick={() => {
-              Clicker(1499, 'Premium Student pass', 1999);
+              // Clicker(1499, 'Premium Student pass', 1999);
+              router.push('https://rzp.io/l/xfTrBJLI59');
             }}
             className='TicketDisplayImage2'
             src='/PSP.png'
           />
           <img
             onClick={() => {
-              Clicker(1999, 'Profestional pass', 2499);
+              // Clicker2(1999, 'Profestional pass', 2499);
+              router.push('https://rzp.io/l/d1DNKhIf');
             }}
             className='TicketDisplayImage'
             src='/PP.png'

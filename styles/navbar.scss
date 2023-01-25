@@ -139,6 +139,9 @@ ul a.active {
   text-decoration: none;
   cursor: pointer;
 }
+.navbarListBox:hover {
+  color: #dcd1ad;
+}
 
 .navbarContainer {
   margin: 0px 60px;
@@ -309,7 +312,6 @@ ul a.active {
 
 @media screen and (max-width: 350px) {
   .navbar-logo-mobile {
-    
     height: 2rem;
   }
 }

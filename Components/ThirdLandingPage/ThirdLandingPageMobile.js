@@ -9,6 +9,7 @@ const ThirdLandingPage = () => {
             <div style={{ width: '90vw' }}>
               <img
                 width='100%'
+                style={{ width: '90vw' }}
                 // height="100"
                 // src='https://www.youtube.com/embed/3TJs2KjpxXc'
                 src='thirdLandingImage.png'
@@ -22,7 +23,7 @@ const ThirdLandingPage = () => {
         </div>
         <div className='ThirdLandingAnimationPageMobileBox'>
           <div className='ThirdLandingAnimationPageMobileHeading'>
-            REMINSCING THE ETHOS:
+            REMINISCING THE ETHOS:
             <span style={{ color: ' #FFD685' }}>BHARAT</span>
           </div>
 

@@ -32,7 +32,7 @@ function Login() {
         setpass_error_bool(false);
         setpass_error('');
       }
-    }, 1000);
+    }, 100000);
   };
 
   function submit() {
@@ -47,36 +47,36 @@ function Login() {
         null
       )
         .then((res) => {
-          if (res.data.role) {
-            localStorage.setItem('userRoleType', res.data.role);
+          localStorage.setItem('userRoleType', res.data.role);
 
-            if (localStorage.getItem('userRoleType')) {
-              const roleType = localStorage.getItem('userRoleType');
+          if (localStorage.getItem('userRoleType')) {
+            const roleType = localStorage.getItem('userRoleType');
 
-              if (roleType == 'ca') {
-                setRole('ca');
-              }
-              if (roleType == 'stu') {
-                setRole('student');
-              }
-              if (roleType == 'professor') {
-                setRole('professor');
-              }
-              if (roleType == 'startup') {
-                setRole('startup');
-              }
+            if (res.data.role == 'ca') {
+              setRole('ca');
+            }
+            if (res.data.role == 'stu') {
+              setRole('student');
+            }
+            if (res.data.role == 'professor') {
+              setRole('proff');
+            }
+            if (res.data.role == 'startup') {
+              setRole('startup');
             }
           }
+
           Authenticate(res.data.n, res.data.e_id, res.data.at);
-          if (roleType == 'ca') {router.push('/capdashboard');}
-          else {router.push('/dashboard');}
+          if (res.data.role == 'ca') {
+            router.push('/capdashboard');
+          } else {
+            router.push('/dashboard');
+          }
         })
 
         .catch((res) => {
           alert('Credentials are wrong');
         });
-    } else {
-      alert(pass_error);
     }
 
     setIsLogin(1);

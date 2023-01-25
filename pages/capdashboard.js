@@ -27,10 +27,9 @@ const capdashboard = () => {
   const [Id, setId] = useState('');
   const [Name, setName] = useState('');
   const [LeaderBoardData, setLeaderBoardData] = useState([]);
-  const router = useRouter()
+  const router = useRouter();
   useEffect(() => {
     if (!isAuthenticated()) {
-      
       router.push(`/login`);
     }
     setMobile();
@@ -56,18 +55,17 @@ const capdashboard = () => {
     if (RenderId == 0) {
       if (useMobile().isMobile) {
         return (
-          <div className='capTaskContainer'>   
-          {console.log(Taskname)}       
-            {Taskname.map((item,index) => {
-               return (
-                 <>              
+          <div className='capTaskContainer'>
+            {Taskname.map((item, index) => {
+              return (
+                <>
                   <Mobtask
-                   id={item?.task_id}                    
-                   desc={item?.desc}
-                   points={item?.points}
-                      />
-                    </>
-                  );              
+                    id={item?.task_id}
+                    desc={item?.desc}
+                    points={item?.points}
+                  />
+                </>
+              );
             })}
           </div>
         );
@@ -91,10 +89,7 @@ const capdashboard = () => {
     } else if (RenderId == 1) {
       return (
         <>
-                <Leaderboard
-                data={LeaderBoardData}
-                />
-             
+          <Leaderboard data={LeaderBoardData} />
         </>
       );
     } else {
@@ -106,37 +101,38 @@ const capdashboard = () => {
     return (
       <div style={{ display: 'flex' }}>
         <div className='mobContainer'>
-          <Mobprofiledetails
-            url='/Ellipse 40.png'
-            name={Name} EsummitId={Id}
-          />
+          <Mobprofiledetails url='/Ellipse 40.png' name={Name} EsummitId={Id} />
           {TotalPoints.map((item) => {
             return (
               <>
                 <Mobscore points={item?.points} rank={item?.rank} />
-
               </>
             );
           })}
-          
-          <div className='mobTaskbar'>
-           
-            <div 
-            className={RenderId==1 ?"mobCapTask":"mobEventsCart"}
-            style={{cursor:'pointer'}}
-            onClick={() => {
-              setRenderId(1);
-            }}> CAP Leaderboard</div>
-            <div 
-            className={RenderId==0?"mobCapTask":"mobEventsCart"}
-            style={{cursor:'pointer'}}
-            onClick={() => {
-              setRenderId(0);
-            }}>CAP Tasks</div>
-          </div>
-          
-<View/>
 
+          <div className='mobTaskbar'>
+            <div
+              className={RenderId == 1 ? 'mobCapTask' : 'mobEventsCart'}
+              style={{ cursor: 'pointer' }}
+              onClick={() => {
+                setRenderId(1);
+              }}
+            >
+              {' '}
+              CAP Leaderboard
+            </div>
+            <div
+              className={RenderId == 0 ? 'mobCapTask' : 'mobEventsCart'}
+              style={{ cursor: 'pointer' }}
+              onClick={() => {
+                setRenderId(0);
+              }}
+            >
+              CAP Tasks
+            </div>
+          </div>
+
+          <View />
         </div>
       </div>
     );
@@ -150,25 +146,24 @@ const capdashboard = () => {
               return (
                 <>
                   <PointScored points={item?.points} rank={item?.rank} />
-
                 </>
               );
             })}
           </div>
 
-
           <div className='taskbarContainer'>
-            
             <div
-            className={RenderId==1 ?"capTask":"capLeaderBoard"}
-            style={{cursor:'pointer'}}
-              onClick={() => {setRenderId(1)}}
+              className={RenderId == 1 ? 'capTask' : 'capLeaderBoard'}
+              style={{ cursor: 'pointer' }}
+              onClick={() => {
+                setRenderId(1);
+              }}
             >
               CAP Leaderboard
             </div>
             <div
-            className={RenderId==0 ?"capTask":"capLeaderBoard"}
-            style={{cursor:'pointer'}}
+              className={RenderId == 0 ? 'capTask' : 'capLeaderBoard'}
+              style={{ cursor: 'pointer' }}
               onClick={() => {
                 setRenderId(0);
               }}

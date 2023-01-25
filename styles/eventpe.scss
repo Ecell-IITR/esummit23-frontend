@@ -1,10 +1,13 @@
 .eventPgHdng {
-  font-size: 70px;
-  font-weight: 700;
+  font-size: 44px;
+  font-weight: 600;
   line-height: 30px;
-  text-align: center;
+  // text-align: center;
   padding-top: 5%;
   padding-bottom: 10%;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 8%;
 }
 
 .eventPgCont {
@@ -28,10 +31,11 @@
   // width: 17rem;
   color: black;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 31px;
   margin-top: -1rem;
 }
 // .eventPgBtnC:hover {
+
 
 // }
 
@@ -39,7 +43,7 @@
   display: flex;
   // justify-content: space-around;
   flex-wrap: wrap;
-  column-gap: 20%;
+  column-gap: 7%;
   justify-content: center;
   align-items: center;
 
@@ -276,3 +280,4 @@
   }
 
 }
+

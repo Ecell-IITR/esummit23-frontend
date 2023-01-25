@@ -16,7 +16,7 @@
 }
 
 .copyRight {
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   color: white;
   margin-top: -0.8rem;
   opacity: 70%;
@@ -24,13 +24,13 @@
 }
 
 .headings {
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-size: 1.2rem;
 }
 
 .text_footer {
   opacity: 70%;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   color: white;
 }
 
@@ -106,7 +106,7 @@
   padding: 0.8rem;
   gap: 0.5rem;
   color: white;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-weight: bolder;
 }
 
@@ -367,7 +367,7 @@
   align-items: center;
   padding: 10px 32px 10px 32px;
   margin: 10px 0px 10px 0px;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 14.7px;
@@ -437,7 +437,7 @@
   .text_help {
     margin-top: 1rem;
     width: 15rem;
-    font-family: "Nunito Sans", sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
   }
   .addressBelow_footer {
     margin-left: -10rem;
@@ -495,7 +495,7 @@
     width: 2rem;
   }
   .copyRight {
-    font-family: "Nunito Sans";
+    font-family: 'Nunito Sans';
     color: white;
     margin-left: -9rem;
     margin-top: -1rem;
@@ -525,9 +525,13 @@
   }
 }
 .navbarParent {
-  background: linear-gradient(180deg, rgba(18, 18, 18, 0.5) 0%, rgba(18, 18, 18, 0) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(18, 18, 18, 0.5) 0%,
+    rgba(18, 18, 18, 0) 100%
+  );
   -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   /* Note: backdrop-filter has minimal browser support */
   display: flex !important;
   justify-content: space-between !important;
@@ -559,7 +563,7 @@
   border: 1.05px solid #ffffff;
   border-radius: 25px;
   background-color: transparent;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -579,7 +583,7 @@
 }
 
 .navbarLogIn {
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -589,12 +593,12 @@
   align-items: flex-end;
   color: white;
   -webkit-text-decoration-line: none;
-          text-decoration-line: none;
+  text-decoration-line: none;
 }
 
 .navbarLogIn:hover {
   -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
   color: #ffd754;
 }
 
@@ -684,17 +688,21 @@ ul a.active {
 }
 
 .mobile-navbar-majorcontainer {
-  background: linear-gradient(180deg, rgba(18, 18, 18, 0.5) 0%, rgba(18, 18, 18, 0) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(18, 18, 18, 0.5) 0%,
+    rgba(18, 18, 18, 0) 100%
+  );
   -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   top: 0;
   left: 0;
   width: 100%;
   height: 79px;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   z-index: 1000;
   display: flex;
   justify-content: space-around;
@@ -792,7 +800,7 @@ ul a.active {
     align-items: center;
   }
   .bar1,
-.bar3 {
+  .bar3 {
     width: 35px;
     height: 4px;
     background-color: white;
@@ -878,7 +886,7 @@ ul a.active {
 }
 
 .idea-Text1 {
-  font-family: "Lexend", sans-serif;
+  font-family: 'Lexend', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
@@ -889,7 +897,7 @@ ul a.active {
 }
 
 .idea-Text2 {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -915,7 +923,7 @@ ul a.active {
 }
 
 .iBT {
-  font-family: "lexend", sans-serif;
+  font-family: 'lexend', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 17px;
@@ -942,7 +950,7 @@ ul a.active {
 }
 
 .boxHead1 {
-  font-family: "Lexend", sans-serif;
+  font-family: 'Lexend', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -957,7 +965,7 @@ ul a.active {
 }
 
 .boxContent1 {
-  font-family: "Lexend", sans-serif;
+  font-family: 'Lexend', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -984,14 +992,14 @@ ul a.active {
     padding: 0;
   }
   .ideaThon-bg {
-    background-image: url("/bgmob.webp");
+    background-image: url('/bgmob.webp');
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
   .idea-Text1 {
-    font-family: "Lexend", sans-serif;
+    font-family: 'Lexend', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
@@ -1014,7 +1022,7 @@ ul a.active {
     display: none;
   }
   .boxHead1,
-.boxContent1 {
+  .boxContent1 {
     font-size: 14px;
   }
   .yellowBox {
@@ -1051,7 +1059,8 @@ ul a.active {
   width: 57.9375rem;
   height: 23.9375rem;
   background-color: #f3edd8;
-  box-shadow: 0px -35px 12px 12px rgba(46, 25, 8, 0.1), 0px 0px 15px 10px rgba(46, 25, 8, 0.05);
+  box-shadow: 0px -35px 12px 12px rgba(46, 25, 8, 0.1),
+    0px 0px 15px 10px rgba(46, 25, 8, 0.05);
   border-radius: 12px;
   gap: 43px;
   display: flex;
@@ -1062,7 +1071,7 @@ ul a.active {
 }
 
 .CText1 {
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
@@ -1132,7 +1141,7 @@ ul a.active {
 }
 
 .LoginFormLeftTitle {
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
@@ -1142,7 +1151,7 @@ ul a.active {
 }
 
 .LoginFormLeftSubTitle {
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1198,7 +1207,7 @@ input:focus {
 }
 
 .loginOrText {
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
@@ -1217,7 +1226,7 @@ input:focus {
 }
 
 .loginRegisterText {
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1238,7 +1247,7 @@ input:focus {
   text-align: center;
   letter-spacing: 0.04em;
   -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
   color: #dcd1ad;
   margin-left: 5px;
 }
@@ -1254,7 +1263,7 @@ input:focus {
   height: 48px;
   background: #ba6d39;
   border-radius: 100px;
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -1325,19 +1334,19 @@ input:focus {
 }
 
 .certificateDescription h4 {
-  font-Family: Lexend;
-  font-Weight: 600;
-  font-Size: 18px;
-  line-Height: 24px;
-  color: "white";
+  font-family: Lexend;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: 'white';
 }
 
 .certificateDescription > div {
-  font-Family: Lexend;
-  font-Weight: 400;
-  font-Size: 16px;
-  line-Height: 24px;
-  color: "white";
+  font-family: Lexend;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: 'white';
 }
 
 .container {
@@ -1433,7 +1442,9 @@ input:focus {
   .certificates .certificate {
     margin-bottom: 15px;
   }
-  .firstarrow, .secondarrow, .thirdarrow {
+  .firstarrow,
+  .secondarrow,
+  .thirdarrow {
     font-size: 10px;
     font-weight: 400;
     justify-content: center;
@@ -1462,7 +1473,7 @@ input:focus {
 .coordinatorHeadingIS {
   font-size: 2rem;
   font-weight: bolder;
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
@@ -1529,7 +1540,7 @@ input:focus {
 .nameISCoordinator {
   height: 40%;
   display: flex;
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -1585,7 +1596,7 @@ input:focus {
 .boldRegisterQuestion {
   height: 25%;
   width: 80%;
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 600;
   font-size: 28px;
@@ -1604,7 +1615,7 @@ input:focus {
   font-size: 1.1rem;
   height: 15%;
   width: 80%;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   color: #2f1908;
   display: flex;
   justify-content: center;
@@ -1640,7 +1651,7 @@ input:focus {
   height: 1.5rem;
   width: 80%;
   text-align: start;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   opacity: 90%;
 }
 
@@ -1699,7 +1710,8 @@ input:focus {
   width: 80%;
   height: 23.9375rem;
   background-color: #f3edd8;
-  box-shadow: 0px -35px 12px 12px rgba(46, 25, 8, 0.1), 0px 0px 15px 10px rgba(46, 25, 8, 0.05);
+  box-shadow: 0px -35px 12px 12px rgba(46, 25, 8, 0.1),
+    0px 0px 15px 10px rgba(46, 25, 8, 0.05);
   border-radius: 12px;
   gap: 43px;
   display: flex;
@@ -1727,7 +1739,7 @@ input:focus {
 }
 
 .CText1 {
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
@@ -1858,7 +1870,7 @@ input:focus {
 
 .aboutbox {
   width: 100%;
-  font-family: "Nunito Sans" !important;
+  font-family: 'Nunito Sans' !important;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1866,7 +1878,7 @@ input:focus {
   display: flex;
   align-items: center;
   letter-spacing: 0.04em;
-  color: #FFFFFF !important;
+  color: #ffffff !important;
 }
 
 .aboutContainer {
@@ -1880,7 +1892,7 @@ input:focus {
 
 .aboutHeading {
   color: #e8dbb9;
-  font-family: "Lexend" !important;
+  font-family: 'Lexend' !important;
   font-weight: 700 !important;
   font-style: normal;
   width: 100%;
@@ -1888,7 +1900,7 @@ input:focus {
 }
 
 .aboutEvent {
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   text-align: justify;
   height: 135px;
   width: 100%;
@@ -1935,13 +1947,13 @@ input:focus {
 .firstarrow {
   border-radius: 6px 0px 0px 6px;
   -webkit-clip-path: polygon(0 0, 80% 0%, 100% 50%, 80% 100%, 0 100%);
-          clip-path: polygon(0 0, 80% 0%, 100% 50%, 80% 100%, 0 100%);
+  clip-path: polygon(0 0, 80% 0%, 100% 50%, 80% 100%, 0 100%);
   background-color: #98613b;
   margin-top: -0.1rem;
   width: 100%;
   height: 4.2rem;
   justify-content: center;
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 600;
   font-size: 22px;
@@ -1954,7 +1966,7 @@ input:focus {
 
 .secondarrow,
 .thirdarrow {
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -2000,7 +2012,7 @@ input:focus {
 .criteriacontainer {
   display: flex;
   flex-direction: column;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   height: 25rem;
   width: 90%;
 }
@@ -2035,7 +2047,7 @@ input:focus {
 .criteriaheading {
   display: flex;
   align-items: center;
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -2049,7 +2061,7 @@ input:focus {
 }
 
 .ruleheading {
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -2090,7 +2102,7 @@ input:focus {
 .writtenRules {
   width: 90%;
   height: 100%;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -2150,7 +2162,7 @@ input:focus {
 }
 
 .triangleDate {
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -2176,7 +2188,7 @@ input:focus {
 
 .dateIdeathon {
   font-size: 1.125rem;
-  font-style: "Nunito Sans";
+  font-style: 'Nunito Sans';
   height: 25%;
   background-color: #f3edd8;
   width: 80%;
@@ -2187,7 +2199,7 @@ input:focus {
 .descriptionIdeathon {
   width: 90%;
   background-color: #f3edd8;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -2205,7 +2217,7 @@ input:focus {
   height: 20%;
   background-color: #f3edd8;
   margin-bottom: 20px;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -2342,7 +2354,7 @@ input:focus {
 @media screen and (max-width: 400px) {
   .helpRuleContainer {
     height: 40rem;
-    padding-top: "-2rem";
+    padding-top: '-2rem';
   }
   .certificateDescription > div {
     font-size: 10px;
@@ -2426,7 +2438,7 @@ input:focus {
     height: 10vw;
     font-weight: 600;
     -webkit-clip-path: inset(0 0 0 0);
-            clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0);
     border-radius: 4px;
     font-size: 18px;
     justify-content: center;
@@ -2437,7 +2449,8 @@ input:focus {
     width: 18vw;
     height: 10vw;
   }
-  .secondarrow, .thirdarrow {
+  .secondarrow,
+  .thirdarrow {
     width: 45vw;
     justify-content: center;
   }
@@ -2472,7 +2485,8 @@ ul {
   .firstarrow {
     font-size: 14px;
   }
-  .secondarrow, .thirdarrow {
+  .secondarrow,
+  .thirdarrow {
     font-weight: 300;
     font-size: 14px;
     letter-spacing: 0.1px;
@@ -2494,7 +2508,7 @@ ul {
   width: 150px;
   font-size: 95px;
   color: aliceblue;
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-weight: 600;
   display: flex;
   justify-content: center;
@@ -2516,7 +2530,7 @@ ul {
   height: 30%;
   color: white;
   font-size: 1.5rem;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -2527,7 +2541,7 @@ ul {
   height: 20%;
   color: white;
   font-size: 1.125rem;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-weight: 400;
   display: flex;
   align-items: center;
@@ -2626,7 +2640,7 @@ ul {
   width: 100%;
   color: #12100e;
   font-size: 1.125rem;
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 600;
   padding: 1rem;
@@ -2644,7 +2658,7 @@ ul {
   border-bottom-right-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;
   font-size: 0.75rem;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-weight: 400;
   padding: 1rem;
   padding-top: 0.2rem;
@@ -2680,7 +2694,7 @@ ul {
   flex-wrap: nowrap;
   overflow-x: auto;
   -moz-column-gap: 3rem;
-       column-gap: 3rem;
+  column-gap: 3rem;
   padding-left: 8rem;
   height: 415px;
 }
@@ -2789,7 +2803,7 @@ ul {
   display: flex;
   flex-wrap: wrap;
   -moz-column-gap: 20%;
-       column-gap: 20%;
+  column-gap: 20%;
   justify-content: center;
   align-items: center;
 }
@@ -2897,7 +2911,7 @@ ul {
 }
 
 .LoginFormLeftTitle {
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
@@ -2907,7 +2921,7 @@ ul {
 }
 
 .LoginFormLeftSubTitle {
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -2963,7 +2977,7 @@ input:focus {
 }
 
 .loginOrText {
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
@@ -2982,7 +2996,7 @@ input:focus {
 }
 
 .loginRegisterText {
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -3003,7 +3017,7 @@ input:focus {
   text-align: center;
   letter-spacing: 0.04em;
   -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
   color: #dcd1ad;
   margin-left: 5px;
 }
@@ -3019,7 +3033,7 @@ input:focus {
   height: 48px;
   background: #ba6d39;
   border-radius: 100px;
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -3086,9 +3100,13 @@ input:focus {
   }
 }
 .navbarParent {
-  background: linear-gradient(180deg, rgba(18, 18, 18, 0.5) 0%, rgba(18, 18, 18, 0) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(18, 18, 18, 0.5) 0%,
+    rgba(18, 18, 18, 0) 100%
+  );
   -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   /* Note: backdrop-filter has minimal browser support */
   display: flex !important;
   justify-content: space-between !important;
@@ -3120,7 +3138,7 @@ input:focus {
   border: 1.05px solid #ffffff;
   border-radius: 25px;
   background-color: transparent;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -3140,7 +3158,7 @@ input:focus {
 }
 
 .navbarLogIn {
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -3150,12 +3168,12 @@ input:focus {
   align-items: flex-end;
   color: white;
   -webkit-text-decoration-line: none;
-          text-decoration-line: none;
+  text-decoration-line: none;
 }
 
 .navbarLogIn:hover {
   -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
   color: #ffd754;
 }
 
@@ -3245,17 +3263,21 @@ ul a.active {
 }
 
 .mobile-navbar-majorcontainer {
-  background: linear-gradient(180deg, rgba(18, 18, 18, 0.5) 0%, rgba(18, 18, 18, 0) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(18, 18, 18, 0.5) 0%,
+    rgba(18, 18, 18, 0) 100%
+  );
   -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   top: 0;
   left: 0;
   width: 100%;
   height: 79px;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   z-index: 1000;
   display: flex;
   justify-content: space-around;
@@ -3353,7 +3375,7 @@ ul a.active {
     align-items: center;
   }
   .bar1,
-.bar3 {
+  .bar3 {
     width: 35px;
     height: 4px;
     background-color: white;
@@ -3468,7 +3490,7 @@ ul a.active {
 }
 
 .dashboardEventHeader {
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -3487,7 +3509,7 @@ ul a.active {
   gap: 8px;
   width: 192px;
   height: 40px;
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -3503,8 +3525,8 @@ ul a.active {
 }
 
 .dashboardRegisterButton:hover {
-  background-color: #DCD1AD;
-  color: #12100E;
+  background-color: #dcd1ad;
+  color: #12100e;
 }
 
 .dashboardRegisterBox {
@@ -3539,7 +3561,7 @@ ul a.active {
   color: #dcd1ad;
   height: 7%;
   width: 100%;
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -3557,7 +3579,7 @@ ul a.active {
   border-right: none;
   border-left: none;
   border-top: none;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
 }
 
 .teamName_GRF {
@@ -3578,7 +3600,7 @@ ul a.active {
   padding: 0.1rem;
   height: 20%;
   width: 100%;
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -3617,7 +3639,7 @@ ul a.active {
   height: 100%;
   width: 95%;
   color: white;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-size: 14px;
 }
 
@@ -3638,7 +3660,7 @@ ul a.active {
 
 .commonInput_GRF {
   background: none;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   width: 100%;
   height: 100%;
   font-size: 18px;
@@ -3680,7 +3702,7 @@ ul a.active {
   border-bottom-right-radius: 3rem;
   border-left: none;
   color: white;
-  font-style: "Nunito Sans";
+  font-style: 'Nunito Sans';
   font-size: 16px;
   display: flex;
   align-items: center;
@@ -3705,7 +3727,7 @@ ul a.active {
   color: white;
   font-size: 20px;
   font-weight: 600;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
 }
 
 .answerHere_GRF {
@@ -3734,7 +3756,7 @@ ul a.active {
   background-color: #ba6d39;
   color: white;
   border: none;
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -3786,7 +3808,7 @@ ul a.active {
 }
 
 .registrationTitle {
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-weight: 700;
   font-size: 28px;
   line-height: 35.2px;
@@ -3850,7 +3872,7 @@ ul a.active {
   color: #dcd1ad;
   cursor: pointer;
 }
-.selectOneOption input[type=radio] {
+.selectOneOption input[type='radio'] {
   width: 10px;
   height: 10px;
   border: 1px solid white;
@@ -3880,7 +3902,7 @@ ul a.active {
 .identityButton button {
   color: #ffffff;
   font-style: normal;
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-weight: 700;
   font-size: 15px;
   line-height: 22px;
@@ -3900,7 +3922,7 @@ ul a.active {
   align-items: center;
   color: #ffffff;
   font-style: normal;
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-weight: 700;
   font-size: 15px;
   line-height: 22px;
@@ -3911,8 +3933,8 @@ ul a.active {
 }
 
 .regButton:hover {
-  background-color: #DCD1AD;
-  color: #12100E;
+  background-color: #dcd1ad;
+  color: #12100e;
 }
 
 .createAccount {
@@ -3970,12 +3992,12 @@ ul a.active {
   color: #dcd1ad;
   font-size: 28px;
   font-weight: 600;
-  font-family: "Lexend";
+  font-family: 'Lexend';
 }
 
 .mobRegisterSubTitle {
   color: #bdbdbd;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -4000,7 +4022,7 @@ ul a.active {
 .genderInput input {
   height: 15px;
   width: 15px;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   margin: 20px;
 }
 
@@ -4010,7 +4032,7 @@ ul a.active {
   border-radius: 32px;
   background-color: #ba6d39;
   color: #ffffff;
-  font-family: "Lexend";
+  font-family: 'Lexend';
   margin-top: 24px;
   font-style: normal;
   font-weight: 700;
@@ -4046,7 +4068,7 @@ button:hover {
   border-radius: 32px;
   background-color: #ba6d39;
   color: #ffffff;
-  font-family: "Lexend";
+  font-family: 'Lexend';
   margin-top: 24px;
   font-style: normal;
   font-weight: 700;
@@ -4089,7 +4111,7 @@ button:hover {
     align-items: center;
   }
   .CreateAccount {
-    font-family: "Lexend";
+    font-family: 'Lexend';
     font-style: normal;
     font-weight: 600;
     font-size: 1.75rem;
@@ -4100,7 +4122,7 @@ button:hover {
     color: #dcd1ad;
   }
   .CreateAccountsubTitle {
-    font-family: "Nunito Sans";
+    font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 0.875rem;
@@ -4119,7 +4141,8 @@ button:hover {
     flex-direction: column;
     align-items: center;
   }
-  input[type=radio] { /* IE 9 */ /* Chrome, Safari, Opera */
+  input[type='radio'] {
+    /* IE 9 */ /* Chrome, Safari, Opera */
     transform: scale(1.5);
   }
   .RegisterGender {
@@ -4139,7 +4162,7 @@ button:hover {
   }
   .AlreadyRegistered {
     height: 14px;
-    font-family: "Nunito Sans";
+    font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -4155,7 +4178,7 @@ button:hover {
     margin-bottom: 55vh;
   }
   .nextButton {
-    margin-Left: "0rem";
+    margin-left: '0rem';
   }
   .FormInputs {
     background-color: #12100e;
@@ -4202,7 +4225,7 @@ button:hover {
 .speakerText {
   width: 204px;
   height: 48px;
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 600;
   font-size: 44px;
@@ -4215,7 +4238,7 @@ button:hover {
 .SpeakerDescriptionText {
   width: 1312px;
   height: 108px;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 400;
   color: #bdbdbd;
@@ -4256,7 +4279,7 @@ button:hover {
 }
 
 .sponsorCardYear {
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -4267,7 +4290,7 @@ button:hover {
 }
 
 .sponsorCardName {
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -4278,7 +4301,7 @@ button:hover {
 }
 
 .sponsorCardCompany {
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -4314,7 +4337,8 @@ button:hover {
   width: 680px;
   height: 520px;
   background: #12100e !important;
-  box-shadow: 0px 0px 10px 3px rgba(220, 209, 173, 0.05), 0px 0px 24px 6px rgba(220, 209, 173, 0.05);
+  box-shadow: 0px 0px 10px 3px rgba(220, 209, 173, 0.05),
+    0px 0px 24px 6px rgba(220, 209, 173, 0.05);
   border-radius: 12px;
   left: calc(50vw - 240px);
 }
@@ -4329,7 +4353,7 @@ button:hover {
 }
 
 .forgotPasswordHeader {
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -4350,7 +4374,7 @@ button:hover {
   height: 44px;
   background: #ba6d39;
   border-radius: 100px;
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -4363,7 +4387,7 @@ button:hover {
 }
 
 .forgotPasswordSubHeader {
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -4374,7 +4398,7 @@ button:hover {
 }
 
 .forgotPasswordSubHeader3 {
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -4405,7 +4429,7 @@ div.fade.in.modal {
 }
 
 .leaderBox {
-  background-color: #301A08;
+  background-color: #301a08;
   height: 100vh;
   padding: 0px 180px;
 }
@@ -4414,7 +4438,7 @@ div.fade.in.modal {
   display: flex;
   justify-content: space-evenly;
   opacity: 0.5;
-  border-bottom: 1px solid #DCD1AD;
+  border-bottom: 1px solid #dcd1ad;
   padding: 13px 2vw;
   gap: 2.107vw;
 }
@@ -4440,7 +4464,6 @@ div.fade.in.modal {
 }
 
 @media only screen and (max-width: 800px) {
-  
   .leaderBoardTop {
     gap: 10px;
     justify-content: space-between;
@@ -4457,7 +4480,8 @@ div.fade.in.modal {
   width: 680px;
   height: 520px;
   background: #12100e !important;
-  box-shadow: 0px 0px 10px 3px rgba(220, 209, 173, 0.05), 0px 0px 24px 6px rgba(220, 209, 173, 0.05);
+  box-shadow: 0px 0px 10px 3px rgba(220, 209, 173, 0.05),
+    0px 0px 24px 6px rgba(220, 209, 173, 0.05);
   border-radius: 12px;
   left: calc(50vw - 240px);
 }
@@ -4472,7 +4496,7 @@ div.fade.in.modal {
 }
 
 .forgotPasswordHeader {
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -4493,7 +4517,7 @@ div.fade.in.modal {
   height: 44px;
   background: #ba6d39;
   border-radius: 100px;
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -4506,7 +4530,7 @@ div.fade.in.modal {
 }
 
 .forgotPasswordSubHeader {
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -4517,7 +4541,7 @@ div.fade.in.modal {
 }
 
 .forgotPasswordSubHeader3 {
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -4575,7 +4599,7 @@ div.fade.in.modal {
   border-bottom: 1px #ba6d39 solid;
   flex-direction: row;
   align-items: center;
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -4635,7 +4659,7 @@ div.fade.in.modal {
 }
 
 .fullNameContainer {
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -4643,7 +4667,7 @@ div.fade.in.modal {
 }
 
 .esummitIdContainer {
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -4652,7 +4676,7 @@ div.fade.in.modal {
 }
 
 .fullProfileContainer {
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 400;
   color: #ffd685;
@@ -4695,7 +4719,7 @@ div.fade.in.modal {
   width: 63px;
   height: 35px;
   color: #ffffff;
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
@@ -4705,7 +4729,7 @@ div.fade.in.modal {
 .pointScoredBottom {
   width: 172px;
   height: 33px;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
@@ -4727,7 +4751,7 @@ div.fade.in.modal {
 .taskId {
   height: 26px;
   width: 78px;
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -4748,7 +4772,7 @@ div.fade.in.modal {
   margin-left: 24px;
   height: 81px;
   width: 708px;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -4763,7 +4787,7 @@ div.fade.in.modal {
   border: 1.05px solid #ffffff;
   border-radius: 25px;
   background-color: transparent;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -4797,7 +4821,7 @@ div.fade.in.modal {
 }
 
 .mobFullNameContainer {
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -4805,7 +4829,7 @@ div.fade.in.modal {
 }
 
 .mobEsummitIdContainer {
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -4815,7 +4839,7 @@ div.fade.in.modal {
 }
 
 .mobViewFullProfileContainer {
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
@@ -4854,7 +4878,7 @@ div.fade.in.modal {
 }
 
 .rankContainer {
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -4866,7 +4890,7 @@ div.fade.in.modal {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -4874,7 +4898,7 @@ div.fade.in.modal {
 }
 
 .pointsContainer {
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -4890,7 +4914,7 @@ div.fade.in.modal {
   justify-content: center;
   align-items: center;
   margin-left: 8px;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -4914,7 +4938,7 @@ div.fade.in.modal {
   align-items: center;
   padding: 12px;
   border-radius: 8px;
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -4926,7 +4950,7 @@ div.fade.in.modal {
   width: 164px;
   height: 42px;
   border-radius: 8px;
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -4945,7 +4969,7 @@ div.fade.in.modal {
   padding: 12px;
   border-radius: 8px;
   background-color: #dcd1ad;
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -4967,7 +4991,7 @@ div.fade.in.modal {
   margin-top: 16px;
   padding: 12px 0px 12px 12px;
   border-left: 1px solid #dcd1ad;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -4978,7 +5002,7 @@ div.fade.in.modal {
 .mobTaskId {
   height: 24px;
   width: 62px;
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -5016,7 +5040,7 @@ div.fade.in.modal {
 .faqHeading {
   width: 90px;
   height: 48px;
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 600;
   font-size: 44px;
@@ -5037,7 +5061,7 @@ div.fade.in.modal {
   flex-direction: row;
   padding: 16px 15px 22px 16px;
   margin-bottom: 32px;
-  border-bottom: 1px solid #DCD1AD;
+  border-bottom: 1px solid #dcd1ad;
 }
 
 .question {
@@ -5045,7 +5069,7 @@ div.fade.in.modal {
   height: 22px;
   display: flex;
   align-items: center;
-  font-family: "Lexend";
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -5055,4 +5079,4 @@ div.fade.in.modal {
 .addSignContainer {
   width: 28px;
   height: 28px;
-}/*# sourceMappingURL=index.css.map */
+} /*# sourceMappingURL=index.css.map */

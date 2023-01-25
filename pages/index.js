@@ -90,18 +90,10 @@ export default function Home(props) {
           fund me Management fest
         </p>
       </div>
+
       <div className='Seo-text'>
         <p>
-          E-Summit 2023 organized by ecell IIT Roorkee will bring every one with
-          lithora of opportunity.Esummit 2022 organized between 21 Jan to 23 Jan
-          which promates the idea of startup india also giving opportunity of
-          networkink funding and much more. Hope to see you in E-summit 22
-          organized by IIT Roorkee
-        </p>
-      </div>
-      <div className='Seo-text'>
-        <p>
-          IIT Bombay will host the E-Summit'23 aims to provide a platform for
+          IIT Roorkee will host the E-Summit'23 aims to provide a platform for
           discussion on innovative ideas that have the potential to transform
           current challenges into opportunities for positive change. The goal of
           the event is to inspire and offer rays of hope to attendees.
@@ -114,6 +106,16 @@ export default function Home(props) {
           hosted some of the most prominent stalwarts of the industry over the
           years including but not limited to Startup expo, speaker events and
           much more{' '}
+        </p>
+      </div>
+
+      <div className='Seo-text'>
+        <p>
+          E-Summit 2023 organized by ecell IIT Roorkee will bring every one with
+          lithora of opportunity.Esummit 2022 organized between 21 Jan to 23 Jan
+          which promates the idea of startup india also giving opportunity of
+          networkink funding and much more. Hope to see you in E-summit 22
+          organized by IIT Roorkee
         </p>
       </div>
       <Animation />

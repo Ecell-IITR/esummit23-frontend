@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { toast } from 'react-toastify';
 import FetchApi from '../utils/fetchAPI';
-import { TEAM_REGISTER_API,NEW_TEAM_REGISTER_API } from '../utils/APIs';
+import { TEAM_REGISTER_API, NEW_TEAM_REGISTER_API } from '../utils/APIs';
 import { getAuthToken } from '../utils';
 
 function Dashboard(props) {
@@ -38,7 +38,6 @@ function Dashboard(props) {
       toast.error('please enter valid Team Name!');
       return;
     }
-    console.log(inputFields.length,props.Auth);
     if (inputFields.length < 1 && props.Auth) {
       toast.error('please enter Team Members!');
       return;
@@ -86,18 +85,15 @@ function Dashboard(props) {
       event: props.name,
       submission_text: Ans1,
       submission_text2: Ans2,
-
     };
-    let ApiUsed=!props?.Auth ? TEAM_REGISTER_API:NEW_TEAM_REGISTER_API;
+    let ApiUsed = !props?.Auth ? TEAM_REGISTER_API : NEW_TEAM_REGISTER_API;
     let Auth = !props?.Auth ? getAuthToken() : null;
-    console.log(NEW_TEAM_REGISTER_API,TEAM_REGISTER_API);
     FetchApi('POST', ApiUsed, data, Auth)
       .then((res) => {
         toast.success('Team Registered!');
         props.handleClose();
       })
       .catch((err) => {
-        console.log(err)
         toast.error('Length of answer exceds maximum length ');
       });
   };
@@ -181,7 +177,12 @@ function Dashboard(props) {
       <div style={{ width: '20rem', cursor: 'pointer' }}>
         <div className='addMember_GRF'>
           <div className='addMemberOption_GRF'>
-            <div className='addSymbol_GRF' onClick={()=>{addFields()}}>
+            <div
+              className='addSymbol_GRF'
+              onClick={() => {
+                addFields();
+              }}
+            >
               <Image
                 className='addImage'
                 src='/add.webp'
@@ -189,7 +190,12 @@ function Dashboard(props) {
                 height='9rem'
               ></Image>
             </div>
-            <div className='afterAddSymbol_GRF' onClick={()=>{addFields()}}>
+            <div
+              className='afterAddSymbol_GRF'
+              onClick={() => {
+                addFields();
+              }}
+            >
               Add Member
             </div>
           </div>

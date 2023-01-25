@@ -1,13 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
-import { getUserDetails} from '../../utils';
-import { useState,useEffect } from 'react';
+import { getUserDetails } from '../../utils';
+import { useState, useEffect } from 'react';
 import Upload from './upload_popup';
 
 const Mobprofiledetails = (props) => {
   return (
     <div className='mobProfileContainer'>
-    <div className='profileImage'>{props.name[0]}</div>
+      <div className='profileImage'>{props.name[0]}</div>
       <div className='profileInfo'>
         <div className='mobFullNameContainer'>{props?.name}</div>
         <div className='mobEsummitIdContainer'>
@@ -51,35 +51,42 @@ const Mobscore = (props) => {
 };
 
 const Mobtask = (props) => {
-  const[Id, setId]=useState();
-  const[Name,setName]=useState();
-  const[Show, setShow]=useState(false);
+  const [Id, setId] = useState();
+  const [Name, setName] = useState();
+  const [Show, setShow] = useState(false);
   useEffect(() => {
-    const [name,id] = getUserDetails();
-    setId(id)
-    setName(name)
-  }),[]
+    const [name, id] = getUserDetails();
+    setId(id);
+    setName(name);
+  }),
+    [];
   return (
-    <> console.log(props)
+    <>
       <div className='mobAllTaskcontainer'>
         <div className='mobTaskId'>Task {props.id}</div>
-       
+
         <div className='mobTaskContainer'>
           <div className='task'>{props.desc}</div>
-          
-          <button type='submit' 
-          onClick={() => { setShow(true);}}
-          className='mobTaskSubmitButton'>Submit your task</button>
+
+          <button
+            type='submit'
+            onClick={() => {
+              setShow(true);
+            }}
+            className='mobTaskSubmitButton'
+          >
+            Submit your task
+          </button>
         </div>
         <Upload
-        esummitId={Id}
-        taskid={props?.id}
-        show={Show}
-        points={props.points}
-        setShow={(e) => {
-          setShow(e);
-        }}
-      />
+          esummitId={Id}
+          taskid={props?.id}
+          show={Show}
+          points={props.points}
+          setShow={(e) => {
+            setShow(e);
+          }}
+        />
       </div>
     </>
   );
