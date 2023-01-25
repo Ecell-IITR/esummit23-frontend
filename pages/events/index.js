@@ -134,16 +134,18 @@ export default function Events({ posts }) {
                     <button className='eventPgBtn'>Register Now</button>
                   </a>
                 ) : (
+                  <a href='/login'>
                   <button
                     className='eventPgBtn'
-                    onClick={() => {
-                      GetData(post?.event_name);
-                      setShow(true);
+                    // onClick={() => {
+                    //   GetData(post?.event_name);
+                    //   setShow(true);
                       // rederict();
-                    }}
+                    // }}
                   >
                     Register Now
                   </button>
+                  </a> 
                 )}
                 <Image src='/Vector.png' height='16px' width='21.3px'></Image>
               </div>
