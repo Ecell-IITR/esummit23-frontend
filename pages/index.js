@@ -141,7 +141,7 @@ export default function Home(props) {
                           }}
                         ></div>
                         <div className='ReadMoreContainerDiv'>
-                          <a href=''>Read more</a>
+                          <a href={'/events/' + Post?.event_name}>Read more</a>
                         </div>
                       </div>
                       <Link href='/login'>
