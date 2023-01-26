@@ -79,7 +79,9 @@ export default function Home() {
       <div>
         <ThirdLandingPage />
       </div>
+      <div style={{background:"#301b09"}}>
       <Footer />
+      </div>
 
       {/* <div style={{width:"100vw",height:"100vh"}}></div>  */}
       {/* <div style={{width:"100vw",height:"100vh"}}></div> */}
