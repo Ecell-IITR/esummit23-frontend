@@ -658,4 +658,3 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
 
 export default CampusAmbassader;
 
-98332900022;

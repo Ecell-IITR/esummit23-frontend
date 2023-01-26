@@ -34,6 +34,7 @@ function Verify(props) {
       FetchApi('POST', OTP_SIGNUP_VERIFY_API, data)
         .then((res) => {
             Authenticate(res.data.n, res.data.e_id, res.data.at);
+            localStorage.setItem('userRoleType', res.data.role);
           
           router.push("tickets/tickets")
           

@@ -6,11 +6,10 @@ import { useEffect,useState } from 'react';
 function Events(props) {
   const router = useRouter();
   const [x,setx] = useState([]);
-  console.log(props.partners)
+  
   useEffect(() => {
     let i = 0;
     let t=[]
-    console.log(props.partners)
     if(props.partners.length == 0){
       return;
     }else{
@@ -52,7 +51,7 @@ function Events(props) {
           height: '120%',
           alignItems: 'center',
         }}
-      >{console.log(x)}
+      >
         <div
           style={{
             fontFamily: 'Lexend',

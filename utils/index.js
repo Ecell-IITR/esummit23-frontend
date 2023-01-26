@@ -14,11 +14,9 @@ export const getAuthToken = () => {
 
 export const getUserRoleType = () => {
   if (typeof window === 'undefined') return false;
-  const userJSON = localStorage.getItem('user');
-  const user = userJSON ? JSON.parse(userJSON) : null;
-  const token = localStorage.getItem('authToken');
+  
   const role = localStorage.getItem('userRoleType');
-  return !!(user && token && role) ? role : false;
+  return role ? role : false;
 };
 
 export const getUserDetails = () => {
@@ -33,6 +31,8 @@ export const unAuthenticate = () => {
   localStorage.removeItem('authToken');
   localStorage.removeItem('user');
   localStorage.removeItem('userRoleType');
+  localStorage.removeItem('name');
+  localStorage.removeItem('id');
   //   logSetUser(false);
   //   logSignOut();
 };

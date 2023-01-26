@@ -3,7 +3,7 @@ import { useMobile, useUpdateMobile } from '../../utils/MobileContext';
 
 
 const Leaderboard = (props) => {
- console.log(props)
+ 
   const setMobile = useUpdateMobile();
   useEffect(() => {
     setMobile();
