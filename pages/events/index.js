@@ -2,7 +2,7 @@ import { ALL_EVENTS_API } from '../../utils/APIs';
 import FetchApi from '../../utils/fetchAPI';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import Navbar from "../../Components/Navbar"
+import Navbar from '../../Components/Navbar';
 import { useRouter } from 'next/router';
 import { isAuthenticated } from '../../utils';
 import { SINGLE_SERVICES } from '../../utils/APIs';
@@ -45,9 +45,11 @@ export default function Events({ posts }) {
 
   return (
     <div className='eventPgCont'>
-      <div style={{}}><Navbar /></div>
-      
-      <Modal  contentClassName='my-modal' show={show} onHide={handleClose}>
+      <div style={{}}>
+        <Navbar />
+      </div>
+
+      <Modal contentClassName='my-modal' show={show} onHide={handleClose}>
         <DashboardForm
           Auth={true}
           handleClose={handleClose}
@@ -84,7 +86,7 @@ export default function Events({ posts }) {
               <div className='eventcimg'>
                 <Image
                   src={
-                    post?.card_image ? post?.card_image :"/Rectangle 118.png"
+                    post?.card_image ? post?.card_image : '/Rectangle 118.png'
                   }
                   height='220px'
                   width='376px'
@@ -105,7 +107,11 @@ export default function Events({ posts }) {
                 <div
                   className='eventPgDesc'
                   dangerouslySetInnerHTML={{ __html: post?.card_description }}
-                  style={{ textAlign: 'initial', lineHeight: '19px',paddingTop:"13px" }}
+                  style={{
+                    textAlign: 'initial',
+                    lineHeight: '19px',
+                    paddingTop: '13px',
+                  }}
                 ></div>
 
                 <a
@@ -120,32 +126,27 @@ export default function Events({ posts }) {
               </div>
 
               <div className='eventPgBtnC' style={{ marginTop: '1.5rem' }}>
-                
-              {post.event_name === 'Startup Expo' ? (
-                <a style={{color:"transparent"}} href='https://docs.google.com/forms/d/1bYuLAoCbFzO2SDpSn0uYShaDYvyEmuXmYPtp1IUILX4/viewform?edit_requested=true'>
-                  {' '}
-                  <button
-                  className='eventPgBtn'
-                >
-                  Register Now
-                </button>
-                </a>
-              ) : (
+                {post.event_name === 'Startup Expo' ? (
+                  <a style={{ color: 'transparent' }} href='/login'>
+                    {' '}
+                    <button className='eventPgBtn'>Register Now</button>
+                  </a>
+                ) : (
+                  <a href='/login'>
+                    <button
+                      className='eventPgBtn'
+                      // onClick={() => {
 
-                <button
-                  className='eventPgBtn'
-                  onClick={() => {
-                    GetData(post?.event_name);
-                    setShow(true);
-                    // rederict();
-                  }}
-                >
-                  Register Now
-                </button>
-              )
-                }
+                      //   GetData(post?.event_name);
+                      //   setShow(true);
+                      // rederict();
+                      // }}
+                    >
+                      Register Now
+                    </button>
+                  </a>
+                )}
                 <Image src='/Vector.png' height='16px' width='21.3px'></Image>
-                
               </div>
             </div>
           );
@@ -164,7 +165,7 @@ export async function getStaticProps() {
   const res = await fetch(ALL_EVENTS_API);
 
   const posts = await res?.json();
-  
+
   return {
     props: {
       posts,

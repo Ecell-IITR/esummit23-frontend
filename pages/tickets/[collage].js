@@ -53,7 +53,7 @@ function Login() {
           email: email,
           phone: PhoneNo,
           gender: Gender.value,
-          collage:router.query.collage
+          collage: router.query.collage,
         },
       },
       null
@@ -74,7 +74,7 @@ function Login() {
   if (useMobile().isMobile) {
     return (
       <div className='LoginContainer'>
-         <Verify email={email} show={show} handleClose={handleChange} />
+        <Verify email={email} show={show} handleClose={handleChange} />
         <div
           style={{
             width: '100vw',
@@ -162,9 +162,7 @@ function Login() {
                         borderTop: '0px',
                         borderLeft: '0px',
                         borderRight: '0px',
-                        borderColor: state.isSelected
-                          ? '#12100e'
-                          : '#828282',
+                        borderColor: state.isSelected ? '#12100e' : '#828282',
                         color: '#828282 !important',
                       }),
                       option: (baseStyles, state) => ({
@@ -206,7 +204,6 @@ function Login() {
               <div
                 className='LoginButton'
                 onClick={() => {
-                  
                   submit();
                 }}
               >

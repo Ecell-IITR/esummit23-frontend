@@ -1,5 +1,5 @@
 .leaderBox {
-  background-color: #301A08;
+  background-color: #301a08;
   height: 100vh;
   padding: 0px 180px;
 }
@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-evenly;
   opacity: 0.5;
-  border-bottom: 1px solid #DCD1AD;
+  border-bottom: 1px solid #dcd1ad;
   padding: 13px 2vw;
   gap: 2.107vw;
 }
@@ -34,7 +34,6 @@
 }
 
 @media only screen and (max-width: 800px) {
-  
   .leaderBoardTop {
     gap: 10px;
     justify-content: space-between;
@@ -46,4 +45,4 @@
   .leaderBoard {
     gap: 21px;
   }
-}/*# sourceMappingURL=leaderboard.css.map */
+} /*# sourceMappingURL=leaderboard.css.map */

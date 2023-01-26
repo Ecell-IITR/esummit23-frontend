@@ -201,35 +201,33 @@ const IITRStudent = ({ name, email, contact, Gender, RefferalCode }) => {
       },
       {
         value: 32,
-        label: 'Jammu & Kashmir'
-        
+        label: 'Jammu & Kashmir',
       },
-      
+
       {
         value: 33,
-        label: 'Puducherry'
+        label: 'Puducherry',
       },
       ,
-      
       {
         value: 34,
-        label: 'Lakshadweep'
+        label: 'Lakshadweep',
       },
       {
         value: 35,
-        label: 'Lakshadweep'
+        label: 'Lakshadweep',
       },
       {
         value: 36,
-        label: 'Chandigarh'
+        label: 'Chandigarh',
       },
       {
         value: 36,
-        label: 'Dadra and Nagar Haveli and Daman & Diu'
+        label: 'Dadra and Nagar Haveli and Daman & Diu',
       },
       {
         value: 37,
-        label: 'Andaman and Nicobar Islands'
+        label: 'Andaman and Nicobar Islands',
       },
     ];
     const handleChange = (e) => {

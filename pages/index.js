@@ -5,10 +5,7 @@ import Animation from '../Components/Animation';
 import Lottie from 'react-lottie';
 import SecondLandingPage from '../Components/SecondLandingPage';
 import ThirdLandingPage from '../Components/ThirdLandingPage';
-import Footer from "../Components/Footer/Footer"
-
-
-
+import Footer from '../Components/Footer/Footer';
 
 export default function Home() {
   const defaultOptions = {
@@ -46,18 +43,10 @@ export default function Home() {
           fund me Management fest
         </p>
       </div>
+
       <div className='Seo-text'>
         <p>
-          E-Summit 2023 organized by ecell IIT Roorkee will bring every one with
-          lithora of opportunity.Esummit 2022 organized between 21 Jan to 23 Jan
-          which promates the idea of startup india also giving opportunity of
-          networkink funding and much more. Hope to see you in E-summit 22
-          organized by IIT Roorkee
-        </p>
-      </div>
-      <div className='Seo-text'>
-        <p>
-          IIT Bombay will host the E-Summit'23 aims to provide a platform for
+          IIT Roorkee will host the E-Summit'23 aims to provide a platform for
           discussion on innovative ideas that have the potential to transform
           current challenges into opportunities for positive change. The goal of
           the event is to inspire and offer rays of hope to attendees.
@@ -72,6 +61,16 @@ export default function Home() {
           much more{' '}
         </p>
       </div>
+
+      <div className='Seo-text'>
+        <p>
+          E-Summit 2023 organized by ecell IIT Roorkee will bring every one with
+          lithora of opportunity.Esummit 2022 organized between 21 Jan to 23 Jan
+          which promates the idea of startup india also giving opportunity of
+          networkink funding and much more. Hope to see you in E-summit 22
+          organized by IIT Roorkee
+        </p>
+      </div>
       <Animation />
 
       <div>
@@ -80,20 +79,16 @@ export default function Home() {
       <div>
         <ThirdLandingPage />
       </div>
-      <div></div>
-      <div>
-        <Footer />
-      </div>
+      <Footer />
+
       {/* <div style={{width:"100vw",height:"100vh"}}></div>  */}
       {/* <div style={{width:"100vw",height:"100vh"}}></div> */}
 
-
-      <div style={{display:"flex", justifyContent:"space-between"}}>
-      {/* <SpeakerCard/> */}
-      {/* <SpeakerCard/>
+      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+        {/* <SpeakerCard/> */}
+        {/* <SpeakerCard/>
       <SpeakerCard/> */}
       </div>
-
     </>
   );
 }

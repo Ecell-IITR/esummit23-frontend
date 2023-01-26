@@ -14,7 +14,7 @@ export const getAuthToken = () => {
 
 export const getUserRoleType = () => {
   if (typeof window === 'undefined') return false;
-  
+
   const role = localStorage.getItem('userRoleType');
   return role ? role : false;
 };

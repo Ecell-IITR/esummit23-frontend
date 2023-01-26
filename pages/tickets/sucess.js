@@ -1,23 +1,20 @@
-import React,{useState,useEffect} from 'react'
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 function sucess() {
+  const [name, setName] = useState('');
+  const [Id, setId] = useState('');
+  const [Amount, setAmount] = useState(0);
+  const [Org, setOrg] = useState(0);
+  const [Pass, setPass] = useState('');
+  const [show, setShow] = useState('');
 
-    const [name, setName] = useState('');
-    const [Id, setId] = useState('');
-    const [Amount, setAmount] = useState(0);
-    const [Org, setOrg] = useState(0);
-    const [Pass, setPass] = useState('');
-    const [show, setShow] = useState('');
-  
-    const handleClose = () => setShow(false);
-    useEffect(() => {
-      const nam = localStorage.getItem('name');
-      setName(nam);
-      setId(localStorage.getItem('id'));
-   
-    }, []);
-
+  const handleClose = () => setShow(false);
+  useEffect(() => {
+    const nam = localStorage.getItem('name');
+    setName(nam);
+    setId(localStorage.getItem('id'));
+  }, []);
 
   return (
     <>
@@ -40,15 +37,13 @@ function sucess() {
           </div>
         </div>
         <div className='TicketHeader4'>Congratulations</div>
-        <div className='TicketHeader5'>
-        Your Payment is successful
-        </div>
+        <div className='TicketHeader5'>Your Payment is successful</div>
         <div className='TicketHeader6'>
-        Your E-Summit pass will be sent to you respective email ID
+          Your E-Summit pass will be sent to you respective email ID
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default sucess
+export default sucess;

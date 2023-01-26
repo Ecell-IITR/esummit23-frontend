@@ -95,7 +95,6 @@ function Dashboard() {
                 />
               </Modal>
               {Avail.map((item) => {
-             
                 return (
                   <>
                     <div className='dashboardRegisterBox'>

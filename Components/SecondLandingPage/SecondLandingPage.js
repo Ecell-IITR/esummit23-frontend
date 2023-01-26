@@ -39,7 +39,7 @@ const SecondLandingPage = () => {
             data-aos-duration='850'
             data-aos-offset='250'
           >
-            <div id="about" className='secondLandingPageHead'>
+            <div id='about' className='secondLandingPageHead'>
               About Esummit IIT Roorkee
             </div>
             <div className='secondLandingPageDescription'>

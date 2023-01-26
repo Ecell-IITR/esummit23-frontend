@@ -63,14 +63,12 @@ export const HeaderMobile = () => {
             <div className='mobilenavMenu-links'>Tickets</div>
           </Link>
         </li>
-    
+
         {/* <li className='mobilenavMenu-items'>
           <Link href='/#faq' passHref>
             <div className='mobilenavMenu-links'>About</div>
           </Link>
         </li> */}
-
-
 
         {/* {isCA && (
           <>

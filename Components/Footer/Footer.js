@@ -3,8 +3,8 @@ import Image from 'next/image';
 
 function Footer() {
   return (
-    <div>
-      <div id="footer" className='Parent_footer'>
+    <>
+      <div id='footer' className='Parent_footer'>
         <div className='footerLeft_footer'>
           <div className='logoNew_footer'>
             <div className='summitLogoAndName_footer'>
@@ -111,7 +111,6 @@ function Footer() {
                   style={{ color: 'white', textDecoration: 'none' }}
                 >
                   esummit@iitr.ac.in
-
                 </a>
               </div>
             </div>
@@ -120,9 +119,9 @@ function Footer() {
           <div className='addressBelow_footer'>
             <div className='contactNo_footer headings'> Phone No.</div>
             <div className='text_help_phone'>
-              <div className='text_footer'>Sarvesh: +91 9623632358</div>
-              <div className='text_footer'>Pratyush: +91 9799042645</div>
-              <div className='text_footer'>Shashank: +91 9102100531</div>
+              <div className='text_footer'>Sarvesh: 9623632358</div>
+              <div className='text_footer'>Pratyush: 9799042645</div>
+              <div className='text_footer'>Shashank: 9102100531</div>
             </div>
           </div>
         </div>
@@ -145,8 +144,7 @@ function Footer() {
           © 2023, E-cell IIT Roorkee, All rights reserved
         </div>
       </div>
-      
-    </div>
+    </>
   );
 }
 

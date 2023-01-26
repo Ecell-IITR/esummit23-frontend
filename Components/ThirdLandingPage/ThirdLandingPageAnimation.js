@@ -7,8 +7,7 @@ const ThirdLandingPageAnimation = () => {
   useEffect(() => {
     AOS.init();
     AOS.refresh();
-
-  },[]);
+  }, []);
 
   return (
     <div className='thirdLandingAnimationPage'>
@@ -27,7 +26,8 @@ const ThirdLandingPageAnimation = () => {
                 style={{ width: '40vw' }}
               >
                 {/* {current.Heading} */}
-                REMINSCING THE ETHOS: <span style={{color:"#FFD685"}}>BHARAT</span> 
+                REMINSCING THE ETHOS:{' '}
+                <span style={{ color: '#FFD685' }}>BHARAT</span>
               </div>
               <div className='thirdLandingAnimationPageDescription'>
                 {current.Description1}
@@ -47,27 +47,26 @@ const ThirdLandingPageAnimation = () => {
         data-aos-anchor-placement='top-center'
         style={{ width: '40vw' }}
       >
-        <a href="https://www.youtube.com/embed/3TJs2KjpxXc">
-        <div
-          data-aos='videoTransition'
-          data-aos-duration='900'
-          data-aos-offset='200'
-          data-aos-anchor-placement='top-center'
-          style={{ width: '41vw' }}
-        >
-          <img
-            className='thirdAnimationVideo'
-            width="100%"
-            // height='400px'
-            // src='https://www.youtube.com/embed/3TJs2KjpxXc'
-            src="thirdLandingImage.png"
-            title='YouTube video player'
-            frameborder='0'
-            
-            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-            allowfullscreen
-          ></img>
-        </div>
+        <a href='https://www.youtube.com/embed/3TJs2KjpxXc'>
+          <div
+            data-aos='videoTransition'
+            data-aos-duration='900'
+            data-aos-offset='200'
+            data-aos-anchor-placement='top-center'
+            style={{ width: '41vw' }}
+          >
+            <img
+              className='thirdAnimationVideo'
+              width='100%'
+              // height='400px'
+              // src='https://www.youtube.com/embed/3TJs2KjpxXc'
+              src='thirdLandingImage.png'
+              title='YouTube video player'
+              frameborder='0'
+              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+              allowfullscreen
+            ></img>
+          </div>
         </a>
       </div>
     </div>

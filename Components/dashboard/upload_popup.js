@@ -4,8 +4,8 @@ import { CAP_SUB_API } from '../../utils/APIs';
 import { toast } from 'react-toastify';
 import { getAuthToken } from '../../utils';
 import { Modal } from 'react-bootstrap';
-const Upload = ({ esummitId, taskid,points, show, setShow }) => {
-//   const [profile, setprofile] = useState();
+const Upload = ({ esummitId, taskid, points, show, setShow }) => {
+  //   const [profile, setprofile] = useState();
   const [selectedFile, setselectedFile] = useState('');
   const [loading, setloading] = useState();
 
@@ -22,11 +22,11 @@ const Upload = ({ esummitId, taskid,points, show, setShow }) => {
       form_data.append('images', selectedFile, selectedFile.name);
       form_data.append('taskId', taskid);
       form_data.append('esummitId', esummitId);
-      form_data.append('points',points);
-      FetchApi('post',CAP_SUB_API, form_data, getAuthToken())
+      form_data.append('points', points);
+      FetchApi('post', CAP_SUB_API, form_data, getAuthToken())
         .then((res) => {
           setloading(false);
-          toast.success('image uploaded successfully')
+          toast.success('image uploaded successfully');
         })
         .catch((err) => {
           setloading(false);
@@ -89,7 +89,7 @@ const Upload = ({ esummitId, taskid,points, show, setShow }) => {
                         submit();
                       }}
                     >
-                    UPLOAD
+                      UPLOAD
                     </div>
                   </div>
                 </div>

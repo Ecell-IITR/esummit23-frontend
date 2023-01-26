@@ -29,7 +29,10 @@ export default function Header(props) {
             <div className='idea-Text2'>{props.tagline}</div>
             <div className='idea-text3'>
               {router.query.slug === 'Startup Expo' ? (
-                <a style={{color:"transparent"}} href='https://docs.google.com/forms/d/1bYuLAoCbFzO2SDpSn0uYShaDYvyEmuXmYPtp1IUILX4/viewform?edit_requested=true'>
+                <a
+                  style={{ color: 'transparent' }}
+                  href='https://docs.google.com/forms/d/1bYuLAoCbFzO2SDpSn0uYShaDYvyEmuXmYPtp1IUILX4/viewform?edit_requested=true'
+                >
                   {' '}
                   <button className='idea-Button'>
                     <span className='iBT'>REGISTER NOW</span>
