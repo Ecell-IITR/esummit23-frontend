@@ -6,7 +6,7 @@ import FetchApi from '../utils/fetchAPI';
 import { Authenticate, isAuthenticated } from '../utils';
 import { useRouter } from 'next/router';
 import ForgotPassword from '../Components/ForgotPassword';
-
+import { toast } from 'react-toastify';
 import Link from 'next/link';
 
 function Login() {
@@ -74,8 +74,9 @@ function Login() {
           }
         })
 
-        .catch((res) => {
-          alert('Credentials are wrong');
+        .catch((err) => {
+          toast.error(err.response.data.error_msg);
+          console.log(err.response)
         });
     }
 
