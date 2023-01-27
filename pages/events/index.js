@@ -10,7 +10,6 @@ import DashboardForm from '../../Components/DashboardForm';
 import { Modal } from 'react-bootstrap';
 export default function Events({ posts }) {
   const [name, setName] = useState('');
-
   const [show, setShow] = useState(false);
   const [No, setNo] = useState(0);
   const [question1, setquestion1] = useState('');
@@ -127,24 +126,26 @@ export default function Events({ posts }) {
 
               <div className='eventPgBtnC' style={{ marginTop: '1.5rem' }}>
                 {post.event_name === 'Startup Expo' ? (
-                  <a style={{ color: 'transparent' }} href='/login'>
+                  <a
+                    style={{ color: 'transparent' }}
+                    href='https://docs.google.com/forms/d/1bYuLAoCbFzO2SDpSn0uYShaDYvyEmuXmYPtp1IUILX4/viewform?edit_requested=true'
+                  >
                     {' '}
                     <button className='eventPgBtn'>Register Now</button>
                   </a>
                 ) : (
                   <a href='/login'>
-                    <button
-                      className='eventPgBtn'
-                      // onClick={() => {
-
-                      //   GetData(post?.event_name);
-                      //   setShow(true);
+                  <button
+                    className='eventPgBtn'
+                    // onClick={() => {
+                    //   GetData(post?.event_name);
+                    //   setShow(true);
                       // rederict();
-                      // }}
-                    >
-                      Register Now
-                    </button>
-                  </a>
+                    // }}
+                  >
+                    Register Now
+                  </button>
+                  </a> 
                 )}
                 <Image src='/Vector.png' height='16px' width='21.3px'></Image>
               </div>

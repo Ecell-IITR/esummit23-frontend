@@ -1,10 +1,21 @@
+.navbarParentNew {
+  background-color: black;
+  border-bottom: 1px solid grey;
+    /* Note: backdrop-filter has minimal browser support */
+    display: flex !important;
+    justify-content: space-between !important;
+    height: 73px;
+    z-index: 500;
+    align-items: center !important;
+  }
+
 .navbarParent {
   background: linear-gradient(
     180deg,
     rgba(18, 18, 18, 0.5) 0%,
     rgba(18, 18, 18, 0) 100%
   );
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(1px);
   /* Note: backdrop-filter has minimal browser support */
   display: flex !important;
   justify-content: space-between !important;

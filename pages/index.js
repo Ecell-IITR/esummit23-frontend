@@ -1,19 +1,32 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from '../Components/Navbar';
 import React from 'react';
+import Image from 'next/image';
 import Animation from '../Components/Animation';
 import Lottie from 'react-lottie';
 import SecondLandingPage from '../Components/SecondLandingPage';
 import ThirdLandingPage from '../Components/ThirdLandingPage';
+import SpeakerCard from '../Components/Homepage/SpeakerCard';
+import { SPEAKER_DETAIL_API } from '../utils/APIs';
+import axios from 'axios';
 import Footer from '../Components/Footer/Footer';
+import Events from '../pages/events';
+import { ALL_EVENTS_API } from '../utils/APIs';
+import Link from 'next/link';
+import Router from 'next/router';
 
-export default function Home() {
+export default function Home(props) {
+  const HandleSubmit = (e) => {
+    e.preventDefault();
+    Router.push('/speakers');
+  };
+  const { Data } = props;
+  const { Posts } = props;
   const defaultOptions = {
     loop: true,
     autoplay: true,
     path: '/coming.json',
   };
-
   return (
     <>
       {/* <Navbar /> */}
@@ -78,19 +91,122 @@ export default function Home() {
       </div>
       <div>
         <ThirdLandingPage />
-      </div>
-      <div style={{background:"#301b09"}}>
-      <Footer />
-      </div>
 
-      {/* <div style={{width:"100vw",height:"100vh"}}></div>  */}
-      {/* <div style={{width:"100vw",height:"100vh"}}></div> */}
+        <div
+          style={{
+            width: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            background: 'linear-gradient(180deg, #12100E 0%, #301A08 100%)',
+          }}
+        >
+          <div
+            style={{
+              width: '100vw',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }}
+          >
+            <div className='headingAndBtnContainerDiv2'>
+              <div className='EventsAndCompetitionsContainer2'>
+                Events and Competitions
+              </div>
+              <Link rel='stylesheet' href='/events'>
+                <button className='ViewAllEventsBtn2'>View all Events</button>
+              </Link>
+            </div>
 
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        {/* <SpeakerCard/> */}
-        {/* <SpeakerCard/>
-      <SpeakerCard/> */}
+            <div className='eventsCardFlexContainerDiv2'>
+              {Posts &&
+                Posts.map((Post, id) => {
+                  if(id<3){
+                  return (
+                    <div className='eventCardContainerDiv2' key={id}>
+                      <div className='eventImageContainerDiv2'>
+                        <Image
+                          src={
+                            Post?.card_image
+                              ? Post?.card_image
+                              : '/Rectangle 118.png'
+                          }
+                          height='230px'
+                          width='350px'
+                          alt={props.eventImageDescription}
+                        />
+                      </div>
+                      <div className='eventTextContainer2'>
+                        <div className='eventNameTextContainerDiv2'>
+                          {Post.event_name}
+                        </div>
+                        <div
+                          className='eventShortDescriptionContainerDiv2'
+                          dangerouslySetInnerHTML={{
+                            __html: Post.card_description,
+                          }}
+                        ></div>
+                        <div className='ReadMoreContainerDiv'>
+                          <a href={'/events/' + Post?.event_name}>Read more</a>
+                        </div>
+                      </div>
+                      <Link href='/login'>
+                        <button className='eventBtnAndArrowContainerDiv2'>
+                          <span className='applyNowSpan2'>Apply Now</span>
+                          <Image src='/vector.png' height='12px' width='16px' />
+                        </button>
+                      </Link>
+                    </div>
+                  );
+                        }
+                })}
+            </div>
+            <Link rel='stylesheet' href='/events'>
+                <button className='ViewAllEventsBtn22'>View all Events</button>
+              </Link>
+          </div>
+          <div style={{ width: '100vw' }}>
+            {Data &&
+              Data.map((Element,index) => {
+                if(index<3){
+                return (
+                  <SpeakerCard
+                    HandleSubmit={HandleSubmit}
+                    Heading='Speaker'
+                    BtnText='View All Speakers'
+                    Id={Element.id}
+                    profile_Image={Element.profile_image}
+                    event_Year={Element.event_year}
+                    Name={Element.name}
+                    Designation={Element.designation}
+                    Description={Element.description}
+                    key={index}
+                  />
+                );
+                }
+              })}
+          </div>
+          <div
+            style={{
+              width: '100vw',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }}
+          ></div>
+        </div>
+      </div>
+      <div style={{ background: '#301b09' }}>
+        <Footer />
       </div>
     </>
   );
+}
+export async function getStaticProps() {
+  const res = await axios.get(SPEAKER_DETAIL_API);
+  const resolve = await axios.get(ALL_EVENTS_API);
+  const Posts = resolve.data;
+  const Data = res.data;
+  console.log(Posts);
+  return { props: { Data, Posts } };
 }

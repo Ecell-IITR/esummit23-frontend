@@ -9,7 +9,7 @@ export let HOST_URL;
 if (process.env.ENV === 'prod') {
   HOST_URL = 'https://www.esummit.in';
 } else {
-  HOST_URL = 'http://localhost:3000';
+  HOST_URL = 'https://api.esummit.in';
 }
 
 export const FOOTER_QUERY_API = `${API_URL}/user/querry`;
