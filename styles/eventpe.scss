@@ -130,16 +130,7 @@
     margin-left: -0.2rem;
   }
 }
-@media screen and (max-width: 450px) {
-  .eventPgHdng {
-    font-size: 8vw;
-    line-height: 9vw;
-    margin-bottom: 3vw;
-  }
-  .eventPgCards {
-    margin-bottom: 20vw;
-  }
-}
+
 
 .headingAndBtnContainerDiv2 {
   width: 92vw;
@@ -267,6 +258,20 @@
   color: #ffffff;
   border: 2px;
 }
+.ViewAllEventsBtn22 {
+  width: 264px;
+  height: 48px;
+  background: #ba6d39;
+  border-radius: 6rem;
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  border: 2px;
+  display: none;
+}
 
 @media screen and (max-width: 800px) {
   .headingAndBtnContainerDiv2 {
@@ -281,3 +286,43 @@
 
 }
 
+@media screen and (max-width: 450px) {
+  .eventPgHdng {
+    font-size: 8vw;
+    line-height: 9vw;
+    margin-bottom: 3vw;
+  }
+  .eventPgCards {
+    margin-bottom: 20vw;
+  }
+
+  .eventTextContainer2{
+   width:280px !important;
+  }
+   
+  .eventBtnAndArrowContainerDiv2{
+    width:280px !important;
+  }
+  .eventShortDescriptionContainerDiv2 {
+    width:250px !important;
+    font-size:13px;
+  }
+  .eventImageContainerDiv2{
+    height:185px !important;
+    width:280px !important;
+  }
+  .eventNameTextContainerDiv2{
+    width:250px;
+  }
+  .ReadMoreContainerDiv{
+    width:250px;
+  }
+  .ViewAllEventsBtn22{
+    display: block !important;
+    margin-bottom: 4rem;
+
+  }
+  .ViewAllEventsBtn2{
+    display: none !important;
+  }
+}

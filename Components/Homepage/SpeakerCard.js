@@ -65,6 +65,7 @@ const SpeakerCard = (props) => {
              
             );         
         </div>
+        <button onClick={props.HandleSubmit} className='viewAllSpeakersBtn2nd'>{props.BtnText}</button>
         </div>
   )
  

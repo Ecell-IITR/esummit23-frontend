@@ -121,8 +121,9 @@ export default function Home(props) {
             <div className='eventsCardFlexContainerDiv2'>
               {Posts &&
                 Posts.map((Post, id) => {
+                  if(id<3){
                   return (
-                    <div className='eventCardContainerDiv2'>
+                    <div className='eventCardContainerDiv2' key={id}>
                       <div className='eventImageContainerDiv2'>
                         <Image
                           src={
@@ -157,12 +158,17 @@ export default function Home(props) {
                       </Link>
                     </div>
                   );
+                        }
                 })}
             </div>
+            <Link rel='stylesheet' href='/events'>
+                <button className='ViewAllEventsBtn22'>View all Events</button>
+              </Link>
           </div>
           <div style={{ width: '100vw' }}>
             {Data &&
-              Data.map((Element) => {
+              Data.map((Element,index) => {
+                if(index<3){
                 return (
                   <SpeakerCard
                     HandleSubmit={HandleSubmit}
@@ -174,8 +180,10 @@ export default function Home(props) {
                     Name={Element.name}
                     Designation={Element.designation}
                     Description={Element.description}
+                    key={index}
                   />
                 );
+                }
               })}
           </div>
           <div

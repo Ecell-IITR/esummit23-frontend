@@ -108,6 +108,24 @@
 .viewAllSpeakersBtn:hover {
  color: black;
   }
+.viewAllSpeakersBtn2nd {
+  border: 2px;
+  height: 3rem;
+  width: 16rem;
+  background-color: #ba6d39;
+  border-radius: 6rem;
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: #ffffff;
+  z-index: 1;
+  margin:30px 0;
+  display: none;
+}
+.viewAllSpeakersBtn2nd:hover {
+ color: black;
+  }
 @media only screen and (max-width: 1190px) {
   .CardContainer {
     padding: 0px 24px;
@@ -116,5 +134,13 @@
 @media only screen and (max-width: 700px) {
   .CardLine {
     width: 80px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .viewAllSpeakersBtn{
+    display: none !important;
+  }
+  .viewAllSpeakersBtn2nd{
+    display: block !important;
   }
 }
