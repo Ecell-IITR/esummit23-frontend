@@ -17,9 +17,9 @@ import Router from 'next/router';
 
 export default function Home(props) {
   const HandleSubmit = (e) => {
-    e.preventDefault()
-    Router.push('/speakers')
-      }
+    e.preventDefault();
+    Router.push('/speakers');
+  };
   const { Data } = props;
   const { Posts } = props;
   const defaultOptions = {
@@ -91,7 +91,7 @@ export default function Home(props) {
       </div>
       <div>
         <ThirdLandingPage />
-        <div></div>
+
         <div
           style={{
             width: '100%',
@@ -125,7 +125,7 @@ export default function Home(props) {
                     <div className='eventCardContainerDiv2'>
                       <div className='eventImageContainerDiv2'>
                         <Image
-                          src= {
+                          src={
                             Post?.card_image
                               ? Post?.card_image
                               : '/Rectangle 118.png'
@@ -165,7 +165,7 @@ export default function Home(props) {
               Data.map((Element) => {
                 return (
                   <SpeakerCard
-                  HandleSubmit={HandleSubmit}
+                    HandleSubmit={HandleSubmit}
                     Heading='Speaker'
                     BtnText='View All Speakers'
                     Id={Element.id}
@@ -184,10 +184,12 @@ export default function Home(props) {
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-            }} >
-
-          </div>
+            }}
+          ></div>
         </div>
+      </div>
+      <div style={{ background: '#301b09' }}>
+        <Footer />
       </div>
     </>
   );
