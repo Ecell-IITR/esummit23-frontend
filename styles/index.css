@@ -4760,7 +4760,7 @@ div.fade.in.modal {
 
 .taskTextContainer {
   width: 1088px;
-  height: 97px;
+  
   display: flex;
   flex-direction: row;
   align-items: center;
