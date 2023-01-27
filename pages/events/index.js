@@ -89,7 +89,7 @@ export default function Events({ posts }) {
                   }
                   height='220px'
                   width='376px'
-                ></Image>
+                />
               </div>
               <div className='eventPgAbout'>
                 <h2
