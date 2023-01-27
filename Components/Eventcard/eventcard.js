@@ -13,6 +13,8 @@ function EventCard() {
               <div className='eventc'>
                 <div className='eventcimg'>
                   <Image
+                  layout="responsive"
+                  loading="lazy"
                     src='/Rectangle 118.png'
                     height='199px'
                     width='376px'
