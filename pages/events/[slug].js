@@ -23,6 +23,7 @@ export default function EventsDetails({ details }) {
     setMobile();
   }, []);
   const GetData = (name) => {
+    console.log(router.query.slug)
     FetchApi('POST', SINGLE_SERVICES, { service_name: router.query.slug }, null)
       .then((res) => {
         setName(res.data.name);
@@ -39,7 +40,7 @@ export default function EventsDetails({ details }) {
           Auth={true}
           handleClose={handleClose}
           noQuestions={No}
-          name={name}
+          name={router?.query?.slug}
           Q_1={question1}
           Q_2={question2}
         />
@@ -55,6 +56,7 @@ export default function EventsDetails({ details }) {
         }
         GetData={GetData}
         setShow={setShow}
+
       />
       <Timline
         name={details.event_name}
