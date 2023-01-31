@@ -101,7 +101,7 @@ function Events(props) {
           )}
         </div>
       </div>
-      {x?.map((curr, index) => {
+      {/* {x?.map((curr, index) => {
         return (
           <div className='CardContainer' key='index'>
             <div className='sponsCardContainer'>
@@ -132,7 +132,7 @@ function Events(props) {
             </div>
           </div>
         );
-      })}
+      })} */}
 
       <div className='parentIS'>
         <div className='coordinatorHeadingIS'>Event Coordinators</div>

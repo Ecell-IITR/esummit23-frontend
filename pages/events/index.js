@@ -89,6 +89,7 @@ export default function Events({ posts }) {
                   }
                   height='220px'
                   width='376px'
+                  unoptimized={true}
                 />
               </div>
               <div className='eventPgAbout'>
