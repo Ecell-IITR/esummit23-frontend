@@ -6,7 +6,7 @@ const finalData = (props) => {
   return Data.map((Elements) => {
     return (
       <div key={Elements.id}>
-        <h3>{Elements.name}</h3>
+        
         <div>{Elements.designation}</div>
         <img src={Elements.profile_image} alt='' />
         <div>{Elements.team_mail}</div>
