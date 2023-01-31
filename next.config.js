@@ -4,18 +4,7 @@ const nextConfig = {
   images: {
     domains: ['e-cell-server-bucket.s3.amazonaws.com'],
   },
-  headers: () => [
-    {
-      source: '/:path*',
-      headers: [
-        {
-          key: 'Cache-Control',
-          value: 'no-store',
-        },
-      ],
-    },
-  ],
-
+  
 
 };
 
