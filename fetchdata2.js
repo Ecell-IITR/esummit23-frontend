@@ -11,6 +11,7 @@ const finalData = (props) => {
         <img src={Elements.profile_image} alt='' />
         <div>{Elements.team_mail}</div>
         <div>{Elements.team_phone}</div>
+        
         <div>{Elements.team_twitter}</div>
         <div>{Elements.team_linkedin}</div>
       </div>
