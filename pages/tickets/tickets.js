@@ -13,6 +13,7 @@ function tickets() {
   const [Org, setOrg] = useState(0);
   const [Pass, setPass] = useState('');
   const [show, setShow] = useState('');
+  
 
   const handleClose = () => setShow(false);
   useEffect(() => {
@@ -22,14 +23,11 @@ function tickets() {
   }, []);
   const router = useRouter();
 
-  const Clicker = (amount, passer, org) => {
+  const Clicker = (url) => {
     if (!isAuthenticated()) {
       router.push('/tickets');
     } else {
-      setAmount(amount);
-      setPass(passer);
-      setOrg(org);
-      setShow(true);
+      router.push(url);
     }
   };
 
@@ -39,23 +37,20 @@ function tickets() {
     } else if (!(getUserRoleType() == 'proff')) {
       toast.error('You are not a proffessional user');
     } else {
-      setAmount(amount);
-      setPass(passer);
-      setOrg(org);
-      setShow(true);
+      router.push('https://rzp.io/l/d1DNKhIf');
     }
   };
 
   return (
     <>
-      <QM
+      {/* <QM
         pass={Pass}
         orgAmount={Org}
         amount={Amount}
         show={show}
         handleClose={handleClose}
         name={name}
-      />
+      /> */}
       <div className='TicketBackground'>
         <div className='TicketHeader'>
           <div
@@ -81,24 +76,21 @@ function tickets() {
         <div className='TicketDisplayContainer'>
           <img
             onClick={() => {
-              // Clicker(599, 'Standard Student pass', 999);
-              router.push('https://rzp.io/l/bCXJ7yYLkS');
+              Clicker('https://rzp.io/l/bCXJ7yYLkS');
             }}
             className='TicketDisplayImage'
             src='/SSP.png'
           />
           <img
             onClick={() => {
-              // Clicker(1499, 'Premium Student pass', 1999);
-              router.push('https://rzp.io/l/xfTrBJLI59');
+              Clicker('https://rzp.io/l/xfTrBJLI59');
             }}
             className='TicketDisplayImage2'
             src='/PSP.png'
           />
           <img
             onClick={() => {
-              // Clicker2(1999, 'Profestional pass', 2499);
-              router.push('https://rzp.io/l/d1DNKhIf');
+              Clicker2();
             }}
             className='TicketDisplayImage'
             src='/PP.png'
