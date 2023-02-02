@@ -49,7 +49,7 @@ const Speaker = (props) => {
 }
 
 export default Speaker
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await axios.get(SPEAKER_DETAIL_API); 
   const Data = res.data;
   console.log(Data)

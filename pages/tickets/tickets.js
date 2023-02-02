@@ -43,14 +43,7 @@ function tickets() {
 
   return (
     <>
-      {/* <QM
-        pass={Pass}
-        orgAmount={Org}
-        amount={Amount}
-        show={show}
-        handleClose={handleClose}
-        name={name}
-      /> */}
+      
       <div className='TicketBackground'>
         <div className='TicketHeader'>
           <div
