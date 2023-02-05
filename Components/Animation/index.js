@@ -58,8 +58,8 @@ const SecondLandingPage = () => {
         }}
       >
         <Navbar />
-        <AnimationUp />
-        <Animation />
+        <AnimationUp/>
+        <Animation/>
       </div>
     );
   }
