@@ -1,10 +1,12 @@
 import Image from 'next/image';
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/router';
+import {useState} from 'react';
 
 export function EventsIdeathon(props) {
   const router = useRouter();
-
+  const [rounder,setrounder] =  useState(0);
+  // const [arrow,setarrow] = useState("helpArrow")
   return (
     <div className='containerEvents'>
       <div className='helpAboutContainer'>
@@ -24,38 +26,40 @@ export function EventsIdeathon(props) {
           </div>
         </div>
       </div>
-      {router.query.slug === 'Startup Expo' ? (
-        <></>
-      ) : (
         <>
           {' '}
-          <div className='helpSecondContainer'>
+          <div className={props.round[0]?.tasks==null ? "arrowDisplayNone" : "helpSecondContainer"}>
             <div className='secondcontainer'>
               <div className='arrows'>
                 <div className='vl'></div>
-                <div className='firstarrow'>Round 1</div>
+                <div className='firstarrow' onClick={() => {
+                      setrounder(0);
+                    }}>Round 1</div>
                 <div className='helpVerticalLine'>
-                  <div className='verticalLine'></div>
+                  <div className={props.round[1]?.tasks==null ? "arrowDisplayNone" : "verticalLine"}></div>
                 </div>
-                <div className='helpArrow'>
+                <div className={props.round[1]?.tasks==null ? "arrowDisplayNone" : "helpArrow"}>
                   <div
                     className='secondarrow'
                     onClick={() => {
-                      toast.error('Coming Soon!');
+                      // toast.error('Coming Soon!');
+                      setrounder(1);
+                      
                     }}
                   >
                     Round 2
                   </div>
                 </div>
                 <div className='helpVerticalLine'>
-                  <div className='verticalLine'></div>
+                  <div className={props.round[2]?.tasks==null ? "arrowDisplayNone" : "verticalLine"}></div>
                 </div>
-                <div className='vl1'></div>
-                <div className='helpArrow'>
+                <div className={props.round[2]?.tasks==null ? "arrowDisplayNone" : "vl1"}></div>
+                <div className={props.round[2]?.tasks==null ? "arrowDisplayNone" : "helpArrow"}>
                   <div
-                    className='thirdarrow'
+                  className='thirdarrow'
                     onClick={() => {
-                      toast.error('Coming Soon!');
+                      // toast.error('Coming Soon!');
+                      setrounder(2);
                     }}
                   >
                     Round 3
@@ -67,14 +71,13 @@ export function EventsIdeathon(props) {
                 <div className='paragraph'>
                   <div
                     className='triangleDate'
-                    dangerouslySetInnerHTML={{ __html: props?.round[0]?.tasks }}
+                    dangerouslySetInnerHTML={{ __html: props?.round[rounder]?.tasks }}
                   ></div>
                 </div>
               </div>
             </div>
           </div>{' '}
         </>
-      )}
       <div className='helpRuleContainer'>
         <div className='rulecontainer'>
           <div className='ruleheading'>Rules and Regulation</div>
@@ -130,5 +133,6 @@ export function EventsIdeathon(props) {
     </div>
   );
 }
+
 
 export default EventsIdeathon;
