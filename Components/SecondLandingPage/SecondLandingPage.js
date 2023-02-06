@@ -19,7 +19,7 @@ const SecondLandingPage = () => {
             data-aos-anchor-placement='top-bottom'
             data-aos='fade-right'
             data-aos-duration='550'
-            data-aos-offset='200'
+            data-aos-offset='100'
             style={{ mixBlendMode: 'overlay' }}
           >
             <img
@@ -35,8 +35,8 @@ const SecondLandingPage = () => {
           <div
             className='secondLandingPageBox'
             data-aos='fade-right'
-            data-aos-anchor-placement='top-center'
-            data-aos-duration='850'
+            data-aos-anchor-placement='top-bottom'
+            data-aos-duration='1450'
             data-aos-offset='250'
           >
             <div id='about' className='secondLandingPageHead'>
