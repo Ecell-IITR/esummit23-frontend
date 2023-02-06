@@ -202,7 +202,7 @@ export default function Home(props) {
     </>
   );
 }
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await axios.get(SPEAKER_DETAIL_API);
   const resolve = await axios.get(ALL_EVENTS_API);
   const Posts = resolve.data;

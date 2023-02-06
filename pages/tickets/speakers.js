@@ -4,7 +4,7 @@ import axios from 'axios';
 import Navbar from '../../Components/Navbar';
 import { SPEAKER_DETAIL_API } from '../../utils/APIs';
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await axios.get(SPEAKER_DETAIL_API);
   const Data = res.data;
   // console.log(Data);
