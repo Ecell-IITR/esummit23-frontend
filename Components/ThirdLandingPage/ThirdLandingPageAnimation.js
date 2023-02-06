@@ -42,9 +42,9 @@ const ThirdLandingPageAnimation = () => {
       <div
         className='thirdLandingAnimationPageBox2'
         data-aos='fade-left'
-        data-aos-duration='1000'
-        data-aos-offset='250'
-        data-aos-anchor-placement='top-center'
+        data-aos-duration='900'
+        data-aos-offset='200'
+        data-aos-anchor-placement='top-bottom'
         style={{ width: '40vw' }}
       >
         <a href='https://www.youtube.com/embed/3TJs2KjpxXc'>
@@ -52,7 +52,7 @@ const ThirdLandingPageAnimation = () => {
             data-aos='videoTransition'
             data-aos-duration='900'
             data-aos-offset='200'
-            data-aos-anchor-placement='top-center'
+            data-aos-anchor-placement='top-bottom'
             style={{ width: '41vw' }}
           >
             <img

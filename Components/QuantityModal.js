@@ -8,69 +8,10 @@ import { getAuthToken, isAuthenticated } from '../utils';
 import { useRouter } from 'next/router';
 function QM(props) {
   const [Number, setNumber] = useState(1);
+  const [RFC, setRFC] = useState("")
   const router = useRouter();
   const makePayment = async (amount, name = props.name) => {
-    const res = await initializeRazorpay();
-
-    if (!res) {
-      alert('Razorpay SDK Failed to load');
-      return;
-    }
-    // Make API call to the serverless API
-    FetchApi('POST', RAZORPAY_GET_ORDER_ID, {
-      name: props.name,
-      amount: amount,
-    }).then((res) => {
-      let options = {
-        key: 'rzp_live_U0W39W3I1yR00g', // Enter the Key ID generated from the Dashboard
-        name: "Esummit'23",
-        currency: 'INR',
-        amount: res.data?.amount,
-        order_id: res.data?.orderId,
-        description: 'Ticket Payment',
-        image: 'https://manuarora.in/logo.png',
-
-        handler: async function (response) {
-          const data = {
-            response: response,
-            razorpayPaymentId: response.razorpay_payment_id,
-            razorpayOrderId: response.razorpay_order_id,
-            razorpaySignature: response.razorpay_signature,
-            plan: props.pass,
-            quantity: Number,
-          };
-
-          // Validate payment at server - using webhooks is a better idea.
-          FetchApi('POST', RAZORPAY_CALLBACK, data, getAuthToken()).then(
-            (res) => {
-              router.push('/tickets/sucess');
-            }
-          );
-        },
-        prefill: {
-          name: props.name,
-        },
-      };
-
-      const paymentObject = new window.Razorpay(options);
-      paymentObject.open();
-    });
-  };
-  const initializeRazorpay = () => {
-    return new Promise((resolve) => {
-      const script = document.createElement('script');
-      script.src = 'https://checkout.razorpay.com/v1/checkout.js';
-      // document.body.appendChild(script);
-
-      script.onload = () => {
-        resolve(true);
-      };
-      script.onerror = () => {
-        resolve(false);
-      };
-
-      document.body.appendChild(script);
-    });
+    
   };
 
   return (
@@ -140,7 +81,7 @@ function QM(props) {
                 style={{ fontWeight: '500', color: '#6FCF97' }}
                 className='forgotPasswordSubHeader3'
               >
-                Early bird Discount
+                 Discount
               </div>
 
               <div
