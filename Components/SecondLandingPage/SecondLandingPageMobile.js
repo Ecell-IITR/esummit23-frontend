@@ -39,8 +39,8 @@ const SecondLandingPage = () => {
             E-Summit being the flagship event of ECell, is held annually brings
             together the academic community,{' '}
           </div>
-          <button className='secondLandingPageMobileButton'>
-            <span>KNOW MORE</span>
+          <button style={{display:"none"}}className='secondLandingPageMobileButton'>
+            <span>KNOW MOREe</span>
           </button>
         </div>
       </div>
