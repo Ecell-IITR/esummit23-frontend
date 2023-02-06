@@ -53,7 +53,7 @@ function tickets() {
       /> */}
       <div className='TicketBackground'>
         <div className='TicketHeader'>
-          <div
+          <div onClick={()=>{router.push('/')}}
             style={{
               display: 'flex',
               alignItems: 'center',
