@@ -1,12 +1,21 @@
 import Image from 'next/image';
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/router';
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 
 export function EventsIdeathon(props) {
   const router = useRouter();
   const [rounder,setrounder] =  useState(0);
-  // const [arrow,setarrow] = useState("helpArrow")
+  const [active, setActive] = useState("");
+ 
+  const handleClick = (event) => {
+    setActive(event?.target.id);
+  }
+  useEffect(() => {
+      setActive('1')
+  }, [])
+  
+
   return (
     <div className='containerEvents'>
       <div className='helpAboutContainer'>
@@ -32,19 +41,23 @@ export function EventsIdeathon(props) {
             <div className='secondcontainer'>
               <div className='arrows'>
                 <div className='vl'></div>
-                <div className='firstarrow' onClick={() => {
+                <div key={1} id={"1"} className={active === "1" ? "firstarrow" : "helpArrow"} onClick={handleClick}>
+                      <div
+                   key={1} id={"1"}
+                    onClick={() => {
+                      // toast.error('Coming Soon!');
                       setrounder(0);
-                    }}>Round 1</div>
+                    }}
+                  >Round 1</div></div>
                 <div className='helpVerticalLine'>
                   <div className={props.round[1]?.tasks==null ? "arrowDisplayNone" : "verticalLine"}></div>
                 </div>
-                <div className={props.round[1]?.tasks==null ? "arrowDisplayNone" : "helpArrow"}>
+                <div key={2} id={"2"} className={props.round[1]?.tasks==null ? "arrowDisplayNone" : active === "2" ? "firstarrow" : "helpArrow"} onClick={handleClick}>
                   <div
-                    className='secondarrow'
+                   key={2} id={"2"}
                     onClick={() => {
                       // toast.error('Coming Soon!');
                       setrounder(1);
-                      
                     }}
                   >
                     Round 2
@@ -54,12 +67,14 @@ export function EventsIdeathon(props) {
                   <div className={props.round[2]?.tasks==null ? "arrowDisplayNone" : "verticalLine"}></div>
                 </div>
                 <div className={props.round[2]?.tasks==null ? "arrowDisplayNone" : "vl1"}></div>
-                <div className={props.round[2]?.tasks==null ? "arrowDisplayNone" : "helpArrow"}>
+                <div key={3} id={"3"} className={props.round[2]?.tasks==null ? "arrowDisplayNone" : active === "3" ? "firstarrow" : "helpArrow"} onClick={handleClick}>
                   <div
-                  className='thirdarrow'
+                  // className={active === "3" ? "firstarrow" : "helpArrow"}
+                  key={3} id={"3"}
                     onClick={() => {
                       // toast.error('Coming Soon!');
                       setrounder(2);
+                      handleClick;
                     }}
                   >
                     Round 3
