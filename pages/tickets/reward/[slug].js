@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { RAZORPAY_GET_ORDER_ID, RAZORPAY_CALLBACK } from '../../utils/APIs';
-import FetchApi from '../../utils/fetchAPI';
-import { getAuthToken, isAuthenticated, getUserRoleType } from '../../utils';
+import { getAuthToken, isAuthenticated, getUserRoleType } from '../../../utils';
 import { useRouter } from 'next/router';
-import QM from '../../Components/QuantityModal';
+
 import { toast } from 'react-toastify';
 function tickets() {
   const [name, setName] = useState('');
@@ -24,11 +22,9 @@ function tickets() {
   const router = useRouter();
 
   const Clicker = (url) => {
-    if (!isAuthenticated()) {
-      router.push('/tickets');
-    } else {
+    
       router.push(url);
-    }
+    
   };
 
   const Clicker2 = (amount, passer, org) => {
@@ -53,7 +49,7 @@ function tickets() {
       /> */}
       <div className='TicketBackground'>
         <div className='TicketHeader'>
-          <div onClick={()=>{router.push('/')}}
+          <div
             style={{
               display: 'flex',
               alignItems: 'center',
@@ -83,7 +79,7 @@ function tickets() {
           />
           <img
             onClick={() => {
-              Clicker('https://rzp.io/l/xfTrBJLI59');
+              Clicker('https://pages.razorpay.com/pl_LCuvAWkqCPMwht/view?reffralcode='+router.query.slug);
             }}
             className='TicketDisplayImage2'
             src='/PSP.png'

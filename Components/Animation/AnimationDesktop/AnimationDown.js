@@ -1,7 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 function Animation() {
+  const router=useRouter();
   return (
     <div>
       <h1 style={{ display: 'none' }}>E-CELL IIT ROORKEE</h1>
@@ -83,17 +85,23 @@ function Animation() {
                        . Curabitur vestibulum aliquam leo. Praesent egestas neque eu enim. In h
                        ac habitasse platea dictumst. Fusce a quam. Etiam ut purus mattis mauris
   </p>*/}
+
       <div className='containerAnimationDown'>
         <div className='upAnimationDown'>
+        <div  className='dates' >17th-19th FEB</div>
+        <div className='mainSummitImage'>
           <img
-            style={{ width: '100vw' }}
+            style={{ width: '80vw' }}
             className='landingImage'
             src='Landing.png'
             alt='landingImage'
           />
+          </div>
+          <div className='button2' onClick={()=>{router.push('tickets/tickets')}} >Buy Tickets Now</div>
         </div>
-        <div className='middleAnimationDown'></div>
       </div>
+
+
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 function sucess() {
   const [name, setName] = useState('');
@@ -8,7 +9,7 @@ function sucess() {
   const [Org, setOrg] = useState(0);
   const [Pass, setPass] = useState('');
   const [show, setShow] = useState('');
-
+const router=useRouter();
   const handleClose = () => setShow(false);
   useEffect(() => {
     const nam = localStorage.getItem('name');
@@ -20,7 +21,7 @@ function sucess() {
     <>
       <div className='TicketBackground'>
         <div className='TicketHeader'>
-          <div
+          <div 
             style={{
               display: 'flex',
               alignItems: 'center',
