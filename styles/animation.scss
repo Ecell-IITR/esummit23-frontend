@@ -75,8 +75,9 @@
   font-family: 'Lexend';
   // border:1px solid white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .middleAnimationDown {
@@ -248,13 +249,13 @@
   90% {
     transform: rotate(-360deg);
     margin-top: 27rem;
-    margin-right: -5rem;
+    margin-right: -25rem;
     z-index: 1;
   }
   100% {
     transform: rotate(-360deg);
     margin-top: 26rem;
-    margin-right: -5rem;
+    margin-right: -25rem;
     z-index: 1;
   }
 }
@@ -284,6 +285,21 @@
 
 .containerAnimationMobile {
   width: 100%;
+}
+
+.dates{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  font-weight: 600;
+  width: 40vw;
+  height: 10rem;
+  font-size: 4vw;
+}
+
+.mainSummitImage{
+  height: 20vw;
 }
 @media screen and (max-width: 600px) {
   .containerAnimationMobile {
@@ -464,6 +480,27 @@
   // border: 1px solid white;
 }
 
+.button2{
+  background-color: #BA6D39;
+  padding: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8vw;
+  width: 18vw;
+  border-radius: 2rem;
+  font-weight: 600;
+  margin-top: 3rem;
+
+
+
+}
+.button2:hover{
+  background-color: #DCD1AD !important;
+  cursor: pointer;
+  color: #12100E;
+}
+
 @media screen and (max-width: 1160px) {
   .landingImage {
     margin-bottom: 7rem;
@@ -528,5 +565,25 @@
 @media only screen and (max-width:1110px) {
   .coin5{
     display: none;
+  }
+}
+
+
+
+
+@media only screen and (min-width:1487px) {
+  .button2{
+  margin-top: 5rem !important;
+  }
+}
+@media only screen and (min-width:1671px) {
+  .button2{
+  margin-top: 13rem !important;
+  }
+}
+
+@media only screen and (min-width:1540px) {
+  .button2{
+  margin-top: 10rem !important;
   }
 }
