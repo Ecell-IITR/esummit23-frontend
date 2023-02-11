@@ -94,7 +94,8 @@
 }
 
 .navBut {
-  margin-right: 30px;
+  // margin-right: 30px;
+  margin-right: 2rem;
   display: flex;
   flex-direction: column;
 }
@@ -158,6 +159,7 @@ ul a.active {
   border-radius: 50%;
 }
 @media screen and (max-width: 950px) {
+
   .navbarEsummitLogo {
     margin-left: 35px;
   }
@@ -170,6 +172,7 @@ ul a.active {
 }
 
 .mobile-navbar-majorcontainer {
+  position: relative;
   background: linear-gradient(
     180deg,
     rgba(18, 18, 18, 0.5) 0%,
@@ -184,7 +187,6 @@ ul a.active {
   z-index: 1000;
   display: flex;
   justify-content: space-around;
-
   margin-bottom: 40px;
 }
 
@@ -256,6 +258,7 @@ ul a.active {
 
 @media screen and (max-width: 800px) {
   .mobile-navbar-majorcontainer {
+    width: auto;
   }
   .Hamburger-container {
     cursor: pointer;
