@@ -18,7 +18,7 @@ gap: 2rem;
     // border: 1px solid red;
     font-family: 'Lexend';
     font-weight: 600;
-    font-size:3vw;
+    font-size:3rem;
     color: #DCD1AD;
 }
 .sponsorDescription{
@@ -92,3 +92,27 @@ gap: 2rem;
     border-radius: 0.75rem;
     width: 100%;
 }
+@media screen and (min-width: 1671px) {
+    .landingImage {
+      margin-bottom: -12rem;
+    }
+  }
+  @media screen and (max-width: 941px) {
+    .sponsorHeading {
+      font-size: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .sponsorHeading {
+      font-size: 1.9rem;
+    }
+  }
+    
+    
+  @media screen and (max-width: 644px) {
+    .sponsorHeading {
+      font-size: 4.3vw;
+    }
+  }
+    
