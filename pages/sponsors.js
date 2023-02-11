@@ -37,6 +37,8 @@ function sponsors() {
             </div>
 
            
+            
+
 
             <div className='sponsorBox'>
             <div className='sponsorImage'>
@@ -47,6 +49,8 @@ function sponsors() {
             </div>
             <div className='sponsorType'>Associate Sponsor</div>
           </div>
+
+
 
 
           <div className='sponsorBox'>
