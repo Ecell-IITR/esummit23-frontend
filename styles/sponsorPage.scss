@@ -13,15 +13,16 @@ flex-direction: column;
 gap: 2rem;
 }
 .sponsorHeading{
+    margin-top: -1rem;
     padding:1rem;
     // border: 1px solid red;
     font-style: 'Lexend';
     font-weight: 600;
-    font-size:2.75rem;
-    font-size: 2rem;
+    font-size:3rem;
     color: #DCD1AD;
 }
 .sponsorDescription{
+    margin-top: -2rem;
     padding: 1rem;
     font-style: 'Nunito Sans';
     font-weight: 400;
