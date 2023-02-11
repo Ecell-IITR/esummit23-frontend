@@ -5,6 +5,7 @@ background:linear-gradient(180deg, #12100E 0%, #301A08 100%);
 .workspaceSponsor{
 color: white;
 min-height: 100vh;
+
 height: auto;
 // border: 2px solid white;
 padding: 3rem;
@@ -12,6 +13,7 @@ display: flex;
 flex-direction: column;
 gap: 2rem;
 }
+
 .sponsorHeading{
     margin-top: -1rem;
     padding:1rem;
@@ -71,7 +73,7 @@ gap: 2rem;
 }
 .sponsorType{
     // border: 1px solid white;
-    width: 10.875rem;
+    width: 1rem;
     font-family: 'Lexend';
     font-weight: 600;
     font-size:2rem;
@@ -92,27 +94,53 @@ gap: 2rem;
     border-radius: 0.75rem;
     width: 100%;
 }
-@media screen and (min-width: 1671px) {
-    .landingImage {
-      margin-bottom: -12rem;
-    }
-  }
   @media screen and (max-width: 941px) {
     .sponsorHeading {
-      font-size: 2rem;
+      font-size: 2.4rem;
+    }
+    .sponsorType{
+        font-size:1.9rem;
     }
   }
 
-  @media screen and (max-width: 700px) {
+ 
+    
+  @media screen and (max-width: 775px) {
     .sponsorHeading {
-      font-size: 1.9rem;
+      font-size: 1.8rem;
+    }
+    .sponsorType{
+        font-size:1.6rem;
+    }
+  }
+    
+  @media screen and (max-width: 614px) {
+    .sponsorHeading{
+      font-size: 1.7rem;
+    }
+    .sponsorType{
+        font-size:1.3rem;
+    }
+  }
+
+  @media screen and (max-width:589px) {
+    .sponsorHeading{
+       font-size: 1.5rem;
+       width: 90vw;
+    //    border: 1px solid white;
+    }
+    .sponsorType{
+        font-size:1.1rem;
     }
   }
     
     
   @media screen and (max-width: 645px) {
     .sponsorHeading {
-      font-size: 4.3vw;
+      font-size: 1.3rem;
+    }
+    .sponsorType{
+        font-size:1.1rem;
     }
   }
   @media screen and (max-width: 400px) {
