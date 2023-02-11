@@ -41,7 +41,7 @@ function sponsors() {
 
       <div className='sponsorBox'>
       <div className='sponsorImage'><img className='sponsorImageStaticgrabon' src="sponsorGRABON.jpg"/></div>
-      <div className='sponsorType'>Coupon Partner</div>
+      <div className='sponsorType'>Savings Partner</div>
      </div>
       </div>
 
