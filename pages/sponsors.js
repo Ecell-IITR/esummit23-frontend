@@ -36,16 +36,48 @@ function sponsors() {
               <div className='sponsorType'>Title Sponsor</div>
             </div>
 
+           
+            
+
+
             <div className='sponsorBox'>
-              <div className='sponsorImage'>
-                <img
-                  className='sponsorImageStaticgrabon'
-                  src='sponsorGRABON.jpg'
-                />
-              </div>
-              <div className='sponsorType'>Savings Partner</div>
+            <div className='sponsorImage'>
+              <img
+                className='sponsorImageStaticgrabon'
+                src='sponsorIITRAA.png'
+              />
             </div>
+            <div className='sponsorType'>Associate Sponsor</div>
           </div>
+
+
+
+
+          <div className='sponsorBox'>
+            <div className='sponsorImage'>
+              <img style={{width:"90%",height:"90%"}}
+                className='sponsorImageStaticgrabon'
+                src='sponsorIITRHF.png'
+              />
+            </div>
+            <div className='sponsorType'>Associate Sponsor</div>
+          </div>
+
+
+          <div className='sponsorBox'>
+          <div className='sponsorImage'>
+            <img
+              className='sponsorImageStaticgrabon'
+              src='sponsorGRABON.jpg'
+            />
+          </div>
+          <div className='sponsorType'>Savings Partner</div>
+        </div>
+
+          </div>
+
+    
+
         </div>
         <Footer />
       </div>
