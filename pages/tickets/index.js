@@ -113,7 +113,7 @@ function Login() {
                   }}
                   className={Toggel ? 'toggSetActive' : 'toggActive'}
                 >
-                  Profestional
+                  professional
                 </div>
               </div>
               <input
