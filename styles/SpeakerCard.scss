@@ -1,7 +1,7 @@
 .allSpeakerContainerDiv {
   margin-top: -10%;
   width: 100vw;
-  min-height: 100vh;
+  min-height: 200vh;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -57,8 +57,26 @@
   display: flex;
   flex-direction: column;
   margin: 30px 15px;
+  z-index: 100;
+}
+.fadeUpBox{
+  background: linear-gradient(0deg, #12100E 0%, rgba(18, 16, 14, 0) 100%);
+  width:350px;
+  height:440px;
+  margin-top:-120%;
+  z-index:6;
+  transform:translate(0,0)
 }
 
+.sponsorCard:hover .fadeUpBox{
+  transition:0.3s all ease-in-out;
+  height:150px;
+  transform: translate(0,300px);
+}
+.sponsorCard:not(:hover) .fadeUpBox{
+  transition:0.5s all ease-in-out;
+  height:440px;
+}
 .sponsorCardImage {
   z-index: 1;
   width: 100%;
@@ -68,6 +86,11 @@
 .sponsorCard:hover .sponsorCardImage {
   transform: scale(1.14);
 }
+// .sponsorCard:hover .fadeUpBox {
+//   height:150px;
+//   margin-top:-150%;
+// }
+
 
 .sponsorCardDescription {
   padding: 169px 16px 16px 16px;
@@ -130,6 +153,7 @@
 }
 .sponsorCardBox {
   margin-bottom: 1vh;
+  z-index: 50;
 }
 
 @media only screen and (max-width: 420px) {
@@ -142,12 +166,16 @@
     width: 250px;
     height: 254px;
   }
+  .fadeUpBox{
+    width: 250px;
+    height: 254px;
+  }
   .sponsorCardImage {
     width: 340px;
     height: 254px;
   }
   .sponsorCardYear {
-    margin-top: 21vh;
+    margin-top: 22.5vh;
   }
   .sponsorCardBox {
     margin-bottom: -6vh;
