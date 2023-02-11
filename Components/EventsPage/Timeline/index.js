@@ -8,8 +8,10 @@ export function EventsIdeathon(props) {
   const [rounder,setrounder] =  useState(0);
   const [active, setActive] = useState("");
  
-  const handleClick = (event) => {
-    setActive(event?.target.id);
+  const handleClick = (id) => {
+    setActive(id);
+    console.log("id",id)
+    
   }
   useEffect(() => {
       setActive('1')
@@ -41,24 +43,24 @@ export function EventsIdeathon(props) {
             <div className='secondcontainer'>
               <div className='arrows'>
                 <div className='vl'></div>
-                <div key={1} id={"1"} className={active === "1" ? "firstarrow" : "helpArrow"} onClick={handleClick}>
+                <div style={{zIndex:"50"}} key={1} id="1" className={active === "1" ? "firstarrow" : "helpArrow"} onClick={()=>{ handleClick("1");setrounder(0)}}>
                       <div
-                   key={1} id={"1"}
-                    onClick={() => {
-                      // toast.error('Coming Soon!');
-                      setrounder(0);
-                    }}
+                  //  key={1} id={"1"}
+                  //   onClick={() => {
+                  //     // toast.error('Coming Soon!');
+                  //     setrounder(0);
+                  //   }}
                   >Round 1</div></div>
                 <div className='helpVerticalLine'>
                   <div className={props.round[1]?.tasks==null ? "arrowDisplayNone" : "verticalLine"}></div>
                 </div>
-                <div key={2} id={"2"} className={props.round[1]?.tasks==null ? "arrowDisplayNone" : active === "2" ? "firstarrow" : "helpArrow"} onClick={handleClick}>
+                <div key={2} id="2" className={props.round[1]?.tasks==null ? "arrowDisplayNone" : active === "2" ? "firstarrow" : "helpArrow"} onClick={()=>{ handleClick("2");setrounder(1)}}>
                   <div
-                   key={2} id={"2"}
-                    onClick={() => {
-                      // toast.error('Coming Soon!');
-                      setrounder(1);
-                    }}
+                  //  key={2} id={"2"}
+                  //   onClick={() => {
+                  //     // toast.error('Coming Soon!');
+                  //     setrounder(1);
+                  //   }}
                   >
                     Round 2
                   </div>
@@ -67,15 +69,15 @@ export function EventsIdeathon(props) {
                   <div className={props.round[2]?.tasks==null ? "arrowDisplayNone" : "verticalLine"}></div>
                 </div>
                 <div className={props.round[2]?.tasks==null ? "arrowDisplayNone" : "vl1"}></div>
-                <div key={3} id={"3"} className={props.round[2]?.tasks==null ? "arrowDisplayNone" : active === "3" ? "firstarrow" : "helpArrow"} onClick={handleClick}>
+                <div key={3} id={"3"} className={props.round[2]?.tasks==null ? "arrowDisplayNone" : active === "3" ? "firstarrow" : "helpArrow"} onClick={()=>{ handleClick("3");setrounder(2)}}>
                   <div
                   // className={active === "3" ? "firstarrow" : "helpArrow"}
-                  key={3} id={"3"}
-                    onClick={() => {
-                      // toast.error('Coming Soon!');
-                      setrounder(2);
-                      handleClick;
-                    }}
+                  // key={3} id={"3"}
+                  //   onClick={() => {
+                  //     // toast.error('Coming Soon!');
+                  //     setrounder(2);
+                  //     handleClick;
+                  //   }}
                   >
                     Round 3
                   </div>
