@@ -110,9 +110,15 @@ gap: 2rem;
   }
     
     
-  @media screen and (max-width: 644px) {
+  @media screen and (max-width: 645px) {
     .sponsorHeading {
       font-size: 4.3vw;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .sponsorHeading {
+      font-size: 8.3vw;
+      text-align: center;
     }
   }
     
