@@ -137,6 +137,9 @@
   }
 }
 @media only screen and (max-width: 450px) {
+  .speakerBtnAndTextContainer{
+    justify-content: space-evenly;
+  }
   .viewAllSpeakersBtn{
     display: none !important;
   }
