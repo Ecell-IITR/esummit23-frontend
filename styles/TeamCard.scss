@@ -1,0 +1,77 @@
+.teamCardBox{
+    display: flex;
+    height:20.125rem;
+    width:16.125rem;
+align-items: flex-end;
+}
+
+.teamCardDescription{
+    margin-left:-95%;
+    display:flex;
+    flex-direction: column;
+    gap:2px;
+    margin-bottom:5px;
+}
+
+.teamCardDescriptionName{
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 110%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+}
+
+.teamCardDescriptionPost{
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 110%;
+    display: flex;
+    align-items: center;
+    color: #DCD1AD;
+}
+
+// team page 
+.teamCardPage{
+    min-height:100vh;
+    height:auto;
+    width:100vw;
+    background: linear-gradient(180deg, #12100E 0%, #301A08 100%);
+    display: flex;
+    flex-direction: column;
+    gap:90px;
+    // padding:100px;
+    
+}
+
+.teamCardPageHeading{
+    font-family: 'Lexend';
+font-style: normal;
+font-weight: 600;
+font-size: 44px;
+line-height: 110%;
+display: flex;
+align-items: center;
+color: #DCD1AD;
+padding:0px 100px;
+margin-top:35px;
+}
+
+.teamCardPageDescription{
+    font-family: 'Nunito Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 150%;
+display: flex;
+align-items: center;
+letter-spacing: 0.04em;
+color: #BDBDBD;
+padding:0px 100px;
+
+}
