@@ -61,7 +61,7 @@ function sponsors() {
               <img style={{width:"90%",height:"90%"}}
                 className='sponsorImageStaticgrabon'
                 src='sponsorIITRHF.png'
-                onClick={() => router.push('www.IITRHF.org')}
+                onClick={() => router.push('http://www.IITRHF.org')}
               />
             </div>
             <div className='sponsorType'>Associate Sponsor</div>
