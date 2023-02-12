@@ -1,5 +1,6 @@
 .parentAnimation {
-  background: linear-gradient(180deg, #12100e 51.91%, #1a120c 100%);
+  height: 40rem;
+  background: linear-gradient(180deg, #12100e 51.91%, #100f0e 100%);
 }
 
 .containerAnimationDown {
@@ -78,6 +79,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: -13rem;
 }
 
 .middleAnimationDown {
@@ -246,17 +248,20 @@
 }
 
 @keyframes coin7-animate {
+  0%{
+    margin-right: -35rem;
+  }
   90% {
     transform: rotate(-360deg);
-    margin-top: 27rem;
-    margin-right: -25rem;
-    z-index: 1;
+    margin-top: 24rem;
+    margin-right: -38rem;
+  
   }
   100% {
     transform: rotate(-360deg);
-    margin-top: 26rem;
-    margin-right: -25rem;
-    z-index: 1;
+    margin-top: 23rem;
+    margin-right: -38rem;
+
   }
 }
 
@@ -487,9 +492,9 @@
   justify-content: center;
   align-items: center;
   font-size: 1.8vw;
-  width: 18vw;
+  width:20vw;
   border-radius: 2rem;
-  font-weight: 600;
+  font-weight: 500;
   margin-top: 3rem;
 
 
@@ -499,6 +504,11 @@
   background-color: #DCD1AD !important;
   cursor: pointer;
   color: #12100E;
+}
+.titleSponsorFrontPage{
+  height: 13rem;
+  width: 20rem;
+
 }
 
 @media screen and (max-width: 1160px) {

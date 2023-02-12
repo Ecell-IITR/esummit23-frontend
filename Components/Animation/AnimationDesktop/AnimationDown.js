@@ -88,10 +88,11 @@ function Animation() {
 
       <div className='containerAnimationDown'>
         <div className='upAnimationDown'>
+        <div className='titleSponsorFrontPage'><img src="frontpageNPCI.png" style={{width:"100%",height:"100%"}}></img></div>
         <div  className='dates' >17th-19th FEB</div>
         <div className='mainSummitImage'>
           <img
-            style={{ width: '80vw' }}
+            style={{ width: '70vw' }}
             className='landingImage'
             src='Landing.png'
             alt='landingImage'
