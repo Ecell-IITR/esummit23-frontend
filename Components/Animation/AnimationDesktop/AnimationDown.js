@@ -10,37 +10,31 @@ function Animation() {
       <h2 style={{ display: 'none' }}>E-CELL IIT ROORKEE</h2>
       <h3 style={{ display: 'none' }}>E-CELL IIT ROORKEE</h3>
       <a href='#' style={{ display: 'none' }}></a>
-      {/*
-    <p style={{display:"none"}}>E-Summit IIT Roorkee: A Journey towards Success and Innovation
+      
+    <p style={{display:"none"}}>Esummit IIT Roorkee is a platform that brings together the brightest minds in business, entrepreneurship, and technology to discuss and exchange ideas. This event is a Global Leadership Summit that aims to provide a platform for entrepreneurs, students, and professionals to interact with each other and learn from each other's experiences.
 
-E-Summit IIT Roorkee is a two-day extravaganza that showcases the latest advancements in technology, entrepreneurship, and innovation. The event provides a platform for students, entrepreneurs, and industry experts to come together and discuss various issues related to the current state of technology and how it can be leveraged to drive progress.
+The Global Entrepreneurship Summit is a major highlight of the Esummit IIT Roorkee event. This summit brings together entrepreneurs from all over the world to discuss the latest trends and developments in entrepreneurship. The International Entrepreneurship Summit is a great opportunity for entrepreneurs to network and learn from the best in the business.
 
-Over the years, the E-Summit IIT Roorkee has become one of the most sought-after events in the field of entrepreneurship and innovation. With its focus on fostering innovation and entrepreneurship, the E-Summit provides students with a unique opportunity to learn from the experiences of successful entrepreneurs and leaders in the industry.
+Summit International is an important event for students, professionals, and entrepreneurs. It provides a platform for people to network, learn, and grow in their respective fields. High school track events are a great way for students to showcase their skills and talents.
 
-The E-Summit IIT Roorkee is designed to provide students with a comprehensive understanding of entrepreneurship and innovation. The event features a range of keynote speeches, panel discussions, and interactive sessions that explore the latest trends and challenges in the field.
+A Hackathon is a 24-hour coding competition where developers come together to create innovative software solutions. It is a great opportunity for students and developers to showcase their coding skills and work together to solve real-world problems. The virtual hackathon format has become increasingly popular due to the COVID-19 pandemic and offers a great opportunity for people to participate from the comfort of their own homes.
 
-One of the key highlights of the E-Summit IIT Roorkee is its lineup of keynote speakers. The speakers are some of the most influential and successful entrepreneurs in the industry, and they bring with them a wealth of knowledge and experience that can help students better understand the complexities of entrepreneurship and innovation.
+The Esummit IIT Roorkee event also features a community fest where attendees can come together and enjoy various activities, food, and entertainment. Tickets for the event are available online, and attendees can choose from a variety of ticket packages to suit their needs.
 
-Another key aspect of the E-Summit IIT Roorkee is its focus on hands-on learning. The event features a range of interactive workshops, hackathons, and coding challenges that allow students to put their skills to the test. These hands-on sessions provide students with a unique opportunity to apply their knowledge and gain practical experience in real-world situations.
+The Startup School is a great opportunity for entrepreneurs to learn from experienced business leaders and get valuable advice on how to start and grow a successful business. The Management Fest is a great opportunity for students and professionals to learn about the latest trends and developments in management and network with other like-minded individuals.
 
-The E-Summit IIT Roorkee also provides students with a valuable networking opportunity. With its focus on entrepreneurship and innovation, the event attracts a wide range of entrepreneurs, investors, and industry experts, giving students the chance to connect with the people who can help them achieve their goals.
+The e summit iitm, e cell iit roorkee, e summit iitb, and iit roorkee e summit are all events that aim to bring together the brightest minds in entrepreneurship, technology, and business. The iit roorkee login provides attendees with access to a wealth of resources and information about the event.
 
-The E-Summit IIT Roorkee is a perfect platform for students who are passionate about entrepreneurship and innovation. Whether they are just starting out on their entrepreneurial journey or they are well on their way, the E-Summit provides a wealth of resources and support that can help them achieve their goals.
+Peopleist India is an important platform for people to learn about the latest trends and developments in technology, entrepreneurship, and business. The iitr logo is a symbol of excellence and innovation, and represents the high standards of education and research at IIT Roorkee.
 
-The E-Summit IIT Roorkee also provides students with a unique opportunity to showcase their skills and innovations. With its focus on entrepreneurship and innovation, the event provides students with a platform to showcase their projects and ideas, and to connect with potential investors and customers.
+The iit bombay e cell summit and e summit iit bhu are similar events that aim to bring together entrepreneurs, students, and professionals to discuss and exchange ideas. These events provide a great opportunity for attendees to network, learn, and grow in their respective fields.
 
-For students who are serious about pursuing a career in entrepreneurship and innovation, the E-Summit IIT Roorkee is a must-attend event. The event provides students with a comprehensive understanding of the latest trends and challenges in the field, as well as the practical knowledge and skills they need to succeed.
+In conclusion, the Esummit IIT Roorkee is a great platform for entrepreneurs, students, and professionals to network, learn, and grow in their respective fields. With a variety of events and activities, attendees are sure to find something that appeals to them and provides valuable insights and experiences.
 
-In conclusion, the E-Summit IIT Roorkee is a journey towards success and innovation. With its focus on entrepreneurship and innovation, the event provides students with a platform to learn from the best in the industry, to connect with potential investors and customers, and to showcase their skills and innovations. Whether you are just starting out on your entrepreneurial journey or you are well on your way, the E-Summit IIT Roorkee is the perfect platform to help you achieve your goals and reach your full potential.
-
-
-
-</p>*/}
+</p>
 
       <div className='containerAnimationDown'>
         <div className='upAnimationDown'>
-        <div className='titleSponsorFrontPage'><img src="frontpageNPCI.png" style={{width:"100%",height:"100%"}}></img></div>
-        <div  className='dates' >17th-19th FEB</div>
         <div className='mainSummitImage'>
           <img
             style={{ width: '70vw' }}
