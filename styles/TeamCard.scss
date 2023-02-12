@@ -2,15 +2,31 @@
     display: flex;
     height:20.125rem;
     width:16.125rem;
-align-items: flex-end;
+align-items: center;
+flex-direction: column;
 }
 
 .teamCardDescription{
-    margin-left:-95%;
+    // margin-left:-24%;
     display:flex;
     flex-direction: column;
     gap:2px;
-    margin-bottom:5px;
+    margin-top:-72%;
+    transform: translate(0,0);
+}
+.teamCardDescription1{
+    // margin-left:-24%;
+    display:flex;
+    flex-direction: column;
+    gap:2px;
+    margin-top:-72%;
+    transform: translate(0,0);
+}
+
+.blackShade{
+    margin-top:11.2%;
+    width:16.125rem;
+    height:9.8rem;
 }
 
 .teamCardDescriptionName{
@@ -23,6 +39,8 @@ align-items: flex-end;
     align-items: center;
     letter-spacing: 1px;
     color: #FFFFFF;
+    margin-top: -28.5%;
+    // background: linear-gradient(0deg, #12100E 0%, rgba(18, 16, 14, 0) 100%);
 }
 
 .teamCardDescriptionPost{
@@ -34,11 +52,79 @@ align-items: flex-end;
     display: flex;
     align-items: center;
     color: #DCD1AD;
+    // background: linear-gradient(0deg, #12100E 0%, rgba(18, 16, 14, 0) 100%);
 }
+
+.teamCardBoxSocialMedia{
+    // margin-bottom:-21%;
+    opacity: 0;
+    display: flex;
+    gap:6px;
+    // background: linear-gradient(0deg, #12100E 0%, rgba(18, 16, 14, 0) 100%);
+
+    
+}
+  .teamCardBox:hover .blackShade{
+    transition:0.3s all ease-in-out;
+    height:16rem;
+    margin-top:-24%;
+  }
+  .teamCardBox:not(:hover) .blackShade{
+    transition:0.3s all ease-in-out;
+  }
+  .fadeUpBox1:hover .teamCardBoxSocialMedia{
+    transition: 0.4s ease-in-out;
+    animation: moveUp 0.5s ease-in-out;
+    opacity: 1;
+  }
+//   .teamCardBox:hover .fadeUpBox2{
+//     transition:0.6s all ease-in-out;
+//     animation:moveUp2 0.5s ease-in-out;
+//   }
+//   .teamCardBox:not(:hover) .fadeUpBox2{
+//     transition:0.6s all ease-in-out;
+//     height:10rem;
+//   }
+
+@keyframes moveUp{
+    0%   {opacity: 0;}
+    25%  {opacity: 0;}
+    50%  {opacity: 0;}
+    75%  {opacity: 0.8;}
+    100% {opacity: 1;}
+}
+// @keyframes moveUp2{
+//     0%   {display: none;}
+//     50%  {display: flex;}
+//     100% {display: flex;}
+// }
+.teamCardBox:hover .teamCardBoxSocialMedia{
+    transition: 0.4s ease-in-out;
+    animation: moveUp 0.5s ease-in-out;
+    opacity: 1;
+}
+
+
+@keyframes moveUp{
+    0%   {opacity: 0;}
+    25%  {opacity: 0;}
+    50%  {opacity: 1;}
+    75%  {opacity: 1;}
+    100% {opacity: 1;}
+}
+
+.teamCardBox:hover .teamCardDescription1{
+    transition: 0.3s all ease-in-out;
+    transform: translate(0,-45px);
+    display: flex;
+    // flex-direction: column;
+    gap:6px;
+}
+
 
 // team page 
 .teamCardPage{
-    min-height:100vh;
+    min-height:200vh;
     height:auto;
     width:100vw;
     background: linear-gradient(180deg, #12100E 0%, #301A08 100%);

@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import TeamCardData from './TeamCardData';
 import Navbar from '../Navbar';
 import FetchApi from '../../utils/fetchAPI';
@@ -6,12 +6,15 @@ import { TEAM_API } from '../../utils/APIs';
 const TeamCard = () => {
 
     const [TeamData,setTeamData] = useState([]);
-
-    FetchApi('get',TEAM_API,null,null)
-    .then((res) => {
-        setTeamData(res.data.data);
-      })
-      .catch((err) => {});
+     useEffect(() => {
+       FetchApi('get',TEAM_API,null,null)
+       .then((res) => {
+        console.log(res.data)
+           setTeamData(res.data);
+         })
+         .catch((err) => {});
+     }, [])
+     
   return (
     <>
       <div className='teamCardPage'>
@@ -23,21 +26,38 @@ const TeamCard = () => {
           entrepreneurs, and industry leaders from across the country.
         </div>
         <div style={{display:"flex" ,justifyContent:"center",gap:"93px",flexWrap:"wrap"}}>
-          {TeamData.map((current, index) => {
+          {TeamData?.map((current, index) => {
             return (
+              <>
               <div className='teamCardBox'>
-                <img src={current.Img} />
+                <img src={current.profile_image} width="258px" height="322px"/>
                 <div className='teamCardDescription'>
+                  <img className='blackShade' src="/blackshade.png"/>
+                  <div className='teamCardDescription1'>
                   <div className='teamCardDescriptionName'>{current.name}</div>
-                  <div className='teamCardDescriptionPost'>{current.Post}</div>
-                  <div style={{ display: 'flex', gap: '6px' }}>
+                  <div className='teamCardDescriptionPost'>{current.designation}</div>
+                  <div className='teamCardBoxSocialMedia'>
+                    <a href={current.team_facebook}>
                     <img src='/facebook.png' />
+                    </a>
+
+                    <a href={current.team_twitter}>
                     <img src='/Twitter.png' />
+                    </a>
+                     <a href={current.team_instagram}>
                     <img src='/Instagram.png' />
+                      </a>
+                    <a href={current.team_linkedin}>
                     <img src='/LinkedIN.png' />
+                    </a>
+
+                  </div>
                   </div>
                 </div>
               </div>
+                {/* <div className='fadeUpBox1'/> */}
+                {/* <div className='fadeUpBox2'/> */}
+              </>
             );
           })}
         </div>
