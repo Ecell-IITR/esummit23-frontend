@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../Components/Navbar/index';
 import Footer from '../Components/Footer/Footer';
 import sponsor from '../public/sponsorNPCI.png';
+import { useRouter } from 'next/router';
 const SponsData = [
   {
     id: '1',
@@ -16,6 +17,7 @@ const SponsData = [
 ];
 
 function sponsors() {
+  const router = useRouter();
   return (
     <>
       <div className='sponsorContainer'>
@@ -43,6 +45,7 @@ function sponsors() {
             <div className='sponsorBox'>
             <div className='sponsorImage'>
               <img
+                onClick={() => router.push('http://www.iitraa.in/')}
                 className='sponsorImageStaticgrabon'
                 src='sponsorIITRAA.png'
               />
@@ -58,6 +61,7 @@ function sponsors() {
               <img style={{width:"90%",height:"90%"}}
                 className='sponsorImageStaticgrabon'
                 src='sponsorIITRHF.png'
+                onClick={() => router.push('www.IITRHF.org')}
               />
             </div>
             <div className='sponsorType'>Associate Sponsor</div>
