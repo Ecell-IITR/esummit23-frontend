@@ -95,6 +95,43 @@ gap: 2rem;
     width: 100%;
     cursor: pointer;
 }
+
+.titleSponsor{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    // border: 1px solid red;
+    width: 100%;
+}
+.associateSponsor{
+    // border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap:wrap;
+    gap: 25vw;
+}
+.otherSponsors{
+    // border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap:wrap;
+    gap: 25vw;
+
+}
+.patronage{
+    // border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap:wrap;
+    gap: 10vw;
+
+}
   @media screen and (max-width: 941px) {
     .sponsorHeading {
       font-size: 2.4rem;
