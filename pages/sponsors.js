@@ -150,7 +150,7 @@ function sponsors() {
               <div className='sponsorImage'>
                 <img
                 className='sponsorImageStaticgrabon'
-                src='sponsorRedseer.jpeg'
+                src='sponsorRedseer.png'
                 />
               </div>
             <div className='sponsorType'>Knowledge Partner</div>
@@ -168,7 +168,7 @@ function sponsors() {
               <div className='sponsorImage'>
                 <img
                 className='sponsorImageStaticgrabon'
-                src='sponsorMba.jpeg'
+                src='sponsorMba.png'
                 />
               </div>
             <div className='sponsorType'>Business Education Partner</div>
@@ -187,7 +187,7 @@ function sponsors() {
               <div className='sponsorImage'>
                 <img
                 className='sponsorImageStaticgrabon'
-                src='sponsorInterviewbuddy.jpeg'
+                src='sponsorInterviewbuddy.png'
                 />
               </div>
             <div className='sponsorType'>Preparation Partner</div>
@@ -205,7 +205,7 @@ function sponsors() {
               <div className='sponsorImage'>
                 <img
                 className='sponsorImageStaticgrabon'
-                src='sponsorElearnMarkets.jpeg'
+                src='sponosrElearnmarkets.jpg'
                 />
               </div>
             <div className='sponsorType'>Event Partner</div>
@@ -214,7 +214,7 @@ function sponsors() {
               <div className='sponsorImage'>
                 <img
                 className='sponsorImageStaticgrabon'
-                src='sponsorCodingal.jpeg'
+                src='sponsorCodingal.jpg'
                 />
               </div>
             <div className='sponsorType'>Event Partner</div>
@@ -235,7 +235,7 @@ function sponsors() {
               <div className='sponsorImage'>
                 <img
                 className='sponsorImageStaticgrabon'
-                src='sponsorBurgeonlaw.jpeg'
+                src='sponsorBurgeonlaw.jpg'
                 />
               </div>
             <div className='sponsorType'>Legal Partner</div>
