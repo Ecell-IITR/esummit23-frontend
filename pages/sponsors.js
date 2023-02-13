@@ -47,7 +47,7 @@ function sponsors() {
 
           <div className='associateSponsor'>
 
-             <div className='sponsorBox'>
+             <div className='sponsorBox' onClick={()=>{router.push("http://www.iitraa.in/")}}>
                 <div className='sponsorImage'>
                   <img
                     className='sponsorImageStaticgrabon'
@@ -59,7 +59,7 @@ function sponsors() {
 
     
           <div className='sponsorBox'>
-            <div className='sponsorImage'>
+            <div className='sponsorImage' onClick={()=>{router.push("https://www.iitr-heritagefund.org/")}}>
               <img style={{width:"90%",height:"90%"}}
                 className='sponsorImageStaticgrabon'
                 src='sponsorIITRHF.png'
