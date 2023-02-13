@@ -38,7 +38,7 @@ const SecondLandingPage = () => {
     return (
       <div
         style={{
-          backgroundImage: 'url(/mblp.png)',
+          backgroundImage: 'url(/bghomemob.png)',
           height: `${height}vh`,
           backgroundSize: `${100}vw ${height}vh`,
         }}

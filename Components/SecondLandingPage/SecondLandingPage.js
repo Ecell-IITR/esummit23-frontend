@@ -12,7 +12,7 @@ const SecondLandingPage = () => {
     <>
       <div>
         <div className='secondLandingPage'>
-          <img src='secondLP.webp' width='100%' height='100%' />
+          <img src='secondLP.webp' width='100%'  className='secondLPImg'/>
 
           <div
             className='secondLandingPageImg'
