@@ -1,8 +1,11 @@
 .secondLandingPageMobile {
   width: 100vw;
-  height: 160vh;
+  height: 150vh;
+  margin-top: -70%;
 }
-
+.secondLandingPage{
+  margin-top: auto;
+}
 .secondLandingPageMobileBackground {
   width: 100vw;
   height: 160vh;
@@ -25,6 +28,7 @@
   text-align: center;
   color: #dcd1ad;
   padding-bottom: 64px;
+  margin-top: 7rem;
 }
 
 .secondLandingPageMobileDescription1 {

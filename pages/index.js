@@ -253,7 +253,7 @@ export default function Home(props) {
                 onClick={HandleSubmit}
                 className='viewAllSpeakersBtn2nd'
               >
-              'View All Speakers'
+              View All Speakers
               </button>
             </div>
              
