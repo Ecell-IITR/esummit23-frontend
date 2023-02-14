@@ -13,6 +13,7 @@ import Events from '../pages/events';
 import { ALL_EVENTS_API } from '../utils/APIs';
 import Link from 'next/link';
 import Router from 'next/router';
+import TeamCard from '../Components/TeamPage/TeamCard';
 
 export default function Home(props) {
   const HandleSubmit = (e) => {
@@ -32,7 +33,7 @@ export default function Home(props) {
       {/* <div className='LottieContainer'>
         <Lottie options={defaultOptions} />
       </div> */}
-
+      
       <div className='Seo-text'>
         <p>
           To find a way out of the darkness that has engulfed us over the past
@@ -271,6 +272,7 @@ export default function Home(props) {
       <div style={{ background: '#301b09' }}>
         <Footer />
       </div>
+      {/* <TeamCard/> */}
     </>
   );
 }

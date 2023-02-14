@@ -22,6 +22,8 @@ const Speaker = (props) => {
           <div className='speakerCardContainerDiv'>
             {Data &&
               Data.map((Elements) => (
+                <>
+                
                 <div key={Elements.id} className='sponsorCard'>
                   <Image
                     className='sponsorCardImage'
@@ -29,6 +31,7 @@ const Speaker = (props) => {
                     height={484}
                     width={416}
                   />
+                  
                   <div className='sponsorCardDescription'>
                     <div className='sponsorCardYear'>{Elements.event_year}</div>
                     <div
@@ -57,7 +60,10 @@ const Speaker = (props) => {
                       </div>
                     </div>
                   </div>
+                  
+                <div className='fadeUpBox'/>
                 </div>
+                </>
               ))}
           </div>
         </div>

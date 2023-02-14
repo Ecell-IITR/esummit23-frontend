@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { getUserRoleType } from '../../utils';
 import { isAuthenticated, unAuthenticate } from '../../utils';
+import TeamCard from '../TeamPage/TeamCard';
 
 function NavDesktop() {
   const roleType = getUserRoleType();
@@ -31,6 +32,9 @@ function NavDesktop() {
         break;
       case '/about':
         setActive('about');
+        break;
+      case '/TeamPage':
+        setActive('TeamPage');
         break;
       default:
         setActive('');
@@ -101,6 +105,16 @@ function NavDesktop() {
             >
               Tickets
               <div className={'tickets' == active ? 'circle' : ''} />
+            </div>
+          </Link>
+        </li>
+        <li>
+          <Link href="/TeamPage">
+            <div
+              className={'TeamPage' == active ? 'navbarActive' : 'navbarListBox'}
+            >
+              Team
+              <div className={'TeamPage' == active ? 'circle' : ''} />
             </div>
           </Link>
         </li>
