@@ -20,11 +20,11 @@ const TeamCard = () => {
       <div className='teamCardPage'>
     <Navbar/>
         <div className='teamCardPageHeading'>Team E-Summit’23</div>
-        <div className='teamCardPageDescription'>
+        {/* <div className='teamCardPageDescription'>
           This year, we are excited to host a wide range of events and
           competitions to showcase the talents and ideas of students,
           entrepreneurs, and industry leaders from across the country.
-        </div>
+        </div> */}
         <div style={{display:"flex" ,justifyContent:"center",gap:"93px",flexWrap:"wrap"}}>
           {TeamData?.map((current, index) => {
             return (
