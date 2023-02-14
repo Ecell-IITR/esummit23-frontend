@@ -1,5 +1,5 @@
 .thirdLandingAnimationPage {
-  height: 120vh;
+  height: 135vh;
   margin-top: 10vw;
   width: 100vw;
   background-color: #ba6d39;
@@ -97,4 +97,13 @@
 
 .thirdAnimationVideo {
   z-index: 50;
+  
+}
+@media only screen and (min-width: 1245px) {
+  // .thirdAnimationVideo {
+  //   margin-top: 40%;
+  // }
+  .thirdLandingAnimationPage{
+    padding-top: 10%;
+  }
 }

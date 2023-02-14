@@ -17,7 +17,7 @@ const ThirdLandingPageAnimation = () => {
             <div
               data-aos='fade-right'
               data-aos-duration='900'
-              data-aos-offset='200'
+              data-aos-offset='150'
               data-aos-anchor-placement='top-center'
               className='thirdLandingAnimationPageBox1'
             >
@@ -43,7 +43,7 @@ const ThirdLandingPageAnimation = () => {
         className='thirdLandingAnimationPageBox2'
         data-aos='fade-left'
         data-aos-duration='900'
-        data-aos-offset='200'
+        data-aos-offset='450'
         data-aos-anchor-placement='top-bottom'
         style={{ width: '40vw' }}
       >

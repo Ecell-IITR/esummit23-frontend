@@ -1,0 +1,238 @@
+.sponsorContainer{
+background:linear-gradient(180deg, #12100E 0%, #301A08 100%);
+}
+
+.workspaceSponsor{
+color: white;
+min-height: 100vh;
+
+height: auto;
+// border: 2px solid white;
+padding: 3rem;
+display: flex;
+flex-direction: column;
+gap: 2rem;
+}
+
+.sponsorHeading{
+    margin-top: -1rem;
+    padding:1rem;
+    // border: 1px solid red;
+    font-family: 'Lexend';
+    font-weight: 600;
+    font-size:3rem;
+    color: #DCD1AD;
+}
+.sponsorDescription{
+    display: none;
+
+    margin-top: -2rem;
+    padding: 1rem;
+    font-family: 'Nunito Sans';
+    font-weight: 400;
+    margin-top: 5.188;
+    font-size: 1rem;
+    // height: 3.375rem;
+    // border: 1px solid red;
+    line-height: 150%;
+    color:#BDBDBD;
+
+}
+.sponsorImageandTypeSection{
+    // border: 2px solid red;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5.313rem;
+}
+
+.sponsorBox{
+    // border: 1px solid red;
+    height: 24.5rem;
+    width: 13.875rem;
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #BA6D39;
+}
+
+.sponsorImage{
+    margin-top: -.5rem;
+    height: 14.875rem;
+    width: 15.875rem;
+    // border: 1px solid red;
+    border-radius: 0.75rem;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px 12px rgba(46, 25, 8, 0.1), 0px 0px 15px 10px rgba(46, 25, 8, 0.05);
+
+}
+.sponsorType{
+    // border: 1px solid white;
+    width: 1rem;
+    font-family: 'Lexend';
+    font-weight: 600;
+    font-size:2rem;
+    display: flex;
+    justify-content: center;
+    text-align: center; 
+    margin-top: 1rem;
+
+    
+}
+.sponsorImageStatic{
+    overflow: hidden;
+    height: 100%;
+    width: 90%;
+}
+.sponsorImageStaticgrabon{
+    height: 100%;
+    border-radius: 0.75rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+.titleSponsor{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    // border: 1px solid red;
+    width: 100%;
+}
+.associateSponsor{
+    // border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap:wrap;
+    gap: 25vw;
+}
+.otherSponsors{
+    // border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap:wrap;
+    gap: 25vw;
+
+}
+.patronage{
+    // border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap:wrap;
+    gap: 10vw;
+
+}
+  @media screen and (max-width: 941px) {
+    .sponsorHeading {
+      font-size: 2.4rem;
+    }
+    .sponsorType{
+        font-size:1.9rem;
+    }
+  }
+
+ 
+    
+  @media screen and (max-width: 775px) {
+    .sponsorHeading {
+      font-size: 2.2rem;
+    }
+    .sponsorType{
+        font-size:1.6rem;
+    }
+  }
+    
+  @media screen and (max-width: 721px) {
+    .sponsorHeading{
+      font-size: 2rem;
+    }
+    .sponsorType{
+        font-size:1.3rem;
+    }
+  }
+
+  @media screen and (max-width:667px) {
+    .sponsorHeading{
+       font-size: 1.9rem;
+       width: 90vw;
+    //    border: 1px solid white;
+    }
+    .sponsorType{
+        font-size:1.2rem;
+    }
+  }
+    
+    
+  @media screen and (max-width: 645px) {
+    .sponsorHeading {
+      font-size: 1.7rem;
+    }
+    .sponsorType{
+        font-size:1.3rem;
+    }
+  }
+
+  @media screen and (max-width: 546px) {
+    .sponsorHeading {
+      font-size: 1.6rem;
+      text-align: center;
+      margin-left: -1.5rem;
+    }
+    .sponsorType{
+        font-size:1.2rem;
+    }
+  }
+
+
+    
+  @media screen and (max-width: 518px) {
+    .sponsorHeading {
+      font-size: 1.5rem;
+    }
+    .sponsorType{
+        font-size:1.2rem;
+    }
+  }
+
+     
+  @media screen and (max-width: 488px) {
+    .sponsorHeading {
+      font-size: 1.3rem;
+    }
+    .sponsorType{
+        font-size:1rem;
+    }
+  }
+
+  @media screen and (max-width: 426px) {
+    .sponsorHeading {
+        padding: 0rem;
+      font-size: 1.3rem;
+    }
+    .sponsorType{
+        font-size:.9rem;
+    }
+  }
+
+  @media screen and (max-width: 390px) {
+    .sponsorHeading {
+      padding: 0rem;
+      font-size: 1.1rem;
+    }
+    .sponsorType{
+        font-size:1rem;
+    }
+  }
+
+
+    
