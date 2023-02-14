@@ -267,13 +267,13 @@
 
 .coinContainerAnimation {
   width: 100%;
-  height: 61rem;
+  min-height: 61rem;
   // border: 1px solid white;
   display: flex;
+  background-color: black;
   flex-direction: column;
   align-items: flex-start;
   align-items: center;
-  gap: 6rem;
   animation: coinContainerAnimation-animate 1.7s;
 }
 
@@ -494,7 +494,7 @@
   font-size: 1.8vw;
   width:20vw;
   border-radius: 2rem;
-  font-weight: 500;
+  font-weight: 800;
   margin-top: 16vh;
 
 

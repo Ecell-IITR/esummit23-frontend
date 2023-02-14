@@ -13,6 +13,7 @@ const SecondLandingPage = () => {
         <img
           className='secondLandingPageMobileBackground'
           src='mob-2ndanimation.webp'
+         
         />
         <div
           className='secondLandingPageMobileBox'

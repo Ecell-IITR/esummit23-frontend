@@ -1,14 +1,17 @@
 .secondLandingPage {
-  width: 100vw;
+  width: 100vw;;
+  padding-top: 10%;
   // height: 100vh;
 }
 
 .wheel {
   margin-bottom: 190px;
 }
-
+.secondLPImg{
+  height: 50rem;
+}
 .secondLandingPageBox {
-  margin-top: -80vh;
+  margin-top: -50%;
   margin-left: 12vw;
   display: flex;
   flex-direction: column;
@@ -102,5 +105,10 @@
 @media only screen and (max-width: 950px) {
   .secondLandingPageDescription {
     font-size: 15px;
+  }
+}
+@media only screen and (min-width: 1235px){
+  .secondLandingPageBox{
+    margin-top: -40%;
   }
 }
