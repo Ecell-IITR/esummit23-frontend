@@ -31,195 +31,195 @@ function sponsors() {
           </div>
 
           <div className='sponsorImageandTypeSection'>
-
-
-
-          <div className="titleSponsor">
-             <div className='sponsorBox'>
-              <div className='sponsorImage'>
-                <img className='sponsorImageStatic' src='sponsorNPCI.png' />
+            <div className='titleSponsor'>
+              <div className='sponsorBox'>
+                <div className='sponsorImage'>
+                  <img className='sponsorImageStatic' src='sponsorNPCI.png' />
+                </div>
+                <div className='sponsorType'>Title Sponsor</div>
               </div>
-              <div className='sponsorType'>Title Sponsor</div>
-             </div>
-          </div>
+            </div>
 
-
-
-          <div className='associateSponsor'>
-
-             <div className='sponsorBox' onClick={()=>{router.push("http://www.iitraa.in/")}}>
+            <div className='associateSponsor'>
+              <div
+                className='sponsorBox'
+                onClick={() => {
+                  router.push('http://www.iitraa.in/');
+                }}
+              >
                 <div className='sponsorImage'>
                   <img
                     className='sponsorImageStaticgrabon'
                     src='sponsorIITRAA.png'
                   />
                 </div>
-              <div className='sponsorType'>Associate Sponsor</div>
-          </div>
+                <div className='sponsorType'>Associate Sponsor</div>
+              </div>
 
-    
-          <div className='sponsorBox'>
-            <div className='sponsorImage' onClick={()=>{router.push("https://www.iitr-heritagefund.org/")}}>
-              <img style={{width:"90%",height:"90%"}}
-                className='sponsorImageStaticgrabon'
-                src='sponsorIITRHF.png'
-              />
+              <div className='sponsorBox'>
+                <div
+                  className='sponsorImage'
+                  onClick={() => {
+                    router.push('https://www.iitr-heritagefund.org/');
+                  }}
+                >
+                  <img
+                    style={{ width: '90%', height: '90%' }}
+                    className='sponsorImageStaticgrabon'
+                    src='sponsorIITRHF.png'
+                  />
+                </div>
+                <div className='sponsorType'>Associate Sponsor</div>
+              </div>
             </div>
-            <div className='sponsorType'>Associate Sponsor</div>
-          </div>
 
-          </div>
-
-
-
-          <div className='patronage'>
-          <div className='sponsorBox'>
-          <div className='sponsorImage'>
-            <img
-            className='sponsorImageStaticgrabon'
-            src='patronageG20.png'
-            />
-          </div>
-        <div className='sponsorType'>Patronage</div>
-      </div>
-
-
-      <div className='sponsorBox'>
-          <div className='sponsorImage'>
-            <img
-            className='sponsorImageStaticgrabon'
-            src='patronageMDI.png'
-            />
-          </div>
-        <div className='sponsorType'>Patronage</div>
-      </div>
-      <div className='sponsorBox'>
-          <div className='sponsorImage'>
-            <img
-            className='sponsorImageStaticgrabon'
-            src='patronageSTI.png'
-            />
-          </div>
-        <div className='sponsorType'>Patronage</div>
-      </div>
-
-      <div className='sponsorBox'>
-          <div className='sponsorImage'>
-            <img
-            className='sponsorImageStaticgrabon'
-            src='patronageSU.png'
-            />
-          </div>
-        <div className='sponsorType'>Patronage</div>
-      </div>
-
-      <div className='sponsorBox'>
-          <div className='sponsorImage'>
-            <img
-            className='sponsorImageStaticgrabon'
-            src='patronageUNESCO.png'
-            />
-          </div>
-        <div className='sponsorType'>Patronage</div>
-      </div>
-          
-          </div>
-
-
-          <div className='otherSponsors' >
-            <div className='sponsorBox'>
-              <div className='sponsorImage'>
-                <img
-                className='sponsorImageStaticgrabon'
-                src='sponsorGRABON.jpg'
-                />
+            <div className='patronage'>
+              <div className='sponsorBox'>
+                <div className='sponsorImage'>
+                  <img
+                    className='sponsorImageStaticgrabon'
+                    src='patronageG20.png'
+                  />
+                </div>
+                <div className='sponsorType'>Patronage</div>
               </div>
-            <div className='sponsorType'>Savings Partner</div>
-          </div>
 
-          <div className='sponsorBox'>
-              <div className='sponsorImage'>
-                <img
-                className='sponsorImageStaticgrabon'
-                src='sponsorUnstop.jpeg'
-                />
+              <div className='sponsorBox'>
+                <div className='sponsorImage'>
+                  <img
+                    className='sponsorImageStaticgrabon'
+                    src='patronageMDI.png'
+                  />
+                </div>
+                <div className='sponsorType'>Patronage</div>
               </div>
-            <div className='sponsorType'>Hosting Partner</div>
-          </div>
-          <div className='sponsorBox'>
-              <div className='sponsorImage'>
-                <img
-                className='sponsorImageStaticgrabon'
-                src='sponsorRedseer.png'
-                />
+              <div className='sponsorBox'>
+                <div className='sponsorImage'>
+                  <img
+                    className='sponsorImageStaticgrabon'
+                    src='patronageSTI.png'
+                  />
+                </div>
+                <div className='sponsorType'>Patronage</div>
               </div>
-            <div className='sponsorType'>Knowledge Partner</div>
-          </div>
-          <div className='sponsorBox'>
-              <div className='sponsorImage'>
-                <img
-                className='sponsorImageStaticgrabon'
-                src='sponsorProductfolks.jpeg'
-                />
-              </div>
-            <div className='sponsorType'>Event Partner</div>
-          </div>
-          <div className='sponsorBox'>
-              <div className='sponsorImage'>
-                <img
-                className='sponsorImageStaticgrabon'
-                src='sponsorMba.png'
-                />
-              </div>
-            <div className='sponsorType'>Business Education Partner</div>
-          </div>
-          <div className='sponsorBox'>
-              <div className='sponsorImage'>
-                <img
-                className='sponsorImageStaticgrabon'
-                src='sponsorIvygrowth.jpeg'
-                />
-              </div>
-            <div className='sponsorType'>Acceleration Partner</div>
-          </div>
 
-          <div className='sponsorBox'>
-              <div className='sponsorImage'>
-                <img
-                className='sponsorImageStaticgrabon'
-                src='sponsorInterviewbuddy.png'
-                />
+              <div className='sponsorBox'>
+                <div className='sponsorImage'>
+                  <img
+                    className='sponsorImageStaticgrabon'
+                    src='patronageSU.png'
+                  />
+                </div>
+                <div className='sponsorType'>Patronage</div>
               </div>
-            <div className='sponsorType'>Preparation Partner</div>
-          </div>
-          <div className='sponsorBox'>
-              <div className='sponsorImage'>
-                <img
-                className='sponsorImageStaticgrabon'
-                src='sponsorEntrepreneurinida.jpeg'
-                />
+
+              <div className='sponsorBox'>
+                <div className='sponsorImage'>
+                  <img
+                    className='sponsorImageStaticgrabon'
+                    src='patronageUNESCO.png'
+                  />
+                </div>
+                <div className='sponsorType'>Patronage</div>
               </div>
-            <div className='sponsorType'>Media Partner</div>
-          </div>
-          <div className='sponsorBox'>
-              <div className='sponsorImage'>
-                <img
-                className='sponsorImageStaticgrabon'
-                src='sponosrElearnmarkets.jpg'
-                />
+            </div>
+
+            <div className='otherSponsors'>
+              <div className='sponsorBox'>
+                <div className='sponsorImage'>
+                  <a href='https://www.grabon.in/'>
+                    <img
+                      className='sponsorImageStaticgrabon'
+                      src='sponsorGRABON.jpg'
+                    />
+                  </a>
+                </div>
+                <div className='sponsorType'>Savings Partner</div>
               </div>
-            <div className='sponsorType'>Event Partner</div>
-          </div>
-          <div className='sponsorBox'>
-              <div className='sponsorImage'>
-                <img
-                className='sponsorImageStaticgrabon'
-                src='sponsorCodingal.jpg'
-                />
+
+              <div className='sponsorBox'>
+                <div className='sponsorImage'>
+                  <img
+                    className='sponsorImageStaticgrabon'
+                    src='sponsorUnstop.jpeg'
+                  />
+                </div>
+                <div className='sponsorType'>Hosting Partner</div>
               </div>
-            <div className='sponsorType'>Event Partner</div>
-          </div>
-          {/*
+              <div className='sponsorBox'>
+                <div className='sponsorImage'>
+                  <img
+                    className='sponsorImageStaticgrabon'
+                    src='sponsorRedseer.png'
+                  />
+                </div>
+                <div className='sponsorType'>Knowledge Partner</div>
+              </div>
+              <div className='sponsorBox'>
+                <div className='sponsorImage'>
+                  <img
+                    className='sponsorImageStaticgrabon'
+                    src='sponsorProductfolks.jpeg'
+                  />
+                </div>
+                <div className='sponsorType'>Event Partner</div>
+              </div>
+              <div className='sponsorBox'>
+                <div className='sponsorImage'>
+                  <img
+                    className='sponsorImageStaticgrabon'
+                    src='sponsorMba.png'
+                  />
+                </div>
+                <div className='sponsorType'>Business Education Partner</div>
+              </div>
+              <div className='sponsorBox'>
+                <div className='sponsorImage'>
+                  <img
+                    className='sponsorImageStaticgrabon'
+                    src='sponsorIvygrowth.jpeg'
+                  />
+                </div>
+                <div className='sponsorType'>Acceleration Partner</div>
+              </div>
+
+              <div className='sponsorBox'>
+                <div className='sponsorImage'>
+                  <img
+                    className='sponsorImageStaticgrabon'
+                    src='sponsorInterviewbuddy.png'
+                  />
+                </div>
+                <div className='sponsorType'>Preparation Partner</div>
+              </div>
+              <div className='sponsorBox'>
+                <div className='sponsorImage'>
+                  <img
+                    className='sponsorImageStaticgrabon'
+                    src='sponsorEntrepreneurinida.jpeg'
+                  />
+                </div>
+                <div className='sponsorType'>Media Partner</div>
+              </div>
+              <div className='sponsorBox'>
+                <div className='sponsorImage'>
+                  <img
+                    className='sponsorImageStaticgrabon'
+                    src='sponosrElearnmarkets.jpg'
+                  />
+                </div>
+                <div className='sponsorType'>Event Partner</div>
+              </div>
+              <div className='sponsorBox'>
+                <div className='sponsorImage'>
+                  <img
+                    className='sponsorImageStaticgrabon'
+                    src='sponsorCodingal.jpg'
+                  />
+                </div>
+                <div className='sponsorType'>Event Partner</div>
+              </div>
+              {/*
           <div className='sponsorBox'>
               <div className='sponsorImage'>
                 <img
@@ -231,84 +231,82 @@ function sponsors() {
           </div>
           */}
 
-          <div className='sponsorBox'>
-              <div className='sponsorImage'>
-                <img
-                className='sponsorImageStaticgrabon'
-                src='sponsorBurgeonlaw.jpg'
-                />
+              <div className='sponsorBox'>
+                <div className='sponsorImage'>
+                  <img
+                    className='sponsorImageStaticgrabon'
+                    src='sponsorBurgeonlaw.jpg'
+                  />
+                </div>
+                <div className='sponsorType'>Legal Partner</div>
               </div>
-            <div className='sponsorType'>Legal Partner</div>
-          </div>
-          <div className='sponsorBox'>
-              <div className='sponsorImage'>
-                <img
-                className='sponsorImageStaticgrabon'
-                src='sponsorBuilderstribe.jpeg'
-                />
+              <div className='sponsorBox'>
+                <div className='sponsorImage'>
+                  <img
+                    className='sponsorImageStaticgrabon'
+                    src='sponsorBuilderstribe.jpeg'
+                  />
+                </div>
+                <div className='sponsorType'>Web3.0 Partner</div>
               </div>
-            <div className='sponsorType'>Web3.0 Partner</div>
-          </div>
-          <div className='sponsorBox'>
-              <div className='sponsorImage'>
-                <img
-                className='sponsorImageStaticgrabon'
-                src='sponsorStockgrow.jpeg'
-                />
+              <div className='sponsorBox'>
+                <div className='sponsorImage'>
+                  <img
+                    className='sponsorImageStaticgrabon'
+                    src='sponsorStockgrow.jpeg'
+                  />
+                </div>
+                <div className='sponsorType'>Event Partner</div>
               </div>
-            <div className='sponsorType'>Event Partner</div>
-          </div>
-          <div className='sponsorBox'>
-              <div className='sponsorImage'>
-                <img
-                className='sponsorImageStaticgrabon'
-                src='sponsorPrintbrix.png'
-                />
+              <div className='sponsorBox'>
+                <div className='sponsorImage'>
+                  <img
+                    className='sponsorImageStaticgrabon'
+                    src='sponsorPrintbrix.png'
+                  />
+                </div>
+                <div className='sponsorType'>Merchandise Partner</div>
               </div>
-            <div className='sponsorType'>Merchandise Partner</div>
-          </div>
-          <div className='sponsorBox'>
-              <div className='sponsorImage'>
-                <img
-                className='sponsorImageStaticgrabon'
-                src='sponsorLog9.png'
-                />
+              <div className='sponsorBox'>
+                <div className='sponsorImage'>
+                  <img
+                    className='sponsorImageStaticgrabon'
+                    src='sponsorLog9.png'
+                  />
+                </div>
+                <div className='sponsorType'>Event Partner</div>
               </div>
-            <div className='sponsorType'>Event Partner</div>
-          </div>
 
-          <div className='sponsorBox'>
-              <div className='sponsorImage'>
-                <img
-                className='sponsorImageStaticgrabon'
-                src='sponsorCI.png'
-                />
+              <div className='sponsorBox'>
+                <div className='sponsorImage'>
+                  <img
+                    className='sponsorImageStaticgrabon'
+                    src='sponsorCI.png'
+                  />
+                </div>
+                <div className='sponsorType'>Event Partner</div>
               </div>
-            <div className='sponsorType'>Event Partner</div>
-          </div>
-          <div className='sponsorBox'>
-              <div className='sponsorImage'>
-                <img
-                className='sponsorImageStaticgrabon'
-                src='sponsorBL.png'
-                />
+              <div className='sponsorBox'>
+                <div className='sponsorImage'>
+                  <img
+                    className='sponsorImageStaticgrabon'
+                    src='sponsorBL.png'
+                  />
+                </div>
+                <div className='sponsorType'>Legal Partner</div>
               </div>
-            <div className='sponsorType'>Legal Partner</div>
-          </div>
-          <div className='sponsorBox'>
-              <div className='sponsorImage'>
-                <img
-                className='sponsorImageStaticgrabon'
-                src='sponsorAbhibus.png'
-                />
+              <div className='sponsorBox'>
+                <div className='sponsorImage'>
+                  <img
+                    className='sponsorImageStaticgrabon'
+                    src='sponsorAbhibus.png'
+                  />
+                </div>
+                <div className='sponsorType'>Mobility Partner</div>
               </div>
-            <div className='sponsorType'>Mobility Partner</div>
-          </div>
-         
-          </div>
-          
+            </div>
 
-{/*
+            {/*
             <div className='sponsorBox'>
               <div className='sponsorImage'>
                 <img className='sponsorImageStatic' src='sponsorNPCI.png' />
@@ -354,11 +352,7 @@ function sponsors() {
           <div className='sponsorType'>Savings Partner</div>
         </div>
       */}
-
           </div>
-
-    
-
         </div>
         <Footer />
       </div>
