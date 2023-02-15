@@ -48,6 +48,9 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  gap:44px;
+  column-gap: 80px;
+  justify-content: center;
 }
 
 .sponsorCard {
