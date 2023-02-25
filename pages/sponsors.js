@@ -159,11 +159,23 @@ function sponsors() {
                 <div className='sponsorImage'>
                   <img
                     className='sponsorImageStaticgrabon'
+                    src='bullSpree.png'
+                  />
+                </div>
+                <div className='sponsorType'>Event Title Sponsor</div>
+              </div>
+              <div className='sponsorBox'>
+                <div className='sponsorImage'>
+                  <img
+                    className='sponsorImageStaticgrabon'
                     src='sponsorProductfolks.jpeg'
                   />
                 </div>
+                
                 <div className='sponsorType'>Event Partner</div>
               </div>
+
+              
               <div className='sponsorBox'>
                 <div className='sponsorImage'>
                   <img
@@ -295,6 +307,7 @@ function sponsors() {
                 </div>
                 <div className='sponsorType'>Legal Partner</div>
               </div>
+              
               <div className='sponsorBox'>
                 <div className='sponsorImage'>
                   <img
@@ -304,6 +317,7 @@ function sponsors() {
                 </div>
                 <div className='sponsorType'>Mobility Partner</div>
               </div>
+              
             </div>
 
             {/*
