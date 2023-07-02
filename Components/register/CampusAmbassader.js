@@ -370,7 +370,7 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
                     value={City}
                     onChange={(e) => setCity(e.target.value)}
                   />
-                  <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <div style={{ display: 'flex', alignItems: 'center',position:'relative' }}>
                     <input
                       className={
                         password == ''
@@ -386,7 +386,6 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
                     />
                     <div
                       className='LoginFormLeftShowPassword'
-                      style={{ marginTop: '-20px' }}
                       onClick={() => setShowPassword(!ShowPassword)}
                     >
                       <Image
@@ -400,7 +399,7 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
                       />
                     </div>
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <div style={{ display: 'flex', alignItems: 'center',position:'relative' }}>
                     <input
                       className={
                         password == ''
@@ -416,7 +415,6 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
                     />
                     <div
                       className='LoginFormLeftShowPassword'
-                      style={{ marginTop: '-20px' }}
                       onClick={() => setShowPassword2(!ShowPassword2)}
                     >
                       <Image
@@ -571,7 +569,7 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
                       placeholder='City'
                       onChange={(e) => setCity(e.target.value)}
                     />
-                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{ display: 'flex', alignItems: 'center',position:'relative' }}>
                       <input
                         className={
                           password == ''
@@ -587,7 +585,6 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
                       />
                       <div
                         className='LoginFormLeftShowPassword'
-                        style={{ marginTop: '-20px' }}
                         onClick={() => setShowPassword(!ShowPassword)}
                       >
                         <Image
@@ -601,7 +598,7 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
                         />
                       </div>
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{ display: 'flex', alignItems: 'center',position:'relative' }}>
                       <input
                         className={
                           password == ''
@@ -617,7 +614,6 @@ const CampusAmbassader = ({ name, email, contact, Gender }) => {
                       />
                       <div
                         className='LoginFormLeftShowPassword'
-                        style={{ marginTop: '-20px' }}
                         onClick={() => setShowPassword2(!ShowPassword2)}
                       >
                         <Image

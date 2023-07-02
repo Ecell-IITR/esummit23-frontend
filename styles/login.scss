@@ -139,10 +139,12 @@ input:focus {
   color: #ffffff;
   cursor: pointer;
 }
-.LoginFormLeftShowPassword {
-  margin-bottom: -35px;
-  margin-left: -25px;
+
+.LoginFormLeftShowPassword{
+  position: absolute;
+  right:9%;
 }
+
 @media screen and (max-width: 1000px) {
   .LoginFormLeft {
     width: 60vw;
@@ -186,6 +188,10 @@ input:focus {
   .loginRegisterContainer {
     margin-top: 5px;
     margin-bottom: 20px;
+  }
+  .LoginFormLeftShowPassword{
+    position: absolute;
+    right:4%;
   }
 }
 @media screen and (min-height: 800px) and (max-width: 600px) {
