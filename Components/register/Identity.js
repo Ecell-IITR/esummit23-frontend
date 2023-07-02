@@ -53,7 +53,7 @@ const Identity = ({ setUserType, setRenderId }) => {
                   paddingTop: '1rem',
                 }}
               >
-                <div
+                {/* <div
                   className='regButton'
                   style={{ cursor: 'pointer' }}
                   onClick={() => {
@@ -72,7 +72,7 @@ const Identity = ({ setUserType, setRenderId }) => {
                   }}
                 >
                   As a Non-IITR Student
-                </div>
+                </div> */}
                 <div
                   className='regButton'
                   style={{ cursor: 'pointer' }}
@@ -83,7 +83,7 @@ const Identity = ({ setUserType, setRenderId }) => {
                 >
                   As a Campus Ambassador
                 </div>
-                <div
+                {/* <div
                   className='regButton'
                   style={{ cursor: 'pointer' }}
                   onClick={() => {
@@ -92,7 +92,7 @@ const Identity = ({ setUserType, setRenderId }) => {
                   }}
                 >
                   As a Professional
-                </div>
+                </div> */}
               </div>{' '}
             </div>
           </div>
@@ -137,7 +137,7 @@ const Identity = ({ setUserType, setRenderId }) => {
                   }}
                   className='identityButton'
                 >
-                  <div
+                  {/* <div
                     className='regButton'
                     style={{ cursor: 'pointer' }}
                     onClick={() => {
@@ -157,7 +157,7 @@ const Identity = ({ setUserType, setRenderId }) => {
                     }}
                   >
                     AS A NON-IITR STUDENT
-                  </div>
+                  </div> */}
 
                   <div
                     className='regButton'
@@ -170,7 +170,7 @@ const Identity = ({ setUserType, setRenderId }) => {
                     AS A CAMPUS AMBASSADOR
                   </div>
 
-                  <div
+                  {/* <div
                     className='regButton'
                     style={{ cursor: 'pointer' }}
                     onClick={() => {
@@ -179,7 +179,7 @@ const Identity = ({ setUserType, setRenderId }) => {
                     }}
                   >
                     AS A PROFESSIONAL
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
