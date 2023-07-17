@@ -13,6 +13,7 @@ class MyDocument extends Document {
           <link rel='preconnect' href='https://fonts.googleapis.com' />
           <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin />
           <link rel='stylesheet' href='bower_components/aos/dist/aos.css' />
+          
           <link
             rel='stylesheet'
             type='text/css'
@@ -42,6 +43,7 @@ class MyDocument extends Document {
             href='https://fonts.googleapis.com/css2?family=Lexend&display=swap'
             rel='stylesheet'
           />
+        <meta name="google-site-verification" content="-dcU6RqZ_fb9zELH_w-yxOoUhKcqcXtYzXCDQ8sVxb4" />
         </Head>
         <body>
           <link
